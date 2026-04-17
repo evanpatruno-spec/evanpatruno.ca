@@ -8,7 +8,7 @@ from datetime import datetime
 # CONFIGURATION
 API_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
 NEWS_BIN_ID = "661adbced0ea881f4082269a"
-BOC_BIN_ID = "69db9753856a682189265c0b"
+BOC_BIN_ID = "69e2a081856a682189465e17"
 BIN_ID_FILE = "newsletter_bin_id.txt"
 HARDCODED_NEWSLETTER_BIN_ID = "" # Sera créé au premier lancement
 
@@ -148,11 +148,37 @@ def select_top_news(news_list, count=3):
         
     return selected, found_tip
 
+def fetch_unified_data():
+    """Récupère les nouvelles et le taux BOC depuis la même boîte Cloud."""
+    headers = {'X-Master-Key': API_KEY}
+    try:
+        url = f"https://api.jsonbin.io/v3/b/{NEWS_BIN_ID}/latest"
+        res = requests.get(url, headers=headers)
+        record = res.json().get('record', {})
+        if isinstance(record, list): # Ancien format (juste une liste de news)
+            return {"news": record, "boc_rate": "2.25%"}
+        return record
+    except Exception as e:
+        print(f"Erreur Lecture Cloud : {e}")
+        return {"news": [], "boc_rate": "2.25%"}
+
 def generate_newsletter_json(force_zoho=False):
     import random
-    all_news = fetch_latest_news()
-    boc = fetch_boc_data()
+    now = datetime.now()
+    data = fetch_unified_data()
+    all_news = data.get('news', [])
+    boc_rate = data.get('boc_rate', '2.25%')
+    
     top_news, detected_tip = select_top_news(all_news)
+    
+    # Calcul du Thermomètre (Basé sur le taux)
+    rate_val = float(boc_rate.replace('%', ''))
+    if rate_val < 3.0:
+        market_temp = "Marché Actif (Acheteur)"
+    elif rate_val < 5.0:
+        market_temp = "Marché Équilibré"
+    else:
+        market_temp = "Marché Calme (Vendeur)"
     
     # Liens personnalisés
     booking_url = "https://calendar.app.google/a37T5exmNpFfBZ6SA" 
@@ -170,26 +196,14 @@ def generate_newsletter_json(force_zoho=False):
         "5": "Mai", "6": "Juin", "7": "Juillet", "8": "Août",
         "9": "Septembre", "10": "Octobre", "11": "Novembre", "12": "Décembre"
     }
-    now = datetime.now()
     month_name = months_fr[str(now.month)]
     year = now.year
-
-    # Logique du Thermomètre de Marché
-    boc_status = boc.get('status', 'maintenu').lower()
-    if "baiss" in boc_status:
-        market_temp = "Marché Actif 📈"
-    elif "augment" in boc_status:
-        market_temp = "Marché Calme ❄️"
-    else:
-        market_temp = "Marché Équilibré ⚖️"
 
     newsletter_data = {
         "campaign_id": f"NL-{now.month}-{year}",
         "month": month_name,
         "year": year,
-        "boc_rate": f"{boc.get('rate', '--')}%",
-        "boc_status": boc.get('status', 'maintenu'),
-        "boc_next": boc.get('next_announcement', 'À venir'),
+        "boc_rate": boc_rate,
         "market_temp": market_temp,
         "booking_url": booking_url,
         "facebook_url": facebook_url,

@@ -5,6 +5,7 @@ import json
 import re
 import os
 import html
+from datetime import datetime
 
 # CONFIGURATION
 API_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
@@ -133,23 +134,42 @@ def update_jsonbin(data):
     
     return bin_id
 
+def get_boc_rate():
+    """Fetches the latest overnight rate from Bank of Canada."""
+    try:
+        url = "https://www.bankofcanada.ca/valet/observations/V39079/json?recent=1"
+        res = requests.get(url, timeout=10)
+        data = res.json()
+        rate = data.get('observations', [{}])[-1].get('V39079', {}).get('v', '2.25')
+        return f"{rate}%"
+    except:
+        return "2.25%"
+
 def main():
     all_news = []
     for feed in FEEDS:
         all_news.extend(fetch_feed_news(feed["name"], feed["url"]))
     
-    # Sort by date (simple string sort for RSS dates or just keep original order)
-    # Deduplicate by link
     unique_news = {n['link']: n for n in all_news}.values()
-    final_list = list(unique_news)[:30] # Limit to 30 latest
+    final_news = list(unique_news)[:30]
     
-    print(f"Total des nouvelles trouvées: {len(final_list)}")
+    # On ajoute le taux BOC directement dans le paquet de données
+    boc_rate = get_boc_rate()
+    data_to_save = {
+        "news": final_news,
+        "boc_rate": boc_rate,
+        "last_update": datetime.now().strftime('%Y-%m-%d %H:%M')
+    }
     
+    print(f"Total: {len(final_news)} news. Taux BOC: {boc_rate}")
+    
+    # Save local
     with open('news.json', 'w', encoding='utf-8') as f:
-        json.dump(final_list, f, indent=2, ensure_ascii=False)
+        json.dump(data_to_save, f, indent=2, ensure_ascii=False)
         
-    bin_id = update_jsonbin(final_list)
-    print(f"News.json mis à jour sur le Cloud ! Bin ID: {bin_id}")
+    # Cloud update (Le Bin des News qui fonctionne toujours)
+    bin_id = update_jsonbin(data_to_save)
+    print(f"Données unifiées mises à jour sur le Cloud ! Bin ID: {bin_id}")
 
 if __name__ == "__main__":
     main()
