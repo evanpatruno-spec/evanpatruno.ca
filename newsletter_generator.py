@@ -215,6 +215,7 @@ def generate_newsletter_json(force_zoho=False):
         "year": year,
         "boc_rate": boc_rate,
         "market_temp": market_temp,
+        "market_status": market_temp, # Sécurité double clé
         "booking_url": booking_url,
         "facebook_url": facebook_url,
         "instagram_url": instagram_url,
@@ -222,7 +223,7 @@ def generate_newsletter_json(force_zoho=False):
         "top_articles": [
             {
                 "title": item.get('title', 'Titre non disponible'),
-                "summary": (item.get('description', item.get('summary', ''))[:500].rsplit('.', 1)[0] + ".") if '.' in item.get('description', '')[:500] else item.get('description', '')[:500] + "...",
+                "summary": item.get('description', item.get('summary', ''))[:500],
                 "link": item.get('link', '#'),
                 "source": item.get('source', 'Source inconnue')
             } for item in top_news
@@ -236,6 +237,10 @@ def generate_newsletter_json(force_zoho=False):
             {"label": "Évaluation Gratuite", "url": "https://www.evanpatruno.ca/vendre"}
         ]
     }
+    
+    # Sécurité ultime : On injecte les alias pour les articles
+    newsletter_data["articles"] = newsletter_data["top_articles"]
+    newsletter_data["news_list"] = newsletter_data["top_articles"]
     
     # Sauvegarde locale
     with open('newsletter_ready.json', 'w', encoding='utf-8') as f:
