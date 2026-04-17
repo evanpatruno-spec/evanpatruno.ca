@@ -143,6 +143,15 @@ def generate_newsletter_json(force_zoho=False):
     month_name = months_fr[str(now.month)]
     year = now.year
 
+    # Logique du Thermomètre de Marché
+    boc_status = boc.get('status', 'maintenu').lower()
+    if "baiss" in boc_status:
+        market_temp = "Marché Actif 📈"
+    elif "augment" in boc_status:
+        market_temp = "Marché Calme ❄️"
+    else:
+        market_temp = "Marché Équilibré ⚖️"
+
     newsletter_data = {
         "campaign_id": f"NL-{now.month}-{year}",
         "month": month_name,
@@ -150,7 +159,9 @@ def generate_newsletter_json(force_zoho=False):
         "boc_rate": f"{boc.get('rate', '--')}%",
         "boc_status": boc.get('status', 'maintenu'),
         "boc_next": boc.get('next_announcement', 'À venir'),
+        "market_temp": market_temp,
         "booking_url": booking_url,
+        "video_url": "https://www.instagram.com/evanpatruno.immo/reels/",
         "facebook_url": facebook_url,
         "instagram_url": instagram_url,
         "linkedin_url": linkedin_url,
