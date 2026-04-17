@@ -235,11 +235,13 @@ def generate_newsletter_json(force_zoho=False):
     bin_id = update_jsonbin(newsletter_data)
     print(f"Newsletter JSON générée sur le Cloud ! Bin ID: {bin_id}")
 
-    import html
-    # Nettoyage final de sécurité
+    # Nettoyage final de sécurité (Aseptisation pour Zoho)
     def deep_clean(obj):
         if isinstance(obj, str):
-            return html.unescape(obj).strip()
+            # Suppression des caractères invisibles ou corrompus
+            s = html.unescape(obj).strip()
+            # On s'assure que c'est de l'ASCII/UTF-8 propre
+            return s.encode('utf-8', 'ignore').decode('utf-8')
         elif isinstance(obj, dict):
             return {k: deep_clean(v) for k, v in obj.items()}
         elif isinstance(obj, list):
@@ -247,6 +249,10 @@ def generate_newsletter_json(force_zoho=False):
         return obj
 
     final_data = deep_clean(newsletter_data)
+    
+    # Sécurité : On double les clés pour être sûr que Zoho trouve son bonheur
+    final_data["market_status"] = market_temp
+    final_data["boc_rate_val"] = rate_val
     
     # TRIGGER ZOHO (Seulement le 1er du mois ou si forcé)
     if now.day == 1 or force_zoho:
