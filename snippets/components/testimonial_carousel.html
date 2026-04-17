@@ -1,0 +1,124 @@
+<!-- 
+Carrousel Témoignages (Simple Slider)
+INSTRUCTIONS:
+1. Ajouter un Code Snippet.
+2. Coller le code.
+3. Ajouter autant de <div class="slide"> que voulu.
+-->
+<style>
+    .testimonial-slider {
+        position: relative;
+        max-width: 800px;
+        margin: 40px auto;
+        overflow: hidden;
+        padding: 20px 40px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .slides-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .quote-text {
+        font-size: 1.2em;
+        font-style: italic;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .client-name {
+        font-weight: bold;
+        color: #2c3e50;
+        font-size: 1.1em;
+    }
+
+    .stars {
+        color: #f1c40f;
+    }
+
+    /* Jaune étoile */
+
+    /* Navigation flèches */
+    .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .slider-btn:hover {
+        color: #333;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+</style>
+
+<div class="testimonial-slider">
+    <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+
+    <div class="slides-container" id="slides-track">
+        <!-- TÉMOIGNAGE 1 -->
+        <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p class="quote-text">"Evan a été d'une aide précieuse pour l'achat de notre premier triplex. Professionnel
+                et toujours disponible."</p>
+            <div class="client-name">- Marc-André T.</div>
+        </div>
+        <!-- TÉMOIGNAGE 2 -->
+        <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p class="quote-text">"Une transaction sans stress grâce à son expertise. Je recommande fortement pour vos
+                besoins hypothécaires."</p>
+            <div class="client-name">- Sarah L.</div>
+        </div>
+        <!-- TÉMOIGNAGE 3 -->
+        <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p class="quote-text">"Excellent service, rapide et courtois. Merci pour tout!"</p>
+            <div class="client-name">- Julien B.</div>
+        </div>
+    </div>
+
+    <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    let curSlide = 0;
+    function moveSlide(direction) {
+        const track = document.getElementById('slides-track');
+        const slides = document.querySelectorAll('.slide');
+        const total = slides.length;
+
+        curSlide += direction;
+
+        if (curSlide >= total) curSlide = 0;
+        if (curSlide < 0) curSlide = total - 1;
+
+        track.style.transform = `translateX(-${curSlide * 100}%)`;
+    }
+    // Auto play optionnel (décommenter la ligne suivante)
+    // setInterval(() => moveSlide(1), 5000);
+</script>

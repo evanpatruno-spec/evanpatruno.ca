@@ -1,0 +1,1251 @@
+<!-- 
+PAGE VENDEUR COMPLETE (LANDING PAGE + ÉVALUATION)
+INSTRUCTIONS:
+1. Créez une nouvelle page "Vendre" sur votre site.
+2. Ajoutez un "Code Snippet".
+3. Copiez-collez TOUT ce code.
+4. IMPORTANT : Remplacez "VOTRE_KEY_ZOHO_ICI" et "VOTRE_TOKEN_ZOHO_ICI" (lignes ~260) par vos vraies clés.
+-->
+<style>
+    /* FIX FOR ZOHO BANNER GAP */
+    #header-banner-section,
+    .theme-banner-container,
+    .zphero {
+        display: none !important;
+    }
+
+    /* GLOBAL RESET & FONTS */
+    .seller-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+        position: relative;
+    }
+
+    .seller-lp * {
+        box-sizing: border-box;
+    }
+
+    .seller-lp h1,
+    .seller-lp h2,
+    .seller-lp h3 {
+        color: white;
+        font-weight: 800;
+        margin-top: 0;
+    }
+
+    .seller-lp-section {
+        padding: 40px 20px;
+    }
+
+    .seller-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* 1. HERO SECTION */
+    .hero-seller {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.82), rgba(135, 50, 118, 0.28)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 60px 20px !important;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        z-index: 1;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-seller h1 {
+        font-size: 3.5rem;
+        color: white;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        font-weight: 900;
+    }
+
+    .hero-seller p {
+        font-size: 1.3rem;
+        max-width: 750px;
+        margin: 0 auto 40px;
+        color: #ffffff !important;
+        opacity: 0.95;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 22px 50px;
+        background: #fff;
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    /* 2. VALUE PILLARS */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-card {
+        background: #2b0b24;
+        /* Dark Card */
+        color: #ffffff !important;
+        padding: 45px 35px;
+        border-radius: 30px !important;
+        /* Unified corners */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transition: transform 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .service-card h3 {
+        color: #873276;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(135, 50, 118, 0.3);
+    }
+
+    .service-icon {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* 3. TIMELINE STEPS */
+    .timeline-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .timeline-header h2 {
+        font-size: 2.2rem;
+        color: white;
+    }
+
+    .timeline-header p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        position: relative;
+        margin-top: 40px;
+    }
+
+    .process-step {
+        text-align: center;
+        position: relative;
+    }
+
+    .step-icon-circle {
+        width: 70px;
+        height: 70px;
+        background: #873276;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 1.5rem;
+        box-shadow: 0 10px 20px rgba(135, 50, 118, 0.3);
+        z-index: 2;
+        position: relative;
+    }
+
+    .process-step::after {
+        content: '';
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 1;
+    }
+
+    .process-step:last-child::after {
+        display: none;
+    }
+
+    .process-step h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: white;
+        font-weight: 700;
+    }
+
+    .process-step p {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .process-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .process-step::after {
+            display: none;
+        }
+    }
+
+    /* --- FORM SECTION --- */
+    .evaluation-section {
+        padding: 40px 20px;
+        background: #1e0a19;
+        color: white;
+        border-radius: 40px;
+        margin: 20px 0;
+        scroll-margin-top: 80px;
+    }
+
+    .evaluation-container-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .evaluation-info {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .evaluation-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    .evaluation-title {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        font-weight: 800;
+        color: white !important;
+    }
+
+    .evaluation-desc {
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
+        margin-bottom: 35px;
+        font-size: 1.15rem;
+    }
+
+    .evaluation-benefits {
+        list-style: none;
+        padding: 0;
+    }
+
+    .evaluation-benefits li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .evaluation-benefits li svg {
+        width: 22px;
+        fill: #38a169;
+        /* Emerald Green */
+    }
+
+    .evaluation-form-card {
+        flex: 1.3;
+        min-width: 320px;
+        background: #2b0b24;
+        padding: 45px;
+        border-radius: 30px;
+        color: white;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group.full-width {
+        grid-column: 1 / -1;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .form-input,
+    .form-select {
+        width: 100%;
+        padding: 15px 20px;
+        background-color: white !important;
+        color: #1e0a19 !important;
+        border: 2px solid #eee !important;
+        border-radius: 12px;
+        font-size: 1rem;
+        line-height: normal;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: block;
+        height: 56px;
+    }
+
+    .form-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23873276' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 15px center !important;
+        background-size: 18px !important;
+        padding-right: 45px !important;
+        cursor: pointer;
+    }
+
+    .form-select option {
+        color: #1e0a19 !important;
+        background: white !important;
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+        border-color: #873276;
+        outline: none;
+        box-shadow: 0 0 15px rgba(135, 50, 118, 0.2);
+    }
+
+    .eval-btn {
+        width: 100%;
+        padding: 20px;
+        background: #873276;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 25px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .eval-btn:hover {
+        background: #6a275d;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .hero-seller {
+            padding: 60px 20px 80px !important;
+            margin-top: 15px !important;
+            min-height: 350px !important;
+        }
+
+        .hero-seller h1 {
+            font-size: 2.2rem;
+        }
+
+        .hero-seller p {
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            margin-top: -60px;
+            grid-template-columns: 1fr;
+        }
+
+        .evaluation-title {
+            font-size: 2rem;
+        }
+
+        .evaluation-container-inner {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .evaluation-form-card {
+            padding: 30px 20px;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .seller-lp-section {
+            padding: 60px 20px;
+        }
+    }
+
+    /* LEGAL FOOTER */
+    .legal-footer {
+        padding: 60px 20px 40px;
+        background: #1e0a19;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .legal-text {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.6;
+    }
+
+    /* IDEA 1 & 3: NEW COMPONENTS */
+    .checklist-section {
+        background: rgba(135, 50, 118, 0.05);
+        border: 1px solid rgba(135, 50, 118, 0.2);
+        border-radius: 40px;
+        padding: 60px 40px;
+        margin: 60px 0;
+    }
+
+    .checklist-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .checklist-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .checklist-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .checklist-item:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: #873276;
+    }
+
+    .checklist-checkbox {
+        width: 24px;
+        height: 24px;
+        border: 2px solid #873276;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .checklist-item.checked .checklist-checkbox {
+        background: #873276;
+    }
+
+    .checklist-item.checked .checklist-checkbox::after {
+        content: '✓';
+        color: white;
+        font-weight: 900;
+        font-size: 14px;
+    }
+
+    .checklist-item.checked span {
+        text-decoration: line-through;
+        opacity: 0.5;
+    }
+
+    .guide-magnet {
+        background: linear-gradient(135deg, #210d1d 0%, #1e0a19 100%);
+        border: 1px solid rgba(135, 50, 118, 0.4);
+        border-radius: 40px;
+        padding: 60px 40px;
+        text-align: center;
+        margin: 80px 0;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    }
+
+    .guide-magnet::before {
+        content: 'OFFERT';
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        background: #FFD700;
+        color: #1e0a19;
+        padding: 5px 40px;
+        transform: rotate(45deg);
+        font-weight: 900;
+        font-size: 0.8rem;
+    }
+
+    .guide-magnet h2 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .guide-btn {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 18px 40px;
+        background: #873276;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 800;
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
+        transition: 0.3s;
+    }
+
+    .guide-btn:hover {
+        transform: translateY(-5px);
+        background: #6a275d;
+    }
+
+    /* MINI FORM STYLES */
+    .mini-guide-form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 400px;
+        margin: 30px auto 0;
+    }
+
+    .mini-input {
+        padding: 16px 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.08);
+        color: white;
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+
+    .mini-input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .mini-input:focus {
+        border-color: #873276;
+        background: rgba(255, 255, 255, 0.12);
+        outline: none;
+    }
+
+    .mini-submit {
+        background: #873276;
+        color: white;
+        border: none;
+        padding: 18px;
+        border-radius: 50px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .mini-submit:hover {
+        background: #6a275d;
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+        .checklist-grid { grid-template-columns: 1fr; }
+        .guide-magnet { padding: 30px 20px; }
+        .guide-magnet h2 { font-size: 1.6rem; }
+    }
+
+    /* READY CTA BLOCK */
+    .ready-cta-section {
+        background: linear-gradient(145deg, rgba(135, 50, 118, 0.1), rgba(30, 10, 25, 0.4));
+        border: 2px solid rgba(135, 50, 118, 0.2);
+        border-radius: 40px;
+        padding: 60px 30px;
+        margin: 60px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .ready-cta-section {
+            padding: 40px 20px;
+            margin: 40px 10px;
+        }
+        
+        .ready-cta-section h2 {
+            font-size: 1.8rem !important;
+        }
+
+        .ready-cta-section .hero-btn {
+            padding: 18px 30px !important;
+            width: auto !important;
+            min-width: 250px;
+            border-radius: 50px !important;
+            white-space: nowrap;
+        }
+    }
+
+    /* MODAL OVERLAY */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 10, 25, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 20000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .modal-overlay.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .checklist-modal {
+        background: #1e0a19;
+        max-width: 600px;
+        width: 100%;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+        position: relative;
+        overflow: hidden;
+        transform: translateY(30px) scale(0.95);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .modal-overlay.active .checklist-modal {
+        transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: white;
+        font-size: 1.5rem;
+        z-index: 10;
+        transition: 0.3s;
+    }
+
+    .modal-close:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: rotate(90deg);
+    }
+
+    .modal-body {
+        padding: 40px;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    @media (max-width: 768px) {
+        .modal-body {
+            padding: 25px 20px;
+        }
+
+        .modal-body h2 {
+            font-size: 1.5rem !important;
+        }
+
+        .expert-header {
+            font-size: 0.95rem;
+            margin-top: 20px;
+        }
+
+        .checklist-item {
+            padding: 12px;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .checklist-item span {
+            font-size: 0.88rem;
+            line-height: 1.3;
+        }
+    }
+
+    .modal-state {
+        display: none;
+    }
+
+    .modal-state.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+    }
+
+    .expert-header {
+        color: #d4af37;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 25px 0 15px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        padding-bottom: 5px;
+    }
+
+    .checklist-group-title {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin: 15px 0 8px 5px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    /* SUCCESS MESSAGE STYLE */
+    .form-success-wrapper {
+        padding: 40px 20px;
+        animation: fadeIn 0.5s ease;
+        text-align: center;
+    }
+
+    .success-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+
+    .form-success-body h3 {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .form-success-body p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<div class="seller-lp">
+
+    <!-- HERO -->
+    <header class="hero-seller">
+        <div class="seller-container">
+            <h1>Expert Courtier Immobilier :<br>Vendez à Saint-Jean et Rive-Sud.</h1>
+            <p>Maximisez la valeur de votre propriété à Saint-Jean-sur-Richelieu, sur la Rive-Sud, à Montréal ou en Estrie avec un expert local basé à Napierville.</p>
+            <a href="#free-eval" class="hero-btn">Estimation Gratuite</a>
+        </div>
+    </header>
+
+    <!-- SECTION 2: SERVICES (Overlapping) -->
+    <section class="seller-lp-section" style="padding-top: 0;">
+        <div class="seller-container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">💎</span>
+                    <h3>Marketing Premium</h3>
+                    <p>Photos, vidéo, staging virtuel... Votre propriété sera la star du marché pour attirer les
+                        acheteurs qualifiés.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🎯</span>
+                    <h3>Stratégie de Prix</h3>
+                    <p>On ne devine pas, on analyse. Je positionne votre propriété pour créer une urgence chez les
+                        acheteurs.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">📈</span>
+                    <h3>Négociation Féroce</h3>
+                    <p>Obtenir une offre est facile. Obtenir l'offre optimale demande de l'expérience. Je défends
+                        chaque dollar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TIMELINE -->
+    <section class="seller-lp-section"
+        style="background: rgba(0,0,0,0.2); border-radius: 50px; margin: 60px 20px; border: 1px solid rgba(255,255,255,0.05);">
+        <div class="seller-container">
+            <div class="timeline-header">
+                <h2>Votre vente, étape par étape</h2>
+                <p>Un processus maîtrisé de A à Z.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-icon-circle">📊</div>
+                    <h3>Analyse</h3>
+                    <p>Étude comparative de marché et définition du prix de vente optimal.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon-circle">📸</div>
+                    <h3>Marketing</h3>
+                    <p>Photos professionnelles et déploiement stratégique sur Centris et réseaux.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon-circle">🛡️</div>
+                    <h3>Protection</h3>
+                    <p>Gestion filtrée des visites et défense ferme de vos intérêts lors des offres.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon-circle">💰</div>
+                    <h3>Vendu</h3>
+                    <p>Accompagnement rigoureux jusqu'à la signature finale chez le notaire.</p>
+                </div>
+            </div>
+
+            <!-- DIAGNOSTIC CTA (REPLACES STATIC CHECKLIST) -->
+            <div class="ready-cta-section">
+                <h2 style="font-size: 2.22rem; margin-bottom: 0;">Ai-je tous les documents pour vendre au meilleur prix ?</h2>
+                <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">Un dossier incomplet peut faire fuir les acheteurs sérieux ou retarder votre vente de plusieurs semaines. Faites le point en 30 secondes.</p>
+                <button class="hero-btn" style="margin-bottom: 0;" onclick="openChecklistModal()">Démarrer le diagnostic ⚡</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDEA 1: LEAD MAGNET GUIDE (GATED) -->
+    <section class="seller-container">
+        <div class="guide-magnet">
+            <h2>📈 Le Guide du Vendeur</h2>
+            <p style="max-width: 600px; margin: 0 auto 25px;">Découvrez comment maximiser la valeur de votre propriété et éviter les erreurs fatales lors de la mise en vente.</p>
+            <button class="hero-btn" onclick="openGuideModal()">Recevoir mon guide gratuit 📥</button>
+        </div>
+    </section>
+
+    <!-- SECTION 4: INTEGRATED EVALUATION FORM -->
+    <section id="free-eval" class="evaluation-section">
+        <div class="seller-container">
+
+            <!-- FORM COMPONENT START -->
+            <div class="evaluation-container-inner">
+
+                <!-- Copy Side -->
+                <div class="evaluation-info">
+                    <span class="evaluation-badge">📈 Estimation Stratégique</span>
+                    <h2 class="evaluation-title">Combien vaut votre propriété aujourd'hui ?</h2>
+                    <p class="evaluation-desc">Le marché bouge vite. Obtenez une évaluation précise et gratuite, basée
+                        sur les dernières ventes comparables de votre secteur.</p>
+
+                    <ul class="evaluation-benefits">
+                        <li>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                                </path>
+                            </svg>
+                            <span>Analyse de marché détaillée</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                                </path>
+                            </svg>
+                            <span>Conseils de mise en valeur</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                                </path>
+                            </svg>
+                            <span>Sans engagement</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Form Side -->
+                <div class="evaluation-form-card">
+
+                    <iframe id="evalHiddenFrame" name="evalHiddenFrame" style="display:none;"></iframe>
+
+                    <!-- ZOHO CRM FORM -->
+                    <form id="evalForm" action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads445982000000289007
+                        method='POST' target='evalHiddenFrame' onsubmit='prepareEvalSubmit(event)'
+                        accept-charset='UTF-8'>
+
+                        <!-- KEYS TO REPLACE -->
+                        <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                        <input type="hidden" name="zc_gad" id="zc_gad" value="">
+                        <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                        <input type="hidden" name="actionType" value="TGVhZHM=">
+                        <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                        <input type="hidden" name="LEADCF7" value="VENDRE_MAISON">
+
+                        <!-- DATA AGGREGATION FIELD -->
+                        <input type="hidden" name="Description" id="zohoEvalDescription">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Prénom</label>
+                                <input type="text" name="First Name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nom</label>
+                                <input type="text" name="Last Name" class="form-input" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label">Adresse de la propriété</label>
+                                <input type="text" class="form-input eval-criteria" data-label="Adresse"
+                                    placeholder="Numéro, rue, ville et code postal" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Type de propriété</label>
+                                <select class="form-select eval-criteria" data-label="Type">
+                                    <option value="Maison unifamiliale">Maison unifamiliale</option>
+                                    <option value="Condo / Appartement">Condo / Appartement</option>
+                                    <option value="Plex (Revenu)">Plex (Revenu)</option>
+                                    <option value="Terrain / Commercial">Terrain / Commercial</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Année constr. (Approx)</label>
+                                <input type="text" class="form-input eval-criteria" data-label="Année"
+                                    placeholder="Ex: 2010">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Chambres</label>
+                                <select class="form-select eval-criteria" data-label="Chambres">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5+">5+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Salles de bain</label>
+                                <select class="form-select eval-criteria" data-label="Salles de bain">
+                                    <option value="1">1</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="2">2</option>
+                                    <option value="2.5">2.5</option>
+                                    <option value="3+">3+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="Email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Téléphone</label>
+                                <input type="tel" name="Mobile" class="form-input" placeholder="(514) 000-0000">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="eval-btn" id="evalSubmitBtn">Recevoir mon évaluation 🏠</button>
+
+                    </form>
+
+                    <div id="evalSuccess" class="form-success-wrapper" style="display:none;">
+                        <div class="form-success-body">
+                            <div class="success-icon">✅</div>
+                            <h3>Demande reçue !</h3>
+                            <p>Merci ! Evan prépare votre évaluation comparative de marché et vous contactera sous peu.</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.8rem; color:#999; text-align:center; margin-top:15px;">Vos informations
+                        restent confidentielles.</p>
+                </div>
+            </div>
+            <!-- FORM COMPONENT END -->
+
+        </div>
+    </section>
+
+    <!-- CHECKLIST MODAL SYSTEM (SELLER) -->
+    <div class="modal-overlay" id="checklistModalOverlay">
+        <div class="checklist-modal">
+            <div class="modal-close" onclick="closeChecklistModal()">×</div>
+            
+            <div class="modal-body">
+                <!-- ETAPE 1 : FORMULAIRE -->
+                <div class="modal-state active" id="modalStateForm">
+                    <h2 style="color: #ffffff; margin-bottom: 15px; font-size: 1.8rem; text-align: center;">Dernière étape...</h2>
+                    <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 30px;">Complétez vos infos pour accéder à votre Checklist de documents vendeur personnalisée.</p>
+                    
+                    <iframe id="checklistHiddenFrame" name="checklistHiddenFrame" style="display:none;"></iframe>
+                    <form action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='checklistHiddenFrame' onsubmit="handleChecklistForm(event)">
+                        
+                        <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                        <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                        <input type="hidden" name="actionType" value="TGVhZHM=">
+                        <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                        <input type="hidden" name="Description" value="[SOURCE: DIAGNOSTIC VENTE] Demande de checklist documents vendeur.">
+                        <input type="hidden" name="LEADCF7" value="VENDRE_DIAGNOSTIC">
+
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <input type="text" name="Last Name" placeholder="Votre Nom complet" class="form-input" required>
+                            <input type="email" name="Email" placeholder="Votre Email" class="form-input" required>
+                            <input type="tel" name="Mobile" placeholder="Téléphone" class="form-input" required>
+                            <button type="submit" class="eval-btn" style="margin-top: 10px;">Accéder à ma checklist ⚡</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ETAPE 2 : CHECKLIST -->
+                <div class="modal-state" id="modalStateChecklist">
+                    <h2 style="color: #ffffff; margin-bottom: 5px; font-size: 1.8rem; text-align: center;">Diagnostic Terminé</h2>
+                    <p style="text-align: center; color: #d4af37; font-weight: 700; margin-bottom: 25px;">✅ Vos informations ont été reçues. Voici votre plan :</p>
+                    
+                    <!-- GROUPE 1 -->
+                    <h3 class="expert-header">1. Le Socle (Indispensable)</h3>
+                    <div class="checklist-list">
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Certificat de localisation (moins de 10 ans)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Factures de taxes municipales et scolaires</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Deux pièces d'identité avec photo valides</span>
+                        </div>
+                    </div>
+
+                    <!-- GROUPE 2 -->
+                    <h3 class="expert-header">2. Dossier Stratégique</h3>
+                    
+                    <div class="checklist-group-title">Documentation prioritaires :</div>
+                    <div class="checklist-list">
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Déclaration du vendeur (complétée et signée)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Relevé d'hypothèque le plus récent</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Factures de rénovations / travaux importants</span>
+                        </div>
+                    </div>
+
+                    <div class="checklist-group-title">Pour optimiser les visites :</div>
+                    <div class="checklist-list">
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Dernières factures d'énergie (Hydro, Gaz, Mazout)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Copie des baux en vigueur (si immeuble à revenus)</span>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 35px; padding-bottom: 20px;">
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 15px;">Un document manque à l'appel ? Je peux vous aider à les obtenir.</p>
+                        <a href="https://calendar.app.google/NLQVyTxENHHFfzwW6" target="_blank" class="hero-btn" style="padding: 15px 30px; font-size: 0.9rem;">Planifier une consultation stratégique</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <!-- 2. MODALE GUIDE DOWNLOAD -->
+    <div class="modal-overlay" id="guideModalOverlay">
+        <div class="checklist-modal" style="max-width: 500px;">
+            <div class="modal-close" onclick="closeGuideModal()">×</div>
+            <div class="modal-body">
+                <h2 style="color: #ffffff; margin-bottom: 15px; font-size: 1.8rem; text-align: center;">Recevoir mon Guide</h2>
+                <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 30px;">
+                    Entrez vos coordonnées pour accéder instantanément au **Guide du Vendeur**.
+                </p>
+
+                <form action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' accept-charset='UTF-8' target='_top'>
+                    <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                    <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                    <input type="hidden" name="actionType" value="TGVhZHM=">
+                    <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca/guide-vendeur">
+                    <input type="hidden" name="Description" value="[SOURCE: GUIDE VENDEUR MODAL] Demande de téléchargement.">
+                    <input type="hidden" name="LEADCF7" value="GUIDE_VENDEUR">
+
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <input type="text" name="Last Name" placeholder="Votre Prénom" class="form-input" required>
+                        <input type="email" name="Email" placeholder="Votre Email" class="form-input" required>
+                        <input type="tel" name="Mobile" placeholder="Téléphone" class="form-input" required>
+                        <button type="submit" class="eval-btn" style="margin-top: 10px;">Accéder au guide 📥</button>
+                    </div>
+                    <p style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.5); text-align: center; margin-top: 15px;">
+                        En validant, vous acceptez de recevoir mes conseils immobiliers.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleCheck(el) {
+        el.classList.toggle('checked');
+    }
+
+    /* CONTROLES MODALE DIAGNOSTIC */
+    function openChecklistModal() {
+        document.getElementById('checklistModalOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeChecklistModal() {
+        document.getElementById('checklistModalOverlay').classList.remove('active');
+        document.body.style.overflow = ''; 
+    }
+
+    /* CONTROLES MODALE GUIDE */
+    function openGuideModal() {
+        document.getElementById('guideModalOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeGuideModal() {
+        document.getElementById('guideModalOverlay').classList.remove('active');
+        document.body.style.overflow = ''; 
+    }
+
+    function handleChecklistForm(event) {
+        document.getElementById('modalStateForm').classList.remove('active');
+        setTimeout(() => {
+            document.getElementById('modalStateChecklist').classList.add('active');
+        }, 100);
+    }
+
+    function prepareEvalSubmit(event) {
+        const criteria = [];
+        document.querySelectorAll('.eval-criteria').forEach(el => {
+            criteria.push(el.getAttribute('data-label') + ": " + el.value);
+        });
+        document.getElementById('zohoEvalDescription').value = "[SOURCE: EVALUATION VENDEUR] Critères : " + criteria.join(' | ');
+
+        const btn = document.getElementById('evalSubmitBtn');
+        const form = document.getElementById('evalForm');
+        const success = document.getElementById('evalSuccess');
+
+        btn.innerText = "Envoi...";
+        btn.disabled = true;
+
+        setTimeout(() => {
+            form.style.display = 'none';
+            success.style.display = 'block';
+        }, 1500);
+    }
+
+    // Close on overlay click
+    document.addEventListener('click', function(e) {
+        if (e.target.id === 'checklistModalOverlay') closeChecklistModal();
+        if (e.target.id === 'guideModalOverlay') closeGuideModal();
+    });
+</script>
+
+<!-- SEO Structured Data (Schema.org) for Sellers -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Evan Patruno | Courtier Immobilier à Saint-Jean-sur-Richelieu & Rive-Sud",
+  "image": "https://www.evanpatruno.ca/files/logo.png",
+  "url": "https://www.evanpatruno.ca/vendre",
+  "telephone": "+15145673249",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "220 Rue de l'Église",
+    "addressLocality": "Napierville",
+    "addressRegion": "QC",
+    "postalCode": "J0J 1L0",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    "Saint-Jean-sur-Richelieu",
+    "Montréal",
+    "Rive-Sud",
+    "Estrie"
+  ],
+  "description": "Expert en mise en marché immobilière à Saint-Jean-sur-Richelieu, sur la Rive-Sud, à Montréal et en Estrie. Vendez votre propriété avec une stratégie premium et une visibilité maximale."
+}
+</script>

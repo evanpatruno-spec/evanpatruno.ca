@@ -1,0 +1,73 @@
+<!-- 
+Barre Recherche Animée (Placeholder Typewriter)
+INSTRUCTIONS:
+1. Ajouter Code Snippet.
+-->
+<style>
+    .search-wrapper {
+        position: relative;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 12px 20px;
+        padding-right: 50px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 25px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    .search-input:focus {
+        border-color: #2c3e50;
+    }
+
+    .search-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+</style>
+
+<div class="search-wrapper">
+    <input type="text" class="search-input" id="dynamicSearch" placeholder="Je cherche...">
+    <span class="search-icon">🔍</span>
+</div>
+
+<script>
+    const input = document.getElementById('dynamicSearch');
+    const suggestions = [
+        "un Duplex à Rosemont...",
+        "une Maison avec garage...",
+        "un Condo centre-ville...",
+        "mon futur investissement..."
+    ];
+
+    let sIdx = 0;
+    let cIdx = 0;
+    let isDel = false;
+
+    function typePlace() {
+        const currentTxt = suggestions[sIdx];
+        let placeholder = "Je cherche " + currentTxt.substring(0, isDel ? cIdx-- : cIdx++);
+
+        input.setAttribute('placeholder', placeholder);
+
+        if (!isDel && cIdx === currentTxt.length) {
+            isDel = true;
+            setTimeout(typePlace, 2000); // Pause lecture
+        } else if (isDel && cIdx === 0) {
+            isDel = false;
+            sIdx = (sIdx + 1) % suggestions.length;
+            setTimeout(typePlace, 200);
+        } else {
+            setTimeout(typePlace, isDel ? 50 : 100);
+        }
+    }
+    typePlace();
+</script>

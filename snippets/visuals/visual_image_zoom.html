@@ -1,0 +1,27 @@
+<!-- 
+Effet Zoom Image au Survol
+INSTRUCTIONS:
+1. Ajouter ce snippet dans le Footer.
+2. Ce code cible TOUTES les images dans des colonnes Zoho (.zpcolumn img) pour leur donner cet effet.
+   Si c'est trop, changez le sélecteur pour une classe spécifique comme '.zoom-img'.
+-->
+
+<style>
+    /* Cible générique pour les images de contenu Zoho */
+    .zpcolumn img,
+    .zpelement-image img,
+    .zoom-img {
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: transform;
+        /* Optionnel: Border radius pour faire joli */
+        /* border-radius: 8px; */
+    }
+
+    .zpcolumn img:hover,
+    .zpelement-image img:hover,
+    .zoom-img:hover {
+        transform: scale(1.03);
+        /* Zoom léger de 3% */
+        cursor: pointer;
+    }
+</style>

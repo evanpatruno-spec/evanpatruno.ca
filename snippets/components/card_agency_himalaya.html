@@ -1,0 +1,120 @@
+<!-- 
+SNIPPET: CARTE AGENCE HIMALAYA (RAFFINÉE)
+THEME: BOUTIQUE LUXE / NOIR & OR
+-->
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+    .himalaya-card-container {
+        font-family: 'Outfit', sans-serif;
+        background: #000000;
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .himalaya-card {
+        max-width: 1000px;
+        width: 100%;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(197, 160, 89, 0.1)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        border-radius: 40px;
+        overflow: hidden;
+        border: 1px solid rgba(197, 160, 89, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 80px 40px;
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+        position: relative;
+    }
+
+    .himalaya-logo-img {
+        width: 200px;
+        height: auto;
+        margin-bottom: 30px;
+        filter: brightness(0) invert(1); /* Force white for dark theme if it's black */
+        position: relative;
+        z-index: 2;
+    }
+
+    .himalaya-content {
+        position: relative;
+        z-index: 2;
+        max-width: 750px;
+    }
+
+    .himalaya-brand-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        background: rgba(197, 160, 89, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(197, 160, 89, 0.4);
+        border-radius: 50px;
+        color: #c5a059;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    .himalaya-title {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 20px;
+        line-height: 1.1;
+    }
+
+    .himalaya-desc {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 40px;
+        line-height: 1.6;
+        font-weight: 300;
+    }
+
+    .himalaya-btn {
+        display: inline-block;
+        padding: 18px 45px;
+        background: #c5a059;
+        color: #000000;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
+    }
+
+    .himalaya-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(197, 160, 89, 0.5);
+        background: #d4b477;
+    }
+
+    @media (max-width: 768px) {
+        .himalaya-title { font-size: 2.2rem; }
+        .himalaya-card { padding: 60px 20px; border-radius: 30px; }
+    }
+</style>
+
+<div class="himalaya-card-container">
+    <div class="himalaya-card">
+        <div class="himalaya-content">
+            <img src="https://www.himalayacorp.com/gx/himalaya-immobilier-logo.png" alt="Logo Himalaya" class="himalaya-logo-img">
+            <div class="himalaya-brand-badge">Agence Immobilière de Prestige</div>
+            <h2 class="himalaya-title">Immobilier Himalaya</h2>
+            <p class="himalaya-desc">
+                Une vision internationale, une expertise locale. Nous transcendons les standards de l'immobilier traditionnel pour offrir une expérience sur mesure, où chaque propriété est traitée comme une œuvre d'art.
+            </p>
+            <a href="/vendre" class="himalaya-btn">Découvrir l'approche Himalaya</a>
+        </div>
+    </div>
+</div>

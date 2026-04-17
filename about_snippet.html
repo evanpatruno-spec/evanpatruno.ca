@@ -1,0 +1,248 @@
+<!-- DEBUT DU SNIPPET A PROPOS -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+    #evan-about-container {
+        --bg-color: #0f172a;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --accent: #873276;
+        font-family: 'Outfit', sans-serif;
+        color: var(--text-primary);
+        line-height: 1.6;
+        width: 100%;
+        max-width: 100%;
+        /* Full width to show background */
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        /* More padding */
+
+        /* Dark Gradient Background */
+        background: radial-gradient(circle at top right, #2b0b24 0%, #0f172a 60%, #020617 100%);
+    }
+
+    /* Typography */
+    .about-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+        background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    }
+
+    .about-subtitle {
+        font-size: 1.25rem;
+        color: var(--accent);
+        text-align: center;
+        margin-bottom: 4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* Layouts */
+    .about-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-bottom: 6rem;
+    }
+
+    .about-img-box {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        aspect-ratio: 3/4;
+    }
+
+    .about-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .about-img-box:hover img {
+        transform: scale(1.05);
+    }
+
+    .about-bio h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: white;
+    }
+
+    .about-bio p {
+        margin-bottom: 1.5rem;
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+    }
+
+    /* Cards Grid */
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 6rem;
+    }
+
+    .glass-card {
+        background: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        border-radius: 16px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .glass-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.1);
+        /* Accent glow */
+        border-color: var(--accent);
+    }
+
+    .glass-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .glass-card p {
+        color: var(--text-secondary);
+        margin: 0;
+    }
+
+    /* CTA Section */
+    .about-cta {
+        text-align: center;
+        background: linear-gradient(to right, rgba(135, 50, 118, 0.1), rgba(135, 50, 118, 0.05));
+        padding: 4rem;
+        border-radius: 20px;
+        border: 1px solid rgba(135, 50, 118, 0.2);
+    }
+
+    .cta-btn {
+        display: inline-block;
+        background-color: var(--accent);
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(135, 50, 118, 0.3);
+    }
+
+    .cta-btn:hover {
+        background-color: #6a245c;
+        transform: scale(1.05);
+        color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .about-hero {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+        }
+    }
+</style>
+
+<div id="evan-about-container">
+
+    <!-- Title -->
+    <header>
+        <h1 class="about-title">Evan Patruno</h1>
+        <p class="about-subtitle">Expert Courtier Immobilier et Hypothécaire à Saint-Jean-sur-Richelieu</p>
+    </header>
+
+    <!-- Hero / Bio -->
+    <div class="about-hero">
+        <div class="about-img-box">
+            <!-- PLACEHOLDER IMAGE - REPLACE WITH YOUR URL -->
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Evan Patruno">
+        </div>
+        <div class="about-bio">
+            <h2>L'art de l'immobilier</h2>
+            <p>
+                Avec plus de douze ans d'expérience en tant que propriétaire de logements locatifs et commerciaux, j'ai
+                bâti une réputation de courtier immobilier alliant <strong>créativité et efficacité</strong>.
+            </p>
+            <p>
+                Ce qui me distingue, c'est ma passion pour l'art et la manière dont elle influence ma façon de
+                travailler. Je perçois chaque projet immobilier comme une œuvre en devenir, où chaque détail compte.
+                Cette approche me permet de repérer des opportunités uniques et d'offrir des solutions qui dépassent les
+                attentes.
+            </p>
+            <p>
+                Mon objectif est simple : vous accompagner pour bâtir un patrimoine solide et prospère, avec une
+                stratégie sur mesure parfaitement adaptée à vos aspirations.
+            </p>
+        </div>
+    </div>
+
+    <!-- Vision & Mission -->
+    <div class="values-grid">
+        <div class="glass-card">
+            <h3>🔭 Vision</h3>
+            <p>Revisiter le courtage immobilier par une approche personnalisée et créative, transformant chaque
+                transaction en une expérience enrichissante et durable.</p>
+        </div>
+        <div class="glass-card">
+            <h3>🎯 Mission</h3>
+            <p>Redéfinir la manière dont mes clients vivent le processus immobilier. Transparence, innovation et
+                satisfaction à long terme sont mes priorités absolues.</p>
+        </div>
+    </div>
+
+    <!-- Core Values -->
+    <h2 style="text-align:center; font-size:2rem; margin-bottom:3rem;">Mes Valeurs Fondamentales</h2>
+    <div class="values-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="glass-card" style="text-align:center;">
+            <div style="font-size:2rem; margin-bottom:1rem;">🎨</div>
+            <h3>Créativité</h3>
+            <p>Trouver des solutions originales pour maximiser la valeur de chaque projet.</p>
+        </div>
+        <div class="glass-card" style="text-align:center;">
+            <div style="font-size:2rem; margin-bottom:1rem;">🤝</div>
+            <h3>Transparence</h3>
+            <p>Communiquer de manière claire et honnête à chaque étape.</p>
+        </div>
+        <div class="glass-card" style="text-align:center;">
+            <div style="font-size:2rem; margin-bottom:1rem;">✨</div>
+            <h3>Personnalisation</h3>
+            <p>Adapter chaque stratégie aux besoins uniques de mes clients.</p>
+        </div>
+        <div class="glass-card" style="text-align:center;">
+            <div style="font-size:2rem; margin-bottom:1rem;">💎</div>
+            <h3>Engagement</h3>
+            <p>Offrir un accompagnement constant pour garantir des résultats optimaux.</p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="about-cta">
+        <h2 style="margin-bottom:1rem;">Prêt à concrétiser votre projet ?</h2>
+        <p style="color:var(--text-secondary);">Discutons de vos objectifs et bâtissons votre stratégie ensemble.</p>
+        <a href="/contact" class="cta-btn">Contactez-moi</a>
+    </div>
+
+</div>
+<!-- FIN DU SNIPPET -->

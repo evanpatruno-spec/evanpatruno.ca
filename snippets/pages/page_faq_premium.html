@@ -1,0 +1,754 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+    .faq-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+    }
+
+    /* HERO */
+    .faq-hero {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.82), rgba(135, 50, 118, 0.25)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px !important;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        z-index: 1;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .faq-hero h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+        letter-spacing: -2px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .faq-hero p {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    /* SEARCH BAR */
+    .faq-search-wrapper {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .faq-search-input {
+        width: 100%;
+        padding: 18px 25px 18px 55px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        color: #ffffff !important;
+        font-size: 1.05rem;
+        transition: all 0.3s ease;
+        outline: none;
+    }
+
+    .faq-search-input::placeholder {
+        color: rgba(255, 255, 255, 0.7) !important; /* Very visible placeholder */
+    }
+
+    .faq-search-input:focus {
+        background: rgba(255, 255, 255, 0.25);
+        border-color: #873276;
+        box-shadow: 0 0 25px rgba(135, 50, 118, 0.5);
+    }
+
+    .faq-search-icon {
+        position: absolute;
+        left: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ffffff !important; /* White icon */
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
+
+    /* FILTERS */
+    .faq-filter-container {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin: 40px 0 20px;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        padding: 10px 22px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+
+    .filter-btn.active {
+        background: #873276;
+        border-color: #873276;
+        color: white;
+        box-shadow: 0 5px 15px rgba(135, 50, 118, 0.3);
+    }
+
+    /* EMPTY STATE */
+    .faq-no-results {
+        display: none;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .faq-no-results h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* MAIN CONTENT */
+    .faq-content {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 80px 20px 100px;
+    }
+
+    /* CATEGORY LABEL */
+    .faq-category {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #873276;
+        margin: 50px 0 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(135, 50, 118, 0.3);
+    }
+
+    .faq-category:first-child {
+        margin-top: 0;
+    }
+
+    /* ACCORDION */
+    .faq-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        overflow: hidden;
+    }
+
+    .faq-question {
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 22px 0;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        transition: color 0.2s ease;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .faq-question:hover {
+        color: #ffffff;
+    }
+
+    .faq-icon {
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid rgba(135, 50, 118, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #873276;
+        transition: all 0.3s ease;
+        background: rgba(135, 50, 118, 0.08);
+    }
+
+    .faq-item.active {
+        background: rgba(135, 50, 118, 0.03);
+        border-radius: 12px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(135, 50, 118, 0.3);
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.1);
+    }
+
+    .faq-item.active .faq-question {
+        color: #ffffff;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0 15px;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 1000px;
+        padding: 0 15px 24px;
+    }
+
+    .faq-answer p {
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-size: 1rem;
+        line-height: 1.75;
+        margin: 0;
+    }
+
+    .faq-answer a {
+        color: #873276;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .faq-answer a:hover {
+        text-decoration: underline;
+    }
+
+    /* CTA BOTTOM */
+    .faq-cta-block {
+        margin-top: 70px;
+        background: linear-gradient(135deg, rgba(135, 50, 118, 0.12), rgba(30, 10, 25, 0.5));
+        border: 1px solid rgba(135, 50, 118, 0.2);
+        border-radius: 30px;
+        padding: 50px 40px;
+        text-align: center;
+    }
+
+    .faq-cta-block h3 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+
+    .faq-cta-block p {
+        color: rgba(255, 255, 255, 0.65) !important;
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+    }
+
+    .faq-cta-btn {
+        display: inline-block;
+        padding: 16px 40px;
+        background: #873276;
+        color: #ffffff !important;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 0.85rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.3);
+    }
+
+    .faq-cta-btn:hover {
+        background: #6a275d;
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5);
+    }
+
+    /* LICENSE BADGE */
+    .faq-license {
+        text-align: center;
+        padding: 30px 20px 20px;
+        color: rgba(255, 255, 255, 0.25);
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+        .faq-hero {
+            padding: 60px 20px 80px !important;
+            margin-top: 15px !important;
+            min-height: 350px !important;
+        }
+
+        .faq-hero h1 {
+            font-size: 2.4rem;
+        }
+
+        .faq-content {
+            padding: 50px 15px 70px;
+        }
+
+        .faq-cta-block {
+            padding: 35px 25px;
+        }
+
+        .faq-cta-block h3 {
+            font-size: 1.6rem;
+        }
+    }
+</style>
+
+<div class="faq-lp">
+
+    <!-- HERO -->
+    <header class="faq-hero">
+        <h1>Foire aux Questions</h1>
+        <p>Tout ce que vous devez savoir sur l'immobilier, le financement et mes services.</p>
+        
+        <div class="faq-search-wrapper">
+            <span class="faq-search-icon">🔍</span>
+            <input type="text" id="faqSearch" class="faq-search-input" placeholder="Chercher une question (ex: taux, commission...)">
+        </div>
+    </header>
+
+    <!-- FILTERS -->
+    <div class="faq-filter-container">
+        <button class="filter-btn active" data-filter="all">Toutes</button>
+        <button class="filter-btn" data-filter="immobilier">Immobilier (Légal)</button>
+        <button class="filter-btn" data-filter="residentiel">Résidentiel</button>
+        <button class="filter-btn" data-filter="financement">Hypothécaire</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="faq-content">
+
+        <!-- CATÉGORIE : IMMOBILIER (LÉGAL) -->
+        <div class="faq-item" data-category="immobilier">
+            <button class="faq-question">
+                Qu’est-ce que l’OACIQ et pourquoi est-ce important pour moi ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>L’Organisme d’autoréglementation du courtage immobilier du Québec (OACIQ) assure la protection du public en encadrant la profession. Faire affaire avec un courtier certifié vous donne accès à des mécanismes de protection (Fonds d'indemnisation, Assurance responsabilité) et garantit l'utilisation de formulaires légaux obligatoires.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="immobilier">
+            <button class="faq-question">
+                Pourquoi utiliser les formulaires obligatoires de l'OACIQ ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Ces formulaires (Contrat de courtage, Promesse d'achat, Déclarations du vendeur) sont conçus pour protéger toutes les parties. Ils détaillent précisément les inclusions, exclusions et conditions de la vente, limitant ainsi les risques de litiges futurs.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="immobilier">
+            <button class="faq-question">
+                Comment puis-je vérifier si un courtier possède un permis valide ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Vous pouvez consulter le registre des titulaires de permis sur le site officiel de l'OACIQ (oaciq.com). C'est votre garantie que le courtier est en règle et qu'il suit une formation continue obligatoire.</p>
+            </div>
+        </div>
+
+        <!-- CATÉGORIE : RÉSIDENTIEL -->
+        <div class="faq-item" data-category="residentiel">
+            <button class="faq-question">
+                Quels sont les frais à prévoir lors de l'achat d'une maison ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>En plus de la mise de fonds, prévoyez environ 1.5% à 2% du prix d'achat pour : l'inspection en bâtiment, les honoraires du notaire, la taxe de bienvenue (droit de mutation), les frais de déménagement et les ajustements (taxes municipales/scolaires).</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="residentiel">
+            <button class="faq-question">
+                Puis-je acheter une propriété vendue "sans garantie légale" ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Oui, c'est fréquent lors de successions ou de ventes par des institutions. Cela signifie que vous ne pourrez pas poursuivre le vendeur pour des vices cachés. Dans ce cas, une inspection approfondie est doublement importante.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="residentiel">
+            <button class="faq-question">
+                Quelles sont les particularités de l'achat d'un condo (copropriété) ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>L'achat d'un condo implique l'étude des documents de copropriété : déclaration de copropriété, état du fonds de prévoyance, budget et procès-verbaux des assemblées passées. Il faut valider la santé financière de la copropriété avant de conclure.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Combien coûte l'accompagnement d'un courtier immobilier ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Pour les acheteurs, mes services sont entièrement <strong>gratuits</strong> — c'est le vendeur qui
+                    paie la commission. Pour les vendeurs, la commission est établie lors de notre première rencontre et
+                    varie selon la complexité du mandat et du marché de la Rive-Sud. Je vous explique tout clairement avant toute signature.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Pourquoi devrais-je utiliser un courtier plutôt que de vendre ou acheter seul ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Un courtier vous protège légalement, négocie à votre avantage et accède à des données de marché que
+                    le public n'a pas. Les vendeurs sans courtier obtiennent en moyenne un prix inférieur au marché, et
+                    les acheteurs sans représentation risquent de manquer des vices cachés ou de surpayer. Mon rôle est
+                    de maximiser votre résultat tout en minimisant vos risques.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment se passe la première rencontre avec vous ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>La première rencontre est <strong>gratuite et sans engagement</strong>. Nous discutons de votre
+                    projet, de votre situation et de vos objectifs. Je vous présente ma méthode de travail et réponds à
+                    toutes vos questions. C'est l'occasion pour vous de voir si le courant passe et pour moi de voir
+                    comment je peux vous aider efficacement.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Quels types de propriétés traitez-vous ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Je travaille avec tous les types de propriétés : maisons unifamiliales, condos, jumelés, triplex,
+                    multilogements (immeuble à revenus), terrains et propriétés commerciales. Que vous soyez acheteur,
+                    vendeur ou investisseur, j'ai l'expertise pour vous accompagner.</p>
+            </div>
+        </div>
+
+        <!-- NEW QUESTIONS : VENTE -->
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Est-ce que le certificat de localisation est obligatoire pour vendre ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Oui, le vendeur doit fournir un certificat de localisation reflétant l'état actuel de la propriété. S'il n'est plus à jour (ex: ajout d'une piscine, cabanon), un nouveau sera requis pour la transaction chez le notaire.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Qu'est-ce que la garantie légale de qualité ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>C'est une protection pour l'acheteur contre les vices cachés. Sauf avis contraire, toute vente immobilière au Québec est faite avec cette garantie. Il est toutefois possible de vendre "sans garantie légale", souvent dans le cas de successions ou de reprises.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Le Home Staging est-il vraiment nécessaire ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Ce n'est pas "nécessaire", mais c'est hautement stratégique. Une propriété bien dépersonnalisée et optimisée visuellement se vend plus vite et souvent à un meilleur prix. Je vous conseille sur les petits changements à fort impact lors de notre rencontre.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Est-ce que vous proposez une évaluation gratuite de ma propriété ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Oui ! Je peux vous fournir une <strong>analyse comparative de marché (ACM) gratuite</strong>, basée
+                    sur les ventes récentes dans votre secteur. Cette analyse vous donne une fourchette réaliste du prix
+                    de vente optimal pour votre propriété. <a href="/contact">Contactez-moi</a> pour planifier une
+                    rencontre.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Quels sont vos secteurs d'activité ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Je suis actif principalement dans le <strong>Haut-Richelieu</strong> (Saint-Jean-sur-Richelieu,
+                    Saint-Luc, Iberville), la <strong>Rive-Sud</strong> (Brossard, Longueuil, Chambly), le <strong>Grand
+                        Montréal</strong> et les <strong>Cantons-de-l'Est / Estrie</strong>. Pour les services
+                    hypothécaires, j'accompagne des clients partout au Québec.</p>
+            </div>
+        </div>
+
+        <!-- NEW QUESTIONS : ACHAT -->
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Dois-je faire inspecter la maison avant d'acheter ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>C'est fortement recommandé. L'inspection pré-achat vous permet de connaître l'état réel du bâtiment et peut servir de levier de négociation si des points majeurs sont découverts.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Quelle est la mise de fonds minimale pour acheter ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Pour une résidence principale, la mise de fonds minimale est de 5% pour la première tranche de 500 000 $. Pour un investissement (Plex non occupé), elle est généralement de 20%.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Combien de temps faut-il pour vendre une propriété ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Le délai de vente moyen varie selon le marché, la mise en marché et le prix demandé. En général, une
+                    propriété bien positionnée à Saint-Jean-sur-Richelieu se vend entre <strong>30 et 60 jours</strong>.
+                    Avec une stratégie de mise en marché premium (photos pros, vidéo, diffusion élargie), on vise
+                    souvent des offres dans les deux premières semaines.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="financement">
+            <button class="faq-question">
+                Pouvez-vous aider pour le financement ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Absolument — c'est l'une de mes spécialités. En tant que courtier hypothécaire certifié AMF
+                    (certificat no 272648), je compare les offres de <strong>plusieurs institutions financières</strong>
+                    pour vous obtenir le meilleur taux. J'accompagne mes clients partout au Québec depuis mon bureau de <strong>Laval</strong>.</p>
+            </div>
+        </div>
+
+        <!-- NEW QUESTIONS : HYPOTHÉCAIRE -->
+        <div class="faq-item" data-category="financement">
+            <button class="faq-question">
+                Qu'est-ce qu'une pré-approbation hypothécaire ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>C'est un document qui confirme le montant maximal que vous pouvez emprunter. Elle rassure les vendeurs sur votre capacité financière et solidifie votre offre d'achat.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="financement">
+            <button class="faq-question">
+                Taux fixe ou taux variable : quel est le meilleur choix ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Cela dépend de votre tolérance au risque et de vos objectifs. Le taux fixe offre la stabilité, tandis que le taux variable peut être plus avantageux sur le long terme mais sujet aux fluctuations du marché.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="financement">
+            <button class="faq-question">
+                Peut-on briser une hypothèque avant la fin du terme ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Oui, mais préparez-vous à payer une pénalité. Je peux vous aider à calculer si le refinancement vers un taux plus bas compense cette pénalité.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="commercial">
+            <button class="faq-question">
+                Quelle est la différence entre un projet résidentiel et un projet commercial ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Un projet résidentiel implique des propriétés d'habitation (maisons, condos, plex jusqu'à 4
+                    logements). Le commercial couvre les immeubles locatifs de 5 logements et plus, les bureaux,
+                    commerces, entrepôts et terrains. Le financement et la fiscalité sont très différents — c'est pourquoi il est crucial d'être accompagné par un expert basé à Laval ou Napierville.</p>
+            </div>
+        </div>
+
+        <!-- NEW QUESTIONS : INVESTISSEMENT -->
+        <div class="faq-item" data-category="commercial">
+            <button class="faq-question">
+                C'est quoi un Plex "Propriétaire-Occupant" ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>C'est l'achat d'un immeuble à revenus où vous habitez l'un des logements. L'avantage majeur est de pouvoir acheter avec une mise de fonds aussi basse que 5% ou 10% au lieu de 20%.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="commercial">
+            <button class="faq-question">
+                Qu'est-ce que le programme APH Select de la SCHL ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>C'est un programme d'assurance prêt pour les multilogements qui offre des primes réduites et des périodes d'amortissement plus longues (jusqu'à 50 ans) pour les projets performants au niveau environnemental ou social.</p>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="faq-cta-block">
+            <h3>Discutons de vos projets</h3>
+            <p>Je suis disponible pour répondre à toutes vos questions, sans engagement.</p>
+            <a href="https://calendar.app.google/NLQVyTxENHHFfzwW6" class="faq-cta-btn" target="_blank">Réserver une
+                consultation gratuite</a>
+        </div>
+
+    </div>
+
+    <!-- NO RESULTS -->
+    <div id="faqNoResults" class="faq-no-results">
+        <h4>Oups ! Aucune réponse trouvée.</h4>
+        <p>Essayez un autre mot-clé ou posez-moi votre question directement.</p>
+        <a href="/contact" class="faq-cta-btn">Me contacter</a>
+    </div>
+
+    <div class="faq-license">
+        Evan Patruno — Courtier immobilier agréé OACIQ · Permis H5929 · Courtier hypothécaire AMF · Certificat 272648
+    </div>
+
+</div>
+
+<script>
+    const searchInput = document.getElementById('faqSearch');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const faqItems = document.querySelectorAll('.faq-item');
+    const noResults = document.getElementById('faqNoResults');
+    const categories = document.querySelectorAll('.faq-category');
+
+    function filterFAQ() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+        let visibleCount = 0;
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question').innerText.toLowerCase();
+            const answer = item.querySelector('.faq-answer').innerText.toLowerCase();
+            const category = item.dataset.category;
+
+            const matchesSearch = question.includes(searchTerm) || answer.includes(searchTerm);
+            const matchesFilter = activeFilter === 'all' || activeFilter === category;
+
+            if (matchesSearch && matchesFilter) {
+                item.style.display = 'block';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        // Hide/Show categories labels (not needed if we use buttons but kept for structure)
+        if (activeFilter !== 'all' || searchTerm !== '') {
+            categories.forEach(c => c.style.display = 'none');
+        } else {
+            categories.forEach(c => c.style.display = 'block');
+        }
+
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterFAQ);
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterFAQ();
+        });
+    });
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item.active').forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        });
+    });
+</script>
+
+<!-- SEO : FAQPage JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu’est-ce que l’OACIQ et pourquoi est-ce important pour moi ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L’Organisme d’autoréglementation du courtage immobilier du Québec (OACIQ) assure la protection du public en encadrant la profession et en fournissant des mécanismes de protection comme le Fonds d'indemnisation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les frais à prévoir lors de l'achat d'une maison ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prévoyez environ 1.5% à 2% du prix d'achat pour l'inspection, le notaire, la taxe de bienvenue et les ajustements de taxes professionnelles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte l'accompagnement d'un courtier immobilier ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour les acheteurs, mes services sont gratuits. Pour les vendeurs, la commission est établie lors de la première rencontre selon la complexité du mandat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pouvez-vous aider pour le financement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, je suis courtier hypothécaire certiifié AMF. Je compare les offres de plusieurs institutions pour vous obtenir le meilleur taux, partout au Québec depuis mon bureau de Laval."
+      }
+    },
+    {
+        "@type": "Question",
+        "name": "Quelle est la différence entre un projet résidentiel et un projet commercial ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le résidentiel couvre les habitations jusqu'à 4 logements. Le commercial inclut les multilogements de 5+, bureaux et commerces. Le financement et la fiscalité diffèrent grandement."
+        }
+    }
+  ]
+}
+</script>

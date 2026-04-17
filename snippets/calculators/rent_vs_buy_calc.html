@@ -1,0 +1,135 @@
+<!-- 
+Calculatrice Louer vs Acheter (Simple)
+INSTRUCTIONS:
+1. Ajouter un Code Snippet.
+2. Coller le code.
+-->
+<style>
+    .rvb-container {
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        max-width: 500px;
+        margin: 20px auto;
+        font-family: sans-serif;
+    }
+
+    .rvb-header {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    .rvb-input {
+        margin-bottom: 15px;
+    }
+
+    .rvb-input label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .rvb-input input {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .rvb-comparison {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 2px dashed #eee;
+    }
+
+    .rvb-box {
+        width: 48%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .rvb-rent {
+        background-color: #fce4ec;
+        color: #c2185b;
+    }
+
+    .rvb-buy {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+    }
+
+    .rvb-val {
+        font-size: 1.2em;
+        font-weight: 800;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .rvb-note {
+        font-size: 0.8em;
+        color: #666;
+        margin-top: 10px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .range-wrap {
+        margin-bottom: 5px;
+    }
+</style>
+
+<div class="rvb-container">
+    <h3 class="rvb-header">Louer ou Acheter ?</h3>
+
+    <div class="rvb-input">
+        <label>Votre Loyer Actuel ($/mois)</label>
+        <input type="number" id="rvb-rent-amount" value="1500" oninput="calcRentVsBuy()">
+        <input type="range" min="500" max="5000" value="1500" class="range-wrap" style="width:100%"
+            oninput="document.getElementById('rvb-rent-amount').value=this.value; calcRentVsBuy()">
+    </div>
+
+    <div class="rvb-comparison">
+        <div class="rvb-box rvb-rent">
+            <span>Sur 5 ans (Loyer)</span>
+            <span class="rvb-val" id="rvb-total-rent">-</span>
+            <small>Perdu à 100%</small>
+        </div>
+        <div class="rvb-box rvb-buy">
+            <span>Potentiel Achat*</span>
+            <span class="rvb-val" id="rvb-buying-power">-</span>
+            <small>Votre investissement</small>
+        </div>
+    </div>
+
+    <p class="rvb-note">*Estimation très approximative de la capacité d'emprunt basée sur une mensualité équivalente au
+        loyer (Taux ~4.5%, 25 ans). Ne remplace pas une pré-qualification.</p>
+</div>
+
+<script>
+    function calcRentVsBuy() {
+        const rent = parseFloat(document.getElementById('rvb-rent-amount').value) || 0;
+
+        // 1. Total payé en loyer sur 5 ans
+        const totalRent = rent * 12 * 5;
+
+        // 2. Capacité d'achat (Combien on peut emprunter si on paie ce montant par mois)
+        // Formule inverse de l'hypothèque (approximée)
+        // M = P * ...  => P = M * ...
+        const r = 0.045 / 12; // 4.5% taux
+        const n = 25 * 12; // 25 ans
+
+        // Facteur d'actualisation PV
+        const buyingPower = rent * ((Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n)));
+
+        document.getElementById('rvb-total-rent').innerText = totalRent.toLocaleString('fr-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 });
+        document.getElementById('rvb-buying-power').innerText = buyingPower.toLocaleString('fr-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 });
+    }
+    // Init
+    calcRentVsBuy();
+</script>

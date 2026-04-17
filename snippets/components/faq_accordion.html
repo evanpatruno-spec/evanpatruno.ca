@@ -1,0 +1,111 @@
+<!-- 
+FAQ Accordéon
+INSTRUCTIONS:
+1. Ajouter un Code Snippet.
+2. Coller le code.
+-->
+<style>
+    .faq-container {
+        max-width: 800px;
+        margin: 20px auto;
+        font-family: sans-serif;
+    }
+
+    .faq-item {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+
+    .faq-question {
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 15px;
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #333;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: color 0.3s;
+    }
+
+    .faq-question:hover {
+        color: #e53935;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        padding: 0 15px;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .faq-icon {
+        font-size: 1.5em;
+        transition: transform 0.3s;
+    }
+
+    /* Classe active JS */
+    .faq-item.active .faq-answer {
+        max-height: 500px;
+        /* Valeur arbitraire suffisante */
+        padding-bottom: 15px;
+    }
+
+    .faq-item.active .faq-question {
+        color: #e53935;
+    }
+
+    .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+    }
+</style>
+
+<div class="faq-container">
+    <div class="faq-item">
+        <button class="faq-question">
+            Quel est le montant minimum de mise de fonds ?
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Pour une propriété de 500 000 $ ou moins, la mise de fonds minimale est de 5 %. Pour la tranche
+                supérieure à 500 000 $, c'est 10 %.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            Faut-il être pré-approuvé avant de visiter ?
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Il est fortement recommandé d'obtenir une pré-approbation hypothécaire. Cela renforce votre offre d'achat
+                et définit clairement votre budget.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            Quels sont les frais supplémentaires à prévoir ?
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Prévoyez environ 1.5% à 2% du prix d'achat pour couvrir la taxe de bienvenue, l'inspection, le notaire et
+                les ajustements de taxes.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+            item.classList.toggle('active');
+        });
+    });
+</script>

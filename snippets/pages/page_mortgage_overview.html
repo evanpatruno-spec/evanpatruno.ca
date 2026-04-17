@@ -1,0 +1,1063 @@
+<style>
+    /* FIX FOR ZOHO BANNER GAP */
+    #header-banner-section, .theme-banner-container, .zphero {
+        display: none !important;
+    }
+
+    /* GLOBAL RESET & FONTS */
+    .mortgage-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+    }
+
+    .mortgage-lp * {
+        box-sizing: border-box;
+    }
+
+    .mortgage-lp h1, .mortgage-lp h2, .mortgage-lp h3 {
+        color: white;
+        font-weight: 800;
+        margin-top: 0;
+    }
+
+    .mortgage-lp-section {
+        padding: 40px 20px;
+    }
+
+    .mortgage-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* 1. HERO SECTION */
+    .hero-mortgage {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.82), rgba(135, 50, 118, 0.25)), url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px !important;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        z-index: 1;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-mortgage h1 {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        font-weight: 900;
+    }
+
+    .hero-mortgage p {
+        font-size: 1.35rem;
+        max-width: 850px;
+        margin: 0 auto 50px;
+        opacity: 0.95;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 22px 50px;
+        background: #fff;
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    /* 2. HUB PILLARS */
+    .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hub-card {
+        background: rgba(43, 11, 36, 0.7);
+        backdrop-filter: blur(10px);
+        color: white;
+        padding: 45px 30px;
+        border-radius: 24px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hub-card:hover {
+        transform: translateY(-12px);
+        border-color: #873276;
+        box-shadow: 0 40px 80px rgba(135, 50, 118, 0.2);
+    }
+
+    .hub-card h3 {
+        color: white;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .hub-card p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .hub-icon {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 10px 20px rgba(135, 50, 118, 0.3));
+    }
+
+    .hub-link {
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        margin-top: auto;
+    }
+
+    /* 3. EXPERTISE SECTION */
+    .expert-section {
+        background: #1e0a19;
+        padding: 60px 20px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .expert-title {
+        font-size: 2.8rem;
+        margin-bottom: 40px;
+        color: white;
+    }
+
+    /* ZOHO FIX */
+    .mortgage-lp { margin-top: -1px; padding-top: 1px; }
+
+    @media (max-width: 768px) {
+        .hero-mortgage { 
+            padding: 60px 20px 80px !important; 
+            margin-top: 15px !important;
+            min-height: 350px !important;
+        }
+        .hero-mortgage h1 { font-size: 2.22rem; }
+        .hero-mortgage p { font-size: 1.1rem; }
+        .hub-grid { margin-top: -60px; padding: 0 10px; }
+        .expert-title { font-size: 2rem; }
+    }
+
+    /* IDEA 6, 9, 10: NEW COMPONENTS */
+    .infographic-section {
+        background: rgba(255, 255, 255, 0.02);
+        padding: 40px 20px;
+        border-radius: 40px;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        position: relative;
+    }
+
+    .process-step {
+        text-align: center;
+        position: relative;
+    }
+
+    .process-step h4 {
+        margin: 0 0 5px 0; /* Tighten heading gap */
+        font-size: 1.25rem;
+    }
+
+    .process-step p {
+        margin-top: 5px; /* Tighten paragraph gap */
+    }
+
+    .step-icon-circle {
+        width: 70px;
+        height: 70px;
+        background: #873276;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 12px; /* Reduced from 20px */
+        font-size: 1.5rem;
+        box-shadow: 0 10px 20px rgba(135, 50, 118, 0.3);
+        z-index: 2;
+        position: relative;
+    }
+
+    .process-step::after {
+        content: '';
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, #873276, rgba(255, 255, 255, 0.1));
+        z-index: 1;
+    }
+
+    .process-step:last-child::after { display: none; }
+
+    .step-icon-circle:hover {
+        transform: scale(1.1);
+        background: #ab4497;
+        box-shadow: 0 0 30px rgba(135, 50, 118, 0.6);
+    }
+
+    .glossary-section {
+        padding: 70px 20px;
+        background: linear-gradient(to bottom, transparent, rgba(135, 50, 118, 0.05));
+    }
+
+    .glossary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+    }
+
+    .glossary-card {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 35px 25px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .glossary-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 4px; height: 0;
+        background: #873276;
+        transition: 0.4s;
+    }
+
+    .glossary-card:hover {
+        background: rgba(255, 255, 255, 0.06);
+        transform: translateY(-8px);
+        border-color: rgba(135, 50, 118, 0.3);
+    }
+
+    .glossary-card:hover::before { height: 100%; }
+
+    .glossary-card h4 {
+        margin-bottom: 15px;
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .glossary-icon {
+        color: #873276;
+        font-size: 1.4rem;
+    }
+
+    .direct-call-hero {
+        margin-top: 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 25px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.3s;
+        white-space: nowrap; /* Prevents breaking into 2 lines */
+    }
+
+    @media (max-width: 480px) {
+        .direct-call-hero {
+            font-size: 0.85rem; /* Slight reduction for very small screens */
+            padding: 12px 15px;
+        }
+    }
+
+    .direct-call-hero:hover {
+        background: #25D366; /* Green for call/whatsapp trust */
+        border-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+        .process-grid { grid-template-columns: 1fr; gap: 40px; }
+        .process-step::after { display: none; }
+        .glossary-grid { grid-template-columns: 1fr; }
+    }
+
+    /* READY CTA BLOCK */
+    .ready-cta-section {
+        background: linear-gradient(145deg, rgba(135, 50, 118, 0.1), rgba(30, 10, 25, 0.4));
+        border: 2px solid rgba(135, 50, 118, 0.2);
+        border-radius: 40px;
+        padding: 40px 30px;
+        margin: 0 0 20px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .ready-cta-section {
+            padding: 40px 20px;
+            margin: 40px 10px;
+        }
+        .ready-cta-section h2 { font-size: 1.8rem !important; }
+        .ready-cta-section .hero-btn { 
+            padding: 18px 30px !important; 
+            width: auto !important; 
+            min-width: 250px; 
+            border-radius: 50px !important;
+            white-space: nowrap;
+        }
+    }
+
+    /* MODAL OVERLAY SYSTEM */
+    .modal-overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(10, 10, 25, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 20000;
+        display: none;
+        align-items: center; justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .modal-overlay.active { display: flex; opacity: 1; }
+
+    .checklist-modal {
+        background: #1e0a19;
+        max-width: 600px;
+        width: 100%;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+        position: relative;
+        overflow: hidden;
+        transform: translateY(30px) scale(0.95);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .modal-overlay.active .checklist-modal { transform: translateY(0) scale(1); }
+
+    .modal-close {
+        position: absolute;
+        top: 20px; right: 20px;
+        width: 36px; height: 36px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        cursor: pointer; color: white;
+        font-size: 1.5rem; z-index: 10;
+        transition: 0.3s;
+    }
+
+    .modal-close:hover { background: rgba(255, 255, 255, 0.15); transform: rotate(90deg); }
+
+    .modal-body {
+        padding: 40px;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .modal-state { display: none; }
+    .modal-state.active { display: block; animation: fadeIn 0.5s ease; }
+
+    /* CHECKLIST ELEMENTS */
+    .checklist-list { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+    .checklist-item {
+        display: flex; align-items: center; gap: 15px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        cursor: pointer; transition: 0.3s;
+    }
+    .checklist-item:hover { background: rgba(255, 255, 255, 0.07); border-color: #873276; }
+    
+    .checklist-checkbox {
+        width: 24px; height: 24px;
+        border: 2px solid #873276;
+        border-radius: 6px;
+        flex-shrink: 0;
+        display: flex; align-items: center; justify-content: center;
+        transition: 0.3s;
+    }
+    .checklist-item.checked .checklist-checkbox { background: #873276; }
+    .checklist-item.checked .checklist-checkbox::after { content: '✓'; color: white; font-weight: 900; font-size: 14px; }
+    .checklist-item.checked span { opacity: 0.5; text-decoration: line-through; }
+
+    .expert-header {
+        color: #d4af37;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 25px 0 15px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        padding-bottom: 5px;
+    }
+
+    .form-input, .form-select {
+        width: 100%;
+        padding: 15px 20px;
+        background-color: white;
+        color: #1e0a19;
+        border: 2px solid #eee;
+        border-radius: 12px;
+        font-size: 1rem;
+        height: 56px;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .modal-body { padding: 25px 20px; }
+        .modal-body h2 { font-size: 1.5rem !important; }
+        .expert-header { font-size: 0.95rem; margin-top: 20px; }
+        .checklist-item { padding: 12px; gap: 12px; margin-bottom: 12px; }
+        .checklist-item span { font-size: 0.88rem; line-height: 1.3; }
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+<div class="mortgage-lp">
+    <!-- BOC FLASH ALERT PREMIUM - By Evan Patruno -->
+    <style>
+        :root {
+            --boc-primary: #ff007f;
+            --boc-bg: #1a0b16;
+            --boc-accent: #873276;
+        }
+
+        #boc-alert-wrap {
+            display: none;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(90deg, var(--boc-bg) 0%, #2d0f28 100%);
+            border-bottom: 2px solid var(--boc-accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .boc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 15px;
+        }
+
+        .boc-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .boc-badge {
+            background: var(--boc-primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: boc-pulse 2s infinite;
+            white-space: nowrap;
+        }
+
+        .boc-text {
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .boc-status-label { font-weight: 700; color: #ffb8e6; }
+        .boc-rate-val { font-weight: 900; font-size: 1.1rem; color: #fff; }
+
+        .boc-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .boc-next-ann {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            padding-left: 20px;
+            white-space: nowrap;
+        }
+
+        .boc-next-val { color: #fff; font-weight: 600; }
+
+        .boc-cta {
+            background: #fff;
+            color: var(--boc-bg);
+            padding: 10px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+            white-space: nowrap;
+            cursor: pointer;
+            border: none;
+        }
+
+        .boc-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255,255,255,0.2);
+            background: #f8f8f8;
+        }
+
+        @keyframes boc-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 0, 127, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 0, 127, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 0, 127, 0); }
+        }
+
+        /* MOBILE OPTIMIZATION */
+        @media (max-width: 768px) {
+            .boc-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 10px;
+                text-align: center;
+            }
+            .boc-left {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .boc-text { font-size: 0.88rem; line-height: 1.4; }
+            .boc-right {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+            .boc-next-ann {
+                border-left: none;
+                padding-left: 0;
+                font-size: 0.8rem;
+            }
+            .boc-cta {
+                width: 100%;
+                padding: 14px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* MODAL SYSTEM */
+        #boc-lead-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 5, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 30000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        #boc-lead-modal.active { display: flex; opacity: 1; }
+
+        .boc-modal-card {
+            background: #230d20;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.7);
+            position: relative;
+            padding: 40px;
+            transform: translateY(20px);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #boc-lead-modal.active .boc-modal-card { transform: translateY(0); }
+
+        .boc-modal-close {
+            position: absolute;
+            top: 20px; right: 20px;
+            color: rgba(255,255,255,0.5);
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .boc-modal-close:hover { color: white; transform: rotate(90deg); }
+
+        .boc-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+        .boc-input:focus { border-color: var(--boc-primary); background: rgba(255,255,255,0.08); }
+
+        .boc-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--boc-primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .boc-submit:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 0, 127, 0.3); }
+    </style>
+
+    <div id="boc-alert-wrap">
+        <div class="boc-container">
+            <div class="boc-left">
+                <div class="boc-badge">Flash Taux</div>
+                <div class="boc-text">
+                    La Banque du Canada <span id="boc-status" class="boc-status-label">a maintenu</span> son taux à <span id="boc-rate" class="boc-rate-val">--%</span>
+                </div>
+            </div>
+            <div class="boc-right">
+                <div class="boc-next-ann">
+                    Prochaine annonce : <span id="boc-next" class="boc-next-val">--</span>
+                </div>
+                <button class="boc-cta" onclick="openBocModal()">Sécuriser mon taux</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOC MODAL -->
+    <div id="boc-lead-modal">
+        <div class="boc-modal-card">
+            <div class="boc-modal-close" onclick="closeBocModal()">×</div>
+            <h2 style="color: white; margin: 0 0 10px; font-size: 1.8rem; text-align: center;">Sécurisez votre taux 🎯</h2>
+            <p style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 30px;">
+                Une annonce de taux approche ou vient d'avoir lieu. Soyez rappelé en priorité par Evan pour sécuriser vos conditions.
+            </p>
+            
+            <iframe id="bocHiddenFrame" name="bocHiddenFrame" style="display:none;"></iframe>
+            <form action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='bocHiddenFrame' onsubmit="handleBocSubmit(event)">
+                <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                <input type="hidden" name="actionType" value="TGVhZHM=">
+                <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                <input type="hidden" name="LEADCF7" value="ALERTE_TAUX_BOC">
+                <input type='hidden' name='Description' value='Demande via Flash Taux Directeur (Capture Modale)'>
+
+                <input type="text" name="First Name" placeholder="Prénom" class="boc-input" required>
+                <input type="text" name="Last Name" placeholder="Nom" class="boc-input" required>
+                <input type="email" name="Email" placeholder="Email" class="boc-input" required>
+                <input type="tel" name="Mobile" placeholder="Téléphone" class="boc-input" required>
+                
+                <button type="submit" id="bocBtnSubmit" class="boc-submit">Me recontacter stratégiquement 🚀</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openBocModal() { document.getElementById('boc-lead-modal').classList.add('active'); document.body.style.overflow='hidden'; }
+        function closeBocModal() { document.getElementById('boc-lead-modal').classList.remove('active'); document.body.style.overflow=''; }
+
+        function handleBocSubmit(e) {
+            const btn = document.getElementById('bocBtnSubmit');
+            btn.innerText = "Envoi en cours...";
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerText = "C'est noté ! Je vous rappelle. ✅";
+                btn.style.background = "#25D366";
+                setTimeout(closeBocModal, 2500);
+            }, 1500);
+        }
+
+        (async function() {
+            const BOC_BIN_ID = "69db9753856a682189265c0b"; 
+            const MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C";
+            try {
+                const res = await fetch(`https://api.jsonbin.io/v3/b/${BOC_BIN_ID}/latest`, {
+                    headers: { 'X-Master-Key': MASTER_KEY }
+                });
+                const data = await res.json();
+                const record = data.record;
+                
+                const now = new Date();
+                const nextAnn = new Date(record.next_date_iso + "T09:00:00"); 
+                const lastAnn = new Date(record.last_date_iso + "T09:00:00");
+                
+                const diffNext = (nextAnn - now) / (1000 * 60 * 60 * 24);
+                const diffLast = (now - lastAnn) / (1000 * 60 * 60 * 24);
+                
+                if (diffNext <= 7 || diffLast <= 7) {
+                    document.getElementById('boc-rate').textContent = record.rate + '%';
+                    document.getElementById('boc-status').textContent = record.status.toLowerCase();
+                    document.getElementById('boc-next').textContent = record.next_announcement;
+                    document.getElementById('boc-alert-wrap').style.display = 'block';
+                }
+            } catch (e) { console.warn("BOC Error:", e); }
+        })();
+    </script>
+    <!-- HERO SECTION -->
+    <header class="hero-mortgage">
+        <div class="mortgage-container">
+            <h1>L'art du financement.<br>Maîtrisé.</h1>
+            <p>Accédez à des conditions de marché compétitives partout au Québec. Une approche stratégique personnalisée pour tous vos projets de financement, où que vous soyez.</p>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                <a href="https://www.multi-prets.com/fr/courtier-hypothecaire-evan-patruno/prequalification-hypothecaire/" class="hero-btn">Analyse Gratuite ⚡</a>
+                <a href="tel:5145673249" class="direct-call-hero">📞 Appel Direct : 514-567-3249</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- IDEA 9: INFOGRAPHIE DU PROCESSUS -->
+    <section class="infographic-section">
+        <div class="mortgage-container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Votre financement en 4 étapes</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-icon-circle">📝</div>
+                    <h4>Demande</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Analyse initiale de votre profil financier via notre portail sécurisé.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon-circle">⚖️</div>
+                    <h4>Analyse</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Je compare plus de 32 institutions pour trouver le meilleur taux.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon-circle">✅</div>
+                    <h4>Approbation</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Confirmation officielle de votre financement par le prêteur choisi.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon-circle">🔑</div>
+                    <h4>Notaire</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Signature finale et déblocage des fonds. Félicitations !</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIAGNOSTIC CTA -->
+    <section class="mortgage-lp-section" style="padding-bottom: 0;">
+        <div class="mortgage-container">
+            <div class="ready-cta-section">
+                <h2 style="font-size: 2.22rem; margin-bottom: 0;">Mon prêt est-il encore optimal ?</h2>
+                <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">Ne laissez pas l'inflation gruger votre équité. Vérifiez en 30 secondes si une renégociation de votre taux ou une consolidation de dettes est avantageuse pour vous.</p>
+                <button class="hero-btn" style="margin-bottom: 0;" onclick="openChecklistModal()">Démarrer mon audit de taux ⚡</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- HUB NAVIGATION -->
+    <section class="mortgage-lp-section" style="padding-top: 60px;">
+        <div class="mortgage-container">
+            <div class="hub-grid">
+                <!-- PRÉQUALIFICATION -->
+                <a href="https://www.multi-prets.com/fr/courtier-hypothecaire-evan-patruno/prequalification-hypothecaire/" class="hub-card" target="_blank">
+                    <span class="hub-icon">🎯</span>
+                    <h3>Préqualification</h3>
+                    <p>Obtenez votre lettre de pré-approbation officielle et déposez des offres crédibles dès aujourd'hui.</p>
+                    <span class="hub-link">Démarrer &rarr;</span>
+                </a>
+
+                <!-- REFINANCEMENT -->
+                <a href="/refinancement" class="hub-card">
+                    <span class="hub-icon">💰</span>
+                    <h3>Refinancement</h3>
+                    <p>Libérez l'équité de votre propriété pour vos projets de rénovation ou de consolidation de dettes.</p>
+                    <span class="hub-link">Calculer &rarr;</span>
+                </a>
+
+                <!-- RENOUVELLEMENT -->
+                <a href="/renouvellement" class="hub-card">
+                    <span class="hub-icon">🔄</span>
+                    <h3>Renouvellement</h3>
+                    <p>Ne signez pas les yeux fermés. Magasinez votre taux et économisez des milliers de dollars.</p>
+                    <span class="hub-link">Magasiner &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDEA 6: GLOSSAIRE HYPOTHÉCAIRE -->
+    <section class="glossary-section">
+        <div class="mortgage-container">
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.2rem;">Comprendre les termes</h2>
+            <div class="glossary-grid">
+                <div class="glossary-card">
+                    <h4><span class="glossary-icon">📊</span> Taux Fixe vs Variable</h4>
+                    <p style="font-size: 1rem; opacity: 0.8; line-height: 1.5;">Le **taux fixe** garantit la stabilité de vos paiements, tandis que le **taux variable** s'ajuste selon le taux directeur, offrant souvent plus de flexibilité.</p>
+                </div>
+                <div class="glossary-card">
+                    <h4><span class="glossary-icon">⏳</span> Amortissement</h4>
+                    <p style="font-size: 1rem; opacity: 0.8; line-height: 1.5;">La période totale prévue pour le remboursement intégral de votre prêt (généralement 25 ou 30 ans).</p>
+                </div>
+                <div class="glossary-card">
+                    <h4><span class="glossary-icon">📅</span> Terme</h4>
+                    <p style="font-size: 1rem; opacity: 0.8; line-height: 1.5;">La durée de votre contrat actuel (souvent 5 ans). À la fin du terme, vous devez renouveler ou refinancer votre prêt.</p>
+                </div>
+                <div class="glossary-card">
+                    <h4><span class="glossary-icon">🏦</span> Mise de Fonds</h4>
+                    <p style="font-size: 1rem; opacity: 0.8; line-height: 1.5;">Le montant initial versé (minimum 5% jusqu'à 500k$). Un montant de 20% ou plus évite l'assurance SCHL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS / TRUST -->
+    <section class="expert-section">
+        <div class="mortgage-container">
+            <h2 class="expert-title">Pourquoi Evan Patruno ?</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; margin-top: 60px;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="color: #873276; font-size: 2.5rem; margin-bottom: 10px;">32</h4>
+                    <p style="color: white; font-weight: 700;">Institutions Prêteuses</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="color: #873276; font-size: 2.5rem; margin-bottom: 10px;">0$</h4>
+                    <p style="color: white; font-weight: 700;">Frais de Consultation</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="color: #873276; font-size: 2.5rem; margin-bottom: 10px;">Compétitif</h4>
+                    <p style="color: white; font-weight: 700;">Parmi les plus bas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- MODALE DIAGNOSTIC HYPOTHÉCAIRE -->
+    <div class="modal-overlay" id="checklistModalOverlay">
+        <div class="checklist-modal">
+            <div class="modal-close" onclick="closeChecklistModal()">×</div>
+            <div class="modal-body">
+                <!-- ETAPE 1 : FORMULAIRE AUDIT -->
+                <div class="modal-state active" id="modalStateForm">
+                    <h2 style="color: #ffffff; margin-bottom: 5px; font-size: 1.8rem; text-align: center;">Audit Prêt Optimal</h2>
+                    <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 25px;">Votre hypothèque est-elle encore la meilleure pour vous ?</p>
+                    
+                    <iframe id="mortgageHiddenFrame" name="mortgageHiddenFrame" style="display:none;"></iframe>
+                    <form action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='mortgageHiddenFrame' onsubmit="handleChecklistForm(event)">
+                        <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                        <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                        <input type="hidden" name="actionType" value="TGVhZHM=">
+                        <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                        <input type="hidden" name="Description" id="zohoAuditDescription" value="[SOURCE: DIAGNOSTIC HYPOTHEQUE] Demande de checklist.">
+                        <input type="hidden" name="LEADCF7" value="AUDIT_HYPOTHECAIRE">
+
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <label class="form-label" style="font-size: 0.8rem; margin-bottom: 5px;">Solde hypothécaire approximatif</label>
+                            <select class="form-select audit-criteria" data-label="Solde">
+                                <option value="Moins de 250k">Moins de 250,000 $</option>
+                                <option value="250k - 500k">250,000 $ - 500,000 $</option>
+                                <option value="500k - 750k">500,000 $ - 750,000 $</option>
+                                <option value="750k +">750,000 $ +</option>
+                            </select>
+
+                            <label class="form-label" style="font-size: 0.8rem; margin-bottom: 5px;">Votre objectif principal</label>
+                            <select class="form-select audit-criteria" data-label="Objectif">
+                                <option value="Baisse de taux">Baisser mon taux d'intérêt</option>
+                                <option value="Sortie d'équité">Sortir de l'équité (Rénos/Projets)</option>
+                                <option value="Consolidation">Consolider mes dettes</option>
+                                <option value="Renouvellement">Préparer mon renouvellement</option>
+                            </select>
+
+                            <label class="form-label" style="font-size: 0.8rem; margin-bottom: 5px;">Coordonnées</label>
+                            <input type="text" name="Last Name" placeholder="Votre Nom complet" class="form-input" required>
+                            <input type="email" name="Email" placeholder="Votre Email" class="form-input" required>
+                            <input type="tel" name="Mobile" placeholder="Téléphone" class="form-input" required>
+                            
+                            <button type="submit" class="hero-btn" style="margin-top: 10px; width: 100%;">Lancer mon audit ⚡</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ETAPE 2 : CHECKLIST HYPOTHÉCAIRE -->
+                <div class="modal-state" id="modalStateChecklist">
+                    <h2 style="color: #ffffff; margin-bottom: 5px; font-size: 1.8rem; text-align: center;">Diagnostic Terminé</h2>
+                    <p style="text-align: center; color: #d4af37; font-weight: 700; margin-bottom: 25px;">✅ Voici les documents pour votre audit stratégique :</p>
+                    
+                    <h3 class="expert-header">1. Le Socle (Indispensable)</h3>
+                    <div class="checklist-list">
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Dernier relevé hypothécaire (ou solde exact)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Preuve de revenus (T4 et 2 derniers talons)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Compte de taxes municipales (évaluation foncière)</span>
+                        </div>
+                    </div>
+
+                    <h3 class="expert-header">2. L'Analyse Stratégique (Expert Multi-Prêts)</h3>
+                    <div class="checklist-list">
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Étude de pénalité vs gain de taux réel</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Calcul de l'équité nette disponible (Capacité d'emprunt)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Plan de consolidation de dettes à haut taux (si applicable)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Stratégie de remboursement accéléré sur mesure</span>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 35px; padding-bottom: 20px;">
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 15px;">Prêt à économiser des milliers de dollars ?</p>
+                        <a href="https://calendar.app.google/NLQVyTxENHHFfzwW6" target="_blank" class="hero-btn" style="padding: 15px 30px; font-size: 0.9rem;">Planifier mon Audit Tactique</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleCheck(el) { el.classList.toggle('checked'); }
+
+    /* CONTROLES MODALE */
+    function openChecklistModal() {
+        document.getElementById('checklistModalOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeChecklistModal() {
+        document.getElementById('checklistModalOverlay').classList.remove('active');
+        document.body.style.overflow = ''; 
+    }
+
+    function handleChecklistForm(event) {
+        // UI Feedback
+        const btn = event.submitter;
+        if(btn) {
+            btn.innerText = "Analyse...";
+            btn.disabled = true;
+        }
+
+        // Préparation Zoho
+        const criteria = [];
+        document.querySelectorAll('.audit-criteria').forEach(el => {
+            criteria.push(el.getAttribute('data-label') + ": " + el.value);
+        });
+        document.getElementById('zohoAuditDescription').value = "[SOURCE: DIAGNOSTIC HYPOTHEQUE] Critères : " + criteria.join(' | ');
+
+        // Transition UI
+        setTimeout(() => {
+            document.getElementById('modalStateForm').classList.remove('active');
+            setTimeout(() => {
+                document.getElementById('modalStateChecklist').classList.add('active');
+            }, 100);
+        }, 1200);
+    }
+
+    // Close on overlay click
+    document.addEventListener('click', function(e) {
+        if (e.target.id === 'checklistModalOverlay') closeChecklistModal();
+    });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MortgageBroker",
+  "name": "Evan Patruno | Courtier Hypothécaire",
+  "image": "https://evanpatruno.ca/logo.png",
+  "url": "https://evanpatruno.ca/hypotheque",
+  "telephone": "+15145673249",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "220 Rue de l'Église",
+    "addressLocality": "Napierville",
+    "addressRegion": "QC",
+    "postalCode": "J0J 1L0",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    "Saint-Jean-sur-Richelieu",
+    "Montréal",
+    "Rive-Sud",
+    "Estrie",
+    "Laval"
+  ],
+  "description": "Expert courtier hypothécaire Multi-Prêts à Saint-Jean-sur-Richelieu et sur la Rive-Sud. Solutions de refinancement, renouvellement et préqualification stratégique."
+}
+</script>

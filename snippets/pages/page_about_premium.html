@@ -1,0 +1,311 @@
+<style>
+    /* FIX FOR ZOHO BANNER GAP */
+    #header-banner-section, .theme-banner-container, .zphero {
+        display: none !important;
+    }
+
+    .about-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+    }
+
+    .about-lp * { box-sizing: border-box; }
+
+    .about-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .about-section {
+        padding: 80px 20px;
+    }
+
+    /* 1. HERO SECTION */
+    .hero-about {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.82), rgba(135, 50, 118, 0.25)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px !important;
+        color: white;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-about h1 {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        font-weight: 900;
+        color: #ffffff;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 20px 45px;
+        background: #fff;
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 2. OVERLAPPING CONTENT BOXES */
+    .about-content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 50px;
+        margin-top: -80px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .about-photo-card {
+        background: #2b0b24;
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+
+    .about-photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .about-card {
+        background: #2b0b24;
+        padding: 60px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+
+    .about-card p {
+        font-size: 1.15rem;
+        color: rgba(255, 255, 255, 0.95) !important;
+        margin-bottom: 25px;
+    }
+
+    /* 3. EXPERTISE BLOCKS */
+    .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .expertise-item {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* IDEA 3 & 7 NEW COMPONENTS */
+    .values-section {
+        padding: 80px 20px;
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .value-card {
+        text-align: center;
+        padding: 45px 30px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+    }
+
+    .value-card:hover {
+        transform: translateY(-12px);
+        background: rgba(135, 50, 118, 0.08);
+        border-color: #873276;
+        box-shadow: 0 30px 60px rgba(135, 50, 118, 0.15);
+    }
+
+    .value-icon {
+        font-size: 3rem;
+        margin-bottom: 25px;
+        display: block;
+        filter: drop-shadow(0 10px 15px rgba(135, 50, 118, 0.3));
+    }
+
+    .network-section {
+        padding: 80px 20px;
+    }
+
+    .network-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .partner-type-card {
+        background: #2b0b24;
+        padding: 45px 35px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .partner-type-card:hover {
+        border-color: #873276;
+        transform: scale(1.02);
+    }
+
+    .about-lp h2 {
+        color: #ffffff !important;
+        font-weight: 800;
+    }
+
+    .expertise-item h3, .value-card h4, .partner-type-card h3 {
+        color: #d4af37 !important; /* Or pour meilleur contraste */
+        font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+        .hero-about { 
+            padding: 60px 20px 80px !important; 
+            margin: 15px 10px 0 !important;
+            min-height: 300px !important;
+            border-radius: 30px !important;
+        }
+        .hero-about h1 { font-size: 2.2rem; }
+        .values-grid { grid-template-columns: 1fr; gap: 15px; }
+        .network-grid { grid-template-columns: 1fr; gap: 15px; }
+        .expertise-grid { grid-template-columns: 1fr; gap: 15px; }
+        .about-card h2 { font-size: 1.8rem !important; }
+        .values-section h2 { font-size: 1.8rem !important; } /* Prevents wrap of 's' */
+        .value-card, .partner-type-card { padding: 30px 20px; }
+    }
+
+    @media (max-width: 991px) {
+        .about-content-grid { grid-template-columns: 1fr; margin-top: -40px; }
+        .about-card { padding: 40px 20px; }
+    }
+</style>
+
+<div class="about-lp">
+    <header class="hero-about">
+        <div class="about-container">
+            <h1>Expertise Immobilière &<br>Hypothécaire au Québec.</h1>
+            <p style="color: rgba(255,255,255,0.9);">Conseils stratégiques et présence locale de Saint-Jean-sur-Richelieu à Laval.</p>
+            <a href="/contact" class="hero-btn">Parlons de votre projet</a>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content-grid">
+                <!-- Photo -->
+                <div class="about-photo-card">
+                    <img src="https://www.evanpatruno.ca/Photo%20de%20profil%20courtier%20Pro%20N%20Plex.jpg" alt="Evan Patruno">
+                </div>
+                <!-- Text Body -->
+                <div class="about-card">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 30px; color: #ffffff;">Près de 15 ans d'excellence immobilière.</h2>
+                    <p>Bonjour, je suis <strong>Evan Patruno</strong>.</p>
+                    <p>Depuis bientôt <strong>15 ans</strong>, je navigue au cœur du marché immobilier avec une passion qui n'a d'égal que ma rigueur. Mon approche combine une analyse chirurgicale des chiffres avec une compréhension profonde de vos enjeux financiers.</p>
+                    <p>Aujourd'hui, je sers mes clients immobiliers de la <strong>Rive-Sud</strong>, de <strong>Saint-Jean-sur-Richelieu</strong> et de l'<strong>Estrie</strong> via mon ancrage à <strong>Napierville</strong>, tout en offrant des solutions hypothécaires à la grandeur de la province du <strong>Québec</strong> depuis mon bureau de <strong>Laval</strong>.</p>
+
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <h3 style="color: #873276; font-size: 1.25rem; margin-bottom: 10px;">Courtage Immobilier</h3>
+                            <p style="color: #ffffff !important;">Spécialiste Rive-Sud & Estrie. Vente, achat et investissement avec une visibilité d'exception.</p>
+                        </div>
+                        <div class="expertise-item">
+                            <h3 style="color: #873276; font-size: 1.25rem; margin-bottom: 10px;">Courtage Hypothécaire</h3>
+                            <p style="color: #ffffff !important;">Partout au Québec. Optimisation de taux et financement complexe multi-logement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDEA 3: MES VALEURS -->
+    <section class="values-section">
+        <div class="about-container">
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem;">Mes Valeurs Fondamentales</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <span class="value-icon">🤝</span>
+                    <h4 style="color: #873276; margin-bottom: 10px;">Intégrité</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">Transparence totale à chaque étape de la transaction.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">⚡</span>
+                    <h4 style="color: #873276; margin-bottom: 10px;">Réactivité</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">Un temps de réponse moyen de 15 minutes pour ne rien manquer.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">📐</span>
+                    <h4 style="color: #873276; margin-bottom: 10px;">Expertise</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">Près de 15 ans d'expérience au service de vos projets.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">👤</span>
+                    <h4 style="color: #873276; margin-bottom: 10px;">Humain</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">Parce que derrière chaque dossier, il y a une histoire de vie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDEA 7: MON RÉSEAU D'EXPERTS -->
+    <section class="network-section">
+        <div class="about-container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 15px;">Bien plus qu'un simple courtier.</h2>
+            <p style="text-align: center; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 50px;">Pour vous garantir une tranquillité d'esprit totale, je travaille en collaboration étroite avec les meilleurs experts du Québec.</p>
+            
+            <div class="network-grid">
+                <div class="partner-type-card">
+                    <h3 style="color: #873276; margin-bottom: 15px;">Juridique & Notarial</h3>
+                    <p style="font-size: 1.1rem;">Partenaires notaires spécialisés pour une clôture parfaite.</p>
+                </div>
+                <div class="partner-type-card">
+                    <h3 style="color: #873276; margin-bottom: 15px;">Inspection & Technique</h3>
+                    <p style="font-size: 1.1rem;">Inspecteurs en bâtiment certifiés pour protéger votre investissement.</p>
+                </div>
+                <div class="partner-type-card">
+                    <h3 style="color: #873276; margin-bottom: 15px;">Expertise Crédit</h3>
+                    <p style="font-size: 1.1rem;">Plus de 32 institutions prêteuses au bout des doigts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

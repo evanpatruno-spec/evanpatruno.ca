@@ -1,0 +1,65 @@
+<!-- 
+Bouton Retour en Haut
+INSTRUCTIONS:
+1. Ajouter dans le Footer.
+-->
+<style>
+    .scroll-top-btn {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        /* À gauche pour ne pas gêner le chat à droite */
+        width: 45px;
+        height: 45px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        z-index: 9998;
+        opacity: 0;
+        /* Caché initialement */
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .scroll-top-btn.visible {
+        opacity: 0.7;
+        visibility: visible;
+    }
+
+    .scroll-top-btn:hover {
+        opacity: 1;
+        transform: translateY(-3px);
+        background-color: #e53935;
+    }
+</style>
+
+<button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()" title="Retour en haut">
+    &#8679; <!-- Flèche Unicode -->
+</button>
+
+<script>
+    const btn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+        // Afficher après 300px de scroll
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    });
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>

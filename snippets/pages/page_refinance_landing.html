@@ -1,0 +1,956 @@
+<!-- 
+PAGE REFINANCEMENT COMPLETE (LANDING PAGE + CALCUL RAPIDE)
+INSTRUCTIONS:
+1. Créez une nouvelle page "Refinancement" sur votre site.
+2. Ajoutez un "Code Snippet".
+3. Copiez-collez TOUT ce code.
+4. IMPORTANT : Remplacez "VOTRE_KEY_ZOHO_ICI" et "VOTRE_TOKEN_ZOHO_ICI" (lignes ~260) par vos vraies clés.
+-->
+
+<style>
+    /* FIX FOR ZOHO BANNER GAP */
+    #header-banner-section, .theme-banner-container, .zphero {
+        display: none !important;
+    }
+
+    .finance-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+        position: relative;
+    }
+
+    .finance-lp * {
+        box-sizing: border-box;
+    }
+
+    .finance-lp h1,
+    .finance-lp h2,
+    .finance-lp h3 {
+        color: white;
+        font-weight: 800;
+        margin-top: 0;
+    }
+
+    .finance-lp-section {
+        padding: 100px 20px;
+    }
+
+    .finance-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* 1. HERO SECTION */
+    .hero-finance {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.96), rgba(135, 50, 118, 0.4)), url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px !important;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        z-index: 1;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-finance h1 {
+        font-size: 3.5rem;
+        color: white;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        font-weight: 900;
+    }
+
+    .hero-finance p {
+        font-size: 1.3rem;
+        max-width: 750px;
+        margin: 0 auto 30px;
+        color: #ffffff !important;
+        opacity: 0.95;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 22px 50px;
+        background: #fff;
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    /* 2. VALUE PILLARS */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-card {
+        background: #2b0b24; /* Dark Card */
+        color: #ffffff !important;
+        padding: 45px 35px;
+        border-radius: 30px !important; /* Standardized corners */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transition: transform 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .service-card h3 {
+        color: #873276;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(135, 50, 118, 0.3);
+    }
+
+    .service-icon {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* 3. TIMELINE STEPS */
+    .timeline-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .timeline-header h2 { font-size: 2.2rem; color: white; }
+    .timeline-header p { color: rgba(255,255,255,0.7); }
+
+    .steps-container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .step-item {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 50px;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        flex-shrink: 0;
+        width: 55px;
+        height: 55px;
+        background: #873276;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.3rem;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 5px 15px rgba(135, 50, 118, 0.3);
+    }
+
+    .step-number::after {
+        content: '';
+        position: absolute;
+        top: 55px;
+        bottom: -55px;
+        left: 50%;
+        width: 2px;
+        background: rgba(255,255,255,0.1);
+        z-index: 1;
+    }
+
+    .step-item:last-child .step-number::after { display: none; }
+
+    .step-content h3 { font-size: 1.25rem; margin-bottom: 8px; color: white; }
+    .step-content p { color: rgba(255,255,255,0.8); }
+
+    /* --- FORM SECTION --- */
+    .finance-section {
+        padding: 100px 20px;
+        background: #1e0a19;
+        color: white;
+        border-radius: 40px;
+        margin: 60px 0;
+        scroll-margin-top: 80px;
+    }
+
+    .finance-container-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .finance-info { flex: 1; min-width: 300px; }
+
+    .finance-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    .finance-title {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        font-weight: 800;
+        color: white !important;
+    }
+
+    .finance-desc {
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
+        margin-bottom: 35px;
+        font-size: 1.15rem;
+    }
+
+    .finance-benefits { list-style: none; padding: 0; }
+
+    .finance-benefits li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+    }
+
+    .finance-benefits li svg {
+        width: 22px;
+        fill: #38a169; /* Emerald */
+    }
+
+    .finance-form-card {
+        flex: 1.3;
+        min-width: 320px;
+        background: #2b0b24;
+        padding: 45px;
+        border-radius: 30px;
+        color: white;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group { margin-bottom: 10px; }
+    .form-group.full-width { grid-column: 1 / -1; }
+
+    .form-label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .form-input, .form-select {
+        width: 100%;
+        padding: 14px 20px;
+        background: white !important;
+        color: #1e0a19 !important;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        min-height: 56px;
+    }
+
+    .form-select {
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23873276' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 15px center !important;
+        background-size: 18px !important;
+        padding-right: 45px !important;
+        cursor: pointer;
+    }
+
+    .form-select option {
+        color: #1e0a19 !important;
+        background: white !important;
+    }
+
+    .form-input:focus, .form-select:focus {
+        border-color: #873276;
+        outline: none;
+        box-shadow: 0 0 15px rgba(135, 50, 118, 0.2);
+    }
+
+    .finance-btn {
+        width: 100%;
+        padding: 20px;
+        background: #873276;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 25px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .finance-btn:hover {
+        background: #6a275d;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .hero-finance { 
+            padding: 60px 20px 80px !important; 
+            margin-top: 15px !important;
+            min-height: 350px !important;
+        }
+        .hero-finance h1 { font-size: 2.2rem; }
+        .hero-finance p { font-size: 1.1rem; }
+        .services-grid { margin-top: -60px; grid-template-columns: 1fr; }
+        .finance-title { font-size: 2rem; }
+        .finance-container-inner { flex-direction: column; gap: 40px; }
+        .finance-form-card { padding: 30px 20px; width: 100%; min-width: 0; }
+        .form-grid { grid-template-columns: 1fr; gap: 15px; }
+        .finance-lp-section { padding: 60px 20px; }
+        .finance-lp-section { padding: 60px 20px; }
+    }
+
+    /* LEGAL FOOTER */
+    .legal-footer {
+        padding: 60px 20px 40px;
+        background: #1e0a19;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .legal-text {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.6;
+    }
+    /* SUCCESS MESSAGE STYLE */
+    .form-success-wrapper {
+        padding: 40px 20px;
+        animation: fadeIn 0.5s ease;
+        text-align: center;
+    }
+
+    .success-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+
+    .form-success-body h3 {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .form-success-body p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<div class="finance-lp">
+    <!-- BOC FLASH ALERT PREMIUM - By Evan Patruno -->
+    <style>
+        :root {
+            --boc-primary: #ff007f;
+            --boc-bg: #1a0b16;
+            --boc-accent: #873276;
+        }
+
+        #boc-alert-wrap {
+            display: none;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(90deg, var(--boc-bg) 0%, #2d0f28 100%);
+            border-bottom: 2px solid var(--boc-accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .boc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 15px;
+        }
+
+        .boc-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .boc-badge {
+            background: var(--boc-primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: boc-pulse 2s infinite;
+            white-space: nowrap;
+        }
+
+        .boc-text {
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .boc-status-label { font-weight: 700; color: #ffb8e6; }
+        .boc-rate-val { font-weight: 900; font-size: 1.1rem; color: #fff; }
+
+        .boc-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .boc-next-ann {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            padding-left: 20px;
+            white-space: nowrap;
+        }
+
+        .boc-next-val { color: #fff; font-weight: 600; }
+
+        .boc-cta {
+            background: #fff;
+            color: var(--boc-bg);
+            padding: 10px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+            white-space: nowrap;
+            cursor: pointer;
+            border: none;
+        }
+
+        .boc-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255,255,255,0.2);
+            background: #f8f8f8;
+        }
+
+        @keyframes boc-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 0, 127, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 0, 127, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 0, 127, 0); }
+        }
+
+        /* MOBILE OPTIMIZATION */
+        @media (max-width: 768px) {
+            .boc-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 10px;
+                text-align: center;
+            }
+            .boc-left {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .boc-text { font-size: 0.88rem; line-height: 1.4; }
+            .boc-right {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+            .boc-next-ann {
+                border-left: none;
+                padding-left: 0;
+                font-size: 0.8rem;
+            }
+            .boc-cta {
+                width: 100%;
+                padding: 14px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* MODAL SYSTEM */
+        #boc-lead-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 5, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 30000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        #boc-lead-modal.active { display: flex; opacity: 1; }
+
+        .boc-modal-card {
+            background: #230d20;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.7);
+            position: relative;
+            padding: 40px;
+            transform: translateY(20px);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #boc-lead-modal.active .boc-modal-card { transform: translateY(0); }
+
+        .boc-modal-close {
+            position: absolute;
+            top: 20px; right: 20px;
+            color: rgba(255,255,255,0.5);
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .boc-modal-close:hover { color: white; transform: rotate(90deg); }
+
+        .boc-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+        .boc-input:focus { border-color: var(--boc-primary); background: rgba(255,255,255,0.08); }
+
+        .boc-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--boc-primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .boc-submit:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 0, 127, 0.3); }
+    </style>
+
+    <div id="boc-alert-wrap">
+        <div class="boc-container">
+            <div class="boc-left">
+                <div class="boc-badge">Flash Taux</div>
+                <div class="boc-text">
+                    La Banque du Canada <span id="boc-status" class="boc-status-label">a maintenu</span> son taux à <span id="boc-rate" class="boc-rate-val">--%</span>
+                </div>
+            </div>
+            <div class="boc-right">
+                <div class="boc-next-ann">
+                    Prochaine annonce : <span id="boc-next" class="boc-next-val">--</span>
+                </div>
+                <button class="boc-cta" onclick="openBocModal()">Sécuriser mon taux</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOC MODAL -->
+    <div id="boc-lead-modal">
+        <div class="boc-modal-card">
+            <div class="boc-modal-close" onclick="closeBocModal()">×</div>
+            <h2 style="color: white; margin: 0 0 10px; font-size: 1.8rem; text-align: center;">Sécurisez votre taux 🎯</h2>
+            <p style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 30px;">
+                Une annonce de taux approche ou vient d'avoir lieu. Soyez rappelé en priorité par Evan pour sécuriser vos conditions.
+            </p>
+            
+            <iframe id="bocHiddenFrame" name="bocHiddenFrame" style="display:none;"></iframe>
+            <form action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='bocHiddenFrame' onsubmit="handleBocSubmit(event)">
+                <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                <input type="hidden" name="actionType" value="TGVhZHM=">
+                <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                <input type="hidden" name="LEADCF7" value="ALERTE_TAUX_BOC">
+                <input type='hidden' name='Description' value='Demande via Flash Taux Directeur (Capture Modale)'>
+
+                <input type="text" name="First Name" placeholder="Prénom" class="boc-input" required>
+                <input type="text" name="Last Name" placeholder="Nom" class="boc-input" required>
+                <input type="email" name="Email" placeholder="Email" class="boc-input" required>
+                <input type="tel" name="Mobile" placeholder="Téléphone" class="boc-input" required>
+                
+                <button type="submit" id="bocBtnSubmit" class="boc-submit">Me recontacter stratégiquement 🚀</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openBocModal() { document.getElementById('boc-lead-modal').classList.add('active'); document.body.style.overflow='hidden'; }
+        function closeBocModal() { document.getElementById('boc-lead-modal').classList.remove('active'); document.body.style.overflow=''; }
+
+        function handleBocSubmit(e) {
+            const btn = document.getElementById('bocBtnSubmit');
+            btn.innerText = "Envoi en cours...";
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerText = "C'est noté ! Je vous rappelle. ✅";
+                btn.style.background = "#25D366";
+                setTimeout(closeBocModal, 2500);
+            }, 1500);
+        }
+
+        (async function() {
+            const BOC_BIN_ID = "69db9753856a682189265c0b"; 
+            const MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C";
+            try {
+                const res = await fetch(`https://api.jsonbin.io/v3/b/${BOC_BIN_ID}/latest`, {
+                    headers: { 'X-Master-Key': MASTER_KEY }
+                });
+                const data = await res.json();
+                const record = data.record;
+                
+                const now = new Date();
+                const nextAnn = new Date(record.next_date_iso + "T09:00:00"); 
+                const lastAnn = new Date(record.last_date_iso + "T09:00:00");
+                
+                const diffNext = (nextAnn - now) / (1000 * 60 * 60 * 24);
+                const diffLast = (now - lastAnn) / (1000 * 60 * 60 * 24);
+                
+                if (diffNext <= 7 || diffLast <= 7) {
+                    document.getElementById('boc-rate').textContent = record.rate + '%';
+                    document.getElementById('boc-status').textContent = record.status.toLowerCase();
+                    document.getElementById('boc-next').textContent = record.next_announcement;
+                    document.getElementById('boc-alert-wrap').style.display = 'block';
+                }
+            } catch (e) { console.warn("BOC Error:", e); }
+        })();
+    </script>
+
+    <!-- HERO -->
+    <header class="hero-finance">
+        <div class="finance-container">
+            <h1>Courtier Hypothécaire : <br>Votre Refinancement au Québec.</h1>
+            <p>Maximisez votre équité immobilière à Laval, Montréal, Rive-Sud ou n'importe où au Québec avec un expert en refinancement hypothécaire.</p>
+            <a href="#refi-form" class="hero-btn">Analyser mon équité</a>
+        </div>
+    </header>
+
+    <!-- SECTION 2: SERVICES (Overlapping) -->
+    <section class="finance-lp-section" style="padding-top: 0;">
+        <div class="finance-container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🧱</span>
+                    <h3>Travaux & Rénovations</h3>
+                    <p>Financer une cuisine de rêve ou une extension, directement avec votre taux hypothécaire (des taux extrêmement compétitifs).</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">📉</span>
+                    <h3>Consolidation de Dettes</h3>
+                    <p>Payez 20% sur vos cartes de crédit ? Ramenez tout ça à un taux hypothécaire et économisez des
+                        milliers par an.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🚀</span>
+                    <h3>Investissement (Effet Levier)</h3>
+                    <p>Utilisez l'équité dormante de votre maison pour acheter un plex et créer un parc immobilier.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TIMELINE -->
+    <section class="finance-lp-section"
+        style="background: rgba(0,0,0,0.2); border-radius: 50px; margin: 60px 20px; border: 1px solid rgba(255,255,255,0.05);">
+        <div class="finance-container">
+            <div class="timeline-header">
+                <h2>Votre refinancement, simplifié</h2>
+                <p>On s'occupe de la banque, vous profitez des résultats.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Analyse du Dossier</h3>
+                        <p>On évalue la valeur actuelle de votre propriété et le solde restant pour connaître votre
+                            "pouvoir d'achat".</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Stratégie Sur-Mesure</h3>
+                        <p>Je magasine pour vous auprès de 32+ prêteurs pour trouver le meilleur produit (Taux vs
+                            Pénalité).</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Approbation & Notaire</h3>
+                        <p>Tout se fait rapidement. Le notaire enregistre la nouvelle hypothèque et débloque les fonds.
+                        </p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Décaissement</h3>
+                        <p>L'argent est déposé dans votre compte. Vos projets peuvent commencer !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: INTEGRATED FINANCE FORM -->
+    <section id="finance-alert" class="finance-section">
+        <div class="finance-container">
+
+            <!-- FORM COMPONENT START -->
+            <div class="finance-container-inner">
+
+                <!-- Copy Side -->
+                <div class="finance-info">
+                    <span class="finance-badge">🏦 Stratégie Hypothécaire</span>
+                    <h2 class="finance-title">Quel est votre projet ?</h2>
+                    <p class="finance-desc">Remplissez ce formulaire rapide pour qu'on analyse combien vous pouvez aller
+                        chercher.</p>
+
+                    <ul class="finance-benefits">
+                        <li>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                                </path>
+                            </svg>
+                            <span>Accès aux taux courtiers</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                                </path>
+                            </svg>
+                            <span>Optimisation fiscale</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                                </path>
+                            </svg>
+                            <span>Réponse sous 24h</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Form Side -->
+                <div class="finance-form-card">
+
+                    <iframe id="financeHiddenFrame" name="financeHiddenFrame" style="display:none;"></iframe>
+
+                    <!-- ZOHO CRM FORM -->
+                    <form id="financeForm" action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads445982000000289007
+                        method='POST' target='financeHiddenFrame' onsubmit='prepareFinanceSubmit(event)'
+                        accept-charset='UTF-8'>
+
+                        <!-- KEYS TO REPLACE -->
+                        <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                        <input type="hidden" name="zc_gad" id="zc_gad" value="">
+                        <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                        <input type="hidden" name="actionType" value="TGVhZHM=">
+                        <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                        <input type="hidden" name="LEADCF7" value="HYPOTHEQUE_REFINANCEMENT">
+
+                        <!-- DATA AGGREGATION FIELD -->
+                        <input type="hidden" name="Description" id="zohoFinanceDescription">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Prénom</label>
+                                <input type="text" name="First Name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nom</label>
+                                <input type="text" name="Last Name" class="form-input" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="Email" class="form-input" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label">Objectif</label>
+                                <select class="form-select finance-criteria" data-label="Objectif">
+                                    <option value="Rénovations">Rénovations</option>
+                                    <option value="Consolidations de dettes">Consolider Dettes</option>
+                                    <option value="Investissement (Mise de fonds)">Investir (Mise de fonds)</option>
+                                    <option value="Meilleur Taux (Renouvellement)">Meilleur Taux (Renouvellement)
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Valeur Approx. Propriété</label>
+                                <input type="text" class="form-input finance-criteria" data-label="ValeurPropriété"
+                                    placeholder="Ex: 600,000$">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Solde Hypothécaire</label>
+                                <input type="text" class="form-input finance-criteria" data-label="SoldeHypithécaire"
+                                    placeholder="Ex: 350,000$">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="finance-btn" id="financeSubmitBtn">Analyser mon dossier 📊</button>
+
+                    </form>
+
+                    <div id="financeSuccess" class="form-success-wrapper" style="display:none;">
+                        <div class="form-success-body">
+                            <div class="success-icon">✅</div>
+                            <h3>Analyse en cours !</h3>
+                            <p>Merci ! Votre demande de refinancement a été reçue. Evan analysera votre dossier pour trouver les meilleures options.</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.8rem; color:#999; text-align:center; margin-top:15px;">Désinscription
+                        possible à tout moment.</p>
+                </div>
+            </div>
+            <!-- FORM COMPONENT END -->
+
+        </div>
+    </section>
+
+</div>
+
+<script>
+    function prepareFinanceSubmit(event) {
+        // 1. Gather criteria
+        const criteriaInputs = document.querySelectorAll('.finance-criteria');
+        let descriptionString = "🏦 DEMANDE REFINANCEMENT (Page Refinancement):\n";
+
+        criteriaInputs.forEach(input => {
+            const label = input.getAttribute('data-label');
+            const value = input.value;
+            descriptionString += `- ${label}: ${value}\n`;
+        });
+
+        descriptionString += `\n📅 Soumis le: ${new Date().toLocaleDateString()}`;
+
+        // 2. Inject into Zoho Description
+        document.getElementById('zohoFinanceDescription').value = descriptionString;
+
+        // 3. UI Feedback
+        const btn = document.getElementById('financeSubmitBtn');
+        const form = document.getElementById('financeForm');
+        const success = document.getElementById('financeSuccess');
+
+        btn.innerText = "Analyse en cours...";
+        btn.disabled = true;
+
+        setTimeout(() => {
+            form.style.display = 'none';
+            success.style.display = 'block';
+        }, 1500);
+    }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://evanpatruno.ca/refinancement#broker",
+  "@type": "MortgageBroker",
+  "name": "Evan Patruno | Expert en Refinancement Hypothécaire au Québec",
+  "image": "https://evanpatruno.ca/logo.png",
+  "url": "https://evanpatruno.ca/refinancement",
+  "telephone": "+15145673249",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2988 boulevard Saint-Martin Ouest",
+    "addressLocality": "Laval",
+    "addressRegion": "QC",
+    "postalCode": "H7L 4S9",
+    "addressCountry": "CA"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Québec"
+  },
+  "description": "Optimisez votre hypothèque par le refinancement partout au Québec. Bureau à Laval pour un service de courtage hypothécaire premium."
+}
+</script>

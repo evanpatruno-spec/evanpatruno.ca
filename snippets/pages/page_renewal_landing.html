@@ -1,0 +1,761 @@
+<!-- 
+PAGE RENOUVELLEMENT COMPLETE (LANDING PAGE + ANALYSE DE TAUX)
+INSTRUCTIONS:
+1. Créez une nouvelle page "Renouvellement" sur votre site.
+2. Ajoutez un "Code Snippet".
+3. Copiez-collez TOUT ce code.
+-->
+
+<style>
+    /* FIX FOR ZOHO BANNER GAP */
+    #header-banner-section, .theme-banner-container, .zphero {
+        display: none !important;
+    }
+
+    /* GLOBAL RESET & FONTS */
+    .renewal-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+        position: relative;
+    }
+
+    .renewal-lp * {
+        box-sizing: border-box;
+    }
+
+    .renewal-lp h1,
+    .renewal-lp h2,
+    .renewal-lp h3 {
+        color: white;
+        font-weight: 800;
+        margin-top: 0;
+    }
+
+    .renewal-lp-section {
+        padding: 100px 20px;
+    }
+
+    .renewal-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* 1. HERO SECTION */
+    .hero-renewal {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.96), rgba(135, 50, 118, 0.4)), url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px !important;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        z-index: 1;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-renewal h1 {
+        font-size: 3.5rem;
+        color: white;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        font-weight: 900;
+    }
+
+    .hero-renewal p {
+        font-size: 1.3rem;
+        max-width: 750px;
+        margin: 0 auto 40px;
+        color: #ffffff !important;
+        opacity: 0.95;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 22px 50px;
+        background: #873276;
+        color: white;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.95);
+        color: #873276;
+    }
+
+    /* 2. VALUE PILLARS */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-card {
+        background: #2b0b24; /* Dark Card */
+        color: #ffffff !important;
+        padding: 45px 35px;
+        border-radius: 30px !important; /* Standardized corners */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transition: transform 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .service-card h3 {
+        color: #873276;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(135, 50, 118, 0.3);
+    }
+
+    .service-icon {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* --- FORM SECTION --- */
+    .renewal-section {
+        padding: 100px 20px;
+        background: #1e0a19;
+        color: white;
+        border-radius: 40px;
+        margin: 60px 0;
+        scroll-margin-top: 80px;
+    }
+
+    .renewal-container-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .renewal-info { flex: 1; min-width: 300px; }
+
+    .renewal-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    .renewal-title {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        font-weight: 800;
+        color: white !important;
+    }
+
+    .renewal-form-card {
+        flex: 1.3;
+        min-width: 320px;
+        background: #2b0b24;
+        padding: 45px;
+        border-radius: 30px;
+        color: white;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group { margin-bottom: 10px; }
+    .form-group.full-width { grid-column: 1 / -1; }
+
+    .form-label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .form-input, .form-select {
+        width: 100%;
+        padding: 14px 20px;
+        background: white !important;
+        color: #1e0a19 !important;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        min-height: 56px;
+    }
+
+    .form-select {
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23873276' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 15px center !important;
+        background-size: 18px !important;
+        padding-right: 45px !important;
+        cursor: pointer;
+    }
+
+    .form-select option {
+        color: #1e0a19 !important;
+        background: white !important;
+    }
+
+    .renewal-btn {
+        width: 100%;
+        padding: 20px;
+        background: #873276;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 25px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .renewal-btn:hover {
+        background: #6a275d;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .hero-renewal { 
+            padding: 60px 20px 80px !important; 
+            margin-top: 15px !important;
+            min-height: 350px !important;
+        }
+        .hero-renewal h1 { font-size: 2.2rem; }
+        .hero-renewal p { font-size: 1.1rem; }
+        .services-grid { margin-top: -60px; grid-template-columns: 1fr; }
+        .renewal-title { font-size: 2rem; }
+        .renewal-container-inner { flex-direction: column; gap: 40px; }
+        .renewal-form-card { padding: 30px 20px; width: 100%; min-width: 0; }
+        .form-grid { grid-template-columns: 1fr; gap: 15px; }
+        .renewal-lp-section { padding: 60px 20px; }
+    }
+
+    /* LEGAL FOOTER */
+    .legal-footer {
+        padding: 60px 20px 40px;
+        background: #1e0a19;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .legal-text {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.6;
+    }
+    /* SUCCESS MESSAGE STYLE */
+    .form-success-wrapper {
+        padding: 40px 20px;
+        animation: fadeIn 0.5s ease;
+        text-align: center;
+    }
+
+    .success-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+
+    .form-success-body h3 {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .form-success-body p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<div class="renewal-lp">
+    <!-- BOC FLASH ALERT PREMIUM - By Evan Patruno -->
+    <style>
+        :root {
+            --boc-primary: #ff007f;
+            --boc-bg: #1a0b16;
+            --boc-accent: #873276;
+        }
+
+        #boc-alert-wrap {
+            display: none;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(90deg, var(--boc-bg) 0%, #2d0f28 100%);
+            border-bottom: 2px solid var(--boc-accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .boc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 15px;
+        }
+
+        .boc-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .boc-badge {
+            background: var(--boc-primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: boc-pulse 2s infinite;
+            white-space: nowrap;
+        }
+
+        .boc-text {
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .boc-status-label { font-weight: 700; color: #ffb8e6; }
+        .boc-rate-val { font-weight: 900; font-size: 1.1rem; color: #fff; }
+
+        .boc-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .boc-next-ann {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            padding-left: 20px;
+            white-space: nowrap;
+        }
+
+        .boc-next-val { color: #fff; font-weight: 600; }
+
+        .boc-cta {
+            background: #fff;
+            color: var(--boc-bg);
+            padding: 10px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+            white-space: nowrap;
+            cursor: pointer;
+            border: none;
+        }
+
+        .boc-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255,255,255,0.2);
+            background: #f8f8f8;
+        }
+
+        @keyframes boc-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 0, 127, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 0, 127, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 0, 127, 0); }
+        }
+
+        /* MOBILE OPTIMIZATION */
+        @media (max-width: 768px) {
+            .boc-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 10px;
+                text-align: center;
+            }
+            .boc-left {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .boc-text { font-size: 0.88rem; line-height: 1.4; }
+            .boc-right {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+            .boc-next-ann {
+                border-left: none;
+                padding-left: 0;
+                font-size: 0.8rem;
+            }
+            .boc-cta {
+                width: 100%;
+                padding: 14px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* MODAL SYSTEM */
+        #boc-lead-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 5, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 30000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        #boc-lead-modal.active { display: flex; opacity: 1; }
+
+        .boc-modal-card {
+            background: #230d20;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.7);
+            position: relative;
+            padding: 40px;
+            transform: translateY(20px);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #boc-lead-modal.active .boc-modal-card { transform: translateY(0); }
+
+        .boc-modal-close {
+            position: absolute;
+            top: 20px; right: 20px;
+            color: rgba(255,255,255,0.5);
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .boc-modal-close:hover { color: white; transform: rotate(90deg); }
+
+        .boc-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+        .boc-input:focus { border-color: var(--boc-primary); background: rgba(255,255,255,0.08); }
+
+        .boc-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--boc-primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .boc-submit:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 0, 127, 0.3); }
+    </style>
+
+    <div id="boc-alert-wrap">
+        <div class="boc-container">
+            <div class="boc-left">
+                <div class="boc-badge">Flash Taux</div>
+                <div class="boc-text">
+                    La Banque du Canada <span id="boc-status" class="boc-status-label">a maintenu</span> son taux à <span id="boc-rate" class="boc-rate-val">--%</span>
+                </div>
+            </div>
+            <div class="boc-right">
+                <div class="boc-next-ann">
+                    Prochaine annonce : <span id="boc-next" class="boc-next-val">--</span>
+                </div>
+                <button class="boc-cta" onclick="openBocModal()">Sécuriser mon taux</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOC MODAL -->
+    <div id="boc-lead-modal">
+        <div class="boc-modal-card">
+            <div class="boc-modal-close" onclick="closeBocModal()">×</div>
+            <h2 style="color: white; margin: 0 0 10px; font-size: 1.8rem; text-align: center;">Sécurisez votre taux 🎯</h2>
+            <p style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 30px;">
+                Une annonce de taux approche ou vient d'avoir lieu. Soyez rappelé en priorité par Evan pour sécuriser vos conditions.
+            </p>
+            
+            <iframe id="bocHiddenFrame" name="bocHiddenFrame" style="display:none;"></iframe>
+            <form action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='bocHiddenFrame' onsubmit="handleBocSubmit(event)">
+                <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                <input type="hidden" name="actionType" value="TGVhZHM=">
+                <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                <input type="hidden" name="LEADCF7" value="ALERTE_TAUX_BOC">
+                <input type='hidden' name='Description' value='Demande via Flash Taux Directeur (Capture Modale)'>
+
+                <input type="text" name="First Name" placeholder="Prénom" class="boc-input" required>
+                <input type="text" name="Last Name" placeholder="Nom" class="boc-input" required>
+                <input type="email" name="Email" placeholder="Email" class="boc-input" required>
+                <input type="tel" name="Mobile" placeholder="Téléphone" class="boc-input" required>
+                
+                <button type="submit" id="bocBtnSubmit" class="boc-submit">Me recontacter stratégiquement 🚀</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openBocModal() { document.getElementById('boc-lead-modal').classList.add('active'); document.body.style.overflow='hidden'; }
+        function closeBocModal() { document.getElementById('boc-lead-modal').classList.remove('active'); document.body.style.overflow=''; }
+
+        function handleBocSubmit(e) {
+            const btn = document.getElementById('bocBtnSubmit');
+            btn.innerText = "Envoi en cours...";
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerText = "C'est noté ! Je vous rappelle. ✅";
+                btn.style.background = "#25D366";
+                setTimeout(closeBocModal, 2500);
+            }, 1500);
+        }
+
+        (async function() {
+            const BOC_BIN_ID = "69db9753856a682189265c0b"; 
+            const MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C";
+            try {
+                const res = await fetch(`https://api.jsonbin.io/v3/b/${BOC_BIN_ID}/latest`, {
+                    headers: { 'X-Master-Key': MASTER_KEY }
+                });
+                const data = await res.json();
+                const record = data.record;
+                
+                const now = new Date();
+                const nextAnn = new Date(record.next_date_iso + "T09:00:00"); 
+                const lastAnn = new Date(record.last_date_iso + "T09:00:00");
+                
+                const diffNext = (nextAnn - now) / (1000 * 60 * 60 * 24);
+                const diffLast = (now - lastAnn) / (1000 * 60 * 60 * 24);
+                
+                if (diffNext <= 7 || diffLast <= 7) {
+                    document.getElementById('boc-rate').textContent = record.rate + '%';
+                    document.getElementById('boc-status').textContent = record.status.toLowerCase();
+                    document.getElementById('boc-next').textContent = record.next_announcement;
+                    document.getElementById('boc-alert-wrap').style.display = 'block';
+                }
+            } catch (e) { console.warn("BOC Error:", e); }
+        })();
+    </script>
+    <header class="hero-renewal">
+        <div class="renewal-container">
+            <h1>Courtier Hypothécaire :<br>Votre Renouvellement au Québec.</h1>
+            <p>Magasinez votre taux et optimisez votre prochain terme à Laval, Montréal, Rive-Sud ou n'importe où au Québec avec un expert dédié à vos économies.</p>
+            <a href="#renewal-form" class="hero-btn">Magasiner mon taux</a>
+        </div>
+    </header>
+
+    <section class="renewal-lp-section" style="padding-top: 0;">
+        <div class="renewal-container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🕗</span>
+                    <h3>Anticipation (4-6 mois)</h3>
+                    <p>On peut geler votre taux jusqu'à 120 jours avant l'échéance. Protégez-vous contre les hausses futures.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">💰</span>
+                    <h3>Zéro Frais de Transfert</h3>
+                    <p>Dans la majorité des cas, le transfert vers une autre institution est sans frais. Pourquoi payer plus ?</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🔍</span>
+                    <h3>Analyse Objective</h3>
+                    <p>Je compare 32+ prêteurs. Ma loyauté est envers vous, pas envers une institution bancaire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="renewal-form" class="renewal-section">
+        <div class="renewal-container">
+            <div class="renewal-container-inner">
+                <div class="renewal-info">
+                    <span class="renewal-badge">🛡️ Stratégie Taux</span>
+                    <h2 class="renewal-title">Préparez votre prochain terme maintenant.</h2>
+                    <p>Évitez l'augmentation automatique de vos paiements. Une simple analyse peut changer la donne pour vos 5 prochaines années.</p>
+                </div>
+
+                <div class="renewal-form-card">
+                    <iframe id="renewalHiddenFrame" name="renewalHiddenFrame" style="display:none;"></iframe>
+                    <form id="renewalForm" action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' accept-charset='UTF-8' target="renewalHiddenFrame" onsubmit="prepareRenewalSubmit(event)">
+                        <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                        <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                        <input type="hidden" name="actionType" value="TGVhZHM=">
+                        <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                        <input type="hidden" name="LEADCF7" value="HYPOTHEQUE_RENOUVELLEMENT">
+                        <input type="hidden" name="Description" id="zohoRenewalDesc">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Prénom</label>
+                                <input type="text" name="First Name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nom</label>
+                                <input type="text" name="Last Name" class="form-input" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="Email" class="form-input" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label">Date d'échéance (Approx.)</label>
+                                <input type="text" class="form-input renewal-criteria" data-label="DateEcheance" placeholder="Ex: Décembre 2026" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="renewal-btn" id="renewalSubmitBtn">Obtenir mon comparatif gratuit 📈</button>
+                    </form>
+
+                    <div id="renewalSuccess" class="form-success-wrapper" style="display:none;">
+                        <div class="form-success-body">
+                            <div class="success-icon">✅</div>
+                            <h3>Demande reçue !</h3>
+                            <p>Merci ! Evan a bien reçu votre demande de comparatif pour votre renouvellement. Vous serez contacté sous peu.</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.8rem; color:#999; text-align:center; margin-top:15px;">Confidentialité totale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function prepareRenewalSubmit(event) {
+        // 1. Gather criteria
+        const criteriaInputs = document.querySelectorAll('.renewal-criteria');
+        let descriptionString = "📅 DEMANDE RENOUVELLEMENT (Page Renouvellement):\n";
+
+        criteriaInputs.forEach(input => {
+            const label = input.getAttribute('data-label');
+            const value = input.value;
+            descriptionString += `- ${label}: ${value}\n`;
+        });
+
+        descriptionString += `\n📅 Soumis le: ${new Date().toLocaleDateString()}`;
+
+        // 2. Inject into Zoho Description
+        const descField = document.getElementById('zohoRenewalDesc');
+        if(descField) descField.value = descriptionString;
+
+        // 3. UI Feedback
+        const btn = document.getElementById('renewalSubmitBtn');
+        const form = document.getElementById('renewalForm');
+        const success = document.getElementById('renewalSuccess');
+
+        if(btn) {
+            btn.innerText = "Traitement en cours...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                if(form) form.style.display = 'none';
+                if(success) success.style.display = 'block';
+            }, 1500);
+        }
+    }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://evanpatruno.ca/renouvellement#broker",
+  "@type": "MortgageBroker",
+  "name": "Evan Patruno | Expert en Renouvellement Hypothécaire au Québec",
+  "image": "https://evanpatruno.ca/logo.png",
+  "url": "https://evanpatruno.ca/renouvellement",
+  "telephone": "+15145673249",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2988 boulevard Saint-Martin Ouest",
+    "addressLocality": "Laval",
+    "addressRegion": "QC",
+    "postalCode": "H7L 4S9",
+    "addressCountry": "CA"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Québec"
+  },
+  "description": "Magasinez votre taux pour votre renouvellement hypothécaire partout au Québec. Bureau à Laval pour un service de courtage hypothécaire premium."
+}
+</script>

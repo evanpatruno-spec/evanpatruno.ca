@@ -1,0 +1,32 @@
+<!-- 
+Boutons "Magnétiques"
+INSTRUCTIONS:
+1. Ajouter dans le Footer.
+2. Cible les boutons .zpbutton.
+-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll('.zpbutton, .magnetic-btn');
+
+        if (window.innerWidth > 768) { // Seulement sur PC (pas mobile)
+            buttons.forEach(btn => {
+                btn.addEventListener('mousemove', function (e) {
+                    const rect = btn.getBoundingClientRect();
+                    // Position de la souris relative au bouton
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+
+                    // Déplace le bouton vers la souris (avec un facteur de "résistance")
+                    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+                    btn.style.transition = 'transform 0.1s ease-out';
+                });
+
+                btn.addEventListener('mouseleave', function () {
+                    // Remet en place
+                    btn.style.transform = 'translate(0px, 0px)';
+                    btn.style.transition = 'transform 0.5s ease-out';
+                });
+            });
+        }
+    });
+</script>

@@ -1,0 +1,1299 @@
+<style>
+    /* FIX FOR ZOHO HOME PAGE GAP (Diapositive) */
+    #header-banner-section,
+    .theme-banner-container,
+    .zphero,
+    .theme-banner-base-header,
+    section[data-section-type="banner"] {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        visibility: hidden !important;
+    }
+
+    /* Force the fixed header to have a small gap or background if needed, 
+       but here we just push the hero content down */
+    header.theme-header-fixed {
+        background: rgba(30, 10, 25, 0.8) !important;
+        backdrop-filter: blur(10px);
+    }
+
+    :root {
+        --primary: #873276;
+        --primary-dark: #6a275d;
+        --bg-dark: #1e0a19;
+        --text-light: #ffffff;
+        --text-muted: rgba(255, 255, 255, 0.7);
+        --glass: rgba(255, 255, 255, 0.03);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --glow: rgba(135, 50, 118, 0.15);
+    }
+
+    /* 0. ANIMATIONS & REVEAL */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes shimmer {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* BACKGROUND GLOWS */
+    .glow-aura {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+        filter: blur(80px);
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    /* 1. HERO SECTION */
+    .home-hero {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.98), rgba(135, 50, 118, 0.4)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px 100px !important;
+        text-align: center;
+        color: white;
+        border-radius: 50px;
+        position: relative;
+        z-index: 10;
+        margin: 0 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: hidden !important;
+        /* Prevents glow overflow */
+    }
+
+    .hero-content-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .hero-photo-container {
+        flex: 0 0 300px;
+    }
+
+    .hero-photo-container img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 30px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-text-side {
+        flex: 1;
+    }
+
+    .hero-premium h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        font-weight: 900;
+        line-height: 1.1;
+        color: #ffffff;
+    }
+
+    .hero-premium p {
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.9) !important;
+        margin-bottom: 40px;
+    }
+
+    .hero-cta-group {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 22px 50px !important;
+        background: #fff;
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: white;
+        padding: 18px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        background: var(--primary-dark);
+        box-shadow: 0 15px 40px rgba(135, 50, 118, 0.6);
+    }
+
+    /* BUTTON SHIMMER EFFECT */
+    .btn-shimmer {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-shimmer::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent);
+        transform: translateX(-100%);
+        transition: 0.6s;
+    }
+
+    .btn-shimmer:hover::after {
+        animation: shimmer 1.5s infinite;
+    }
+
+    .btn-outline {
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 18px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+    }
+
+    .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: white;
+    }
+
+    /* 2. SERVICES SECTION */
+    .services-section {
+        padding: 80px 20px;
+        margin-top: -60px;
+        overflow: hidden;
+        /* Prevents overflow from glows */
+    }
+
+    .services-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .service-card {
+        background: var(--glass);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        padding: 40px 30px;
+        border-radius: 30px;
+        text-align: center;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none !important;
+        /* Entire card is now a link */
+        display: block;
+    }
+
+    .service-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        border-color: var(--primary);
+        background: rgba(255, 255, 255, 0.07);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(135, 50, 118, 0.2);
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg,
+                transparent,
+                rgba(255, 255, 255, 0.05),
+                transparent);
+        transition: 0.5s;
+    }
+
+    .service-card:hover::before {
+        left: 100%;
+    }
+
+    .service-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #ffffff;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    .service-card p {
+        color: #ffffff !important;
+        /* Pure white */
+        opacity: 0.95;
+        margin-bottom: 25px;
+        font-size: 1rem;
+    }
+
+    /* 3. ABOUT SECTION */
+    .about-evan {
+        padding: 70px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .evan-photo {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 6. BOOKING SECTION */
+    .booking-section {
+        padding: 70px 20px;
+        position: relative;
+    }
+
+    .booking-card {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, rgba(135, 50, 118, 0.1), rgba(30, 10, 25, 0.4));
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 40px;
+        padding: 60px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+    }
+
+    .booking-content {
+        flex: 1;
+    }
+
+    .booking-content h2 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: white;
+        line-height: 1.2;
+    }
+
+    .booking-benefit {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .booking-benefit i {
+        color: #d4af37;
+        font-size: 1.2rem;
+    }
+
+    .booking-cta-btn {
+        display: inline-block;
+        padding: 20px 45px;
+        background: #d4af37;
+        color: #1e0a19;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 99px;
+        text-decoration: none;
+        transition: 0.4s;
+        box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
+        margin-top: 30px;
+    }
+
+    .booking-cta-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 45px rgba(212, 175, 55, 0.5);
+        background: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+        .booking-card {
+            flex-direction: column;
+            padding: 40px 25px;
+            text-align: center;
+        }
+
+        .booking-content h2 {
+            font-size: 2rem;
+        }
+
+        .booking-benefit {
+            justify-content: center;
+            text-align: left;
+        }
+    }
+
+    /* 5. GÉO-EXPERTISE */
+    .geo-expertise {
+        padding: 70px 20px;
+        background: var(--bg-dark);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        /* Uniformité totale */
+        border-radius: 50px;
+        margin: 40px 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .geo-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .geo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        width: 100%;
+    }
+
+    .geo-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 40px 25px;
+        border-radius: 25px;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .geo-card:hover {
+        transform: translateY(-15px);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: var(--primary);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+
+    .geo-card i {
+        font-size: 2.8rem;
+        color: var(--primary);
+        margin-bottom: 25px;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .geo-card:hover i {
+        transform: scale(1.2) rotate(5deg);
+    }
+
+    .geo-card h4 {
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .geo-card p {
+        color: var(--text-muted) !important;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .img-stack {
+        border-radius: 40px;
+        width: 100%;
+        max-width: 800px;
+        height: 350px;
+        object-fit: cover;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .home-hero {
+            padding: 40px 15px 40px !important;
+            /* Reduced from 80px */
+            margin: 10px 10px 0 !important;
+            min-height: auto !important;
+            border-radius: 30px !important;
+        }
+
+        .hero-content-wrapper {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .hero-photo-container {
+            flex: 0 0 auto;
+            width: 140px;
+            height: 140px;
+        }
+
+        .hero-photo-container img {
+            height: 140px;
+            border-radius: 50% !important;
+        }
+
+        .hero-premium h1 {
+            font-size: 1.6rem;
+            /* Scaled down further */
+            padding: 0 5px;
+            line-height: 1.2;
+        }
+
+        .hero-premium p {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            padding: 0 15px;
+        }
+
+        .hero-cta-group {
+            justify-content: center !important;
+            gap: 12px;
+        }
+
+        .hero-btn,
+        .btn-primary,
+        .btn-outline {
+            width: 90% !important;
+            /* Standardize button widths on mobile */
+            padding: 15px 20px !important;
+            margin-bottom: 5px !important;
+            font-size: 0.95rem !important;
+        }
+
+        .geo-expertise,
+        .testimonials-section {
+            margin: 30px 10px !important;
+            padding: 50px 15px !important;
+            border-radius: 30px !important;
+        }
+
+        .services-grid,
+        .testimonials-grid,
+        .geo-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px;
+        }
+
+        .services-section {
+            padding: 40px 10px !important;
+            margin-top: -30px !important;
+        }
+
+        .service-card {
+            padding: 25px 15px !important;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem !important;
+            margin-bottom: 10px;
+        }
+    }
+
+    /* PARTNERS SECTION */
+    .partners-section {
+        padding: 60px 20px;
+        text-align: center;
+        opacity: 0.6;
+        filter: grayscale(1);
+        transition: 0.3s;
+    }
+
+    .partners-section:hover {
+        opacity: 1;
+        filter: grayscale(0);
+    }
+
+    .partners-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        flex-wrap: wrap;
+    }
+
+    .partner-logo {
+        height: 45px;
+        width: auto;
+        opacity: 0.5;
+        transition: 0.3s;
+        filter: brightness(0) invert(1);
+        /* Logos blancs pour plus de "Premium" */
+    }
+
+    /* WIDGET CONTACT DÉPLACÉ DANS LE FOOTER GLOBAL */
+
+    @media (max-width: 768px) {
+        .floating-contact-widget {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .response-badge {
+            display: none;
+            /* Hide text on very small mobile to avoid clutter */
+        }
+
+        /* REMOVED MOBILE OVERRIDE */
+    }
+</style>
+    <style>
+        :root {
+            --boc-primary: #ff007f;
+            --boc-bg: #1a0b16;
+            --boc-accent: #873276;
+        }
+
+        #boc-alert-wrap {
+            display: none;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(90deg, var(--boc-bg) 0%, #2d0f28 100%);
+            border-bottom: 2px solid var(--boc-accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .boc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 15px;
+        }
+
+        .boc-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .boc-badge {
+            background: var(--boc-primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: boc-pulse 2s infinite;
+            white-space: nowrap;
+        }
+
+        .boc-text {
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .boc-status-label { font-weight: 700; color: #ffb8e6; }
+        .boc-rate-val { font-weight: 900; font-size: 1.1rem; color: #fff; }
+
+        .boc-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .boc-next-ann {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            padding-left: 20px;
+            white-space: nowrap;
+        }
+
+        .boc-next-val { color: #fff; font-weight: 600; }
+
+        .boc-cta {
+            background: #fff;
+            color: var(--boc-bg);
+            padding: 10px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+            white-space: nowrap;
+            cursor: pointer;
+            border: none;
+        }
+
+        .boc-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255,255,255,0.2);
+            background: #f8f8f8;
+        }
+
+        @keyframes boc-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 0, 127, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 0, 127, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 0, 127, 0); }
+        }
+
+        /* MOBILE OPTIMIZATION */
+        @media (max-width: 768px) {
+            .boc-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 10px;
+                text-align: center;
+            }
+            .boc-left {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .boc-text { font-size: 0.88rem; line-height: 1.4; }
+            .boc-right {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+            .boc-next-ann {
+                border-left: none;
+                padding-left: 0;
+                font-size: 0.8rem;
+            }
+            .boc-cta {
+                width: 100%;
+                padding: 14px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* MODAL SYSTEM */
+        #boc-lead-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 5, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 30000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        #boc-lead-modal.active { display: flex; opacity: 1; }
+
+        .boc-modal-card {
+            background: #230d20;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.7);
+            position: relative;
+            padding: 40px;
+            transform: translateY(20px);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #boc-lead-modal.active .boc-modal-card { transform: translateY(0); }
+
+        .boc-modal-close {
+            position: absolute;
+            top: 20px; right: 20px;
+            color: rgba(255,255,255,0.5);
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .boc-modal-close:hover { color: white; transform: rotate(90deg); }
+
+        .boc-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+        .boc-input:focus { border-color: var(--boc-primary); background: rgba(255,255,255,0.08); }
+
+        .boc-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--boc-primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .boc-submit:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 0, 127, 0.3); }
+    </style>
+
+    <div id="boc-alert-wrap">
+        <div class="boc-container">
+            <div class="boc-left">
+                <div class="boc-badge">Flash Taux</div>
+                <div class="boc-text">
+                    La Banque du Canada <span id="boc-status" class="boc-status-label">a maintenu</span> son taux à <span id="boc-rate" class="boc-rate-val">--%</span>
+                </div>
+            </div>
+            <div class="boc-right">
+                <div class="boc-next-ann">
+                    Prochaine annonce : <span id="boc-next" class="boc-next-val">--</span>
+                </div>
+                <button class="boc-cta" onclick="openBocModal()">Sécuriser mon taux</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOC MODAL -->
+    <div id="boc-lead-modal">
+        <div class="boc-modal-card">
+            <div class="boc-modal-close" onclick="closeBocModal()">×</div>
+            <h2 style="color: white; margin: 0 0 10px; font-size: 1.8rem; text-align: center;">Sécurisez votre taux 🎯</h2>
+            <p style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 30px;">
+                Une annonce de taux approche ou vient d'avoir lieu. Soyez rappelé en priorité par Evan pour sécuriser vos conditions.
+            </p>
+            
+            <iframe id="bocHiddenFrame" name="bocHiddenFrame" style="display:none;"></iframe>
+            <form id="bocForm" action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='bocHiddenFrame' onsubmit="handleBocSubmit(event)">
+                <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                <input type="hidden" name="actionType" value="TGVhZHM=">
+                <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                <input type="hidden" name="LEADCF7" value="ALERTE_TAUX_BOC">
+                <input type='hidden' name='Description' value='Demande via Flash Taux Directeur (Capture Modale)'>
+
+                <input type="text" name="First Name" placeholder="Prénom" class="boc-input" required>
+                <input type="text" name="Last Name" placeholder="Nom" class="boc-input" required>
+                <input type="email" name="Email" placeholder="Email" class="boc-input" required>
+                <input type="tel" name="Mobile" placeholder="Téléphone" class="boc-input" required>
+                
+                <button type="submit" id="bocBtnSubmit" class="boc-submit">Me recontacter stratégiquement 🚀</button>
+            </form>
+
+            <div id="bocSuccess" style="display:none; text-align:center; padding:20px; animation: fadeIn 0.4s ease;">
+                <div style="font-size: 3.5rem; margin-bottom: 20px;">✅</div>
+                <h3 style="color:white; margin-bottom:10px; font-weight:800;">C'est noté !</h3>
+                <p style="color:rgba(255,255,255,0.7); font-size:1.1rem;">Merci, Evan vous rappellera en priorité pour sécuriser votre taux.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openBocModal() { document.getElementById('boc-lead-modal').classList.add('active'); document.body.style.overflow='hidden'; }
+        function closeBocModal() { document.getElementById('boc-lead-modal').classList.remove('active'); document.body.style.overflow=''; }
+
+        function handleBocSubmit(e) {
+            const btn = document.getElementById('bocBtnSubmit');
+            const form = document.getElementById('bocForm');
+            const success = document.getElementById('bocSuccess');
+            
+            btn.innerText = "Envoi en cours...";
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                form.style.display = 'none';
+                success.style.display = 'block';
+                setTimeout(closeBocModal, 3000);
+            }, 1500);
+        }
+
+        (async function() {
+            const BOC_BIN_ID = "69db9753856a682189265c0b"; 
+            const MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C";
+            try {
+                const res = await fetch(`https://api.jsonbin.io/v3/b/${BOC_BIN_ID}/latest`, {
+                    headers: { 'X-Master-Key': MASTER_KEY }
+                });
+                const data = await res.json();
+                const record = data.record;
+                
+                const now = new Date();
+                const nextAnn = new Date(record.next_date_iso + "T09:00:00"); 
+                const lastAnn = new Date(record.last_date_iso + "T09:00:00");
+                
+                const diffNext = (nextAnn - now) / (1000 * 60 * 60 * 24);
+                const diffLast = (now - lastAnn) / (1000 * 60 * 60 * 24);
+                
+                if (diffNext <= 7 || diffLast <= 7) {
+                    document.getElementById('boc-rate').textContent = record.rate + '%';
+                    document.getElementById('boc-status').textContent = record.status.toLowerCase();
+                    document.getElementById('boc-next').textContent = record.next_announcement;
+                    document.getElementById('boc-alert-wrap').style.display = 'block';
+                }
+            } catch (e) { console.warn("BOC Error:", e); }
+        })();
+    </script>
+<header class="home-hero">
+    <div class="glow-aura" style="top: 10%; left: 50%; transform: translateX(-50%); opacity: 0.3;"></div>
+    <div class="hero-content-wrapper reveal">
+        <div class="hero-photo-container">
+            <img src="https://www.evanpatruno.ca/Photo%20de%20profil%20courtier%20Pro%20N%20Plex.jpg"
+                alt="Evan Patruno, Courtier Immobilier et Hypothécaire à Saint-Jean-sur-Richelieu et Laval">
+        </div>
+        <div class="hero-text-side">
+            <div class="hero-premium">
+                <h1>Courtier Immobilier (Rive-Sud) & Hypothécaire (Tout le Québec).</h1>
+                <p>Expertise immobilière locale de Saint-Jean-sur-Richelieu à l'Estrie, et solutions hypothécaires sur
+                    mesure pour tout le Québec avec bureau à Laval.</p>
+                <div class="hero-cta-group" style="justify-content: flex-start;">
+                    <a href="/acheter#vip-alert" class="btn-primary btn-shimmer">Accès Prioritaire aux Alertes</a>
+                    <a href="/vendre" class="btn-outline">Évaluation gratuite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+// Logic for Micro-Animations
+document.addEventListener("DOMContentLoaded", async function() {
+    
+    // 1. INTERSECTION OBSERVER FOR MICRO-ANIMATIONS (.reveal)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.15 }); // Triggers when 15% of the element is visible
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+</script>
+<section class="services-section reveal">
+    <div class="glow-aura" style="top: -100px; right: -200px; opacity: 0.15;"></div>
+    <div class="services-grid">
+        <a href="/acheter" class="service-card">
+            <h3>Acheter</h3>
+            <p>Ne cherchez plus, trouvez. Accédez aux propriétés avant tout le monde avec une stratégie de négociation
+                éprouvée.</p>
+            <div class="btn-link" style="color: var(--primary); text-decoration: none; font-weight: 600;">Voir l'offre
+                acheteur →</div>
+        </a>
+        <a href="/vendre" class="service-card">
+            <h3>Vendre</h3>
+            <p>Mise en marché d'exception et stratégie marketing premium pour une vente record au meilleur prix du
+                marché.</p>
+            <div class="btn-link" style="color: var(--primary); text-decoration: none; font-weight: 600;">Estimer ma
+                maison →</div>
+        </a>
+        <a href="/préqualification" class="service-card">
+            <h3>Financer</h3>
+            <p>Services hypothécaires complets. Profitez des meilleurs taux et des conditions de financement optimales
+                pour votre projet.</p>
+            <div class="btn-link" style="color: var(--primary); text-decoration: none; font-weight: 600;">
+                Préqualification →</div>
+        </a>
+    </div>
+</section>
+
+<style>
+    .rev-section {
+        padding: 80px 20px;
+        background: transparent;
+        font-family: 'Outfit', sans-serif;
+        overflow: visible; /* Changed from hidden to allow shadows to show */
+    }
+    .rev-section * { box-sizing: border-box; } /* Force border-box for all internal elements */
+
+    .rev-container { max-width: 1200px; margin: 0 auto; position: relative; padding: 0 50px; }
+    .rev-header { text-align: center; margin-bottom: 50px; }
+    .rev-header h2 { font-size: 2.8rem; color: white; margin-bottom: 15px; font-weight: 700; }
+    
+    /* NAVIGATION ARROWS */
+    .rev-nav {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(135, 50, 118, 0.2);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 50%;
+        color: #d4af37;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: 0.3s;
+        backdrop-filter: blur(10px);
+    }
+    .rev-nav:hover { background: #873276; color: white; border-color: white; transform: translateY(-50%) scale(1.1); }
+    .rev-prev { left: 0; }
+    .rev-next { right: 0; }
+
+    .rev-header .google-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        color: #d4af37;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+    }
+    .rev-track-container {
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 20px 40px 40px; /* Security padding to avoid cut-off shadows/edges */
+        scrollbar-width: none;
+        scroll-padding: 40px;
+    }
+    .rev-track-container::-webkit-scrollbar { display: none; }
+    .rev-card {
+        flex: 0 0 350px; /* Reduced to 350px for better desktop fit */
+        scroll-snap-align: center;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        padding: 40px;
+        position: relative;
+        transition: 0.4s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .rev-card:hover { border-color: #873276; background: rgba(255, 255, 255, 0.05); transform: translateY(-10px); }
+    .rev-stars { color: #d4af37; font-size: 1.2rem; margin-bottom: 20px; }
+    .rev-text { color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px; font-style: italic; }
+    .rev-footer { display: flex; align-items: center; gap: 15px; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 25px; }
+    .rev-avatar {
+        width: 50px; height: 50px; border-radius: 50%;
+        background: linear-gradient(135deg, #d4af37, #873276);
+        display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;
+    }
+    .rev-info h4 { color: white; margin: 0; font-size: 1.1rem; }
+    .rev-info span { color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; }
+    .google-icon { position: absolute; top: 30px; right: 30px; opacity: 0.2; width: 25px; }
+    @media (max-width: 768px) {
+        .rev-container { padding: 0 20px; }
+        .rev-track-container { 
+            gap: 15px; 
+            padding: 10px 20px 30px; 
+            scroll-padding: 20px;
+        }
+        .rev-card { 
+            flex: 0 0 calc(100vw - 80px); /* Slightly narrower to prevent edge clipping */
+            padding: 25px; 
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .rev-header h2 { font-size: 2rem; }
+        .rev-nav { display: none; }
+    }
+</style>
+
+<section class="rev-section reveal">
+    <div class="rev-container">
+        <div class="rev-header">
+            <div class="google-badge">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#d4af37"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                Excellent 5.0/5 sur Google
+            </div>
+            <h2>La confiance de mes clients</h2>
+        </div>
+
+        <div class="rev-nav rev-prev" onclick="scrollReviews(-1)">‹</div>
+        <div class="rev-nav rev-next" onclick="scrollReviews(1)">›</div>
+
+        <div class="rev-track-container" id="revTrack">
+            <!-- PIERRE-ANTOINE JACQUES -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Nous avons transigé avec Evan pour l'achat de notre première maison. Il s'est montré d'une grande gentillesse, d'une efficacité et d'une rapidité exemplaire."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">P</div>
+                    <div class="rev-info"><h4>Pierre-Antoine Jacques</h4><span>Acheteur</span></div>
+                </div>
+            </div>
+
+            <!-- VINCENT PIETTE -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Excellente expérience avec Evan ! Disponible, réactif et très à l'écoute, il a su rendre la vente de ma maison simple et sereine. Son professionnalisme m'a aidé."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">V</div>
+                    <div class="rev-info"><h4>Vincent Piette</h4><span>Vendeur</span></div>
+                </div>
+            </div>
+
+            <!-- MICHAEL P -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Nous avons eu la chance d'être accompagnés par Evan, un courtier exceptionnel, pendant plus de deux ans dans notre recherche de la maison idéale."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">M</div>
+                    <div class="rev-info"><h4>Michaël P.</h4><span>Acheteur</span></div>
+                </div>
+            </div>
+
+            <!-- MARIE-EVE DUPONT -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"La vente de ma maison fût une étape très importante et émotive. Merci Evan pour ton professionnalisme, ton écoute et tes réponses. Travail impeccable ❤️"</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">M</div>
+                    <div class="rev-info"><h4>Marie-Ève Dupont</h4><span>Vendeuse</span></div>
+                </div>
+            </div>
+
+            <!-- JORDAN HEBERT -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Tu veux vendre ou acheter un building commercial ou un multi-logement tu dois considérer faire affaire avec Evan pour son professionnalisme."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">J</div>
+                    <div class="rev-info"><h4>Jordan Hebert</h4><span>Commercial</span></div>
+                </div>
+            </div>
+
+            <!-- TANIA MADORE -->
+            <div class="rev-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Evan est toujours là pour répondre rapidement à nos questions. Toujours disponible pour venir visiter et faire des démarches."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">T</div>
+                    <div class="rev-info"><h4>Tania Madore</h4><span>Acheteur</span></div>
+                </div>
+            </div>
+
+            <!-- SAMUEL BEAUSOLEIL -->
+            <div class="rev-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Evan prend le temps de nous informer des nouveautés sur le marché. Il s'occupe de toute la logistique et répond rapidement."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">S</div>
+                    <div class="rev-info"><h4>Samuel Beausoleil</h4><span>Acheteur</span></div>
+                </div>
+            </div>
+
+            <!-- MELANIE LAGANIERE -->
+            <div class="rev-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Je vous recommande Evan pour vous aider avec votre transaction immobilière ! Il saura vous mettre à l'aise, il est professionnel."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">M</div>
+                    <div class="rev-info"><h4>Mélanie Laganière</h4><span>Vendeuse</span></div>
+                </div>
+            </div>
+            
+            <!-- SPACER TO PREVENT CLIPPING ON MOBILE -->
+            <div style="flex: 0 0 20px; width: 20px; height: 1px; visibility: hidden;"></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://g.page/r/CdypKbg57LonEAE" target="_blank"
+                style="display: inline-block; padding: 12px 30px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; color: white; text-decoration: none; font-weight: 600; transition: 0.3s;"
+                onmouseover="this.style.background='white'; this.style.color='#1e0a19';"
+                onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='white';">
+                Voir tous mes avis sur Google →
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    function scrollReviews(direction) {
+        const track = document.getElementById('revTrack');
+        const scrollAmount = track.offsetWidth > 768 ? 410 : track.offsetWidth; 
+        track.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+<section class="booking-section reveal">
+    <div class="glow-aura" style="top: 50%; left: 50%; opacity: 0.2;"></div>
+    <div class="booking-card">
+        <div class="booking-content">
+            <h2>Prêt à lancer votre projet avec succès ?</h2>
+            <p style="color: rgba(255,255,255,0.7); font-size: 1.2rem; margin-bottom: 30px;">
+                Évitez les chassés-croisés téléphoniques. Réservez votre consultation stratégique gratuite de 15 minutes
+                dès maintenant.
+            </p>
+            <div class="booking-benefit">
+                <i>✦</i> <span>Analyse personnalisée de votre dossier</span>
+            </div>
+            <div class="booking-benefit">
+                <i>✦</i> <span>Plan d'action concret et étapes claires</span>
+            </div>
+            <div class="booking-benefit">
+                <i>✦</i> <span>Expertise Immobilière & Hypothécaire combinée</span>
+            </div>
+            <a href="https://calendar.app.google/An5sXWPe3kvKiZjo8" target="_blank"
+                class="booking-cta-btn btn-shimmer">Réserver mon créneau →</a>
+        </div>
+        <div style="flex: 0 0 200px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div
+                style="width: 150px; height: 150px; background: rgba(255,255,255,0.05); border: 1px solid #d4af37; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #d4af37; margin-bottom: 15px;">
+                🗓️
+            </div>
+            <p
+                style="color: #d4af37; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">
+                Disponibilité Directe</p>
+        </div>
+    </div>
+</section>
+
+<section class="geo-expertise reveal">
+    <div class="glow-aura" style="bottom: -200px; right: 0; opacity: 0.1;"></div>
+    <div class="geo-container">
+        <div style="text-align: center; max-width: 800px;">
+            <h2 style="font-size: 3rem; margin-bottom: 20px; color: #ffffff;">Une présence stratégique.</h2>
+            <p style="font-size: 1.15rem; line-height: 1.6;">Une expertise immobilière ancrée en Montérégie (bureau à
+                Napierville) et une force hypothécaire rayonnant à Laval et partout au Québec.</p>
+        </div>
+
+        <div class="geo-grid">
+            <a href="/immobilier-laval" class="geo-card" style="text-decoration:none; color:inherit;">
+                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🏙️</i>
+                <h4>Laval</h4>
+                <p>Bureau Rive-Nord. Expertise urbaine et hypothécaire.</p>
+            </a>
+            <a href="/immobilier-napierville" class="geo-card" style="text-decoration:none; color:inherit;">
+                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">📍</i>
+                <h4>Napierville</h4>
+                <p>Mon bureau principal. Votre expert de proximité sur la Rive-Sud.</p>
+            </a>
+            <a href="/immobilier-montreal" class="geo-card" style="text-decoration:none; color:inherit;">
+                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🚗</i>
+                <h4>Montréal</h4>
+                <p>Accompagnement stratégique sur l'île et les environs.</p>
+            </a>
+            <a href="/immobilier-chambly" class="geo-card" style="text-decoration:none; color:inherit;">
+                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🏰</i>
+                <h4>Chambly</h4>
+                <p>Le charme de la Rive-Sud. Votre projet au juste prix.</p>
+            </a>
+            <a href="/immobilier-st-jean" class="geo-card" style="text-decoration:none; color:inherit;">
+                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🎈</i>
+                <h4>Saint-Jean</h4>
+                <p>Marché dynamique et bord de l'eau dans le Haut-Richelieu.</p>
+            </a>
+            <div class="geo-card">
+                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">⚜️</i>
+                <h4>Tout le Québec</h4>
+                <p>Services hypothécaires mobiles, peu importe votre région.</p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+<!-- SECTION PARTENAIRES RETIRÉE -->
+
+<script>
+    // 1. SCROLL REVEAL ANIMATION
+    const observerOptions = {
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+    });
+
+    // 2. STABLE HERO (Parallax désactivé pour éviter les bugs visuels)
+    // Le script a été retiré pour garantir que la photo et le fond restent synchronisés.
+</script>
+
+<!-- WIDGET CONTACT DÉPLACÉ DANS LE FOOTER -->

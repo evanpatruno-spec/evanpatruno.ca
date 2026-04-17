@@ -1,0 +1,342 @@
+<!-- 
+CALCULATRICE DES FRAIS DE CLÔTURE (CASH DAM)
+INSTRUCTIONS:
+1. Ajouter un Code Snippet dans une page "Outils" ou article de blog.
+2. Ce code aide les acheteurs à prévoir le MONTANT TOTAL LIQUIDE requis (Mise de fonds + Frais).
+-->
+
+<style>
+    .cc-widget {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        padding: 30px;
+        max-width: 500px;
+        margin: 20px auto;
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+    }
+
+    .cc-title {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 25px;
+        font-size: 1.5rem;
+    }
+
+    .cc-section {
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .cc-section h4 {
+        margin: 0 0 15px 0;
+        font-size: 1rem;
+        color: #555;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+    }
+
+    .cc-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+    }
+
+    .cc-row label {
+        flex: 1;
+    }
+
+    .cc-input {
+        width: 120px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: right;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .cc-input:focus {
+        outline: 2px solid #2c3e50;
+        border-color: transparent;
+    }
+
+    .cc-val {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .cc-total-box {
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .cc-total-label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.8;
+    }
+
+    .cc-total-amount {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-top: 5px;
+        color: #fff;
+    }
+
+    .cc-note {
+        font-size: 0.8rem;
+        color: #888;
+        margin-top: 15px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    /* Tooltip CSS */
+    .evt-tooltip {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        cursor: help;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    .evt-tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        z-index: 10;
+        font-weight: 500;
+        pointer-events: none;
+    }
+
+    .evt-tooltip::before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 6px solid transparent;
+        border-top-color: #2c3e50;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease;
+        pointer-events: none;
+    }
+
+    .evt-tooltip:hover::after, .evt-tooltip:hover::before {
+        opacity: 1;
+        visibility: visible;
+        bottom: 130%;
+    }
+
+    .evt-tooltip-icon {
+        background: #873276;
+        color: white;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 9px;
+        font-weight: bold;
+    }
+
+    .cc-error-msg {
+        display: none;
+        color: #e53935;
+        font-size: 0.8rem;
+        margin-top: -5px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+</style>
+
+<div class="cc-widget">
+    <h3 class="cc-title">💰 Combien faut-il VRAIMENT ?</h3>
+
+    <!-- Achat -->
+    <div class="cc-section">
+        <h4>Données de l'Achat</h4>
+        <div class="cc-row">
+            <label>Prix d'achat</label>
+            <input type="number" class="cc-input" id="cc-price" value="500000" oninput="calcClosingCosts()">
+        </div>
+        <div class="cc-row">
+            <label>Mise de fonds</label>
+            <input type="number" class="cc-input" id="cc-down" value="25000" oninput="calcClosingCosts()">
+        </div>
+        <div class="cc-row">
+            <label>% Mise de fonds</label>
+            <span class="cc-val" id="cc-down-percent">5.0%</span>
+        </div>
+    </div>
+
+    <!-- Frais -->
+    <div class="cc-section">
+        <h4>Frais de Clôture Estimés</h4>
+
+        <div class="cc-row">
+            <label class="evt-tooltip" data-tooltip="Taxe provinciale (9%) calculée sur la prime d'assurance SCHL. Payable chez le notaire.">Taxe sur Prime SCHL <span class="evt-tooltip-icon">?</span></label>
+            <span class="cc-val" id="cc-schl-tax">0 $</span>
+        </div>
+
+        <div class="cc-row">
+            <label class="evt-tooltip" data-tooltip="Aussi appelée Droit de mutation immobilière. (Estimation moyenne)">Taxe de Bienvenue <span class="evt-tooltip-icon">?</span></label>
+            <span class="cc-val" id="cc-welcome">0 $</span>
+        </div>
+
+        <div class="cc-row">
+            <label class="evt-tooltip" data-tooltip="Honoraires du notaire, recherches d'actes et ajustements de taxes municipales/scolaires.">Notaire + Ajustements <span class="evt-tooltip-icon">?</span></label>
+            <input type="number" class="cc-input" id="cc-notary" value="2000" oninput="calcClosingCosts()">
+        </div>
+
+        <div class="cc-row">
+            <label class="evt-tooltip" data-tooltip="Paiement de l'inspecteur en bâtiment. Souvent déboursé lors de l'offre d'achat.">Inspection en bâtiment <span class="evt-tooltip-icon">?</span></label>
+            <input type="number" class="cc-input" id="cc-insp" value="800" oninput="calcClosingCosts()">
+        </div>
+    </div>
+    
+    <div id="cc-error-container" class="cc-error-msg">⚠️ Au Canada, la mise de fonds minimale est de 5% (jusqu'à 500k$) et 10% sur l'excédent.</div>
+
+    <div class="cc-total-box">
+        <div class="cc-total-label">Total Cash Requis</div>
+        <div class="cc-total-amount" id="cc-total">0 $</div>
+    </div>
+
+    <p class="cc-note">
+        Note: La prime SCHL elle-même est ajoutée à votre hypothèque. Seule la taxe provinciale (9%) sur cette prime est
+        payable chez le notaire.<br>
+        Ce calcul est une estimation.
+    </p>
+</div>
+
+<script>
+    function calcClosingCosts() {
+        // Inputs
+        const price = parseFloat(document.getElementById('cc-price').value) || 0;
+        const down = parseFloat(document.getElementById('cc-down').value) || 0;
+        const notary = parseFloat(document.getElementById('cc-notary').value) || 0;
+        const insp = parseFloat(document.getElementById('cc-insp').value) || 0;
+
+        // 1. Down % & Minimum Downpayment Rules (5% on first 500k, 10% on remainder, 20% over 1M)
+        let downPct = 0;
+        let minRequiredDown = 0;
+        
+        if (price > 0) {
+            downPct = (down / price) * 100;
+            if (price <= 500000) {
+                minRequiredDown = price * 0.05;
+            } else if (price < 1000000) {
+                minRequiredDown = (500000 * 0.05) + ((price - 500000) * 0.10);
+            } else {
+                minRequiredDown = price * 0.20;
+            }
+        }
+        
+        document.getElementById('cc-down-percent').innerText = downPct.toFixed(1) + "%";
+        
+        // Show error if downpayment is too low
+        if (down < minRequiredDown) {
+            document.getElementById('cc-down-percent').style.color = '#e53935';
+            document.getElementById('cc-error-container').style.display = 'block';
+            document.getElementById('cc-error-container').innerText = `⚠️ La mise de fonds minimum légale pour ce prix est de ${formatMoney(minRequiredDown)}.`;
+        } else {
+            document.getElementById('cc-down-percent').style.color = '#2e7d32';
+            document.getElementById('cc-error-container').style.display = 'none';
+        }
+
+        // 2. SCHL Calculation (CMHC) - Premium rates as of 2024
+        // 5-9.99%: 4.0%
+        // 10-14.99%: 3.1%
+        // 15-19.99%: 2.8%
+        // 20%+: 0% (Conventional)
+
+        let cmhcRate = 0;
+        let invalidDown = false;
+        
+        if (down < minRequiredDown) {
+            cmhcRate = 0;
+            invalidDown = true;
+        } else if (downPct < 10) {
+            cmhcRate = 0.04;
+        } else if (downPct < 15) {
+            cmhcRate = 0.031;
+        } else if (downPct < 20) {
+            cmhcRate = 0.028;
+        } else {
+            cmhcRate = 0; // Conventional
+        }
+
+        const mortgageAmount = price - down;
+        const cmhcPremium = mortgageAmount * cmhcRate;
+        const cmhcTax = cmhcPremium * 0.09; // 9% QST on premium
+
+        document.getElementById('cc-schl-tax').innerText = formatMoney(cmhcTax);
+
+        // 3. Welcome Tax Estimate (Generic Quebec)
+        // 0-58900: 0.5%
+        // 58900-294600: 1%
+        // 294600+: 1.5%
+        // Simplified Logic for quick estimate
+
+        let wTax = 0;
+        let p1 = 58900;
+        let p2 = 294600;
+
+        // Tranche 1
+        let rem = price;
+        let t1 = Math.min(rem, p1);
+        wTax += t1 * 0.005;
+        rem -= t1;
+
+        if (rem > 0) {
+            let t2 = Math.min(rem, p2 - p1);
+            wTax += t2 * 0.01;
+            rem -= t2;
+
+            if (rem > 0) {
+                wTax += rem * 0.015;
+            }
+        }
+
+        document.getElementById('cc-welcome').innerText = "~ " + formatMoney(wTax);
+
+        // 4. Total Cash Needed
+        // Down Payment + CMHC Tax + Welcome Tax + Notary + Inspection
+        const totalCash = down + cmhcTax + wTax + notary + insp;
+
+        document.getElementById('cc-total').innerText = formatMoney(totalCash);
+    }
+
+    function formatMoney(num) {
+        return num.toLocaleString('fr-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 });
+    }
+
+    // Init
+    calcClosingCosts();
+</script>

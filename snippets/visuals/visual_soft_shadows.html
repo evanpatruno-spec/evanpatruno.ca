@@ -1,0 +1,29 @@
+<!-- 
+Ombres Douces (Soft Shadows)
+INSTRUCTIONS:
+1. Ajouter ce snippet dans le Footer.
+2. Ajoute une classe .soft-shadow utilisable sur vos images ou boites.
+-->
+
+<style>
+    .soft-shadow {
+        box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
+        /* Ombre très diffusée */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 8px;
+        /* Arrondir un peu les bords aide l'effet */
+        background: white;
+        /* Nécessite souvent un fond pour se voir */
+    }
+
+    .soft-shadow:hover {
+        transform: translateY(-5px);
+        /* Lève légèrement */
+        box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.2);
+        /* Ombre grandit */
+    }
+
+    /* Application automatique aux images dans les articles de blog si désiré */
+    /* Décommenter la ligne suivante pour activer partout */
+    /* .zpcolumn img { box-shadow: 0 10px 40px -10px rgba(0,0,0,0.15); border-radius: 8px; } */
+</style>

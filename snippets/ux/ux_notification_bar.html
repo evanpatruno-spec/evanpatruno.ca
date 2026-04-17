@@ -1,0 +1,49 @@
+<!-- 
+Barre de Notification (Top Bar)
+INSTRUCTIONS:
+1. Ajouter dans le Header ou tout en haut de la page.
+-->
+
+<style>
+    .notification-bar {
+        background-color: #e53935;
+        /* Rouge urgence */
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        font-family: sans-serif;
+        position: relative;
+        font-size: 0.9em;
+    }
+
+    .notification-bar a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .notif-close {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 1.2em;
+        opacity: 0.8;
+    }
+
+    .notif-close:hover {
+        opacity: 1;
+    }
+</style>
+
+<div class="notification-bar" id="promoBar">
+    <span>🔥 Nouveau Taux Hypothécaire Spécial Dispo ! <a href="/contact">En savoir plus</a></span>
+    <span class="notif-close" onclick="closeNotif()">&times;</span>
+</div>
+
+<script>
+    function closeNotif() {
+        document.getElementById('promoBar').style.display = 'none';
+    }
+</script>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriétés à Vendre | Rive-Sud & Montérégie | Evan Patruno</title>
+    <meta name="description"
+        content="Découvrez nos propriétés exclusives à vendre en Montérégie et sur la Rive-Sud. Maisons, condos et plex. Profitez de l'expertise d'Evan Patruno pour votre projet immobilier.">
+    <meta name="keywords"
+        content="immobilier rive-sud, maison à vendre montérégie, propriétés evan patruno, courtier immobilier napierville, achat maison rive-sud, plex à vendre montérégie">
+    <meta name="author" content="Evan Patruno">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #0f050d;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --accent-pink: #ff007f;
+            --accent-purple: #873276;
+            --text-main: #ffffff;
+            --text-dim: rgba(255, 255, 255, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --neon-glow: 0 0 20px rgba(135, 50, 118, 0.2);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* HEADER / HERO */
+        .listing-hero {
+            padding: 40px 20px 40px;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(135, 50, 118, 0.15), transparent 70%);
+            position: relative;
+        }
+
+        .listing-hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            background: linear-gradient(to right, #ffffff, #ffb8e6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .listing-hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* FILTER BAR */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+
+        .filter-btn {
+            padding: 10px 22px;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            color: var(--text-dim);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent-purple);
+            color: #fff;
+        }
+
+        .filter-btn.active {
+            background: var(--accent-purple);
+            border-color: var(--accent-purple);
+            color: #fff;
+            box-shadow: 0 0 20px rgba(135, 50, 118, 0.3);
+        }
+
+        /* GRID */
+        .listing-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 35px;
+        }
+
+        /* PROPERTY CARD */
+        .prop-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            overflow: hidden;
+            backdrop-filter: blur(15px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prop-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-purple);
+            box-shadow: var(--neon-glow);
+        }
+
+        /* IMAGE WRAPPER */
+        .prop-image-wrap {
+            height: 280px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .prop-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .prop-card:hover .prop-image-wrap img {
+            transform: scale(1.1);
+        }
+
+        /* BADGES */
+        .badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+        }
+
+        .badge-sale {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--bg-dark);
+        }
+
+        .badge-rent {
+            background: var(--accent-purple);
+            color: white;
+        }
+
+        .badge-sold {
+            background: linear-gradient(135deg, #d4af37, #b5952f);
+            color: #1e0a19;
+            top: auto;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        /* CONTENT */
+        .prop-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prop-price {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .prop-city {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .prop-divider {
+            height: 1px;
+            background: var(--glass-border);
+            margin-top: auto;
+            margin-bottom: 20px;
+        }
+
+        .prop-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .prop-mls {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            font-family: monospace;
+        }
+
+        .prop-btn {
+            padding: 12px 24px;
+            background: var(--accent-purple);
+            color: white;
+            text-decoration: none;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .prop-btn:hover {
+            background: transparent;
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 15px rgba(135, 50, 118, 0.4);
+        }
+
+        /* SOLD OVERLAY */
+        .prop-sold-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 5, 13, 0.6);
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .is-sold .prop-sold-overlay {
+            opacity: 1;
+        }
+
+        .is-sold .prop-btn {
+            background: #333;
+            pointer-events: none;
+            color: #666;
+        }
+
+        /* LOADING */
+        .loading-state {
+            grid-column: 1 / -1;
+            padding: 100px 0;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 1.5rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .properties-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .listing-hero {
+                padding: 80px 20px 40px;
+            }
+
+            .listing-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .prop-card {
+                border-radius: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="listing-hero" style="margin-top: 20px;">
+        <div
+            style="display: inline-block; padding: 8px 16px; background: rgba(135, 50, 118, 0.1); border: 1px solid rgba(135, 50, 118, 0.3); border-radius: 50px; font-size: 0.8rem; font-weight: 700; color: #ffb8e6; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;">
+            Portefeuille Exclusif
+        </div>
+        <h1>Nos Propriétés Disponibles</h1>
+        <p>Une sélection stratégique de biens résidentiels et commerciaux pour vos projets d'achat, de location ou
+            d'investissement au Québec.</p>
+    </header>
+
+    <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="vendre">À Vendre</button>
+        <button class="filter-btn" data-filter="louer">À Louer</button>
+        <button class="filter-btn" data-filter="residentiel">Résidentiel</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="industriel">Industriel</button>
+    </div>
+
+    <main class="listing-container">
+        <div id="properties-grid" class="properties-grid">
+            <div class="loading-state">Initialisation de la galerie premium...</div>
+        </div>
+    </main>
+
+    <!-- UI MODAL GALLERY -->
+    <div id="prop-modal" class="prop-modal">
+        <div class="prop-modal-content">
+            <span id="closeModal">&times;</span>
+            <div style="display: flex; flex-direction: column;">
+                <div class="modal-gallery-wrap"
+                    style="height: 500px; background: #000; position: relative; display: flex; align-items: center; justify-content: center;">
+                    <button id="prevBtn" class="nav-btn" style="position: absolute; left: 20px;">&#10094;</button>
+                    <img id="modal-img" src="" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    <button id="nextBtn" class="nav-btn" style="position: absolute; right: 20px;">&#10095;</button>
+                    <div id="photo-counter"
+                        style="position: absolute; bottom: 20px; color: #fff; background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 20px;">
+                    </div>
+                </div>
+                <!-- Info Area -->
+                <div class="info-area" style="padding: 40px; color: white;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px;">
+                        <h2 id="modal-title" style="font-size: 2.2rem; margin: 0; font-family: 'Outfit', sans-serif;">
+                        </h2>
+                        <div id="modal-price"
+                            style="font-size: 2rem; color: var(--accent-purple); font-weight: 800; font-family: 'Outfit', sans-serif;">
+                        </div>
+                    </div>
+                    <div id="modal-brokers" style="margin: 15px 0 25px;"></div>
+                    <div id="modal-specs" class="modal-specs-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1);">
+                    </div>
+                    <div id="modal-desc"
+                        style="line-height: 1.8; color: var(--text-dim); white-space: pre-wrap; margin-bottom: 40px; font-size: 1rem;">
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a id="modal-link" href="#" target="_blank" class="prop-btn"
+                            style="flex: 1; min-width: 180px; padding: 15px; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center;">Fiche
+                            Complète →</a>
+                        <a id="contact-btn" href="#" class="prop-btn"
+                            style="flex: 1; min-width: 180px; padding: 15px; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; background: #d4af37;">Planifier
+                            une Visite</a>
+                        <button onclick="closeModal()" class="prop-btn btn-outline"
+                            style="flex: 1; min-width: 120px; padding: 15px; display: flex; align-items: center; justify-content: center; text-align: center;">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .prop-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 25, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prop-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .prop-modal-content {
+            background: #1e0a19;
+            margin: auto;
+            width: 95%;
+            max-width: 1000px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+            position: relative;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .prop-modal.active .prop-modal-content {
+            transform: translateY(0) scale(1);
+        }
+
+        #closeModal {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.05);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        #closeModal:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: rotate(90deg);
+        }
+
+        .nav-btn {
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-btn:hover {
+            background: #873276;
+            border-color: transparent;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* FIX VISUELS POPUP */
+        #modal-title {
+            color: #ffffff !important;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .modal-specs-grid:empty {
+            display: none !important;
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: #fff !important;
+            border-radius: 50px !important;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: #fff !important;
+        }
+
+        .prop-btn {
+            background: #873276;
+            border-radius: 50px !important;
+            transition: 0.3s;
+            border: none;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+        }
+
+        .prop-btn:hover {
+            background: #6a275d;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(135, 50, 118, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .modal-gallery-wrap {
+                height: 320px !important;
+            }
+
+            .prop-modal-content {
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+                overflow-y: auto;
+            }
+
+            #modal-title {
+                font-size: 1.6rem !important;
+            }
+
+            #modal-price {
+                font-size: 1.5rem !important;
+            }
+
+            .info-area {
+                padding: 25px !important;
+            }
+
+            .nav-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+
+    <script>
+        const BIN_ID = "694462e7d0ea881f4032d140";
+        const MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C";
+        let allProperties = [];
+        let currentPhotos = [];
+        let photoIdx = 0;
+
+        const FALLBACK_IMG = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800";
+
+        async function fetchAndRender(filter = 'all') {
+            const grid = document.getElementById('properties-grid');
+            try {
+                const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, { headers: { 'X-Master-Key': MASTER_KEY } });
+                const data = await res.json();
+                allProperties = data.record;
+
+                let filtered = allProperties.map(p => {
+                    const isSold = p.isSold || false;
+                    const isRent = (p.price || "").toLowerCase().includes('/mois') || (p.price || "").toLowerCase().includes('louer');
+                    let category = "residentiel";
+                    const d = (p.description || "").toLowerCase();
+                    if (d.includes('commercial') || d.includes('local')) category = "commercial";
+                    if (d.includes('industriel')) category = "industriel";
+                    return { ...p, isSold, isRent, category };
+                });
+
+                if (filter === 'vendre') filtered = filtered.filter(p => !p.isRent);
+                else if (filter === 'louer') filtered = filtered.filter(p => p.isRent);
+                else if (filter !== 'all') filtered = filtered.filter(p => p.category === filter);
+                filtered.sort((a, b) => (a.isSold === b.isSold) ? 0 : a.isSold ? 1 : -1);
+
+                grid.innerHTML = '';
+                filtered.forEach((p) => {
+                    const card = document.createElement('div');
+                    card.className = `prop-card ${p.isSold ? 'is-sold' : ''}`;
+                    card.innerHTML = `
+                        <div class="prop-image-wrap">
+                            ${p.isSold ? '<div class="badge badge-sold">VENDU</div>' : ''}
+                            <div class="badge ${p.isRent ? 'badge-rent' : 'badge-sale'}">${p.isRent ? 'À LOUER' : 'À VENDRE'}</div>
+                            <img src="${p.image}" alt="${p.city}" onerror="this.src='${FALLBACK_IMG}'" loading="lazy">
+                        </div>
+                        <div class="prop-content">
+                            <div class="prop-price">${p.price}</div>
+                            <div class="prop-city">${p.city}</div>
+                            <div class="prop-divider"></div>
+                            <div class="prop-footer">
+                                <span class="prop-mls"># ${p.mls}</span>
+                                <button class="prop-btn btn-details" data-mls="${p.mls}">
+                                    ${p.isSold ? 'Voir Vendu' : 'Détails →'}
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } catch (e) { grid.innerHTML = '<div class="loading-state">Erreur de chargement. Veuillez rafraîchir.</div>'; }
+        }
+
+        // DELEGATED EVENT LISTENER
+        document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.btn-details');
+            if (btn) {
+                const mls = btn.getAttribute('data-mls');
+                openDetails(mls);
+            }
+        });
+
+        function openDetails(mls) {
+            const p = allProperties.find(item => item.mls == mls);
+            if (!p) return;
+
+            document.getElementById('modal-title').textContent = p.city;
+            document.getElementById('modal-price').textContent = p.price;
+            document.getElementById('modal-brokers').innerHTML = `<span style="opacity:0.6;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;">Courtier(s) Inscription :</span><br><b style="font-size:1.1rem;color:#fff;">${p.brokers || "Evan Patruno"}</b>`;
+            document.getElementById('modal-desc').textContent = p.description;
+            document.getElementById('modal-link').href = p.url;
+
+            // CONTACT BUTTON AUTOMATION
+            const contactBtn = document.getElementById('contact-btn');
+            const subject = encodeURIComponent(`Demande de visite : ${p.city} (MLS #${p.mls})`);
+            const body = encodeURIComponent(`Bonjour Evan,\n\nJe suis intéressé par la propriété située à ${p.city} (MLS #${p.mls}).\n\nPourriez-vous me recontacter pour planifier une visite ou me donner plus d'informations ?\n\nMerci !`);
+            contactBtn.href = `mailto:info@evanpatruno.ca?subject=${subject}&body=${body}`;
+
+            const specsGrid = document.getElementById('modal-specs');
+            specsGrid.innerHTML = Object.entries(p.specs || {}).map(([k, v]) => `<div><div style="font-size:0.75rem;opacity:0.5;margin-bottom:3px;">${k}</div><div style="font-weight:700;">${v}</div></div>`).join('');
+
+            currentPhotos = p.photos && p.photos.length ? p.photos : [p.image || FALLBACK_IMG];
+            photoIdx = 0;
+            updateGallery();
+
+            const modal = document.getElementById('prop-modal');
+            modal.style.display = 'flex'; // Use flex for center
+            setTimeout(() => modal.classList.add('active'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateGallery() {
+            const img = document.getElementById('modal-img');
+            img.onerror = () => { img.src = FALLBACK_IMG; };
+            img.src = currentPhotos[photoIdx] || FALLBACK_IMG;
+            document.getElementById('photo-counter').textContent = `${photoIdx + 1} / ${currentPhotos.length}`;
+        }
+
+        document.getElementById('prevBtn').onclick = (e) => { e.stopPropagation(); photoIdx = (photoIdx > 0) ? photoIdx - 1 : currentPhotos.length - 1; updateGallery(); };
+        document.getElementById('nextBtn').onclick = (e) => { e.stopPropagation(); photoIdx = (photoIdx < currentPhotos.length - 1) ? photoIdx + 1 : 0; updateGallery(); };
+
+        function closeModal() {
+            const modal = document.getElementById('prop-modal');
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 400);
+        }
+
+        document.getElementById('closeModal').onclick = closeModal;
+        window.onclick = (event) => { if (event.target == document.getElementById('prop-modal')) closeModal(); };
+
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', function () {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            fetchAndRender(this.getAttribute('data-filter'));
+        }));
+
+        // INITIAL LOAD
+        fetchAndRender('all');
+    </script>
+</body>
+
+</html>

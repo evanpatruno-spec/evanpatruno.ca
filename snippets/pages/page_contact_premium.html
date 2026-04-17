@@ -1,0 +1,435 @@
+<style>
+    /* FIX FOR ZOHO BANNER GAP */
+    #header-banner-section,
+    .theme-banner-container,
+    .zphero {
+        display: none !important;
+    }
+
+    .contact-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+    }
+
+    .contact-lp * {
+        box-sizing: border-box;
+    }
+
+    .contact-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero-contact {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.82), rgba(135, 50, 118, 0.25)), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px !important;
+        color: white;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-contact h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+        color: #ffffff;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: -120px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .info-card {
+        background: #2b0b24;
+        padding: 25px 15px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 220px;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        border-color: #873276;
+    }
+
+    .info-card i {
+        font-size: 1.8rem;
+        color: #873276;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .info-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+        color: #ffffff;
+    }
+
+    .info-card p {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-size: 0.88rem;
+    }
+
+    .map-section {
+        padding: 100px 20px 60px;
+    }
+
+    .map-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .map-item h4 {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #873276;
+        text-align: center;
+    }
+
+    .map-wrapper {
+        height: 380px;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .map-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        filter: grayscale(1) invert(0.9) contrast(1.2);
+    }
+
+    .contact-socials {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .contact-social-label {
+        width: 100%;
+        text-align: center;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        color: rgba(255, 255, 255, 0.25);
+        margin-bottom: 4px;
+        font-weight: 600;
+    }
+
+    .contact-social-btn {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .contact-social-btn:hover {
+        border-color: #873276;
+        color: #ffffff;
+        background: rgba(135, 50, 118, 0.15);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(135, 50, 118, 0.25);
+    }
+
+    .contact-social-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    @media (max-width: 992px) {
+        .contact-grid {
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: -80px;
+        }
+        
+        .map-grid {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr; /* 1 card per line for better visibility */
+            margin-top: -40px;
+        }
+    }
+
+    .callback-section {
+        background: rgba(135, 50, 118, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(135, 50, 118, 0.3);
+        padding: 60px;
+        border-radius: 40px;
+        margin: 60px 0;
+        text-align: center;
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+    }
+
+    .callback-form {
+        display: flex;
+        gap: 15px;
+        max-width: 600px;
+        margin: 30px auto 0;
+        flex-wrap: wrap;
+    }
+
+    .callback-input {
+        flex: 1;
+        min-width: 200px;
+        padding: 18px 25px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.95);
+        color: #1e0a19;
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+
+    .callback-input:focus {
+        background: #ffffff;
+        box-shadow: 0 0 20px rgba(135, 50, 118, 0.3);
+        outline: none;
+    }
+
+    .callback-btn {
+        background: #873276;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .callback-btn:hover {
+        background: #6a275d;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .callback-form { flex-direction: column; }
+        .callback-section { padding: 30px 20px; }
+    }
+
+    /* SUCCESS MESSAGE STYLE */
+    .form-success-wrapper {
+        padding: 40px 20px;
+        animation: fadeIn 0.5s ease;
+    }
+
+    .form-success-body {
+        text-align: center;
+    }
+
+    .success-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 0 15px rgba(37, 211, 102, 0.4));
+    }
+
+    .form-success-body h3 {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .form-success-body p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<div class="contact-lp">
+    <header class="hero-contact">
+        <div class="contact-container">
+            <h1>Parlons de votre projet.</h1>
+            <p style="color: rgba(255,255,255,0.95);">Disponibilité, écoute et expertise stratégique.</p>
+        </div>
+    </header>
+    <section class="contact-container">
+        <div class="contact-grid">
+            <a href="tel:5145673249" class="info-card"><i>📞</i>
+                <h3>Téléphone</h3>
+                <p>514-567-3249</p>
+            </a>
+            <a href="mailto:info@evanpatruno.ca" class="info-card"><i>✉️</i>
+                <h3>Courriel</h3>
+                <p>info@evanpatruno.ca</p>
+            </a>
+            <div class="info-card"><i>🏢</i>
+                <h3>Bureau Hypothécaire</h3>
+                <p><strong>Partout au Québec</strong><br>2988 boulevard Saint-Martin Ouest<br>Laval, QC H7L 4S9</p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=2988+Boulevard+Saint-Martin+Ouest+Laval"
+                    target="_blank"
+                    style="display:inline-block; margin-top:15px; padding: 8px 15px; background: rgba(135,50,118,0.2); border:1px solid #873276; border-radius:8px; color:white; text-decoration:none; font-size:0.8rem; font-weight:700;">Itinéraire
+                    &rarr;</a>
+            </div>
+            <div class="info-card"><i>📍</i>
+                <h3>Bureau Immobilier</h3>
+                <p><strong>Saint-Jean, Rive-Sud & Estrie</strong><br>220 Rue de l'Église<br>Napierville, QC J0J 1L0</p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=220+Rue+de+l'Eglise+Napierville"
+                    target="_blank"
+                    style="display:inline-block; margin-top:15px; padding: 8px 15px; background: rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.2); border-radius:8px; color:white; text-decoration:none; font-size:0.8rem; font-weight:700;">Itinéraire
+                    &rarr;</a>
+            </div>
+        </div>
+        <div class="contact-socials">
+            <span class="contact-social-label">Suivez-moi</span>
+            <a href="https://www.linkedin.com/in/evan-patruno/" target="_blank" class="contact-social-btn"
+                title="LinkedIn" aria-label="LinkedIn">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                    <circle cx="4" cy="4" r="2" />
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/evanpatrunocourtier" target="_blank" class="contact-social-btn"
+                title="Facebook" aria-label="Facebook">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/evanpatruno.immo" target="_blank" class="contact-social-btn"
+                title="Instagram" aria-label="Instagram">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+            </a>
+            <a href="https://www.tiktok.com/@evan.patruno.immo" target="_blank" class="contact-social-btn"
+                title="TikTok" aria-label="TikTok">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.29 8.29 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z" />
+                </svg>
+            </a>
+        </div>
+    </section>
+    <section class="map-section">
+        <div class="contact-container">
+            <div class="map-grid">
+                <div class="map-item">
+                    <h4>Bureau Laval</h4>
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.06734796734!2d-73.743144!3d45.568102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc92209d7e32903%3A0xc6d79a2f77e68846!2s2988%20Bd%20Saint-Martin%20O%2C%20Laval%2C%20QC%20H7L%204S9!5e0!3m2!1sfr!2sca!4v1712785000000!5m2!1sfr!2sca"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="map-item">
+                    <h4>Bureau Napierville</h4>
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.747970335016!2d-73.4070168237233!3d45.1873911710705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc99c5a029598d9%3A0x902a3cc5094a14e!2s220%20Rue%20de%20l'%C3%89glise%2C%20Napierville%2C%20QC%20J0J%201L0!5e0!3m2!1sfr!2sca!4v1712784862417!5m2!1sfr!2sca"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDEA 6: CALLBACK QUICK FORM -->
+    <section class="contact-container" style="padding-bottom: 50px;">
+        <div class="callback-section">
+            <h2 style="font-size: 2rem; margin-bottom: 10px; color: white;">Besoin d'un rappel immédiat ?</h2>
+            <p style="color: rgba(255,255,255,0.7);">Laissez votre numéro et je vous rappelle dans les plus brefs délais.</p>
+            
+            <iframe id="callbackFrame" name="callbackFrame" style="display:none;"></iframe>
+            <form id="callbackForm" action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='callbackFrame' class="callback-form" onsubmit="handleCallback(event)">
+                <input type='hidden' name='xnQsjsdp' value='4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4'>
+                <input type='hidden' name='xmIwtLD' value='b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40'>
+                <input type='hidden' name='actionType' value='TGVhZHM='>
+                <input type='hidden' name='returnURL' value='https://www.evanpatruno.ca'>
+                <input type='hidden' name='LEADCF7' value='CONTACT_DIRECT'>
+
+                <input type="text" name="Last Name" class="callback-input" placeholder="Votre nom" required>
+                <input type="tel" name="Phone" class="callback-input" placeholder="Votre téléphone" required>
+                <button type="submit" class="callback-btn" id="callbackSubmit">Me rappeler 📞</button>
+            </form>
+
+            <div id="callbackSuccess" class="form-success-wrapper" style="display:none;">
+                <div class="form-success-body">
+                    <div class="success-icon">✅</div>
+                    <h3>C'est envoyé !</h3>
+                    <p>Merci pour votre confiance. Evan vous rappellera dans les plus brefs délais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+function handleCallback(event) {
+    const btn = document.getElementById('callbackSubmit');
+    const form = document.getElementById('callbackForm');
+    const success = document.getElementById('callbackSuccess');
+    
+    btn.innerText = "Envoi...";
+    btn.disabled = true;
+    
+    setTimeout(() => {
+        form.style.display = 'none';
+        success.style.display = 'block';
+    }, 1500);
+}
+</script>

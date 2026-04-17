@@ -1,0 +1,577 @@
+<style>
+    /* FIX FOR ZOHO BANNER GAP */
+    #header-banner-section,
+    .theme-banner-container,
+    .zphero {
+        display: none !important;
+    }
+
+    /* GLOBAL RESET & FONTS */
+    .commercial-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+        position: relative;
+    }
+
+    .commercial-lp * {
+        box-sizing: border-box;
+    }
+
+    .commercial-lp h1,
+    .commercial-lp h2,
+    .commercial-lp h3 {
+        color: white;
+        font-weight: 800;
+        margin-top: 0;
+    }
+
+    .commercial-lp-section {
+        padding: 100px 20px;
+    }
+
+    .commercial-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* 1. HERO SECTION */
+    .hero-commercial {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.96), rgba(135, 50, 118, 0.88)), url('https://images.unsplash.com/photo-1486406146926-c627a92af1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px !important;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        z-index: 1;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-commercial h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        font-weight: 900;
+    }
+
+    .hero-commercial p {
+        font-size: 1.3rem;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        color: #ffffff !important;
+        opacity: 0.95;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 22px 50px;
+        background: #fff;
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    /* 2. VALUE PILLARS */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-card {
+        background: #2b0b24;
+        color: #ffffff !important;
+        padding: 45px 35px;
+        border-radius: 30px !important;
+        /* Standardized rounded corners */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        transition: transform 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(135, 50, 118, 0.3);
+    }
+
+    .service-card h3 {
+        color: #873276;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+    }
+
+    .service-icon {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* 3. TIMELINE STEPS */
+    .timeline-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .timeline-header h2 {
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .timeline-header p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.1rem;
+    }
+
+    .steps-container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .step-item {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 60px;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        background: #873276;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.4rem;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 5px 15px rgba(135, 50, 118, 0.3);
+    }
+
+    .step-number::after {
+        content: '';
+        position: absolute;
+        top: 60px;
+        bottom: -60px;
+        left: 50%;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 1;
+    }
+
+    .step-item:last-child .step-number::after {
+        display: none;
+    }
+
+    .step-content h3 {
+        font-size: 1.35rem;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .step-content p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.05rem;
+    }
+
+    /* --- FORM SECTION --- */
+    .commercial-form-section {
+        padding: 100px 20px;
+        background: #1e0a19;
+        color: white;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .form-container-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .form-info {
+        flex: 1;
+        min-width: 320px;
+    }
+
+    .form-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        background: rgba(135, 50, 118, 0.15);
+        border: 1px solid rgba(135, 50, 118, 0.3);
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        color: #a94295;
+        letter-spacing: 1.5px;
+    }
+
+    .form-title {
+        font-size: 3rem;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        font-weight: 900;
+    }
+
+    .form-desc {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+    .form-checks {
+        list-style: none;
+        padding: 0;
+    }
+
+    .form-checks li {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 1.1rem;
+    }
+
+    .form-checks li svg {
+        width: 24px;
+        height: 24px;
+        fill: #38a169;
+    }
+
+    .form-card {
+        flex: 1.2;
+        min-width: 350px;
+        background: #2b0b24;
+        padding: 50px;
+        border-radius: 35px;
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .commercial-btn {
+        width: 100%;
+        padding: 22px;
+        background: #873276;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.15rem;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 30px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .commercial-btn:hover {
+        background: #6a275d;
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(135, 50, 118, 0.4);
+    }
+
+    .form-input,
+    .form-select {
+        width: 100%;
+        padding: 18px;
+        background: white;
+        color: #1e0a19;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .form-input:focus {
+        border-color: #873276;
+        outline: none;
+    }
+
+    @media (max-width: 768px) {
+        .hero-commercial {
+            padding: 60px 20px 80px !important;
+            margin-top: 15px !important;
+            min-height: 350px !important;
+        }
+
+        .hero-commercial h1 {
+            font-size: 2.5rem;
+        }
+
+        .form-title {
+            font-size: 2.2rem;
+        }
+
+        .form-card {
+            padding: 30px 20px;
+        }
+
+        .services-grid {
+            margin-top: -60px;
+        }
+    }
+
+    /* SUCCESS MESSAGE STYLE */
+    .form-success-wrapper {
+        padding: 40px 20px;
+        animation: fadeIn 0.5s ease;
+        text-align: center;
+    }
+
+    .success-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+
+    .form-success-body h3 {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .form-success-body p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<div class="commercial-lp">
+    <header class="hero-commercial">
+        <div class="commercial-container">
+            <h1>Courtier Hypothécaire Commercial :<br>Financez votre projet au Québec.</h1>
+            <p>Solutions de financement spécialisées pour le multi-logement et le commercial à Saint-Jean, Montréal, la Rive-Sud, l'Estrie et partout au Québec avec un bureau à Laval.</p>
+            <a href="#commercial-form" class="hero-btn">Analyser mon projet</a>
+        </div>
+    </header>
+
+    <section class="commercial-lp-section" style="padding-top: 0;">
+        <div class="commercial-container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🏢</span>
+                    <h3>Multi-Logement</h3>
+                    <p>Optimisation du ratio prêt-valeur et accès aux produits APH Select de la SCHL pour une
+                        rentabilité maximale.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🏗️</span>
+                    <h3>Construction</h3>
+                    <p>Financement par étapes pour vos projets de développement résidentiel ou industriel léger avec des
+                        partenaires de confiance.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">💼</span>
+                    <h3>Plex & Commercial</h3>
+                    <p>Solutions de refinancement et d'acquisition pour immeubles de bureaux, commerces de détail et
+                        parcs immobiliers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="commercial-lp-section"
+        style="background: rgba(0,0,0,0.2); border-radius: 60px; margin: 20px; border: 1px solid rgba(255,255,255,0.05);">
+        <div class="commercial-container">
+            <div class="timeline-header">
+                <h2>Le parcours vers le succès</h2>
+                <p>Une méthodologie rigoureuse pour des dossiers complexes.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Analyse de Rentabilité</h3>
+                        <p>Étude approfondie de vos revenus nets (NOI) et de vos ratios de couverture de dette (DSCR).
+                        </p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Évaluation Stratégique</h3>
+                        <p>Coordination des évaluations (AACI) et des études environnementales (Phase I/II) si
+                            nécessaires.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Magasinage Prêteurs</h3>
+                        <p>Mise en concurrence des banques, assureurs et prêteurs privés pour obtenir les meilleures
+                            conditions.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Approbation & Débourse</h3>
+                        <p>Suivi rigoureux jusqu'au notaire pour assurer que les fonds sont disponibles selon votre
+                            calendrier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL FORM -->
+    <section id="commercial-form" class="commercial-form-section">
+        <div class="form-container-inner">
+            <div class="form-info">
+                <span class="form-badge">📈 Vision Stratégique</span>
+                <h2 class="form-title">Étude de dossier gratuite.</h2>
+                <p class="form-desc">Discutez de votre vision avec Evan. Nous analyserons vos chiffres pour identifier
+                    les meilleures opportunités de levier financier.</p>
+                <ul class="form-checks">
+                    <li><svg viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                            </path>
+                        </svg><span>Accès aux produits hors-marché</span></li>
+                    <li><svg viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                            </path>
+                        </svg><span>Optimisation fiscale & structurelle</span></li>
+                    <li><svg viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                            </path>
+                        </svg><span>Réseau de prêteurs spécialisés</span></li>
+                </ul>
+            </div>
+
+            <div class="form-card">
+                <iframe id="commHiddenFrame" name="commHiddenFrame" style="display:none;"></iframe>
+                <form id="commForm" action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='commHiddenFrame'
+                    onsubmit='prepareCommSubmit(event)' accept-charset='UTF-8'>
+                    <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                    <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                    <input type="hidden" name="actionType" value="TGVhZHM=">
+                    <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                    <input type="hidden" name="LEADCF7" value="IMMOBILIER_COMMERCIAL">
+                    <input type="hidden" name="Description" id="zohoCommercialDesc">
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <input type="text" name="First Name" placeholder="Prénom" class="form-input" required>
+                        <input type="text" name="Last Name" placeholder="Nom" class="form-input" required>
+                    </div>
+                    <input type="email" name="Email" placeholder="Email d'affaires" class="form-input" required>
+                    <input type="text" id="comm-project" placeholder="Projet (ex: Multi 12 log., Industriel...)"
+                        class="form-input">
+                    <input type="text" id="comm-amount" placeholder="Prêt requis (est.)" class="form-input">
+
+                    <button type="submit" class="commercial-btn" id="commSubmitBtn">Analyser mon dossier 🚀</button>
+                </form>
+
+                <div id="commSuccess" class="form-success-wrapper" style="display:none;">
+                    <div class="form-success-body">
+                        <div class="success-icon">✅</div>
+                        <h3>Dossier reçu !</h3>
+                        <p>Merci ! Votre demande d'analyse commerciale a été transmise à Evan. Vous serez recontacté pour une étude détaillée.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function prepareCommSubmit(event) {
+        const project = document.getElementById('comm-project').value;
+        const amount = document.getElementById('comm-amount').value;
+
+        let descriptionString = "🏢 DEMANDE FINANCEMENT COMMERCIAL:\n";
+        descriptionString += `- Projet: ${project}\n`;
+        descriptionString += `- Montant requis: ${amount}\n`;
+        descriptionString += `\n📅 Soumis le: ${new Date().toLocaleDateString()}`;
+        document.getElementById('zohoCommercialDesc').value = descriptionString;
+
+        const btn = document.getElementById('commSubmitBtn');
+        const form = document.getElementById('commForm');
+        const success = document.getElementById('commSuccess');
+
+        btn.innerText = "Transmission...";
+        btn.disabled = true;
+
+        setTimeout(() => {
+            form.style.display = 'none';
+            success.style.display = 'block';
+        }, 1500);
+    }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://evanpatruno.ca/commercial#broker",
+  "@type": "MortgageBroker",
+  "name": "Evan Patruno | Expert en Financement Commercial au Québec",
+  "image": "https://evanpatruno.ca/logo.png",
+  "url": "https://evanpatruno.ca/commercial",
+  "telephone": "+15145673249",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2988 boulevard Saint-Martin Ouest",
+    "addressLocality": "Laval",
+    "addressRegion": "QC",
+    "postalCode": "H7L 4S9",
+    "addressCountry": "CA"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Québec"
+  },
+  "description": "Solutions expertes en financement commercial et multi-logement partout au Québec. Bureau à Laval pour optimiser vos projets immobiliers d'envergure."
+}
+</script>

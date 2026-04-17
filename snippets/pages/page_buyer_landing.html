@@ -1,0 +1,1299 @@
+<!-- 
+PAGE ACHETEUR COMPLETE (LANDING PAGE + ALERTE IMMOBILIÈRE)
+INSTRUCTIONS:
+1. Créez une nouvelle page "Acheteurs" sur votre site.
+2. Ajoutez un "Code Snippet".
+3. Copiez-collez TOUT ce code.
+4. IMPORTANT : Remplacez "VOTRE_KEY_ZOHO_ICI" et "VOTRE_TOKEN_ZOHO_ICI" (vers la ligne 250) par vos vraies clés.
+-->
+<style>
+    /* FIX FOR ZOHO BANNER GAP */
+    #header-banner-section,
+    .theme-banner-container,
+    .zphero {
+        display: none !important;
+    }
+
+    /* GLOBAL RESET & FONTS */
+    .buyer-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+        position: relative;
+    }
+
+    .buyer-lp * {
+        box-sizing: border-box;
+    }
+
+    .buyer-lp h1,
+    .buyer-lp h2,
+    .buyer-lp h3 {
+        color: white;
+        font-weight: 800;
+        margin-top: 0;
+    }
+
+    .buyer-lp-section {
+        padding: 40px 20px;
+    }
+
+    .buyer-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* 1. HERO SECTION */
+    .hero-buyer {
+        background: linear-gradient(135deg, rgba(10, 10, 31, 0.82), rgba(135, 50, 118, 0.25)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 60px 20px !important;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        z-index: 1;
+        margin: 20px 20px 0 !important;
+        /* Reduced from 40px to tighten layout */
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+        min-height: 500px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-buyer h1 {
+        font-size: 3.5rem;
+        color: white;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        font-weight: 900;
+    }
+
+    .hero-buyer p {
+        font-size: 1.3rem;
+        max-width: 750px;
+        margin: 0 auto 40px;
+        color: #ffffff !important;
+        opacity: 0.95;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 22px 50px;
+        background: #fff;
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    /* 2. VALUE PILLARS */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-card {
+        background: #2b0b24;
+        /* Dark Card */
+        color: #ffffff !important;
+        padding: 45px 35px;
+        border-radius: 30px !important;
+        /* Standardized corners */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transition: transform 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .service-card h3 {
+        color: #873276;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(135, 50, 118, 0.3);
+    }
+
+    .service-icon {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* 3. TIMELINE STEPS */
+    .timeline-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .timeline-header h2 {
+        font-size: 2.2rem;
+        color: white;
+    }
+
+    .timeline-header p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        position: relative;
+        margin-top: 40px;
+    }
+
+    .process-step {
+        text-align: center;
+        position: relative;
+    }
+
+    .step-icon-circle {
+        width: 70px;
+        height: 70px;
+        background: #873276;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 1.5rem;
+        box-shadow: 0 10px 20px rgba(135, 50, 118, 0.3);
+        z-index: 2;
+        position: relative;
+    }
+
+    .process-step::after {
+        content: '';
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 1;
+    }
+
+    .process-step:last-child::after {
+        display: none;
+    }
+
+    .process-step h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: white;
+        font-weight: 700;
+    }
+
+    .process-step p {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .process-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .process-step::after {
+            display: none;
+        }
+    }
+
+    /* --- FORM SECTION --- */
+    .alert-section {
+        padding: 40px 20px;
+        background: #1e0a19;
+        color: white;
+        border-radius: 40px;
+        margin: 0 0 20px 0;
+        scroll-margin-top: 80px;
+    }
+
+    .alert-container-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .alert-info {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .alert-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    .alert-title {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        font-weight: 800;
+        color: white !important;
+    }
+
+    .alert-desc {
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
+        margin-bottom: 35px;
+        font-size: 1.15rem;
+    }
+
+    .alert-benefits {
+        list-style: none;
+        padding: 0;
+    }
+
+    .alert-benefits li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .alert-benefits li svg {
+        width: 22px;
+        fill: #38a169;
+        /* Emerald Green */
+    }
+
+    .alert-form-card {
+        flex: 1.3;
+        min-width: 320px;
+        background: #2b0b24;
+        padding: 45px;
+        border-radius: 30px;
+        color: white;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group.full-width {
+        grid-column: 1 / -1;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .form-input,
+    .form-select {
+        width: 100%;
+        padding: 15px 20px;
+        background-color: white;
+        color: #1e0a19;
+        border: 2px solid #eee;
+        border-radius: 12px;
+        font-size: 1rem;
+        line-height: normal;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: block;
+        height: 56px;
+        /* Altura fixa para garantir visibilidade */
+    }
+
+    .form-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23873276' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 18px;
+        padding-right: 45px;
+        cursor: pointer;
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+        border-color: #873276;
+        outline: none;
+        box-shadow: 0 0 15px rgba(135, 50, 118, 0.2);
+    }
+
+    .alert-btn {
+        width: 100%;
+        padding: 20px;
+        background: #873276;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 25px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .alert-btn:hover {
+        background: #6a275d;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .hero-buyer {
+            padding: 60px 20px 80px !important;
+            margin-top: 15px !important;
+            min-height: 350px !important;
+        }
+
+        .hero-buyer h1 {
+            font-size: 2.2rem;
+        }
+
+        .hero-buyer p {
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            margin-top: -60px;
+            grid-template-columns: 1fr;
+        }
+
+        .alert-title {
+            font-size: 2rem;
+        }
+
+        .alert-container-inner {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .alert-form-card {
+            padding: 30px 20px;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .buyer-lp-section {
+            padding: 60px 20px;
+        }
+    }
+
+    /* SUCCESS MESSAGE STYLE */
+    .form-success-wrapper {
+        padding: 40px 20px;
+        animation: fadeIn 0.5s ease;
+        text-align: center;
+    }
+
+    .success-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+
+    .form-success-body h3 {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .form-success-body p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* LEGAL FOOTER */
+    .legal-footer {
+        padding: 60px 20px 40px;
+        background: #1e0a19;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .legal-text {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.6;
+    }
+
+    /* IDEA 1 & 3: NEW COMPONENTS */
+    .checklist-section {
+        background: rgba(135, 50, 118, 0.05);
+        border: 1px solid rgba(135, 50, 118, 0.2);
+        border-radius: 40px;
+        padding: 60px 40px;
+        margin: 60px 0;
+    }
+
+    .checklist-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .checklist-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .checklist-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .checklist-item:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: #873276;
+    }
+
+    .checklist-checkbox {
+        width: 24px;
+        height: 24px;
+        border: 2px solid #873276;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .checklist-item.checked .checklist-checkbox {
+        background: #873276;
+    }
+
+    .checklist-item.checked .checklist-checkbox::after {
+        content: '✓';
+        color: white;
+        font-weight: 900;
+        font-size: 14px;
+    }
+
+    .checklist-item.checked span {
+        text-decoration: line-through;
+        opacity: 0.5;
+    }
+
+    .guide-magnet {
+        background: linear-gradient(135deg, #2b0b24 0%, #1e0a19 100%);
+        border: 1px solid rgba(135, 50, 118, 0.4);
+        border-radius: 40px;
+        padding: 60px 40px;
+        text-align: center;
+        margin: 80px 0;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    }
+
+    .guide-magnet::before {
+        content: 'OFFERT';
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        background: #FFD700;
+        color: #1e0a19;
+        padding: 5px 40px;
+        transform: rotate(45deg);
+        font-weight: 900;
+        font-size: 0.8rem;
+    }
+
+    .guide-magnet h2 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .guide-btn {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 18px 40px;
+        background: #873276;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 800;
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
+        transition: 0.3s;
+    }
+
+    .guide-btn:hover {
+        transform: translateY(-5px);
+        background: #6a275d;
+    }
+
+    /* MINI FORM STYLES */
+    .mini-guide-form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 400px;
+        margin: 30px auto 0;
+    }
+
+    .mini-input {
+        padding: 16px 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.08);
+        color: white;
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+
+    .mini-input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .mini-input:focus {
+        border-color: #873276;
+        background: rgba(255, 255, 255, 0.12);
+        outline: none;
+    }
+
+    .mini-submit {
+        background: #873276;
+        color: white;
+        border: none;
+        padding: 18px;
+        border-radius: 50px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .mini-submit:hover {
+        background: #6a275d;
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+        .checklist-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .guide-magnet {
+            padding: 30px 20px;
+        }
+
+        .guide-magnet h2 {
+            font-size: 1.6rem;
+        }
+    }
+
+    /* READY CTA BLOCK */
+    .ready-cta-section {
+        background: linear-gradient(145deg, rgba(135, 50, 118, 0.1), rgba(30, 10, 25, 0.4));
+        border: 2px solid rgba(135, 50, 118, 0.2);
+        border-radius: 40px;
+        padding: 60px 30px;
+        margin: 60px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .ready-cta-section {
+            padding: 40px 20px;
+            margin: 40px 10px;
+        }
+        
+        .ready-cta-section h2 {
+            font-size: 1.8rem !important;
+        }
+
+        .ready-cta-section .hero-btn {
+            padding: 18px 30px !important;
+            width: auto !important;
+            min-width: 250px;
+            border-radius: 50px !important;
+            white-space: nowrap;
+        }
+    }
+
+    /* MODAL OVERLAY */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 10, 25, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 20000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .modal-overlay.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .checklist-modal {
+        background: #1e0a19;
+        max-width: 600px;
+        width: 100%;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+        position: relative;
+        overflow: hidden;
+        transform: translateY(30px) scale(0.95);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .modal-overlay.active .checklist-modal {
+        transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: white;
+        font-size: 1.5rem;
+        z-index: 10;
+        transition: 0.3s;
+    }
+
+    .modal-close:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: rotate(90deg);
+    }
+
+    .expert-header {
+        color: #d4af37;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 25px 0 15px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        padding-bottom: 5px;
+    }
+
+    .checklist-group-title {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin: 15px 0 8px 5px;
+    }
+
+    .modal-body {
+        padding: 40px;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    @media (max-width: 768px) {
+        .modal-body {
+            padding: 25px 20px;
+        }
+
+        .modal-body h2 {
+            font-size: 1.5rem !important;
+        }
+
+        .expert-header {
+            font-size: 0.95rem;
+            margin-top: 20px;
+        }
+
+        .checklist-item {
+            padding: 12px;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .checklist-item span {
+            font-size: 0.88rem;
+            line-height: 1.3;
+        }
+    }
+
+    .modal-state {
+        display: none;
+    }
+
+    .modal-state.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<div class="buyer-lp">
+
+    <!-- HERO -->
+    <header class="hero-buyer">
+        <div class="buyer-container">
+            <h1>Courtier Immobilier : <br>Trouvez à Saint-Jean et Rive-Sud.</h1>
+            <p>Accédez aux propriétés avant la compétition à Saint-Jean-sur-Richelieu, sur la Rive-Sud, à Montréal ou en
+                Estrie avec un expert local basé à Napierville.</p>
+            <a href="#vip-alert" class="hero-btn">S'inscrire aux Alertes immobilières</a>
+        </div>
+    </header>
+
+    <!-- SECTION 2: SERVICES (Overlapping) -->
+    <section class="buyer-lp-section" style="padding-top: 0;">
+        <div class="buyer-container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">⚡</span>
+                    <h3>Réactivité & Stratégie</h3>
+                    <p>Alertes instantanées dès la mise en ligne et analyse de valeur immédiate pour déposer une offre
+                        gagnante avant la compétition.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🛡️</span>
+                    <h3>Protection Totale</h3>
+                    <p>Inspection, financement, vices cachés... Je blinde votre dossier pour un achat sans risque.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🤝</span>
+                    <h3>Négociation Expert</h3>
+                    <p>Mon but n'est pas que vous achetiez, mais que vous achetiez *mieux*. Mon expertise vise à
+                        optimiser chaque aspect de votre transaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TIMELINE -->
+    <section class="buyer-lp-section"
+        style="background: rgba(0,0,0,0.2); border-radius: 50px; margin: 60px 20px; border: 1px solid rgba(255,255,255,0.05);">
+        <div class="buyer-container">
+            <div class="timeline-header">
+                <h2>Votre parcours vers la propriété</h2>
+                <p>Simple, clair et sans stress.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-icon-circle">⚖️</div>
+                    <h3>Stratégie</h3>
+                    <p>Analyse de votre capacité d'achat et définition de vos critères prioritaires.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon-circle">⚡</div>
+                    <h3>Alertes immobilières</h3>
+                    <p>Accès prioritaire aux propriétés qui correspondent à vos critères via mon système automatisé.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon-circle">🤝</div>
+                    <h3>Négociation</h3>
+                    <p>Analyse de valeur marchande et stratégies d'offre pour gagner le dossier.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon-circle">✅</div>
+                    <h3>Signature</h3>
+                    <p>Coordination des experts (inspection, notaire) jusqu'à la remise des clés.</p>
+                </div>
+            </div>
+
+            <!-- DIAGNOSTIC CTA (REPLACES STATIC CHECKLIST) -->
+            <div class="ready-cta-section">
+                <h2 style="font-size: 2.22rem; margin-bottom: 0;">Suis-je prêt à faire une offre ?</h2>
+                <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">Un dossier incomplet est la cause #1 des offres refusées. Vérifiez en 30 secondes si vous avez tout le nécessaire pour sécuriser votre future propriété.</p>
+                <button class="hero-btn" style="margin-bottom: 0;" onclick="openChecklistModal()">Démarrer le diagnostic ⚡</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDEA 1: LEAD MAGNET GUIDE (GATED) -->
+    <section class="seller-container">
+        <div class="guide-magnet">
+            <h2>🏠 Le Guide de l'Acheteur</h2>
+            <p style="max-width: 600px; margin: 0 auto 25px;">Évitez les pièges coûteux et apprenez à négocier comme un pro avec mon guide complet.</p>
+            <button class="hero-btn" onclick="openGuideModal()">Télécharger mon guide gratuit 📥</button>
+        </div>
+    </section>
+
+    <!-- SECTION 4: INTEGRATED ALERT FORM -->
+    <section id="vip-alert" class="buyer-lp-section" style="padding-top:20px;">
+        <div class="buyer-container">
+
+            <!-- ALERT FORM COMPONENT START -->
+            <div class="alert-section">
+                <div class="alert-container-inner">
+
+                    <!-- Copy Side -->
+                    <div class="alert-info">
+                        <span class="alert-badge">💎 Accès Prioritaire</span>
+                        <h2 class="alert-title">Ne manquez plus la maison de vos rêves.</h2>
+                        <p class="alert-desc">Chaque minute compte. Recevez des alertes automatiques ultra-précises et
+                            accédez à mon réseau pour dénicher votre futur chez-vous sans stress.</p>
+
+                        <ul class="alert-benefits">
+                            <li>
+                                <svg viewBox="0 0 20 20">
+                                    <path
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                                    </path>
+                                </svg>
+                                <span>Réseau & Partenariats</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 20 20">
+                                    <path
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                                    </path>
+                                </svg>
+                                <span>Alertes en temps réel</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 20 20">
+                                    <path
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                                    </path>
+                                </svg>
+                                <span>Analyses de valeur incluses</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Form Side -->
+                    <div class="alert-form-card">
+
+                        <iframe id="alertHiddenFrame" name="alertHiddenFrame" style="display:none;"></iframe>
+
+                        <!-- ZOHO CRM FORM -->
+                        <form id="alertForm" action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads445982000000289007
+                            method='POST' target='alertHiddenFrame' onsubmit='prepareAlertSubmit(event)'
+                            accept-charset='UTF-8'>
+
+                            <!-- KEYS TO REPLACE -->
+                            <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                            <input type="hidden" name="zc_gad" id="zc_gad" value="">
+                            <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                            <input type="hidden" name="actionType" value="TGVhZHM=">
+                            <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                            <input type="hidden" name="LEADCF7" value="ACHETER_MAISON">
+
+                            <!-- DATA AGGREGATION FIELD -->
+                            <input type="hidden" name="Description" id="zohoDescriptionField">
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Prénom</label>
+                                    <input type="text" name="First Name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Nom</label>
+                                    <input type="text" name="Last Name" class="form-input" required>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" name="Email" class="form-input" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Type de propriété</label>
+                                    <select class="form-select alert-criteria" data-label="Type">
+                                        <option value="Condo">Condo</option>
+                                        <option value="Maison Unifamiliale">Maison Unifamiliale</option>
+                                        <option value="Plex (Investissement)">Plex (2-5 logements)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Budget Max</label>
+                                    <select class="form-select alert-criteria" data-label="Budget">
+                                        <option value="300k - 400k">300k - 400k</option>
+                                        <option value="400k - 500k">400k - 500k</option>
+                                        <option value="500k - 700k">500k - 700k</option>
+                                        <option value="700k - 900k">700k - 900k</option>
+                                        <option value="1M +">1M +</option>
+                                    </select>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label class="form-label">Secteurs recherchés</label>
+                                    <input type="text" class="form-input alert-criteria" data-label="Secteurs"
+                                        placeholder="Ex: Plateau, Rosemont, Villeray...">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Chambres min.</label>
+                                    <select class="form-select alert-criteria" data-label="Chambres">
+                                        <option value="1+">1+</option>
+                                        <option value="2+">2+</option>
+                                        <option value="3+">3+</option>
+                                        <option value="4+">4+</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Échéance</label>
+                                    <select class="form-select alert-criteria" data-label="Échéance">
+                                        <option value="Immédiat">Immédiatement</option>
+                                        <option value="3 mois">Dans 1-3 mois</option>
+                                        <option value="6 mois+">Printemps/Été prochain</option>
+                                        <option value="Exploratoire">Je regarde juste</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="alert-btn" id="alertSubmitBtn">Activer mon alerte 🔔</button>
+
+                        </form>
+
+                        <div id="alertSuccess" class="form-success-wrapper" style="display:none;">
+                            <div class="form-success-body">
+                                <div class="success-icon">🔔</div>
+                                <h3>Alertes activées !</h3>
+                                <p>C'est fait ! Votre accès VIP est configuré. Vous recevrez les meilleures opportunités répondant à vos critères directement dans votre boîte mail.</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.8rem; color:#999; text-align:center; margin-top:15px;">Désinscription
+                            possible à tout moment.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ALERT FORM COMPONENT END -->
+
+        </div>
+    </section>
+
+
+    <!-- CHECKLIST MODAL SYSTEM -->
+    <div class="modal-overlay" id="checklistModalOverlay">
+        <div class="checklist-modal">
+            <div class="modal-close" onclick="closeChecklistModal()">×</div>
+            
+            <div class="modal-body">
+                <!-- ETAPE 1 : FORMULAIRE -->
+                <div class="modal-state active" id="modalStateForm">
+                    <h2 style="color: #ffffff; margin-bottom: 15px; font-size: 1.8rem; text-align: center;">Dernière étape...</h2>
+                    <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 30px;">Complétez vos infos pour accéder à votre Checklist de documents personnalisée.</p>
+                    
+                    <iframe id="checklistHiddenFrame" name="checklistHiddenFrame" style="display:none;"></iframe>
+                    <form action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='checklistHiddenFrame' onsubmit="handleChecklistForm(event)">
+                        
+                        <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                        <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                        <input type="hidden" name="actionType" value="TGVhZHM=">
+                        <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                        <input type="hidden" name="Description" value="[SOURCE: DIAGNOSTIC ACHAT] Demande de checklist documents.">
+                        <input type="hidden" name="LEADCF7" value="ACHETER_DIAGNOSTIC">
+
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <input type="text" name="Last Name" placeholder="Votre Nom complet" class="form-input" required>
+                            <input type="email" name="Email" placeholder="Votre Email" class="form-input" required>
+                            <input type="tel" name="Mobile" placeholder="Téléphone" class="form-input" required>
+                            <button type="submit" class="alert-btn" style="margin-top: 10px;">Accéder à ma checklist ⚡</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ETAPE 2 : CHECKLIST -->
+                <div class="modal-state" id="modalStateChecklist">
+                    <h2 style="color: #ffffff; margin-bottom: 5px; font-size: 1.8rem; text-align: center;">Diagnostic Terminé</h2>
+                    <p style="text-align: center; color: #d4af37; font-weight: 700; margin-bottom: 25px;">✅ Vos informations ont été reçues. Voici votre plan :</p>
+                    
+                    <!-- GROUPE 1 -->
+                    <h3 class="expert-header">1. Le Socle (Indispensable)</h3>
+                    <div class="checklist-list">
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Lettre de pré-approbation (moins de 3 mois)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Preuve de mise de fonds (extraits bancaires récents)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Deux pièces d'identité avec photo valides</span>
+                        </div>
+                    </div>
+
+                    <!-- GROUPE 2 -->
+                    <h3 class="expert-header">2. Dossier "Acheteur Gagnant"</h3>
+                    
+                    <div class="checklist-group-title">Option A : Si vous êtes Salarié</div>
+                    <div class="checklist-list text-tiny">
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Talon de paie récent (moins de 30 jours)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Lettre d'emploi signée par l'employeur</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>T4 des 2 dernières années</span>
+                        </div>
+                    </div>
+
+                    <div class="checklist-group-title">Option B : Si vous êtes Travailleur Autonome</div>
+                    <div class="checklist-list">
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>T1 Général complet (2 dernières années)</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Avis de cotisation Fédéral & Québec (2 ans)</span>
+                        </div>
+                    </div>
+
+                    <div class="checklist-group-title">Critique pour la mise de fond :</div>
+                    <div class="checklist-list">
+                        <div class="checklist-item" onclick="toggleCheck(this)">
+                            <div class="checklist-checkbox"></div>
+                            <span>Historique bancaire complet de 90 jours (Traçabilité)</span>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 35px; padding-bottom: 20px;">
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 15px;">Il vous manque des éléments ? Ne laissez pas la maison de vos rêves s'envoler.</p>
+                        <a href="https://calendar.app.google/NLQVyTxENHHFfzwW6" target="_blank" class="hero-btn" style="padding: 15px 30px; font-size: 0.9rem;">Planifier une stratégie d'achat (Gratuit)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MODALE GUIDE DOWNLOAD -->
+    <div class="modal-overlay" id="guideModalOverlay">
+        <div class="checklist-modal" style="max-width: 500px;">
+            <div class="modal-close" onclick="closeGuideModal()">×</div>
+            <div class="modal-body">
+                <h2 style="color: #ffffff; margin-bottom: 15px; font-size: 1.8rem; text-align: center;">Recevoir mon Guide</h2>
+                <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 30px;">
+                    Entrez vos coordonnées pour accéder instantanément au **Guide de l'Acheteur**.
+                </p>
+
+                <iframe id="guideHiddenFrame" name="guideHiddenFrame" style="display:none;"></iframe>
+                <div id="guideFormWrapper">
+                    <form action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' accept-charset='UTF-8' target='guideHiddenFrame' onsubmit="handleGuideSubmit(event)">
+                        <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                        <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                        <input type="hidden" name="actionType" value="TGVhZHM=">
+                        <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca/guide-acheteur">
+                        <input type="hidden" name="Description" value="[SOURCE: GUIDE ACHETEUR MODAL] Demande de téléchargement.">
+                        <input type="hidden" name="LEADCF7" value="GUIDE_ACHETEUR">
+
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <input type="text" name="Last Name" id="guideLastName" placeholder="Votre Prénom" class="form-input" required>
+                            <input type="email" name="Email" id="guideEmail" placeholder="Votre Email" class="form-input" required>
+                            <input type="tel" name="Mobile" id="guideMobile" placeholder="Téléphone" class="form-input" required>
+                            <button type="submit" id="guideSubmitBtn" class="alert-btn" style="margin-top: 10px;">Accéder au guide 📥</button>
+                        </div>
+                        <p style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.5); text-align: center; margin-top: 15px;">
+                            En validant, vous acceptez de recevoir mes conseils immobiliers.
+                        </p>
+                    </form>
+                </div>
+
+                <div id="guideSuccess" class="form-success-wrapper" style="display:none;">
+                    <div class="form-success-body">
+                        <div class="success-icon">📥</div>
+                        <h3>Guide en route !</h3>
+                        <p>Merci ! Votre guide d'achat a été envoyé à votre adresse courriel. Surveillez votre boîte de réception.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleCheck(el) {
+        el.classList.toggle('checked');
+    }
+
+    /* CONTROLES MODALE DIAGNOSTIC */
+    function openChecklistModal() {
+        document.getElementById('checklistModalOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeChecklistModal() {
+        document.getElementById('checklistModalOverlay').classList.remove('active');
+        document.body.style.overflow = ''; 
+    }
+
+    /* CONTROLES MODALE GUIDE */
+    function openGuideModal() {
+        document.getElementById('guideModalOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeGuideModal() {
+        document.getElementById('guideModalOverlay').classList.remove('active');
+        document.body.style.overflow = ''; 
+    }
+
+    function handleChecklistForm(event) {
+        const btn = event.submitter;
+        if(btn) {
+            btn.innerText = "Traitement...";
+            btn.disabled = true;
+        }
+
+        setTimeout(() => {
+            document.getElementById('modalStateForm').classList.remove('active');
+            setTimeout(() => {
+                document.getElementById('modalStateChecklist').classList.add('active');
+            }, 100);
+        }, 1200);
+    }
+
+    function handleGuideSubmit(event) {
+        const btn = document.getElementById('guideSubmitBtn');
+        const wrapper = document.getElementById('guideFormWrapper');
+        const success = document.getElementById('guideSuccess');
+
+        btn.innerText = "Préparation...";
+        btn.disabled = true;
+
+        setTimeout(() => {
+            wrapper.style.display = 'none';
+            success.style.display = 'block';
+            setTimeout(closeGuideModal, 3500);
+        }, 1500);
+    }
+
+    function prepareAlertSubmit(event) {
+        const criteria = [];
+        document.querySelectorAll('.alert-criteria').forEach(el => {
+            criteria.push(el.getAttribute('data-label') + ": " + el.value);
+        });
+        document.getElementById('zohoDescriptionField').value = "[SOURCE: ALERTE IMMO] Critères : " + criteria.join(' | ');
+
+        const btn = document.getElementById('alertSubmitBtn');
+        const form = document.getElementById('alertForm');
+        const success = document.getElementById('alertSuccess');
+
+        btn.innerText = "Activation...";
+        btn.disabled = true;
+
+        setTimeout(() => {
+            form.style.display = 'none';
+            success.style.display = 'block';
+        }, 1500);
+    }
+
+    // Close on overlay click
+    document.addEventListener('click', function(e) {
+        if (e.target.id === 'checklistModalOverlay') closeChecklistModal();
+        if (e.target.id === 'guideModalOverlay') closeGuideModal();
+    });
+</script>
+
+<!-- SEO Structured Data (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Evan Patruno | Courtier Immobilier Saint-Jean-sur-Richelieu & Rive-Sud",
+  "image": "https://www.evanpatruno.ca/files/logo.png",
+  "url": "https://www.evanpatruno.ca/acheter",
+  "telephone": "+15145673249",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "220 Rue de l'Église",
+    "addressLocality": "Napierville",
+    "addressRegion": "QC",
+    "postalCode": "J0J 1L0",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    "Saint-Jean-sur-Richelieu",
+    "Montréal",
+    "Rive-Sud",
+    "Estrie"
+  ],
+  "description": "Expert courtier immobilier pour l'achat de votre maison, condo ou plex à Saint-Jean-sur-Richelieu, sur la Rive-Sud, à Montréal et en Estrie. Accès prioritaire aux alertes immobilières."
+}
+</script>

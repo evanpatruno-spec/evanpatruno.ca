@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guide du Vendeur - Evan Patruno</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --primary: #873276;
+            --dark: #1e0a19;
+            --light: #2b0b24;
+            --bg: #1e0a19;
+            --text: #ffffff;
+            --text-dim: rgba(255, 255, 255, 0.7);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background: var(--light);
+        }
+
+        /* Cover Page */
+        .cover {
+            min-height: 70vh;
+            background: linear-gradient(135deg, #3b1131 0%, var(--dark) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 60px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid var(--primary);
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') center/cover;
+            opacity: 0.35;
+            mix-blend-mode: luminosity;
+            z-index: 0;
+        }
+
+        .cover::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(30, 10, 25, 0.4), rgba(30, 10, 25, 0.8));
+            z-index: 1;
+        }
+
+        .cover > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-tag {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 10px 22px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            align-self: flex-start;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--primary);
+            font-weight: 700;
+        }
+
+        .cover h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 0;
+            line-height: 1.1;
+            color: #ffffff !important;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .cover h2 {
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: #ffffff !important;
+            opacity: 1;
+            margin-top: 20px;
+            max-width: 600px;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
+
+        .author {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .author img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Content Pages */
+        .page {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            page-break-after: always;
+        }
+
+        .step {
+            margin-bottom: 80px;
+            position: relative;
+            padding-left: 100px;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            color: var(--primary);
+            opacity: 0.25;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .step h3 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            font-weight: 800;
+            margin: 0 0 20px 0;
+            letter-spacing: -1px;
+        }
+
+        .step p {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        .pro-tip {
+            background: rgba(135, 50, 118, 0.1);
+            border: 1px solid rgba(135, 50, 118, 0.2);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin-top: 30px;
+            font-size: 1rem;
+            border-radius: 0 15px 15px 0;
+            color: #ffffff;
+        }
+
+        /* Print Optimization */
+        @media print {
+            @page {
+                size: Letter;
+                margin: 0;
+            }
+
+            body {
+                background: white !important;
+                color: #1a1a1a !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .cover {
+                background: #1e0a19 !important; /* Keep cover dark even in print for prestige */
+                color: white !important;
+                min-height: auto !important;
+                padding: 60px 40px !important;
+            }
+
+            .cover h1, .cover h2 { color: white !important; }
+
+            .content-flow {
+                background: white !important;
+                color: #1a1a1a !important;
+            }
+
+            .step h3 { color: #1a1a1a !important; }
+            .step p { color: #333333 !important; }
+            .step-number { opacity: 0.15 !important; }
+            
+            .pro-tip {
+                background: #f9f5f8 !important;
+                border: 1px solid #ddd !important;
+                border-left: 4px solid #873276 !important;
+                color: #1a1a1a !important;
+            }
+
+            .section-block h2 { color: #873276 !important; }
+        }
+    </style>
+    <style>
+        /* SUCCESS BANNER & DOWNLOAD BTN */
+        .success-banner {
+            background: linear-gradient(to right, #1e0a19, #3b1131);
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--primary);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .download-fab {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: var(--primary);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: 800;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            z-index: 1100;
+            cursor: pointer;
+            border: 2px solid rgba(255,255,255,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .download-fab:hover {
+            transform: translateY(-8px) scale(1.05);
+            background: #ab4497;
+            box-shadow: 0 30px 60px rgba(135, 50, 118, 0.4);
+        }
+
+        /* Print Optimization */
+        @media print {
+            .no-print { display: none !important; }
+            .success-banner { display: none !important; }
+            @page { margin: 1cm; }
+            body { background: white; }
+        }
+    </style>
+</head>
+
+<body style="background: var(--bg); color: var(--text);">
+
+    <div class="success-banner no-print">
+        ✨ Félicitations ! Votre accès au guide est activé.
+    </div>
+
+    <button onclick="window.print()" class="download-fab no-print">
+        💾 Sauvegarder en PDF
+    </button>
+
+    <!-- COVER -->
+    <div class="cover">
+        <div class="brand-tag">Édition Premium</div>
+        <h1>Vendre au Sommet<br>Le Plan Stratégique</h1>
+        <h2>Comment obtenir le prix record pour votre propriété en moins de 30 jours, même en marché changeant.</h2>
+
+        <div class="author">
+            <div>
+                <strong>Evan Patruno</strong><br>
+                Courtier Immobilier
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- CONTENT FLOW (All sections in one flow for smooth printing) -->
+    <div class="content-flow">
+        <!-- INTRODUCTION -->
+        <div class="section-block">
+            <h2 style="color: var(--primary); margin-top:0;">Ne laissez pas d'argent sur la table</h2>
+            <p>Vendre une maison est l'opération financière la plus complexe pour la plupart des gens. Une erreur de
+                prix, une mauvaise photo, ou une négociation faible peut vous coûter des dizaines de milliers de
+                dollars.</p>
+            <p>Ce guide est votre feuille de route pour <strong>maximiser votre retour sur investissement</strong>.</p>
+        </div>
+
+        <!-- STEPS 1-5 -->
+        <div class="section-block" style="page-break-before: always;">
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>L'Évaluation de Précision</h3>
+                <p>Oubliez l'évaluation municipale. Le "vrai" prix est déterminé par les comparables vendus (et non ceux
+                    qui dorment sur le marché). Je vous fournis une analyse comparative de marché (ACM) ultra-détaillée.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Le Home Staging Stratégique</h3>
+                <p>Les acheteurs n'ont pas d'imagination. On doit leur montrer le potentiel. Désencombrer,
+                    dépersonnaliser, et parfois repeindre un mur peut rapporter 5$ pour chaque 1$ investi.</p>
+                <div class="pro-tip">Conseil Pro : Épurer les lieux. L'espace fait vendre.</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>La Mise en Marché "Cinéma"</h3>
+                <p>98% des acheteurs voient votre maison sur leur téléphone en premier. Photos HDR, visite virtuelle 3D,
+                    et vidéo drone ne sont pas des options, ce sont des standards pour attirer les acheteurs sérieux.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">04</div>
+                <h3>La Tarification Psychologique</h3>
+                <p>Le prix d'inscription n'est pas le prix de vente. C'est un outil marketing. Positionner votre
+                    propriété intelligemment pour créer un sentiment d'urgence chez les acheteurs.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">05</div>
+                <h3>L'Exposition Maximale</h3>
+                <p>Centris n'est que le début. Réseaux sociaux, publicité ciblée, et réseau de courtiers. Je m'assure
+                    que chaque acheteur potentiel dans un rayon de 50km voit votre propriété.</p>
+            </div>
+        </div>
+
+        <!-- STEPS 6-10 -->
+        <div class="section-block">
+            <div class="step">
+                <div class="step-number">06</div>
+                <h3>La Gestion des Visites</h3>
+                <p>Ne soyez jamais présent lors des visites. Les acheteurs se sentent mal à l'aise de critiquer devant
+                    le propriétaire. Laissez-moi gérer et collecter les feedbacks honnêtes.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">07</div>
+                <h3>La Réception d'Offres</h3>
+                <p>Le moment excitant. On ne regarde pas juste le prix. On vérifie la solvabilité de l'acheteur, les
+                    dates, et les conditions. Une offre plus basse mais avec de meilleures conditions peut valoir mieux
+                    qu'une offre élevée risquée.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">08</div>
+                <h3>La Négociation Féroce</h3>
+                <p>Mon but : protéger votre prix tout en gardant l'acheteur engagé. Je gère les émotions pour que vous
+                    gardiez la tête froide.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">09</div>
+                <h3>La Gestion de l'Inspection</h3>
+                <p>L'acheteur va tenter de renégocier après l'inspection. Je suis là pour défendre votre propriété et
+                    distinguer les vrais problèmes des caprices.</p>
+                <div class="pro-tip">Conseil Pro : Ne faites pas les réparations vous-même. Offrez plutôt un crédit sur
+                    le prix. C'est plus simple.</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">10</div>
+                <h3>La Clôture (Notaire)</h3>
+                <p>Préparation des documents, ajustements de taxes, et remise des clés. Vous repartez avec votre chèque
+                    et la tranquillité d'esprit d'avoir vendu au maximum du marché.</p>
+            </div>
+        </div>
+
+        <!-- CALL TO ACTION -->
+        <div class="section-block" style="text-align: center; margin-top: 60px; page-break-before: always;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--primary);">Combien vaut
+                votre maison ?</h2>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 20px auto;">Le marché change vite. Obtenez une
+                évaluation précise et gratuite de votre propriété pour savoir où vous vous situez.</p>
+
+            <div style="margin-top: 40px;">
+                <a href="https://calendar.app.google/An5sXWPe3kvKiZjo8"
+                    style="background: var(--primary); color: white; padding: 20px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.2rem;">Demander
+                    mon évaluation gratuite</a>
+            </div>
+
+            <div style="margin-top: 60px;">
+                <p><strong>Evan Patruno</strong><br>Votre partenaire immobilier de confiance</p>
+            </div>
+        </div>
+    </div> <!-- End Content Flow -->
+
+</body>
+
+</html>

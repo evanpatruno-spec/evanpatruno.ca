@@ -1,0 +1,295 @@
+<!-- 
+SNIPPET: CARROUSEL AVIS GOOGLE PREMIUM (V2 - REAL CONTENT)
+THEME: DARK GLASSMORPHISM / GOLD STARS
+-->
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+    .rev-section {
+        padding: 80px 20px;
+        background: transparent;
+        font-family: 'Outfit', sans-serif;
+        overflow: hidden;
+    }
+
+    .rev-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 50px;
+    }
+
+    .rev-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .rev-header h2 {
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .rev-header .google-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        color: #d4af37;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+    }
+
+    /* NAVIGATION ARROWS */
+    .rev-nav {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(135, 50, 118, 0.2);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 50%;
+        color: #d4af37;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: 0.3s;
+        backdrop-filter: blur(10px);
+    }
+    .rev-nav:hover { background: #873276; color: white; border-color: white; transform: translateY(-50%) scale(1.1); }
+    .rev-prev { left: 0; }
+    .rev-next { right: 0; }
+
+    /* CAROUSEL ENGINE */
+    .rev-track-container {
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 20px 40px 40px; /* Added 40px horizontal padding to prevent clipping shadows/edges */
+        scrollbar-width: none;
+        scroll-padding: 40px; /* Ensures snap aligns with padding */
+    }
+
+    .rev-track-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .rev-card {
+        flex: 0 0 380px;
+        scroll-snap-align: center;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        padding: 40px;
+        position: relative;
+        transition: 0.4s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .rev-card:hover {
+        border-color: #873276;
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateY(-10px);
+    }
+
+    .rev-stars {
+        color: #d4af37;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .rev-text {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+        font-style: italic;
+    }
+
+    .rev-footer {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 25px;
+    }
+
+    .rev-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #d4af37, #873276);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .rev-info h4 {
+        color: white;
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    .rev-info span {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.85rem;
+    }
+
+    .google-icon {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        opacity: 0.2;
+        width: 25px;
+    }
+
+    @media (max-width: 768px) {
+        .rev-container { padding: 0 20px; }
+        .rev-track-container { 
+            gap: 15px; 
+            padding: 10px 20px 30px; /* Adjusted mobile padding */
+            scroll-padding: 20px;
+        }
+        .rev-card { 
+            flex: 0 0 calc(100vw - 80px); /* Slightly narrower to show next card hint and avoid edge clipping */
+            padding: 25px; 
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .rev-header h2 { font-size: 2rem; }
+        .rev-nav { display: none; }
+    }
+</style>
+
+<section class="rev-section" id="reviews">
+    <div class="rev-container">
+        <div class="rev-header">
+            <div class="google-badge">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#d4af37"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                Excellent 5.0/5 sur Google
+            </div>
+            <h2>La confiance de mes clients</h2>
+        </div>
+
+        <div class="rev-nav rev-prev" onclick="scrollReviews(-1)">‹</div>
+        <div class="rev-nav rev-next" onclick="scrollReviews(1)">›</div>
+
+        <div class="rev-track-container" id="revTrack">
+            <!-- PIERRE-ANTOINE JACQUES -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Nous avons transigé avec Evan pour l'achat de notre première maison. Il s'est montré d'une grande gentillesse, d'une efficacité et d'une rapidité exemplaire pour répondre à nos questions."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">P</div>
+                    <div class="rev-info"><h4>Pierre-Antoine Jacques</h4><span>Acheteur</span></div>
+                </div>
+            </div>
+
+            <!-- VINCENT PIETTE -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Excellente expérience avec Evan ! Disponible, réactif et très à l'écoute, il a su rendre la vente de ma maison simple et sereine. Son professionnalisme et ses précieux conseils m'ont beaucoup aidé."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">V</div>
+                    <div class="rev-info"><h4>Vincent Piette</h4><span>Vendeur</span></div>
+                </div>
+            </div>
+
+            <!-- MICHAEL P -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Nous avons eu la chance d'être accompagnés par Evan, un courtier exceptionnel, pendant plus de deux ans (!) dans notre recherche de la maison idéale. Ce professionnel a travaillé sans relâche."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">M</div>
+                    <div class="rev-info"><h4>Michaël P.</h4><span>Acheteur</span></div>
+                </div>
+            </div>
+
+            <!-- MARIE-EVE DUPONT -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"La vente de ma maison fût une étape très importante et émotive. Merci Evan pour ton professionnalisme, ton écoute et tes réponses à mes milles et une questions. Travail impeccable ❤️"</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">M</div>
+                    <div class="rev-info"><h4>Marie-Ève Dupont</h4><span>Vendeuse</span></div>
+                </div>
+            </div>
+
+            <!-- JORDAN HEBERT -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Tu veux vendre ou acheter un building commercial ou un multi-logement tu dois considérer faire affaire avec Evan pour son professionnalisme et l'amour qu'il met dans son travail."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">J</div>
+                    <div class="rev-info"><h4>Jordan Hebert</h4><span>Commercial & Multi-logement</span></div>
+                </div>
+            </div>
+
+            <!-- TANIA MADORE -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Evan est toujours là pour répondre rapidement à nos questions. Toujours disponible pour venir visiter et faire des démarches même si le temps presse. Je recommande absolument."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">T</div>
+                    <div class="rev-info"><h4>Tania Madore</h4><span>Acheteur</span></div>
+                </div>
+            </div>
+
+            <!-- SAMUEL BEAUSOLEIL DUMESNIL -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Evan prend le temps de nous informer des nouveautés sur le marché qui pourrait répondre aux besoins. Il s'occupe de toute la logistique et répond rapidement aux interrogations."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">S</div>
+                    <div class="rev-info"><h4>Samuel Beausoleil</h4><span>Acheteur</span></div>
+                </div>
+            </div>
+
+            <!-- MELANIE LAGANIERE -->
+            <div class="rev-card">
+                <div class="rev-stars">★★★★★</div>
+                <p class="rev-text">"Je vous recommande Evan pour vous aider avec votre future transaction immobilière ! Il saura vous mettre à l'aise, il est professionnel, disponible et très ponctuel."</p>
+                <div class="rev-footer">
+                    <div class="rev-avatar">M</div>
+                    <div class="rev-info"><h4>Mélanie Laganière</h4><span>Propriétaire</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://g.page/r/CdypKbg57LonEAE" target="_blank" style="display: inline-block; padding: 12px 30px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; color: white; text-decoration: none; font-weight: 600; transition: 0.3s;" onmouseover="this.style.background='white'; this.style.color='#1e0a19';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='white';">
+                Voir tous mes avis sur Google →
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    function scrollReviews(direction) {
+        const track = document.getElementById('revTrack');
+        const scrollAmount = track.offsetWidth > 768 ? 410 : track.offsetWidth; 
+        track.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+</script>

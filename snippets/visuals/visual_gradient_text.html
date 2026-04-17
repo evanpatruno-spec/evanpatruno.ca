@@ -1,0 +1,32 @@
+<!-- 
+Titres en Dégradé (Gradient Text)
+INSTRUCTIONS:
+1. Ajouter ce snippet dans le Footer (pour charger le CSS).
+2. Ce code cible AUTOMATIQUEMENT tous les H1 (Gros titres) pour leur mettre le dégradé.
+   SI vous voulez cibler seulement certains titres, changez 'h1' par '.gradient-text' et ajoutez cette classe manuellement.
+-->
+
+<style>
+    /* Cible tous les H1 par défaut */
+    h1,
+    .gradient-text {
+        background: linear-gradient(45deg, #2c3e50, #e53935);
+        /* Bleu foncé vers Rouge */
+        -webkit-background-clip: text;
+        /* Coupe le fond à la forme du texte */
+        background-clip: text;
+        color: transparent;
+        /* Rend le texte transparent pour voir le fond */
+
+        /* Fallback visibilité pour vieux navigateurs */
+        /* display: inline-block; */
+    }
+
+    /* Optionnel: Animation lente du dégradé */
+    h1:hover {
+        background: linear-gradient(45deg, #e53935, #2c3e50);
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: all 0.5s ease;
+    }
+</style>

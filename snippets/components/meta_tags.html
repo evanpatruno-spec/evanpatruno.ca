@@ -1,0 +1,616 @@
+<!-- 
+SNIPPET META TAGS SEO (ZOHO SITES HEADER)
+INSTRUCTIONS:
+1. Copiez ce code.
+2. Allez dans Zoho Sites > Settings > Header and Footer Code.
+3. Collez ce bloc dans la section "Header Code".
+4. Ce code contient les balises de base et OpenGraph pour les réseaux sociaux.
+-->
+
+<style>
+    /* Mobile Menu Fix - Style 03 & Global */
+    @media screen and (max-width: 991px) {
+        .zpmenu-container {
+            display: none !important;
+        }
+    }
+
+    /* SUPPRESSION DU VERT FLUO (Mobile Menu Header - Style 03) */
+    .theme-mobile-header-slidewrapper .theme-mobile-header-slide .theme-mobile-header-slide-header,
+    .theme-mobile-header-slidewrapper .theme-mobile-header-slide .theme-mobile-header-slide-box,
+    .zpmenu-mobile-header {
+        background-color: #1e0a19 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* FIX SEARCH FIELD, LANG & LOADER NEON GREEN */
+    .theme-search-field-container input[type="text"],
+    .theme-lang-container.theme-lang-dropdown-open,
+    .theme-lang-dropdown,
+    .theme-loader,
+    .zpmenu-container {
+        background-color: #1e0a19 !important;
+        color: #ffffff !important;
+    }
+
+    /* ENSURE LOGO & 'X' ARE VISIBLE */
+    .theme-mobile-header-slide-close svg,
+    .zpmenu-mobile-header .zpmenu-mobile-header-close {
+        fill: #FFFFFF !important;
+        color: #FFFFFF !important;
+    }
+
+    /* --- GRAND EDITORIAL BLOG OVERHAUL (V4 - Precise Selectors) --- */
+
+    /* 1. THE "INVISIBLE" TITLE FIX */
+    h1.theme-blog-heading.theme-single-blog-heading,
+    .theme-single-blog-heading,
+    .zblog-post-header h1,
+    .theme-blog-post-title,
+    .zpblog-post-title,
+    .zpblog-post-title a {
+        color: #ffffff !important;
+        font-family: 'Outfit', sans-serif !important;
+        font-size: 3.5rem !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.04em !important;
+        line-height: 1.1 !important;
+        text-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+        margin: 0 auto 30px !important;
+        display: block !important;
+    }
+
+    /* 2. IDENTITY: AUTHOR PHOTO (SVG MASKING) */
+    .theme-blog-author-img {
+        width: 80px !important;
+        height: 80px !important;
+        background-image: url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=320,fit=crop,q=95/m6LDVxxBaLi757nM/evan_patruno-AwvD1J3wXni11116.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        border: 2px solid #873276 !important;
+        border-radius: 50% !important;
+        box-shadow: 0 0 20px rgba(135, 50, 118, 0.4) !important;
+        overflow: hidden !important;
+    }
+
+    .theme-blog-author-img svg {
+        display: none !important;
+        /* Hide original Zoho silhouette */
+    }
+
+    .theme-blog-author-cont {
+        background: rgba(255, 255, 255, 0.03) !important;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        padding: 40px !important;
+        border-radius: 30px !important;
+        margin: 80px auto 40px !important;
+        max-width: 750px !important;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .theme-blog-author-name {
+        color: #ffffff !important;
+        font-size: 1.4rem !important;
+        font-weight: 700 !important;
+    }
+
+    /* 3. LUXURY SOCIAL SHARING */
+    .zpsocial-share-container {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        margin: 40px 0 !important;
+    }
+
+    [class*="zpsocial-share-icon-"] {
+        width: 40px !important;
+        height: 40px !important;
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        filter: grayscale(1) invert(1) !important;
+        /* Forces white look */
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        cursor: pointer !important;
+    }
+
+    [class*="zpsocial-share-icon-"]:hover {
+        filter: grayscale(0) invert(0) !important;
+        background-color: #873276 !important;
+        border-color: #873276 !important;
+        transform: translateY(-8px) scale(1.15) !important;
+        box-shadow: 0 15px 30px rgba(135, 50, 118, 0.5) !important;
+    }
+
+    /* 4. COMMENTS SECTION (Deep Overhaul) */
+    .zpcomment-form-container,
+    #comments {
+        max-width: 750px !important;
+        margin: 0 auto !important;
+    }
+
+    .zpcomment-form-fields label {
+        color: rgba(255, 255, 255, 0.6) !important;
+        font-weight: 600 !important;
+        font-size: 0.85rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        margin: 25px 0 10px !important;
+        display: block !important;
+    }
+
+    .zpcomment-form-fields textarea,
+    .zpcomment-form-fields input {
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 15px !important;
+        color: #ffffff !important;
+        padding: 18px !important;
+        font-size: 1rem !important;
+        width: 100% !important;
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .zpcomment-form-fields textarea:focus,
+    .zpcomment-form-fields input:focus {
+        background: rgba(255, 255, 255, 0.08) !important;
+        border-color: #873276 !important;
+        box-shadow: 0 0 15px rgba(135, 50, 118, 0.2) !important;
+        outline: none !important;
+    }
+
+    /* Submit Button (Extreme Override) */
+    .zpcomment-form-button button.zpbutton.zpbutton-type-primary {
+        background-color: #873276 !important;
+        background-image: none !important;
+        color: #ffffff !important;
+        border: none !important;
+        padding: 15px 45px !important;
+        border-radius: 50px !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        height: auto !important;
+        transition: 0.4s !important;
+        box-shadow: 0 10px 25px rgba(135, 50, 118, 0.3) !important;
+        margin-top: 30px !important;
+    }
+
+    .zpcomment-form-button button.zpbutton.zpbutton-type-primary:hover {
+        background-color: #a0428d !important;
+        transform: translateY(-4px) !important;
+        box-shadow: 0 20px 40px rgba(135, 50, 118, 0.5) !important;
+    }
+
+    /* 5. FINISHING TOUCHES */
+    .zpblog-post-content,
+    .theme-blog-post-content-inner {
+        max-width: 750px !important;
+        margin: 0 auto !important;
+        font-size: 1.25rem !important;
+        line-height: 2 !important;
+    }
+
+    /* Reveal Animations */
+    @keyframes epReveal {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+            filter: blur(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+    }
+
+    p,
+    img,
+    .theme-blog-author-cont,
+    .zpcomment-form-container {
+        animation: epReveal 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+
+    /* Prevent horizontal scroll on mobile */
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+        position: relative;
+        scrollbar-width: thin;
+        scrollbar-color: #873276 #1e0a19;
+        background-color: #1e0a19 !important;
+    }
+
+    /* Discrete Cookie Icon (Compliance Loi 25) - HIDDEN COMPLETELY */
+    #zc-revise,
+    .zc-cookie-container,
+    .zc-popup-container {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* --- DESIGN PREMIUM DU PIED DE PAGE & FIX GLOBAL --- */
+
+    /* 1. Unification du fond noir */
+    footer,
+    .theme-footer-area,
+    div[data-footer-type="site_footer"],
+    section[data-element-id="elm_pm5M3NzwEfC4hzhJTdiGMQ"],
+    section[data-element-id="elm_JiWAcyGyfnaNFhmORs6NFQ"] {
+        background-color: #1e0a19 !important;
+        background-image: none !important;
+        color: #ffffff !important;
+        border: none !important;
+    }
+
+    /* 2. Forcer la visibilité des ombres sur tout le site */
+    section.theme-section,
+    .theme-content-area,
+    .theme-main-container {
+        overflow: visible !important;
+    }
+
+    /* 3. Cacher la vague et les séparateurs gadgets */
+    .zpshape-divider-top,
+    .zpshape-divider-bottom,
+    .theme-footer-divider {
+        display: none !important;
+    }
+
+    /* 4. Logos Himalaya & Multi-Prêts : Ecrins Glass Card */
+    section[data-element-id="elm_JiWAcyGyfnaNFhmORs6NFQ"] img {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 12px !important;
+        padding: 15px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* 5. Bouton "Rendez-vous" style Prune & Or */
+    .qxCTlb,
+    .theme-footer-area .zpbutton {
+        background: transparent !important;
+        color: #ffffff !important;
+        border: 2px solid #873276 !important;
+        border-radius: 50px !important;
+        padding: 10px 25px !important;
+        font-weight: 700 !important;
+    }
+
+    /* 6. HIDE REQUESTED LINKS (But protect our premium badges) */
+    a[href*="himalayaimmobilier" i]:not(.ep-footer-accred-badge),
+    a[href*="commercial" i]:not(.ep-footer-accred-badge),
+    [data-element-id="elm_JiWAcyGyfnaNFhmORs6NFQ"] {
+        display: none !important;
+    }
+
+    /* 7. Dropdown Menu Arrow Color Fix - AGGRESSIVE OVERRIDE */
+    /* Cible tous les SVG dans la navigation (chevrons, flèches, etc.) */
+    header svg,
+    nav svg,
+    .zpmenu svg,
+    .zpmenu-container svg,
+    .theme-header-wrapper svg,
+    .theme-nav svg,
+    [class*="menu"] svg,
+    [class*="nav"] svg,
+    [class*="header"] svg {
+        fill: #FFFFFF !important;
+        stroke: #FFFFFF !important;
+        color: #FFFFFF !important;
+    }
+
+    /* Cible les pseudo-éléments ::after utilisés comme flèches CSS */
+    .zpmenu li a::after,
+    .zpmenu li span::after,
+    [class*="submenu-indicator"]::after,
+    [class*="menu-arrow"]::after,
+    [class*="dropdown"]::after {
+        border-color: #FFFFFF transparent transparent transparent !important;
+        border-top-color: #FFFFFF !important;
+    }
+
+    /* Cible les paths SVG directement */
+    header path,
+    nav path,
+    .zpmenu path,
+    .zpmenu-container path,
+    [class*="menu"] path,
+    [class*="nav"] path {
+        fill: #FFFFFF !important;
+        stroke: #FFFFFF !important;
+    }
+
+    /* Forcer la couleur sur l'élément span/i indicateur */
+    [class*="indicator"],
+    [class*="caret"],
+    [class*="arrow"],
+    .zpmenu-indicator,
+    .zpsubmenu-indicator {
+        color: #FFFFFF !important;
+        border-color: #FFFFFF transparent transparent !important;
+    }
+</style>
+
+<script>
+    // SCRIPT DE NETTOYAGE ZOHO (Force la suppression des liens non désirés)
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+            // On exclue explicitement nos nouveaux badges de la suppression !
+            var links = document.querySelectorAll('a[href*="commercial" i]:not(.ep-footer-accred-badge), a[href*="himalaya" i]:not(.ep-footer-accred-badge)');
+            links.forEach(function (link) {
+                if (link.parentNode && link.parentNode.tagName === 'LI') {
+                    link.parentNode.remove(); // Enlève le LI au complet
+                } else {
+                    link.remove();
+                }
+            });
+            var elementToRemove = document.querySelector('[data-element-id="elm_JiWAcyGyfnaNFhmORs6NFQ"]');
+            if (elementToRemove) {
+                elementToRemove.remove();
+            }
+        }, 1000); // Délai de 1s au cas où Zoho charge le footer dynamiquement
+    });
+</script>
+
+<script>
+    // READING PROGRESS BAR INITIALIZATION
+    (function () {
+        // Create bar element
+        const bar = document.createElement('div');
+        bar.id = 'ep-reading-progress';
+        document.body.prepend(bar);
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            bar.style.width = scrolled + "%";
+        });
+    })();
+</script>
+
+
+<!-- Indique au téléphone que le thème est sombre (UI barre d'adresse) -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#1e0a19">
+<meta name="color-scheme" content="dark">
+
+<!-- Icons & Favicons -->
+<link rel="icon" type="image/png" href="https://www.evanpatruno.ca/files/logo.png">
+<link rel="apple-touch-icon" href="https://www.evanpatruno.ca/files/logo.png">
+<link rel="shortcut icon" href="https://www.evanpatruno.ca/files/logo.png">
+
+<!-- Primary Meta Tags -->
+<title id="dynamic-title">Evan Patruno | Courtier Immobilier (Rive-Sud & Estrie) & Hypothécaire (Tout le Québec)</title>
+<meta name="title" id="meta-title" content="Evan Patruno | Courtier Immobilier (Rive-Sud & Estrie) & Hypothécaire (Tout le Québec)">
+<meta name="description" id="meta-desc"
+    content="Services de courtage immobilier (Saint-Jean-sur-Richelieu, Rive-Sud, Estrie) et hypothécaire partout au Québec avec bureau à Laval. Expertise, meilleurs taux et accompagnement premium.">
+<meta name="keywords" id="meta-keywords"
+    content="courtier immobilier Saint-Jean-sur-Richelieu, courtier hypothécaire Laval, prêt hypothécaire Québec, courtage immobilier Rive-Sud, Estrie, Evan Patruno, achat maison Montréal">
+<meta name="author" content="Evan Patruno">
+
+<script>
+    /**
+     * MOTEUR SEO DYNAMIQUE V1.0
+     * Permet d'avoir des titres / descriptions uniques par page sans changer le header global
+     */
+    (function() {
+        const path = window.location.pathname.toLowerCase();
+        let title = "Evan Patruno | Courtier Immobilier (Rive-Sud) & Hypothécaire (Laval)";
+        let desc = "Expertise d'un courtier immobilier agréé et hypothécaire. Bureaux à Napierville et Laval. Accompagnement premium pour achat, vente et financement partout au Québec.";
+
+        const seoMap = {
+            "/acheter": {
+                t: "Acheter une Propriété sur la Rive-Sud | Accompagnement Pro | Evan Patruno",
+                d: "Trouvez votre maison idéale sur la Rive-Sud avec un expert. Accès aux exclusivités, analyse de marché et négociation stratégique."
+            },
+            "/vendre": {
+                t: "Vendre votre Maison au Meilleur Prix | Expertise Rive-Sud | Evan Patruno",
+                d: "Maximisez la valeur de votre propriété. Mise en marché premium, photos pros et visibilité maximale à Saint-Jean et sur la Rive-Sud."
+            },
+            "/refinancement": {
+                t: "Refinancement Hypothécaire | Optimisez votre Prêt | Evan Patruno",
+                d: "Libérez de l'équité ou réduisez vos mensualités. Profitez des meilleurs taux du marché grâce à un courtier hypothécaire expert."
+            },
+            "/laval": {
+                t: "Courtier Immobilier & Hypothécaire à Laval | Bureau Rive-Nord | Evan Patruno",
+                d: "Services d'expert à Laval. Que ce soit pour un condo au centre-ville ou une maison à Chomedey, profitez d'une double expertise immobilière et hypothécaire."
+            },
+            "/saint-jean-sur-richelieu": {
+                t: "Courtier Immobilier Saint-Jean-sur-Richelieu | Haut-Richelieu | Evan Patruno",
+                d: "Le spécialiste de Saint-Jean-sur-Richelieu. Vendre ou acheter dans le Haut-Richelieu avec un courtier local aux résultats prouvés."
+            },
+            "/napierville": {
+                t: "Votre Courtier Immobilier à Napierville | Ancrage Local | Evan Patruno",
+                d: "Basé au cœur des Jardins-de-Napierville, je connais chaque recoin de ce marché. Pour une transaction sécurisée et humaine."
+            },
+            "/montreal": {
+                t: "Immobilier Montréal : Stratégie & Performance | Evan Patruno",
+                d: "Naviguez le marché montréalais avec un avantage compétitif. Un service clé en main combinant courtage et financement rapide."
+            },
+            "/outils": {
+                t: "Calculatrices Hypothécaires & Outils Financiers | Evan Patruno",
+                d: "Calculez vos paiements, la taxe de bienvenue ou comparez louer vs acheter avec nos outils précis et conformes aux normes canadiennes."
+            },
+            "/faq": {
+                t: "Foire aux Questions Immobilier & Hypothèque | Evan Patruno",
+                d: "Réponses claires à vos questions sur l'achat, la vente et le financement immobilier au Québec."
+            }
+        };
+
+        // Détection intelligente (slug partiel possible)
+        for (const [key, val] of Object.entries(seoMap)) {
+            if (path.includes(key)) {
+                title = val.t;
+                desc = val.d;
+                break;
+            }
+        }
+
+        // Application des changements
+        document.title = title;
+        const metaTitle = document.getElementById('meta-title');
+        const metaDesc = document.getElementById('meta-desc');
+        if(metaTitle) metaTitle.setAttribute('content', title);
+        if(metaDesc) metaDesc.setAttribute('content', desc);
+        
+        // Update OpenGraph also
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if(ogTitle) ogTitle.setAttribute('content', title);
+        if(ogDesc) ogDesc.setAttribute('content', desc);
+    })();
+</script>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.evanpatruno.ca/">
+<meta property="og:title" content="Evan Patruno | Courtier Immobilier et Hypothécaire au Québec">
+<meta property="og:description"
+    content="Achetez, vendez ou financez votre propriété au Québec avec Evan Patruno. Expertise et passion à votre service.">
+<meta property="og:image" content="https://www.evanpatruno.ca/files/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.evanpatruno.ca/">
+<meta property="twitter:title" content="Evan Patruno | Courtier Immobilier et Hypothécaire au Québec">
+<meta property="twitter:description"
+    content="Achetez, vendez ou financez votre propriété au Québec avec Evan Patruno. Expertise et passion à votre service.">
+<meta property="twitter:image" content="https://www.evanpatruno.ca/files/logo.png">
+
+<!-- Canonical Tag -->
+<link rel="canonical" href="https://www.evanpatruno.ca/">
+
+<!-- ============================================== -->
+<!-- 🔍 DONNÉES STRUCTURÉES (SCHEMA.ORG) - SEO 🔍 -->
+<!-- ============================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://www.evanpatruno.ca/#organization",
+      "name": "Evan Patruno | Courtier Immobilier & Hypothécaire",
+      "url": "https://www.evanpatruno.ca/",
+      "logo": "https://www.evanpatruno.ca/files/logo.png",
+      "image": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=320,fit=crop,q=95/m6LDVxxBaLi757nM/evan_patruno-AwvD1J3wXni11116.jpg",
+      "description": "Services de courtage immobilier et hypothécaire expert au Québec. Spécialiste Rive-Sud, Saint-Jean-sur-Richelieu, Estrie et Laval.",
+      "telephone": "+15145673249",
+      "email": "info@evanpatruno.ca",
+      "priceRange": "$$$",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "220 Rue de l'Église",
+          "addressLocality": "Napierville",
+          "addressRegion": "QC",
+          "postalCode": "J0J 1L0",
+          "addressCountry": "CA"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "2988 boulevard Saint-Martin Ouest",
+          "addressLocality": "Laval",
+          "addressRegion": "QC",
+          "postalCode": "H7T 2S9",
+          "addressCountry": "CA"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+15145673249",
+        "contactType": "Sales",
+        "email": "info@evanpatruno.ca"
+      },
+      "sameAs": [
+        "https://www.facebook.com/evanpatrunocourtier",
+        "https://www.instagram.com/evanpatruno.immo",
+        "https://www.linkedin.com/in/evanpatruno",
+        "https://www.tiktok.com/@evan.patruno.immo"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://www.evanpatruno.ca/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Acheter",
+        "item": "https://www.evanpatruno.ca/acheter"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Vendre",
+        "item": "https://www.evanpatruno.ca/vendre"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Laval",
+        "item": "https://www.evanpatruno.ca/laval"
+      }]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.evanpatruno.ca/#person",
+      "name": "Evan Patruno",
+      "jobTitle": "Courtier Immobilier & Hypothécaire",
+      "worksFor": { "@id": "https://www.evanpatruno.ca/#organization" },
+      "sameAs": [
+        "https://www.facebook.com/evanpatrunocourtier",
+        "https://www.instagram.com/evanpatruno.immo",
+        "https://www.linkedin.com/in/evanpatruno",
+        "https://www.tiktok.com/@evan.patruno.immo"
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- ============================================== -->
+<!-- ⚙️ TRACKING & ANALYTICS (GA4 & META PIXEL) ⚙️ -->
+<!-- ============================================== -->
+
+<!-- Google tag (gtag.js) GA4 -->
+<!-- REMPLACEZ "G-XXXXXXXXXX" PAR VOTRE ID GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X76BD8B440"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-X76BD8B440');
+</script>
+
+<!-- Meta Pixel Code (EN ATTENTE DE ID)
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'VOTRE_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=VOTRE_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>
+End Meta Pixel Code -->

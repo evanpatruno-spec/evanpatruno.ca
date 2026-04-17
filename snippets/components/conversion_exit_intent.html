@@ -1,0 +1,402 @@
+<!-- 
+EXIT INTENT POPUP - LEAD GEN & ZOHO CRM INTEGRATION
+INSTRUCTIONS ZOHO SITES:
+1. Créez un formulaire Web-to-Lead dans Zoho CRM (Module Leads).
+2. Récupérez votre "xnQsjsdp" (Key) et "xmIwtLD" (Token) dans le code généré par Zoho.
+3. Remplacez les valeurs "VOTRE_KEY_ICI" et "VOTRE_TOKEN_ICI" ci-dessous (Lignes 215-220 environ).
+4. Copiez tout ce code dans un "Code Snippet" Header/Footer de votre site.
+-->
+
+<style>
+    /* Overlay flou */
+    .exit-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(135, 50, 118, 0.9);
+        backdrop-filter: blur(8px);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease;
+    }
+
+    .exit-overlay.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Modal Design */
+    .exit-modal {
+        background: #fff;
+        width: 90%;
+        max-width: 800px;
+        display: flex;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        transform: translateY(50px);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        min-height: 600px;
+        /* FIXED HEIGHT to prevent resizing */
+    }
+
+    .exit-overlay.visible .exit-modal {
+        transform: translateY(0);
+    }
+
+    /* Partie Gauche (Image) */
+    .exit-image {
+        flex: 1;
+        background: linear-gradient(135deg, #2b0b24, #873276), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+        background-size: cover;
+        background-blend-mode: overlay;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px;
+        color: white;
+    }
+
+    /* Partie Droite (Form) */
+    .exit-content {
+        flex: 1;
+        padding: 50px;
+        position: relative;
+    }
+
+    .exit-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #999;
+        transition: color 0.2s;
+    }
+
+    .exit-close:hover {
+        color: #e53935;
+    }
+
+    .exit-tag {
+        background: #873276;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .exit-title {
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        color: #2b0b24;
+        margin: 0 0 15px 0;
+        line-height: 1.2;
+    }
+
+    .exit-desc {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .exit-ul {
+        text-align: left;
+        margin-bottom: 25px;
+        padding-left: 20px;
+        color: #555;
+    }
+
+    .exit-ul li {
+        margin-bottom: 8px;
+    }
+
+    .exit-input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #eee;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+        /* Important fixes layout break */
+    }
+
+    .exit-input:focus {
+        border-color: #873276;
+        outline: none;
+    }
+
+    .exit-btn {
+        width: 100%;
+        padding: 16px;
+        background: #873276;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 15px rgba(135, 50, 118, 0.3);
+    }
+
+    .exit-btn:hover {
+        background: #2b0b24;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(43, 11, 36, 0.4);
+    }
+
+    .exit-note {
+        font-size: 0.8rem;
+        color: #999;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .exit-modal {
+            flex-direction: column;
+            width: 95%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .exit-image {
+            display: none;
+        }
+
+        /* Hide image on mobile to save space */
+        .exit-content {
+            padding: 30px;
+        }
+    }
+
+    /* Choice Selectors */
+    .exit-choice-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .exit-choice-btn {
+        flex: 1;
+        padding: 15px;
+        border: 2px solid #eee;
+        border-radius: 8px;
+        background: white;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s;
+    }
+
+    .exit-choice-btn:hover {
+        border-color: #873276;
+        background: #fdf5fa;
+    }
+
+    .exit-choice-btn.selected {
+        background: #873276;
+        color: white;
+        border-color: #873276;
+        box-shadow: 0 4px 10px rgba(135, 50, 118, 0.2);
+    }
+
+    .exit-choice-icon {
+        font-size: 1.5rem;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .exit-choice-title {
+        font-weight: 700;
+        display: block;
+    }
+</style>
+
+<div class="exit-overlay" id="exitPopup">
+    <div class="exit-modal">
+        <div class="exit-image">
+            <!-- Image Only - No Text as requested -->
+        </div>
+
+        <div class="exit-content">
+            <button class="exit-close" onclick="closeExitPopup()">×</button>
+
+            <span class="exit-tag">GRATUIT 2025</span>
+            <h2 class="exit-title" id="exitDynamicTitle">Le Guide Ultime</h2>
+            <p class="exit-desc" id="exitDynamicDesc">Sélectionnez votre projet pour recevoir le guide adapté à vos
+                besoins.</p>
+
+            <!-- SELECTION -->
+            <div class="exit-choice-container">
+                <div class="exit-choice-btn selected" onclick="selectGuide('Acheteur')">
+                    <span class="exit-choice-icon">🏠</span>
+                    <span class="exit-choice-title">J'achète</span>
+                </div>
+                <div class="exit-choice-btn" onclick="selectGuide('Vendeur')">
+                    <span class="exit-choice-icon">💰</span>
+                    <span class="exit-choice-title">Je vends</span>
+                </div>
+            </div>
+
+            <!-- Hidden Iframe to capture Zoho response without redirecting user -->
+            <iframe id="hiddenFrame" name="hiddenFrame" style="display:none;"></iframe>
+
+            <!-- ZOHO CRM FORM -->
+            <!-- Action URL for Zoho Web-to-Lead -->
+            <form id="exitForm" action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads445982000000289007 method='POST'
+                target='hiddenFrame' onsubmit='handleZohoSubmit(event)' accept-charset='UTF-8'>
+
+                <!-- REQUIRED HIDDEN FIELDS (REMPLACER CES VALEURS) -->
+                <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                <input type="hidden" name="zc_gad" id="zc_gad" value="">
+                <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                <input type="hidden" name="actionType" value="TGVhZHM=">
+                <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                <!-- URL de retour bidon, interceptée par iframe -->
+
+                <div id="exitFormFields">
+                    <!-- Name Fields -->
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" name="First Name" class="exit-input" placeholder="Prénom" required
+                            style="flex:1;">
+                        <input type="text" name="Last Name" class="exit-input" placeholder="Nom" required style="flex:1;">
+                    </div>
+
+                    <input type="email" name="Email" class="exit-input" placeholder="Votre meilleure adresse courriel"
+                        required>
+
+                    <!-- Optional: Add Lead Source -->
+                    <input type='text' style='display:none;' name='Lead Source' value='Exit Intent Popup'>
+
+                    <!-- HACK: Using "City" as the filter field because standard fields are tricky in Zoho Workflow -->
+                    <input type="hidden" id="guideSelectionInput" name="LEADCF7" value="EXIT_INTENT_ACHETEUR">
+
+                    <button type="submit" class="exit-btn" id="zohoBtn">Protéger mon achat (PDF Gratuit) ➔</button>
+                    <p class="exit-note">Promis, zéro spam. Désinscription en 1 clic.</p>
+                </div>
+            </form>
+
+            <div id="exitSuccess" style="display:none; text-align:center; padding: 40px 0; animation: fadeIn 0.5s ease;">
+                <div style="font-size: 4rem; margin-bottom: 20px;">📩</div>
+                <h3 style="color: #2b0b24; font-size: 1.8rem; margin-bottom: 10px; font-weight: 800;">Guide en route !</h3>
+                <p style="color: #666; font-size: 1.1rem;">Merci ! Votre guide exclusif est en cours d'envoi. Pensez à vérifier vos courriels indésirables.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Configuration
+    const PREF_KEY = 'evan_exit_popup_seen';
+    const DAYS_TO_WAIT = 7; // Ne pas réafficher avant X jours
+
+    function initExitIntent() {
+        // Check if seen recently
+        const lastSeen = localStorage.getItem(PREF_KEY);
+        if (lastSeen) {
+            const daysDiff = (new Date().getTime() - parseInt(lastSeen)) / (1000 * 3600 * 24);
+            if (daysDiff < DAYS_TO_WAIT) return;
+        }
+
+        // Desktop: Mouseout top
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0) {
+                showExitPopup();
+            }
+        });
+
+        // Mobile: Scroll up triggers (approximate logic since no mouseout)
+        // Simple fallback: Show after 30 seconds if not seen
+        setTimeout(() => {
+            // Optional: Uncomment for mobile aggressive strategy
+            // if(window.innerWidth < 768) showExitPopup(); 
+        }, 30000);
+    }
+
+    function showExitPopup() {
+        // Double check not already open
+        if (document.getElementById('exitPopup').classList.contains('visible')) return;
+
+        document.getElementById('exitPopup').classList.add('visible');
+        localStorage.setItem(PREF_KEY, new Date().getTime().toString());
+    }
+
+    function closeExitPopup() {
+        document.getElementById('exitPopup').classList.remove('visible');
+    }
+
+    // State
+    let currentGuide = 'Acheteur';
+
+    function selectGuide(type) {
+        currentGuide = type;
+
+        // Visual Update
+        const btns = document.querySelectorAll('.exit-choice-btn');
+        btns.forEach(b => b.classList.remove('selected'));
+
+        if (type === 'Acheteur') {
+            btns[0].classList.add('selected');
+            document.getElementById('exitDynamicTitle').innerText = "Le Guide de l'Acheteur";
+            document.getElementById('exitDynamicDesc').innerText = "Ma checklist de 10 étapes pour acheter sans surpayer et éviter les regrets.";
+            document.getElementById('guideSelectionInput').value = "EXIT_INTENT_ACHETEUR";
+            document.getElementById('zohoBtn').innerText = "Recevoir mon Guide Acheteur ➔";
+        } else {
+            btns[1].classList.add('selected');
+            document.getElementById('exitDynamicTitle').innerText = "Le Guide du Vendeur";
+            document.getElementById('exitDynamicDesc').innerText = "La méthode exacte pour vendre au prix record en moins de 30 jours.";
+            document.getElementById('guideSelectionInput').value = "EXIT_INTENT_VENDEUR";
+            document.getElementById('zohoBtn').innerText = "Recevoir mon Guide Vendeur ➔";
+        }
+    }
+
+    function handleZohoSubmit() {
+        // UI updates immediately for better UX
+        const btn = document.getElementById('zohoBtn');
+        const fields = document.getElementById('exitFormFields');
+        const success = document.getElementById('exitSuccess');
+        const tag = document.querySelector('.exit-tag');
+        const title = document.getElementById('exitDynamicTitle');
+        const desc = document.getElementById('exitDynamicDesc');
+        const choices = document.querySelector('.exit-choice-container');
+
+        btn.innerText = "Envoi en cours...";
+        btn.disabled = true;
+
+        // Assume succes after 1.5s (iframe loads silently)
+        setTimeout(() => {
+            if(tag) tag.style.display = 'none';
+            if(title) title.style.display = 'none';
+            if(desc) desc.style.display = 'none';
+            if(choices) choices.style.display = 'none';
+            if(fields) fields.style.display = 'none';
+            
+            if(success) success.style.display = 'block';
+
+            // Close after delay
+            setTimeout(closeExitPopup, 4000);
+        }, 1500);
+    }
+
+    // Run
+    // Delay init slightly to avoid triggering instantly on page load
+    setTimeout(initExitIntent, 2000);
+    // Init default state text
+    selectGuide('Acheteur');
+</script>

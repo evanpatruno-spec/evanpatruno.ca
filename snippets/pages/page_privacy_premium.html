@@ -1,0 +1,244 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    .privacy-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.7;
+        background: #1e0a19;
+        min-height: 100vh;
+        padding-bottom: 100px;
+    }
+
+    .privacy-lp * {
+        box-sizing: border-box;
+    }
+
+    .privacy-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    /* HERO SECTION */
+    .privacy-hero {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.97), rgba(135, 50, 118, 0.5)), url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 120px 20px 80px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 60px;
+    }
+
+    .privacy-hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        letter-spacing: -1.5px;
+        color: #ffffff;
+    }
+
+    .privacy-hero p {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* CARD CONTENT */
+    .privacy-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 30px;
+        padding: 60px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+    }
+
+    .privacy-section {
+        margin-bottom: 45px;
+    }
+
+    .privacy-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .privacy-section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #873276;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .privacy-section h2::after {
+        content: '';
+        height: 1px;
+        flex-grow: 1;
+        background: linear-gradient(90deg, rgba(135, 50, 118, 0.3), transparent);
+    }
+
+    .privacy-section h3 {
+        font-size: 1.1rem;
+        color: #ffffff;
+        margin: 25px 0 10px;
+        font-weight: 600;
+    }
+
+    .privacy-section p,
+    .privacy-section ul {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.05rem;
+        font-weight: 300;
+    }
+
+    .privacy-section ul {
+        padding-left: 20px;
+        margin-top: 15px;
+    }
+
+    .privacy-section li {
+        margin-bottom: 10px;
+    }
+
+    .privacy-accent-box {
+        background: rgba(135, 50, 118, 0.1);
+        border-left: 4px solid #873276;
+        padding: 25px;
+        border-radius: 0 15px 15px 0;
+        margin: 30px 0;
+    }
+
+    .privacy-accent-box p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #ffffff;
+    }
+
+    .privacy-footer-info {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .privacy-hero {
+            padding: 80px 20px 60px;
+        }
+
+        .privacy-hero h1 {
+            font-size: 2.2rem;
+        }
+
+        .privacy-card {
+            padding: 35px 25px;
+            border-radius: 20px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.3rem;
+        }
+    }
+</style>
+
+<div class="privacy-lp">
+    <header class="privacy-hero">
+        <div class="privacy-container">
+            <h1>Politique de confidentialité</h1>
+            <p>Dernière mise à jour : 10 avril 2026</p>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <div class="privacy-card">
+
+            <section class="privacy-section">
+                <h2>1. Introduction</h2>
+                <p>Devant le développement des nouveaux outils de communication, il est nécessaire de porter une
+                    attention particulière à la protection de la vie privée. C’est pourquoi nous nous engageons à
+                    respecter la confidentialité des renseignements personnels que nous collectons.</p>
+            </section>
+
+            <section class="privacy-section">
+                <h2>2. Collecte des renseignements personnels</h2>
+                <p>Nous collectons les renseignements personnels suivants via nos formulaires de contact et notre
+                    interactivité :</p>
+                <ul>
+                    <li>Nom et Prénom</li>
+                    <li>Adresse postale et Code postal</li>
+                    <li>Adresse électronique</li>
+                    <li>Numéro de téléphone</li>
+                </ul>
+            </section>
+
+            <section class="privacy-section">
+                <h2>3. Fichiers journaux et témoins (Cookies)</h2>
+                <p>Nous recueillons certaines informations par le biais de fichiers journaux (log files) et de fichiers
+                    témoins (cookies). Il s'agit principalement des informations suivantes :</p>
+                <ul>
+                    <li>Adresse IP</li>
+                    <li>Système d'exploitation</li>
+                    <li>Pages visitées et requêtes</li>
+                    <li>Heure et jour de connexion</li>
+                </ul>
+                <p>Le recours à de tels fichiers nous permet d'améliorer notre service, de personnaliser votre accueil,
+                    de créer des profils personnalisés de consommation et de produire des statistiques de fréquentation.
+                </p>
+            </section>
+
+            <section class="privacy-section">
+                <h2>4. Services Tiers</h2>
+                <p>Certaines fonctionnalités de notre site utilisent des services fournis par des tiers (Google,
+                    Facebook, YouTube, Instagram). Ces services peuvent utiliser des témoins pour :</p>
+                <ul>
+                    <li><strong>Google Analytics :</strong> Analyser le trafic du site à des fins d'optimisation.</li>
+                    <li><strong>Google Adsense :</strong> Mesurer la performance des campagnes publicitaires.</li>
+                    <li><strong>Facebook & Instagram :</strong> Mesurer l'efficacité des publicités et proposer du
+                        contenu ciblé (Pixel Facebook).</li>
+                    <li><strong>YouTube :</strong> Suivre la navigation et l'utilisation des vidéos intégrées.</li>
+                </ul>
+            </section>
+
+            <section class="privacy-section">
+                <h2>5. Sécurité</h2>
+                <p>Les renseignements personnels que nous collectons sont conservés dans un environnement sécurisé. Pour
+                    assurer la sécurité de vos renseignements personnels, nous avons recours aux mesures suivantes :</p>
+                <ul>
+                    <li>Protocole SSL (Secure Sockets Layer)</li>
+                    <li>Gestion des accès - personne autorisée et concernée</li>
+                    <li>Sauvegarde informatique</li>
+                    <li>Identifiant / Mot de passe</li>
+                    <li>Pare-feu (Firewalls)</li>
+                </ul>
+            </section>
+
+            <section class="privacy-section">
+                <h2>6. Droit d'opposition et de retrait</h2>
+                <p>Nous nous engageons à vous offrir un droit d'opposition et de retrait quant à vos renseignements
+                    personnels. Le droit d'opposition s'entend comme étant la possibilité offerte aux internautes de
+                    refuser que leurs renseignements personnels soient utilisés à certaines fins mentionnées lors de la
+                    collecte.</p>
+            </section>
+
+            <section class="privacy-section">
+                <h2>7. Législation</h2>
+                <p>Nous nous engageons à respecter les dispositions législatives énoncées dans les lois canadiennes et
+                    québécoises sur la protection des renseignements personnels.</p>
+                <div class="privacy-accent-box">
+                    <p><strong>Responsable de la protection des renseignements personnels :</strong><br>
+                        Evan Patruno (info@evanpatruno.ca)</p>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="privacy-footer-info">
+            <p>Pour toute demande concernant vos données, veuillez nous contacter à <a href="mailto:info@evanpatruno.ca"
+                    style="color: #873276; text-decoration: none; font-weight: 600;">info@evanpatruno.ca</a>.</p>
+        </div>
+    </main>
+</div>

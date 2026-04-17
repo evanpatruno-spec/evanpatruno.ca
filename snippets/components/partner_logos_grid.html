@@ -1,0 +1,65 @@
+<!-- 
+Grille Partenaires (Effet Survol)
+INSTRUCTIONS:
+1. Ajouter un Code Snippet.
+2. Remplacer les src="..." par les URLs de vos logos (ou uploadez les dans Zoho et récupérez l'URL).
+-->
+<style>
+    .partners-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 20px;
+        background: #f9f9f9;
+    }
+
+    .partner-logo {
+        flex: 0 1 150px;
+        /* Largeur de base */
+        text-align: center;
+        filter: grayscale(100%);
+        opacity: 0.6;
+        transition: all 0.4s ease;
+        cursor: pointer;
+    }
+
+    .partner-logo img {
+        max-width: 100%;
+        height: auto;
+        max-height: 80px;
+        /* Hauteur max uniforme */
+        object-fit: contain;
+    }
+
+    /* Effet au survol */
+    .partner-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="partners-grid">
+    <!-- Partenaire 1 (Exemple Desjardins) -->
+    <a href="#" class="partner-logo" title="Desjardins">
+        <!-- Utilisez des images placeholders ou vos propres liens -->
+        <img src="https://via.placeholder.com/150x80/cccccc/333333?text=Logo+Desjardins" alt="Logo Desjardins">
+    </a>
+
+    <!-- Partenaire 2 (Exemple Banque Nationale) -->
+    <a href="#" class="partner-logo" title="BNC">
+        <img src="https://via.placeholder.com/150x80/cccccc/333333?text=Logo+BNC" alt="Logo BNC">
+    </a>
+
+    <!-- Partenaire 3 (Exemple SCHL) -->
+    <a href="#" class="partner-logo" title="SCHL">
+        <img src="https://via.placeholder.com/150x80/cccccc/333333?text=Logo+SCHL" alt="Logo SCHL">
+    </a>
+
+    <!-- Partenaire 4 -->
+    <a href="#" class="partner-logo" title="Autre">
+        <img src="https://via.placeholder.com/150x80/cccccc/333333?text=Partenaire+4" alt="Partenaire">
+    </a>
+</div>

@@ -1,0 +1,335 @@
+<!-- 
+PROPERTY ALERT FORM - OFF-MARKET
+INSTRUCTIONS:
+1. Remplacez "VOTRE_KEY_ZOHO_ICI" et "VOTRE_TOKEN_ZOHO_ICI" par vos clés Zoho (les mêmes que pour le popup).
+2. Copiez ce code dans une section de votre site (ex: Page Acheteur ou une nouvelle page Alerte).
+-->
+
+<style>
+    .alert-section {
+        padding: 80px 20px;
+        background: #1e0a19;
+        /* Brand Dark */
+        color: white;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .alert-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+    }
+
+    /* Left Side: Copy */
+    .alert-info {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .alert-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .alert-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        font-weight: 800; /* Bolder */
+    }
+
+    .alert-desc {
+        color: rgba(255, 255, 255, 0.9); /* Higher contrast */
+        line-height: 1.6;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+    }
+
+    .alert-benefits {
+        list-style: none;
+        padding: 0;
+    }
+
+    .alert-benefits li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .alert-benefits li svg {
+        width: 20px;
+        fill: #38a169; /* Emerald Green (Subtle) */
+    }
+
+    /* Right Side: Form */
+    .alert-form-card {
+        flex: 1.2;
+        min-width: 320px;
+        background: #2b0b24; /* Changed to Brand Dark Card for consistency */
+        padding: 40px;
+        border-radius: 24px;
+        color: white;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 5px;
+    }
+
+    .form-group.full-width {
+        grid-column: 1 / -1;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        margin-left: 2px;
+        color: rgba(255, 255, 255, 1); /* Max contrast for mobile */
+    }
+
+    .form-input,
+    .form-select {
+        width: 100%;
+        padding: 14px 16px;
+        background: white;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+        color: #1e0a19;
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+        border-color: #873276;
+        outline: none;
+    }
+
+    .alert-btn {
+        width: 100%;
+        padding: 18px;
+        background: #873276;
+        color: white;
+        border: none;
+        border-radius: 50px; /* Fully rounded buttons */
+        font-size: 1.1rem;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .alert-btn:hover {
+        background: #6a275d;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(135, 50, 118, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .alert-section { padding: 60px 20px; }
+        .alert-info { text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .alert-title { font-size: 2.2rem; }
+        .alert-desc { margin-bottom: 25px; }
+        .alert-benefits { text-align: left; width: fit-content; margin: 0 auto 30px; }
+        .alert-container { flex-direction: column; gap: 30px; }
+        .alert-form-card { padding: 30px 20px; width: 100%; min-width: 0; }
+        .form-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SUCCESS MESSAGE STYLE */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<div class="alert-section">
+    <div class="alert-container">
+
+        <!-- TEXTE -->
+        <div class="alert-info">
+            <span class="alert-badge">💎 Accès Prioritaire</span>
+            <h2 class="alert-title">Ne manquez plus la maison de vos rêves.</h2>
+            <p class="alert-desc">Les meilleures opportunités partent souvent avant d'arriver sur Centris.
+                Inscrivez-vous pour recevoir mes alertes privées matchant vos critères.</p>
+
+            <ul class="alert-benefits">
+                <li>
+                    <svg viewBox="0 0 20 20">
+                        <path
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                        </path>
+                    </svg>
+                    <span>Propriétés Off-Market</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 20 20">
+                        <path
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                        </path>
+                    </svg>
+                    <span>Alertes en temps réel</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 20 20">
+                        <path
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
+                        </path>
+                    </svg>
+                    <span>Analyses de valeur incluses</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <div class="alert-form-card">
+
+            <!-- Hidden Iframe -->
+            <iframe id="alertHiddenFrame" name="alertHiddenFrame" style="display:none;"></iframe>
+
+            <!-- ZOHO FORM -->
+            <form id="alertForm" action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads445982000000289007 method='POST'
+                target='alertHiddenFrame' onsubmit='prepareAlertSubmit(event)' accept-charset='UTF-8'>
+
+                <!-- ZOHO HIDDEN KEYS -->
+                <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                <input type="hidden" name="zc_gad" id="zc_gad" value="">
+                <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                <input type="hidden" name="actionType" value="TGVhZHM=">
+                <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                <input type="hidden" name="LEADCF7" value="ALERTE_PROPRIETE">
+
+                <!-- THE SECRET SAUCE: All criteria go here -->
+                <input type="hidden" name="Description" id="zohoDescriptionField">
+
+                <div class="form-grid">
+                    <!-- Contact Info -->
+                    <div class="form-group">
+                        <label class="form-label">Prénom</label>
+                        <input type="text" name="First Name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Nom</label>
+                        <input type="text" name="Last Name" class="form-input" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="Email" class="form-input" required>
+                    </div>
+
+                    <!-- Search Criteria (Not sent to Zoho directly, but merged into Description via JS) -->
+                    <div class="form-group">
+                        <label class="form-label">Type de propriété</label>
+                        <select class="form-select alert-criteria" data-label="Type">
+                            <option value="Condo">Condo</option>
+                            <option value="Maison Unifamiliale">Maison Unifamiliale</option>
+                            <option value="Plex (Investissement)">Plex (2-5 logements)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Budget Max</label>
+                        <select class="form-select alert-criteria" data-label="Budget">
+                            <option value="300k - 400k">300k - 400k</option>
+                            <option value="400k - 500k">400k - 500k</option>
+                            <option value="500k - 700k">500k - 700k</option>
+                            <option value="700k - 900k">700k - 900k</option>
+                            <option value="1M +">1M +</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label">Secteurs recherchés</label>
+                        <input type="text" class="form-input alert-criteria" data-label="Secteurs"
+                            placeholder="Ex: Plateau, Rosemont, Villeray...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Chambres min.</label>
+                        <select class="form-select alert-criteria" data-label="Chambres">
+                            <option value="1+">1+</option>
+                            <option value="2+">2+</option>
+                            <option value="3+">3+</option>
+                            <option value="4+">4+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Échéance</label>
+                        <select class="form-select alert-criteria" data-label="Échéance">
+                            <option value="Immédiat">Immédiatement</option>
+                            <option value="3 mois">Dans 1-3 mois</option>
+                            <option value="6 mois+">Printemps/Été prochain</option>
+                            <option value="Exploratoire">Je regarde juste</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="alert-btn" id="alertSubmitBtn">Activer mon alerte 🔔</button>
+
+            </form>
+
+            <div id="alertSuccess" style="display:none; text-align:center; padding:20px; animation: fadeIn 0.4s ease;">
+                <div style="font-size: 3.5rem; margin-bottom: 25px;">✅</div>
+                <h3 style="color:white; margin-bottom:15px; font-weight:800; font-size:1.8rem;">Alerte Activée !</h3>
+                <p style="color:rgba(255, 255, 255, 0.8); font-size:1.1rem; line-height:1.6;">Merci ! Votre alerte a été configurée avec succès. Vous recevrez les propriétés correspondant à vos critères dès qu'elles seront disponibles.</p>
+            </div>
+            <p style="font-size: 0.8rem; color:#999; text-align:center; margin-top:15px;">Désinscription possible à tout
+                moment.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function prepareAlertSubmit(event) {
+        // 1. Gather all "alert-criteria" inputs
+        const criteriaInputs = document.querySelectorAll('.alert-criteria');
+        let descriptionString = "📝 CRITÈRES RECHERCHE (Formulaire Alerte):\n";
+
+        criteriaInputs.forEach(input => {
+            const label = input.getAttribute('data-label');
+            const value = input.value;
+            descriptionString += `- ${label}: ${value}\n`;
+        });
+
+        // 2. Add timestamp
+        descriptionString += `\n📅 Soumis le: ${new Date().toLocaleDateString()} à ${new Date().toLocaleTimeString()}`;
+
+        // 3. Inject into the hidden Zoho Description field
+        document.getElementById('zohoDescriptionField').value = descriptionString;
+
+        // 4. UI Feedback
+        const btn = document.getElementById('alertSubmitBtn');
+        const form = document.getElementById('alertForm');
+        const success = document.getElementById('alertSuccess');
+
+        btn.innerText = "Activation en cours...";
+        btn.style.opacity = "0.7";
+        btn.disabled = true;
+
+        setTimeout(() => {
+            form.style.display = 'none';
+            success.style.display = 'block';
+        }, 1500);
+    }
+</script>

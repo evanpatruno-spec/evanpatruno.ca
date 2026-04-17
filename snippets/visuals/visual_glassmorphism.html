@@ -1,0 +1,35 @@
+<!-- 
+Effet Glassmorphism (Verre Givré)
+INSTRUCTIONS:
+1. Ajouter ce code dans un Code Snippet (Footer).
+2. Pour l'utiliser, ajoutez la classe CSS "glass-card" à n'importe quel conteneur (Div, Colonne) dans Zoho.
+   Ou utilisez le code HTML d'exemple ci-dessous dans un snippet HTML.
+-->
+
+<style>
+    .glass-card {
+        background: rgba(255, 255, 255, 0.25);
+        /* Blanc semi-transparent */
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        /* Ombre douce colorée */
+        backdrop-filter: blur(10px);
+        /* Le flou magique (Safari/Chrome) */
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 20px;
+    }
+
+    /* Version sombre si votre site est foncé */
+    .glass-card.dark {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+</style>
+
+<!-- EXEMPLE (À copier si vous voulez créer une carte ici) -->
+<div class="glass-card" style="max-width: 300px; margin: 20px auto;">
+    <h3>Titre "Glass"</h3>
+    <p>Ceci est un exemple de l'effet de verre givré. Il prend la couleur de l'image d'arrière-plan.</p>
+</div>

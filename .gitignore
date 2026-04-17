@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+
+# Project specifics
+*.log
+bin_id.txt
+news_bin_id.txt
+newsletter_bin_id.txt
+news.json
+properties.json
+boc_rates.json
+newsletter_ready.json
+zoho_snippet.html

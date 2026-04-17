@@ -1,0 +1,94 @@
+<!-- 
+INSTRUCTIONS D'INSTALLATION (ZOHO SITES):
+1.  Ajoutez un élément "Code Snippet" (ou "Embed") dans votre section Hero.
+2.  Collez ce code.
+3.  Assurez-vous que la couleur du texte correspond à votre thème.
+-->
+
+<style>
+/* Style du conteneur de l'animation */
+.hero-typewriter-container {
+    font-family: 'Montserrat', sans-serif; /* Assurez-vous que cette police est chargée ou utilisez la vôtre */
+    font-size: 2.5rem; /* Ajustez la taille selon vos besoins */
+    font-weight: 700;
+    color: #ffffff; /* Couleur du texte (blanc par défaut pour fond sombre) */
+    text-align: center;
+    min-height: 1.2em; /* Réserve l'espace pour éviter le saut de page */
+}
+
+/* Le curseur clignotant */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #873276; /* Couleur du curseur (rouge accent) */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Responsivité mobile */
+@media (max-width: 768px) {
+    .hero-typewriter-container {
+        font-size: 1.5rem;
+    }
+}
+</style>
+
+<div class="hero-typewriter-container">
+    <span id="typewriter-text"></span><span class="cursor">&nbsp;</span>
+</div>
+
+<script>
+(function() {
+    const textElement = document.getElementById('typewriter-text');
+    // MODIFIEZ VOS PHRASES ICI
+    const phrases = [
+        "Un service immobilier humain.",
+        "Proche de vos besoins.",
+        "Plus qu'un courtier, un partenaire.",
+        "Evan Patruno."
+    ];
+    
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100; // Vitesse de frappe (ms)
+
+    function type() {
+        const currentPhrase = phrases[phraseIndex];
+        
+        if (isDeleting) {
+            textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50; // Plus rapide quand on efface
+        } else {
+            textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 100; // Vitesse normale de frappe
+        }
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            // Fin de la phrase, pause avant d'effacer
+            isDeleting = true;
+            typeSpeed = 2000; 
+        } else if (isDeleting && charIndex === 0) {
+            // Fin de l'effacement, passage à la phrase suivante
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    // Démarrer l'animation
+    document.addEventListener('DOMContentLoaded', type);
+    // Fallback si DOMContentLoaded est déjà passé (fréquent avec les embeds)
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        type();
+    }
+})();
+</script>

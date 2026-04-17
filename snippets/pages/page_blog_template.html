@@ -1,0 +1,321 @@
+<!-- 
+MODELE ARTICLE DE BLOG PREMIUM
+INSTRUCTIONS:
+1. Créez une nouvelle page pour votre article.
+2. Ajoutez un "Code Snippet".
+3. Copiez-collez ce code.
+4. Remplacez le TITRE, l'IMAGE et le TEXTE.
+-->
+
+<style>
+    /* BLOG SPECIFIC STYLES */
+    .blog-post-wrapper {
+        font-family: 'Inter', sans-serif;
+        color: #333;
+        line-height: 1.8;
+        background: #fdfdfd;
+    }
+
+    .blog-post-wrapper * {
+        box-sizing: border-box;
+    }
+
+    /* 1. IMMERSIVE HERO */
+    .blog-hero {
+        position: relative;
+        height: 60vh;
+        min-height: 400px;
+        background: linear-gradient(to bottom, rgba(30, 10, 25, 0.3), rgba(30, 10, 25, 0.9)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 60px;
+        color: white;
+    }
+
+    .blog-hero-content {
+        max-width: 900px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .blog-category {
+        display: inline-block;
+        background: #873276;
+        color: white;
+        padding: 6px 14px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .blog-title {
+        font-size: 3rem;
+        line-height: 1.2;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .blog-meta {
+        font-size: 1rem;
+        opacity: 0.9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .blog-author-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid white;
+    }
+
+    /* 2. CONTENT COLUMN */
+    .blog-content {
+        max-width: 740px;
+        /* Optimal reading width */
+        margin: -40px auto 60px;
+        /* Overlap effect */
+        background: white;
+        padding: 60px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        position: relative;
+        z-index: 10;
+        font-size: 1.15rem;
+        /* Larger font for readability */
+    }
+
+    .blog-content h2 {
+        color: #2b0b24;
+        font-size: 2rem;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        border-left: 5px solid #873276;
+        padding-left: 20px;
+    }
+
+    .blog-content h3 {
+        color: #4a2c40;
+        font-size: 1.5rem;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+
+    .blog-content p {
+        margin-bottom: 25px;
+        color: #4a4a4a;
+    }
+
+    .blog-content ul,
+    .blog-content ol {
+        margin-bottom: 30px;
+        padding-left: 20px;
+    }
+
+    .blog-content li {
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .blog-content blockquote {
+        background: #f9f4f8;
+        border-left: 5px solid #873276;
+        margin: 40px 0;
+        padding: 30px;
+        font-style: italic;
+        font-size: 1.25rem;
+        color: #555;
+        border-radius: 0 10px 10px 0;
+    }
+
+    /* 3. IN-ARTICLE CTA (LEAD MAGNET) */
+    .blog-cta-break {
+        background: #1e0a19;
+        color: white;
+        padding: 40px;
+        border-radius: 15px;
+        margin: 50px -40px;
+        /* Break out of column slightly */
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .blog-cta-break::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(135, 50, 118, 0.2), transparent);
+        pointer-events: none;
+    }
+
+    .blog-cta-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .blog-cta-btn {
+        display: inline-block;
+        background: #873276;
+        color: white;
+        text-decoration: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 700;
+        margin-top: 15px;
+        transition: transform 0.2s;
+    }
+
+    .blog-cta-btn:hover {
+        transform: translateY(-3px);
+        background: #a94295;
+    }
+
+    /* 4. AUTHOR BOX */
+    .author-box {
+        margin-top: 80px;
+        padding-top: 40px;
+        border-top: 1px solid #eee;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .author-big-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .author-info h4 {
+        margin: 0 0 5px 0;
+        font-size: 1.3rem;
+        color: #2b0b24;
+    }
+
+    .author-bio {
+        font-size: 0.95rem;
+        color: #666;
+        margin: 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .blog-hero {
+            height: 50vh;
+        }
+
+        .blog-title {
+            font-size: 2rem;
+        }
+
+        .blog-content {
+            padding: 30px 20px;
+            margin-top: -20px;
+            width: 95%;
+        }
+
+        .blog-cta-break {
+            margin: 30px -10px;
+            padding: 30px 20px;
+        }
+
+        .author-box {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
+
+<div class="blog-post-wrapper">
+
+    <!-- HERO IMAGE (Remplacer l'URL) -->
+    <header class="blog-hero">
+        <div class="blog-hero-content">
+            <span class="blog-category">Guide Acheteur</span>
+            <h1 class="blog-title">Comment Gagner en Offres Multiples sans Payer Trop Cher ?</h1>
+            <div class="blog-meta">
+                <!-- Remplacer par votre photo -->
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=320,fit=crop,q=95/m6LDVxxBaLi757nM/evan_patruno-AwvD1J3wXni11116.jpg"
+                    class="blog-author-img" alt="Evan Patruno">
+                <span>Par <strong>Evan Patruno</strong> &bull; 5 min de lecture</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE CONTENT -->
+    <article class="blog-content">
+
+        <p class="lead">Le marché immobilier est féroce. Vous avez trouvé la maison parfaite, mais 5 autres personnes
+            aussi. Voici comment vous démarquer sans vider votre compte en banque.</p>
+
+        <hr style="border:0; height:1px; background:#eee; margin:30px 0;">
+
+        <h2>1. La préparation est votre meilleure arme</h2>
+        <p>Arriver en visite sans pré-approbation, c'est comme aller à la guerre avec un pistolet à eau. Les vendeurs
+            veulent de la certitude.</p>
+
+        <blockquote>
+            "Une offre d'achat n'est pas juste un prix. C'est une promesse de capacité à payer."
+        </blockquote>
+
+        <p>Assurez-vous que votre dossier est blindé avant même de franchir la porte.</p>
+
+        <!-- CTA BREAK (Optionnel: à placer où vous voulez) -->
+        <div class="blog-cta-break">
+            <h3 class="blog-cta-title">Besoin d'aide pour votre stratégie ?</h3>
+            <p>Téléchargez mon guide complet qui détaille les 7 étapes d'un achat réussi.</p>
+            <a href="/guide-acheteur" class="blog-cta-btn">Télécharger le Guide Gratuit 👇</a>
+        </div>
+
+        <h2>2. Comprendre la motivation du vendeur</h2>
+        <p>Le prix est important, mais ce n'est pas tout. Parfois, le vendeur veut une occupation rapide. Parfois, il a
+            besoin de 3 mois pour trouver sa prochaine maison.</p>
+
+        <h3>Posez les bonnes questions</h3>
+        <ul>
+            <li>Pourquoi vendent-ils ?</li>
+            <li>Ont-ils déjà acheté ailleurs ?</li>
+            <li>Quelle est leur date idéale de déménagement ?</li>
+        </ul>
+
+        <h2>3. L'importance du Courtier</h2>
+        <p>C'est là que j'interviens. Mon travail est de créer un lien avec le courtier inscripteur pour "sentir" ce
+            qu'il faut pour gagner, souvent sans être l'offre la plus haute en termes de prix, mais la plus "solide".
+        </p>
+
+        <!-- AUTHOR BOX -->
+        <div class="author-box">
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=320,fit=crop,q=95/m6LDVxxBaLi757nM/evan_patruno-AwvD1J3wXni11116.jpg"
+                class="author-big-img" alt="Evan P.">
+            <div class="author-info">
+                <h4>Écrit par Evan Patruno</h4>
+                <p class="author-bio">Courtier immobilier passionné par la stratégie et l'investissement. J'aide mes
+                    clients à bâtir leur patrimoine, une transaction à la fois.</p>
+                <div style="margin-top:10px;">
+                    <a href="/contact" style="color:#873276; font-weight:700; text-decoration:none;">Me contacter
+                        &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+</div>

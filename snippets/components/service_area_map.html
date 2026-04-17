@@ -1,0 +1,59 @@
+<!-- 
+Carte Zone Desservie (Leaflet - Sans API Key Google)
+INSTRUCTIONS:
+1. Ajouter un Code Snippet.
+2. La carte centre sur Montréal par défaut avec un cercle de rayon.
+-->
+<!-- Charger CSS Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<style>
+    .map-container {
+        height: 400px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        /* S'assurer qu'il reste sous les menus */
+    }
+</style>
+
+<div id="serviceMap" class="map-container"></div>
+
+<!-- Charger JS Leaflet -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Coordonnées approximatives Mtl (Centre)
+        const lat = 45.5017;
+        const lng = -73.5673;
+        const radiusKm = 20; // Rayon en KM
+
+        // Init Map
+        const map = L.map('serviceMap').setView([lat, lng], 10);
+
+        // Tuiles OpenStreetMap (Gratuit)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Cercle de zone
+        L.circle([lat, lng], {
+            color: '#e53935',       // Bordure Rouge
+            fillColor: '#e53935',   // Remplissage
+            fillOpacity: 0.2,       // Transparence
+            radius: radiusKm * 1000 // Leaflet utilise des mètres
+        }).addTo(map);
+
+        // Marqueur Central
+        L.marker([lat, lng]).addTo(map)
+            .bindPopup('<b>Evan Patruno</b><br>Zone de service principale.')
+            .openPopup();
+
+        // Désactiver le zoom molette pour ne pas gêner le scroll de page
+        map.scrollWheelZoom.disable();
+    });
+</script>

@@ -1,0 +1,114 @@
+<!-- 
+Slider Avant/Après (Comparaison)
+INSTRUCTIONS:
+1. Ajouter Code Snippet.
+2. Remplacer URL image 1 (Avant) et image 2 (Après).
+-->
+<style>
+    .ba-slider {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        height: 400px;
+        /* Ajuster selon ratio image */
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .ba-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .ba-before {
+        width: 50%;
+        /* Init at 50% */
+        border-right: 3px solid white;
+        z-index: 2;
+    }
+
+    .ba-resizer {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: ew-resize;
+        /* Curseur flèche */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        /* Le slider input invisible par dessus pour gérer le drag */
+    }
+
+    input.ba-range {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: ew-resize;
+        z-index: 10;
+        margin: 0;
+    }
+
+    .ba-label {
+        position: absolute;
+        top: 10px;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 0.8em;
+        z-index: 4;
+        pointer-events: none;
+    }
+
+    .label-before {
+        left: 10px;
+    }
+
+    .label-after {
+        right: 10px;
+    }
+</style>
+
+<div class="ba-slider" id="baContainer">
+    <!-- Image APRÈS (Fond) -->
+    <img src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=APRES+Home+Staging" class="ba-img">
+    <span class="ba-label label-after">Après</span>
+
+    <!-- Image AVANT (Dessus, clippée) -->
+    <div class="ba-img ba-before" id="baOverlay">
+        <img src="https://via.placeholder.com/600x400/95a5a6/333333?text=AVANT"
+            style="width: 600px; height: 100%; object-fit:cover;"> <!-- Width doit être fixe ou match container -->
+    </div>
+    <span class="ba-label label-before">Avant</span>
+
+    <!-- Input Slider Invisible -->
+    <input type="range" class="ba-range" min="0" max="100" value="50" oninput="updateSlider(this.value)">
+
+    <!-- Poignée visuelle -->
+    <div class="ba-resizer" id="baHandle">
+        &#8596;
+    </div>
+</div>
+
+<script>
+    function updateSlider(val) {
+        document.getElementById('baOverlay').style.width = val + "%";
+        document.getElementById('baHandle').style.left = val + "%";
+    }
+</script>
