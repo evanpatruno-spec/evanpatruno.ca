@@ -108,8 +108,12 @@ def fetch_boc_data():
         return {}
 
 def select_top_news(news_list, count=3):
-    """Sélectionne les 3 articles les plus pertinents et tente de trouver une astuce."""
-    keywords = ["taux", "hypothèque", "prix", "médian", "prévision", "marché", "inflation", "cmhc", "schl", "banque", "immobilier", "maison", "condo", "vendre", "achat"]
+    """Sélectionne les 3 articles les plus pertinents avec un système de poids."""
+    # Priorité absolue (+5)
+    high_priority = ["immobilier", "hypothèque", "hypothécaire", "prêt", "refinancement"]
+    # Priorité standard (+2)
+    standard_priority = ["taux", "prix", "médian", "prévision", "marché", "inflation", "cmhc", "schl", "banque", "maison", "condo", "vendre", "achat"]
+    
     tip_keywords = ["astuce", "conseil", "comment", "guide", "truc", "étape"]
     
     scored_news = []
@@ -119,12 +123,13 @@ def select_top_news(news_list, count=3):
         score = 0
         text = (item.get('title', '') + " " + item.get('description', '')).lower()
         
-        # Scoring général
-        for kw in keywords:
-            if kw in text:
-                score += 1
+        # Scoring Pondéré
+        for kw in high_priority:
+            if kw in text: score += 5
+        for kw in standard_priority:
+            if kw in text: score += 2
         
-        # Détection d'astuce (Seulement si l'article est pertinent à l'immobilier / hypothèque)
+        # Détection d'astuce
         if score > 0:
             for tkw in tip_keywords:
                 if tkw in text and not found_tip:
@@ -132,13 +137,13 @@ def select_top_news(news_list, count=3):
                     if cleaned:
                         found_tip = f"{item.get('title')} : {cleaned}"
         
-        # Priorité aux nouvelles locales
+        # Bonus Local
         if item.get('category') == 'local':
             score += 2
             
         scored_news.append((score, item))
     
-    # Trier par score décroissant et garantir 3 articles
+    # Tri par score décroissant
     scored_news.sort(key=lambda x: x[0], reverse=True)
     selected = [x[1] for x in scored_news[:count]]
     

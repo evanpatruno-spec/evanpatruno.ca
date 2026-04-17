@@ -84,21 +84,34 @@ def fetch_feed_news(source_name, url):
             link = item["link"]
             desc = item["description"]
             
-            full_text = (title + " " + desc).lower()
+            # Nettoyage CDATA, HTML et Entités
+            def ultra_clean(text):
+                if not text: return ""
+                # Supprimer HTML et CDATA
+                text = re.sub('<[^<]+?>', '', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', text))
+                # Unescape HTML entities
+                text = html.unescape(text)
+                # Supprimer les caractères corrompus (ASCII non-imprimable et bruits de décodage)
+                text = text.encode('utf-8', 'ignore').decode('utf-8')
+                return text.strip()
+
+            clean_title = ultra_clean(title)
+            clean_desc = ultra_clean(desc)
+            # Correction spécifique pour les noms de sources connus pour avoir des problèmes
+            clean_source = ultra_clean(source_name).replace('', 'é').replace('%', '')
+            if "Devoir" in clean_source: clean_source = "Le Devoir - Économie"
+            if "Radio-Canada" in clean_source: clean_source = "Radio-Canada - Économie"
+
+            full_text = (clean_title + " " + clean_desc).lower()
             matched_cities = []
             for city in CITIES:
                 if city in full_text:
                     matched_cities.append(city.replace('montréal', 'montreal').replace('st-jean', 'saint-jean'))
 
-            # Nettoyage CDATA, HTML et Entités (ex: &#8217; -> ')
-            clean_title = html.unescape(re.sub('<[^<]+?>', '', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', title))).strip()
-            clean_desc = html.unescape(re.sub('<[^<]+?>', '', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', desc))).strip()
-
-            # ON GARDE TOUT, on ne filtre plus par ville pour éviter les newsletters vides
             articles.append({
                 "title": clean_title,
                 "link": link.strip(),
-                "source": source_name,
+                "source": clean_source,
                 "description": clean_desc,
                 "cities": list(set(matched_cities)),
                 "category": "local" if matched_cities else "general"
