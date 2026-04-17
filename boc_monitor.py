@@ -8,7 +8,7 @@ BIN_ID = "694462e7d0ea881f4032d140" # We can use the same bin under a different 
 # Let's use a dedicated key 'boc_data' inside the same bin to keep it simple, 
 # or a separate Bin. For safety, let's use a separate Bin for the info hub.
 BOC_BIN_ID = "69db9753856a682189265c0b"
-MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C"
+MASTER_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
 
 def get_boc_rates():
     """Fetches the latest overnight rate from Bank of Canada Valet API."""

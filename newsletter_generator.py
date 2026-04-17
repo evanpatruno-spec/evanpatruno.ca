@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 
 # CONFIGURATION
-API_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C"
+API_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
 NEWS_BIN_ID = "661adbced0ea881f4082269a"
 BOC_BIN_ID = "69db9753856a682189265c0b"
 BIN_ID_FILE = "newsletter_bin_id.txt"

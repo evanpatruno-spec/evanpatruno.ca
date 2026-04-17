@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
         
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -21,16 +23,20 @@ jobs:
           
       - name: Install Dependencies
         run: |
-          pip install requests
+          pip install -r requirements.txt
           
-      - name: Run Scraper
-        run: python scraper.py
+      - name: Run All Scrapers & Generators
+        env:
+          JSONBIN_API_KEY: ${{ secrets.JSONBIN_API_KEY }}
+        run: |
+          python scraper.py
+          python news_scraper.py
+          python boc_monitor.py
+          python newsletter_generator.py
 
-      - name: Run News Scraper
-        run: python news_scraper.py
-
-      - name: Run BOC Monitor
-        run: python boc_monitor.py
-
-      - name: Run Newsletter Generator
-        run: python newsletter_generator.py
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "evan.patruno@gmail.com"
+          git config --local user.name "evanpatruno-spec"
+          git add news.json properties.json boc_rates.json newsletter_ready.json bin_id.txt news_bin_id.txt newsletter_bin_id.txt zoho_snippet.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Automated data update [skip ci]" && git push)

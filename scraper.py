@@ -26,7 +26,7 @@ URLS = [
     "https://www.himalayacorp.com/fr/proprietes.html"
 ]
 
-API_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C"
+API_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
 HARDCODED_BIN_ID = "694462e7d0ea881f4032d140"
 BIN_ID_FILE = "bin_id.txt"
 
