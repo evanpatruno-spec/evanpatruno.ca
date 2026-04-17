@@ -167,9 +167,8 @@ def generate_newsletter_json(force_zoho=False):
         "expert_note": "Le marché s'équilibre. C'est le moment idéal pour réévaluer vos capacités de financement avant la prochaine vague immobilière.",
         "footer_msg": "Besoin d'une évaluation précise de votre propriété ?",
         "quick_links": [
-            {"label": "Calculatrice Hypothécaire", "url": "https://www.evanpatruno.ca/tools-hub#mortgage"},
-            {"label": "Taxe de Bienvenue", "url": "https://www.evanpatruno.ca/tools-hub#welcome-tax"},
-            {"label": "Capacité d'Achat", "url": "https://www.evanpatruno.ca/tools-hub#affordability"}
+            {"label": "Calculatrice Hypothécaire", "url": "https://www.evanpatruno.ca/outils"},
+            {"label": "Évaluation Gratuite", "url": "https://www.evanpatruno.ca/vendre"}
         ]
     }
     
