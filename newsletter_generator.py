@@ -3,6 +3,7 @@ import requests
 import json
 import os
 import re
+import html
 from datetime import datetime
 
 # CONFIGURATION
