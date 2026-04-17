@@ -31,6 +31,25 @@ EXPERT_FALLBACKS = [
     }
 ]
 
+CITATIONS = [
+    "L'immobilier ne peut pas être perdu ou volé, ni emporté. Géré avec soin, il s'agit de l'investissement le plus sûr au monde. – Franklin Roosevelt",
+    "L'investissement dans la connaissance paye le plus gros intérêt. Investissez sur vous-même ! – Benjamin Franklin",
+    "Quelqu'un est assis à l'ombre aujourd'hui parce que quelqu'un a planté un arbre il y a longtemps. – Warren Buffett",
+    "90% des millionnaires le sont devenus grâce à l'investissement immobilier. – Andrew Carnegie",
+    "Achetez des terres. Ils n'en fabriquent plus. – Mark Twain",
+    "Le succès ne s'offre qu'à ceux qui osent essayer. – Charlie Chaplin",
+    "Les intérêts composés sont la 8e merveille du monde. Celui qui les comprend les gagne. – Albert Einstein"
+]
+
+PRO_TIPS = [
+    "Vérifiez votre certificat de localisation : un certificat de plus de 10 ans est souvent refusé par les notaires lors d'une vente.",
+    "RAP : Vous pouvez utiliser vos REER jusqu'à 60 000 $ pour l'achat de votre première propriété, sans impôt.",
+    "Taux fixe vs variable : Le taux variable offre souvent une pénalité de sortie plus basse (3 mois d'intérêts) en cas de vente imprévue.",
+    "Inspection : Une inspection pré-achat n'est pas une dépense, c'est une protection contre les vices cachés majeurs.",
+    "Préchauffage : Faites toujours pré-approuver votre hypothèque avant de visiter pour renforcer votre pouvoir de négociation.",
+    "Améliorations : La cuisine et la salle de bain restent les pièces offrant le meilleur retour sur investissement lors d'une vente."
+]
+
 def fetch_latest_news():
     print("Récupération des dernières nouvelles...")
     headers = {'X-Master-Key': API_KEY}
@@ -59,16 +78,26 @@ def fetch_boc_data():
         return {}
 
 def select_top_news(news_list, count=3):
-    """Sélectionne les 3 articles les plus pertinents, avec des critères plus larges."""
+    """Sélectionne les 3 articles les plus pertinents et tente de trouver une astuce."""
     keywords = ["taux", "hypothèque", "prix", "médian", "prévision", "marché", "inflation", "cmhc", "schl", "banque", "immobilier", "maison", "condo", "vendre", "achat"]
+    tip_keywords = ["astuce", "conseil", "comment", "guide", "truc", "étape"]
     
     scored_news = []
+    found_tip = None
+    
     for item in news_list:
         score = 0
         text = (item.get('title', '') + " " + item.get('description', '')).lower()
+        
+        # Scoring général
         for kw in keywords:
             if kw in text:
                 score += 1
+        
+        # Détection d'astuce
+        for tkw in tip_keywords:
+            if tkw in text and not found_tip:
+                found_tip = f"{item.get('title')} : {item.get('description')[:200]}..."
         
         # Priorité aux nouvelles locales
         if item.get('category') == 'local':
@@ -85,14 +114,19 @@ def select_top_news(news_list, count=3):
         needed = count - len(selected)
         selected.extend(EXPERT_FALLBACKS[:needed])
         
-    return selected
+    return selected, found_tip
 
-def generate_newsletter_json():
+def generate_newsletter_json(force_zoho=False):
+    import random
     all_news = fetch_latest_news()
     boc = fetch_boc_data()
-    top_news = select_top_news(all_news)
+    top_news, detected_tip = select_top_news(all_news)
     
-    # Date du mois (ex: Avril 2026)
+    # Sélection Citation & Astuce
+    daily_quote = random.choice(CITATIONS)
+    pro_tip = detected_tip if detected_tip else random.choice(PRO_TIPS)
+    
+    # Date du mois
     months_fr = {
         "1": "Janvier", "2": "Février", "3": "Mars", "4": "Avril",
         "5": "Mai", "6": "Juin", "7": "Juillet", "8": "Août",
@@ -117,8 +151,10 @@ def generate_newsletter_json():
                 "source": item.get('source', 'Source inconnue')
             } for item in top_news
         ],
+        "daily_quote": daily_quote,
+        "pro_tip": pro_tip,
         "expert_note": "Le marché s'équilibre. C'est le moment idéal pour réévaluer vos capacités de financement avant la prochaine vague immobilière.",
-        "footer_msg": "Besoin d'une évaluation précise de votre propriété ? Répondez simplement à ce courriel.",
+        "footer_msg": "Besoin d'une évaluation précise de votre propriété ? Réponddez simplement à ce courriel.",
         "quick_links": [
             {"label": "Calculatrice Hypothécaire", "url": "https://www.evanpatruno.ca/tools-hub#mortgage"},
             {"label": "Taxe de Bienvenue", "url": "https://www.evanpatruno.ca/tools-hub#welcome-tax"},
@@ -130,11 +166,30 @@ def generate_newsletter_json():
     with open('newsletter_ready.json', 'w', encoding='utf-8') as f:
         json.dump(newsletter_data, f, indent=2, ensure_ascii=False)
     
-    # Upload au cloud pour accès par Zoho
+    # Upload au cloud
     bin_id = update_jsonbin(newsletter_data)
-    
-    print(f"Newsletter JSON générée et poussée sur le Cloud ! Bin ID: {bin_id}")
+    print(f"Newsletter JSON générée sur le Cloud ! Bin ID: {bin_id}")
+
+    # TRIGGER ZOHO (Seulement le 1er du mois ou si forcé)
+    if now.day == 1 or force_zoho:
+        trigger_zoho_webhook(newsletter_data)
+        
     return newsletter_data
+
+def trigger_zoho_webhook(data):
+    webhook_url = os.getenv("ZOHO_WEBHOOK_URL")
+    if not webhook_url:
+        print("[Attention] ZOHO_WEBHOOK_URL non configuré. Notification Zoho annulée.")
+        return
+        
+    print("Envoi du signal de validation au Zoho CRM...")
+    try:
+        # Zoho attend souvent les données dans un champ 'data'
+        payload = {"data": json.dumps(data)}
+        requests.post(webhook_url, params=payload)
+        print("Signal envoyé ! Vérifiez vos brouillons dans Zoho.")
+    except Exception as e:
+        print(f"Erreur Webhook Zoho: {e}")
 
 def update_jsonbin(data):
     headers = {
