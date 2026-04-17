@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 import requests
 import json
 import os
+import re
 from datetime import datetime
 
 # CONFIGURATION

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import requests
 import xml.etree.ElementTree as ET
 import json
@@ -18,8 +19,7 @@ FEEDS = [
     {"name": "Les Affaires - Immobilier", "url": "https://www.lesaffaires.com/flux-rss/immobilier/48"},
     {"name": "La Presse - Affaires", "url": "https://www.lapresse.ca/affaires/rss"},
     {"name": "Le Devoir - Économie", "url": "https://www.ledevoir.com/rss/section/economie.xml"},
-    {"name": "Radio-Canada - Économie", "url": "https://ici.radio-canada.ca/rss/economie"},
-    {"name": "MonImmeuble.com", "url": "https://www.monimmeuble.com/feed"}
+    {"name": "Radio-Canada - Économie", "url": "https://ici.radio-canada.ca/rss/economie"}
 ]
 
 CITIES = ["laval", "montréal", "montreal", "chambly", "napierville", "saint-jean", "st-jean", "rive-nord", "rive-sud"]
@@ -52,8 +52,11 @@ def fetch_feed_news(source_name, url):
             'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
         }
         response = requests.get(url, headers=headers, timeout=15)
-        # Forcer l'encodage UTF-8 pour éviter les caractères corrompus
-        response.encoding = 'utf-8'
+        
+        # Détection intelligente de l'encodage source
+        response.encoding = response.apparent_encoding
+        content = response.text
+        
         if response.status_code != 200:
             print(f"  [Erreur] Code {response.status_code} pour {source_name}")
             return []
