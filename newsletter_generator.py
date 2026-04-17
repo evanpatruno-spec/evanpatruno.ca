@@ -150,17 +150,26 @@ def select_top_news(news_list, count=3):
     return selected, found_tip
 
 def fetch_unified_data():
-    """Récupère les nouvelles et le taux BOC depuis la même boîte Cloud."""
+    """Récupère les nouvelles et le taux BOC depuis la même boîte Cloud ou locale."""
     headers = {'X-Master-Key': API_KEY}
     try:
+        # TEST LOCAL PRIORITAIRE
+        if os.path.exists('news.json'):
+            with open('news.json', 'r', encoding='utf-8') as f:
+                record = json.load(f)
+                if isinstance(record, list): # Ancien format (News uniquement)
+                    return {"news": record, "boc_rate": "2.25%"}
+                return record # Nouveau format (Dictionnaire complet)
+                
+        # FALLBACK CLOUD
         url = f"https://api.jsonbin.io/v3/b/{NEWS_BIN_ID}/latest"
         res = requests.get(url, headers=headers)
         record = res.json().get('record', {})
-        if isinstance(record, list): # Ancien format (juste une liste de news)
+        if isinstance(record, list):
             return {"news": record, "boc_rate": "2.25%"}
         return record
     except Exception as e:
-        print(f"Erreur Lecture Cloud : {e}")
+        print(f"Erreur Lecture Données : {e}")
         return {"news": [], "boc_rate": "2.25%"}
 
 def generate_newsletter_json(force_zoho=False):
