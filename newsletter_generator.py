@@ -94,10 +94,11 @@ def select_top_news(news_list, count=3):
             if kw in text:
                 score += 1
         
-        # Détection d'astuce
-        for tkw in tip_keywords:
-            if tkw in text and not found_tip:
-                found_tip = f"{item.get('title')} : {item.get('description')[:500]}..."
+        # Détection d'astuce (Seulement si l'article est pertinent à l'immobilier / hypothèque)
+        if score > 0:
+            for tkw in tip_keywords:
+                if tkw in text and not found_tip:
+                    found_tip = f"{item.get('title')} : {item.get('description')[:500]}..."
         
         # Priorité aux nouvelles locales
         if item.get('category') == 'local':

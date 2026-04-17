@@ -17,7 +17,6 @@ FEEDS = [
     {"name": "Les Affaires - Immobilier", "url": "https://www.lesaffaires.com/flux-rss/immobilier/48"},
     {"name": "La Presse - Affaires", "url": "https://www.lapresse.ca/affaires/rss"},
     {"name": "Le Devoir - Économie", "url": "https://www.ledevoir.com/rss/section/economie.xml"},
-    {"name": "Journal de Montréal - Argent", "url": "https://www.journaldemontreal.com/argent/rss.xml"},
     {"name": "Radio-Canada - Économie", "url": "https://ici.radio-canada.ca/rss/economie"},
     {"name": "MonImmeuble.com", "url": "https://www.monimmeuble.com/feed"}
 ]
