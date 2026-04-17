@@ -41,13 +41,40 @@ CITATIONS = [
     "Les intérêts composés sont la 8e merveille du monde. Celui qui les comprend les gagne. – Albert Einstein"
 ]
 
+def clean_pro_tip(title, description):
+    # Supprimer les mentions RSS communes
+    garbage = ["est apparu en premier sur", "Lire la suite", "Mon Immeuble", "Centris", "APCIQ", "Le Devoir", "La Presse"]
+    text = description
+    
+    # Supprimer la répétition du titre au début si présent
+    if text.startswith(title):
+        text = text[len(title):].lstrip(" :")
+    
+    # Nettoyage par phrases
+    sentences = re.split(r'(?<=[.!?]) +', text)
+    clean_sentences = []
+    for s in sentences:
+        if not any(g in s for g in garbage) and len(s) > 10:
+            clean_sentences.append(s)
+            
+    # On ne garde que les 2 premières phrases du conseil
+    result = " ".join(clean_sentences[:2]).strip()
+    return result if len(result) > 40 else ""
+
+# BANQUE DES 12 ASTUCES D'OR (Une par mois / Haute Qualité)
 PRO_TIPS = [
-    "Vérifiez votre certificat de localisation : un certificat de plus de 10 ans est souvent refusé par les notaires lors d'une vente.",
-    "RAP : Vous pouvez utiliser vos REER jusqu'à 60 000 $ pour l'achat de votre première propriété, sans impôt.",
-    "Taux fixe vs variable : Le taux variable offre souvent une pénalité de sortie plus basse (3 mois d'intérêts) en cas de vente imprévue.",
-    "Inspection : Une inspection pré-achat n'est pas une dépense, c'est une protection contre les vices cachés majeurs.",
-    "Préchauffage : Faites toujours pré-approuver votre hypothèque avant de visiter pour renforcer votre pouvoir de négociation.",
-    "Améliorations : La cuisine et la salle de bain restent les pièces offrant le meilleur retour sur investissement lors d'une vente."
+    "Optimisation Fiscale : Les intérêts sur un prêt pour investissement locatif sont généralement déductibles d'impôts. Consultez votre comptable pour maximiser ce levier.",
+    "Taux Fixe vs Variable : Dans un marché instable, le taux variable offre souvent plus de flexibilité pour refinancer sans pénalités majeures si les taux chutent.",
+    "Inspection Préachat : Ne négligez jamais l'état de la fondation. Une fissure mineure peut cacher un problème structurel coûteux. Soyez vigilant !",
+    "Capacité d'Achat : Le stress test est votre meilleur ami. Calculez votre budget avec un taux majoré de 2% pour assurer votre sécurité financière à long terme.",
+    "Rénovations Payantes : La cuisine et la salle de bain offrent le meilleur retour sur investissement lors de la revente. Priorisez ces pièces.",
+    "Copropriété : Lisez les procès-verbaux des 3 dernières années pour repérer d'éventuelles cotisations spéciales ou travaux majeurs à venir.",
+    "Assurance Hypothécaire : Comparez l'assurance de la banque avec une assurance vie individuelle. Vous pourriez économiser des milliers de dollars.",
+    "Mise de Fond : Le RAP (Régime d'accession à la propriété) permet d'utiliser vos REER sans impôt pour votre premier achat. Un levier puissant.",
+    "Multi-Logements : Le ratio de couverture de la dette est la clé. Assurez-vous que les revenus couvrent au moins 1.2x les dépenses et l'hypothèque.",
+    "Négociation : Le prix n'est pas tout. Les conditions de clôture ou l'inclusion de certains électroménagers peuvent peser lourd dans la balance.",
+    "Évaluation Foncière : Elle diffère souvent du prix du marché. Ne l'utilisez pas comme seule base pour fixer votre prix de vente ou d'achat.",
+    "Crédit d'Impôt : N'oubliez pas le crédit d'impôt pour l'achat d'une première habitation (CIAPH) qui peut vous redonner jusqu'à 1500$ au fédéral et provincial."
 ]
 
 def fetch_latest_news():
@@ -98,8 +125,9 @@ def select_top_news(news_list, count=3):
         if score > 0:
             for tkw in tip_keywords:
                 if tkw in text and not found_tip:
-                    # On garde l'astuce complète (sans coupure) pour que ce soit lisible
-                    found_tip = f"{item.get('title')} : {item.get('description')}"
+                    cleaned = clean_pro_tip(item.get('title', ''), item.get('description', ''))
+                    if cleaned:
+                        found_tip = f"{item.get('title')} : {cleaned}"
         
         # Priorité aux nouvelles locales
         if item.get('category') == 'local':
@@ -191,11 +219,24 @@ def generate_newsletter_json(force_zoho=False):
     bin_id = update_jsonbin(newsletter_data)
     print(f"Newsletter JSON générée sur le Cloud ! Bin ID: {bin_id}")
 
+    import html
+    # Nettoyage final de sécurité
+    def deep_clean(obj):
+        if isinstance(obj, str):
+            return html.unescape(obj).strip()
+        elif isinstance(obj, dict):
+            return {k: deep_clean(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [deep_clean(i) for i in obj]
+        return obj
+
+    final_data = deep_clean(newsletter_data)
+    
     # TRIGGER ZOHO (Seulement le 1er du mois ou si forcé)
     if now.day == 1 or force_zoho:
-        trigger_zoho_webhook(newsletter_data)
+        trigger_zoho_webhook(final_data)
         
-    return newsletter_data
+    return final_data
 
 def trigger_zoho_webhook(data):
     webhook_url = os.getenv("ZOHO_WEBHOOK_URL")
@@ -205,11 +246,18 @@ def trigger_zoho_webhook(data):
         
     print("Envoi du signal de validation au Zoho CRM...")
     try:
-        # On envoie le JSON brut dans le corps de la requête (méthode la plus robuste)
-        requests.post(webhook_url, json=data)
-        print("Signal envoyé ! Vérifiez vos brouillons dans Zoho.")
+        # On envoie le JSON brut dans le corps de la requête
+        response = requests.post(webhook_url, json=data, timeout=25)
+        
+        print(f"Statut Zoho : {response.status_code}")
+        if response.status_code == 200:
+            print("Signal envoyé avec succès !")
+        else:
+            print(f"Erreur de Zoho : {response.status_code}")
+            print(f"Détail : {response.text}")
+            
     except Exception as e:
-        print(f"Erreur Webhook Zoho: {e}")
+        print(f"Erreur Webhook Zoho : {e}")
 
 def update_jsonbin(data):
     headers = {

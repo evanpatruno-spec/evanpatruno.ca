@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import json
 import re
 import os
+import html
 
 # CONFIGURATION
 API_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
@@ -51,6 +52,8 @@ def fetch_feed_news(source_name, url):
             'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
         }
         response = requests.get(url, headers=headers, timeout=15)
+        # Forcer l'encodage UTF-8 pour éviter les caractères corrompus
+        response.encoding = 'utf-8'
         if response.status_code != 200:
             print(f"  [Erreur] Code {response.status_code} pour {source_name}")
             return []
@@ -83,12 +86,16 @@ def fetch_feed_news(source_name, url):
                 if city in full_text:
                     matched_cities.append(city.replace('montréal', 'montreal').replace('st-jean', 'saint-jean'))
 
+            # Nettoyage CDATA, HTML et Entités (ex: &#8217; -> ')
+            clean_title = html.unescape(re.sub('<[^<]+?>', '', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', title))).strip()
+            clean_desc = html.unescape(re.sub('<[^<]+?>', '', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', desc))).strip()
+
             # ON GARDE TOUT, on ne filtre plus par ville pour éviter les newsletters vides
             articles.append({
-                "title": re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', title).strip(),
+                "title": clean_title,
                 "link": link.strip(),
                 "source": source_name,
-                "description": re.sub('<[^<]+?>', '', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', desc)).strip(),
+                "description": clean_desc,
                 "cities": list(set(matched_cities)),
                 "category": "local" if matched_cities else "general"
             })
