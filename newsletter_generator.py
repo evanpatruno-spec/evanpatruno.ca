@@ -106,7 +106,7 @@ def select_top_news(news_list, count=3):
             
         scored_news.append((score, item))
     
-    # Trier par score décroissant
+    # Trier par score décroissant et garantir 3 articles
     scored_news.sort(key=lambda x: x[0], reverse=True)
     selected = [x[1] for x in scored_news[:count]]
     
@@ -123,6 +123,12 @@ def generate_newsletter_json(force_zoho=False):
     boc = fetch_boc_data()
     top_news, detected_tip = select_top_news(all_news)
     
+    # Liens personnalisés
+    booking_url = "https://calendar.app.google/a37T5exmNpFfBZ6SA" 
+    facebook_url = "https://www.facebook.com/evanpatrunocourtier/"
+    instagram_url = "https://www.instagram.com/evanpatruno.immo/?hl=fr"
+    linkedin_url = "https://www.linkedin.com/in/evan-patruno/"
+
     # Sélection Citation & Astuce
     daily_quote = random.choice(CITATIONS)
     pro_tip = detected_tip if detected_tip else random.choice(PRO_TIPS)
@@ -144,6 +150,10 @@ def generate_newsletter_json(force_zoho=False):
         "boc_rate": f"{boc.get('rate', '--')}%",
         "boc_status": boc.get('status', 'maintenu'),
         "boc_next": boc.get('next_announcement', 'À venir'),
+        "booking_url": booking_url,
+        "facebook_url": facebook_url,
+        "instagram_url": instagram_url,
+        "linkedin_url": linkedin_url,
         "top_articles": [
             {
                 "title": item.get('title', 'Titre non disponible'),
@@ -155,7 +165,7 @@ def generate_newsletter_json(force_zoho=False):
         "daily_quote": daily_quote,
         "pro_tip": pro_tip,
         "expert_note": "Le marché s'équilibre. C'est le moment idéal pour réévaluer vos capacités de financement avant la prochaine vague immobilière.",
-        "footer_msg": "Besoin d'une évaluation précise de votre propriété ? Réponddez simplement à ce courriel.",
+        "footer_msg": "Besoin d'une évaluation précise de votre propriété ?",
         "quick_links": [
             {"label": "Calculatrice Hypothécaire", "url": "https://www.evanpatruno.ca/tools-hub#mortgage"},
             {"label": "Taxe de Bienvenue", "url": "https://www.evanpatruno.ca/tools-hub#welcome-tax"},
