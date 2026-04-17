@@ -13,7 +13,13 @@ HARDCODED_NEWS_BIN_ID = "661adbced0ea881f4082269a" # Place holder bin or I'll cr
 
 FEEDS = [
     {"name": "Blogue Centris", "url": "https://www.centris.ca/fr/blogue/rss"},
-    {"name": "APCIQ", "url": "https://apciq.ca/fr/nouvelles/feed/"}
+    {"name": "APCIQ", "url": "https://apciq.ca/fr/nouvelles/feed/"},
+    {"name": "Les Affaires - Immobilier", "url": "https://www.lesaffaires.com/flux-rss/immobilier/48"},
+    {"name": "La Presse - Affaires", "url": "https://www.lapresse.ca/affaires/rss"},
+    {"name": "Le Devoir - Économie", "url": "https://www.ledevoir.com/rss/section/economie.xml"},
+    {"name": "Journal de Montréal - Argent", "url": "https://www.journaldemontreal.com/argent/rss.xml"},
+    {"name": "Radio-Canada - Économie", "url": "https://ici.radio-canada.ca/rss/economie"},
+    {"name": "MonImmeuble.com", "url": "https://www.monimmeuble.com/feed"}
 ]
 
 CITIES = ["laval", "montréal", "montreal", "chambly", "napierville", "saint-jean", "st-jean", "rive-nord", "rive-sud"]

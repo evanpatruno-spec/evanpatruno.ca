@@ -35,6 +35,11 @@ def fetch_latest_news():
     print("Récupération des dernières nouvelles...")
     headers = {'X-Master-Key': API_KEY}
     try:
+        # TEST LOCAL FIRST FOR SPEED/DEBUG
+        if os.path.exists('news.json'):
+            with open('news.json', 'r', encoding='utf-8') as f:
+                return json.load(f)
+                
         url = f"https://api.jsonbin.io/v3/b/{NEWS_BIN_ID}/latest"
         res = requests.get(url, headers=headers)
         return res.json().get('record', [])
@@ -54,8 +59,8 @@ def fetch_boc_data():
         return {}
 
 def select_top_news(news_list, count=3):
-    """Sélectionne les 3 articles les plus pertinents, prioritisant le local."""
-    keywords = ["taux", "hypothèque", "prix", "médian", "prévision", "marché", "inflation", "cmhc", "schl", "banque"]
+    """Sélectionne les 3 articles les plus pertinents, avec des critères plus larges."""
+    keywords = ["taux", "hypothèque", "prix", "médian", "prévision", "marché", "inflation", "cmhc", "schl", "banque", "immobilier", "maison", "condo", "vendre", "achat"]
     
     scored_news = []
     for item in news_list:
