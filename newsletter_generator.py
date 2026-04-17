@@ -98,7 +98,8 @@ def select_top_news(news_list, count=3):
         if score > 0:
             for tkw in tip_keywords:
                 if tkw in text and not found_tip:
-                    found_tip = f"{item.get('title')} : {item.get('description')[:500]}..."
+                    # On garde l'astuce complète (sans coupure) pour que ce soit lisible
+                    found_tip = f"{item.get('title')} : {item.get('description')}"
         
         # Priorité aux nouvelles locales
         if item.get('category') == 'local':
@@ -161,7 +162,6 @@ def generate_newsletter_json(force_zoho=False):
         "boc_next": boc.get('next_announcement', 'À venir'),
         "market_temp": market_temp,
         "booking_url": booking_url,
-        "video_url": "https://www.instagram.com/evanpatruno.immo/reels/",
         "facebook_url": facebook_url,
         "instagram_url": instagram_url,
         "linkedin_url": linkedin_url,
