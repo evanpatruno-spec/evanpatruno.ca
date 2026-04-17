@@ -184,9 +184,8 @@ def trigger_zoho_webhook(data):
         
     print("Envoi du signal de validation au Zoho CRM...")
     try:
-        # Zoho attend souvent les données dans un champ 'data'
-        payload = {"data": json.dumps(data)}
-        requests.post(webhook_url, data=payload)
+        # On envoie le JSON brut dans le corps de la requête (méthode la plus robuste)
+        requests.post(webhook_url, json=data)
         print("Signal envoyé ! Vérifiez vos brouillons dans Zoho.")
     except Exception as e:
         print(f"Erreur Webhook Zoho: {e}")
