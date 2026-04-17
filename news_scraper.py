@@ -88,7 +88,7 @@ def fetch_feed_news(source_name, url):
                 "title": re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', title).strip(),
                 "link": link.strip(),
                 "source": source_name,
-                "description": re.sub('<[^<]+?>', '', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', desc))[:1000].strip() + "...",
+                "description": re.sub('<[^<]+?>', '', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', desc)).strip(),
                 "cities": list(set(matched_cities)),
                 "category": "local" if matched_cities else "general"
             })
