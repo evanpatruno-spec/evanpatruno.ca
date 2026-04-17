@@ -97,7 +97,7 @@ def select_top_news(news_list, count=3):
         # Détection d'astuce
         for tkw in tip_keywords:
             if tkw in text and not found_tip:
-                found_tip = f"{item.get('title')} : {item.get('description')[:200]}..."
+                found_tip = f"{item.get('title')} : {item.get('description')[:500]}..."
         
         # Priorité aux nouvelles locales
         if item.get('category') == 'local':
@@ -146,7 +146,7 @@ def generate_newsletter_json(force_zoho=False):
         "top_articles": [
             {
                 "title": item.get('title', 'Titre non disponible'),
-                "summary": item.get('description', item.get('summary', ''))[:250] + "...",
+                "summary": (item.get('description', item.get('summary', ''))[:500].rsplit('.', 1)[0] + ".") if '.' in item.get('description', '')[:500] else item.get('description', '')[:500] + "...",
                 "link": item.get('link', '#'),
                 "source": item.get('source', 'Source inconnue')
             } for item in top_news
@@ -186,7 +186,7 @@ def trigger_zoho_webhook(data):
     try:
         # Zoho attend souvent les données dans un champ 'data'
         payload = {"data": json.dumps(data)}
-        requests.post(webhook_url, params=payload)
+        requests.post(webhook_url, data=payload)
         print("Signal envoyé ! Vérifiez vos brouillons dans Zoho.")
     except Exception as e:
         print(f"Erreur Webhook Zoho: {e}")
