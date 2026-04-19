@@ -1,0 +1,175 @@
+
+<!-- DEBUT DU SNIPPET PROPRIETES PREMIUM -->
+<style>
+    #evan-prop-container {
+        --primary: #873276;
+        --bg-dark: #0f172a;
+        --card-bg: #1e293b;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        font-family: 'Outfit', sans-serif;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .prop-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .prop-card {
+        background: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        position: relative;
+    }
+
+    .prop-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .sold-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #ef4444;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: 700;
+        z-index: 10;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .prop-img-container { height: 220px; width: 100%; overflow: hidden; }
+    .prop-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .prop-card:hover .prop-img-container img { transform: scale(1.05); }
+
+    .prop-content { padding: 1.2rem; flex-grow: 1; display: flex; flex-direction: column; }
+    .prop-price { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff; }
+    .prop-city { font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .prop-footer { margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
+    .prop-mls { font-size: 0.8rem; color: var(--text-muted); }
+
+    .prop-btn { background: var(--primary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600; cursor: pointer; border: none; }
+    
+    /* MODAL STYLES */
+    .prop-modal { display: none; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); }
+    .prop-modal-content { background: #1e293b; margin: 3% auto; width: 90%; max-width: 900px; border-radius: 15px; color: white; position: relative; overflow: hidden; animation: slideIn 0.3s ease; }
+    @keyframes slideIn { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .close-modal { position: absolute; right: 20px; top: 15px; font-size: 30px; color: #fff; cursor: pointer; z-index: 100; }
+    .modal-gallery { height: 450px; background: #000; position: relative; display: flex; align-items: center; justify-content: center; }
+    .modal-gallery img { max-height: 100%; max-width: 100%; object-fit: contain; }
+    .modal-details { padding: 2.5rem; }
+    .modal-price { font-size: 2rem; color: var(--primary); font-weight: 800; margin-bottom: 1rem; }
+    .modal-specs { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; }
+    .spec-label { font-size: 0.8rem; color: var(--text-muted); display: block; }
+    .spec-value { font-weight: 600; font-size: 1rem; }
+    .gallery-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 1.5rem 1rem; cursor: pointer; font-size: 2rem; }
+    .prev-btn { left: 0; } .next-btn { right: 0; }
+
+    @media (max-width: 768px) { .modal-gallery { height: 250px; } .prop-grid { grid-template-columns: 1fr; } }
+</style>
+
+<div id="evan-prop-container">
+    <div class="prop-grid" id="prop-grid-target">
+        <div style="color:white;text-align:center;padding:50px;">Chargement des propriétés...</div>
+    </div>
+
+    <div id="prop-modal" class="prop-modal">
+        <div class="prop-modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="modal-gallery">
+                <button class="gallery-btn prev-btn" id="prevBtn">&#10094;</button>
+                <img id="modal-img" src="">
+                <button class="gallery-btn next-btn" id="nextBtn">&#10095;</button>
+            </div>
+            <div class="modal-details">
+                <div id="modal-title" style="font-size:1.8rem; font-weight:700; margin-bottom: 0.5rem;"></div>
+                <div id="modal-price" class="modal-price"></div>
+                <div id="modal-brokers" style="font-style:italic; color:var(--text-muted); margin-bottom: 1.5rem;"></div>
+                <div id="modal-specs" class="modal-specs"></div>
+                <div id="modal-desc" style="line-height:1.6; color:#cbd5e1; white-space:pre-wrap; margin-bottom: 2rem;"></div>
+                <a href="#" id="modal-link" target="_blank" class="prop-btn">Voir sur le site officiel</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    const CLOUD_URL = "https://api.jsonbin.io/v3/b/694462e7d0ea881f4032d140/latest";
+    const API_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C";
+    let props = [];
+    let currentPhotos = [];
+    let photoIdx = 0;
+
+    async function init() {
+        try {
+            const res = await fetch(CLOUD_URL, { headers: { 'X-Master-Key': API_KEY } });
+            const data = await res.json();
+            props = data.record;
+            
+            // Sort: Actives first, Sold last
+            props.sort((a, b) => (a.isSold === b.isSold) ? 0 : a.isSold ? 1 : -1);
+            
+            render(props);
+        } catch (e) { console.error(e); document.getElementById('prop-grid-target').innerHTML = "Erreur."; }
+    }
+
+    function render(list) {
+        const grid = document.getElementById('prop-grid-target');
+        grid.innerHTML = list.map((p, i) => `
+            <div class="prop-card">
+                ${p.isSold ? '<div class="sold-badge">Vendu</div>' : ''}
+                <div class="prop-img-container"><img src="${p.image}" loading="lazy"></div>
+                <div class="prop-content">
+                    <div class="prop-price">${p.price}</div>
+                    <div class="prop-city">${p.city}</div>
+                    <div class="prop-footer">
+                        <span class="prop-mls">MLS ${p.mls}</span>
+                        <button class="prop-btn" onclick="window.openPropModal(${i})">Détails</button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    window.openPropModal = (idx) => {
+        const p = props[idx];
+        const modal = document.getElementById('prop-modal');
+        document.getElementById('modal-title').textContent = p.city;
+        document.getElementById('modal-price').textContent = p.price;
+        document.getElementById('modal-brokers').textContent = "Par : " + (p.brokers || "Evan Patruno");
+        document.getElementById('modal-desc').textContent = p.description;
+        document.getElementById('modal-link').href = p.url;
+        
+        const specs = document.getElementById('modal-specs');
+        specs.innerHTML = Object.entries(p.specs || {}).map(([k,v]) => `<div><span class="spec-label">${k}</span><span class="spec-value">${v}</span></div>`).join('');
+        
+        currentPhotos = p.photos && p.photos.length ? p.photos : [p.image];
+        photoIdx = 0;
+        document.getElementById('modal-img').src = currentPhotos[0];
+        
+        modal.style.display = "block";
+    };
+
+    document.getElementById('closeModal').onclick = () => { document.getElementById('prop-modal').style.display = 'none'; };
+    document.getElementById('prevBtn').onclick = () => { photoIdx = (photoIdx > 0) ? photoIdx - 1 : currentPhotos.length - 1; document.getElementById('modal-img').src = currentPhotos[photoIdx]; };
+    document.getElementById('nextBtn').onclick = () => { photoIdx = (photoIdx < currentPhotos.length - 1) ? photoIdx + 1 : 0; document.getElementById('modal-img').src = currentPhotos[photoIdx]; };
+
+    init();
+})();
+</script>
+    
