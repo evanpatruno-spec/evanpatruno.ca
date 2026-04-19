@@ -7,12 +7,12 @@
 <style>
     :root {
         --dash-primary: #873276;
-        --dash-primary-glow: rgba(135, 50, 118, 0.6);
+        --dash-primary-glow: rgba(135, 50, 118, 0.4);
         --dash-accent: #d4af37;
         --dash-accent-glow: rgba(212, 175, 55, 0.4);
-        --dash-bg: #0f050d;
+        --dash-bg: #1a0516; /* Violet Prune profond pour matcher le site */
         --dash-card-bg: rgba(255, 255, 255, 0.04);
-        --dash-border: rgba(255, 255, 255, 0.12);
+        --dash-border: rgba(255, 255, 255, 0.1);
         --dash-success: #2ecc71;
         --dash-warning: #f1c40f;
     }
@@ -28,11 +28,10 @@
 
     .portal-main-wrapper * { box-sizing: border-box; }
 
-    /* BACKGROUND AURA */
+    /* BACKGROUND AURA & BLEND */
     .portal-aura {
         position: absolute; width: 100%; height: 100%;
-        background: radial-gradient(circle at 80% 10%, var(--dash-primary-glow) 0%, transparent 40%),
-                    radial-gradient(circle at 20% 90%, rgba(135, 50, 118, 0.2) 0%, transparent 40%);
+        background: radial-gradient(circle at center, #000000 0%, var(--dash-bg) 80%);
         z-index: 1; pointer-events: none;
     }
 
