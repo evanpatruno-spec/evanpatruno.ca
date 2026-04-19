@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.6 - MODULE POTENTIALS)
- * Correction basée sur l'URL réelle du CRM de l'utilisateur.
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.7 - COMPATIBILITÉ TOTALE)
+ * Tente toutes les combinaisons de modules (Deals/Potentials) et de champs (Code_Portail/__c)
  */
 
 export default async function handler(req, res) {
@@ -28,64 +28,62 @@ export default async function handler(req, res) {
             method: 'POST', body: tokenParams
         });
         const tokenData = await tokenResponse.json();
-
-        if (!tokenData.access_token) {
-            return res.status(401).json({ error: 'Erreur Auth Zoho', details: tokenData.error });
-        }
+        if (!tokenData.access_token) return res.status(401).json({ error: 'Erreur Auth Zoho' });
 
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        // 2. RECHERCHE DANS LE MODULE "Potentials" (Nom technique des Affaires)
-        const searchCriteria = encodeURIComponent(`(Code_Portail:equals:${cleanCode})`);
-        
-        // On tente d'abord sur Potentials
-        let searchResponse = await fetch(`${apiDomain}/crm/v2/Potentials/search?criteria=${searchCriteria}`, {
-            method: 'GET',
-            headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-        });
-        let searchData = await searchResponse.json();
-
-        let deal = null;
-        if (searchData.data && searchData.data.length > 0) {
-            deal = searchData.data[0];
-        } 
-        
-        // 3. SCAN MANUEL SI ÉCHEC (Sur Potentials)
-        if (!deal) {
-            const listResponse = await fetch(`${apiDomain}/crm/v2/Potentials?sort_order=desc&sort_by=Modified_Time`, {
+        // 2. FONCTION DE RECHERCHE MULTI-MODULE
+        async function findDeal(moduleName, fieldName) {
+            const criteria = encodeURIComponent(`(${fieldName}:equals:${cleanCode})`);
+            const resp = await fetch(`${apiDomain}/crm/v2/${moduleName}/search?criteria=${criteria}`, {
                 method: 'GET',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const listData = await listResponse.json();
+            const data = await resp.json();
+            return (data.data && data.data.length > 0) ? data.data[0] : null;
+        }
 
+        // TENTATIVES DANS L'ORDRE
+        let deal = await findDeal('Potentials', 'Code_Portail');
+        if (!deal) deal = await findDeal('Deals', 'Code_Portail');
+        if (!deal) deal = await findDeal('Potentials', 'Code_Portail__c');
+        if (!deal) deal = await findDeal('Deals', 'Code_Portail__c');
+
+        // 3. SCAN MANUEL DE DERNIER RECOURS (SUR LES DEUX MODULES)
+        if (!deal) {
+            console.log("Tentative de scan manuel...");
+            const listResp = await fetch(`${apiDomain}/crm/v2/Potentials?sort_order=desc&per_page=200`, {
+                method: 'GET',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            });
+            const listData = await listResp.json();
             if (listData.data) {
                 deal = listData.data.find(d => 
-                    (d.Code_Portail && d.Code_Portail.toString().trim().toUpperCase() === cleanCode.toUpperCase())
+                    (d.Code_Portail && d.Code_Portail.toString() === cleanCode) ||
+                    (d.Code_Portail__c && d.Code_Portail__c.toString() === cleanCode) ||
+                    (d.Deal_Name && d.Deal_Name.includes(cleanCode))
                 );
             }
         }
 
         if (!deal) {
-            return res.status(404).json({ 
-                error: 'Dossier introuvable',
-                debug: `Vérifié dans le module 'Potentials' pour le code ${cleanCode}`
-            });
+            return res.status(404).json({ error: 'Dossier introuvable', debug: `Code: ${cleanCode}` });
         }
 
-        // 4. Mapping Final (V2 API utilise Deal_Name même dans Potentials)
+        // 4. Mapping Final
         const portalData = {
             firstName: deal.Contact_Name ? deal.Contact_Name.name.split(' ')[0] : "Client",
-            code: deal.Code_Portail || deal.id,
-            property: deal.Deal_Name || deal.Potential_Name,
+            code: deal.Code_Portail || deal.Code_Portail__c || deal.id,
+            property: deal.Deal_Name || deal.Potential_Name || "Propriété",
             city: deal.Localisation || "En attente d'adresse",
             price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
             stage: deal.Stage || "Analyse",
             image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
             timeline: [
                 { label: "Préqual.", icon: "💎", status: deal.Financement_approuv ? "completed" : "active" },
-                { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage && deal.Stage.includes("Offre") ? "completed" : "pending") },
-                { label: "Offre", icon: "📝", status: deal.Stage && deal.Stage.includes("Offre") ? "active" : (deal.Closing_Date ? "completed" : "pending") },
+                { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage?.includes("Offre") ? "completed" : "pending") },
+                { label: "Offre", icon: "📝", status: deal.Stage?.includes("Offre") ? "active" : (deal.Closing_Date ? "completed" : "pending") },
                 { label: "Inspection", icon: "⚙️", status: deal.Date_d_inspection ? (new Date(deal.Date_d_inspection) < new Date() ? "completed" : "active") : "pending" },
                 { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
             ],
@@ -107,8 +105,7 @@ export default async function handler(req, res) {
                 { name: "Préqualification reçue", done: deal.Financement_approuv || false },
                 { name: "Inspection satisfaisante", done: deal.Inspection_satisfaisante || false },
                 { name: "Conditions levées", done: deal.Autres_conditions_lev_es || false }
-            ],
-            prequalStatus: deal.Financement_approuv ? "Dossier Complet" : "En attente"
+            ]
         };
 
         return res.status(200).json(portalData);
