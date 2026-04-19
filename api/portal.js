@@ -38,20 +38,37 @@ export default async function handler(req, res) {
         // Si on cherche "DIAG", on inspecte le dossier 6466486000011930049
         if (cleanCode === "DIAG") {
             const diagId = "6466486000011930049";
-            const resp = await fetch(`${apiDomain}/crm/v2/Potentials/${diagId}`, {
+            let record = null;
+            let usedModule = "";
+
+            // Tentative 1 : Potentials
+            let resp = await fetch(`${apiDomain}/crm/v2/Potentials/${diagId}`, {
                 method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const data = await resp.json();
-            const record = data.data ? data.data[0] : null;
+            let data = await resp.json();
+            if (data.data) {
+                record = data.data[0];
+                usedModule = "Potentials";
+            } else {
+                // Tentative 2 : Deals
+                resp = await fetch(`${apiDomain}/crm/v2/Deals/${diagId}`, {
+                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+                });
+                data = await resp.json();
+                if (data.data) {
+                    record = data.data[0];
+                    usedModule = "Deals";
+                }
+            }
 
-            if (!record) return res.status(400).json({ error: "Diagnostic échoué", details: "ID de dossier introuvable." });
+            if (!record) return res.status(400).json({ error: "Diagnostic échoué", details: "ID introuvable dans Potentials ET Deals." });
 
             const keys = Object.keys(record).sort().join(', ');
             const codeVal = record.Code_Portail || record.Code_Portail__c || "N/A";
             
             return res.status(400).json({ 
-                error: "DIAGNOSTIC REUSSI", 
-                details: `Champs trouvés: ${keys} | Valeur Code Portail: ${codeVal}`
+                error: `DIAGNOSTIC REUSSI (${usedModule})`, 
+                details: `Champs: ${keys} | Valeur Code: ${codeVal}`
             });
         }
 
