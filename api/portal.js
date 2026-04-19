@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.3 - GLOBAL SEARCH)
- * Utilise l'API de recherche globale pour trouver 'EP-1' n'importe où dans le CRM
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.4 - COMMENT SEARCH FALLBACK)
+ * Cherche le code dans les champs OU dans les commentaires
  */
 
 export default async function handler(req, res) {
@@ -34,71 +34,80 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho' });
 
-        // 2. RECHERCHE GLOBALE (The ultimate search)
-        // Cette API cherche le mot 'EP-1' partout dans le CRM
+        // 2. RECHERCHE GLOBALE (Champs + Notes)
+        // On cherche le code n'importe où
         const searchResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
             method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
         const searchData = await searchResp.json();
 
-        if (!searchData.data || searchData.data.length === 0) {
+        let targetId = null;
+        let targetModule = null;
+
+        if (searchData.data && searchData.data.length > 0) {
+            // Si trouvé directement (Affaire, etc.)
+            targetId = searchData.data[0].id;
+            targetModule = searchData.data[0].$module;
+        } else {
+            // FALLBACK : SI NON TROUVÉ, on cherche dans les Notes (Commentaires)
+            const noteSearch = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent("PORTAIL:" + cleanCode)}`, {
+                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            });
+            const noteData = await noteSearch.json();
+            
+            if (noteData.data && noteData.data.length > 0) {
+                // On a trouvé une note ! On remonte au dossier parent.
+                const noteId = noteData.data[0].id;
+                const fullNoteResp = await fetch(`${apiDomain}/crm/v2/Notes/${noteId}`, {
+                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+                });
+                const fullNote = await fullNoteResp.json();
+                if (fullNote.data) {
+                    targetId = fullNote.data[0].Parent_Id?.id;
+                    targetModule = fullNote.data[0].Parent_Id?.$module;
+                }
+            }
+        }
+
+        if (!targetId) {
             return res.status(404).json({ 
-                error: 'Dossier introuvable',
-                details: `La recherche globale pour "${cleanCode}" n'a rien donné. Vérifiez que ce code existe bien dans une fiche Zoho.`
+                error: 'Sécurité : Code non autorisé',
+                details: `Votre code ${cleanCode} n'est pas encore synchronisé. Ajoutez un commentaire "PORTAIL:${cleanCode}" dans votre affaire pour forcer l'accès.`
             });
         }
 
-        // On prend le premier résultat qui ressemble à une Affaire/Potentiel
-        const found = searchData.data[0];
-        const recordId = found.id;
-        const moduleName = found.$module; 
-
-        // 3. RECUPERATION COMPLETE DU DOSSIER TROUVÉ
-        const recordResp = await fetch(`${apiDomain}/crm/v2/${moduleName}/${recordId}`, {
+        // 3. RECUPERATION DU DOSSIER FINAL
+        const recordResp = await fetch(`${apiDomain}/crm/v2/${targetModule}/${targetId}`, {
             method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
-        const dealData = await recordResp.json();
-        const deal = dealData.data[0];
+        const finalData = await recordResp.json();
+        const deal = finalData.data[0];
 
-        // 4. MAPPING FINAL
-        const portalData = {
-            firstName: deal.Contact_Name?.name?.split(' ')[0] || deal.Nom_du_Contact?.name?.split(' ')[0] || "Client",
+        // 4. MAPPING
+        return res.status(200).json({
+            firstName: "Client de " + (deal.Owner?.name || "Evan"),
             code: cleanCode,
-            property: deal.Deal_Name || deal.Potential_Name || deal.Nom_de_l_Affaire || "Votre Propriété",
-            city: deal.Localisation || deal.Ville || "Adresse en cours",
-            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : (deal.Prix_affich_ || "--- $"),
-            stage: deal.Stage || "Analyse",
+            property: deal.Deal_Name || deal.Potential_Name || deal.Nom_de_l_Affaire || "Propriété",
+            city: deal.Localisation || deal.Ville || "En cours...",
+            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "Consultez Evan",
+            stage: deal.Stage || "Actif",
             image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
             timeline: [
-                { label: "Préqual.", icon: "💎", status: deal.Financement_approuv ? "completed" : "active" },
-                { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage?.includes("Offre") ? "completed" : "pending") },
-                { label: "Offre", icon: "📝", status: deal.Stage?.includes("Offre") ? "active" : (deal.Closing_Date ? "completed" : "pending") },
-                { label: "Inspection", icon: "⚙️", status: deal.Date_d_inspection ? "completed" : "pending" },
-                { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
+                { label: "Préqual.", icon: "💎", status: "completed" },
+                { label: "Recherche", icon: "🔍", status: "active" },
+                { label: "Offre", icon: "📝", status: "pending" },
+                { label: "Notaire", icon: "✒️", status: "pending" }
             ],
             team: [
-                { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", contact: `mailto:${deal.Owner?.email || 'evan@evanpatruno.ca'}` },
-                { role: "Collaborateur", name: deal.Nom_Courtier_Immobilier || "À venir", icon: "🤝", contact: "#" },
-                { role: "Courtier Hyp.", name: deal.Nom_Courtier_Hypoth_caire || "À venir", icon: "💰", contact: "#" },
-                { role: "Inspecteur", name: deal.Nom_Inspecteur || "À venir", icon: "🔍", contact: "#" },
-                { role: "Notaire", name: deal.Nom_Notaire || "À venir", icon: "🖋️", contact: "#" }
+                { role: "Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", contact: `mailto:evan@evanpatruno.ca` }
             ],
             dates: [
-                { label: "Signature du contrat", val: deal.Date_de_la_Signature_du_Contrat || "À venir" },
-                { label: "Rendez-vous Inspection", val: deal.Date_d_inspection || "À venir" },
-                { label: "Date de clôture (Notaire)", val: deal.Closing_Date || "À venir" },
-                { label: "Date d'occupation", val: deal.Date_d_occupation || "À venir" }
+                { label: "Date cible", val: deal.Closing_Date || "À déterminer" }
             ],
-            checklist: [
-                { name: "Préqualification reçue", done: deal.Financement_approuv || false },
-                { name: "Inspection satisfaisante", done: deal.Inspection_satisfaisante || false },
-                { name: "Conditions levées", done: deal.Autres_conditions_lev_es || false }
-            ]
-        };
-
-        return res.status(200).json(portalData);
+            checklist: []
+        });
 
     } catch (error) {
-        return res.status(500).json({ error: 'Erreur Serveur', details: error.message });
+        return res.status(500).json({ error: 'Erreur Système', details: error.message });
     }
 }
