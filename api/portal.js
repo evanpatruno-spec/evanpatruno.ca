@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.6 - IDENTITY CHECK)
- * Vérifie l'organisation et l'utilisateur connectés
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.7 - TOKEN SNIFFER)
+ * Affiche les 4 premiers caractères du token utilisé pour debug Vercel
  */
 
 export default async function handler(req, res) {
@@ -16,9 +16,12 @@ export default async function handler(req, res) {
     const cleanCode = codePortal?.trim().toUpperCase();
 
     try {
+        const rawToken = process.env.ZOHO_REFRESH_TOKEN || "";
+        const tokenSnippet = rawToken.substring(0, 15); // On prend un petit bout pour comparer
+
         // 1. Authentification
         const tokenParams = new URLSearchParams();
-        tokenParams.append('refresh_token', process.env.ZOHO_REFRESH_TOKEN?.trim());
+        tokenParams.append('refresh_token', rawToken.trim());
         tokenParams.append('client_id', process.env.ZOHO_CLIENT_ID?.trim());
         tokenParams.append('client_secret', process.env.ZOHO_CLIENT_SECRET?.trim());
         tokenParams.append('grant_type', 'refresh_token');
@@ -31,7 +34,12 @@ export default async function handler(req, res) {
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho', details: tokenData });
+        if (!accessToken) {
+            return res.status(401).json({ 
+                error: 'Erreur Auth Zoho', 
+                details: `Token utilisé (début): ${tokenSnippet}... | Erreur: ${JSON.stringify(tokenData)}`
+            });
+        }
 
         // 2. MODE DIAGNOSTIC IDENTITÉ
         if (cleanCode === "DIAG") {
@@ -50,7 +58,7 @@ export default async function handler(req, res) {
 
             return res.status(400).json({ 
                 error: "IDENTITÉ DU PONT", 
-                details: `Organisation connectée: ${orgId} | Utilisateur: ${userEmail} | Domaine: ${apiDomain}` 
+                details: `User: ${userEmail} | Token commence par: ${tokenSnippet}... | Org: ${orgId}` 
             });
         }
 
@@ -61,10 +69,11 @@ export default async function handler(req, res) {
         const sData = await sResp.json();
 
         if (sData.data && sData.data.length > 0) {
-            return res.status(200).json({ firstName: "Trouvé", code: cleanCode, property: "Dossier Validé", timeline: [], team: [], dates: [], checklist: [] });
+            const found = sData.data[0];
+            return res.status(200).json({ firstName: "Trouvé", code: cleanCode, property: found.Deal_Name || "Dossier", timeline: [], team: [], dates: [], checklist: [] });
         }
 
-        return res.status(404).json({ error: 'Dossier introuvable' });
+        return res.status(404).json({ error: 'Introuvable', details: `Recherche faite sur le compte de: ${tokenSnippet}...` });
 
     } catch (error) {
         return res.status(500).json({ error: 'Erreur Fatale', details: error.message });
