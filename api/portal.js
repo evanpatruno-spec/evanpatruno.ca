@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.5 - RECHERCHE UNIVERSELLE)
- * Utilise une recherche par critères ET un scan manuel pour être sûr de trouver le dossier.
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.6 - MODULE POTENTIALS)
+ * Correction basée sur l'URL réelle du CRM de l'utilisateur.
  */
 
 export default async function handler(req, res) {
@@ -36,33 +36,32 @@ export default async function handler(req, res) {
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        // 2. TENTATIVE 1 : Recherche Directe (Rapide)
+        // 2. RECHERCHE DANS LE MODULE "Potentials" (Nom technique des Affaires)
         const searchCriteria = encodeURIComponent(`(Code_Portail:equals:${cleanCode})`);
-        const searchResponse = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=${searchCriteria}`, {
+        
+        // On tente d'abord sur Potentials
+        let searchResponse = await fetch(`${apiDomain}/crm/v2/Potentials/search?criteria=${searchCriteria}`, {
             method: 'GET',
             headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
-        const searchData = await searchResponse.json();
+        let searchData = await searchResponse.json();
 
         let deal = null;
         if (searchData.data && searchData.data.length > 0) {
             deal = searchData.data[0];
         } 
         
-        // 3. TENTATIVE 2 : Scan Manuel (Lent mais infaillible)
+        // 3. SCAN MANUEL SI ÉCHEC (Sur Potentials)
         if (!deal) {
-            console.log("Recherche directe échouée, passage au scan manuel...");
-            const listResponse = await fetch(`${apiDomain}/crm/v2/Deals?sort_order=desc&sort_by=Modified_Time`, {
+            const listResponse = await fetch(`${apiDomain}/crm/v2/Potentials?sort_order=desc&sort_by=Modified_Time`, {
                 method: 'GET',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
             const listData = await listResponse.json();
 
             if (listData.data) {
-                // On cherche dans les 200 dernières affaires celle qui a le code correspondant
                 deal = listData.data.find(d => 
-                    (d.Code_Portail && d.Code_Portail.toString().trim().toUpperCase() === cleanCode.toUpperCase()) ||
-                    (d.Deal_Name && d.Deal_Name.includes(cleanCode))
+                    (d.Code_Portail && d.Code_Portail.toString().trim().toUpperCase() === cleanCode.toUpperCase())
                 );
             }
         }
@@ -70,15 +69,15 @@ export default async function handler(req, res) {
         if (!deal) {
             return res.status(404).json({ 
                 error: 'Dossier introuvable',
-                debug: `Code cherché: ${cleanCode}. Aucune correspondance trouvée dans les dernières affaires.`
+                debug: `Vérifié dans le module 'Potentials' pour le code ${cleanCode}`
             });
         }
 
-        // 4. Mapping Final
+        // 4. Mapping Final (V2 API utilise Deal_Name même dans Potentials)
         const portalData = {
             firstName: deal.Contact_Name ? deal.Contact_Name.name.split(' ')[0] : "Client",
             code: deal.Code_Portail || deal.id,
-            property: deal.Deal_Name,
+            property: deal.Deal_Name || deal.Potential_Name,
             city: deal.Localisation || "En attente d'adresse",
             price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
             stage: deal.Stage || "Analyse",
