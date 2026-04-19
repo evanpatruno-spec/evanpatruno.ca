@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Dossier | Portail Client Privé | Evan Patruno</title>
+
+    <!-- Inclusion des Meta Tags et Styles Globaux -->
+    <!-- Note: En production Zoho, ceci est géré via le Header Code, 
+         mais pour ce prototype standalone on inclut les styles nécessaires -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #873276;
+            --primary-dark: #6a275d;
+            --bg-dark: #0f050d;
+            --text-light: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Simple Header for Prototype */
+        .portal-nav {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 5, 13, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        .nav-logo span {
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <!-- CONTENT FROM page_dashboard.html will be placed here -->
+</head>
+
+<body>
+
+    <nav class="portal-nav">
+        <a href="/" class="nav-logo">EVAN<span>PATRUNO</span></a>
+        <a href="/" class="btn-primary">Retour au site</a>
+    </nav>
+
+    <main id="portal-content">
+        <!-- Dashboard snippet included here -->
+    </main>
+
+    <!-- UI Script for including the snippet (Simplified for this environment) -->
+    <script>
+        // In this local environment, we'll just fetch the snippet and inject it
+        fetch('snippets/pages/page_dashboard.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('portal-content').innerHTML = html;
+                
+                // Re-execute scripts in the injected HTML
+                const scripts = document.getElementById('portal-content').querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                });
+            });
+    </script>
+</body>
+
+</html>
