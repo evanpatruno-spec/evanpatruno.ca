@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.1 - SUPER DIAGNOSTIC)
- * Utilise l'ID direct pour inspecter les permissions de champs
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.2 - MODULE & DOMAIN DIAGNOSTIC)
+ * Identifie le domaine API et la liste des modules disponibles
  */
 
 export default async function handler(req, res) {
@@ -34,90 +34,63 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho' });
 
-        // 2. MODE DIAGNOSTIC SPECIFIQUE
-        // Si on cherche "DIAG", on inspecte le dossier 6466486000011930049
+        // 2. MODE DIAGNOSTIC STRUCTUREL
         if (cleanCode === "DIAG") {
-            const diagId = "6466486000011930049";
-            let record = null;
-            let usedModule = "";
-
-            // Tentative 1 : Potentials
-            let resp = await fetch(`${apiDomain}/crm/v2/Potentials/${diagId}`, {
+            // On demande la liste des modules pour voir les noms réels
+            const resp = await fetch(`${apiDomain}/crm/v2/settings/modules`, {
                 method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            let data = await resp.json();
-            if (data.data) {
-                record = data.data[0];
-                usedModule = "Potentials";
-            } else {
-                // Tentative 2 : Deals
-                resp = await fetch(`${apiDomain}/crm/v2/Deals/${diagId}`, {
-                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            const data = await resp.json();
+            
+            if (!data.modules) {
+                return res.status(400).json({ 
+                    error: "Échec Diagnostic Modules", 
+                    details: `Domaine: ${apiDomain} | Erreur: ${JSON.stringify(data)}` 
                 });
-                data = await resp.json();
-                if (data.data) {
-                    record = data.data[0];
-                    usedModule = "Deals";
-                }
             }
 
-            if (!record) return res.status(400).json({ error: "Diagnostic échoué", details: "ID introuvable dans Potentials ET Deals." });
-
-            const keys = Object.keys(record).sort().join(', ');
-            const codeVal = record.Code_Portail || record.Code_Portail__c || "N/A";
+            const moduleNames = data.modules.map(m => m.api_name).sort().join(', ');
             
             return res.status(400).json({ 
-                error: `DIAGNOSTIC REUSSI (${usedModule})`, 
-                details: `Champs: ${keys} | Valeur Code: ${codeVal}`
+                error: "Détails de la structure Zoho", 
+                details: `Domaine API: ${apiDomain} | Modules trouvés: ${moduleNames}`
             });
         }
 
-        // 3. RECHERCHE NORMALE (Même logique brute force)
+        // 3. RECHERCHE NORMALE (Même logique brute force value)
         async function findDeal(module) {
-            const resp = await fetch(`${apiDomain}/crm/v2/${module}?sort_order=desc&per_page=100`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const listData = await resp.json();
-            if (!listData.data) return null;
+            try {
+                const resp = await fetch(`${apiDomain}/crm/v2/${module}?sort_order=desc&per_page=100`, {
+                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+                });
+                const listData = await resp.json();
+                if (!listData.data) return null;
 
-            return listData.data.find(item => {
-                return Object.values(item).some(val => 
-                    val && val.toString().toUpperCase() === cleanCode
-                );
-            });
+                return listData.data.find(item => {
+                    return Object.values(item).some(val => 
+                        val && val.toString().toUpperCase() === cleanCode
+                    );
+                });
+            } catch(e) { return null; }
         }
 
         let deal = await findDeal('Potentials');
         if (!deal) deal = await findDeal('Deals');
 
         if (!deal) {
-            return res.status(404).json({ 
-                error: 'Dossier introuvable',
-                details: `Le code ${cleanCode} n'existe dans aucune case des 100 dernières affaires.`
-            });
+            return res.status(404).json({ error: 'Dossier introuvable' });
         }
 
-        // 4. Mapping Final
+        // ... (Mapping normal simplifié pour le test)
         return res.status(200).json({
-            firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
+            firstName: "Client",
             code: cleanCode,
-            property: deal.Deal_Name || deal.Potential_Name || deal.Nom_de_l_Affaire || "Propriété",
-            city: deal.Localisation || deal.Ville || "Adresse en attente",
-            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
+            property: deal.Deal_Name || deal.Potential_Name || "Propriété",
+            city: deal.Ville || "Adresse",
+            price: "---",
             stage: deal.Stage || "En cours",
-            image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
-            timeline: [
-                { label: "Préqual.", icon: "💎", status: deal.Financement_approuv ? "completed" : "active" },
-                { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage?.includes("Offre") ? "completed" : "pending") },
-                { label: "Offre", icon: "📝", status: deal.Stage?.includes("Offre") ? "active" : (deal.Closing_Date ? "completed" : "pending") },
-                { label: "Inspection", icon: "⚙️", status: (deal.Date_d_inspection || deal.Date_d_Inspection) ? "completed" : "pending" },
-                { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
-            ],
-            checklist: [
-                { name: "Préqualification reçue", done: deal.Financement_approuv || false },
-                { name: "Inspection satisfaisante", done: deal.Inspection_satisfaisante || false },
-                { name: "Conditions levées", done: deal.Autres_conditions_lev_es || false }
-            ]
+            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
+            timeline: [], team: [], dates: [], checklist: []
         });
 
     } catch (error) {
