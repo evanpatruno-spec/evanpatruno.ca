@@ -183,6 +183,18 @@ export default async function handler(req, res) {
                 { name: "Assurance Habitation", done: false },
                 { name: "Internet & TV", done: false }
             ],
+            partners: [
+                { category: "Peinture", name: "Peinture Excellence", icon: "🎨", benefit: "10% de rabais", code: "EVANVIP" },
+                { category: "Plomberie", name: "Plombier Pro", icon: "🚰", benefit: "Estimation gratuite", code: "EVANVIP" },
+                { category: "Électricité", name: "Électricien Élite", icon: "⚡", benefit: "-15% main d'œuvre", code: "EVANVIP" },
+                { category: "Design Intérieur", name: "Designer d'Espaces", icon: "🛋️", benefit: "1h consultation offerte", code: "EVANVIP" },
+                { category: "Excavation/Drains", name: "Drains Express", icon: "🌀", benefit: "Caméra incluse", code: "EVANVIP" },
+                { category: "Couvreur", name: "Toiture Premium", icon: "🏠", benefit: "Inspection annuelle", code: "EVANVIP" },
+                { category: "Aménagement", name: "Paysage Urbain", icon: "🌿", benefit: "-10% sur les plants", code: "EVANVIP" },
+                { category: "Ménage", name: "Nettoyage Éclat", icon: "🧹", benefit: "-50$ Forfait Global", code: "EVANVIP" },
+                { category: "Arpenteur", name: "Précision Géo", icon: "📏", benefit: "Service Prioritaire", code: "EVANVIP" },
+                { category: "Assurances", name: "Tranquillité Plus", icon: "🛡️", benefit: "50$ en carte cadeau", code: "EVANVIP" }
+            ],
             sellerData: transactionType === "Vendeur" ? {
                 visits: 12, feedback: [
                     { date: "2026-04-15", comment: "Très belle cuisine, mais jardin un peu petit.", rating: 4 },
