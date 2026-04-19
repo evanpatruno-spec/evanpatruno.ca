@@ -149,6 +149,31 @@
 
     .badge-premium { padding: 10px 20px; border-radius: 50px; font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; }
 
+    /* COUNTDOWN WIDGET */
+    .countdown-widget {
+        background: linear-gradient(135deg, var(--dash-primary), #602353);
+        padding: 15px 30px; border-radius: 20px; display: inline-flex; align-items: center; gap: 15px;
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4); border: 1px solid rgba(255,255,255,0.2);
+        margin-top: 20px;
+    }
+    .countdown-num { font-size: 2rem; font-weight: 900; line-height: 1; color: #fff; }
+    .countdown-txt { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; font-weight: 700; text-align: left; color: #fff; }
+
+    /* SELLER STATS */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .stat-card {
+        background: rgba(255,255,255,0.03); border: 1px solid var(--dash-border); border-radius: 25px; padding: 25px;
+        text-align: center;
+    }
+    .stat-val { font-size: 2.5rem; font-weight: 900; color: var(--dash-accent); margin-bottom: 5px; }
+    .stat-label { font-size: 0.8rem; opacity: 0.6; text-transform: uppercase; }
+
+    /* FEEDBACK LIST */
+    .feedback-item {
+        background: rgba(255,255,255,0.02); border-left: 4px solid var(--dash-primary);
+        padding: 20px; border-radius: 0 20px 20px 0; margin-bottom: 15px;
+    }
+
     @media (max-width: 768px) {
         .property-card-premium { flex-direction: column; text-align: center; }
         .prop-img-wrap { width: 100%; height: 200px; }
@@ -178,6 +203,12 @@
             <span style="color: var(--dash-accent); font-weight: 800; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase;">Portail Client Privé</span>
             <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin: 10px 0; color: #fff;">--</h1>
             <p id="txtCodeRef" style="color: rgba(255,255,255,0.5); font-size: 1.1rem;">Dossier #--</p>
+            <div id="wrapCountdown" style="display: none;">
+                <div class="countdown-widget">
+                    <div class="countdown-num" id="valCountdown">--</div>
+                    <div class="countdown-txt">Jours avant la signature<br>chez le notaire</div>
+                </div>
+            </div>
         </header>
 
         <div class="property-card-premium">
@@ -212,6 +243,31 @@
                 <div id="badgePrequal" class="badge-premium">--</div>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;" id="wrapChecklist"></div>
+        </div>
+
+        <!-- SELLER DASHBOARD (Hidden by default) -->
+        <div id="sectionSeller" style="display: none; margin-top: 60px;">
+            <h3 class="section-title">Tableau de bord Vendeur</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-val" id="valVisits">--</div>
+                    <div class="stat-label">Visites totales</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">⭐ 4.8</div>
+                    <div class="stat-label">Note moyenne</div>
+                </div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border-radius: 40px; padding: 40px; border: 1px solid var(--dash-border);">
+                <h4 style="margin-bottom:25px; font-family:'Outfit';">Derniers commentaires d'acheteurs</h4>
+                <div id="wrapFeedback"></div>
+            </div>
+        </div>
+
+        <!-- MOVING CHECKLIST -->
+        <div style="margin-top: 60px;">
+            <h3 class="section-title">Ma Checklist de Déménagement</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;" id="wrapMoving"></div>
         </div>
     </div>
 </div>
@@ -309,6 +365,39 @@
                 <span style="font-size:1rem;font-weight:600;color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name}</span>
             </div>
         `).join('');
+
+        // Countdown
+        if (data.daysRemaining !== null) {
+            document.getElementById('wrapCountdown').style.display = 'block';
+            document.getElementById('valCountdown').innerText = data.daysRemaining;
+        } else {
+            document.getElementById('wrapCountdown').style.display = 'none';
+        }
+
+        // Moving Checklist
+        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map(c => `
+            <div style="background:rgba(255,255,255,0.02);padding:20px;border-radius:20px;display:flex;align-items:center;gap:15px;border:1px solid rgba(255,255,255,0.1)">
+                <div style="width:24px;height:24px;border:2px solid ${c.done ? '#2ecc71' : 'rgba(255,255,255,0.2)'};border-radius:6px;display:flex;align-items:center;justify-content:center;color:#2ecc71;font-weight:900;">${c.done ? '✓' : ''}</div>
+                <span style="font-size:0.9rem;opacity:${c.done ? '1' : '0.6'};">${c.name}</span>
+            </div>
+        `).join('');
+
+        // Seller Section
+        if (data.transactionType === "Vendeur" && data.sellerData) {
+            document.getElementById('sectionSeller').style.display = 'block';
+            document.getElementById('valVisits').innerText = data.sellerData.visits;
+            document.getElementById('wrapFeedback').innerHTML = data.sellerData.feedback.map(f => `
+                <div class="feedback-item">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                        <span style="font-size:0.8rem; color:var(--dash-accent); font-weight:800;">${f.date}</span>
+                        <span style="color:var(--dash-warning);"> ${'★'.repeat(f.rating)}${'⭐'.repeat(5-f.rating)}</span>
+                    </div>
+                    <p style="margin:0; font-style:italic; opacity:0.9;">"${f.comment}"</p>
+                </div>
+            `).join('');
+        } else {
+            document.getElementById('sectionSeller').style.display = 'none';
+        }
     }
 
     async function handlePortalLogin(e) {
