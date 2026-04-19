@@ -38,5 +38,6 @@ jobs:
         run: |
           git config --local user.email "evan.patruno@gmail.com"
           git config --local user.name "evanpatruno-spec"
-          git add news.json properties.json boc_rates.json newsletter_ready.json bin_id.txt news_bin_id.txt newsletter_bin_id.txt zoho_snippet.html
+          git add .
           git diff --quiet && git diff --staged --quiet || (git commit -m "Automated data update [skip ci]" && git push)
+

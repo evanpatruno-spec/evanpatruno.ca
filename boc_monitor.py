@@ -108,3 +108,8 @@ if __name__ == "__main__":
     if boc_data:
         print(f"Taux Actuel : {boc_data['rate']}% ({boc_data['status']})")
         save_to_cloud(boc_data)
+        
+        # AJOUT : Sauvegarde locale pour GitHub Artifacts / Versioning
+        with open("boc_rates.json", "w", encoding="utf-8") as f:
+            json.dump(boc_data, f, indent=4, ensure_ascii=False)
+        print("Fichier local boc_rates.json mis à jour.")
