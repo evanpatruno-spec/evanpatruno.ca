@@ -466,6 +466,20 @@
 
             if (!response.ok) {
                 const errData = await response.json();
+                
+                // --- GESTION DES DOSSIERS CLOS ---
+                if (errData.errorType === "WON" || errData.errorType === "LOST") {
+                    document.getElementById('portalOverlay').innerHTML = `
+                        <div class="login-card" style="max-width: 500px; border: 1px solid ${errData.errorType === 'WON' ? '#2ecc71' : '#e74c3c'}; box-shadow: 0 0 30px ${errData.errorType === 'WON' ? 'rgba(46,204,113,0.2)' : 'rgba(231,76,60,0.2)'};">
+                            <div style="font-size: 4rem; margin-bottom: 25px;">${errData.errorType === 'WON' ? '🏆' : '📁'}</div>
+                            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 900; color: #fff;">${errData.errorType === 'WON' ? 'Dossier Archivé' : 'Dossier Clos'}</h2>
+                            <p style="color: rgba(255,255,255,0.8); line-height: 1.6; margin: 25px 0;">${errData.message}</p>
+                            <button onclick="location.reload()" class="login-btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);">Retourner à l'accueil</button>
+                        </div>
+                    `;
+                    return;
+                }
+                
                 throw new Error(errData.details ? `${errData.error} (${errData.details})` : errData.error || 'Dossier introuvable');
             }
 

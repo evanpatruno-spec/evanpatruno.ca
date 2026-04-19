@@ -55,6 +55,21 @@ export default async function handler(req, res) {
 
         if (!deal) return res.status(404).json({ error: 'Dossier introuvable' });
 
+        // --- ÉTAPE CLÔTURE (Cycle de vie) ---
+        const stage = deal.Stage || "";
+        if (stage === "Closed Won" || stage.includes("Gagné") || stage.includes("Clôturé")) {
+            return res.status(403).json({ 
+                errorType: "WON", 
+                message: `Félicitations pour votre transaction ! Ce dossier est maintenant archivé car l'acte est signé. Merci de votre confiance !` 
+            });
+        }
+        if (stage === "Closed Lost" || stage.includes("Perdu")) {
+            return res.status(403).json({ 
+                errorType: "LOST", 
+                message: "Ce dossier n'est plus actif car la transaction a été annulée ou l'affaire est classée." 
+            });
+        }
+
         // --- ÉTAPE SÉCURITÉ : VÉRIFICATION 2FA ---
         const mainContactId = deal.Contact_Name?.id;
         if (!mainContactId) return res.status(403).json({ error: "Sécurité : Aucun contact associé au dossier." });
