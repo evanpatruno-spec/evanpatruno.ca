@@ -12,7 +12,8 @@
         --dash-accent-glow: rgba(212, 175, 55, 0.4);
         --dash-bg: #1a0516; /* Violet Prune profond pour matcher le site */
         --dash-card-bg: rgba(255, 255, 255, 0.04);
-        --dash-border: rgba(255, 255, 255, 0.1);
+        --dash-border: rgba(135, 50, 118, 0.4); /* Rose Magenta semi-transparent */
+        --dash-glow: 0 0 15px rgba(135, 50, 118, 0.2); /* Lueur Neon */
         --dash-success: #2ecc71;
         --dash-warning: #f1c40f;
     }
@@ -81,6 +82,7 @@
         background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
         border: 1px solid var(--dash-border); border-radius: 45px; padding: 50px;
         display: flex; gap: 50px; align-items: center; margin-bottom: 60px;
+        box-shadow: var(--dash-glow);
     }
 
     .prop-img-wrap {
@@ -94,6 +96,7 @@
     .timeline-container {
         background: rgba(255,255,255,0.02); border-radius: 45px; padding: 50px;
         margin-bottom: 60px; border: 1px solid var(--dash-border);
+        box-shadow: var(--dash-glow);
     }
 
     .timeline-steps { display: flex; justify-content: space-between; position: relative; padding: 0 40px; }
@@ -125,6 +128,7 @@
         background: rgba(255,255,255,0.03); border: 1px solid var(--dash-border); border-radius: 30px;
         padding: 30px; transition: 0.4s; text-decoration: none; color: inherit; display: block;
         cursor: default; /* Plus de curseur de lien */
+        box-shadow: var(--dash-glow);
     }
 
     .team-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); }
@@ -138,6 +142,7 @@
     /* DATES TABLE */
     .dates-container {
         background: rgba(255,255,255,0.03); border: 1px solid var(--dash-border); border-radius: 40px; padding: 40px; margin-bottom: 60px;
+        box-shadow: var(--dash-glow);
     }
 
     .date-row {
