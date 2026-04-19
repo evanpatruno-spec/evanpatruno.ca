@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.8 - AUTH FIX & VERBOSE ERRORS)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.9 - FLEXIBLE SEARCH)
  */
 
 export default async function handler(req, res) {
@@ -12,10 +12,10 @@ export default async function handler(req, res) {
     if (req.method !== 'POST') return res.status(405).json({ error: 'Méthode non autorisée' });
 
     const { codePortal } = req.body;
-    const cleanCode = codePortal?.trim();
+    const cleanCode = codePortal?.trim().toUpperCase();
 
     try {
-        // 1. Authentification Robuste
+        // 1. Authentification
         const tokenParams = new URLSearchParams();
         tokenParams.append('refresh_token', process.env.ZOHO_REFRESH_TOKEN?.trim());
         tokenParams.append('client_id', process.env.ZOHO_CLIENT_ID?.trim());
@@ -32,55 +32,63 @@ export default async function handler(req, res) {
         if (!tokenData.access_token) {
             return res.status(401).json({ 
                 error: 'Erreur Auth Zoho', 
-                details: tokenData.error || 'Pas de réponse de Zoho',
-                msg: 'Vérifiez vos variables ZOHO_ dans Vercel.'
+                details: tokenData.error || 'Accès refusé'
             });
         }
 
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        // 2. Fonction de RECHERCHE MULTI-MODULE (Deals & Potentials)
-        async function findInModule(modName) {
+        // 2. RECHERCHE ULTRA-FLEXIBLE
+        async function multiSearch(mod) {
+            // Tentative 1 : Criteria Equals
             const criteria = encodeURIComponent(`(Code_Portail:equals:${cleanCode})`);
-            const searchResp = await fetch(`${apiDomain}/crm/v2/${modName}/search?criteria=${criteria}`, {
-                method: 'GET',
-                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            const r1 = await fetch(`${apiDomain}/crm/v2/${mod}/search?criteria=${criteria}`, {
+                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const data = await searchResp.json();
-            return (data.data && data.data.length > 0) ? data.data[0] : null;
-        }
+            const d1 = await r1.json();
+            if (d1.data && d1.data.length > 0) return d1.data[0];
 
-        // Test successif des modules
-        let deal = await findInModule('Potentials');
-        if (!deal) deal = await findInModule('Deals');
-
-        // 3. SCAN MANUEL SI ÉCHEC (Top 50 des dernières affaires)
-        if (!deal) {
-            const listResp = await fetch(`${apiDomain}/crm/v2/Potentials?sort_order=desc&per_page=50`, {
-                method: 'GET',
-                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            // Tentative 2 : Criteria avec __c
+            const criteria2 = encodeURIComponent(`(Code_Portail__c:equals:${cleanCode})`);
+            const r2 = await fetch(`${apiDomain}/crm/v2/${mod}/search?criteria=${criteria2}`, {
+                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const listData = await listResp.json();
-            if (listData.data) {
-                deal = listData.data.find(d => 
-                    (d.Code_Portail && d.Code_Portail.toString() === cleanCode) ||
-                    (d.Code_Portail__c && d.Code_Portail__c.toString() === cleanCode)
-                );
+            const d2 = await r2.json();
+            if (d2.data && d2.data.length > 0) return d2.data[0];
+
+            // Tentative 3 : Scan manuel case-insensitive
+            const r3 = await fetch(`${apiDomain}/crm/v2/${mod}?sort_order=desc&per_page=100`, {
+                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            });
+            const d3 = await r3.json();
+            if (d3.data) {
+                return d3.data.find(item => {
+                    const c1 = item.Code_Portail?.toString().toUpperCase();
+                    const c2 = item.Code_Portail__c?.toString().toUpperCase();
+                    return c1 === cleanCode || c2 === cleanCode;
+                });
             }
+            return null;
         }
+
+        let deal = await multiSearch('Potentials');
+        if (!deal) deal = await multiSearch('Deals');
 
         if (!deal) {
-            return res.status(404).json({ error: 'Dossier introuvable' });
+            return res.status(404).json({ 
+                error: 'Dossier introuvable',
+                details: `Code cherché: ${cleanCode}. Vérifiez l'orthographe dans Zoho.`
+            });
         }
 
-        // 4. Mapping Final
+        // 3. Mapping Robuste
         const portalData = {
-            firstName: deal.Contact_Name ? deal.Contact_Name.name.split(' ')[0] : "Client",
+            firstName: deal.Contact_Name?.name?.split(' ')[0] || deal.Nom_du_Contact?.name?.split(' ')[0] || "Client",
             code: deal.Code_Portail || deal.Code_Portail__c || deal.id,
-            property: deal.Deal_Name || deal.Potential_Name || "Propriété",
+            property: deal.Deal_Name || deal.Potential_Name || deal.Nom_de_l_Affaire || "Propriété",
             city: deal.Localisation || deal.Ville || "En attente d'adresse",
-            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
+            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : (deal.Prix_affich_ || "--- $"),
             stage: deal.Stage || "Analyse",
             image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
             timeline: [
@@ -91,7 +99,7 @@ export default async function handler(req, res) {
                 { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
             ],
             team: [
-                { role: "Votre Courtier", name: deal.Owner.name, icon: "👨‍💼", contact: `mailto:${deal.Owner.email}` },
+                { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", contact: `mailto:${deal.Owner?.email || 'evan.patruno@gmail.com'}` },
                 { role: "Collaborateur", name: deal.Nom_Courtier_Immobilier || "À venir", icon: "🤝", contact: "#" },
                 { role: "Courtier Hyp.", name: deal.Nom_Courtier_Hypoth_caire || "À venir", icon: "💰", contact: "#" },
                 { role: "Inspecteur", name: deal.Nom_Inspecteur || "À venir", icon: "🔍", contact: "#" },
