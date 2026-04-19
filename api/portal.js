@@ -93,7 +93,7 @@ export default async function handler(req, res) {
         // Évaluation de l'état d'avancement pour la Timeline
         let stage = deal.Stage || "";
         let isFinancementDone = deal.Financement_approuv === true || deal.Financement_approuv === "Oui";
-        let isInspectionDone = document?.Inspection_satisfaisante === true || deal.Inspection_satisfaisante === "Oui";
+        let isInspectionDone = deal.Inspection_satisfaisante === true || deal.Inspection_satisfaisante === "Oui";
         let isConditionsDone = deal.Autres_conditions_lev_es === true || deal.Autres_conditions_lev_es === "Oui";
         let isOfferAccepted = stage.includes("Offre") || isFinancementDone || isInspectionDone || isConditionsDone;
         let isNotaryDone = stage.includes("Notaire") || stage.includes("Clôturé");
