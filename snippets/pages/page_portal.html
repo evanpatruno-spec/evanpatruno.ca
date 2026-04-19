@@ -222,7 +222,7 @@
             <form onsubmit="handlePortalLogin(event)">
                 <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode" required>
                 <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TÉLÉPHONE" class="login-input" id="inpPortalPhone" required style="margin-top: -10px;">
-                <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon dossier ⚡</button>
+                <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon dossier</button>
             </form>
         </div>
     </div>
@@ -551,7 +551,7 @@
                 document.getElementById('portalDash').classList.add('visible');
             }
         } finally {
-            btn.innerText = "Ouvrir mon dossier ⚡";
+            btn.innerText = "Ouvrir mon dossier";
             btn.disabled = false;
             btn.style.opacity = "1";
         }
