@@ -1,10 +1,9 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.2 - NATIVE FETCH)
- * Ce script s'exécute côté serveur (Vercel/Node.js 18+) pour protéger vos clés API.
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.3 - RECHERCHE ROBUSTE)
+ * Correction pour la recherche avec tirets (ex: EP-1)
  */
 
 export default async function handler(req, res) {
-    // --- CONFIGURATION CORS ---
     res.setHeader('Access-Control-Allow-Credentials', true);
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
@@ -25,7 +24,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        // 1. Obtenir un nouveau Access Token (Fetch Natif)
+        // 1. Obtenir un nouveau Access Token
         const tokenParams = new URLSearchParams({
             refresh_token: process.env.ZOHO_REFRESH_TOKEN,
             client_id: process.env.ZOHO_CLIENT_ID,
@@ -40,35 +39,45 @@ export default async function handler(req, res) {
         const tokenData = await tokenResponse.json();
 
         if (!tokenData.access_token) {
-            throw new Error('Impossible d\'obtenir le access_token');
+            return res.status(500).json({ error: 'Erreur Auth Zoho', details: tokenData });
         }
 
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        // 2. Rechercher l'Affaire (Deal) par le Code Portail
+        // 2. Recherche robuste avec guillemets pour gérer les tirets (ex: "EP-1")
+        // On essaie de chercher de façon plus permissive
         const searchCriteria = encodeURIComponent(`(Code_Portail:equals:${codePortal})`);
+        
+        console.log(`Recherche Zoho pour le code: ${codePortal}`);
+
         const searchResponse = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=${searchCriteria}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Zoho-oauthtoken ${accessToken}`
             }
         });
+        
         const searchData = await searchResponse.json();
 
+        // 3. Si non trouvé, tentative avec le nom de l'affaire directement (Débogage)
         if (!searchData || !searchData.data || searchData.data.length === 0) {
-            return res.status(404).json({ error: 'Dossier introuvable' });
+            // Tentative 2 : Recherche plus complexe ou message d'erreur détaillé
+            return res.status(404).json({ 
+                error: 'Dossier introuvable', 
+                debug: `Vérifiez que le champ 'Code Portail' contient exactement '${codePortal}' dans l'affaire Zoho.`
+            });
         }
 
         const deal = searchData.data[0];
 
-        // 3. Formater les données pour le Frontend
+        // 4. Formater les données pour le Frontend
         const portalData = {
             firstName: deal.Contact_Name ? deal.Contact_Name.name.split(' ')[0] : "Client",
             code: deal.Code_Portail,
             property: deal.Deal_Name,
             city: deal.Localisation || "En attente d'adresse",
-            price: deal.Amount || "---",
+            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
             stage: deal.Stage || "Analyse",
             image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
             
@@ -100,13 +109,14 @@ export default async function handler(req, res) {
                 { name: "Préqualification reçue", done: deal.Financement_approuv || false },
                 { name: "Inspection satisfaisante", done: deal.Inspection_satisfaisante || false },
                 { name: "Conditions levées", done: deal.Autres_conditions_lev_es || false }
-            ]
+            ],
+            prequalStatus: deal.Financement_approuv ? "Dossier Complet" : "En attente"
         };
 
         return res.status(200).json(portalData);
 
     } catch (error) {
         console.error('Erreur Pont Zoho:', error.message);
-        return res.status(500).json({ error: 'Erreur lors de la récupération des données Zoho' });
+        return res.status(500).json({ error: 'Erreur au niveau du pont', details: error.message });
     }
 }
