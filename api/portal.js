@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.4 - COMMENT SEARCH FALLBACK)
- * Cherche le code dans les champs OU dans les commentaires
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.5 - LIST SCANNER)
+ * Affiche les 5 derniers dossiers pour identifier le module réel
  */
 
 export default async function handler(req, res) {
@@ -34,80 +34,64 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho' });
 
-        // 2. RECHERCHE GLOBALE (Champs + Notes)
-        // On cherche le code n'importe où
-        const searchResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
+        // 2. MODE DIAGNOSTIC LISTE
+        if (cleanCode === "DIAG") {
+            const mods = ['Potentials', 'Deals', 'Affaires'];
+            let report = [];
+
+            for (const mod of mods) {
+                try {
+                    const resp = await fetch(`${apiDomain}/crm/v2/${mod}?per_page=5`, {
+                        method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+                    });
+                    const d = await resp.json();
+                    if (d.data) {
+                        const names = d.data.map(item => item.Deal_Name || item.Potential_Name || item.Nom_de_l_Affaire || "Sans Nom");
+                        report.push(`${mod}: [${names.join(', ')}]`);
+                    } else {
+                        report.push(`${mod}: Aucun dossier trouvé`);
+                    }
+                } catch (e) { report.push(`${mod}: Erreur`); }
+            }
+
+            return res.status(400).json({ 
+                error: "ANALYSE DE STRUCTURE", 
+                details: report.join(' | ') 
+            });
+        }
+
+        // 3. RECHERCHE NORMALE (Global Word Search)
+        const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
             method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
-        const searchData = await searchResp.json();
+        const sData = await sResp.json();
 
-        let targetId = null;
-        let targetModule = null;
+        if (sData.data && sData.data.length > 0) {
+            const found = sData.data[0];
+            const rId = found.id;
+            const mName = found.$module;
 
-        if (searchData.data && searchData.data.length > 0) {
-            // Si trouvé directement (Affaire, etc.)
-            targetId = searchData.data[0].id;
-            targetModule = searchData.data[0].$module;
-        } else {
-            // FALLBACK : SI NON TROUVÉ, on cherche dans les Notes (Commentaires)
-            const noteSearch = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent("PORTAIL:" + cleanCode)}`, {
+            const rResp = await fetch(`${apiDomain}/crm/v2/${mName}/${rId}`, {
                 method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const noteData = await noteSearch.json();
-            
-            if (noteData.data && noteData.data.length > 0) {
-                // On a trouvé une note ! On remonte au dossier parent.
-                const noteId = noteData.data[0].id;
-                const fullNoteResp = await fetch(`${apiDomain}/crm/v2/Notes/${noteId}`, {
-                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-                });
-                const fullNote = await fullNoteResp.json();
-                if (fullNote.data) {
-                    targetId = fullNote.data[0].Parent_Id?.id;
-                    targetModule = fullNote.data[0].Parent_Id?.$module;
-                }
-            }
-        }
+            const dData = await rResp.json();
+            const deal = dData.data[0];
 
-        if (!targetId) {
-            return res.status(404).json({ 
-                error: 'Sécurité : Code non autorisé',
-                details: `Votre code ${cleanCode} n'est pas encore synchronisé. Ajoutez un commentaire "PORTAIL:${cleanCode}" dans votre affaire pour forcer l'accès.`
+            return res.status(200).json({
+                firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
+                code: cleanCode,
+                property: deal.Deal_Name || deal.Potential_Name || deal.Nom_de_l_Affaire || "Propriété",
+                city: deal.Ville || deal.Localisation || "Adresse",
+                price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
+                stage: deal.Stage || "Actif",
+                image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=400",
+                timeline: [], team: [], dates: [], checklist: []
             });
         }
 
-        // 3. RECUPERATION DU DOSSIER FINAL
-        const recordResp = await fetch(`${apiDomain}/crm/v2/${targetModule}/${targetId}`, {
-            method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-        });
-        const finalData = await recordResp.json();
-        const deal = finalData.data[0];
-
-        // 4. MAPPING
-        return res.status(200).json({
-            firstName: "Client de " + (deal.Owner?.name || "Evan"),
-            code: cleanCode,
-            property: deal.Deal_Name || deal.Potential_Name || deal.Nom_de_l_Affaire || "Propriété",
-            city: deal.Localisation || deal.Ville || "En cours...",
-            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "Consultez Evan",
-            stage: deal.Stage || "Actif",
-            image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
-            timeline: [
-                { label: "Préqual.", icon: "💎", status: "completed" },
-                { label: "Recherche", icon: "🔍", status: "active" },
-                { label: "Offre", icon: "📝", status: "pending" },
-                { label: "Notaire", icon: "✒️", status: "pending" }
-            ],
-            team: [
-                { role: "Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", contact: `mailto:evan@evanpatruno.ca` }
-            ],
-            dates: [
-                { label: "Date cible", val: deal.Closing_Date || "À déterminer" }
-            ],
-            checklist: []
-        });
+        return res.status(404).json({ error: 'Code inconnu', details: "Vérifiez que le code EP-1 est bien écrit dans une case de Zoho." });
 
     } catch (error) {
-        return res.status(500).json({ error: 'Erreur Système', details: error.message });
+        return res.status(500).json({ error: 'Erreur Fatale', details: error.message });
     }
 }
