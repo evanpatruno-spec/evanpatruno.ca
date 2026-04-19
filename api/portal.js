@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.3 - RECHERCHE ROBUSTE)
- * Correction pour la recherche avec tirets (ex: EP-1)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.4 - DEBUG MODE)
+ * Affiche plus de détails sur l'erreur d'authentification
  */
 
 export default async function handler(req, res) {
@@ -19,16 +19,13 @@ export default async function handler(req, res) {
     }
 
     const { codePortal } = req.body;
-    if (!codePortal) {
-        return res.status(400).json({ error: 'Code Portail manquant' });
-    }
 
     try {
-        // 1. Obtenir un nouveau Access Token
+        // 1. Tenter d'obtenir l'Access Token avec des logs de debug
         const tokenParams = new URLSearchParams({
-            refresh_token: process.env.ZOHO_REFRESH_TOKEN,
-            client_id: process.env.ZOHO_CLIENT_ID,
-            client_secret: process.env.ZOHO_CLIENT_SECRET,
+            refresh_token: process.env.ZOHO_REFRESH_TOKEN?.trim(),
+            client_id: process.env.ZOHO_CLIENT_ID?.trim(),
+            client_secret: process.env.ZOHO_CLIENT_SECRET?.trim(),
             grant_type: 'refresh_token'
         });
 
@@ -39,39 +36,36 @@ export default async function handler(req, res) {
         const tokenData = await tokenResponse.json();
 
         if (!tokenData.access_token) {
-            return res.status(500).json({ error: 'Erreur Auth Zoho', details: tokenData });
+            // RETOURNER L'ERREUR DÉTAILLÉE DE ZOHO
+            return res.status(401).json({ 
+                error: 'Erreur Auth Zoho', 
+                details: tokenData.error || 'Erreur inconnue',
+                hint: 'Vérifiez vos clés API et le Refresh Token dans Vercel.'
+            });
         }
 
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        // 2. Recherche robuste avec guillemets pour gérer les tirets (ex: "EP-1")
-        // On essaie de chercher de façon plus permissive
+        // 2. Recherche du Dossier
         const searchCriteria = encodeURIComponent(`(Code_Portail:equals:${codePortal})`);
-        
-        console.log(`Recherche Zoho pour le code: ${codePortal}`);
-
         const searchResponse = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=${searchCriteria}`, {
             method: 'GET',
-            headers: {
-                'Authorization': `Zoho-oauthtoken ${accessToken}`
-            }
+            headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
         
         const searchData = await searchResponse.json();
 
-        // 3. Si non trouvé, tentative avec le nom de l'affaire directement (Débogage)
         if (!searchData || !searchData.data || searchData.data.length === 0) {
-            // Tentative 2 : Recherche plus complexe ou message d'erreur détaillé
             return res.status(404).json({ 
-                error: 'Dossier introuvable', 
-                debug: `Vérifiez que le champ 'Code Portail' contient exactement '${codePortal}' dans l'affaire Zoho.`
+                error: 'Dossier introuvable',
+                debug: `Recherche effectuée pour: ${codePortal}`
             });
         }
 
         const deal = searchData.data[0];
 
-        // 4. Formater les données pour le Frontend
+        // 3. Mapping complet (on garde la même structure)
         const portalData = {
             firstName: deal.Contact_Name ? deal.Contact_Name.name.split(' ')[0] : "Client",
             code: deal.Code_Portail,
@@ -80,7 +74,6 @@ export default async function handler(req, res) {
             price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
             stage: deal.Stage || "Analyse",
             image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
-            
             timeline: [
                 { label: "Préqual.", icon: "💎", status: deal.Financement_approuv ? "completed" : "active" },
                 { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage.includes("Offre") ? "completed" : "pending") },
@@ -88,7 +81,6 @@ export default async function handler(req, res) {
                 { label: "Inspection", icon: "⚙️", status: deal.Date_d_inspection ? (new Date(deal.Date_d_inspection) < new Date() ? "completed" : "active") : "pending" },
                 { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
             ],
-
             team: [
                 { role: "Votre Courtier", name: deal.Owner.name, icon: "👨‍💼", contact: `mailto:${deal.Owner.email}` },
                 { role: "Collaborateur", name: deal.Nom_Courtier_Immobilier || "À venir", icon: "🤝", contact: "#" },
@@ -96,7 +88,6 @@ export default async function handler(req, res) {
                 { role: "Inspecteur", name: deal.Nom_Inspecteur || "À venir", icon: "🔍", contact: "#" },
                 { role: "Notaire", name: deal.Nom_Notaire || "À venir", icon: "🖋️", contact: "#" }
             ],
-
             dates: [
                 { label: "Signature du contrat", val: deal.Date_de_la_Signature_du_Contrat || "À venir" },
                 { label: "Date limite financement", val: deal.Date_de_financement || "À venir" },
@@ -104,7 +95,6 @@ export default async function handler(req, res) {
                 { label: "Date de clôture (Notaire)", val: deal.Closing_Date || "À venir" },
                 { label: "Date d'occupation", val: deal.Date_d_occupation || "À venir" }
             ],
-
             checklist: [
                 { name: "Préqualification reçue", done: deal.Financement_approuv || false },
                 { name: "Inspection satisfaisante", done: deal.Inspection_satisfaisante || false },
@@ -116,7 +106,6 @@ export default async function handler(req, res) {
         return res.status(200).json(portalData);
 
     } catch (error) {
-        console.error('Erreur Pont Zoho:', error.message);
-        return res.status(500).json({ error: 'Erreur au niveau du pont', details: error.message });
+        return res.status(500).json({ error: 'Erreur Technique', details: error.message });
     }
 }
