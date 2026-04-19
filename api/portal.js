@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.2 - MODULE & DOMAIN DIAGNOSTIC)
- * Identifie le domaine API et la liste des modules disponibles
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.3 - GLOBAL SEARCH)
+ * Utilise l'API de recherche globale pour trouver 'EP-1' n'importe où dans le CRM
  */
 
 export default async function handler(req, res) {
@@ -34,64 +34,69 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho' });
 
-        // 2. MODE DIAGNOSTIC STRUCTUREL
-        if (cleanCode === "DIAG") {
-            // On demande la liste des modules pour voir les noms réels
-            const resp = await fetch(`${apiDomain}/crm/v2/settings/modules`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const data = await resp.json();
-            
-            if (!data.modules) {
-                return res.status(400).json({ 
-                    error: "Échec Diagnostic Modules", 
-                    details: `Domaine: ${apiDomain} | Erreur: ${JSON.stringify(data)}` 
-                });
-            }
-
-            const moduleNames = data.modules.map(m => m.api_name).sort().join(', ');
-            
-            return res.status(400).json({ 
-                error: "Détails de la structure Zoho", 
-                details: `Domaine API: ${apiDomain} | Modules trouvés: ${moduleNames}`
-            });
-        }
-
-        // 3. RECHERCHE NORMALE (Même logique brute force value)
-        async function findDeal(module) {
-            try {
-                const resp = await fetch(`${apiDomain}/crm/v2/${module}?sort_order=desc&per_page=100`, {
-                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-                });
-                const listData = await resp.json();
-                if (!listData.data) return null;
-
-                return listData.data.find(item => {
-                    return Object.values(item).some(val => 
-                        val && val.toString().toUpperCase() === cleanCode
-                    );
-                });
-            } catch(e) { return null; }
-        }
-
-        let deal = await findDeal('Potentials');
-        if (!deal) deal = await findDeal('Deals');
-
-        if (!deal) {
-            return res.status(404).json({ error: 'Dossier introuvable' });
-        }
-
-        // ... (Mapping normal simplifié pour le test)
-        return res.status(200).json({
-            firstName: "Client",
-            code: cleanCode,
-            property: deal.Deal_Name || deal.Potential_Name || "Propriété",
-            city: deal.Ville || "Adresse",
-            price: "---",
-            stage: deal.Stage || "En cours",
-            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
-            timeline: [], team: [], dates: [], checklist: []
+        // 2. RECHERCHE GLOBALE (The ultimate search)
+        // Cette API cherche le mot 'EP-1' partout dans le CRM
+        const searchResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
+            method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
+        const searchData = await searchResp.json();
+
+        if (!searchData.data || searchData.data.length === 0) {
+            return res.status(404).json({ 
+                error: 'Dossier introuvable',
+                details: `La recherche globale pour "${cleanCode}" n'a rien donné. Vérifiez que ce code existe bien dans une fiche Zoho.`
+            });
+        }
+
+        // On prend le premier résultat qui ressemble à une Affaire/Potentiel
+        const found = searchData.data[0];
+        const recordId = found.id;
+        const moduleName = found.$module; 
+
+        // 3. RECUPERATION COMPLETE DU DOSSIER TROUVÉ
+        const recordResp = await fetch(`${apiDomain}/crm/v2/${moduleName}/${recordId}`, {
+            method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+        });
+        const dealData = await recordResp.json();
+        const deal = dealData.data[0];
+
+        // 4. MAPPING FINAL
+        const portalData = {
+            firstName: deal.Contact_Name?.name?.split(' ')[0] || deal.Nom_du_Contact?.name?.split(' ')[0] || "Client",
+            code: cleanCode,
+            property: deal.Deal_Name || deal.Potential_Name || deal.Nom_de_l_Affaire || "Votre Propriété",
+            city: deal.Localisation || deal.Ville || "Adresse en cours",
+            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : (deal.Prix_affich_ || "--- $"),
+            stage: deal.Stage || "Analyse",
+            image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
+            timeline: [
+                { label: "Préqual.", icon: "💎", status: deal.Financement_approuv ? "completed" : "active" },
+                { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage?.includes("Offre") ? "completed" : "pending") },
+                { label: "Offre", icon: "📝", status: deal.Stage?.includes("Offre") ? "active" : (deal.Closing_Date ? "completed" : "pending") },
+                { label: "Inspection", icon: "⚙️", status: deal.Date_d_inspection ? "completed" : "pending" },
+                { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
+            ],
+            team: [
+                { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", contact: `mailto:${deal.Owner?.email || 'evan@evanpatruno.ca'}` },
+                { role: "Collaborateur", name: deal.Nom_Courtier_Immobilier || "À venir", icon: "🤝", contact: "#" },
+                { role: "Courtier Hyp.", name: deal.Nom_Courtier_Hypoth_caire || "À venir", icon: "💰", contact: "#" },
+                { role: "Inspecteur", name: deal.Nom_Inspecteur || "À venir", icon: "🔍", contact: "#" },
+                { role: "Notaire", name: deal.Nom_Notaire || "À venir", icon: "🖋️", contact: "#" }
+            ],
+            dates: [
+                { label: "Signature du contrat", val: deal.Date_de_la_Signature_du_Contrat || "À venir" },
+                { label: "Rendez-vous Inspection", val: deal.Date_d_inspection || "À venir" },
+                { label: "Date de clôture (Notaire)", val: deal.Closing_Date || "À venir" },
+                { label: "Date d'occupation", val: deal.Date_d_occupation || "À venir" }
+            ],
+            checklist: [
+                { name: "Préqualification reçue", done: deal.Financement_approuv || false },
+                { name: "Inspection satisfaisante", done: deal.Inspection_satisfaisante || false },
+                { name: "Conditions levées", done: deal.Autres_conditions_lev_es || false }
+            ]
+        };
+
+        return res.status(200).json(portalData);
 
     } catch (error) {
         return res.status(500).json({ error: 'Erreur Serveur', details: error.message });
