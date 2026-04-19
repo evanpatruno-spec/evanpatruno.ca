@@ -56,7 +56,7 @@ export default async function handler(req, res) {
         if (!deal) return res.status(404).json({ error: 'Dossier introuvable' });
 
         // --- ÉTAPE CLÔTURE (Cycle de vie) ---
-        const stage = deal.Stage || "";
+        let stage = deal.Stage || "";
         if (stage === "Closed Won" || stage.includes("Gagné") || stage.includes("Clôturé")) {
             return res.status(403).json({ 
                 errorType: "WON", 
