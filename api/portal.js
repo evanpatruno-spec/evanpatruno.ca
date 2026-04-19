@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.4 - DEBUG MODE)
- * Affiche plus de détails sur l'erreur d'authentification
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.5 - RECHERCHE UNIVERSELLE)
+ * Utilise une recherche par critères ET un scan manuel pour être sûr de trouver le dossier.
  */
 
 export default async function handler(req, res) {
@@ -9,19 +9,14 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
     res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
 
-    if (req.method === 'OPTIONS') {
-        res.status(200).end();
-        return;
-    }
-
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Méthode non autorisée' });
-    }
+    if (req.method === 'OPTIONS') return res.status(200).end();
+    if (req.method !== 'POST') return res.status(405).json({ error: 'Méthode non autorisée' });
 
     const { codePortal } = req.body;
+    const cleanCode = codePortal?.trim();
 
     try {
-        // 1. Tenter d'obtenir l'Access Token avec des logs de debug
+        // 1. Authentification
         const tokenParams = new URLSearchParams({
             refresh_token: process.env.ZOHO_REFRESH_TOKEN?.trim(),
             client_id: process.env.ZOHO_CLIENT_ID?.trim(),
@@ -30,45 +25,59 @@ export default async function handler(req, res) {
         });
 
         const tokenResponse = await fetch('https://accounts.zoho.com/oauth/v2/token', {
-            method: 'POST',
-            body: tokenParams
+            method: 'POST', body: tokenParams
         });
         const tokenData = await tokenResponse.json();
 
         if (!tokenData.access_token) {
-            // RETOURNER L'ERREUR DÉTAILLÉE DE ZOHO
-            return res.status(401).json({ 
-                error: 'Erreur Auth Zoho', 
-                details: tokenData.error || 'Erreur inconnue',
-                hint: 'Vérifiez vos clés API et le Refresh Token dans Vercel.'
-            });
+            return res.status(401).json({ error: 'Erreur Auth Zoho', details: tokenData.error });
         }
 
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        // 2. Recherche du Dossier
-        const searchCriteria = encodeURIComponent(`(Code_Portail:equals:${codePortal})`);
+        // 2. TENTATIVE 1 : Recherche Directe (Rapide)
+        const searchCriteria = encodeURIComponent(`(Code_Portail:equals:${cleanCode})`);
         const searchResponse = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=${searchCriteria}`, {
             method: 'GET',
             headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
-        
         const searchData = await searchResponse.json();
 
-        if (!searchData || !searchData.data || searchData.data.length === 0) {
+        let deal = null;
+        if (searchData.data && searchData.data.length > 0) {
+            deal = searchData.data[0];
+        } 
+        
+        // 3. TENTATIVE 2 : Scan Manuel (Lent mais infaillible)
+        if (!deal) {
+            console.log("Recherche directe échouée, passage au scan manuel...");
+            const listResponse = await fetch(`${apiDomain}/crm/v2/Deals?sort_order=desc&sort_by=Modified_Time`, {
+                method: 'GET',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            });
+            const listData = await listResponse.json();
+
+            if (listData.data) {
+                // On cherche dans les 200 dernières affaires celle qui a le code correspondant
+                deal = listData.data.find(d => 
+                    (d.Code_Portail && d.Code_Portail.toString().trim().toUpperCase() === cleanCode.toUpperCase()) ||
+                    (d.Deal_Name && d.Deal_Name.includes(cleanCode))
+                );
+            }
+        }
+
+        if (!deal) {
             return res.status(404).json({ 
                 error: 'Dossier introuvable',
-                debug: `Recherche effectuée pour: ${codePortal}`
+                debug: `Code cherché: ${cleanCode}. Aucune correspondance trouvée dans les dernières affaires.`
             });
         }
 
-        const deal = searchData.data[0];
-
-        // 3. Mapping complet (on garde la même structure)
+        // 4. Mapping Final
         const portalData = {
             firstName: deal.Contact_Name ? deal.Contact_Name.name.split(' ')[0] : "Client",
-            code: deal.Code_Portail,
+            code: deal.Code_Portail || deal.id,
             property: deal.Deal_Name,
             city: deal.Localisation || "En attente d'adresse",
             price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
@@ -76,8 +85,8 @@ export default async function handler(req, res) {
             image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
             timeline: [
                 { label: "Préqual.", icon: "💎", status: deal.Financement_approuv ? "completed" : "active" },
-                { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage.includes("Offre") ? "completed" : "pending") },
-                { label: "Offre", icon: "📝", status: deal.Stage.includes("Offre") ? "active" : (deal.Closing_Date ? "completed" : "pending") },
+                { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage && deal.Stage.includes("Offre") ? "completed" : "pending") },
+                { label: "Offre", icon: "📝", status: deal.Stage && deal.Stage.includes("Offre") ? "active" : (deal.Closing_Date ? "completed" : "pending") },
                 { label: "Inspection", icon: "⚙️", status: deal.Date_d_inspection ? (new Date(deal.Date_d_inspection) < new Date() ? "completed" : "active") : "pending" },
                 { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
             ],
@@ -106,6 +115,6 @@ export default async function handler(req, res) {
         return res.status(200).json(portalData);
 
     } catch (error) {
-        return res.status(500).json({ error: 'Erreur Technique', details: error.message });
+        return res.status(500).json({ error: 'Erreur Serveur', details: error.message });
     }
 }
