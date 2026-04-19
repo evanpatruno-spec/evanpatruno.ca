@@ -1,12 +1,24 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.1 - avec CORS)
  * Ce script s'exécute côté serveur (Vercel/Node.js) pour protéger vos clés API.
  */
 
 const axios = require('axios');
 
 export default async function handler(req, res) {
-    // 1. Autoriser uniquement les requêtes POST
+    // --- CONFIGURATION CORS ---
+    // Autoriser votre site web à appeler cette API
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Vous pourrez restreindre à 'https://evanpatruno.ca' plus tard
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+    res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
+
+    // Gérer la requête OPTIONS (pré-vol CORS)
+    if (req.method === 'OPTIONS') {
+        res.status(200).end();
+        return;
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Méthode non autorisée' });
     }
@@ -32,7 +44,6 @@ export default async function handler(req, res) {
         const apiDomain = tokenResponse.data.api_domain || "https://www.zohoapis.com";
 
         // 3. Rechercher l'Affaire (Deal) par le Code Portail
-        // API Name: Code_Portail (confirmé précédemment)
         const searchResponse = await axios.get(`${apiDomain}/crm/v2/Deals/search`, {
             params: {
                 criteria: `(Code_Portail:equals:${codePortal})`
@@ -49,7 +60,6 @@ export default async function handler(req, res) {
         const deal = searchResponse.data.data[0];
 
         // 4. Formater les données pour le Frontend
-        // On utilise les noms d'API identifiés dans zoho_mapping.md
         const portalData = {
             firstName: deal.Contact_Name ? deal.Contact_Name.name.split(' ')[0] : "Client",
             code: deal.Code_Portail,
@@ -59,7 +69,6 @@ export default async function handler(req, res) {
             stage: deal.Stage || "Analyse",
             image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
             
-            // Timeline basée sur les étapes standard ou champs personnalisés
             timeline: [
                 { label: "Préqual.", icon: "💎", status: deal.Financement_approuv ? "completed" : "active" },
                 { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage.includes("Offre") ? "completed" : "pending") },
@@ -68,7 +77,6 @@ export default async function handler(req, res) {
                 { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
             ],
 
-            // Intervenants
             team: [
                 { role: "Votre Courtier", name: deal.Owner.name, icon: "👨‍💼", contact: `mailto:${deal.Owner.email}` },
                 { role: "Collaborateur", name: deal.Nom_Courtier_Immobilier || "À venir", icon: "🤝", contact: "#" },
@@ -77,7 +85,6 @@ export default async function handler(req, res) {
                 { role: "Notaire", name: deal.Nom_Notaire || "À venir", icon: "🖋️", contact: "#" }
             ],
 
-            // Dates Clés
             dates: [
                 { label: "Signature du contrat", val: deal.Date_de_la_Signature_du_Contrat || "À venir" },
                 { label: "Date limite financement", val: deal.Date_de_financement || "À venir" },
@@ -86,7 +93,6 @@ export default async function handler(req, res) {
                 { label: "Date d'occupation", val: deal.Date_d_occupation || "À venir" }
             ],
 
-            // Checklist
             checklist: [
                 { name: "Préqualification reçue", done: deal.Financement_approuv || false },
                 { name: "Inspection satisfaisante", done: deal.Inspection_satisfaisante || false },
