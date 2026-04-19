@@ -190,8 +190,9 @@
             <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff;">Accès au Dossier</h2>
             <p style="color: rgba(255,255,255,0.6); margin-bottom: 40px;">Entrez votre Code Portail unique.</p>
             <form onsubmit="handlePortalLogin(event)">
-                <input type="text" placeholder="CODE (ex: EP-1001)" class="login-input" id="inpPortalCode" required>
-                <button type="submit" class="login-btn" id="btnPortalLogin">Ouvrir mon dossier ⚡</button>
+                <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode" required>
+                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TÉLÉPHONE" class="login-input" id="inpPortalPhone" required style="margin-top: -10px;">
+                <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon dossier ⚡</button>
             </form>
         </div>
     </div>
@@ -402,18 +403,21 @@
     async function handlePortalLogin(e) {
         e.preventDefault();
         const code = document.getElementById('inpPortalCode').value.trim();
+        const phone = document.getElementById('inpPortalPhone').value.trim();
         const btn = document.getElementById('btnPortalLogin');
         
-        btn.innerText = "Connexion sécurisée...";
+        btn.innerText = "Vérification sécurisée...";
         btn.disabled = true;
         btn.style.opacity = "0.7";
         
         try {
-            // APPEL AU PONT SÉCURISÉ (URL Vercel absolue)
             const response = await fetch('https://evanpatruno-ca.vercel.app/api/portal', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ codePortal: code })
+                body: JSON.stringify({ 
+                    codePortal: code,
+                    phoneLast4: phone 
+                })
             });
 
             if (!response.ok) {

@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V4.1 - PREMIUM EXPANSION)
- * Ajout du compte à rebours, de la checklist déménagement et du mode vendeur.
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V4.2 - SECURED 2FA & CONTACT DETAILS)
+ * Implémentation du 2FA par téléphone et récupération des détails des partenaires.
  */
 
 export default async function handler(req, res) {
@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     if (req.method === 'OPTIONS') return res.status(200).end();
     if (req.method !== 'POST') return res.status(405).json({ error: 'Méthode non autorisée' });
 
-    const { codePortal } = req.body;
+    const { codePortal, phoneLast4 } = req.body;
     const cleanCode = codePortal?.trim().toUpperCase();
 
     try {
@@ -55,25 +55,71 @@ export default async function handler(req, res) {
 
         if (!deal) return res.status(404).json({ error: 'Dossier introuvable' });
 
-        const formatDate = (d) => d ? new Date(d).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
-        const getLookupName = (f) => f && typeof f === 'object' ? f.name : f;
+        // --- ÉTAPE SÉCURITÉ : VÉRIFICATION 2FA ---
+        const mainContactId = deal.Contact_Name?.id;
+        if (!mainContactId) return res.status(403).json({ error: "Sécurité : Aucun contact associé au dossier." });
 
-        // Calcul du compte à rebours
-        let daysRemaining = null;
-        if (deal.Closing_Date) {
-            const closing = new Date(deal.Closing_Date);
-            const today = new Date();
-            const diff = closing - today;
-            daysRemaining = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+        const contactResp = await fetch(`${apiDomain}/crm/v2/Contacts/${mainContactId}`, {
+            method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+        });
+        const contactData = await contactResp.json();
+        const clientContact = contactData.data ? contactData.data[0] : null;
+
+        if (!clientContact) return res.status(403).json({ error: "Sécurité : Fiche client introuvable." });
+
+        // On nettoie le téléphone pour ne garder que les chiffres
+        const cleanPhone = (clientContact.Mobile || clientContact.Phone || "").replace(/\D/g, "");
+        const actualLast4 = cleanPhone.slice(-4);
+
+        if (actualLast4 !== phoneLast4) {
+            return res.status(401).json({ 
+                error: "Détails de sécurité incorrects", 
+                details: "Les 4 chiffres du téléphone ne correspondent pas à ceux enregistrés au dossier." 
+            });
         }
 
-        const team = [
-            { role: "Votre Courtier", name: getLookupName(deal.Owner) || "Evan Patruno", icon: "👨‍💼", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }
-        ];
-        if (deal.Nom_Courtier_Hypoth_caire) team.push({ role: "Courtier Hypothécaire", name: getLookupName(deal.Nom_Courtier_Hypoth_caire), icon: "🏦", phone: deal.Tel_Courtier || "À venir", email: deal.Email_Courtier || "À venir", contact: deal.Email_Courtier ? `mailto:${deal.Email_Courtier}` : "#" });
-        if (deal.Nom_Inspecteur) team.push({ role: "Inspecteur en Bâtiment", name: getLookupName(deal.Nom_Inspecteur), icon: "🔍", phone: deal.Tel_Inspecteur || "À venir", email: deal.Email_Inspecteur || "À venir", contact: deal.Email_Inspecteur ? `mailto:${deal.Email_Inspecteur}` : "#" });
-        if (deal.Nom_Notaire) team.push({ role: "Notaire", name: getLookupName(deal.Nom_Notaire), icon: "✒️", phone: deal.Tel_Notaire || "À venir", email: deal.Email_Notaire || "À venir", contact: deal.Email_Notaire ? `mailto:${deal.Email_Notaire}` : "#" });
+        // --- ÉTAPE RÉCUPÉRATION DÉTAILS PARTENAIRES ---
+        const fetchPartner = async (partnerField) => {
+            if (!partnerField || !partnerField.id) return null;
+            try {
+                const resp = await fetch(`${apiDomain}/crm/v2/Contacts/${partnerField.id}`, {
+                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+                });
+                const d = await resp.json();
+                return d.data ? d.data[0] : null;
+            } catch (e) { return null; }
+        };
 
+        const [notaire, inspecteur, courtier] = await Promise.all([
+            fetchPartner(deal.Nom_Notaire),
+            fetchPartner(deal.Nom_Inspecteur),
+            fetchPartner(deal.Nom_Courtier_Hypoth_caire)
+        ]);
+
+        const team = [
+            { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }
+        ];
+
+        const addPartnerToTeam = (p, role, icon) => {
+            if (!p) return;
+            const pPhone = p.Mobile || p.Phone || "À venir";
+            const pEmail = p.Email || "À venir";
+            team.push({
+                role: role,
+                name: p.Full_Name || p.last_name || p.Name,
+                icon: icon,
+                phone: pPhone,
+                email: pEmail,
+                contact: pEmail !== "À venir" ? `mailto:${pEmail}` : "#"
+            });
+        };
+
+        addPartnerToTeam(courtier, "Courtier Hypothécaire", "🏦");
+        addPartnerToTeam(inspecteur, "Inspecteur en Bâtiment", "🔍");
+        addPartnerToTeam(notaire, "Notaire", "✒️");
+
+        // --- RESTE DU MAPPING ---
+        const formatDate = (d) => d ? new Date(d).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
         const dates = [];
         if (deal.Date_de_financement) dates.push({ label: "Date limite financement", val: formatDate(deal.Date_de_financement) });
         if (deal.Date_d_inspection) dates.push({ label: "Date limite inspection", val: formatDate(deal.Date_d_inspection) });
@@ -84,12 +130,19 @@ export default async function handler(req, res) {
         let isFinancementDone = deal.Financement_approuv === true || deal.Financement_approuv === "Oui";
         let isInspectionDone = deal.Inspection_satisfaisante === true || deal.Inspection_satisfaisante === "Oui";
         let isConditionsDone = deal.Autres_conditions_lev_es === true || deal.Autres_conditions_lev_es === "Oui";
-
-        // Détection Acheteur vs Vendeur
         const transactionType = deal.Type === "Vente" ? "Vendeur" : "Acheteur";
 
+        // Détermination des jours restants
+        let daysRemaining = null;
+        if (deal.Closing_Date) {
+            const closing = new Date(deal.Closing_Date);
+            const today = new Date();
+            const diff = closing - today;
+            daysRemaining = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+        }
+
         const portalData = {
-            firstName: getLookupName(deal.Contact_Name)?.split(' ')[0] || "Cher client",
+            firstName: clientContact.First_Name || "Cher client",
             code: cleanCode,
             property: deal.Deal_Name || "Votre Propriété",
             city: deal.Ville || "",
@@ -116,8 +169,7 @@ export default async function handler(req, res) {
                 { name: "Internet & TV", done: false }
             ],
             sellerData: transactionType === "Vendeur" ? {
-                visits: 12, // Placeholder
-                feedback: [
+                visits: 12, feedback: [
                     { date: "2026-04-15", comment: "Très belle cuisine, mais jardin un peu petit.", rating: 4 },
                     { date: "2026-04-18", comment: "Coup de coeur pour la luminosité !", rating: 5 }
                 ]
