@@ -167,13 +167,13 @@ export default async function handler(req, res) {
             transactionType: transactionType,
             daysRemaining: daysRemaining,
             timeline: [
-                { label: "Préqual.", icon: "💎", status: isFinancementDone ? "completed" : "active" },
+                { label: "Financement", icon: "💎", status: isFinancementDone ? "completed" : "active" },
                 { label: "Offre", icon: "📝", status: (stage.includes("Offre") || isConditionsDone) ? "completed" : "active" },
                 { label: "Conditions", icon: "⚙️", status: isConditionsDone ? "completed" : "active" },
                 { label: "Signature", icon: "✒️", status: (stage.includes("Notaire") || stage.includes("Clôturé")) ? "completed" : "pending" }
             ],
             checklist: [
-                { name: "Financement pré-approuvé", done: isFinancementDone },
+                { name: "Financement Approuvé", done: isFinancementDone },
                 { name: "Inspection complétée", done: isInspectionDone },
                 { name: "Conditions de l'offre levées", done: isConditionsDone }
             ],
