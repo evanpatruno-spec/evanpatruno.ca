@@ -189,6 +189,7 @@
     .partner-card {
         background: rgba(255,255,255,0.02); border: 1px solid var(--dash-border); border-radius: 25px;
         padding: 25px; transition: 0.3s; position: relative; overflow: hidden;
+        user-select: none; /* Empêche le surlignage accidentel */
     }
     .partner-card:hover { transform: scale(1.02); border-color: var(--dash-primary); box-shadow: var(--dash-glow); }
     .partner-promo-badge {
@@ -419,7 +420,7 @@
         document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, idx) => {
             const isDone = savedMoving[idx] !== undefined ? savedMoving[idx] : c.done;
             return `
-                <div class="moving-item ${isDone ? 'done' : ''}" onclick="toggleMovingItem('${data.code}', ${idx})" id="moving-${idx}" style="background:rgba(255,255,255,0.02);padding:20px;border-radius:20px;display:flex;align-items:center;gap:15px;border:1px solid rgba(255,255,255,0.1); cursor:pointer; transition: 0.3s; box-shadow: var(--dash-glow);">
+                <div class="moving-item ${isDone ? 'done' : ''}" onclick="toggleMovingItem('${data.code}', ${idx})" id="moving-${idx}" style="background:rgba(255,255,255,0.02);padding:20px;border-radius:20px;display:flex;align-items:center;gap:15px;border:1px solid rgba(255,255,255,0.1); cursor:pointer; transition: 0.3s; box-shadow: var(--dash-glow); user-select:none;">
                     <div class="check-box" style="width:24px;height:24px;border:2px solid ${isDone ? '#2ecc71' : 'rgba(255,255,255,0.2)'};border-radius:6px;display:flex;align-items:center;justify-content:center;color:#2ecc71;font-weight:900; background: ${isDone ? 'rgba(46,204,113,0.1)' : 'transparent'};">
                         ${isDone ? '✓' : ''}
                     </div>
