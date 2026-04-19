@@ -1,5 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.9 - FLEXIBLE SEARCH)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.0 - BRUTE FORCE VALUE SEARCH)
+ * Scanne l'intégralité des données à la recherche de la valeur 'EP-1'
  */
 
 export default async function handler(req, res) {
@@ -28,68 +29,45 @@ export default async function handler(req, res) {
             body: tokenParams.toString()
         });
         const tokenData = await tokenResponse.json();
-
-        if (!tokenData.access_token) {
-            return res.status(401).json({ 
-                error: 'Erreur Auth Zoho', 
-                details: tokenData.error || 'Accès refusé'
-            });
-        }
+        if (!tokenData.access_token) return res.status(401).json({ error: 'Erreur Auth Zoho' });
 
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        // 2. RECHERCHE ULTRA-FLEXIBLE
-        async function multiSearch(mod) {
-            // Tentative 1 : Criteria Equals
-            const criteria = encodeURIComponent(`(Code_Portail:equals:${cleanCode})`);
-            const r1 = await fetch(`${apiDomain}/crm/v2/${mod}/search?criteria=${criteria}`, {
+        // 2. RECHERCHE PAR BALAYAGE TOTAL (On cherche la valeur EP-1 n'importe où dans le JSON)
+        async function deepSearch(module) {
+            const resp = await fetch(`${apiDomain}/crm/v2/${module}?sort_order=desc&per_page=100`, {
                 method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const d1 = await r1.json();
-            if (d1.data && d1.data.length > 0) return d1.data[0];
+            const listData = await resp.json();
+            if (!listData.data) return null;
 
-            // Tentative 2 : Criteria avec __c
-            const criteria2 = encodeURIComponent(`(Code_Portail__c:equals:${cleanCode})`);
-            const r2 = await fetch(`${apiDomain}/crm/v2/${mod}/search?criteria=${criteria2}`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            // ON CHERCHE LA VALEUR DANS TOUTES LES CLÉS DE CHAQUE OBJET
+            return listData.data.find(item => {
+                return Object.values(item).some(val => 
+                    val && val.toString().toUpperCase() === cleanCode
+                );
             });
-            const d2 = await r2.json();
-            if (d2.data && d2.data.length > 0) return d2.data[0];
-
-            // Tentative 3 : Scan manuel case-insensitive
-            const r3 = await fetch(`${apiDomain}/crm/v2/${mod}?sort_order=desc&per_page=100`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const d3 = await r3.json();
-            if (d3.data) {
-                return d3.data.find(item => {
-                    const c1 = item.Code_Portail?.toString().toUpperCase();
-                    const c2 = item.Code_Portail__c?.toString().toUpperCase();
-                    return c1 === cleanCode || c2 === cleanCode;
-                });
-            }
-            return null;
         }
 
-        let deal = await multiSearch('Potentials');
-        if (!deal) deal = await multiSearch('Deals');
+        let deal = await deepSearch('Potentials');
+        if (!deal) deal = await deepSearch('Deals');
 
         if (!deal) {
             return res.status(404).json({ 
                 error: 'Dossier introuvable',
-                details: `Code cherché: ${cleanCode}. Vérifiez l'orthographe dans Zoho.`
+                details: `Le code ${cleanCode} n'a été trouvé dans aucune case des 100 dernières affaires.`
             });
         }
 
-        // 3. Mapping Robuste
+        // 3. Mapping Final (On essaie de deviner les champs si Code_Portail est manquant)
         const portalData = {
-            firstName: deal.Contact_Name?.name?.split(' ')[0] || deal.Nom_du_Contact?.name?.split(' ')[0] || "Client",
-            code: deal.Code_Portail || deal.Code_Portail__c || deal.id,
+            firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
+            code: cleanCode,
             property: deal.Deal_Name || deal.Potential_Name || deal.Nom_de_l_Affaire || "Propriété",
             city: deal.Localisation || deal.Ville || "En attente d'adresse",
-            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : (deal.Prix_affich_ || "--- $"),
-            stage: deal.Stage || "Analyse",
+            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
+            stage: deal.Stage || "En cours",
             image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
             timeline: [
                 { label: "Préqual.", icon: "💎", status: deal.Financement_approuv ? "completed" : "active" },
@@ -99,7 +77,7 @@ export default async function handler(req, res) {
                 { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
             ],
             team: [
-                { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", contact: `mailto:${deal.Owner?.email || 'evan.patruno@gmail.com'}` },
+                { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", contact: `mailto:${deal.Owner?.email || 'evan@evanpatruno.ca'}` },
                 { role: "Collaborateur", name: deal.Nom_Courtier_Immobilier || "À venir", icon: "🤝", contact: "#" },
                 { role: "Courtier Hyp.", name: deal.Nom_Courtier_Hypoth_caire || "À venir", icon: "💰", contact: "#" },
                 { role: "Inspecteur", name: deal.Nom_Inspecteur || "À venir", icon: "🔍", contact: "#" },
@@ -122,6 +100,6 @@ export default async function handler(req, res) {
         return res.status(200).json(portalData);
 
     } catch (error) {
-        return res.status(500).json({ error: 'Erreur Technique', details: error.message });
+        return res.status(500).json({ error: 'Erreur Serveur', details: error.message });
     }
 }
