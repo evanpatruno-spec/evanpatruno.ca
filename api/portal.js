@@ -1,19 +1,15 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.1 - avec CORS)
- * Ce script s'exécute côté serveur (Vercel/Node.js) pour protéger vos clés API.
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.2 - NATIVE FETCH)
+ * Ce script s'exécute côté serveur (Vercel/Node.js 18+) pour protéger vos clés API.
  */
-
-const axios = require('axios');
 
 export default async function handler(req, res) {
     // --- CONFIGURATION CORS ---
-    // Autoriser votre site web à appeler cette API
     res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Origin', '*'); // Vous pourrez restreindre à 'https://evanpatruno.ca' plus tard
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
     res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
 
-    // Gérer la requête OPTIONS (pré-vol CORS)
     if (req.method === 'OPTIONS') {
         res.status(200).end();
         return;
@@ -24,42 +20,49 @@ export default async function handler(req, res) {
     }
 
     const { codePortal } = req.body;
-
     if (!codePortal) {
         return res.status(400).json({ error: 'Code Portail manquant' });
     }
 
     try {
-        // 2. Obtenir un nouveau Access Token via le Refresh Token
-        const tokenResponse = await axios.post('https://accounts.zoho.com/oauth/v2/token', null, {
-            params: {
-                refresh_token: process.env.ZOHO_REFRESH_TOKEN,
-                client_id: process.env.ZOHO_CLIENT_ID,
-                client_secret: process.env.ZOHO_CLIENT_SECRET,
-                grant_type: 'refresh_token'
-            }
+        // 1. Obtenir un nouveau Access Token (Fetch Natif)
+        const tokenParams = new URLSearchParams({
+            refresh_token: process.env.ZOHO_REFRESH_TOKEN,
+            client_id: process.env.ZOHO_CLIENT_ID,
+            client_secret: process.env.ZOHO_CLIENT_SECRET,
+            grant_type: 'refresh_token'
         });
 
-        const accessToken = tokenResponse.data.access_token;
-        const apiDomain = tokenResponse.data.api_domain || "https://www.zohoapis.com";
+        const tokenResponse = await fetch('https://accounts.zoho.com/oauth/v2/token', {
+            method: 'POST',
+            body: tokenParams
+        });
+        const tokenData = await tokenResponse.json();
 
-        // 3. Rechercher l'Affaire (Deal) par le Code Portail
-        const searchResponse = await axios.get(`${apiDomain}/crm/v2/Deals/search`, {
-            params: {
-                criteria: `(Code_Portail:equals:${codePortal})`
-            },
+        if (!tokenData.access_token) {
+            throw new Error('Impossible d\'obtenir le access_token');
+        }
+
+        const accessToken = tokenData.access_token;
+        const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
+
+        // 2. Rechercher l'Affaire (Deal) par le Code Portail
+        const searchCriteria = encodeURIComponent(`(Code_Portail:equals:${codePortal})`);
+        const searchResponse = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=${searchCriteria}`, {
+            method: 'GET',
             headers: {
                 'Authorization': `Zoho-oauthtoken ${accessToken}`
             }
         });
+        const searchData = await searchResponse.json();
 
-        if (!searchResponse.data || !searchResponse.data.data || searchResponse.data.data.length === 0) {
+        if (!searchData || !searchData.data || searchData.data.length === 0) {
             return res.status(404).json({ error: 'Dossier introuvable' });
         }
 
-        const deal = searchResponse.data.data[0];
+        const deal = searchData.data[0];
 
-        // 4. Formater les données pour le Frontend
+        // 3. Formater les données pour le Frontend
         const portalData = {
             firstName: deal.Contact_Name ? deal.Contact_Name.name.split(' ')[0] : "Client",
             code: deal.Code_Portail,
@@ -103,7 +106,7 @@ export default async function handler(req, res) {
         return res.status(200).json(portalData);
 
     } catch (error) {
-        console.error('Erreur Pont Zoho:', error.response ? error.response.data : error.message);
+        console.error('Erreur Pont Zoho:', error.message);
         return res.status(500).json({ error: 'Erreur lors de la récupération des données Zoho' });
     }
 }
