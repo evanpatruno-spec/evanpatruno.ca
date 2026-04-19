@@ -44,15 +44,14 @@ export default async function handler(req, res) {
             const data = await resp.json();
             const record = data.data ? data.data[0] : null;
 
-            if (!record) return res.status(404).json({ error: "Dossier Diagnostic introuvable par ID" });
+            if (!record) return res.status(400).json({ error: "Diagnostic échoué", details: "ID de dossier introuvable." });
 
-            // On renvoie la liste des clés disponibles pour trouver la bonne
-            return res.status(200).json({ 
-                is_diagnostic: true,
-                message: "DIAGNOSTIC REUSSI",
-                available_keys: Object.keys(record).sort(),
-                all_values: record, // Pour inspecter les valeurs réelles
-                code_portail_value: record.Code_Portail || record.Code_Portail__c || "NON TROUVE"
+            const keys = Object.keys(record).sort().join(', ');
+            const codeVal = record.Code_Portail || record.Code_Portail__c || "N/A";
+            
+            return res.status(400).json({ 
+                error: "DIAGNOSTIC REUSSI", 
+                details: `Champs trouvés: ${keys} | Valeur Code Portail: ${codeVal}`
             });
         }
 
