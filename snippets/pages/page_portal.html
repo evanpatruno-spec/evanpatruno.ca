@@ -382,13 +382,20 @@
             document.getElementById('wrapCountdown').style.display = 'none';
         }
 
-        // Moving Checklist
-        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map(c => `
-            <div style="background:rgba(255,255,255,0.02);padding:20px;border-radius:20px;display:flex;align-items:center;gap:15px;border:1px solid rgba(255,255,255,0.1)">
-                <div style="width:24px;height:24px;border:2px solid ${c.done ? '#2ecc71' : 'rgba(255,255,255,0.2)'};border-radius:6px;display:flex;align-items:center;justify-content:center;color:#2ecc71;font-weight:900;">${c.done ? '✓' : ''}</div>
-                <span style="font-size:0.9rem;opacity:${c.done ? '1' : '0.6'};">${c.name}</span>
-            </div>
-        `).join('');
+        // Moving Checklist (With LocalStorage Persistence)
+        const savedMoving = JSON.parse(localStorage.getItem(`moving_${data.code}`) || "{}");
+        
+        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, idx) => {
+            const isDone = savedMoving[idx] !== undefined ? savedMoving[idx] : c.done;
+            return `
+                <div class="moving-item ${isDone ? 'done' : ''}" onclick="toggleMovingItem('${data.code}', ${idx})" id="moving-${idx}" style="background:rgba(255,255,255,0.02);padding:20px;border-radius:20px;display:flex;align-items:center;gap:15px;border:1px solid rgba(255,255,255,0.1); cursor:pointer; transition: 0.3s; box-shadow: var(--dash-glow);">
+                    <div class="check-box" style="width:24px;height:24px;border:2px solid ${isDone ? '#2ecc71' : 'rgba(255,255,255,0.2)'};border-radius:6px;display:flex;align-items:center;justify-content:center;color:#2ecc71;font-weight:900; background: ${isDone ? 'rgba(46,204,113,0.1)' : 'transparent'};">
+                        ${isDone ? '✓' : ''}
+                    </div>
+                    <span style="font-size:0.9rem;opacity:${isDone ? '1' : '0.6'}; text-decoration: ${isDone ? 'line-through' : 'none'};">${c.name}</span>
+                </div>
+            `;
+        }).join('');
 
         // Seller Section
         if (data.transactionType === "Vendeur" && data.sellerData) {
@@ -405,6 +412,35 @@
             `).join('');
         } else {
             document.getElementById('sectionSeller').style.display = 'none';
+        }
+    }
+
+    function toggleMovingItem(code, idx) {
+        const key = `moving_${code}`;
+        const saved = JSON.parse(localStorage.getItem(key) || "{}");
+        const item = document.getElementById(`moving-${idx}`);
+        const box = item.querySelector('.check-box');
+        const text = item.querySelector('span');
+        
+        const newState = !saved[idx];
+        saved[idx] = newState;
+        localStorage.setItem(key, JSON.stringify(saved));
+        
+        // UI Update
+        if(newState) {
+            box.innerText = "✓";
+            box.style.border = "2px solid #2ecc71";
+            box.style.background = "rgba(46,204,113,0.1)";
+            text.style.opacity = "1";
+            text.style.textDecoration = "line-through";
+            item.style.borderColor = "rgba(46,204,113,0.3)";
+        } else {
+            box.innerText = "";
+            box.style.border = "2px solid rgba(255,255,255,0.2)";
+            box.style.background = "transparent";
+            text.style.opacity = "0.6";
+            text.style.textDecoration = "none";
+            item.style.borderColor = "rgba(255,255,255,0.1)";
         }
     }
 
