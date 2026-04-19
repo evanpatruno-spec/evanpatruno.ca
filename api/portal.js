@@ -1,6 +1,6 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.8 - FINAL PRODUCTION)
- * Recherche ultra-robuste multi-critères
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V3.9 - FIELD DISCOVERER)
+ * Découvre tous les noms de champs réels pour finaliser le mapping
  */
 
 export default async function handler(req, res) {
@@ -23,83 +23,71 @@ export default async function handler(req, res) {
         tokenParams.append('client_secret', process.env.ZOHO_CLIENT_SECRET?.trim());
         tokenParams.append('grant_type', 'refresh_token');
 
-        const tokenResponse = await fetch('https://accounts.zoho.com/oauth/v2/token', {
+        const tokenResp = await fetch('https://accounts.zoho.com/oauth/v2/token', {
             method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: tokenParams.toString()
         });
-        const tokenData = await tokenResponse.json();
+        const tokenData = await tokenResp.json();
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho' });
+        if (!accessToken) return res.status(401).json({ error: 'Erreur Auth' });
 
-        // 2. RECHERCHE MULTI-MODES
-        let deal = null;
-        let moduleName = "Potentials";
+        // 2. MODE DÉCOUVERTE
+        if (cleanCode === "DIAG") {
+            const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, {
+                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            });
+            const dData = await rResp.json();
+            const deal = dData.data ? dData.data[0] : null;
 
-        // Mode A : Recherche par Code (EP-1)
-        const searchResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
+            if (!deal) return res.status(404).json({ error: "Dossier invisible" });
+
+            // On liste tous les noms de champs qui contiennent une valeur
+            const fieldNames = Object.keys(deal).filter(k => deal[k] !== null && typeof deal[k] !== 'object');
+            
+            return res.status(400).json({ 
+                error: "DÉCOUVERTE DE CHAMPS", 
+                details: `Champs trouvés: ${fieldNames.join(', ')}` 
+            });
+        }
+
+        // 3. RECHERCHE ET AFFICHAGE (Version temporaire avant mapping final)
+        const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
             method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
-        const searchData = await searchResp.json();
+        const sData = await sResp.json();
+        let deal = null;
 
-        if (searchData.data && searchData.data.length > 0) {
-            const found = searchData.data[0];
-            const recordResp = await fetch(`${apiDomain}/crm/v2/${found.$module}/${found.id}`, {
+        if (sData.data && sData.data.length > 0) {
+            const found = sData.data[0];
+            const rResp = await fetch(`${apiDomain}/crm/v2/${found.$module}/${found.id}`, {
                 method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const dealData = await recordResp.json();
-            deal = dealData.data ? dealData.data[0] : null;
-            moduleName = found.$module;
-        }
-
-        // Mode B : Recherche Directe par ID (Sécurité pour le test de Evan)
-        if (!deal && cleanCode === "EP-1") {
-            const directResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, {
+            const dData = await rResp.json();
+            deal = dData.data[0];
+        } else if (cleanCode === "EP-1") {
+            const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, {
                 method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const directData = await directResp.json();
-            deal = directData.data ? directData.data[0] : null;
+            const dData = await rResp.json();
+            deal = dData.data ? dData.data[0] : null;
         }
 
-        if (!deal) {
-            return res.status(404).json({ 
-                error: 'Sécurité : Code non reconnu',
-                details: `Le code "${cleanCode}" n'est pas encore actif. Contactez Evan pour synchroniser votre dossier.`
-            });
-        }
+        if (!deal) return res.status(404).json({ error: 'Introuvable' });
 
-        // 3. MAPPING DES DONNÉES (Ultra flexible)
-        const portalData = {
+        return res.status(200).json({
             firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
             code: cleanCode,
-            property: deal.Deal_Name || deal.Potential_Name || deal.Nom_de_l_Affaire || "Dossier Immobilier",
-            city: deal.Ville || deal.Localisation || "En cours...",
-            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "Consultez Evan",
+            property: deal.Deal_Name || "Dossier Immobilier",
+            city: deal.Ville || "Adresse en cours...",
+            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
             stage: deal.Stage || "Actif",
-            image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=600",
-            timeline: [
-                { label: "Préqual.", icon: "💎", status: deal.Financement_approuv ? "completed" : "active" },
-                { label: "Recherche", icon: "🔍", status: deal.Stage === "Qualifié" ? "active" : (deal.Stage?.includes("Offre") ? "completed" : "pending") },
-                { label: "Offre", icon: "📝", status: deal.Stage?.includes("Offre") ? "active" : (deal.Closing_Date ? "completed" : "pending") },
-                { label: "Notaire", icon: "✒️", status: deal.Closing_Date ? "active" : "pending" }
-            ],
-            checklist: [
-                { name: "Financement pré-approuvé", done: deal.Financement_approuv || false },
-                { name: "Inspection complétée", done: !!deal.Date_d_inspection },
-                { name: "Conditions levées", done: deal.Autres_conditions_lev_es || false }
-            ],
-            team: [
-                { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", contact: `mailto:info@evanpatruno.ca` }
-            ],
-            dates: [
-                { label: "Date de clôture", val: deal.Closing_Date || "À venir" }
-            ]
-        };
-
-        return res.status(200).json(portalData);
+            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=400",
+            timeline: [], team: [], dates: [], checklist: []
+        });
 
     } catch (error) {
-        return res.status(500).json({ error: 'Erreur Système', details: error.message });
+        return res.status(500).json({ error: 'Erreur', details: error.message });
     }
 }
