@@ -1,6 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.7 - COMPATIBILITÉ TOTALE)
- * Tente toutes les combinaisons de modules (Deals/Potentials) et de champs (Code_Portail/__c)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V2.8 - AUTH FIX & VERBOSE ERRORS)
  */
 
 export default async function handler(req, res) {
@@ -16,44 +15,49 @@ export default async function handler(req, res) {
     const cleanCode = codePortal?.trim();
 
     try {
-        // 1. Authentification
-        const tokenParams = new URLSearchParams({
-            refresh_token: process.env.ZOHO_REFRESH_TOKEN?.trim(),
-            client_id: process.env.ZOHO_CLIENT_ID?.trim(),
-            client_secret: process.env.ZOHO_CLIENT_SECRET?.trim(),
-            grant_type: 'refresh_token'
-        });
+        // 1. Authentification Robuste
+        const tokenParams = new URLSearchParams();
+        tokenParams.append('refresh_token', process.env.ZOHO_REFRESH_TOKEN?.trim());
+        tokenParams.append('client_id', process.env.ZOHO_CLIENT_ID?.trim());
+        tokenParams.append('client_secret', process.env.ZOHO_CLIENT_SECRET?.trim());
+        tokenParams.append('grant_type', 'refresh_token');
 
         const tokenResponse = await fetch('https://accounts.zoho.com/oauth/v2/token', {
-            method: 'POST', body: tokenParams
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: tokenParams.toString()
         });
         const tokenData = await tokenResponse.json();
-        if (!tokenData.access_token) return res.status(401).json({ error: 'Erreur Auth Zoho' });
+
+        if (!tokenData.access_token) {
+            return res.status(401).json({ 
+                error: 'Erreur Auth Zoho', 
+                details: tokenData.error || 'Pas de réponse de Zoho',
+                msg: 'Vérifiez vos variables ZOHO_ dans Vercel.'
+            });
+        }
 
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        // 2. FONCTION DE RECHERCHE MULTI-MODULE
-        async function findDeal(moduleName, fieldName) {
-            const criteria = encodeURIComponent(`(${fieldName}:equals:${cleanCode})`);
-            const resp = await fetch(`${apiDomain}/crm/v2/${moduleName}/search?criteria=${criteria}`, {
+        // 2. Fonction de RECHERCHE MULTI-MODULE (Deals & Potentials)
+        async function findInModule(modName) {
+            const criteria = encodeURIComponent(`(Code_Portail:equals:${cleanCode})`);
+            const searchResp = await fetch(`${apiDomain}/crm/v2/${modName}/search?criteria=${criteria}`, {
                 method: 'GET',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const data = await resp.json();
+            const data = await searchResp.json();
             return (data.data && data.data.length > 0) ? data.data[0] : null;
         }
 
-        // TENTATIVES DANS L'ORDRE
-        let deal = await findDeal('Potentials', 'Code_Portail');
-        if (!deal) deal = await findDeal('Deals', 'Code_Portail');
-        if (!deal) deal = await findDeal('Potentials', 'Code_Portail__c');
-        if (!deal) deal = await findDeal('Deals', 'Code_Portail__c');
+        // Test successif des modules
+        let deal = await findInModule('Potentials');
+        if (!deal) deal = await findInModule('Deals');
 
-        // 3. SCAN MANUEL DE DERNIER RECOURS (SUR LES DEUX MODULES)
+        // 3. SCAN MANUEL SI ÉCHEC (Top 50 des dernières affaires)
         if (!deal) {
-            console.log("Tentative de scan manuel...");
-            const listResp = await fetch(`${apiDomain}/crm/v2/Potentials?sort_order=desc&per_page=200`, {
+            const listResp = await fetch(`${apiDomain}/crm/v2/Potentials?sort_order=desc&per_page=50`, {
                 method: 'GET',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
@@ -61,14 +65,13 @@ export default async function handler(req, res) {
             if (listData.data) {
                 deal = listData.data.find(d => 
                     (d.Code_Portail && d.Code_Portail.toString() === cleanCode) ||
-                    (d.Code_Portail__c && d.Code_Portail__c.toString() === cleanCode) ||
-                    (d.Deal_Name && d.Deal_Name.includes(cleanCode))
+                    (d.Code_Portail__c && d.Code_Portail__c.toString() === cleanCode)
                 );
             }
         }
 
         if (!deal) {
-            return res.status(404).json({ error: 'Dossier introuvable', debug: `Code: ${cleanCode}` });
+            return res.status(404).json({ error: 'Dossier introuvable' });
         }
 
         // 4. Mapping Final
@@ -76,7 +79,7 @@ export default async function handler(req, res) {
             firstName: deal.Contact_Name ? deal.Contact_Name.name.split(' ')[0] : "Client",
             code: deal.Code_Portail || deal.Code_Portail__c || deal.id,
             property: deal.Deal_Name || deal.Potential_Name || "Propriété",
-            city: deal.Localisation || "En attente d'adresse",
+            city: deal.Localisation || deal.Ville || "En attente d'adresse",
             price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
             stage: deal.Stage || "Analyse",
             image: deal.Record_Image || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
@@ -111,6 +114,6 @@ export default async function handler(req, res) {
         return res.status(200).json(portalData);
 
     } catch (error) {
-        return res.status(500).json({ error: 'Erreur Serveur', details: error.message });
+        return res.status(500).json({ error: 'Erreur Technique', details: error.message });
     }
 }
