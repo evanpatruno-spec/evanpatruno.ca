@@ -24,6 +24,9 @@
         min-height: 900px;
         position: relative;
         overflow: hidden;
+        border-radius: 60px; /* Coins arrondis pour plus d'harmonie */
+        box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+        margin: 20px 0;
     }
 
     .portal-main-wrapper * { box-sizing: border-box; }
@@ -121,9 +124,10 @@
     .team-card {
         background: rgba(255,255,255,0.03); border: 1px solid var(--dash-border); border-radius: 30px;
         padding: 30px; transition: 0.4s; text-decoration: none; color: inherit; display: block;
+        cursor: default; /* Plus de curseur de lien */
     }
 
-    .team-card:hover { transform: translateY(-10px); border-color: var(--dash-primary); background: rgba(255,255,255,0.07); }
+    .team-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); }
 
     .team-icon { font-size: 1.8rem; margin-bottom: 15px; }
 
@@ -333,7 +337,7 @@
 
         // Team
         document.getElementById('wrapTeam').innerHTML = data.team.map(t => `
-            <a href="${t.contact}" class="team-card" ${t.contact === '#' ? 'onclick="return false;" style="cursor:default;"' : ''}>
+            <div class="team-card">
                 <div class="team-icon">${t.icon}</div>
                 <div class="team-role">${t.role}</div>
                 <div class="team-name" style="margin-bottom:10px;">${t.name}</div>
@@ -345,8 +349,7 @@
                         <span style="opacity:0.7;">✉️</span> ${t.email || 'Non défini'}
                     </div>
                 </div>
-                ${t.contact !== '#' ? '<div style="font-size:0.7rem;margin-top:15px;opacity:0.3;text-transform:uppercase;letter-spacing:1px;font-weight:700;">Cliquez pour contacter ⚡</div>' : ''}
-            </a>
+            </div>
         `).join('');
 
         // Dates
