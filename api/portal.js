@@ -141,7 +141,7 @@ export default async function handler(req, res) {
         if (deal.Closing_Date) dates.push({ label: "Date chez le notaire", val: formatDate(deal.Closing_Date) });
         if (deal.Date_d_occupation) dates.push({ label: "Date d'occupation", val: formatDate(deal.Date_d_occupation) });
 
-        let stage = deal.Stage || "";
+        stage = deal.Stage || "";
         let isFinancementDone = deal.Financement_approuv === true || deal.Financement_approuv === "Oui";
         let isInspectionDone = deal.Inspection_satisfaisante === true || deal.Inspection_satisfaisante === "Oui";
         let isConditionsDone = deal.Autres_conditions_lev_es === true || deal.Autres_conditions_lev_es === "Oui";
