@@ -77,11 +77,47 @@ export default async function handler(req, res) {
 
         // Construction de l'équipe (Professionnels)
         const team = [
-            { role: "Votre Courtier", name: getLookupName(deal.Owner) || "Evan Patruno", icon: "👨‍💼", contact: "mailto:info@evanpatruno.ca" }
+            { 
+                role: "Votre Courtier", 
+                name: getLookupName(deal.Owner) || "Evan Patruno", 
+                icon: "👨‍💼", 
+                phone: "514-567-3249", 
+                email: "info@evanpatruno.ca",
+                contact: "tel:5145673249" 
+            }
         ];
-        if (deal.Nom_Courtier_Hypoth_caire) team.push({ role: "Courtier Hypothécaire", name: getLookupName(deal.Nom_Courtier_Hypoth_caire), icon: "🏦" });
-        if (deal.Nom_Inspecteur) team.push({ role: "Inspecteur en Bâtiment", name: getLookupName(deal.Nom_Inspecteur), icon: "🔍" });
-        if (deal.Nom_Notaire) team.push({ role: "Notaire", name: getLookupName(deal.Nom_Notaire), icon: "✒️" });
+
+        // Pour les partenaires, on prépare les infos (si vous avez des champs Tel_Notaire etc dans Zoho, on les mappera ici)
+        if (deal.Nom_Courtier_Hypoth_caire) {
+            team.push({ 
+                role: "Courtier Hypothécaire", 
+                name: getLookupName(deal.Nom_Courtier_Hypoth_caire), 
+                icon: "🏦",
+                phone: deal.Tel_Courtier || "À venir",
+                email: deal.Email_Courtier || "À venir",
+                contact: deal.Email_Courtier ? `mailto:${deal.Email_Courtier}` : "#"
+            });
+        }
+        if (deal.Nom_Inspecteur) {
+            team.push({ 
+                role: "Inspecteur en Bâtiment", 
+                name: getLookupName(deal.Nom_Inspecteur), 
+                icon: "🔍",
+                phone: deal.Tel_Inspecteur || "À venir",
+                email: deal.Email_Inspecteur || "À venir",
+                contact: deal.Email_Inspecteur ? `mailto:${deal.Email_Inspecteur}` : "#"
+            });
+        }
+        if (deal.Nom_Notaire) {
+            team.push({ 
+                role: "Notaire", 
+                name: getLookupName(deal.Nom_Notaire), 
+                icon: "✒️",
+                phone: deal.Tel_Notaire || "À venir",
+                email: deal.Email_Notaire || "À venir",
+                contact: deal.Email_Notaire ? `mailto:${deal.Email_Notaire}` : "#"
+            });
+        }
 
         // Construction des dates importantes
         const dates = [];

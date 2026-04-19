@@ -277,11 +277,19 @@
 
         // Team
         document.getElementById('wrapTeam').innerHTML = data.team.map(t => `
-            <a href="${t.contact}" class="team-card">
+            <a href="${t.contact}" class="team-card" ${t.contact === '#' ? 'onclick="return false;" style="cursor:default;"' : ''}>
                 <div class="team-icon">${t.icon}</div>
                 <div class="team-role">${t.role}</div>
-                <div class="team-name">${t.name}</div>
-                <div style="font-size:0.7rem;margin-top:10px;opacity:0.5;">Cliquez pour contacter ⚡</div>
+                <div class="team-name" style="margin-bottom:10px;">${t.name}</div>
+                <div style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:5px;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                        <span style="opacity:0.7;">📞</span> ${t.phone || 'Non défini'}
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <span style="opacity:0.7;">✉️</span> ${t.email || 'Non défini'}
+                    </div>
+                </div>
+                ${t.contact !== '#' ? '<div style="font-size:0.7rem;margin-top:15px;opacity:0.3;text-transform:uppercase;letter-spacing:1px;font-weight:700;">Cliquez pour contacter ⚡</div>' : ''}
             </a>
         `).join('');
 
