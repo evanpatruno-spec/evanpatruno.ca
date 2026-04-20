@@ -1814,35 +1814,9 @@
     }
 
     async function installPortalApp() {
-        if (deferredPrompt) {
-            // Android Chrome avec prompt disponible
-            deferredPrompt.prompt();
-            const { outcome } = await deferredPrompt.userChoice;
-            if (outcome === 'accepted') {
-                const banner = document.getElementById('pwaInstallBanner');
-                if (banner) banner.style.display = 'none';
-                const btn = document.getElementById('btnPwaLogin');
-                if (btn) btn.style.display = 'none';
-            }
-            deferredPrompt = null;
-        } else if (isIos()) {
-            // iPhone/iPad : guide visuel
-            const modal = document.createElement('div');
-            modal.innerHTML = '<div style="position:fixed; bottom:0; left:0; width:100%; background:rgba(15,5,13,0.97); color:#fff; padding:30px; border-radius:30px 30px 0 0; z-index:11000; text-align:center; box-shadow:0 -10px 40px rgba(135,50,118,0.3); border-top:1px solid rgba(135,50,118,0.4);">' +
-                '<div style="font-size:2rem; margin-bottom:12px;">📲</div>' +
-                '<h3 style="font-family:\'Outfit\',sans-serif; margin-bottom:10px; color:#fff;">Installer sur votre iPhone</h3>' +
-                '<p style="font-size:0.9rem; margin-bottom:20px; opacity:0.8;">Appuyez sur <strong>Partager</strong> ⎋ puis <strong>«Sur l\'écran d\'accueil»</strong>.</p>' +
-                '<button onclick="this.closest(\'div\').parentElement.remove();" style="background:rgba(135,50,118,0.9); color:#fff; border:none; padding:12px 30px; border-radius:50px; font-weight:700; font-family:\'Outfit\',sans-serif;">J\'ai compris ✓</button>' +
-                '</div>';
-            document.body.appendChild(modal);
-        } else {
-            // Android sans prompt capturé, ou desktop
-            const isMobile = /android|mobile/i.test(navigator.userAgent);
-            const msg = isMobile
-                ? '📲 Menu ⋮ Android &rarr; <strong>Ajouter à l\'écran d\'accueil</strong>'
-                : '💻 Chrome : menu ⋮ &rarr; <strong>«Installer Portail Patruno»</strong>';
-            showPwaToast(msg);
-        }
+        const code = document.getElementById('inpPortalCode').value.toUpperCase() || 'EP-1001';
+        // Redirection vers la page Vercel qui gère l'installation automatique
+        window.location.href = `https://evanpatruno-ca.vercel.app/mon-dossier.html?code=${code}`;
     }
 
 </script>

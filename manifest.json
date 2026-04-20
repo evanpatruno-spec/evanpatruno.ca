@@ -2,7 +2,7 @@
   "name": "Dossier Privé - Evan Patruno",
   "short_name": "EP Portail",
   "description": "Votre portail immobilier privé - Suivez votre transaction en direct.",
-  "start_url": "/mon-dossier",
+  "start_url": "/mon-dossier.html",
   "scope": "/",
   "display": "standalone",
   "background_color": "#1a0516",
