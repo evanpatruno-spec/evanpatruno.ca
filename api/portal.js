@@ -230,8 +230,7 @@ export default async function handler(req, res) {
                 { name: "Assurance Habitation (Aviser courtier)", done: false },
                 { name: "Internet & TV (Déménagement de services)", done: false },
                 { name: "Payer la Taxe de Bienvenue (Mutation)", done: false },
-                { name: "Mise à jour du Permis de conduire", done: false },
-                { name: "Entretien Saisonnier (Guide du proprio)", done: false }
+                { name: "Aviser votre assureur (Auto/Vie)", done: false }
             ],
             ambassadorReward: "Une carte cadeau de 250$ (ou don à une cause)",
             partners: [
@@ -248,7 +247,7 @@ export default async function handler(req, res) {
             ],
             sellerData: transactionType === "Vendeur" ? {
                 visits: 12, feedback: [
-                    { date: "2026-04-15", comment: "Très belle cuisine, mais jardin un peu petit.", rating: 4 },
+                    { date: "2026-04-15", comment: "Très belle cuisine, mais jardin un peu petite.", rating: 4 },
                     { date: "2026-04-18", comment: "Coup de coeur pour la luminosité !", rating: 5 }
                 ]
             } : null,
@@ -268,9 +267,9 @@ export default async function handler(req, res) {
                     { title: "Échangeur d'air", period: "Annuel", desc: "Nettoyez les filtres et bouches." }
                 ],
                 resources: [
-                    { title: "Guide Premier Acheteur", url: "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/acheter-maison.html" },
-                    { title: "Tout sur le CELIAPP", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete-celiapp.html" },
-                    { title: "Régime d'Accès à la Propriété (RAP)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/regime-enregistre-epargne-retraite-reer/regime-acces-propriete.html" }
+                    { title: "Tout sur le CELIAPP (Gouv. Canada)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" },
+                    { title: "Régime d'Accès à la Propriété (RAP)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-enregistres-epargne-retraite/regime-accession-a-propriete.html" },
+                    { title: "Guide de l'acheteur OACIQ", url: "https://www.oaciq.com/fr/articles/guide-de-lacheteur" }
                 ]
             }
         };

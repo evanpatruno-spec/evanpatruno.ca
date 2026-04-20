@@ -10,10 +10,13 @@
         --dash-primary-glow: rgba(135, 50, 118, 0.4);
         --dash-accent: #d4af37;
         --dash-accent-glow: rgba(212, 175, 55, 0.4);
-        --dash-bg: #1a0516; /* Violet Prune profond pour matcher le site */
+        --dash-bg: #1a0516;
+        /* Violet Prune profond pour matcher le site */
         --dash-card-bg: rgba(255, 255, 255, 0.04);
-        --dash-border: rgba(135, 50, 118, 0.6); /* Rose Magenta plus intense */
-        --dash-glow: 0 0 25px rgba(135, 50, 118, 0.4); /* Lueur Neon accentuée */
+        --dash-border: rgba(135, 50, 118, 0.6);
+        /* Rose Magenta plus intense */
+        --dash-glow: 0 0 25px rgba(135, 50, 118, 0.4);
+        /* Lueur Neon accentuée */
         --dash-success: #2ecc71;
         --dash-warning: #f1c40f;
     }
@@ -25,262 +28,701 @@
         min-height: 900px;
         position: relative;
         overflow: hidden;
-        border-radius: 60px; /* Coins arrondis pour plus d'harmonie */
-        box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+        border-radius: 60px;
+        /* Coins arrondis pour plus d'harmonie */
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
         margin: 20px 0;
     }
 
-    .portal-main-wrapper * { box-sizing: border-box; }
+    .portal-main-wrapper * {
+        box-sizing: border-box;
+    }
 
     /* BACKGROUND AURA & BLEND */
     .portal-aura {
-        position: absolute; width: 100%; height: 100%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
         background: radial-gradient(circle at center, #000000 0%, var(--dash-bg) 80%);
-        z-index: 1; pointer-events: none;
+        z-index: 1;
+        pointer-events: none;
     }
 
     .portal-container {
-        max-width: 1100px; margin: 0 auto; padding: 80px 20px;
-        position: relative; z-index: 5;
-        opacity: 0; transform: translateY(30px);
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        position: relative;
+        z-index: 5;
+        opacity: 0;
+        transform: translateY(30px);
         transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1);
         display: none;
     }
 
-    .portal-container.visible { opacity: 1; transform: translateY(0); display: block; }
+    .portal-container.visible {
+        opacity: 1;
+        transform: translateY(0);
+        display: block;
+    }
 
     /* LOGIN OVERLAY */
     .portal-overlay {
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(15, 5, 13, 0.85); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
-        z-index: 1000; display: flex; align-items: center; justify-content: center; transition: all 1s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(15, 5, 13, 0.85);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 1s ease;
     }
 
-    .portal-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; transform: scale(1.1); }
-    
+    .portal-overlay.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: scale(1.1);
+    }
+
     /* ACCORDION SYSTEM */
-    .section-wrapper { margin-bottom: 25px; border: 1px solid var(--dash-border); border-radius: 40px; overflow: hidden; background: rgba(0,0,0,0.2); transition: 0.4s; box-shadow: var(--dash-glow); }
-    .section-header { 
-        padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; 
-        cursor: pointer; background: rgba(255,255,255,0.03); transition: 0.3s;
+    .section-wrapper {
+        margin-bottom: 25px;
+        border: 1px solid var(--dash-border);
+        border-radius: 40px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.2);
+        transition: 0.4s;
+        box-shadow: var(--dash-glow);
     }
-    .section-header:hover { background: rgba(135, 50, 118, 0.1); }
-    .section-header h3 { margin: 0; font-family: 'Outfit'; font-size: 1.5rem; color: #fff; }
-    .section-chevron { 
-        width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; 
-        background: rgba(255,255,255,0.1); border-radius: 50%; transition: 0.4s; color: var(--dash-primary);
+
+    .section-header {
+        padding: 25px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.03);
+        transition: 0.3s;
     }
-    .section-wrapper.collapsed .section-content { max-height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; pointer-events: none; }
-    .section-wrapper.collapsed .section-chevron { transform: rotate(-90deg); }
-    .section-content { 
-        padding: 40px; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
-        max-height: 2000px; opacity: 1; overflow: hidden;
+
+    .section-header:hover {
+        background: rgba(135, 50, 118, 0.1);
     }
-    
+
+    .section-header h3 {
+        margin: 0;
+        font-family: 'Outfit';
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .section-chevron {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transition: 0.4s;
+        color: var(--dash-primary);
+    }
+
+    .section-wrapper.collapsed .section-content {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .section-wrapper.collapsed .section-chevron {
+        transform: rotate(-90deg);
+    }
+
+    .section-content {
+        padding: 40px;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        max-height: 2000px;
+        opacity: 1;
+        overflow: hidden;
+    }
+
     .login-card {
         background: rgba(15, 5, 13, 0.95);
-        padding: 50px; border-radius: 40px; border: 2px solid var(--dash-border);
+        padding: 50px;
+        border-radius: 40px;
+        border: 2px solid var(--dash-border);
         box-shadow: var(--dash-glow);
-        text-align: center; width: 100%; max-width: 420px;
+        text-align: center;
+        width: 100%;
+        max-width: 420px;
         backdrop-filter: blur(20px);
     }
 
     .login-input {
-        width: 100%; padding: 22px 30px; background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px; color: #fff; font-size: 1.1rem; margin-bottom: 20px; outline: none; text-align: center;
+        width: 100%;
+        padding: 22px 30px;
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        color: #fff;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        outline: none;
+        text-align: center;
     }
 
     .login-btn {
-        width: 100%; padding: 22px; background: linear-gradient(135deg, var(--dash-primary), #b0549c);
-        color: white; border: none; border-radius: 50px; font-weight: 900; text-transform: uppercase;
-        letter-spacing: 2px; cursor: pointer; transition: 0.5s; box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5);
+        width: 100%;
+        padding: 22px;
+        background: linear-gradient(135deg, var(--dash-primary), #b0549c);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.5s;
+        box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5);
     }
 
-    .login-btn:hover { transform: translateY(-5px); box-shadow: 0 25px 60px rgba(135, 50, 118, 0.7); }
+    .login-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 60px rgba(135, 50, 118, 0.7);
+    }
 
     /* PROPERTY CARD */
     .property-card-premium {
-        background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-        border: 1px solid var(--dash-border); border-radius: 45px; padding: 50px;
-        display: flex; gap: 50px; align-items: center; margin-bottom: 60px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+        border: 1px solid var(--dash-border);
+        border-radius: 45px;
+        padding: 50px;
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        margin-bottom: 60px;
         box-shadow: var(--dash-glow);
     }
 
     .prop-img-wrap {
-        flex: 0 0 340px; height: 240px; border-radius: 35px; overflow: hidden;
-        border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        flex: 0 0 340px;
+        height: 240px;
+        border-radius: 35px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 
-    .prop-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .prop-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     /* TIMELINE */
-    .timeline-steps { display: flex; justify-content: space-between; position: relative; padding: 0 40px; }
+    .timeline-steps {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 0 40px;
+    }
 
     .timeline-steps::before {
-        content: ''; position: absolute; top: 25px; left: 10%; width: 80%; height: 2px; background: rgba(255,255,255,0.08);
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.08);
     }
 
     .timeline-progress-bar {
-        position: absolute; top: 25px; left: 10%; width: 0%; height: 2px;
-        background: var(--dash-primary); box-shadow: 0 0 20px var(--dash-primary); transition: width 1.8s ease;
+        position: absolute;
+        top: 25px;
+        left: 10%;
+        width: 0%;
+        height: 2px;
+        background: var(--dash-primary);
+        box-shadow: 0 0 20px var(--dash-primary);
+        transition: width 1.8s ease;
     }
 
-    .step-node { z-index: 10; display: flex; flex-direction: column; align-items: center; width: 100px; }
+    .step-node {
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+    }
 
     .node-dot {
-        width: 54px; height: 54px; background: #0f050d; border: 2px solid rgba(255,255,255,0.15);
-        border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900;
+        width: 54px;
+        height: 54px;
+        background: #0f050d;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
     }
 
-    .step-node.done .node-dot { background: var(--dash-primary); border-color: var(--dash-primary); color: #fff; }
+    .step-node.done .node-dot {
+        background: var(--dash-primary);
+        border-color: var(--dash-primary);
+        color: #fff;
+    }
 
     /* INTERVENANTS & DATES GRID */
-    .section-title { font-family: 'Outfit', sans-serif; font-size: 2rem; margin-bottom: 30px; color: #fff; }
+    .section-title {
+        font-family: 'Outfit', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #fff;
+    }
 
-    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
 
     .team-card {
-        background: rgba(255,255,255,0.03); border: 1px solid var(--dash-border); border-radius: 30px;
-        padding: 30px; transition: 0.4s; text-decoration: none; color: inherit; display: block;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--dash-border);
+        border-radius: 30px;
+        padding: 30px;
+        transition: 0.4s;
+        text-decoration: none;
+        color: inherit;
+        display: block;
         cursor: default;
         box-shadow: var(--dash-glow);
     }
 
-    .team-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); }
+    .team-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.05);
+    }
 
-    .team-icon { font-size: 1.8rem; margin-bottom: 15px; }
+    .team-icon {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
 
-    .team-role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--dash-accent); font-weight: 800; margin-bottom: 5px; }
+    .team-role {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--dash-accent);
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
 
-    .team-name { font-size: 1.25rem; font-weight: 800; color: #fff; }
+    .team-name {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #fff;
+    }
 
     /* DATES TABLE */
     .date-row {
-        display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .date-row:last-child { border-bottom: none; }
+    .date-row:last-child {
+        border-bottom: none;
+    }
 
-    .date-label { color: rgba(255,255,255,0.6); font-weight: 600; }
+    .date-label {
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 600;
+    }
 
-    .date-val { font-weight: 800; color: #fff; }
+    .date-val {
+        font-weight: 800;
+        color: #fff;
+    }
 
-    .badge-premium { padding: 10px 20px; border-radius: 50px; font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; }
+    .badge-premium {
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
 
     /* COUNTDOWN WIDGET */
     .countdown-widget {
         background: linear-gradient(135deg, var(--dash-primary), #602353);
-        padding: 15px 30px; border-radius: 20px; display: inline-flex; align-items: center; gap: 15px;
-        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4); border: 1px solid rgba(255,255,255,0.2);
+        padding: 15px 30px;
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         margin-top: 20px;
     }
-    .countdown-num { font-size: 2rem; font-weight: 900; line-height: 1; color: #fff; }
-    .countdown-txt { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; font-weight: 700; text-align: left; color: #fff; }
+
+    .countdown-num {
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: 1;
+        color: #fff;
+    }
+
+    .countdown-txt {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.8;
+        font-weight: 700;
+        text-align: left;
+        color: #fff;
+    }
 
     /* SELLER STATS */
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
     .stat-card {
-        background: rgba(255,255,255,0.03); border: 1px solid var(--dash-border); border-radius: 25px; padding: 25px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--dash-border);
+        border-radius: 25px;
+        padding: 25px;
         text-align: center;
     }
-    .stat-val { font-size: 2.5rem; font-weight: 900; color: var(--dash-accent); margin-bottom: 5px; }
-    .stat-label { font-size: 0.8rem; opacity: 0.6; text-transform: uppercase; }
+
+    .stat-val {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: var(--dash-accent);
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        text-transform: uppercase;
+    }
 
     /* FEEDBACK LIST */
     /* MILESTONE COCKPIT (NEW) */
-    .milestone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
-    .milestone-card {
-        background: rgba(255,255,255,0.03); border: 1px solid var(--dash-border); border-radius: 30px;
-        padding: 25px 20px; text-align: center; transition: 0.3s;
+    .milestone-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
     }
-    .milestone-card.urgent { border-color: #e74c3c; box-shadow: 0 0 15px rgba(231, 76, 60, 0.4); }
-    .milestone-card.done { border-color: #2ecc71; box-shadow: 0 0 15px rgba(46, 204, 113, 0.4); }
-    .milestone-val { font-family: 'Outfit'; font-size: 2.2rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 5px; }
-    .milestone-label { font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: var(--dash-accent); letter-spacing: 1px; }
+
+    .milestone-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--dash-border);
+        border-radius: 30px;
+        padding: 25px 20px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .milestone-card.urgent {
+        border-color: #e74c3c;
+        box-shadow: 0 0 15px rgba(231, 76, 60, 0.4);
+    }
+
+    .milestone-card.done {
+        border-color: #2ecc71;
+        box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+    }
+
+    .milestone-val {
+        font-family: 'Outfit';
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+
+    .milestone-label {
+        font-size: 0.65rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dash-accent);
+        letter-spacing: 1px;
+    }
 
     .feedback-item {
-        background: rgba(255,255,255,0.02); border-left: 4px solid var(--dash-primary);
-        padding: 20px; border-radius: 0 20px 20px 0; margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.02);
+        border-left: 4px solid var(--dash-primary);
+        padding: 20px;
+        border-radius: 0 20px 20px 0;
+        margin-bottom: 15px;
     }
 
     /* PARTNER CARDS */
-    .partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
+    .partner-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
     .partner-card {
-        background: rgba(255,255,255,0.02); border: 1px solid var(--dash-border); border-radius: 25px;
-        padding: 25px; transition: 0.3s; position: relative; overflow: hidden;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--dash-border);
+        border-radius: 25px;
+        padding: 25px;
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
         user-select: none;
     }
-    .partner-card:hover { transform: scale(1.02); border-color: var(--dash-primary); box-shadow: var(--dash-glow); }
+
+    .partner-card:hover {
+        transform: scale(1.02);
+        border-color: var(--dash-primary);
+        box-shadow: var(--dash-glow);
+    }
+
     .partner-promo-badge {
-        position: absolute; top: 15px; right: -30px; background: var(--dash-primary); color: #fff;
-        padding: 5px 35px; transform: rotate(45deg); font-size: 0.6rem; font-weight: 900;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        position: absolute;
+        top: 15px;
+        right: -30px;
+        background: var(--dash-primary);
+        color: #fff;
+        padding: 5px 35px;
+        transform: rotate(45deg);
+        font-size: 0.6rem;
+        font-weight: 900;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
+
     .copy-btn {
-        background: rgba(135, 50, 118, 0.1); border: 1px dashed var(--dash-primary); color: var(--dash-primary);
-        padding: 8px 15px; border-radius: 10px; font-size: 0.7rem; font-weight: 800; cursor: pointer;
-        width: 100%; margin-top: 15px; transition: 0.2s;
+        background: rgba(135, 50, 118, 0.1);
+        border: 1px dashed var(--dash-primary);
+        color: var(--dash-primary);
+        padding: 8px 15px;
+        border-radius: 10px;
+        font-size: 0.7rem;
+        font-weight: 800;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 15px;
+        transition: 0.2s;
     }
-    .copy-btn:hover { background: var(--dash-primary); color: #fff; border-style: solid; }
+
+    .copy-btn:hover {
+        background: var(--dash-primary);
+        color: #fff;
+        border-style: solid;
+    }
 
     /* CELEBRATION MODE */
     .celebration-overlay {
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-        background: radial-gradient(circle at center, rgba(135,50,118,0.95), rgba(15,5,13,0.99));
-        z-index: 10000; display: none; flex-direction: column; align-items: center; justify-content: center;
-        text-align: center; padding: 40px; color: #fff; transform: scale(1.1); opacity: 0; transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at center, rgba(135, 50, 118, 0.95), rgba(15, 5, 13, 0.99));
+        z-index: 10000;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px;
+        color: #fff;
+        transform: scale(1.1);
+        opacity: 0;
+        transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .celebration-overlay.active { display: flex; transform: scale(1); opacity: 1; }
-    .success-card {
-        background: rgba(255,255,255,0.05); border: 2px solid var(--dash-primary); padding: 60px;
-        border-radius: 50px; box-shadow: 0 0 50px rgba(135, 50, 118, 0.5); max-width: 600px;
-    }
-    .google-btn {
-        background: #fff; color: #000; padding: 20px 40px; border-radius: 40px; font-weight: 900;
-        text-decoration: none; display: inline-flex; align-items: center; gap: 12px; margin-top: 30px;
-        transition: 0.3s; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-    .google-btn:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(135, 50, 118, 0.4); }
 
-    .google-btn:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(135, 50, 118, 0.4); }
+    .celebration-overlay.active {
+        display: flex;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .success-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid var(--dash-primary);
+        padding: 60px;
+        border-radius: 50px;
+        box-shadow: 0 0 50px rgba(135, 50, 118, 0.5);
+        max-width: 600px;
+    }
+
+    .google-btn {
+        background: #fff;
+        color: #000;
+        padding: 20px 40px;
+        border-radius: 40px;
+        font-weight: 900;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 30px;
+        transition: 0.3s;
+        font-size: 1.1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .google-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(135, 50, 118, 0.4);
+    }
+
+    .google-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(135, 50, 118, 0.4);
+    }
 
     /* AMBASSADOR & RATING */
     .ambassador-badge {
-        background: linear-gradient(135deg, #ffd700, #b8860b); color: #000;
-        padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 900;
-        text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 10px;
+        background: linear-gradient(135deg, #ffd700, #b8860b);
+        color: #000;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline-block;
+        margin-bottom: 10px;
     }
+
     .ambassador-card {
-        background: rgba(255,215,0,0.05); border: 1px solid rgba(255,215,0,0.3);
-        padding: 25px; border-radius: 25px; margin-top: 30px; border-style: dashed;
+        background: rgba(255, 215, 0, 0.05);
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        padding: 25px;
+        border-radius: 25px;
+        margin-top: 30px;
+        border-style: dashed;
         transition: 0.3s;
     }
-    .ambassador-card:hover { background: rgba(255,215,0,0.1); border-style: solid; box-shadow: 0 0 20px rgba(255,215,0,0.2); }
-    .stars-wrap { display: flex; gap: 10px; margin-top: 15px; justify-content: center; }
-    .star-btn.active { filter: grayscale(0); opacity: 1; transform: scale(1.2); }
+
+    .ambassador-card:hover {
+        background: rgba(255, 215, 0, 0.1);
+        border-style: solid;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    }
+
+    .stars-wrap {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    .star-btn.active {
+        filter: grayscale(0);
+        opacity: 1;
+        transform: scale(1.2);
+    }
 
     /* CONCIERGERIE CARDS */
-    .concierge-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 20px; }
+    .concierge-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
     .tech-card {
-        background: rgba(0, 243, 255, 0.03); border: 1px solid rgba(0, 243, 255, 0.1);
-        border-radius: 20px; padding: 20px; transition: 0.3s; position: relative; overflow: hidden;
+        background: rgba(0, 243, 255, 0.03);
+        border: 1px solid rgba(0, 243, 255, 0.1);
+        border-radius: 20px;
+        padding: 20px;
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
     }
-    .tech-card:hover { transform: translateY(-5px); border-color: #00f3ff; box-shadow: 0 0 15px rgba(0, 243, 255, 0.2); }
-    .tech-badge { position: absolute; top: 0; right: 0; background: rgba(0, 243, 255, 0.1); color: #00f3ff; padding: 4px 10px; font-size: 0.6rem; text-transform: uppercase; border-bottom-left-radius: 12px; }
-    .tech-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
-    
-    .maintenance-item { display: flex; align-items: start; gap: 12px; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+    .tech-card:hover {
+        transform: translateY(-5px);
+        border-color: #00f3ff;
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+    }
+
+    .tech-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(0, 243, 255, 0.1);
+        color: #00f3ff;
+        padding: 4px 10px;
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        border-bottom-left-radius: 12px;
+    }
+
+    .tech-icon {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    .maintenance-item {
+        display: flex;
+        align-items: start;
+        gap: 12px;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
     .resource-link {
-        display: block; width: 100%; padding: 12px; margin-bottom: 10px;
-        background: rgba(255,255,255,0.05); color: #fff; text-decoration: none;
-        border-radius: 12px; text-align: center; font-weight: 600; font-size: 0.85rem;
-        border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 12px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.85rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: 0.3s;
     }
-    .resource-link:hover { background: #fff; color: #000; }
+
+    .resource-link:hover {
+        background: #fff;
+        color: #000;
+    }
 
     @media (max-width: 768px) {
-        .property-card-premium { flex-direction: column; text-align: center; }
-        .prop-img-wrap { width: 100%; height: 200px; }
+        .property-card-premium {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .prop-img-wrap {
+            width: 100%;
+            height: 200px;
+        }
     }
 </style>
 
@@ -291,10 +733,14 @@
     <div id="overlayCelebration" class="celebration-overlay">
         <div class="success-card">
             <div style="font-size: 5rem; margin-bottom: 20px;">🥂</div>
-            <h1 style="font-family:'Outfit'; font-size: 3.5rem; margin-bottom: 10px; line-height: 1;">FÉLICITATIONS !</h1>
-            <p id="txtCelebrationMsg" style="font-size: 1.4rem; opacity: 0.8; margin-bottom: 30px;">Votre transaction immobilière est officiellement conclue.</p>
-            <div style="height:2px; background:linear-gradient(90deg, transparent, var(--dash-primary), transparent); margin-bottom:40px;"></div>
-            
+            <h1 style="font-family:'Outfit'; font-size: 3.5rem; margin-bottom: 10px; line-height: 1;">FÉLICITATIONS !
+            </h1>
+            <p id="txtCelebrationMsg" style="font-size: 1.4rem; opacity: 0.8; margin-bottom: 30px;">Votre transaction
+                immobilière est officiellement conclue.</p>
+            <div
+                style="height:2px; background:linear-gradient(90deg, transparent, var(--dash-primary), transparent); margin-bottom:40px;">
+            </div>
+
             <p style="font-weight: 600; margin-bottom: 5px;">Avez-vous aimé votre expérience ?</p>
             <div class="stars-wrap" id="wrapStars">
                 <span class="star-btn" onclick="setRating(1)">⭐</span>
@@ -311,13 +757,17 @@
             <div class="ambassador-card">
                 <div class="ambassador-badge">Programme Ambassadeur</div>
                 <h4 style="color: #ffd700; margin-bottom: 5px;">Devenez Ambassadeur Evan Patruno</h4>
-                <p style="font-size: 0.9rem; opacity: 0.7;">Référez un ami et recevez <span id="txtReward" style="color:#fff; font-weight:700;">--</span> une fois la transaction conclue.</p>
-                <div style="margin-top:15px; font-size:0.8rem; background:rgba(255,255,255,0.1); padding:8px; border-radius:10px; border:1px solid rgba(255,255,255,0.1);">
-                    Dites-leur de mentionner <strong>votre nom</strong> ou votre code : <strong id="txtReferralCode">--</strong>
+                <p style="font-size: 0.9rem; opacity: 0.7;">Référez un ami et recevez <span id="txtReward"
+                        style="color:#fff; font-weight:700;">--</span> une fois la transaction conclue.</p>
+                <div
+                    style="margin-top:15px; font-size:0.8rem; background:rgba(255,255,255,0.1); padding:8px; border-radius:10px; border:1px solid rgba(255,255,255,0.1);">
+                    Dites-leur de mentionner <strong>votre nom</strong> ou votre code : <strong
+                        id="txtReferralCode">--</strong>
                 </div>
             </div>
-            
-            <div style="margin-top: 40px; opacity: 0.6; cursor: pointer; text-decoration: underline; font-size: 0.8rem;" onclick="closeCelebration()">
+
+            <div style="margin-top: 40px; opacity: 0.6; cursor: pointer; text-decoration: underline; font-size: 0.8rem;"
+                onclick="closeCelebration()">
                 Consulter les détails archivés de mon dossier
             </div>
         </div>
@@ -327,12 +777,16 @@
     <div class="portal-overlay" id="portalOverlay">
         <div class="login-card">
             <div style="font-size: 4rem; margin-bottom: 25px;">🗝️</div>
-            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff;">Accès au Dossier</h2>
+            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff;">Accès au
+                Dossier</h2>
             <p style="color: rgba(255,255,255,0.6); margin-bottom: 40px;">Entrez votre Code Portail unique.</p>
             <form onsubmit="handlePortalLogin(event)">
-                <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode" required>
-                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TÉLÉPHONE" class="login-input" id="inpPortalPhone" required style="margin-top: -10px;">
-                <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon dossier</button>
+                <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode"
+                    required>
+                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TÉLÉPHONE" class="login-input"
+                    id="inpPortalPhone" required style="margin-top: -10px;">
+                <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon
+                    dossier</button>
             </form>
         </div>
     </div>
@@ -340,8 +794,12 @@
     <!-- DASHBOARD -->
     <div class="portal-container" id="portalDash">
         <header style="margin-bottom: 50px;">
-            <span style="color: var(--dash-accent); font-weight: 800; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase;">Portail Client Privé</span>
-            <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin: 10px 0; color: #fff; text-shadow: 0 0 20px rgba(135, 50, 118, 0.3);">--</h1>
+            <span
+                style="color: var(--dash-accent); font-weight: 800; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase;">Portail
+                Client Privé</span>
+            <h1 id="txtWelcome"
+                style="font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin: 10px 0; color: #fff; text-shadow: 0 0 20px rgba(135, 50, 118, 0.3);">
+                --</h1>
             <p id="txtCodeRef" style="color: rgba(255,255,255,0.5); font-size: 1.1rem;">Dossier #--</p>
             <div id="wrapCountdown" style="display: none;">
                 <div class="countdown-widget">
@@ -354,8 +812,12 @@
         <div class="property-card-premium">
             <div class="prop-img-wrap"><img id="imgProp" src=""></div>
             <div style="flex: 1;">
-                <div class="badge-premium" id="badgeStage" style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid #2ecc71; display: inline-block; margin-bottom: 20px;">--</div>
-                <h2 id="txtPropName" style="font-size: 2.5rem; margin: 0; font-family: 'Outfit', sans-serif; color: #fff; line-height: 1.1;">--</h2>
+                <div class="badge-premium" id="badgeStage"
+                    style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid #2ecc71; display: inline-block; margin-bottom: 20px;">
+                    --</div>
+                <h2 id="txtPropName"
+                    style="font-size: 2.5rem; margin: 0; font-family: 'Outfit', sans-serif; color: #fff; line-height: 1.1;">
+                    --</h2>
                 <p id="txtPropCity" style="color: rgba(255,255,255,0.6); font-size: 1.3rem;">--</p>
             </div>
         </div>
@@ -369,37 +831,17 @@
                 <h3>Financement Approuvé & Dossier</h3>
                 <div class="section-chevron">▼</div>
             </div>
-            <div class="section-content" style="background: linear-gradient(135deg, rgba(135,50,118,0.05), rgba(0,0,0,0.2));">
+            <div class="section-content"
+                style="background: linear-gradient(135deg, rgba(135,50,118,0.05), rgba(0,0,0,0.2));">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
                     <span style="opacity:0.6; font-size:0.9rem;">Statut général :</span>
                     <div id="badgePrequal" class="badge-premium">--</div>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;" id="wrapChecklist"></div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"
+                    id="wrapChecklist"></div>
             </div>
         </div>
 
-        <!-- ESPACE CONCIERGERIE (TECH & CONSEILS) -->
-        <div class="section-wrapper" id="secConcierge">
-            <div class="section-header" onclick="toggleSection('secConcierge')">
-                <h3>Espace Conciergerie (Tech & Maison)</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px;" class="concierge-main-grid">
-                    <div>
-                        <h4 style="color:#00f3ff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">🚀 Domotique : Équipez votre maison</h4>
-                        <div id="wrapSmartHome" class="concierge-grid"></div>
-                    </div>
-                    <div>
-                        <h4 style="color:#ffd700; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">🍂 Entretien Saisonnier</h4>
-                        <div id="wrapMaintenance" style="background:rgba(255,255,255,0.02); border-radius:15px; padding:10px;"></div>
-                        
-                        <h4 style="color:#fff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:25px 0 15px;">📚 Ressources Utiles</h4>
-                        <div id="wrapResources"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="section-wrapper" id="secTimeline">
             <div class="section-header" onclick="toggleSection('secTimeline')">
                 <h3>Timeline de Transaction</h3>
@@ -436,8 +878,40 @@
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
-                <p style="margin-bottom: 25px; opacity: 0.6; font-size: 0.9rem;">Ne manquez aucune étape importante avant ou après votre emménagement.</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;" id="wrapMoving"></div>
+                <p style="margin-bottom: 25px; opacity: 0.6; font-size: 0.9rem;">Ne manquez aucune étape importante
+                    avant ou après votre emménagement.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"
+                    id="wrapMoving"></div>
+            </div>
+        </div>
+
+        <!-- ESPACE CONCIERGERIE (TECH & CONSEILS) -->
+        <div class="section-wrapper collapsed" id="secConcierge">
+            <div class="section-header" onclick="toggleSection('secConcierge')">
+                <h3>Espace Conciergerie (Tech & Maison)</h3>
+                <div class="section-chevron">▼</div>
+            </div>
+            <div class="section-content">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px;" class="concierge-main-grid">
+                    <div>
+                        <h4
+                            style="color:#00f3ff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">
+                            🚀 Domotique : Équipez votre maison</h4>
+                        <div id="wrapSmartHome" class="concierge-grid"></div>
+                    </div>
+                    <div>
+                        <h4
+                            style="color:#ffd700; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">
+                            🍂 Entretien Saisonnier</h4>
+                        <div id="wrapMaintenance"
+                            style="background:rgba(255,255,255,0.02); border-radius:15px; padding:10px;"></div>
+
+                        <h4
+                            style="color:#fff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:25px 0 15px;">
+                            📚 Ressources Utiles</h4>
+                        <div id="wrapResources"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -448,7 +922,8 @@
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
-                <p style="color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 30px;">Profitez d'avantages exclusifs négociés pour vous.</p>
+                <p style="color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 30px;">Profitez d'avantages
+                    exclusifs négociés pour vous.</p>
                 <div class="partner-grid" id="wrapPartners"></div>
             </div>
         </div>
@@ -499,7 +974,7 @@
 
     function renderPortal(data) {
         if (!document.getElementById('txtWelcome')) return; // Safety first
-        
+
         document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName}.`;
         document.getElementById('txtCodeRef').innerText = `Dossier #${data.code}`;
         document.getElementById('txtPropName').innerText = data.property;
@@ -516,12 +991,12 @@
             node.className = `step-node ${s.status}`;
             node.innerHTML = `<div class="node-dot">${s.icon}</div><div style="font-size:0.8rem;margin-top:15px;font-weight:700;">${s.label}</div>`;
             wrapT.appendChild(node);
-            if(s.status === 'completed') completed++;
-            if(s.status === 'active') completed += 0.5;
+            if (s.status === 'completed') completed++;
+            if (s.status === 'active') completed += 0.5;
         });
-        setTimeout(() => { 
+        setTimeout(() => {
             const bar = document.getElementById('barProgress');
-            if (bar) bar.style.width = `${((completed-1)/(data.timeline.length-1))*80}%`;
+            if (bar) bar.style.width = `${((completed - 1) / (data.timeline.length - 1)) * 80}%`;
         }, 100);
 
         // Team
@@ -544,10 +1019,10 @@
         // (Dates removed because integrated in cockpit)
 
         // Checklist
-        document.getElementById('badgePrequal').innerText = data.checklist.filter(c=>c.done).length + "/" + data.checklist.length;
+        document.getElementById('badgePrequal').innerText = data.checklist.filter(c => c.done).length + "/" + data.checklist.length;
         document.getElementById('wrapChecklist').innerHTML = data.checklist.map(c => `
             <div style="background:${c.done ? 'rgba(46,204,113,0.05)' : 'rgba(255,255,255,0.02)'};padding:22px;border-radius:25px;display:flex;align-items:center;gap:18px;border:1px solid ${c.done ? 'rgba(46,204,113,0.2)' : 'rgba(255,255,255,0.1)'}">
-                <div style="width:30px;height:30px;background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.05)'};border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:${c.done?'#fff':'rgba(255,255,255,0.2)'}">${c.done ? '✓' : '!'}</div>
+                <div style="width:30px;height:30px;background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.05)'};border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:${c.done ? '#fff' : 'rgba(255,255,255,0.2)'}">${c.done ? '✓' : '!'}</div>
                 <span style="font-size:1rem;font-weight:600;color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name}</span>
             </div>
         `).join('');
@@ -556,7 +1031,7 @@
 
         // Moving Checklist (With LocalStorage Persistence)
         const savedMoving = JSON.parse(localStorage.getItem(`moving_${data.code}`) || "{}");
-        
+
         document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, idx) => {
             const isDone = savedMoving[idx] !== undefined ? savedMoving[idx] : c.done;
             return `
@@ -576,14 +1051,14 @@
                 secSeller.style.display = 'block';
                 const visitsEl = document.getElementById('valVisits');
                 if (visitsEl) visitsEl.innerText = data.sellerData.visits || "0";
-                
+
                 const wrapFeed = document.getElementById('wrapFeedback');
                 if (wrapFeed) {
                     wrapFeed.innerHTML = data.sellerData.feedback.map(f => `
                         <div class="feedback-item">
                             <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
                                 <span style="font-size:0.8rem; color:var(--dash-accent); font-weight:800;">${f.date}</span>
-                                <span style="color:var(--dash-warning);"> ${'★'.repeat(f.rating || 5)}${'⭐'.repeat(5-(f.rating || 5))}</span>
+                                <span style="color:var(--dash-warning);"> ${'★'.repeat(f.rating || 5)}${'⭐'.repeat(5 - (f.rating || 5))}</span>
                             </div>
                             <p style="margin:0; font-style:italic; opacity:0.9;">"${f.comment}"</p>
                         </div>
@@ -617,7 +1092,7 @@
             const hasData = ms.data && ms.data.days !== null;
             const days = hasData ? ms.data.days : null;
             const targetDate = hasData ? ms.data.date : "À confirmer";
-            
+
             const isDone = days !== null && days < 0;
             const daysText = days !== null ? (isDone ? "✅" : days) : "--";
             const subText = days !== null ? (isDone ? "COMPLÉTÉ" : (days === 1 ? "JOUR RESTANT" : "JOURS RESTANTS")) : "DÉLAI À CONFIRMER";
@@ -677,7 +1152,7 @@
 
     function setRating(val) {
         const stars = document.getElementById('wrapStars').children;
-        for(let i=0; i<stars.length; i++) {
+        for (let i = 0; i < stars.length; i++) {
             stars[i].classList.toggle('active', i < val);
         }
         localStorage.setItem('portal_rating_' + currentDossierCode, val);
@@ -695,7 +1170,7 @@
     }
 
     function createConfetti() {
-        for(let i=0; i<50; i++) {
+        for (let i = 0; i < 50; i++) {
             const c = document.createElement('div');
             c.style.position = 'fixed';
             c.style.width = '10px';
@@ -707,7 +1182,7 @@
             c.style.borderRadius = '2px';
             c.style.opacity = Math.random();
             document.body.appendChild(c);
-            
+
             const anim = c.animate([
                 { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
                 { transform: `translateY(110vh) rotate(${Math.random() * 720}deg)`, opacity: 0 }
@@ -730,13 +1205,13 @@
         const item = document.getElementById(`moving-${idx}`);
         const box = item.querySelector('.check-box');
         const text = item.querySelector('span');
-        
+
         const newState = !saved[idx];
         saved[idx] = newState;
         localStorage.setItem(key, JSON.stringify(saved));
-        
+
         // UI Update
-        if(newState) {
+        if (newState) {
             box.innerText = "✓";
             box.style.border = "2px solid #2ecc71";
             box.style.background = "rgba(46,204,113,0.1)";
@@ -762,24 +1237,24 @@
         const code = document.getElementById('inpPortalCode').value.trim();
         const phone = document.getElementById('inpPortalPhone').value.trim();
         const btn = document.getElementById('btnPortalLogin');
-        
+
         btn.innerText = "Vérification sécurisée...";
         btn.disabled = true;
         setSafeStyle('btnPortalLogin', 'opacity', '0.7');
-        
+
         try {
             const response = await fetch('https://evanpatruno-ca.vercel.app/api/portal', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ 
+                body: JSON.stringify({
                     codePortal: code,
-                    phoneLast4: phone 
+                    phoneLast4: phone
                 })
             });
 
             if (!response.ok) {
                 const errData = await response.json();
-                
+
                 // --- GESTION DES DOSSIERS CLOS ---
                 if (errData.errorType === "WON" || errData.errorType === "LOST") {
                     document.getElementById('portalOverlay').innerHTML = `
@@ -792,22 +1267,22 @@
                     `;
                     return;
                 }
-                
+
                 throw new Error(errData.details ? `${errData.error} (${errData.details})` : errData.error || 'Dossier introuvable');
             }
 
             const data = await response.json();
-            
+
             // RENDU DES DONNÉES RÉELLES
             renderPortal(data);
-            
+
             document.getElementById('portalOverlay').classList.add('hidden');
             document.getElementById('portalDash').classList.add('visible');
-            
+
         } catch (error) {
             console.error('Erreur Portail:', error);
             alert("Erreur : " + error.message);
-            
+
             // FALLBACK TEST (EP-1001) - Pour permettre de voir le visuel si l'API n'est pas encore déployée
             if (code === "EP-1001") {
                 console.log("Utilisation du mode démo pour EP-1001");
