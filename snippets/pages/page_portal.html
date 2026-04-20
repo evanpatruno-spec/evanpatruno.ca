@@ -440,13 +440,7 @@
             </div>
         `).join('');
 
-        // Dates
-        document.getElementById('wrapDates').innerHTML = data.dates.map(d => `
-            <div class="date-row">
-                <div class="date-label">${d.label}</div>
-                <div class="date-val">${d.val}</div>
-            </div>
-        `).join('');
+        // (Dates removed because integrated in cockpit)
 
         // Checklist
         document.getElementById('badgePrequal').innerText = data.checklist.filter(c=>c.done).length + "/" + data.checklist.length;
@@ -457,13 +451,7 @@
             </div>
         `).join('');
 
-        // Countdown
-        if (data.daysRemaining !== null) {
-            document.getElementById('wrapCountdown').style.display = 'block';
-            document.getElementById('valCountdown').innerText = data.daysRemaining;
-        } else {
-            document.getElementById('wrapCountdown').style.display = 'none';
-        }
+        // (Global Countdown removed because integrated in cockpit milestones)
 
         // Moving Checklist (With LocalStorage Persistence)
         const savedMoving = JSON.parse(localStorage.getItem(`moving_${data.code}`) || "{}");
