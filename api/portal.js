@@ -162,20 +162,10 @@ export default async function handler(req, res) {
         const daysClosing = getDays(deal.Closing_Date);
         const daysOccupation = getDays(deal.Date_d_occupation);
 
-        const portalData = {
-            firstName: clientContact.First_Name || "Cher client",
-            code: cleanCode,
-            property: deal.Deal_Name || "Votre Propriété",
-            city: deal.Ville || "",
-            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
-            stage: stage,
-            image: deal.Record_Image || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
-            transactionType: transactionType,
         // --- LOGIQUE TIMELINE DYNAMIQUE (V4.3) ---
         const getTimeline = (curStage, type) => {
             const normalized = curStage.toLowerCase();
             if (type === "Vendeur") {
-                // Étapes Vendeur (Regroupement pour le client)
                 const steps = [
                     { label: "Mise en marché", icon: "📝", match: ["analyse", "contrat", "préparation"] },
                     { label: "Visites / Négo", icon: "🔍", match: ["marché", "visites", "reçue", "négociation"] },
@@ -184,15 +174,13 @@ export default async function handler(req, res) {
                     { label: "Vendu", icon: "🏠", match: ["vendu", "acheté", "louer"] }
                 ];
                 let currentIdx = steps.findIndex(s => s.match.some(m => normalized.includes(m)));
-                if (currentIdx === -1 && normalized.includes("expiré")) currentIdx = 4; // Cas d'échec affiché comme fin
-                
+                if (currentIdx === -1 && normalized.includes("expiré")) currentIdx = 4;
                 return steps.map((s, i) => ({
                     label: s.label,
                     icon: s.icon,
                     status: i < currentIdx ? "completed" : (i === currentIdx ? "active" : "pending")
                 }));
             } else {
-                // Étapes Acheteur (Regroupement pour le client)
                 const steps = [
                     { label: "Préparation", icon: "📝", match: ["analyse", "contrat"] },
                     { label: "Offre déposée", icon: "🔍", match: ["redigee", "deposee"] },
