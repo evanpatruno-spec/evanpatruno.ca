@@ -596,8 +596,8 @@
                     <p style="margin:0; font-style:italic; opacity:0.9;">"${f.comment}"</p>
                 </div>
             `).join('');
-        } else {
-            document.getElementById('sectionSeller').style.display = 'none';
+        } else if (secSeller) {
+            secSeller.style.display = 'none';
         }
 
         // Partners (Idea 3)
