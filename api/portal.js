@@ -147,14 +147,20 @@ export default async function handler(req, res) {
         let isConditionsDone = deal.Autres_conditions_lev_es === true || deal.Autres_conditions_lev_es === "Oui";
         const transactionType = deal.Type === "Vente" ? "Vendeur" : "Acheteur";
 
-        // Détermination des jours restants
-        let daysRemaining = null;
-        if (deal.Closing_Date) {
-            const closing = new Date(deal.Closing_Date);
+        // Détermination des échéances (Multi-Milestones)
+        const getDays = (dateStr) => {
+            if (!dateStr) return null;
+            const target = new Date(dateStr);
             const today = new Date();
-            const diff = closing - today;
-            daysRemaining = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-        }
+            today.setHours(0, 0, 0, 0); // Comparaison sur le jour même
+            const diff = target - today;
+            return Math.ceil(diff / (1000 * 60 * 60 * 24));
+        };
+
+        const daysFinancing = getDays(deal.Date_de_financement);
+        const daysInspection = getDays(deal.Date_d_inspection);
+        const daysClosing = getDays(deal.Closing_Date);
+        const daysOccupation = getDays(deal.Date_d_occupation);
 
         const portalData = {
             firstName: clientContact.First_Name || "Cher client",
@@ -165,7 +171,13 @@ export default async function handler(req, res) {
             stage: stage,
             image: deal.Record_Image || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
             transactionType: transactionType,
-            daysRemaining: daysRemaining,
+            milestones: {
+                financing: daysFinancing,
+                inspection: daysInspection,
+                signature: daysClosing,
+                occupation: daysOccupation
+            },
+            daysRemaining: daysClosing, // Reste pour compatibilité
             timeline: [
                 { label: "Financement", icon: "💎", status: isFinancementDone ? "completed" : "active" },
                 { label: "Offre", icon: "📝", status: (stage.includes("Offre") || isConditionsDone) ? "completed" : "active" },
