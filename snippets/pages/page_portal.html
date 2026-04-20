@@ -782,6 +782,55 @@
             padding: 30px 20px;
             margin: 15px;
         }
+
+        /* PWA INSTALL BANNER */
+        .install-banner {
+            display: none; /* Hidden by default */
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(135, 50, 118, 0.1));
+            border: 1px solid #00f3ff;
+            border-radius: 20px;
+            padding: 15px 25px;
+            margin-bottom: 30px;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            animation: slideIn 0.8s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .install-btn {
+            background: #00f3ff;
+            color: #000;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 243, 255, 0.4);
+        }
+
+        #iosInstructions {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            border-radius: 25px;
+            z-index: 10001;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            text-align: center;
+        }
     }
 </style>
 
@@ -858,6 +907,16 @@
     <!-- DASHBOARD -->
     <div class="portal-container" id="portalDash">
         <header style="margin-bottom: 50px;">
+            <div id="pwaInstallBanner" class="install-banner">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.5rem;">📱</span>
+                    <div>
+                        <div style="font-weight: 800; font-size: 0.9rem;">Installer l'App Mobile</div>
+                        <div style="font-size: 0.7rem; opacity: 0.7;">Pour un accès rapide et hors-ligne.</div>
+                    </div>
+                </div>
+                <button class="install-btn" onclick="installPortalApp()">Installer</button>
+            </div>
             <span
                 style="color: var(--dash-accent); font-weight: 800; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase;">Portail
                 Client Privé</span>
@@ -1352,6 +1411,53 @@
             btn.innerText = "Ouvrir mon dossier";
             btn.disabled = false;
             setSafeStyle('btnPortalLogin', 'opacity', '1');
+        }
+    }
+
+    // --- PWA INSTALL LOGIC ---
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        const banner = document.getElementById('pwaInstallBanner');
+        if (banner) banner.style.display = 'flex';
+    });
+
+    // Detect iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    };
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    window.addEventListener('load', () => {
+        if (isIos() && !isInStandaloneMode()) {
+            const banner = document.getElementById('pwaInstallBanner');
+            if (banner) banner.style.display = 'flex';
+        }
+    });
+
+    async function installPortalApp() {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                const banner = document.getElementById('pwaInstallBanner');
+                if (banner) banner.style.display = 'none';
+            }
+            deferredPrompt = null;
+        } else if (isIos()) {
+            const modal = document.createElement('div');
+            modal.innerHTML = `
+                <div style="position:fixed; bottom:0; left:0; width:100%; background:#fff; color:#000; padding:30px; border-radius:30px 30px 0 0; z-index:11000; text-align:center; box-shadow:0 -10px 40px rgba(0,0,0,0.5); animation: slideUp 0.5s ease;">
+                    <div style="font-size:2rem; margin-bottom:15px;">📲</div>
+                    <h3 style="font-family:'Outfit',sans-serif; margin-bottom:10px;">Installer sur votre iPhone</h3>
+                    <p style="font-size:0.9rem; margin-bottom:20px;">Cliquez sur l'icône de partage <span style="font-size:1.2rem;">⎋</span> ci-dessous et sélectionnez <b>"Sur l'écran d'accueil"</b>.</p>
+                    <button onclick="this.parentElement.remove(); location.reload();" style="background:#000; color:#fff; border:none; padding:12px 30px; border-radius:50px; font-weight:700;">J'ai compris</button>
+                </div>
+                <style>@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }</style>
+            `;
+            document.body.appendChild(modal);
         }
     }
 </script>
