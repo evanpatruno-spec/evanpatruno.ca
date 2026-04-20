@@ -223,6 +223,25 @@
     }
     .copy-btn:hover { background: var(--dash-primary); color: #fff; border-style: solid; }
 
+    /* CELEBRATION MODE */
+    .celebration-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: radial-gradient(circle at center, rgba(135,50,118,0.95), rgba(15,5,13,0.99));
+        z-index: 10000; display: none; flex-direction: column; align-items: center; justify-content: center;
+        text-align: center; padding: 40px; color: #fff; transform: scale(1.1); opacity: 0; transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .celebration-overlay.active { display: flex; transform: scale(1); opacity: 1; }
+    .success-card {
+        background: rgba(255,255,255,0.05); border: 2px solid var(--dash-primary); padding: 60px;
+        border-radius: 50px; box-shadow: 0 0 50px rgba(135, 50, 118, 0.5); max-width: 600px;
+    }
+    .google-btn {
+        background: #fff; color: #000; padding: 20px 40px; border-radius: 40px; font-weight: 900;
+        text-decoration: none; display: inline-flex; align-items: center; gap: 12px; margin-top: 30px;
+        transition: 0.3s; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    .google-btn:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(135, 50, 118, 0.4); }
+
     @media (max-width: 768px) {
         .property-card-premium { flex-direction: column; text-align: center; }
         .prop-img-wrap { width: 100%; height: 200px; }
@@ -231,6 +250,25 @@
 
 <div class="portal-main-wrapper">
     <div class="portal-aura"></div>
+
+    <!-- CELEBRATION OVERLAY -->
+    <div id="overlayCelebration" class="celebration-overlay">
+        <div class="success-card">
+            <div style="font-size: 5rem; margin-bottom: 20px;">🥂</div>
+            <h1 style="font-family:'Outfit'; font-size: 3.5rem; margin-bottom: 10px; line-height: 1;">FÉLICITATIONS !</h1>
+            <p id="txtCelebrationMsg" style="font-size: 1.4rem; opacity: 0.8; margin-bottom: 30px;">Votre transaction immobilière est officiellement conclue.</p>
+            <div style="height:2px; background:linear-gradient(90deg, transparent, var(--dash-primary), transparent); margin-bottom:40px;"></div>
+            
+            <p style="font-weight: 600; margin-bottom: 20px;">Avez-vous aimé votre expérience ?</p>
+            <a href="https://share.google/9blg5CWg5O32yKDkb" target="_blank" class="google-btn">
+                <span>⭐ Laisser un avis Google</span>
+            </a>
+            
+            <div style="margin-top: 50px; opacity: 0.6; cursor: pointer; text-decoration: underline; font-size: 0.8rem;" onclick="closeCelebration()">
+                Consulter les détails archivés de mon dossier
+            </div>
+        </div>
+    </div>
 
     <!-- CONNEXION -->
     <div class="portal-overlay" id="portalOverlay">
@@ -523,6 +561,44 @@
                 </div>
             `;
         }).join('');
+
+        // Celebration Mode
+        if (data.isCelebration) {
+            document.getElementById('overlayCelebration').classList.add('active');
+            createConfetti();
+        }
+    }
+
+    function closeCelebration() {
+        document.getElementById('overlayCelebration').classList.remove('active');
+        setTimeout(() => {
+            document.getElementById('overlayCelebration').style.display = 'none';
+        }, 800);
+    }
+
+    function createConfetti() {
+        for(let i=0; i<50; i++) {
+            const c = document.createElement('div');
+            c.style.position = 'fixed';
+            c.style.width = '10px';
+            c.style.height = '10px';
+            c.style.background = i % 2 === 0 ? 'var(--dash-primary)' : '#ffd700';
+            c.style.left = Math.random() * 100 + 'vw';
+            c.style.top = '-10px';
+            c.style.zIndex = '10001';
+            c.style.borderRadius = '2px';
+            c.style.opacity = Math.random();
+            document.body.appendChild(c);
+            
+            const anim = c.animate([
+                { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                { transform: `translateY(110vh) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+            ], {
+                duration: 2000 + Math.random() * 3000,
+                easing: 'cubic-bezier(0, .9, .6, 1)'
+            });
+            anim.onfinish = () => c.remove();
+        }
     }
 
     function copyPromoCode(code) {

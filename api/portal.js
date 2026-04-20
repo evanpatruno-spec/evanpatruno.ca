@@ -193,9 +193,9 @@ export default async function handler(req, res) {
                     label: s.label,
                     icon: s.icon,
                     status: i < currentIdx ? "completed" : (i === currentIdx ? "active" : "pending")
-                }));
-            }
         };
+
+        const isCelebration = normalizedStage.includes("vendu") || normalizedStage.includes("acheté") || normalizedStage.includes("louer") || normalizedStage.includes("gagné");
 
         const portalData = {
             firstName: clientContact.First_Name || "Cher client",
@@ -204,6 +204,7 @@ export default async function handler(req, res) {
             city: deal.Ville || "",
             price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
             stage: stage,
+            isCelebration: isCelebration,
             image: deal.Record_Image || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
             transactionType: transactionType,
             milestones: {
