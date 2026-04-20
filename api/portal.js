@@ -172,10 +172,10 @@ export default async function handler(req, res) {
             image: deal.Record_Image || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
             transactionType: transactionType,
             milestones: {
-                financing: daysFinancing,
-                inspection: daysInspection,
-                signature: daysClosing,
-                occupation: daysOccupation
+                financing: { days: daysFinancing, date: formatDate(deal.Date_de_financement) },
+                inspection: { days: daysInspection, date: formatDate(deal.Date_d_inspection) },
+                signature: { days: daysClosing, date: formatDate(deal.Closing_Date) },
+                occupation: { days: daysOccupation, date: formatDate(deal.Date_d_occupation) }
             },
             daysRemaining: daysClosing, // Reste pour compatibilité
             timeline: [
