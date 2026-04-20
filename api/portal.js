@@ -175,10 +175,11 @@ export default async function handler(req, res) {
                 ];
                 let currentIdx = steps.findIndex(s => s.match.some(m => normalized.includes(m)));
                 if (currentIdx === -1 && normalized.includes("expiré")) currentIdx = 4;
+                
                 return steps.map((s, i) => ({
                     label: s.label,
                     icon: s.icon,
-                    status: i < currentIdx ? "completed" : (i === currentIdx ? "active" : "pending")
+                    status: (isCelebration || i < currentIdx) ? "completed" : (i === currentIdx ? "active" : "pending")
                 }));
             } else {
                 const steps = [
@@ -192,7 +193,7 @@ export default async function handler(req, res) {
                 return steps.map((s, i) => ({
                     label: s.label,
                     icon: s.icon,
-                    status: i < currentIdx ? "completed" : (i === currentIdx ? "active" : "pending")
+                    status: (isCelebration || i < currentIdx) ? "completed" : (i === currentIdx ? "active" : "pending")
                 }));
             }
         };
