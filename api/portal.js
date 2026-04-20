@@ -197,7 +197,8 @@ export default async function handler(req, res) {
             }
         };
 
-        const isCelebration = normalizedStage.includes("vendu") || normalizedStage.includes("acheté") || normalizedStage.includes("louer") || normalizedStage.includes("gagné");
+        const normalizedStage = stage.toLowerCase();
+        const isCelebration = normalizedStage.includes("vendu") || normalizedStage.includes("acheté") || normalizedStage.includes("loué") || normalizedStage.includes("louer") || normalizedStage.includes("gagné");
 
         const portalData = {
             firstName: clientContact.First_Name || "Cher client",
