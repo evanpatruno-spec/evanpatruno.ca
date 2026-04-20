@@ -257,8 +257,26 @@
     }
     .ambassador-card:hover { background: rgba(255,215,0,0.1); border-style: solid; box-shadow: 0 0 20px rgba(255,215,0,0.2); }
     .stars-wrap { display: flex; gap: 10px; margin-top: 15px; justify-content: center; }
-    .star-btn { font-size: 2rem; cursor: pointer; transition: 0.2s; filter: grayscale(1); opacity: 0.4; }
     .star-btn.active { filter: grayscale(0); opacity: 1; transform: scale(1.2); }
+
+    /* CONCIERGERIE CARDS */
+    .concierge-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 20px; }
+    .tech-card {
+        background: rgba(0, 243, 255, 0.03); border: 1px solid rgba(0, 243, 255, 0.1);
+        border-radius: 20px; padding: 20px; transition: 0.3s; position: relative; overflow: hidden;
+    }
+    .tech-card:hover { transform: translateY(-5px); border-color: #00f3ff; box-shadow: 0 0 15px rgba(0, 243, 255, 0.2); }
+    .tech-badge { position: absolute; top: 0; right: 0; background: rgba(0, 243, 255, 0.1); color: #00f3ff; padding: 4px 10px; font-size: 0.6rem; text-transform: uppercase; border-bottom-left-radius: 12px; }
+    .tech-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+    
+    .maintenance-item { display: flex; align-items: start; gap: 12px; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .resource-link {
+        display: block; width: 100%; padding: 12px; margin-bottom: 10px;
+        background: rgba(255,255,255,0.05); color: #fff; text-decoration: none;
+        border-radius: 12px; text-align: center; font-weight: 600; font-size: 0.85rem;
+        border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;
+    }
+    .resource-link:hover { background: #fff; color: #000; }
 
     @media (max-width: 768px) {
         .property-card-premium { flex-direction: column; text-align: center; }
@@ -360,7 +378,28 @@
             </div>
         </div>
 
-        <!-- TIMELINE SECTION -->
+        <!-- ESPACE CONCIERGERIE (TECH & CONSEILS) -->
+        <div class="section-wrapper" id="secConcierge">
+            <div class="section-header" onclick="toggleSection('secConcierge')">
+                <h3>Espace Conciergerie (Tech & Maison)</h3>
+                <div class="section-chevron">▼</div>
+            </div>
+            <div class="section-content">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px;" class="concierge-main-grid">
+                    <div>
+                        <h4 style="color:#00f3ff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">🚀 Domotique : Équipez votre maison</h4>
+                        <div id="wrapSmartHome" class="concierge-grid"></div>
+                    </div>
+                    <div>
+                        <h4 style="color:#ffd700; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">🍂 Entretien Saisonnier</h4>
+                        <div id="wrapMaintenance" style="background:rgba(255,255,255,0.02); border-radius:15px; padding:10px;"></div>
+                        
+                        <h4 style="color:#fff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:25px 0 15px;">📚 Ressources Utiles</h4>
+                        <div id="wrapResources"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="section-wrapper" id="secTimeline">
             <div class="section-header" onclick="toggleSection('secTimeline')">
                 <h3>Timeline de Transaction</h3>
@@ -604,7 +643,40 @@
             document.getElementById('overlayCelebration').classList.add('active');
             document.getElementById('txtReward').innerText = data.ambassadorReward || "--";
             document.getElementById('txtReferralCode').innerText = data.code || "--";
+            createTimeline(data.timeline);
             createConfetti();
+        }
+
+        // Conciergerie Content
+        if (data.concierge) {
+            // Smart Home
+            const wrapSmart = document.getElementById('wrapSmartHome');
+            wrapSmart.innerHTML = data.concierge.smartHome.map(h => `
+                <div class="tech-card">
+                    <span class="tech-badge">${h.category}</span>
+                    <span class="tech-icon">${h.icon}</span>
+                    <h5 style="color:#fff; margin-bottom:5px;">${h.title}</h5>
+                    <p style="font-size:0.8rem; opacity:0.6; line-height:1.4;">${h.desc}</p>
+                </div>
+            `).join('');
+
+            // Maintenance
+            const wrapMaint = document.getElementById('wrapMaintenance');
+            wrapMaint.innerHTML = data.concierge.maintenance.map(m => `
+                <div class="maintenance-item">
+                    <span style="background:rgba(255,215,0,0.1); color:#ffd700; padding:2px 6px; border-radius:5px; font-size:0.6rem; font-weight:700;">${m.period}</span>
+                    <div>
+                        <div style="font-weight:600; font-size:0.85rem;">${m.title}</div>
+                        <div style="font-size:0.75rem; opacity:0.6;">${m.desc}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Resources
+            const wrapRes = document.getElementById('wrapResources');
+            wrapRes.innerHTML = data.concierge.resources.map(r => `
+                <a href="${r.url}" target="_blank" class="resource-link">${r.title} ↗</a>
+            `).join('');
         }
     }
 

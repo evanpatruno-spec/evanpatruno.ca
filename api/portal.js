@@ -253,7 +253,26 @@ export default async function handler(req, res) {
                 ]
             } : null,
             team: team,
-            dates: dates
+            dates: dates,
+            concierge: {
+                smartHome: [
+                    { category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte d'où que vous soyez.", icon: "🔔" },
+                    { category: "Économies", title: "Thermostat Intelligent", desc: "Optimisez votre chauffage et économisez.", icon: "🌡️" },
+                    { category: "Praticité", title: "Serrure Connectée", desc: "Ouvrez votre porte avec votre téléphone.", icon: "🔐" },
+                    { category: "Ambiance", title: "Éclairage Intelligent", desc: "Contrôlez vos lumières par la voix.", icon: "💡" }
+                ],
+                maintenance: [
+                    { title: "Gouttières", period: "Automne", desc: "Nettoyage avant les gels." },
+                    { title: "Filtres Fournaise", period: "Aux 3 mois", desc: "Assurez la qualité de l'air." },
+                    { title: "Détecteurs", period: "Printemps/Automne", desc: "Vérifiez les piles (fumée/CO)." },
+                    { title: "Échangeur d'air", period: "Annuel", desc: "Nettoyez les filtres et bouches." }
+                ],
+                resources: [
+                    { title: "Guide Premier Acheteur", url: "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/acheter-maison.html" },
+                    { title: "Tout sur le CELIAPP", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete-celiapp.html" },
+                    { title: "Régime d'Accès à la Propriété (RAP)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/regime-enregistre-epargne-retraite-reer/regime-acces-propriete.html" }
+                ]
+            }
         };
 
         return res.status(200).json(portalData);
