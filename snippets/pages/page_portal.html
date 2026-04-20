@@ -583,8 +583,9 @@
         }).join('');
 
         // Seller Section
-        if (data.transactionType === "Vendeur" && data.sellerData) {
-            document.getElementById('sectionSeller').style.display = 'block';
+        const secSeller = document.getElementById('sectionSeller');
+        if (data.transactionType === "Vendeur" && secSeller) {
+            secSeller.style.display = 'block';
             document.getElementById('valVisits').innerText = data.sellerData.visits;
             document.getElementById('wrapFeedback').innerHTML = data.sellerData.feedback.map(f => `
                 <div class="feedback-item">
