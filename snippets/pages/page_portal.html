@@ -292,15 +292,15 @@
 
     .team-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
     }
 
     .team-card {
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid var(--dash-border);
-        border-radius: 30px;
-        padding: 30px;
+        border-radius: 20px;
+        padding: 20px;
         transition: 0.4s;
         text-decoration: none;
         color: inherit;
@@ -753,7 +753,21 @@
         }
 
         .team-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns is better than 1 on small screens */
+            gap: 10px;
+        }
+
+        .team-card {
+            padding: 15px;
+        }
+
+        .moving-item {
+            padding: 12px 15px !important;
+            border-radius: 15px !important;
+        }
+        
+        .moving-item span {
+            font-size: 0.8rem !important;
         }
 
         .concierge-main-grid {
@@ -914,9 +928,6 @@
             </div>
         </div>
 
-        <!-- DATES SECTION (Removed because integrated in cockpit) -->
-
-        <!-- SELLER DASHBOARD (Hiding for now as requested) -->
         <div id="sectionSeller" style="display: none;"></div>
 
         <!-- CONCIERGERIE ADMINISTRATIVE SECTION -->
