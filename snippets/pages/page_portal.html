@@ -57,7 +57,26 @@
     }
 
     .portal-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; transform: scale(1.1); }
-
+    
+    /* ACCORDION SYSTEM */
+    .section-wrapper { margin-bottom: 25px; border: 1px solid var(--dash-border); border-radius: 40px; overflow: hidden; background: rgba(0,0,0,0.2); transition: 0.4s; box-shadow: var(--dash-glow); }
+    .section-header { 
+        padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; 
+        cursor: pointer; background: rgba(255,255,255,0.03); transition: 0.3s;
+    }
+    .section-header:hover { background: rgba(135, 50, 118, 0.1); }
+    .section-header h3 { margin: 0; font-family: 'Outfit'; font-size: 1.5rem; color: #fff; }
+    .section-chevron { 
+        width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; 
+        background: rgba(255,255,255,0.1); border-radius: 50%; transition: 0.4s; color: var(--dash-primary);
+    }
+    .section-wrapper.collapsed .section-content { max-height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; pointer-events: none; }
+    .section-wrapper.collapsed .section-chevron { transform: rotate(-90deg); }
+    .section-content { 
+        padding: 40px; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+        max-height: 2000px; opacity: 1; overflow: hidden;
+    }
+    
     .login-card {
         background: rgba(15, 5, 13, 0.95);
         padding: 50px; border-radius: 40px; border: 2px solid var(--dash-border);
@@ -95,12 +114,6 @@
     .prop-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
     /* TIMELINE */
-    .timeline-container {
-        background: rgba(255,255,255,0.02); border-radius: 45px; padding: 50px;
-        margin-bottom: 60px; border: 1px solid var(--dash-border);
-        box-shadow: var(--dash-glow);
-    }
-
     .timeline-steps { display: flex; justify-content: space-between; position: relative; padding: 0 40px; }
 
     .timeline-steps::before {
@@ -124,12 +137,12 @@
     /* INTERVENANTS & DATES GRID */
     .section-title { font-family: 'Outfit', sans-serif; font-size: 2rem; margin-bottom: 30px; color: #fff; }
 
-    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 60px; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 
     .team-card {
         background: rgba(255,255,255,0.03); border: 1px solid var(--dash-border); border-radius: 30px;
         padding: 30px; transition: 0.4s; text-decoration: none; color: inherit; display: block;
-        cursor: default; /* Plus de curseur de lien */
+        cursor: default;
         box-shadow: var(--dash-glow);
     }
 
@@ -142,11 +155,6 @@
     .team-name { font-size: 1.25rem; font-weight: 800; color: #fff; }
 
     /* DATES TABLE */
-    .dates-container {
-        background: rgba(255,255,255,0.03); border: 1px solid var(--dash-border); border-radius: 40px; padding: 40px; margin-bottom: 60px;
-        box-shadow: var(--dash-glow);
-    }
-
     .date-row {
         display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
     }
@@ -184,12 +192,12 @@
         padding: 20px; border-radius: 0 20px 20px 0; margin-bottom: 15px;
     }
 
-    /* PARTNER CARDS (IDEA 3) */
+    /* PARTNER CARDS */
     .partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
     .partner-card {
         background: rgba(255,255,255,0.02); border: 1px solid var(--dash-border); border-radius: 25px;
         padding: 25px; transition: 0.3s; position: relative; overflow: hidden;
-        user-select: none; /* Empêche le surlignage accidentel */
+        user-select: none;
     }
     .partner-card:hover { transform: scale(1.02); border-color: var(--dash-primary); box-shadow: var(--dash-glow); }
     .partner-promo-badge {
@@ -207,7 +215,6 @@
     @media (max-width: 768px) {
         .property-card-premium { flex-direction: column; text-align: center; }
         .prop-img-wrap { width: 100%; height: 200px; }
-        .timeline-container { display: none; }
     }
 </style>
 
@@ -251,64 +258,103 @@
             </div>
         </div>
 
-        <!-- TIMELINE -->
-        <div class="timeline-container">
-            <h3 class="section-title">Timeline de Transaction</h3>
-            <div class="timeline-steps" id="wrapTimeline">
-                <div class="timeline-progress-bar" id="barProgress"></div>
+        <!-- TIMELINE SECTION -->
+        <div class="section-wrapper" id="secTimeline">
+            <div class="section-header" onclick="toggleSection('secTimeline')">
+                <h3>Timeline de Transaction</h3>
+                <div class="section-chevron">▼</div>
             </div>
-        </div>
-
-        <!-- EQUIPE (INTERVENANTS) -->
-        <h3 class="section-title">Votre Équipe de Transaction</h3>
-        <div class="team-grid" id="wrapTeam"></div>
-
-        <!-- DATES CLES -->
-        <h3 class="section-title">Dates & Délais Importants</h3>
-        <div class="dates-container" id="wrapDates"></div>
-
-        <!-- CHECKLIST -->
-        <div style="background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(0,0,0,0.3)); border: 1px solid var(--dash-border); border-radius: 45px; padding: 50px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
-                <h3 style="font-family: 'Outfit', sans-serif; font-size: 2rem; margin: 0; color: #fff;">Financement Approuvé & Dossier</h3>
-                <div id="badgePrequal" class="badge-premium">--</div>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;" id="wrapChecklist"></div>
-        </div>
-
-        <!-- SELLER DASHBOARD (Hidden by default) -->
-        <div id="sectionSeller" style="display: none; margin-top: 60px;">
-            <h3 class="section-title">Tableau de bord Vendeur</h3>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-val" id="valVisits">--</div>
-                    <div class="stat-label">Visites totales</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-val">⭐ 4.8</div>
-                    <div class="stat-label">Note moyenne</div>
+            <div class="section-content">
+                <div class="timeline-steps" id="wrapTimeline">
+                    <div class="timeline-progress-bar" id="barProgress"></div>
                 </div>
             </div>
-            <div style="background: rgba(255,255,255,0.02); border-radius: 40px; padding: 40px; border: 1px solid var(--dash-border);">
-                <h4 style="margin-bottom:25px; font-family:'Outfit';">Derniers commentaires d'acheteurs</h4>
-                <div id="wrapFeedback"></div>
+        </div>
+
+        <!-- EQUIPE SECTION -->
+        <div class="section-wrapper" id="secTeam">
+            <div class="section-header" onclick="toggleSection('secTeam')">
+                <h3>Votre Équipe de Transaction</h3>
+                <div class="section-chevron">▼</div>
+            </div>
+            <div class="section-content">
+                <div class="team-grid" id="wrapTeam"></div>
             </div>
         </div>
 
-        <!-- MOVING CHECKLIST -->
-        <div style="margin-top: 60px;">
-            <h3 class="section-title">Ma Checklist de Déménagement</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;" id="wrapMoving"></div>
+        <!-- DATES SECTION -->
+        <div class="section-wrapper collapsed" id="secDates">
+            <div class="section-header" onclick="toggleSection('secDates')">
+                <h3>Dates & Délais Importants</h3>
+                <div class="section-chevron">▼</div>
+            </div>
+            <div class="section-content">
+                <div id="wrapDates"></div>
+            </div>
         </div>
 
-        <!-- PRIVATE PARTNER DIRECTORY (IDEA 3) -->
-        <div style="margin-top: 80px; padding: 60px; background: rgba(135,50,118,0.05); border-radius: 50px; border: 1px solid var(--dash-border);">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <span style="color: var(--dash-accent); font-weight: 800; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Conciergerie Privée</span>
-                <h3 style="font-family: 'Outfit'; font-size: 2.5rem; color: #fff; margin: 10px 0;">Vos Partenaires Experts</h3>
-                <p style="color: rgba(255,255,255,0.5); max-width: 600px; margin: 0 auto;">Profitez d'avantages exclusifs négociés pour vous avec les meilleurs spécialistes du secteur.</p>
+        <!-- FINANCEMENT SECTION -->
+        <div class="section-wrapper collapsed" id="secPrequal">
+            <div class="section-header" onclick="toggleSection('secPrequal')">
+                <h3>Financement Approuvé & Dossier</h3>
+                <div class="section-chevron">▼</div>
             </div>
-            <div class="partner-grid" id="wrapPartners"></div>
+            <div class="section-content">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+                    <span style="opacity:0.6; font-size:0.9rem;">Statut général :</span>
+                    <div id="badgePrequal" class="badge-premium">--</div>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;" id="wrapChecklist"></div>
+            </div>
+        </div>
+
+        <!-- SELLER DASHBOARD -->
+        <div id="sectionSeller" style="display: none;">
+            <div class="section-wrapper" id="secSeller">
+                <div class="section-header" onclick="toggleSection('secSeller')">
+                    <h3>Tableau de bord Vendeur</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-val" id="valVisits">--</div>
+                            <div class="stat-label">Visites totales</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-val">⭐ 4.8</div>
+                            <div class="stat-label">Note moyenne</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.02); border-radius: 40px; padding: 40px; border: 1px solid var(--dash-border);">
+                        <h4 style="margin-bottom:25px; font-family:'Outfit';">Derniers commentaires d'acheteurs</h4>
+                        <div id="wrapFeedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOVING SECTION -->
+        <div class="section-wrapper collapsed" id="secMoving">
+            <div class="section-header" onclick="toggleSection('secMoving')">
+                <h3>Ma Checklist de Déménagement</h3>
+                <div class="section-chevron">▼</div>
+            </div>
+            <div class="section-content">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;" id="wrapMoving"></div>
+            </div>
+        </div>
+
+        <!-- PARTNERS SECTION -->
+        <div class="section-wrapper collapsed" id="secPartners">
+            <div class="section-header" onclick="toggleSection('secPartners')">
+                <h3>Vos Partenaires Experts (Conciergerie)</h3>
+                <div class="section-chevron">▼</div>
+            </div>
+            <div class="section-content">
+                <p style="color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 30px;">Profitez d'avantages exclusifs négociés pour vous.</p>
+                <div class="partner-grid" id="wrapPartners"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -491,6 +537,10 @@
             text.style.textDecoration = "none";
             item.style.borderColor = "rgba(255,255,255,0.1)";
         }
+    }
+
+    function toggleSection(id) {
+        document.getElementById(id).classList.toggle('collapsed');
     }
 
     async function handlePortalLogin(e) {
