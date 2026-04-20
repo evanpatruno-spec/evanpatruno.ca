@@ -227,9 +227,13 @@ export default async function handler(req, res) {
             movingChecklist: [
                 { name: "Changement d'adresse (Postes Canada)", done: false },
                 { name: "Branchement Hydro-Québec", done: false },
-                { name: "Assurance Habitation", done: false },
-                { name: "Internet & TV", done: false }
+                { name: "Assurance Habitation (Aviser courtier)", done: false },
+                { name: "Internet & TV (Déménagement de services)", done: false },
+                { name: "Payer la Taxe de Bienvenue (Mutation)", done: false },
+                { name: "Mise à jour du Permis de conduire", done: false },
+                { name: "Entretien Saisonnier (Guide du proprio)", done: false }
             ],
+            ambassadorReward: "Une carte cadeau de 250$ (ou don à une cause)",
             partners: [
                 { category: "Peinture", name: "Peinture Excellence", icon: "🎨", benefit: "10% de rabais", code: "EVANVIP" },
                 { category: "Plomberie", name: "Plombier Pro", icon: "🚰", benefit: "Estimation gratuite", code: "EVANVIP" },
