@@ -193,6 +193,8 @@ export default async function handler(req, res) {
                     label: s.label,
                     icon: s.icon,
                     status: i < currentIdx ? "completed" : (i === currentIdx ? "active" : "pending")
+                }));
+            }
         };
 
         const isCelebration = normalizedStage.includes("vendu") || normalizedStage.includes("acheté") || normalizedStage.includes("louer") || normalizedStage.includes("gagné");
