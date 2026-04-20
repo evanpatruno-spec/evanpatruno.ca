@@ -713,18 +713,68 @@
         color: #000;
     }
 
+    /* MOBILE OPTIMIZATIONS (PWA READY) */
     @media (max-width: 768px) {
-        .property-card-premium {
-            flex-direction: column;
-            text-align: center;
+        .portal-main-wrapper {
+            border-radius: 0; /* Full screen feel on mobile */
+            margin: 0;
         }
 
-        .prop-img-wrap {
-            width: 100%;
-            height: 200px;
+        .portal-container {
+            padding: 40px 15px; /* More compact */
+        }
+
+        .property-card-premium {
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-radius: 30px;
+        }
+
+        .section-header {
+            padding: 20px;
+        }
+
+        .section-header h3 {
+            font-size: 1.1rem;
+        }
+
+        .section-content {
+            padding: 20px;
+        }
+
+        .milestone-grid {
+            grid-template-columns: repeat(2, 1fr); /* 2x2 grid is better than single column */
+            gap: 10px;
+        }
+
+        .milestone-val {
+            font-size: 1.8rem;
+        }
+
+        .team-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .concierge-main-grid {
+            grid-template-columns: 1fr !important; /* Stack domestic/maintenance */
+        }
+
+        .stat-val {
+            font-size: 2rem;
+        }
+
+        .login-card {
+            padding: 30px 20px;
+            margin: 15px;
         }
     }
 </style>
+
+<!-- PWA METADATA -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1a0516">
 
 <div class="portal-main-wrapper">
     <div class="portal-aura"></div>
@@ -809,16 +859,15 @@
             </div>
         </header>
 
-        <div class="property-card-premium">
-            <div class="prop-img-wrap"><img id="imgProp" src=""></div>
+        <div class="property-card-premium" style="justify-content: center; text-align: center;">
             <div style="flex: 1;">
                 <div class="badge-premium" id="badgeStage"
                     style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid #2ecc71; display: inline-block; margin-bottom: 20px;">
                     --</div>
                 <h2 id="txtPropName"
-                    style="font-size: 2.5rem; margin: 0; font-family: 'Outfit', sans-serif; color: #fff; line-height: 1.1;">
+                    style="font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; font-family: 'Outfit', sans-serif; color: #fff; line-height: 1.1;">
                     --</h2>
-                <p id="txtPropCity" style="color: rgba(255,255,255,0.6); font-size: 1.3rem;">--</p>
+                <p id="txtPropCity" style="color: rgba(255,255,255,0.6); font-size: 1.1rem; margin-top: 5px;">--</p>
             </div>
         </div>
 

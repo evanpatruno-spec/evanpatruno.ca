@@ -13,6 +13,11 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/pwa-icon-512.png">
+    <meta name="apple-mobile-web-app-title" content="EP Portail">
+
     <style>
         :root {
             --primary: #873276;
@@ -108,6 +113,16 @@
                     oldScript.parentNode.replaceChild(newScript, oldScript);
                 });
             });
+    </script>
+    <!-- PWA SERVICE WORKER REGISTRATION -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('PWA Service Worker registered'))
+                    .catch(err => console.log('PWA SW registration failed:', err));
+            });
+        }
     </script>
 </body>
 
