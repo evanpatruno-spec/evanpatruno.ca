@@ -4,6 +4,15 @@
     INSTRUCTIONS : Collez ce code dans un élément "Embed Code" sur votre page Zoho Sites.
 -->
 
+<!-- PWA MANIFEST -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1a0516">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="EP Portail">
+<link rel="apple-touch-icon" href="/pwa-icon-512.png">
+
 <style>
     :root {
         --dash-primary: #873276;
@@ -29,9 +38,31 @@
         position: relative;
         overflow: hidden;
         border-radius: 60px;
-        /* Coins arrondis pour plus d'harmonie */
-        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(135, 50, 118, 0.5);
+        outline: 1px solid rgba(135, 50, 118, 0.15);   /* halo ext. visible sur Zoho */
+        outline-offset: 2px;
+        box-shadow:
+            0 40px 100px rgba(0, 0, 0, 0.6),
+            0 0 0 2px rgba(135, 50, 118, 0.12),
+            0 0 60px rgba(135, 50, 118, 0.22),
+            0 0 130px rgba(135, 50, 118, 0.10);
         margin: 20px 0;
+        isolation: isolate;
+        transition: all 0.5s ease;
+    }
+
+    @media (max-width: 768px) {
+        .portal-main-wrapper {
+            border-radius: 28px;
+            margin: 10px 6px;
+            min-height: 680px;
+            padding: 0 !important;
+            outline-offset: 2px;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(135, 50, 118, 0.25),
+                0 0 0 2px rgba(135, 50, 118, 0.4);
+        }
     }
 
     .portal-main-wrapper * {
@@ -51,13 +82,20 @@
     .portal-container {
         max-width: 1100px;
         margin: 0 auto;
-        padding: 80px 20px;
+        padding: 60px 20px;
         position: relative;
         z-index: 5;
         opacity: 0;
         transform: translateY(30px);
         transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1);
         display: none;
+    }
+
+    @media (max-width: 768px) {
+        .portal-container {
+            padding: 25px 15px;
+            border-radius: 0;
+        }
     }
 
     .portal-container.visible {
@@ -73,7 +111,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(15, 5, 13, 0.85);
+        min-height: 100vh;
+        background: rgba(15, 5, 13, 0.92);
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
         z-index: 1000;
@@ -81,6 +120,13 @@
         align-items: center;
         justify-content: center;
         transition: all 1s ease;
+    }
+
+    @media (max-width: 768px) {
+        .portal-overlay {
+            position: absolute;   /* reste dans le flux, ne cache pas nav/footer */
+            padding: 20px;
+        }
     }
 
     .portal-overlay.hidden {
@@ -154,16 +200,60 @@
         overflow: hidden;
     }
 
+    @media (max-width: 768px) {
+        .section-content {
+            padding: 20px 15px;
+        }
+    }
+
     .login-card {
         background: rgba(15, 5, 13, 0.95);
         padding: 50px;
         border-radius: 40px;
         border: 2px solid var(--dash-border);
-        box-shadow: var(--dash-glow);
+        box-shadow: var(--dash-glow), 0 0 60px rgba(135, 50, 118, 0.2);
         text-align: center;
         width: 100%;
         max-width: 420px;
         backdrop-filter: blur(20px);
+    }
+
+    @media (max-width: 768px) {
+        .login-card {
+            padding: 35px 25px;
+            border-radius: 30px;
+            max-width: 100%;
+        }
+    }
+
+    /* Bouton PWA : visible sur tous les écrans */
+    .pwa-login-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        margin-top: 16px;
+        padding: 14px 20px;
+        background: transparent;
+        border: 1px solid rgba(135, 50, 118, 0.5);
+        border-radius: 50px;
+        color: rgba(255,255,255,0.75);
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: all 0.35s ease;
+    }
+    .pwa-login-btn:hover {
+        background: rgba(135, 50, 118, 0.15);
+        border-color: var(--dash-primary);
+        color: #fff;
+        box-shadow: 0 0 20px rgba(135, 50, 118, 0.35);
+    }
+    .pwa-login-btn span.pwa-icon {
+        font-size: 1.2rem;
     }
 
     .login-input {
@@ -210,6 +300,35 @@
         align-items: center;
         margin-bottom: 60px;
         box-shadow: var(--dash-glow);
+        transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+        .property-card-premium {
+            padding: 30px 20px;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .badge-premium {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 2px;
+        padding: 6px 16px;
+        border-radius: 50px;
+        display: inline-block;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+    }
+
+    .badge-gold {
+        background: linear-gradient(135deg, #d4af37, #aa8c2c);
+        color: #000 !important;
+        border: none !important;
     }
 
     .prop-img-wrap {
@@ -221,65 +340,163 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 
+    @media (max-width: 768px) {
+        .prop-img-wrap {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 200px;
+            border-radius: 20px;
+        }
+    }
+
     .prop-img-wrap img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    /* TIMELINE */
+    /* TIMELINE — Desktop */
     .timeline-steps {
         display: flex;
         justify-content: space-between;
         position: relative;
         padding: 0 40px;
+        gap: 20px;
     }
 
+    /* Rail gris de fond — Desktop */
     .timeline-steps::before {
         content: '';
         position: absolute;
-        top: 25px;
+        top: 27px;
         left: 10%;
         width: 80%;
         height: 2px;
         background: rgba(255, 255, 255, 0.08);
+        z-index: 1;
     }
 
+    /* Barre de progression magenta — Desktop */
     .timeline-progress-bar {
         position: absolute;
-        top: 25px;
+        top: 27px;
         left: 10%;
         width: 0%;
         height: 2px;
         background: var(--dash-primary);
         box-shadow: 0 0 20px var(--dash-primary);
-        transition: width 1.8s ease;
+        transition: all 1.8s ease;
+        z-index: 1;
     }
 
+    /* Nœud Desktop : colonne (dot haut, label bas) */
     .step-node {
-        z-index: 10;
+        position: relative;
+        z-index: 2;           /* au-dessus de la barre */
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100px;
+        flex-shrink: 0;
     }
 
+    .step-label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-top: 12px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.3;
+    }
+
+    .step-node.completed .step-label { color: #2ecc71; }
+    .step-node.active .step-label    { color: var(--dash-primary); font-weight: 900; }
+
+    /* Dot */
     .node-dot {
         width: 54px;
         height: 54px;
-        background: #0f050d;
+        background: var(--dash-bg);  /* fond opaque = cache la barre derrière */
         border: 2px solid rgba(255, 255, 255, 0.15);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 900;
+        transition: all 0.6s ease;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 3;               /* dot par-dessus tout */
+    }
+
+    .step-node.completed .node-dot {
+        background: rgba(10, 5, 12, 0.95);
+        border-color: #2ecc71;
+        box-shadow: 0 0 14px rgba(46, 204, 113, 0.7), 0 0 30px rgba(46, 204, 113, 0.35), inset 0 0 12px rgba(46, 204, 113, 0.1);
+    }
+
+    .step-node.active .node-dot {
+        background: rgba(10, 5, 12, 0.95);
+        border-color: var(--dash-primary);
+        box-shadow: 0 0 16px var(--dash-primary-glow), 0 0 32px var(--dash-primary-glow), inset 0 0 12px rgba(135, 50, 118, 0.15);
+        animation: pulseDot 2.2s ease-in-out infinite;
     }
 
     .step-node.done .node-dot {
         background: var(--dash-primary);
         border-color: var(--dash-primary);
-        color: #fff;
+    }
+
+    @keyframes pulseDot {
+        0%, 100% { box-shadow: 0 0 16px var(--dash-primary-glow), 0 0 32px var(--dash-primary-glow); }
+        50%       { box-shadow: 0 0 24px rgba(135, 50, 118, 0.9), 0 0 50px rgba(135, 50, 118, 0.5); }
+    }
+
+    /* ─── MOBILE TIMELINE ─── */
+    @media (max-width: 768px) {
+
+        .timeline-steps {
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+            padding: 15px 15px 15px 15px !important;
+            gap: 0 !important;
+        }
+
+        /* Rail vertical gris */
+        .timeline-steps::before {
+            top: 27px !important;
+            left: 27px !important;
+            width: 2px !important;
+            height: calc(100% - 54px) !important;
+            bottom: auto !important;
+        }
+
+        /* Barre de progression verticale magenta */
+        .timeline-progress-bar {
+            top: 27px !important;
+            left: 27px !important;
+            width: 2px !important;
+            height: 0% !important;
+            bottom: auto !important;
+            transition: height 1.8s ease !important;
+        }
+
+        /* Nœud Mobile : ligne (dot gauche, label droite) */
+        .step-node {
+            flex-direction: row !important;
+            width: 100% !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            gap: 18px !important;
+            padding: 12px 10px !important;
+            text-align: left !important;
+        }
+
+        .step-label {
+            margin-top: 0 !important;
+            text-align: left !important;
+            font-size: 0.85rem !important;
+        }
     }
 
     /* INTERVENANTS & DATES GRID */
@@ -294,6 +511,12 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .team-grid {
+            grid-template-columns: 1fr;
+        }
     }
 
     .team-card {
@@ -716,12 +939,14 @@
     /* MOBILE OPTIMIZATIONS (PWA READY) */
     @media (max-width: 768px) {
         .portal-main-wrapper {
-            border-radius: 0; /* Full screen feel on mobile */
+            border-radius: 0;
+            /* Full screen feel on mobile */
             margin: 0;
         }
 
         .portal-container {
-            padding: 40px 15px; /* More compact */
+            padding: 40px 15px 120px;
+            /* Extra padding to avoid chat overlap */
         }
 
         .property-card-premium {
@@ -744,17 +969,13 @@
         }
 
         .milestone-grid {
-            grid-template-columns: repeat(2, 1fr); /* 2x2 grid is better than single column */
-            gap: 10px;
-        }
-
-        .milestone-val {
-            font-size: 1.8rem;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
 
         .team-grid {
-            grid-template-columns: repeat(2, 1fr); /* 2 columns is better than 1 on small screens */
-            gap: 10px;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
 
         .team-card {
@@ -763,15 +984,19 @@
 
         .moving-item {
             padding: 12px 15px !important;
+            gap: 12px !important;
             border-radius: 15px !important;
         }
-        
+
         .moving-item span {
             font-size: 0.8rem !important;
+            white-space: normal !important;
+            line-height: 1.3 !important;
         }
 
         .concierge-main-grid {
-            grid-template-columns: 1fr !important; /* Stack domestic/maintenance */
+            grid-template-columns: 1fr !important;
+            /* Stack domestic/maintenance */
         }
 
         .stat-val {
@@ -783,36 +1008,61 @@
             margin: 15px;
         }
 
-        /* PWA INSTALL BANNER */
+        /* PWA INSTALL BANNER (FLOATING GLASS CARD) */
         .install-banner {
-            display: none; /* Hidden by default */
-            background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(135, 50, 118, 0.1));
-            border: 1px solid #00f3ff;
-            border-radius: 20px;
-            padding: 15px 25px;
-            margin-bottom: 30px;
+            display: none;
+            position: relative;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 25px;
+            margin-bottom: 40px;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
-            animation: slideIn 0.8s ease;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+            animation: slideIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .banner-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: 0.3s;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .banner-close:hover {
+            opacity: 1;
         }
 
         .install-btn {
-            background: #00f3ff;
-            color: #000;
+            background: linear-gradient(135deg, #873276, #b0549c);
+            color: #fff;
             border: none;
-            padding: 8px 18px;
+            padding: 12px 28px;
             border-radius: 50px;
-            font-weight: 800;
-            font-size: 0.8rem;
+            font-weight: 900;
+            font-size: 0.85rem;
             cursor: pointer;
             text-transform: uppercase;
-            box-shadow: 0 5px 15px rgba(0, 243, 255, 0.4);
+            letter-spacing: 1.5px;
+            box-shadow: 0 10px 25px rgba(135, 50, 118, 0.5);
+            transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .install-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(135, 50, 118, 0.7);
         }
 
         #iosInstructions {
@@ -828,16 +1078,12 @@
             padding: 20px;
             border-radius: 25px;
             z-index: 10001;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
     }
 </style>
 
-<!-- PWA METADATA -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#1a0516">
 
 <div class="portal-main-wrapper">
     <div class="portal-aura"></div>
@@ -889,10 +1135,8 @@
     <!-- CONNEXION -->
     <div class="portal-overlay" id="portalOverlay">
         <div class="login-card">
-            <div style="font-size: 4rem; margin-bottom: 25px;">🗝️</div>
-            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff;">Accès au
-                Dossier</h2>
-            <p style="color: rgba(255,255,255,0.6); margin-bottom: 40px;">Entrez votre Code Portail unique.</p>
+            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 8px;">Accès au Dossier</h2>
+            <p style="color: rgba(255,255,255,0.6); margin-bottom: 35px;">Entrez votre Code Portail unique.</p>
             <form onsubmit="handlePortalLogin(event)">
                 <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode"
                     required>
@@ -900,31 +1144,53 @@
                     id="inpPortalPhone" required style="margin-top: -10px;">
                 <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon
                     dossier</button>
+                <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
+                    <span class="pwa-icon">📲</span>
+                    <span>Installer l'app sur mon téléphone</span>
+                </button>
             </form>
         </div>
     </div>
 
     <!-- DASHBOARD -->
     <div class="portal-container" id="portalDash">
-        <header style="margin-bottom: 50px;">
+        <header style="margin-bottom: 60px; position: relative;">
             <div id="pwaInstallBanner" class="install-banner">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <span style="font-size: 1.5rem;">📱</span>
+                <div class="banner-close" onclick="closePwaBanner()">&#10005;</div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <span style="font-size: 2rem;">📱</span>
                     <div>
-                        <div style="font-weight: 800; font-size: 0.9rem;">Installer l'App Mobile</div>
-                        <div style="font-size: 0.7rem; opacity: 0.7;">Pour un accès rapide et hors-ligne.</div>
+                        <div style="font-weight: 900; font-size: 1rem; color: #fff;">Vivez l'expérience App</div>
+                        <div style="font-size: 0.75rem; opacity: 0.8; color: #fff;">Suivi en temps réel et notifications.</div>
                     </div>
                 </div>
-                <button class="install-btn" onclick="installPortalApp()">Installer</button>
+                <button class="pwa-login-btn" style="display:flex; width:auto; margin-top:0; padding:12px 22px;" onclick="installPortalApp()">
+                    <span class="pwa-icon">📲</span>
+                    <span>Installer</span>
+                </button>
             </div>
-            <span
-                style="color: var(--dash-accent); font-weight: 800; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase;">Portail
-                Client Privé</span>
-            <h1 id="txtWelcome"
-                style="font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin: 10px 0; color: #fff; text-shadow: 0 0 20px rgba(135, 50, 118, 0.3);">
-                --</h1>
-            <p id="txtCodeRef" style="color: rgba(255,255,255,0.5); font-size: 1.1rem;">Dossier #--</p>
-            <div id="wrapCountdown" style="display: none;">
+
+            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                <div style="padding: 6px 16px; background: rgba(135, 50, 118, 0.15); border: 1px solid rgba(135, 50, 118, 0.3); border-radius: 50px; display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 8px; height: 8px; background: var(--dash-accent); border-radius: 50%; box-shadow: 0 0 10px var(--dash-accent-glow);"></div>
+                    <span style="color: var(--dash-accent); font-weight: 900; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">
+                        Portail Client Privé
+                    </span>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+                <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 900; margin: 0; color: #fff; line-height: 1; text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    --
+                </h1>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="padding: 4px 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: rgba(255,255,255,0.6); font-size: 0.9rem; font-weight: 700; letter-spacing: 1px;">
+                        <span id="txtCodeRef">Dossier #--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrapCountdown" style="display: none; margin-top: 30px;">
                 <div class="countdown-widget">
                     <div class="countdown-num" id="valCountdown">--</div>
                     <div class="countdown-txt">Jours avant la signature<br>chez le notaire</div>
@@ -934,13 +1200,15 @@
 
         <div class="property-card-premium" style="justify-content: center; text-align: center;">
             <div style="flex: 1;">
-                <div class="badge-premium" id="badgeStage"
-                    style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid #2ecc71; display: inline-block; margin-bottom: 20px;">
-                    --</div>
-                <h2 id="txtPropName"
-                    style="font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; font-family: 'Outfit', sans-serif; color: #fff; line-height: 1.1;">
-                    --</h2>
-                <p id="txtPropCity" style="color: rgba(255,255,255,0.6); font-size: 1.1rem; margin-top: 5px;">--</p>
+                <div class="badge-premium" id="badgeStage" style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.5);">
+                    --
+                </div>
+                <h2 id="txtPropName" style="font-size: clamp(2rem, 5vw, 3.2rem); margin: 0; font-family: 'Outfit', sans-serif; color: #fff; line-height: 1; letter-spacing: -1px;">
+                    --
+                </h2>
+                <p id="txtPropCity" style="color: rgba(255,255,255,0.5); font-size: 1.2rem; margin-top: 10px; font-weight: 500;">
+                    --
+                </p>
             </div>
         </div>
 
@@ -986,13 +1254,11 @@
                 <div class="team-grid" id="wrapTeam"></div>
             </div>
         </div>
-
         <div id="sectionSeller" style="display: none;"></div>
-
         <!-- CONCIERGERIE ADMINISTRATIVE SECTION -->
         <div class="section-wrapper" id="secMoving">
             <div class="section-header" onclick="toggleSection('secMoving')">
-                <h3>Conciergerie Administrative (Après-Vente)</h3>
+                <h3>Après-Vente (Checklist)</h3>
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
@@ -1006,7 +1272,7 @@
         <!-- ESPACE CONCIERGERIE (TECH & CONSEILS) -->
         <div class="section-wrapper collapsed" id="secConcierge">
             <div class="section-header" onclick="toggleSection('secConcierge')">
-                <h3>Espace Conciergerie (Tech & Maison)</h3>
+                <h3>Espace Maison & Conseils</h3>
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
@@ -1036,7 +1302,7 @@
         <!-- PARTNERS SECTION -->
         <div class="section-wrapper collapsed" id="secPartners">
             <div class="section-header" onclick="toggleSection('secPartners')">
-                <h3>Vos Partenaires Experts (Conciergerie)</h3>
+                <h3>Vos Partenaires Experts</h3>
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
@@ -1082,7 +1348,48 @@
             { name: "Financement Approuvé", done: true },
             { name: "Offre d'achat", done: false },
             { name: "ID Photo", done: true }
-        ]
+        ],
+        milestones: {
+            financing: { days: 5, date: "25 Avril 2026" },
+            inspection: { days: 12, date: "2 Mai 2026" },
+            signature: { days: 25, date: "15 Mai 2026" },
+            occupation: { days: 28, date: "18 Mai 2026" }
+        },
+        movingChecklist: [
+            { name: "Aviser son propriétaire (60 jours avant)", done: true },
+            { name: "Contacter Bell / Videotron / Hydro-Québec", done: false },
+            { name: "Faire suivre son courrier — Postes Canada", done: false },
+            { name: "Aviser la RAMQ et la SAAQ", done: false },
+            { name: "Réserver la compagnie de déménagement", done: false },
+            { name: "Commander les boites et matériaux", done: false },
+            { name: "Faire l'inventaire des biens assurables", done: false },
+            { name: "Changer les serrures à l'arrivée", done: false }
+        ],
+        partners: [
+            { name: "Déménagement Express", icon: "🚚", category: "Déménagement", benefit: "10% Rabais clients Evan", code: "EVAN10" },
+            { name: "CleanPro Montréal", icon: "🧹", category: "Nettoyage", benefit: "-50$ sur 1ère visite", code: "PATRUNO" },
+            { name: "HomeDécor Plus", icon: "💫", category: "Aménagement", benefit: "Consultation gratuite", code: "PORTAIL" }
+        ],
+        isCelebration: false,
+        concierge: {
+            smartHome: [
+                { category: "Sécurité", icon: "🔒", title: "Serrure intelligente", desc: "Remplacez vos serrures dès l'emménagement pour plus de sécurité." },
+                { category: "Confort", icon: "🌡️", title: "Thermostat connecté", desc: "Ecobee ou Nest pour optimiser votre consommation d'énergie." },
+                { category: "Surveillance", icon: "📹", title: "Caméra extérieure", desc: "Ring ou Arlo : surveillez votre propriété à distance." }
+            ],
+            maintenance: [
+                { period: "PRINTEMPS", title: "Gouttières & toiture", desc: "Vérifier les gouttières et la toiture après l'hiver." },
+                { period: "ÉTÉ", title: "Climatisation", desc: "Nettoyer les filtres et vérifier la thermopompe." },
+                { period: "AUTOMNE", title: "Isolation & fenêtres", desc: "Vérifier les calfeutrages et préparer pour l'hiver." },
+                { period: "HIVER", title: "Système de chauffage", desc: "Tester la fournaise et faire entretenir si nécessaire." }
+            ],
+            resources: [
+                { title: "Régime d'Accès à la Propriété (RAP) — ARC", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-reer-ferr-autres-regimes-enregistres/retirer-votre-reer-regulier/regime-acces-propriete.html" },
+                { title: "Guide de l'acheteur — OACIQ officiel", url: "https://www.oaciq.com/fr/articles/rachetez-une-propriete" },
+                { title: "Calculateur de droit de mutation — " , url: "https://www.ville.montreal.qc.ca/portal/page?_pageid=44,52683200&_dad=portal&_schema=PORTAL" },
+                { title: "Rénovation Québec — RénoVért", url: "https://www.transitionenergetique.gouv.qc.ca/residences/programmes-rabais/renovert" }
+            ]
+        }
     };
 
     function setSafeStyle(id, prop, val) {
@@ -1106,15 +1413,25 @@
         data.timeline.forEach((s, i) => {
             const node = document.createElement('div');
             node.className = `step-node ${s.status}`;
-            node.innerHTML = `<div class="node-dot">${s.icon}</div><div style="font-size:0.8rem;margin-top:15px;font-weight:700;">${s.label}</div>`;
+            node.innerHTML = `<div class="node-dot">${s.icon}</div><span class="step-label">${s.label}</span>`;
             wrapT.appendChild(node);
             if (s.status === 'completed') completed++;
             if (s.status === 'active') completed += 0.5;
         });
         setTimeout(() => {
             const bar = document.getElementById('barProgress');
-            if (bar) bar.style.width = `${((completed - 1) / (data.timeline.length - 1)) * 80}%`;
-        }, 100);
+            if (bar) {
+                const total = data.timeline.length;
+                const safePct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 80) : 0;
+                if (window.innerWidth <= 768) {
+                    bar.style.removeProperty('width');
+                    bar.style.height = `${safePct}%`;
+                } else {
+                    bar.style.removeProperty('height');
+                    bar.style.width = `${safePct}%`;
+                }
+            }
+        }, 200);
 
         // Team
         document.getElementById('wrapTeam').innerHTML = data.team.map(t => `
@@ -1156,7 +1473,7 @@
                     <div class="check-box" style="width:24px;height:24px;border:2px solid ${isDone ? '#2ecc71' : 'rgba(255,255,255,0.2)'};border-radius:6px;display:flex;align-items:center;justify-content:center;color:#2ecc71;font-weight:900; background: ${isDone ? 'rgba(46,204,113,0.1)' : 'transparent'};">
                         ${isDone ? '✓' : ''}
                     </div>
-                    <span style="font-size:0.9rem;opacity:${isDone ? '1' : '0.6'}; text-decoration: ${isDone ? 'line-through' : 'none'};">${c.name}</span>
+                    <span style="font-size:0.9rem;opacity:${isDone ? '1' : '0.85'}; text-decoration: ${isDone ? 'line-through' : 'none'};">${c.name}</span>
                 </div>
             `;
         }).join('');
@@ -1230,7 +1547,6 @@
             document.getElementById('overlayCelebration').classList.add('active');
             document.getElementById('txtReward').innerText = data.ambassadorReward || "--";
             document.getElementById('txtReferralCode').innerText = data.code || "--";
-            createTimeline(data.timeline);
             createConfetti();
         }
 
@@ -1398,20 +1714,52 @@
 
         } catch (error) {
             console.error('Erreur Portail:', error);
-            alert("Erreur : " + error.message);
 
-            // FALLBACK TEST (EP-1001) - Pour permettre de voir le visuel si l'API n'est pas encore déployée
+            // FALLBACK TEST (EP-1001)
             if (code === "EP-1001") {
-                console.log("Utilisation du mode démo pour EP-1001");
+                console.log("Mode démo EP-1001");
                 renderPortal(MOCK_DATA);
                 document.getElementById('portalOverlay').classList.add('hidden');
                 document.getElementById('portalDash').classList.add('visible');
+            } else {
+                // Afficher l'erreur sous le formulaire (pas d'alert!)
+                let errBox = document.getElementById('loginErrorMsg');
+                if (!errBox) {
+                    errBox = document.createElement('p');
+                    errBox.id = 'loginErrorMsg';
+                    errBox.style.cssText = 'color:#e17;font-size:0.85rem;margin-top:15px;font-weight:600;';
+                    document.querySelector('.login-card form').appendChild(errBox);
+                }
+                errBox.innerText = '⚠️ ' + (error.message || 'Code ou numéro invalide.');
             }
         } finally {
             btn.innerText = "Ouvrir mon dossier";
             btn.disabled = false;
             setSafeStyle('btnPortalLogin', 'opacity', '1');
         }
+    }
+
+    // --- HELPERS (DECLARED FIRST) ---
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    };
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    const closePwaBanner = () => {
+        const banner = document.getElementById('pwaInstallBanner');
+        if (banner) banner.style.display = 'none';
+        // Optional: save to localStorage to not show again
+        localStorage.setItem('pwaBannerDismissed', 'true');
+    };
+
+    // --- SERVICE WORKER REGISTRATION (PWA) ---
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW Registered'))
+                .catch(err => console.log('SW Registration Failed', err));
+        });
     }
 
     // --- PWA INSTALL LOGIC ---
@@ -1421,43 +1769,80 @@
         deferredPrompt = e;
         const banner = document.getElementById('pwaInstallBanner');
         if (banner) banner.style.display = 'flex';
+        console.log("PWA prompt capture ok");
     });
 
-    // Detect iOS
-    const isIos = () => {
-        const userAgent = window.navigator.userAgent.toLowerCase();
-        return /iphone|ipad|ipod/.test(userAgent);
-    };
-    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+    // Fallback logic
+    setTimeout(() => {
+        const banner = document.getElementById('pwaInstallBanner');
+        if (banner && !localStorage.getItem('pwaBannerDismissed')) {
+            banner.style.display = 'flex';
+        }
+    }, 4000);
 
     window.addEventListener('load', () => {
-        if (isIos() && !isInStandaloneMode()) {
+        if (window.innerWidth <= 991 && !isInStandaloneMode() && !localStorage.getItem('pwaBannerDismissed')) {
             const banner = document.getElementById('pwaInstallBanner');
             if (banner) banner.style.display = 'flex';
         }
     });
 
+    function showPwaToast(msg) {
+        const existing = document.getElementById('pwaToast');
+        if (existing) existing.remove();
+        const toast = document.createElement('div');
+        toast.id = 'pwaToast';
+        toast.style.position = 'fixed';
+        toast.style.bottom = '30px';
+        toast.style.left = '50%';
+        toast.style.transform = 'translateX(-50%)';
+        toast.style.background = 'rgba(20,8,18,0.96)';
+        toast.style.color = '#fff';
+        toast.style.border = '1px solid rgba(135,50,118,0.6)';
+        toast.style.boxShadow = '0 0 30px rgba(135,50,118,0.3)';
+        toast.style.padding = '14px 24px';
+        toast.style.borderRadius = '50px';
+        toast.style.fontFamily = "'Outfit', sans-serif";
+        toast.style.fontSize = '0.85rem';
+        toast.style.fontWeight = '600';
+        toast.style.zIndex = '20000';
+        toast.style.textAlign = 'center';
+        toast.style.maxWidth = '90vw';
+        toast.innerHTML = msg;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 5000);
+    }
+
     async function installPortalApp() {
         if (deferredPrompt) {
+            // Android Chrome avec prompt disponible
             deferredPrompt.prompt();
             const { outcome } = await deferredPrompt.userChoice;
             if (outcome === 'accepted') {
                 const banner = document.getElementById('pwaInstallBanner');
                 if (banner) banner.style.display = 'none';
+                const btn = document.getElementById('btnPwaLogin');
+                if (btn) btn.style.display = 'none';
             }
             deferredPrompt = null;
         } else if (isIos()) {
+            // iPhone/iPad : guide visuel
             const modal = document.createElement('div');
-            modal.innerHTML = `
-                <div style="position:fixed; bottom:0; left:0; width:100%; background:#fff; color:#000; padding:30px; border-radius:30px 30px 0 0; z-index:11000; text-align:center; box-shadow:0 -10px 40px rgba(0,0,0,0.5); animation: slideUp 0.5s ease;">
-                    <div style="font-size:2rem; margin-bottom:15px;">📲</div>
-                    <h3 style="font-family:'Outfit',sans-serif; margin-bottom:10px;">Installer sur votre iPhone</h3>
-                    <p style="font-size:0.9rem; margin-bottom:20px;">Cliquez sur l'icône de partage <span style="font-size:1.2rem;">⎋</span> ci-dessous et sélectionnez <b>"Sur l'écran d'accueil"</b>.</p>
-                    <button onclick="this.parentElement.remove(); location.reload();" style="background:#000; color:#fff; border:none; padding:12px 30px; border-radius:50px; font-weight:700;">J'ai compris</button>
-                </div>
-                <style>@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }</style>
-            `;
+            modal.innerHTML = '<div style="position:fixed; bottom:0; left:0; width:100%; background:rgba(15,5,13,0.97); color:#fff; padding:30px; border-radius:30px 30px 0 0; z-index:11000; text-align:center; box-shadow:0 -10px 40px rgba(135,50,118,0.3); border-top:1px solid rgba(135,50,118,0.4);">' +
+                '<div style="font-size:2rem; margin-bottom:12px;">📲</div>' +
+                '<h3 style="font-family:\'Outfit\',sans-serif; margin-bottom:10px; color:#fff;">Installer sur votre iPhone</h3>' +
+                '<p style="font-size:0.9rem; margin-bottom:20px; opacity:0.8;">Appuyez sur <strong>Partager</strong> ⎋ puis <strong>«Sur l\'écran d\'accueil»</strong>.</p>' +
+                '<button onclick="this.closest(\'div\').parentElement.remove();" style="background:rgba(135,50,118,0.9); color:#fff; border:none; padding:12px 30px; border-radius:50px; font-weight:700; font-family:\'Outfit\',sans-serif;">J\'ai compris ✓</button>' +
+                '</div>';
             document.body.appendChild(modal);
+        } else {
+            // Android sans prompt capturé, ou desktop
+            const isMobile = /android|mobile/i.test(navigator.userAgent);
+            const msg = isMobile
+                ? '📲 Menu ⋮ Android &rarr; <strong>Ajouter à l\'écran d\'accueil</strong>'
+                : '💻 Chrome : menu ⋮ &rarr; <strong>«Installer Portail Patruno»</strong>';
+            showPwaToast(msg);
         }
     }
+
 </script>
