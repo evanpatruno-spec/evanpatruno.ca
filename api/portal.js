@@ -171,6 +171,53 @@ export default async function handler(req, res) {
             stage: stage,
             image: deal.Record_Image || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
             transactionType: transactionType,
+        // --- LOGIQUE TIMELINE DYNAMIQUE (V4.3) ---
+        const getTimeline = (curStage, type) => {
+            const normalized = curStage.toLowerCase();
+            if (type === "Vendeur") {
+                // Étapes Vendeur (Regroupement pour le client)
+                const steps = [
+                    { label: "Mise en marché", icon: "📝", match: ["analyse", "contrat", "préparation"] },
+                    { label: "Visites / Négo", icon: "🔍", match: ["marché", "visites", "reçue", "négociation"] },
+                    { label: "Conditions", icon: "🛡️", match: ["acceptée", "conditionnelle"] },
+                    { label: "Notaire", icon: "✒️", match: ["réalisées", "ferme", "notaire"] },
+                    { label: "Vendu", icon: "🏠", match: ["vendu", "acheté", "louer"] }
+                ];
+                let currentIdx = steps.findIndex(s => s.match.some(m => normalized.includes(m)));
+                if (currentIdx === -1 && normalized.includes("expiré")) currentIdx = 4; // Cas d'échec affiché comme fin
+                
+                return steps.map((s, i) => ({
+                    label: s.label,
+                    icon: s.icon,
+                    status: i < currentIdx ? "completed" : (i === currentIdx ? "active" : "pending")
+                }));
+            } else {
+                // Étapes Acheteur (Regroupement pour le client)
+                const steps = [
+                    { label: "Préparation", icon: "📝", match: ["analyse", "contrat"] },
+                    { label: "Offre déposée", icon: "🔍", match: ["redigee", "deposee"] },
+                    { label: "Conditions", icon: "🛡️", match: ["acceptée", "conditionnelle"] },
+                    { label: "Notaire", icon: "✒️", match: ["réalisées", "ferme", "notaire"] },
+                    { label: "Succès", icon: "🏠", match: ["vendu", "acheté", "louer"] }
+                ];
+                let currentIdx = steps.findIndex(s => s.match.some(m => normalized.includes(m)));
+                return steps.map((s, i) => ({
+                    label: s.label,
+                    icon: s.icon,
+                    status: i < currentIdx ? "completed" : (i === currentIdx ? "active" : "pending")
+                }));
+            }
+        };
+
+        const portalData = {
+            firstName: clientContact.First_Name || "Cher client",
+            code: cleanCode,
+            property: deal.Deal_Name || "Votre Propriété",
+            city: deal.Ville || "",
+            price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
+            stage: stage,
+            image: deal.Record_Image || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
+            transactionType: transactionType,
             milestones: {
                 financing: { days: daysFinancing, date: formatDate(deal.Date_de_financement) },
                 inspection: { days: daysInspection, date: formatDate(deal.Date_d_inspection) },
@@ -178,12 +225,7 @@ export default async function handler(req, res) {
                 occupation: { days: daysOccupation, date: formatDate(deal.Date_d_occupation) }
             },
             daysRemaining: daysClosing, // Reste pour compatibilité
-            timeline: [
-                { label: "Financement", icon: "💎", status: isFinancementDone ? "completed" : "active" },
-                { label: "Offre", icon: "📝", status: (stage.includes("Offre") || isConditionsDone) ? "completed" : "active" },
-                { label: "Conditions", icon: "⚙️", status: isConditionsDone ? "completed" : "active" },
-                { label: "Signature", icon: "✒️", status: (stage.includes("Notaire") || stage.includes("Clôturé")) ? "completed" : "pending" }
-            ],
+            timeline: getTimeline(stage, transactionType),
             checklist: [
                 { name: "Financement Approuvé", done: isFinancementDone },
                 { name: "Inspection complétée", done: isInspectionDone },
