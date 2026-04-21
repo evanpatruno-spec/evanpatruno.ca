@@ -18,6 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
+        * {
+            box-sizing: border-box !important;
+        }
         :root {
             --dash-primary: #873276;
             --dash-primary-glow: rgba(135, 50, 118, 0.4);
@@ -76,63 +79,47 @@
             position: relative;
             overflow: hidden;
         }
-
-        .portal-aura { position: absolute; width: 100%; height: 100%; background: radial-gradient(circle at center, #000000 0%, var(--dash-bg) 80%); z-index: 1; pointer-events: none; }
-        .portal-container { max-width: 1100px; margin: 0 auto; padding: 40px 20px 100px; position: relative; z-index: 5; opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1); display: none; }
-        .portal-container.visible { opacity: 1; transform: translateY(0); display: block; }
-
-        /* TIMELINE CSS */
-        .timeline-steps { display: flex; justify-content: space-between; position: relative; padding: 0 40px; gap: 20px; }
-        .timeline-steps::before { content: ''; position: absolute; top: 27px; left: 10%; width: 80%; height: 2px; background: rgba(255, 255, 255, 0.08); z-index: 1; }
-        .timeline-progress-bar { position: absolute; top: 27px; left: 10%; width: 0%; height: 2px; background: var(--dash-primary); box-shadow: 0 0 20px var(--dash-primary); transition: all 1.8s ease; z-index: 1; }
-        .step-node { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; width: 100px; flex-shrink: 0; }
-        .node-dot { width: 54px; height: 54px; background: var(--dash-bg); border: 2px solid rgba(255, 255, 255, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; transition: all 0.6s ease; position: relative; z-index: 3; }
-        .step-node.active .node-dot { border-color: var(--dash-primary); box-shadow: 0 0 16px var(--dash-primary-glow); animation: pulseDot 2.2s infinite; }
-        .step-node.completed .node-dot { border-color: var(--dash-success); box-shadow: 0 0 14px rgba(46, 204, 113, 0.4); }
-        .step-label { font-size: 0.8rem; font-weight: 700; margin-top: 12px; text-align: center; color: rgba(255, 255, 255, 0.8); }
-
-        @keyframes pulseDot { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-
-        /* MOBILE OVERRIDES (FIXED TIMELINE) */
-        @media (max-width: 768px) {
-            .portal-container { padding: 25px 15px 120px; }
-            .timeline-steps { flex-direction: column !important; padding: 15px !important; gap: 0 !important; }
-            .timeline-steps::before { 
-                top: 27px !important; 
-                left: 37px !important; /* Calé sur le centre des cercles (padding 10 + rayon 27) */
-                width: 2px !important; 
-                height: calc(100% - 54px) !important; 
-                background: rgba(255, 255, 255, 0.05) !important;
-            }
-            .timeline-progress-bar { 
-                top: 27px !important; 
-                left: 37px !important; 
-                width: 4px !important; 
-                height: 0% !important; 
-                background: var(--dash-primary) !important;
-                box-shadow: 0 0 15px var(--dash-primary), 0 0 5px var(--dash-primary);
-                transition: height 1.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
-                border-radius: 10px;
-            }
-            .step-node { flex-direction: row !important; width: 100% !important; padding: 12px 10px !important; gap: 18px !important; text-align: left !important; }
-            .step-label { margin: 0 !important; font-size: 0.85rem !important; }
+        .portal-main-wrapper * {
+            box-sizing: border-box !important;
         }
 
+        .portal-aura { position: absolute; width: 100%; height: 100%; background: radial-gradient(circle at center, #000000 0%, var(--dash-bg) 80%); z-index: 1; pointer-events: none; }
+        
         /* LOGIN / OVERLAY */
         .portal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 5, 13, 0.95); backdrop-filter: blur(40px); z-index: 1000; display: flex; align-items: center; justify-content: center; }
         .portal-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
         .login-card { background: rgba(15, 5, 13, 0.95); padding: 50px; border-radius: 40px; border: 2px solid var(--dash-border); box-shadow: var(--dash-glow); text-align: center; width: 100%; max-width: 420px; }
-        .login-input { width: 100%; padding: 22px 30px; background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; color: #fff; font-size: 1.1rem; margin-bottom: 20px; outline: none; text-align: center; }
+        .login-input { 
+            width: 100% !important; 
+            max-width: 100%;
+            padding: 20px 25px !important; 
+            background: rgba(0, 0, 0, 0.5); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 20px; 
+            color: #fff; 
+            font-size: 1.1rem; 
+            margin-bottom: 20px; 
+            outline: none; 
+            text-align: center; 
+            display: block;
+        }
         .login-btn { width: 100%; padding: 22px; background: linear-gradient(135deg, var(--dash-primary), #b0549c); color: white; border: none; border-radius: 50px; font-weight: 900; text-transform: uppercase; cursor: pointer; transition: 0.5s; box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5); }
         .pwa-login-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; margin-top: 16px; padding: 14px 20px; background: transparent; border: 1px solid rgba(135, 50, 118, 0.5); border-radius: 50px; color: rgba(255,255,255,0.75); font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; cursor: pointer; }
 
-        /* SECTIONS / CARDS */
+        @media (max-width: 768px) {
+            .login-card { padding: 35px 25px; border-radius: 30px; max-width: 100%; }
+        }
+
+        /* INTEGRATION DES STYLES DU SNIPPET */
+        .portal-container { max-width: 1100px; margin: 0 auto; padding: 40px 20px 100px; position: relative; z-index: 5; opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1); display: none; }
+        .portal-container.visible { opacity: 1; transform: translateY(0); display: block; }
         .section-wrapper { margin-bottom: 25px; border: 1px solid var(--dash-border); border-radius: 40px; overflow: hidden; background: rgba(0, 0, 0, 0.2); box-shadow: var(--dash-glow); }
         .section-header { padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: rgba(255, 255, 255, 0.03); }
         .section-header h3 { margin: 0; font-family: 'Outfit'; font-size: 1.5rem; }
-        .section-chevron { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.1); border-radius: 50%; color: var(--dash-primary); }
+        .section-chevron { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.1); border-radius: 50%; color: var(--dash-primary); transition: 0.4s; }
         .section-wrapper.collapsed .section-content { max-height: 0; padding: 0; opacity: 0; }
-        .section-content { padding: 40px; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); max-height: 5000px; }
+        .section-wrapper.collapsed .section-chevron { transform: rotate(-90deg); }
+        .section-content { padding: 40px; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); max-height: 5000px; overflow: hidden; }
         .property-card-premium { background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)); border: 1px solid var(--dash-border); border-radius: 45px; padding: 50px; margin-bottom: 40px; box-shadow: var(--dash-glow); }
         .milestone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px; }
         .milestone-card { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--dash-border); border-radius: 30px; padding: 25px 20px; text-align: center; }
@@ -150,7 +137,7 @@
 
     <nav class="app-nav" id="appNav">
         <a href="https://evanpatruno.ca" class="nav-logo">
-            <img src="/logo-ep.png" alt="EP">
+            <img src="/logo.png" alt="EP">
             <span>EVAN<span>PATRUNO</span></span>
         </a>
         <a href="https://evanpatruno.ca" class="btn-back-site">Site Web</a>
@@ -161,17 +148,17 @@
 
         <div class="portal-overlay" id="portalOverlay">
             <div class="login-card">
-                <h2 style="font-family: 'Outfit'; font-size: 2.2rem; font-weight: 900;">Accès Collaboratif</h2>
-                <p style="opacity: 0.6; margin-bottom: 35px;">Entrez votre code dossier privé.</p>
+                <h2 style="font-family: 'Outfit'; font-size: 2.2rem; font-weight: 900;">Acc\u00e8s au Dossier</h2>
+                <p style="opacity: 0.6; margin-bottom: 35px;">Authentification s\u00e9curis\u00e9e requise.</p>
                 <form onsubmit="handlePortalLogin(event)">
                     <input type="text" placeholder="CODE DOSSIER (ex: EP-1001)" class="login-input" id="inpPortalCode" required>
                     <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TEL" class="login-input" id="inpPortalPhone" required style="margin-top:-10px;">
                     <button type="submit" class="login-btn" id="btnPortalLogin">Ouvrir mon dossier</button>
                     <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
-                        <span class="pwa-icon">📲</span>
-                        <span>Installer l'app sur mon téléphone</span>
+                        <span class="pwa-icon">\ud83d\udcf1</span>
+                        <span>Installer l'app sur mon t\u00e9l\u00e9phone</span>
                     </button>
-                    <div id="loginErrorMsg" style="color:#ff4757; font-size:0.8rem; margin-top:15px; display:none; font-weight:600;"></div>
+                    <div id="loginErrorMsg"></div>
                 </form>
             </div>
         </div>
@@ -185,7 +172,7 @@
             <div class="property-card-premium">
                 <span id="badgeStage" style="background:rgba(46,204,113,0.1); color:#2ecc71; padding:5px 15px; border-radius:50px; font-size:0.7rem; font-weight:800; border:1px solid #2ecc71; margin-bottom:15px; display:inline-block; text-transform: uppercase;">EN COURS</span>
                 <h2 id="txtPropName" style="font-family:'Outfit'; font-size: 2.5rem; margin:0; line-height: 1.1;">Dossier en attente</h2>
-                <p id="txtPropCity" style="opacity:0.5; font-size:1.1rem; margin-top: 5px;">Ville à confirmer</p>
+                <p id="txtPropCity" style="opacity:0.5; font-size:1.1rem; margin-top: 5px;">Ville \u00e0 confirmer</p>
             </div>
 
             <div class="milestone-grid" id="wrapMilestones"></div>
@@ -193,10 +180,10 @@
             <div class="section-wrapper" id="secTimeline">
                 <div class="section-header" onclick="toggleSection('secTimeline')">
                     <h3>Votre Progression</h3>
-                    <div class="section-chevron">▼</div>
+                    <div class="section-chevron">\u25bc</div>
                 </div>
                 <div class="section-content">
-                    <div class="timeline-steps" id="wrapTimeline">
+                    <div class="timeline-steps" id="wrapTimeline" style="display:flex; justify-content:space-between; position:relative; padding:0 40px; gap:20px;">
                         <div class="timeline-progress-bar" id="barProgress"></div>
                     </div>
                 </div>
@@ -205,150 +192,115 @@
             <div class="section-wrapper collapsed" id="secTeam">
                 <div class="section-header" onclick="toggleSection('secTeam')">
                     <h3>Vos Intervenants</h3>
-                    <div class="section-chevron">▼</div>
+                    <div class="section-chevron">\u25bc</div>
                 </div>
                 <div class="section-content">
-                    <div class="team-grid" id="wrapTeam"></div>
+                    <div class="team-grid" id="wrapTeam" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px;"></div>
+                </div>
+            </div>
+            
+            <div class="section-wrapper collapsed" id="secChecklist">
+                <div class="section-header" onclick="toggleSection('secChecklist')">
+                    <h3>Checklist Transactionnelle <span id="badgePrequal" style="font-size:0.8rem; background:rgba(255,255,255,0.1); padding:2px 8px; border-radius:50px; margin-left:10px;">0/0</span></h3>
+                    <div class="section-chevron">\u25bc</div>
+                </div>
+                <div class="section-content">
+                    <div id="wrapChecklist" style="display:grid; grid-template-columns:1fr; gap:12px;"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        const MOCK_DATA = {
-            firstName: "Client",
-            code: "EP-1001",
-            property: "282 rue Bouthillier Nord",
-            city: "St-Jean-sur-Richelieu",
-            stage: "En cours de transaction",
-            timeline: [
-                { label: "Mise en marché", icon: "📝", status: "completed" },
-                { label: "Visites / Négo", icon: "🔍", status: "completed" },
-                { label: "Conditions", icon: "🛡️", status: "active" },
-                { label: "Notaire", icon: "✒️", status: "pending" },
-                { label: "Vendu", icon: "🏠", status: "pending" }
-            ],
-            milestones: {
-                financing: { days: 5, date: "25 Avril 2026" },
-                inspection: { days: 12, date: "2 Mai 2026" },
-                signature: { days: 25, date: "15 Mai 2026" },
-                occupation: { days: 28, date: "18 Mai 2026" }
-            },
-            team: [
-                { role: "Courtier Immob.", name: "Evan Patruno", icon: "🤵", phone: "514-567-3249", email: "evan@evanpatruno.ca" }
-            ]
-        };
-
+        const CACHE_VERSION = 'v5';
+        
         function toggleSection(id) {
             document.getElementById(id).classList.toggle('collapsed');
         }
 
+        function setSafeStyle(id, prop, val) {
+            const el = document.getElementById(id);
+            if (el) el.style[prop] = val;
+        }
+
         async function handlePortalLogin(e) {
             e.preventDefault();
-            const code = document.getElementById('inpPortalCode').value.toUpperCase();
+            const code = document.getElementById('inpPortalCode').value.trim();
+            const phone = document.getElementById('inpPortalPhone').value.trim();
             const btn = document.getElementById('btnPortalLogin');
-            btn.innerText = "Recherche en cours...";
-            
-            setTimeout(() => {
-                if (code.startsWith("EP-")) {
-                    renderPortal(MOCK_DATA);
-                    document.getElementById('portalOverlay').classList.add('hidden');
-                    document.getElementById('portalDash').classList.add('visible');
-                } else {
-                    const err = document.getElementById('loginErrorMsg');
-                    err.style.display = 'block';
-                    err.innerText = "⚠️ Code invalide. Veuillez réessayer.";
-                    btn.innerText = "Ouvrir mon dossier";
-                }
-            }, 800);
-        }
 
-        function renderPortal(data) {
-            document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName}.`;
-            document.getElementById('txtCodeRef').innerText = `Dossier #${data.code}`;
-            document.getElementById('txtPropName').innerText = data.property;
-            document.getElementById('txtPropCity').innerText = data.city;
-            document.getElementById('badgeStage').innerText = data.stage;
+            btn.innerText = "V\u00e9rification...";
+            btn.disabled = true;
 
-            const wrapT = document.getElementById('wrapTimeline');
-            wrapT.querySelectorAll('.step-node').forEach(n => n.remove());
-            let completed = 0;
-            data.timeline.forEach((s) => {
-                const node = document.createElement('div');
-                node.className = `step-node ${s.status}`;
-                node.innerHTML = `<div class="node-dot">${s.icon}</div><span class="step-label">${s.label}</span>`;
-                wrapT.appendChild(node);
-                if (s.status === 'completed') completed++;
-                if (s.status === 'active') completed += 0.5;
-            });
-            
-            setTimeout(() => {
-                const bar = document.getElementById('barProgress');
-                const total = data.timeline.length;
-                const safePct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
-                
-                if (window.innerWidth <= 768) {
-                    bar.style.removeProperty('width');
-                    bar.style.height = `${safePct}%`;
-                    bar.style.width = '4px';
-                } else {
-                    bar.style.removeProperty('height');
-                    bar.style.width = `${safePct * 0.8}%`;
-                    bar.style.height = '2px';
-                }
-            }, 200);
+            try {
+                const response = await fetch('/api/portal', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ codePortal: code, phoneLast4: phone })
+                });
 
-            const m = data.milestones;
-            document.getElementById('wrapMilestones').innerHTML = [
-                { lab: 'Financement', data: m.financing },
-                { lab: 'Inspection', data: m.inspection },
-                { lab: 'Signature', data: m.signature },
-                { lab: 'Occupation', data: m.occupation }
-            ].map(ms => `
-                <div class="milestone-card">
-                    <div class="milestone-val">${ms.data ? ms.data.days : '--'}</div>
-                    <div class="milestone-label">${ms.lab}</div>
-                    <div style="font-size:0.75rem; opacity:0.4; margin-top:8px; font-weight:700;">${ms.data ? ms.data.date : 'À CONFIRMER'}</div>
-                </div>
-            `).join('');
+                if (!response.ok) throw new Error("Dossier introuvable");
 
-            document.getElementById('wrapTeam').innerHTML = data.team.map(t => `
-                <div class="team-card">
-                    <div style="font-size:1.8rem; margin-bottom: 12px;">${t.icon}</div>
-                    <div style="color:var(--dash-accent); font-size:0.65rem; font-weight:900; text-transform: uppercase;">${t.role}</div>
-                    <div style="font-weight:900; font-size: 1.2rem; margin-bottom: 8px;">${t.name}</div>
-                    <div style="opacity:0.7; font-size: 0.85rem;">📞 ${t.phone}<br>✉️ ${t.email}</div>
-                </div>
-            `).join('');
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const code = params.get('code');
-            if (code) document.getElementById('inpPortalCode').value = code;
-        });
-
-        let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-        });
-
-        async function installPortalApp() {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                deferredPrompt = null;
-            } else {
-                const isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-                if (isIos) alert("Appuyez sur Partager ⎋ -> Sur l'écran d'accueil.");
-                else alert("Menu ⋮ Browser -> Installer / Ajouter.");
+                const data = await response.json();
+                renderPortal(data);
+                document.getElementById('portalOverlay').classList.add('hidden');
+                document.getElementById('portalDash').classList.add('visible');
+            } catch (err) {
+                const errorMsg = document.getElementById('loginErrorMsg');
+                errorMsg.innerText = "\u26a0\ufe0f " + err.message;
+                errorMsg.style.cssText = "color:#ff4757; font-size:0.8rem; margin-top:15px; font-weight:600;";
+                btn.innerText = "Ouvrir mon dossier";
+                btn.disabled = false;
             }
         }
 
+        function renderPortal(data) {
+            if (!data) return;
+            document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName || 'Client'}.`;
+            document.getElementById('txtCodeRef').innerText = `Dossier #${data.code}`;
+            document.getElementById('txtPropName').innerText = data.property || "Propri\u00e9t\u00e9";
+            document.getElementById('txtPropCity').innerText = data.city || "";
+            document.getElementById('badgeStage').innerText = data.stage || "EN COURS";
+
+            // Team
+            const wrapTeam = document.getElementById('wrapTeam');
+            if (wrapTeam) {
+                wrapTeam.innerHTML = (data.team || []).map(t => `
+                    <div class="team-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:20px; text-align:center;">
+                        <div style="font-size:1.8rem;">\ud83d\udc64</div>
+                        <div style="color:var(--dash-accent); font-size:0.65rem; font-weight:900; text-transform:uppercase;">${t.role}</div>
+                        <div style="font-weight:900; color:#fff;">${t.name}</div>
+                        <div style="font-size:0.8rem; opacity:0.6; margin-top:5px;">\ud83d\udcde ${t.phone || ''}</div>
+                    </div>
+                `).join('');
+            }
+
+            // Checklist
+            const checklist = data.checklist || [];
+            const badge = document.getElementById('badgePrequal');
+            if (badge) badge.innerText = checklist.filter(c => c.done).length + "/" + checklist.length;
+            
+            const wrapCheck = document.getElementById('wrapChecklist');
+            if (wrapCheck) {
+                wrapCheck.innerHTML = checklist.map(c => `
+                    <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:15px; border:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; gap:12px;">
+                        <div style="color:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.2)'}; font-weight:900;">${c.done ? '\u2713' : '!'}</div>
+                        <div style="font-size:0.9rem; opacity:${c.done ? 1 : 0.6};">${c.name}</div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Service Worker
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js');
             });
+        }
+
+        async function installPortalApp() {
+            const code = document.getElementById('inpPortalCode').value.toUpperCase() || 'EP-1001';
+            window.location.href = `https://dossier.evanpatruno.ca/mon-dossier.html?code=${code}`;
         }
     </script>
 </body>
