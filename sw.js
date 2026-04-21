@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ep-portal-cache-v1';
+const CACHE_NAME = 'ep-portal-cache-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/mon-dossier.html',
