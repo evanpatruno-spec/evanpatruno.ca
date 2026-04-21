@@ -250,11 +250,12 @@
     async function handlePortalLogin(e) {
         e.preventDefault();
         const code = document.getElementById('inpPortalCode').value.trim();
+        const phone = document.getElementById('inpPortalPhone').value.trim();
         const btn = document.getElementById('btnPortalLogin');
         btn.innerText = "Connexion...";
         btn.disabled = true;
 
-        if (code === "EP-1001" || code === "EP-1") {
+        if (code.toUpperCase() === "EP-1001" || code.toUpperCase() === "EP-1") {
             setTimeout(() => {
                 renderPortal(MOCK_DATA);
                 document.getElementById('portalOverlay').classList.add('hidden');
@@ -267,7 +268,7 @@
         try {
             const resp = await fetch('https://dossier.evanpatruno.ca/api/portal', {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ codePortal: code })
+                body: JSON.stringify({ codePortal: code, phoneLast4: phone })
             });
             if (!resp.ok) throw new Error("Dossier inexistant");
             const data = await resp.json();
