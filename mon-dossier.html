@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -148,15 +148,15 @@
 
         <div class="portal-overlay" id="portalOverlay">
             <div class="login-card">
-                <h2 style="font-family: 'Outfit'; font-size: 2.2rem; font-weight: 900;">Accès au Dossier</h2>
-                <p style="opacity: 0.6; margin-bottom: 35px;">Authentification sécurisée requise.</p>
+                <h2 style="font-family: 'Outfit'; font-size: 2.2rem; font-weight: 900;">AccÃ¨s au Dossier</h2>
+                <p style="opacity: 0.6; margin-bottom: 35px;">Authentification sÃ©curisÃ©e requise.</p>
                 <form onsubmit="handlePortalLogin(event)">
                     <input type="text" placeholder="CODE DOSSIER (ex: EP-1001)" class="login-input" id="inpPortalCode" required>
                     <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TEL" class="login-input" id="inpPortalPhone" required style="margin-top:-10px;">
                     <button type="submit" class="login-btn" id="btnPortalLogin">Ouvrir mon dossier</button>
                     <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
-                        <span class="pwa-icon">📲</span>
-                        <span>Installer l'app sur mon téléphone</span>
+                        <span class="pwa-icon">ðŸ“²</span>
+                        <span>Installer l'app sur mon tÃ©lÃ©phone</span>
                     </button>
                     <div id="loginErrorMsg"></div>
                 </form>
@@ -172,7 +172,7 @@
             <div class="property-card-premium">
                 <span id="badgeStage" style="background:rgba(46,204,113,0.1); color:#2ecc71; padding:5px 15px; border-radius:50px; font-size:0.7rem; font-weight:800; border:1px solid #2ecc71; margin-bottom:15px; display:inline-block; text-transform: uppercase;">EN COURS</span>
                 <h2 id="txtPropName" style="font-family:'Outfit'; font-size: 2.5rem; margin:0; line-height: 1.1;">Dossier en attente</h2>
-                <p id="txtPropCity" style="opacity:0.5; font-size:1.1rem; margin-top: 5px;">Ville \u00e0 confirmer</p>
+                <p id="txtPropCity" style="opacity:0.5; font-size:1.1rem; margin-top: 5px;">Ville à confirmer</p>
             </div>
 
             <div class="milestone-grid" id="wrapMilestones"></div>
@@ -180,7 +180,7 @@
             <div class="section-wrapper" id="secTimeline">
                 <div class="section-header" onclick="toggleSection('secTimeline')">
                     <h3>Votre Progression</h3>
-                    <div class="section-chevron">▼</div>
+                    <div class="section-chevron">â–¼</div>
                 </div>
                 <div class="section-content">
                     <div class="timeline-steps" id="wrapTimeline" style="display:flex; justify-content:space-between; position:relative; padding:0 40px; gap:20px;">
@@ -192,7 +192,7 @@
             <div class="section-wrapper collapsed" id="secTeam">
                 <div class="section-header" onclick="toggleSection('secTeam')">
                     <h3>Vos Intervenants</h3>
-                    <div class="section-chevron">▼</div>
+                    <div class="section-chevron">â–¼</div>
                 </div>
                 <div class="section-content">
                     <div class="team-grid" id="wrapTeam" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px;"></div>
@@ -202,7 +202,7 @@
             <div class="section-wrapper collapsed" id="secChecklist">
                 <div class="section-header" onclick="toggleSection('secChecklist')">
                     <h3>Checklist Transactionnelle <span id="badgePrequal" style="font-size:0.8rem; background:rgba(255,255,255,0.1); padding:2px 8px; border-radius:50px; margin-left:10px;">0/0</span></h3>
-                    <div class="section-chevron">▼</div>
+                    <div class="section-chevron">â–¼</div>
                 </div>
                 <div class="section-content">
                     <div id="wrapChecklist" style="display:grid; grid-template-columns:1fr; gap:12px;"></div>
@@ -229,7 +229,7 @@
             const phone = document.getElementById('inpPortalPhone').value.trim();
             const btn = document.getElementById('btnPortalLogin');
 
-            btn.innerText = "Vérification...";
+            btn.innerText = "VÃ©rification...";
             btn.disabled = true;
 
             try {
@@ -258,7 +258,7 @@
             if (!data) return;
             document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName || 'Client'}.`;
             document.getElementById('txtCodeRef').innerText = `Dossier #${data.code}`;
-            document.getElementById('txtPropName').innerText = data.property || "Propriété";
+            document.getElementById('txtPropName').innerText = data.property || "PropriÃ©tÃ©";
             document.getElementById('txtPropCity').innerText = data.city || "";
             document.getElementById('badgeStage').innerText = data.stage || "EN COURS";
 
@@ -294,7 +294,7 @@
         // Service Worker
         if ('serviceWorker' in navigator) {
             window.addEventListener('DOMContentLoaded', () => {
-                // Détection du mode Standalone (PWA déjà installée)
+                // DÃ©tection du mode Standalone (PWA dÃ©jÃ  installÃ©e)
                 const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
                 if (isStandalone) {
                     const pwaBtn = document.getElementById('btnPwaLogin');
@@ -312,4 +312,5 @@
     </script>
 </body>
 </html>
+
 
