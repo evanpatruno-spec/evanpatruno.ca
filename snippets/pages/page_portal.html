@@ -14,6 +14,9 @@
 <link rel="apple-touch-icon" href="/pwa-icon-512.png">
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
     :root {
         --dash-primary: #873276;
         --dash-primary-glow: rgba(135, 50, 118, 0.4);
@@ -1511,9 +1514,9 @@
     }
 
     function renderPortal(data) {
-        if (!document.getElementById('txtWelcome')) return; // Safety first
+        if (!data || !document.getElementById('txtWelcome')) return; // Safety first
 
-        document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName}.`;
+        document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName || 'Client'}.`;
         document.getElementById('txtCodeRef').innerText = `Dossier #${data.code}`;
         document.getElementById('txtPropName').innerText = data.property;
         document.getElementById('txtPropCity').innerText = data.city;
@@ -1521,9 +1524,13 @@
 
         // Timeline
         const wrapT = document.getElementById('wrapTimeline');
-        wrapT.querySelectorAll('.step-node').forEach(n => n.remove());
+        if (wrapT) {
+            wrapT.querySelectorAll('.step-node').forEach(n => n.remove());
+        }
         let completed = 0;
-        data.timeline.forEach((s, i) => {
+        const timeline = data.timeline || [];
+        timeline.forEach((s, i) => {
+            if (!wrapT) return;
             const node = document.createElement('div');
             node.className = `step-node ${s.status}`;
             node.innerHTML = `<div class="node-dot">${s.icon}</div><span class="step-label">${s.label}</span>`;
@@ -1534,7 +1541,7 @@
         setTimeout(() => {
             const bar = document.getElementById('barProgress');
             if (bar) {
-                const total = data.timeline.length;
+                const total = (data.timeline || []).length;
                 const safePct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
                 
                 if (window.innerWidth <= 768) {
@@ -1561,7 +1568,8 @@
             const ringPctEl = document.getElementById('ringPct');
             const ringLabel = document.getElementById('ringLabel');
             if (ring && ringPctEl) {
-                const total = data.timeline.length;
+                const timeline = data.timeline || [];
+                const total = timeline.length;
                 const pct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
                 const circumference = 314.16;
                 const offset = circumference - (pct / 100) * circumference;
@@ -1592,8 +1600,9 @@
                     }, 30);
 
                     // Label contextuel
-                    const activeStep = data.timeline.find(s => s.status === 'active');
-                    const doneCount = data.timeline.filter(s => s.status === 'completed').length;
+                    const timeline = data.timeline || [];
+                    const activeStep = timeline.find(s => s.status === 'active');
+                    const doneCount = timeline.filter(s => s.status === 'completed').length;
                     if (ringLabel) {
                         if (pct >= 100) ringLabel.textContent = '🏆 Transaction complétée!';
                         else if (activeStep) ringLabel.textContent = `Étape active : ${activeStep.label}`;
@@ -1604,7 +1613,9 @@
         }, 200);
 
         // Team
-        document.getElementById('wrapTeam').innerHTML = data.team.map(t => `
+        const wrapTeam = document.getElementById('wrapTeam');
+        if (wrapTeam) {
+            wrapTeam.innerHTML = (data.team || []).map(t => `
             <div class="team-card">
                 <div class="team-icon">${t.icon}</div>
                 <div class="team-role">${t.role}</div>
@@ -1623,8 +1634,13 @@
         // (Dates removed because integrated in cockpit)
 
         // Checklist
-        document.getElementById('badgePrequal').innerText = data.checklist.filter(c => c.done).length + "/" + data.checklist.length;
-        document.getElementById('wrapChecklist').innerHTML = data.checklist.map(c => `
+        const badgePrequal = document.getElementById('badgePrequal');
+        const checklist = data.checklist || [];
+        if (badgePrequal) badgePrequal.innerText = checklist.filter(c => c.done).length + "/" + checklist.length;
+        
+        const wrapChecklist = document.getElementById('wrapChecklist');
+        if (wrapChecklist) {
+            wrapChecklist.innerHTML = checklist.map(c => `
             <div style="background:${c.done ? 'rgba(46,204,113,0.05)' : 'rgba(255,255,255,0.02)'};padding:22px;border-radius:25px;display:flex;align-items:center;gap:18px;border:1px solid ${c.done ? 'rgba(46,204,113,0.2)' : 'rgba(255,255,255,0.1)'}">
                 <div style="width:30px;height:30px;background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.05)'};border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:${c.done ? '#fff' : 'rgba(255,255,255,0.2)'}">${c.done ? '✓' : '!'}</div>
                 <span style="font-size:1rem;font-weight:600;color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name}</span>
