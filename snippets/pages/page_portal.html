@@ -1,7 +1,7 @@
 <!-- 
-    SNIPPET : PORTAIL CLIENT PRIVÉ (V2.2 - EXPANSION INTERVENANTS & DATES)
+    SNIPPET : PORTAIL CLIENT PRIVÃ‰ (V2.2 - EXPANSION INTERVENANTS & DATES)
     DESCRIPTION : Ce snippet contient l'interface de connexion, le dashboard, les intervenants et le calendrier des dates.
-    INSTRUCTIONS : Collez ce code dans un élément "Embed Code" sur votre page Zoho Sites.
+    INSTRUCTIONS : Collez ce code dans un Ã©lÃ©ment "Embed Code" sur votre page Zoho Sites.
 -->
 
 <!-- PWA MANIFEST -->
@@ -28,7 +28,7 @@
         --dash-border: rgba(135, 50, 118, 0.6);
         /* Rose Magenta plus intense */
         --dash-glow: 0 0 25px rgba(135, 50, 118, 0.4);
-        /* Lueur Neon accentuée */
+        /* Lueur Neon accentuÃ©e */
         --dash-success: #2ecc71;
         --dash-warning: #f1c40f;
     }
@@ -229,7 +229,7 @@
         }
     }
 
-    /* Bouton PWA : visible sur tous les écrans */
+    /* Bouton PWA : visible sur tous les Ã©crans */
     .pwa-login-btn {
         display: flex;
         align-items: center;
@@ -360,7 +360,7 @@
         object-fit: cover;
     }
 
-    /* TIMELINE — Desktop */
+    /* TIMELINE â€” Desktop */
     .timeline-steps {
         display: flex;
         justify-content: space-between;
@@ -369,7 +369,7 @@
         gap: 20px;
     }
 
-    /* Rail gris de fond — Desktop */
+    /* Rail gris de fond â€” Desktop */
     .timeline-steps::before {
         content: '';
         position: absolute;
@@ -381,7 +381,7 @@
         z-index: 1;
     }
 
-    /* Barre de progression magenta — Desktop */
+    /* Barre de progression magenta â€” Desktop */
     .timeline-progress-bar {
         position: absolute;
         top: 27px;
@@ -394,7 +394,7 @@
         z-index: 1;
     }
 
-    /* Nœud Desktop : colonne (dot haut, label bas) */
+    /* NÅ“ud Desktop : colonne (dot haut, label bas) */
     .step-node {
         position: relative;
         z-index: 2;           /* au-dessus de la barre */
@@ -421,7 +421,7 @@
     .node-dot {
         width: 54px;
         height: 54px;
-        background: var(--dash-bg);  /* fond opaque = cache la barre derrière */
+        background: var(--dash-bg);  /* fond opaque = cache la barre derriÃ¨re */
         border: 2px solid rgba(255, 255, 255, 0.15);
         border-radius: 50%;
         display: flex;
@@ -457,7 +457,7 @@
         50%       { box-shadow: 0 0 24px rgba(135, 50, 118, 0.9), 0 0 50px rgba(135, 50, 118, 0.5); }
     }
 
-    /* ─── COCKPIT PROGRESS RING ─── */
+    /* â”€â”€â”€ COCKPIT PROGRESS RING â”€â”€â”€ */
     .cockpit-ring-wrap {
         display: flex;
         flex-direction: column;
@@ -542,7 +542,7 @@
         text-align: center;
     }
 
-    /* ─── MOBILE TIMELINE ─── */
+    /* â”€â”€â”€ MOBILE TIMELINE â”€â”€â”€ */
     @media (max-width: 768px) {
 
         .timeline-steps {
@@ -552,7 +552,7 @@
             gap: 0 !important;
         }
 
-        /* Rail vertical gris — left = padding-steps(15) + padding-node(10) + rayon-dot(27) = 52px, décalé -1px pour centrer le 2px */
+        /* Rail vertical gris â€” left = padding-steps(15) + padding-node(10) + rayon-dot(27) = 52px, dÃ©calÃ© -1px pour centrer le 2px */
         .timeline-steps::before {
             top: 27px !important;
             left: 51px !important;
@@ -562,9 +562,9 @@
             background: rgba(255, 255, 255, 0.08) !important;
         }
 
-        /* Barre de progression verticale rose néon */
+        /* Barre de progression verticale rose nÃ©on */
         /* IMPORTANT : pas de !important sur height/width/left/background/box-shadow */
-        /* → le JS inline style doit pouvoir les surclasser pour l'animation */
+        /* â†’ le JS inline style doit pouvoir les surclasser pour l'animation */
         .timeline-progress-bar {
             top: 27px !important;
             left: 51px;
@@ -577,7 +577,7 @@
             border-radius: 10px;
         }
 
-        /* Nœud Mobile : ligne (dot gauche, label droite) */
+        /* NÅ“ud Mobile : ligne (dot gauche, label droite) */
         .step-node {
             flex-direction: row !important;
             width: 100% !important;
@@ -1187,32 +1187,32 @@
     <!-- CELEBRATION OVERLAY -->
     <div id="overlayCelebration" class="celebration-overlay">
         <div class="success-card">
-            <div style="font-size: 5rem; margin-bottom: 20px;">🥂</div>
-            <h1 style="font-family:'Outfit'; font-size: 3.5rem; margin-bottom: 10px; line-height: 1;">FÉLICITATIONS !
+            <div style="font-size: 5rem; margin-bottom: 20px;">ðŸ¥‚</div>
+            <h1 style="font-family:'Outfit'; font-size: 3.5rem; margin-bottom: 10px; line-height: 1;">FÃ‰LICITATIONS !
             </h1>
             <p id="txtCelebrationMsg" style="font-size: 1.4rem; opacity: 0.8; margin-bottom: 30px;">Votre transaction
-                immobilière est officiellement conclue.</p>
+                immobiliÃ¨re est officiellement conclue.</p>
             <div
                 style="height:2px; background:linear-gradient(90deg, transparent, var(--dash-primary), transparent); margin-bottom:40px;">
             </div>
 
-            <p style="font-weight: 600; margin-bottom: 5px;">Avez-vous aimé votre expérience ?</p>
+            <p style="font-weight: 600; margin-bottom: 5px;">Avez-vous aimÃ© votre expÃ©rience ?</p>
             <div class="stars-wrap" id="wrapStars">
-                <span class="star-btn" onclick="setRating(1)">⭐</span>
-                <span class="star-btn" onclick="setRating(2)">⭐</span>
-                <span class="star-btn" onclick="setRating(3)">⭐</span>
-                <span class="star-btn" onclick="setRating(4)">⭐</span>
-                <span class="star-btn" onclick="setRating(5)">⭐</span>
+                <span class="star-btn" onclick="setRating(1)">â­</span>
+                <span class="star-btn" onclick="setRating(2)">â­</span>
+                <span class="star-btn" onclick="setRating(3)">â­</span>
+                <span class="star-btn" onclick="setRating(4)">â­</span>
+                <span class="star-btn" onclick="setRating(5)">â­</span>
             </div>
 
             <a href="https://g.page/r/CdypKbg57LonEAE/review" target="_blank" class="google-btn">
-                <span>⭐ Laisser un avis Google</span>
+                <span>â­ Laisser un avis Google</span>
             </a>
 
             <div class="ambassador-card">
                 <div class="ambassador-badge">Programme Ambassadeur</div>
                 <h4 style="color: #ffd700; margin-bottom: 5px;">Devenez Ambassadeur Evan Patruno</h4>
-                <p style="font-size: 0.9rem; opacity: 0.7;">Référez un ami et recevez <span id="txtReward"
+                <p style="font-size: 0.9rem; opacity: 0.7;">RÃ©fÃ©rez un ami et recevez <span id="txtReward"
                         style="color:#fff; font-weight:700;">--</span> une fois la transaction conclue.</p>
                 <div
                     style="margin-top:15px; font-size:0.8rem; background:rgba(255,255,255,0.1); padding:8px; border-radius:10px; border:1px solid rgba(255,255,255,0.1);">
@@ -1223,7 +1223,7 @@
 
             <div style="margin-top: 40px; opacity: 0.6; cursor: pointer; text-decoration: underline; font-size: 0.8rem;"
                 onclick="closeCelebration()">
-                Consulter les détails archivés de mon dossier
+                Consulter les dÃ©tails archivÃ©s de mon dossier
             </div>
         </div>
     </div>
@@ -1231,18 +1231,18 @@
     <!-- CONNEXION -->
     <div class="portal-overlay" id="portalOverlay">
         <div class="login-card">
-            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 8px;">Accès au Dossier</h2>
+            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 8px;">AccÃ¨s au Dossier</h2>
             <p style="color: rgba(255,255,255,0.6); margin-bottom: 35px;">Entrez votre Code Portail unique.</p>
             <form onsubmit="handlePortalLogin(event)">
                 <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode"
                     required>
-                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TÉLÉPHONE" class="login-input"
+                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TÃ‰LÃ‰PHONE" class="login-input"
                     id="inpPortalPhone" required style="margin-top: -10px;">
                 <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon
                     dossier</button>
                 <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
-                    <span class="pwa-icon">📲</span>
-                    <span>Installer l'app sur mon téléphone</span>
+                    <span class="pwa-icon">ðŸ“²</span>
+                    <span>Installer l'app sur mon tÃ©lÃ©phone</span>
                 </button>
             </form>
         </div>
@@ -1254,14 +1254,14 @@
             <div id="pwaInstallBanner" class="install-banner">
                 <div class="banner-close" onclick="closePwaBanner()">&#10005;</div>
                 <div style="display: flex; align-items: center; gap: 15px;">
-                    <span style="font-size: 2rem;">📱</span>
+                    <span style="font-size: 2rem;">ðŸ“±</span>
                     <div>
-                        <div style="font-weight: 900; font-size: 1rem; color: #fff;">Vivez l'expérience App</div>
-                        <div style="font-size: 0.75rem; opacity: 0.8; color: #fff;">Suivi en temps réel et notifications.</div>
+                        <div style="font-weight: 900; font-size: 1rem; color: #fff;">Vivez l'expÃ©rience App</div>
+                        <div style="font-size: 0.75rem; opacity: 0.8; color: #fff;">Suivi en temps rÃ©el et notifications.</div>
                     </div>
                 </div>
                 <button class="pwa-login-btn" style="display:flex; width:auto; margin-top:0; padding:12px 22px;" onclick="installPortalApp()">
-                    <span class="pwa-icon">📲</span>
+                    <span class="pwa-icon">ðŸ“²</span>
                     <span>Installer</span>
                 </button>
             </div>
@@ -1270,7 +1270,7 @@
                 <div style="padding: 6px 16px; background: rgba(135, 50, 118, 0.15); border: 1px solid rgba(135, 50, 118, 0.3); border-radius: 50px; display: flex; align-items: center; gap: 10px;">
                     <div style="width: 8px; height: 8px; background: var(--dash-accent); border-radius: 50%; box-shadow: 0 0 10px var(--dash-accent-glow);"></div>
                     <span style="color: var(--dash-accent); font-weight: 900; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">
-                        Portail Client Privé
+                        Portail Client PrivÃ©
                     </span>
                 </div>
             </div>
@@ -1326,7 +1326,7 @@
                         <small>Avancement</small>
                     </div>
                 </div>
-                <div class="cockpit-label" id="ringLabel">Calcul en cours…</div>
+                <div class="cockpit-label" id="ringLabel">Calcul en coursâ€¦</div>
             </div>
         </div>
 
@@ -1336,13 +1336,13 @@
         <!-- FINANCEMENT SECTION (Checklist) - MOVED UP -->
         <div class="section-wrapper" id="secPrequal">
             <div class="section-header" onclick="toggleSection('secPrequal')">
-                <h3>Conditions à réaliser</h3>
-                <div class="section-chevron">▼</div>
+                <h3>Conditions Ã  rÃ©aliser</h3>
+                <div class="section-chevron">â–¼</div>
             </div>
             <div class="section-content"
                 style="background: linear-gradient(135deg, rgba(135,50,118,0.05), rgba(0,0,0,0.2));">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
-                    <span style="opacity:0.6; font-size:0.9rem;">Statut général :</span>
+                    <span style="opacity:0.6; font-size:0.9rem;">Statut gÃ©nÃ©ral :</span>
                     <div id="badgePrequal" class="badge-premium">--</div>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"
@@ -1353,7 +1353,7 @@
         <div class="section-wrapper" id="secTimeline">
             <div class="section-header" onclick="toggleSection('secTimeline')">
                 <h3>Timeline de Transaction</h3>
-                <div class="section-chevron">▼</div>
+                <div class="section-chevron">â–¼</div>
             </div>
             <div class="section-content">
                 <div class="timeline-steps" id="wrapTimeline">
@@ -1365,8 +1365,8 @@
         <!-- EQUIPE SECTION -->
         <div class="section-wrapper" id="secTeam">
             <div class="section-header" onclick="toggleSection('secTeam')">
-                <h3>Votre Équipe de Transaction</h3>
-                <div class="section-chevron">▼</div>
+                <h3>Votre Ã‰quipe de Transaction</h3>
+                <div class="section-chevron">â–¼</div>
             </div>
             <div class="section-content">
                 <div class="team-grid" id="wrapTeam"></div>
@@ -1376,12 +1376,12 @@
         <!-- CONCIERGERIE ADMINISTRATIVE SECTION -->
         <div class="section-wrapper" id="secMoving">
             <div class="section-header" onclick="toggleSection('secMoving')">
-                <h3>Après-Vente (Checklist)</h3>
-                <div class="section-chevron">▼</div>
+                <h3>AprÃ¨s-Vente (Checklist)</h3>
+                <div class="section-chevron">â–¼</div>
             </div>
             <div class="section-content">
-                <p style="margin-bottom: 25px; opacity: 0.6; font-size: 0.9rem;">Ne manquez aucune étape importante
-                    avant ou après votre emménagement.</p>
+                <p style="margin-bottom: 25px; opacity: 0.6; font-size: 0.9rem;">Ne manquez aucune Ã©tape importante
+                    avant ou aprÃ¨s votre emmÃ©nagement.</p>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"
                     id="wrapMoving"></div>
             </div>
@@ -1391,26 +1391,26 @@
         <div class="section-wrapper collapsed" id="secConcierge">
             <div class="section-header" onclick="toggleSection('secConcierge')">
                 <h3>Espace Maison & Conseils</h3>
-                <div class="section-chevron">▼</div>
+                <div class="section-chevron">â–¼</div>
             </div>
             <div class="section-content">
                 <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px;" class="concierge-main-grid">
                     <div>
                         <h4
                             style="color:#00f3ff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">
-                            🚀 Domotique : Équipez votre maison</h4>
+                            ðŸš€ Domotique : Ã‰quipez votre maison</h4>
                         <div id="wrapSmartHome" class="concierge-grid"></div>
                     </div>
                     <div>
                         <h4
                             style="color:#ffd700; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">
-                            🍂 Entretien Saisonnier</h4>
+                            ðŸ‚ Entretien Saisonnier</h4>
                         <div id="wrapMaintenance"
                             style="background:rgba(255,255,255,0.02); border-radius:15px; padding:10px;"></div>
 
                         <h4
                             style="color:#fff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:25px 0 15px;">
-                            📚 Ressources Utiles</h4>
+                            ðŸ“š Ressources Utiles</h4>
                         <div id="wrapResources"></div>
                     </div>
                 </div>
@@ -1421,11 +1421,11 @@
         <div class="section-wrapper collapsed" id="secPartners">
             <div class="section-header" onclick="toggleSection('secPartners')">
                 <h3>Vos Partenaires Experts</h3>
-                <div class="section-chevron">▼</div>
+                <div class="section-chevron">â–¼</div>
             </div>
             <div class="section-content">
                 <p style="color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 30px;">Profitez d'avantages
-                    exclusifs négociés pour vous.</p>
+                    exclusifs nÃ©gociÃ©s pour vous.</p>
                 <div class="partner-grid" id="wrapPartners"></div>
             </div>
         </div>
@@ -1438,32 +1438,32 @@
         firstName: "Evan",
         code: "Achat - Evan Patruno",
         property: "Achat - Evan Patruno",
-        city: "En attente de propriété",
+        city: "En attente de propriÃ©tÃ©",
         stage: "Analyse des offres",
         image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
         timeline: [
-            { label: "Préparation", icon: "📝", status: "completed" },
-            { label: "Offre déposée", icon: "🔍", status: "active" },
-            { label: "Conditions", icon: "🛡️", status: "pending" },
-            { label: "Notaire", icon: "✒️", status: "pending" },
-            { label: "Succès", icon: "🏠", status: "pending" }
+            { label: "PrÃ©paration", icon: "ðŸ“", status: "completed" },
+            { label: "Offre dÃ©posÃ©e", icon: "ðŸ”", status: "active" },
+            { label: "Conditions", icon: "ðŸ›¡ï¸", status: "pending" },
+            { label: "Notaire", icon: "âœ’ï¸", status: "pending" },
+            { label: "SuccÃ¨s", icon: "ðŸ ", status: "pending" }
         ],
         team: [
-            { role: "Votre Courtier", name: "Evan Patruno", icon: "👨‍💼", contact: "tel:5145673249" },
-            { role: "Collaborateur", name: "Marc-André Girard", icon: "🤝", contact: "mailto:test@test.com" },
-            { role: "Courtier Hyp.", name: "Sophie Lapointe", icon: "💰", contact: "tel:5555555555" },
-            { role: "Inspecteur", name: "Inspectec Inc.", icon: "🔍", contact: "tel:4444444444" },
-            { role: "Notaire", name: "Me Jean Picard", icon: "🖋️", contact: "tel:3333333333" }
+            { role: "Votre Courtier", name: "Evan Patruno", icon: "ðŸ‘¨â€ðŸ’¼", contact: "tel:5145673249" },
+            { role: "Collaborateur", name: "Marc-AndrÃ© Girard", icon: "ðŸ¤", contact: "mailto:test@test.com" },
+            { role: "Courtier Hyp.", name: "Sophie Lapointe", icon: "ðŸ’°", contact: "tel:5555555555" },
+            { role: "Inspecteur", name: "Inspectec Inc.", icon: "ðŸ”", contact: "tel:4444444444" },
+            { role: "Notaire", name: "Me Jean Picard", icon: "ðŸ–‹ï¸", contact: "tel:3333333333" }
         ],
         dates: [
             { label: "Signature du contrat", val: "15 Avril 2026" },
             { label: "Date limite financement", val: "22 Avril 2026" },
-            { label: "Rendez-vous Inspection", val: "À confirmer" },
-            { label: "Date de clôture (Notaire)", val: "15 Mai 2026" },
+            { label: "Rendez-vous Inspection", val: "Ã€ confirmer" },
+            { label: "Date de clÃ´ture (Notaire)", val: "15 Mai 2026" },
             { label: "Date d'occupation", val: "18 Mai 2026" }
         ],
         checklist: [
-            { name: "Financement Approuvé", done: true },
+            { name: "Financement ApprouvÃ©", done: true },
             { name: "Offre d'achat", done: false },
             { name: "ID Photo", done: true }
         ],
@@ -1474,38 +1474,38 @@
             occupation: { days: 28, date: "18 Mai 2026" }
         },
         movingChecklist: [
-            { name: "Aviser son propriétaire (60 jours avant)", done: true },
-            { name: "Contacter Bell / Videotron / Hydro-Québec", done: false },
-            { name: "Faire suivre son courrier — Postes Canada", done: false },
+            { name: "Aviser son propriÃ©taire (60 jours avant)", done: true },
+            { name: "Contacter Bell / Videotron / Hydro-QuÃ©bec", done: false },
+            { name: "Faire suivre son courrier â€” Postes Canada", done: false },
             { name: "Aviser la RAMQ et la SAAQ", done: false },
-            { name: "Réserver la compagnie de déménagement", done: false },
-            { name: "Commander les boites et matériaux", done: false },
+            { name: "RÃ©server la compagnie de dÃ©mÃ©nagement", done: false },
+            { name: "Commander les boites et matÃ©riaux", done: false },
             { name: "Faire l'inventaire des biens assurables", done: false },
-            { name: "Changer les serrures à l'arrivée", done: false }
+            { name: "Changer les serrures Ã  l'arrivÃ©e", done: false }
         ],
         partners: [
-            { name: "Déménagement Express", icon: "🚚", category: "Déménagement", benefit: "10% Rabais clients Evan", code: "EVAN10" },
-            { name: "CleanPro Montréal", icon: "🧹", category: "Nettoyage", benefit: "-50$ sur 1ère visite", code: "PATRUNO" },
-            { name: "HomeDécor Plus", icon: "💫", category: "Aménagement", benefit: "Consultation gratuite", code: "PORTAIL" }
+            { name: "DÃ©mÃ©nagement Express", icon: "ðŸšš", category: "DÃ©mÃ©nagement", benefit: "10% Rabais clients Evan", code: "EVAN10" },
+            { name: "CleanPro MontrÃ©al", icon: "ðŸ§¹", category: "Nettoyage", benefit: "-50$ sur 1Ã¨re visite", code: "PATRUNO" },
+            { name: "HomeDÃ©cor Plus", icon: "ðŸ’«", category: "AmÃ©nagement", benefit: "Consultation gratuite", code: "PORTAIL" }
         ],
         isCelebration: false,
         concierge: {
             smartHome: [
-                { category: "Sécurité", icon: "🔒", title: "Serrure intelligente", desc: "Remplacez vos serrures dès l'emménagement pour plus de sécurité." },
-                { category: "Confort", icon: "🌡️", title: "Thermostat connecté", desc: "Ecobee ou Nest pour optimiser votre consommation d'énergie." },
-                { category: "Surveillance", icon: "📹", title: "Caméra extérieure", desc: "Ring ou Arlo : surveillez votre propriété à distance." }
+                { category: "SÃ©curitÃ©", icon: "ðŸ”’", title: "Serrure intelligente", desc: "Remplacez vos serrures dÃ¨s l'emmÃ©nagement pour plus de sÃ©curitÃ©." },
+                { category: "Confort", icon: "ðŸŒ¡ï¸", title: "Thermostat connectÃ©", desc: "Ecobee ou Nest pour optimiser votre consommation d'Ã©nergie." },
+                { category: "Surveillance", icon: "ðŸ“¹", title: "CamÃ©ra extÃ©rieure", desc: "Ring ou Arlo : surveillez votre propriÃ©tÃ© Ã  distance." }
             ],
             maintenance: [
-                { period: "PRINTEMPS", title: "Gouttières & toiture", desc: "Vérifier les gouttières et la toiture après l'hiver." },
-                { period: "ÉTÉ", title: "Climatisation", desc: "Nettoyer les filtres et vérifier la thermopompe." },
-                { period: "AUTOMNE", title: "Isolation & fenêtres", desc: "Vérifier les calfeutrages et préparer pour l'hiver." },
-                { period: "HIVER", title: "Système de chauffage", desc: "Tester la fournaise et faire entretenir si nécessaire." }
+                { period: "PRINTEMPS", title: "GouttiÃ¨res & toiture", desc: "VÃ©rifier les gouttiÃ¨res et la toiture aprÃ¨s l'hiver." },
+                { period: "Ã‰TÃ‰", title: "Climatisation", desc: "Nettoyer les filtres et vÃ©rifier la thermopompe." },
+                { period: "AUTOMNE", title: "Isolation & fenÃªtres", desc: "VÃ©rifier les calfeutrages et prÃ©parer pour l'hiver." },
+                { period: "HIVER", title: "SystÃ¨me de chauffage", desc: "Tester la fournaise et faire entretenir si nÃ©cessaire." }
             ],
             resources: [
-                { title: "Régime d'Accès à la Propriété (RAP) — ARC", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-reer-ferr-autres-regimes-enregistres/retirer-votre-reer-regulier/regime-acces-propriete.html" },
-                { title: "Guide de l'acheteur — OACIQ officiel", url: "https://www.oaciq.com/fr/articles/rachetez-une-propriete" },
-                { title: "Calculateur de droit de mutation — " , url: "https://www.ville.montreal.qc.ca/portal/page?_pageid=44,52683200&_dad=portal&_schema=PORTAL" },
-                { title: "Rénovation Québec — RénoVért", url: "https://www.transitionenergetique.gouv.qc.ca/residences/programmes-rabais/renovert" }
+                { title: "RÃ©gime d'AccÃ¨s Ã  la PropriÃ©tÃ© (RAP) â€” ARC", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-reer-ferr-autres-regimes-enregistres/retirer-votre-reer-regulier/regime-acces-propriete.html" },
+                { title: "Guide de l'acheteur â€” OACIQ officiel", url: "https://www.oaciq.com/fr/articles/rachetez-une-propriete" },
+                { title: "Calculateur de droit de mutation â€” " , url: "https://www.ville.montreal.qc.ca/portal/page?_pageid=44,52683200&_dad=portal&_schema=PORTAL" },
+                { title: "RÃ©novation QuÃ©bec â€” RÃ©noVÃ©rt", url: "https://www.transitionenergetique.gouv.qc.ca/residences/programmes-rabais/renovert" }
             ]
         }
     };
@@ -1565,7 +1565,7 @@
                 }
             }
 
-            // ── COCKPIT RING ANIMATION ──
+            // â”€â”€ COCKPIT RING ANIMATION â”€â”€
             const ring = document.getElementById('ringProgress');
             const ringPctEl = document.getElementById('ringPct');
             const ringLabel = document.getElementById('ringLabel');
@@ -1606,9 +1606,9 @@
                     const activeStep = timeline.find(s => s.status === 'active');
                     const doneCount = timeline.filter(s => s.status === 'completed').length;
                     if (ringLabel) {
-                        if (pct >= 100) ringLabel.textContent = '🏆 Transaction complétée!';
-                        else if (activeStep) ringLabel.textContent = `Étape active : ${activeStep.label}`;
-                        else ringLabel.textContent = `${doneCount} étape${doneCount > 1 ? 's' : ''} complétée${doneCount > 1 ? 's' : ''}`;
+                        if (pct >= 100) ringLabel.textContent = 'ðŸ† Transaction complÃ©tÃ©e!';
+                        else if (activeStep) ringLabel.textContent = `Ã‰tape active : ${activeStep.label}`;
+                        else ringLabel.textContent = `${doneCount} Ã©tape${doneCount > 1 ? 's' : ''} complÃ©tÃ©e${doneCount > 1 ? 's' : ''}`;
                     }
                 }, 400);
             }
@@ -1624,10 +1624,10 @@
                 <div class="team-name" style="margin-bottom:10px;">${t.name}</div>
                 <div style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:5px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-                        <span style="opacity:0.7;">📞</span> ${t.phone || 'Non défini'}
+                        <span style="opacity:0.7;">ðŸ“ž</span> ${t.phone || 'Non dÃ©fini'}
                     </div>
                     <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="opacity:0.7;">✉️</span> ${t.email || 'Non défini'}
+                        <span style="opacity:0.7;">âœ‰ï¸</span> ${t.email || 'Non dÃ©fini'}
                     </div>
                 </div>
             </div>
@@ -1645,7 +1645,7 @@
         if (wrapChecklist) {
             wrapChecklist.innerHTML = checklist.map(c => `
                 <div style="background:${c.done ? 'rgba(46,204,113,0.05)' : 'rgba(255,255,255,0.02)'};padding:22px;border-radius:25px;display:flex;align-items:center;gap:18px;border:1px solid ${c.done ? 'rgba(46,204,113,0.2)' : 'rgba(255,255,255,0.1)'}">
-                    <div style="width:30px;height:30px;background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.05)'};border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:${c.done ? '#fff' : 'rgba(255,255,255,0.2)'}">${c.done ? '✓' : '!'}</div>
+                    <div style="width:30px;height:30px;background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.05)'};border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:${c.done ? '#fff' : 'rgba(255,255,255,0.2)'}">${c.done ? 'âœ“' : '!'}</div>
                     <span style="font-size:1rem;font-weight:600;color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name}</span>
                 </div>
             `).join('');
@@ -1661,7 +1661,7 @@
             return `
                 <div class="moving-item ${isDone ? 'done' : ''}" onclick="toggleMovingItem('${data.code}', ${idx})" id="moving-${idx}" style="background:rgba(255,255,255,0.02);padding:20px;border-radius:20px;display:flex;align-items:center;gap:15px;border:1px solid rgba(255,255,255,0.1); cursor:pointer; transition: 0.3s; box-shadow: var(--dash-glow); user-select:none;">
                     <div class="check-box" style="width:24px;height:24px;border:2px solid ${isDone ? '#2ecc71' : 'rgba(255,255,255,0.2)'};border-radius:6px;display:flex;align-items:center;justify-content:center;color:#2ecc71;font-weight:900; background: ${isDone ? 'rgba(46,204,113,0.1)' : 'transparent'};">
-                        ${isDone ? '✓' : ''}
+                        ${isDone ? 'âœ“' : ''}
                     </div>
                     <span style="font-size:0.9rem;opacity:${isDone ? '1' : '0.85'}; text-decoration: ${isDone ? 'line-through' : 'none'};">${c.name}</span>
                 </div>
@@ -1682,7 +1682,7 @@
                         <div class="feedback-item">
                             <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
                                 <span style="font-size:0.8rem; color:var(--dash-accent); font-weight:800;">${f.date}</span>
-                                <span style="color:var(--dash-warning);"> ${'★'.repeat(f.rating || 5)}${'⭐'.repeat(5 - (f.rating || 5))}</span>
+                                <span style="color:var(--dash-warning);"> ${'â˜…'.repeat(f.rating || 5)}${'â­'.repeat(5 - (f.rating || 5))}</span>
                             </div>
                             <p style="margin:0; font-style:italic; opacity:0.9;">"${f.comment}"</p>
                         </div>
@@ -1701,7 +1701,7 @@
                 <div style="color: var(--dash-accent); font-size: 0.65rem; font-weight: 900; text-transform: uppercase; margin-bottom: 5px;">${p.category}</div>
                 <div style="font-family: 'Outfit'; color: #fff; font-size: 1.1rem; font-weight: 800; margin-bottom: 5px;">${p.name}</div>
                 <div style="color: rgba(255,255,255,0.6); font-size: 0.8rem; font-weight: 600;">${p.benefit}</div>
-                <button class="copy-btn" onclick="copyPromoCode('${p.code}')">Copier Code: ${p.code} 📋</button>
+                <button class="copy-btn" onclick="copyPromoCode('${p.code}')">Copier Code: ${p.code} ðŸ“‹</button>
             </div>
         `).join('');
         const m = data.milestones || {};
@@ -1715,11 +1715,11 @@
         document.getElementById('wrapMilestones').innerHTML = milestonesConfig.map(ms => {
             const hasData = ms.data && ms.data.days !== null;
             const days = hasData ? ms.data.days : null;
-            const targetDate = hasData ? ms.data.date : "À confirmer";
+            const targetDate = hasData ? ms.data.date : "Ã€ confirmer";
 
             const isDone = days !== null && days < 0;
-            const daysText = days !== null ? (isDone ? "✅" : days) : "--";
-            const subText = days !== null ? (isDone ? "COMPLÉTÉ" : (days === 1 ? "JOUR RESTANT" : "JOURS RESTANTS")) : "DÉLAI À CONFIRMER";
+            const daysText = days !== null ? (isDone ? "âœ…" : days) : "--";
+            const subText = days !== null ? (isDone ? "COMPLÃ‰TÃ‰" : (days === 1 ? "JOUR RESTANT" : "JOURS RESTANTS")) : "DÃ‰LAI Ã€ CONFIRMER";
             const statusClass = isDone ? "done" : (days <= 3 && days >= 0 ? "urgent" : "");
 
             return `
@@ -1768,7 +1768,7 @@
             // Resources
             const wrapRes = document.getElementById('wrapResources');
             wrapRes.innerHTML = data.concierge.resources.map(r => `
-                <a href="${r.url}" target="_blank" class="resource-link">${r.title} ↗</a>
+                <a href="${r.url}" target="_blank" class="resource-link">${r.title} â†—</a>
             `).join('');
         }
     }
@@ -1779,7 +1779,7 @@
             stars[i].classList.toggle('active', i < val);
         }
         localStorage.setItem('portal_rating_' + currentDossierCode, val);
-        // On pourrait envoyer ça à l'API ici
+        // On pourrait envoyer Ã§a Ã  l'API ici
     }
 
     function closeCelebration() {
@@ -1819,7 +1819,7 @@
 
     function copyPromoCode(code) {
         navigator.clipboard.writeText(code);
-        alert("Code promo " + code + " copié !");
+        alert("Code promo " + code + " copiÃ© !");
     }
 
     function toggleMovingItem(code, idx) {
@@ -1835,7 +1835,7 @@
 
         // UI Update
         if (newState) {
-            box.innerText = "✓";
+            box.innerText = "âœ“";
             box.style.border = "2px solid #2ecc71";
             box.style.background = "rgba(46,204,113,0.1)";
             text.style.opacity = "1";
@@ -1861,7 +1861,7 @@
         const phone = document.getElementById('inpPortalPhone').value.trim();
         const btn = document.getElementById('btnPortalLogin');
 
-        btn.innerText = "Vérification sécurisée...";
+        btn.innerText = "VÃ©rification sÃ©curisÃ©e...";
         btn.disabled = true;
         setSafeStyle('btnPortalLogin', 'opacity', '0.7');
 
@@ -1882,10 +1882,10 @@
                 if (errData.errorType === "WON" || errData.errorType === "LOST") {
                     document.getElementById('portalOverlay').innerHTML = `
                         <div class="login-card" style="max-width: 500px; border: 1px solid ${errData.errorType === 'WON' ? '#2ecc71' : '#e74c3c'}; box-shadow: 0 0 30px ${errData.errorType === 'WON' ? 'rgba(46,204,113,0.2)' : 'rgba(231,76,60,0.2)'};">
-                            <div style="font-size: 4rem; margin-bottom: 25px;">${errData.errorType === 'WON' ? '🏆' : '📁'}</div>
-                            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 900; color: #fff;">${errData.errorType === 'WON' ? 'Dossier Archivé' : 'Dossier Clos'}</h2>
+                            <div style="font-size: 4rem; margin-bottom: 25px;">${errData.errorType === 'WON' ? 'ðŸ†' : 'ðŸ“'}</div>
+                            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 900; color: #fff;">${errData.errorType === 'WON' ? 'Dossier ArchivÃ©' : 'Dossier Clos'}</h2>
                             <p style="color: rgba(255,255,255,0.8); line-height: 1.6; margin: 25px 0;">${errData.message}</p>
-                            <button onclick="location.reload()" class="login-btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);">Retourner à l'accueil</button>
+                            <button onclick="location.reload()" class="login-btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);">Retourner Ã  l'accueil</button>
                         </div>
                     `;
                     return;
@@ -1896,7 +1896,7 @@
 
             const data = await response.json();
 
-            // RENDU DES DONNÉES RÉELLES
+            // RENDU DES DONNÃ‰ES RÃ‰ELLES
             renderPortal(data);
 
             document.getElementById('portalOverlay').classList.add('hidden');
@@ -1907,7 +1907,7 @@
 
             // FALLBACK TEST (EP-1001)
             if (code === "EP-1001") {
-                console.log("Mode démo EP-1001");
+                console.log("Mode dÃ©mo EP-1001");
                 renderPortal(MOCK_DATA);
                 document.getElementById('portalOverlay').classList.add('hidden');
                 document.getElementById('portalDash').classList.add('visible');
@@ -1920,7 +1920,7 @@
                     errBox.style.cssText = 'color:#e17;font-size:0.85rem;margin-top:15px;font-weight:600;';
                     document.querySelector('.login-card form').appendChild(errBox);
                 }
-                errBox.innerText = '⚠️ ' + (error.message || 'Code ou numéro invalide.');
+                errBox.innerText = 'âš ï¸ ' + (error.message || 'Code ou numÃ©ro invalide.');
             }
         } finally {
             btn.innerText = "Ouvrir mon dossier";
@@ -1946,6 +1946,13 @@
     // --- SERVICE WORKER REGISTRATION (PWA) ---
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
+            // Masquer le bouton d'installation si déjà installé
+            const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+            if (isStandalone) {
+                const btn = document.getElementById('btnPwaLogin');
+                if (btn) btn.style.display = 'none';
+            }
+
             navigator.serviceWorker.register('/sw.js')
                 .then(reg => console.log('SW Registered'))
                 .catch(err => console.log('SW Registration Failed', err));

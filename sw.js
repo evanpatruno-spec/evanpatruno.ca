@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ep-portal-cache-v2';
+﻿const CACHE_NAME = 'ep-portal-cache-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/mon-dossier.html',
@@ -32,7 +32,7 @@ self.addEventListener('activate', (event) => {
   return self.clients.claim();
 });
 
-// Stratégie : Network First with Cache Fallback (pour avoir toujours les dernières données Zoho)
+// StratÃ©gie : Network First with Cache Fallback (pour avoir toujours les derniÃ¨res donnÃ©es Zoho)
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     fetch(event.request).catch(() => {
@@ -40,3 +40,4 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
