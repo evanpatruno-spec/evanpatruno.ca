@@ -214,9 +214,9 @@ def generate_newsletter_json(force_zoho=False):
     month_name = months_fr[str(now.month)]
     year = now.year
     
-    # Lien vers le rapport PDF généré
+    # Lien vers le rapport PDF généré sur Vercel
     report_filename = now.strftime('%Y-%m.pdf')
-    report_url = f"https://evanpatruno.ca/rapports/{report_filename}"
+    report_url = f"https://evanpatruno-ca.vercel.app/rapports/{report_filename}"
 
     newsletter_data = {
         "campaign_id": f"NL-{now.month}-{year}",

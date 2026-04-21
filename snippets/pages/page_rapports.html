@@ -135,9 +135,10 @@
 <script>
     async function loadRapports() {
         const grid = document.getElementById('rapportsGrid');
+        const BASE_URL = 'https://evanpatruno-ca.vercel.app';
         try {
-            // On tente de lire l'index local généré par l'automatisation
-            const res = await fetch('/rapports/index.json?v=' + Date.now());
+            // On lit l'index hébergé sur Vercel
+            const res = await fetch(`${BASE_URL}/rapports/index.json?v=` + Date.now());
             if (!res.ok) throw new Error('Index non trouvé');
             
             const rapports = await res.json();
@@ -148,7 +149,7 @@
             }
 
             grid.innerHTML = rapports.map(r => `
-                <a href="/rapports/${r.pdf}" class="rapp-card" target="_blank">
+                <a href="${BASE_URL}/rapports/${r.pdf}" class="rapp-card" target="_blank">
                     <div class="rapp-info">
                         <span class="rapp-title">${r.title}</span>
                         <span class="rapp-date">Publié le ${new Date(r.date).toLocaleDateString('fr-CA', {year: 'numeric', month: 'long', day: 'numeric'})}</span>
