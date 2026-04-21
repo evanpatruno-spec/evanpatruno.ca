@@ -1,21 +1,21 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
 .venv/
 venv/
-ENV/
 
-# Windows
+# Node.js
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store
 Thumbs.db
 desktop.ini
 
-# IDEs
-.vscode/
-
-# Project specifics
+# Project specific
 *.log
 bin_id.txt
 news_bin_id.txt
 newsletter_bin_id.txt
-
+!rapports/index.json
