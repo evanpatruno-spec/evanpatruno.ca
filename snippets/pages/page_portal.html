@@ -1,4 +1,4 @@
-<!-- SNIPPET v18 - TOTAL ASCII RESTORATION -->
+<!-- SNIPPET v19 - FINAL RICH RESTORATION -->
 <style>
     :root {
         --dash-primary: #873276;
@@ -59,11 +59,11 @@
     .milestone-val { font-family: 'Outfit'; font-size: 2.2rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 5px; }
     .milestone-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--dash-accent); }
     
-    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
     .team-card { background: var(--dash-card-bg); border: 1px solid var(--dash-border); border-radius: 25px; padding: 25px; text-align: center; }
     .team-icon { font-size: 2rem; margin-bottom: 15px; }
     .team-role { font-size: 0.7rem; font-weight: 900; text-transform: uppercase; color: var(--dash-accent); }
-    .team-name { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 5px; }
+    .team-name { font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 5px; }
 
     .partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
     .partner-card { background: var(--dash-card-bg); border: 1px solid var(--dash-border); border-radius: 25px; padding: 25px; position: relative; overflow: hidden; }
@@ -76,8 +76,17 @@
     .check-box { width: 24px; height: 24px; border: 2px solid rgba(255,255,255,0.2); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
     .moving-item.done .check-box { background: var(--dash-success); border-color: var(--dash-success); color: #fff; }
 
+    /* Conciergerie */
+    .concierge-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; }
+    .tech-card { background: rgba(0, 243, 255, 0.03); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 20px; padding: 20px; position: relative; }
+    .tech-badge { position: absolute; top: 0; right: 0; background: rgba(0, 243, 255, 0.1); color: #00f3ff; padding: 4px 10px; font-size: 0.6rem; text-transform: uppercase; border-bottom-left-radius: 12px; }
+    .tech-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+    .resource-link { display: block; padding: 12px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.05); color: #fff; text-decoration: none; border-radius: 12px; font-size: 0.85rem; border: 1px solid rgba(255, 255, 255, 0.1); text-align: center; transition: 0.3s; }
+    .resource-link:hover { background: #fff; color: #000; }
+
     @media (max-width: 768px) {
         .portal-main-wrapper { border-radius: 30px; margin: 10px; }
+        .team-grid { grid-template-columns: 1fr; }
         .timeline-steps { flex-direction: column; padding: 20px; }
         .timeline-steps::before { left: 51px; top: 30px; width: 2px; height: 80%; }
         .timeline-progress-bar { left: 51px; top: 30px; width: 2px; height: 0%; }
@@ -96,9 +105,6 @@
                 <input type="text" placeholder="CODE DOSSIER" class="login-input" id="inpPortalCode" required>
                 <input type="password" maxlength="4" placeholder="CODE T&#201;L&#201;PHONE" class="login-input" id="inpPortalPhone" required>
                 <button type="submit" class="login-btn" id="btnPortalLogin">Ouvrir mon dossier</button>
-                <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
-                    <span>&#128242;</span> <span>Installer l'app PWA</span>
-                </button>
             </form>
         </div>
     </div>
@@ -116,7 +122,6 @@
             </div>
             <div class="cockpit-ring-wrap">
                 <svg class="cockpit-svg" viewBox="0 0 120 120">
-                    <defs><linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#873276"/><stop offset="100%" stop-color="#ff4db8"/></linearGradient></defs>
                     <circle class="ring-bg" cx="60" cy="60" r="50"/>
                     <circle class="ring-progress" id="ringProgress" cx="60" cy="60" r="50"/>
                 </svg>
@@ -138,6 +143,22 @@
             <div class="section-content"><div class="team-grid" id="wrapTeam"></div></div>
         </div>
 
+        <div class="section-wrapper collapsed" id="secConcierge">
+            <div class="section-header" onclick="toggleSection('secConcierge')"><h3>Espace Maison & Conseils</h3><div class="section-chevron">&#9660;</div></div>
+            <div class="section-content">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px;" id="wrapConciergeGrid">
+                    <div>
+                        <h4 style="color:#00f3ff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">Domotique & Tech</h4>
+                        <div class="concierge-grid" id="wrapTech"></div>
+                    </div>
+                    <div>
+                        <h4 style="color:var(--dash-accent); font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">Conseils d'Experts</h4>
+                        <div id="wrapResources"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="section-wrapper collapsed" id="secMoving">
             <div class="section-header" onclick="toggleSection('secMoving')"><h3>Checklist de D&#233;m&#233;nagement</h3><div class="section-chevron">&#9660;</div></div>
             <div class="section-content"><div class="moving-grid" id="wrapMoving"></div></div>
@@ -154,25 +175,33 @@
     const MOCK_DATA = {
         firstName: "Evan", code: "EP-1001", property: "Avenue Patruno", city: "Montr\u00e9al", stage: "Analyse des offres",
         timeline: [
-            { label: "Pr\u00e9paration", icon: "\uD83D\uDCCB", status: "completed" },
-            { label: "Offre d\u00e9pos\u00e9e", icon: "\uD83D\uDD0D", status: "active" },
+            { label: "Pr\u00E9paration", icon: "\uD83D\uDCCB", status: "completed" },
+            { label: "Offre d\u00E9pos\u00E9e", icon: "\uD83D\uDD0D", status: "active" },
             { label: "Conditions", icon: "\uD83D\uDEE1\uFE0F", status: "pending" },
             { label: "Notaire", icon: "\u2712\uFE0F", status: "pending" },
-            { label: "Succ\u00e8s", icon: "\uD83C\uDFE0", status: "pending" }
+            { label: "Succ\u00E8s", icon: "\uD83C\uDFE0", status: "pending" }
         ],
         team: [
-            { role: "Votre Courtier", name: "Evan Patruno", icon: "\uD83D\uDCF1", phone: "514-567-3249", email: "evan@patruno.ca" },
-            { role: "Notaire", name: "Me Jean Picard", icon: "\u2712\uFE0F", phone: "514-555-0101", email: "jean@notaire.ca" }
+            { role: "Votre Courtier", name: "Evan Patruno", icon: "\uD83D\uDCF1" },
+            { role: "Notaire", name: "Me Jean Picard", icon: "\u2712\uFE0F" },
+            { role: "Inspecteur", name: "Guy Tremblay", icon: "\uD83D\uDD0D" },
+            { role: "Financement", name: "Banque Scotia", icon: "\uD83D\uDCB0" }
         ],
-        milestones: {
-            signature: { days: 25, date: "15 Mai 2026" },
-            inspection: { days: 12, date: "2 Mai 2026" }
+        milestones: { signature: { days: 25, date: "15 Mai 2026" }, inspection: { days: 12, date: "2 Mai 2026" } },
+        movingChecklist: [ { name: "Aviser son propri\u00E9taire", done: true }, { name: "Changer les serrures", done: false } ],
+        concierge: {
+            tech: [
+                { name: "Interphone Connect\u00E9", icon: "\uD83D\uDEAA", badge: "Smart" },
+                { name: "Thermostat Nest", icon: "\uD83C\uDF21\uFE0F", badge: "Eco" },
+                { name: "Serrure August", icon: "\uD83D\uDD12", badge: "Haut-D\u00E9bit" }
+            ],
+            resources: [
+                { name: "Conseils Premier Acheteur", url: "#" },
+                { name: "Guide des Taxes de Mutation", url: "#" },
+                { name: "Checklist R\u00E9novation", url: "#" }
+            ]
         },
-        movingChecklist: [
-            { name: "Aviser son propri\u00e9taire", done: true },
-            { name: "Changer les serrures", done: false }
-        ],
-        partners: [{ name: "D\u00e9m\u00e9nagement Expert", icon: "\uD83D\uDE66", category: "Services", benefit: "10% Rabais", code: "EVAN10" }]
+        partners: [{ name: "D\u00E9m\u00E9nagement Expert", icon: "\uD83D\uDE66", category: "Services", benefit: "10% Rabais", code: "EVAN10" }]
     };
 
     function renderPortal(data) {
@@ -205,18 +234,22 @@
             }
         }, 300);
 
-        document.getElementById('wrapTeam').innerHTML = (data.team || []).map(t => '<div class="team-card"><div class="team-icon">'+t.icon+'</div><div class="team-role">'+t.role+'</div><div class="team-name">'+t.name+'</div><div style="font-size:0.75rem;opacity:0.6;">'+t.phone+'</div></div>').join('');
+        document.getElementById('wrapTeam').innerHTML = (data.team || []).map(t => '<div class="team-card"><div class="team-icon">'+t.icon+'</div><div class="team-role">'+t.role+'</div><div class="team-name">'+t.name+'</div></div>').join('');
         const m = data.milestones || {};
-        const milestones = [ { label: 'Inspection', data: m.inspection }, { label: 'Signature', data: m.signature } ];
-        document.getElementById('wrapMilestones').innerHTML = milestones.map(ms => '<div class="milestone-card"><div class="milestone-val">'+(ms.data ? ms.data.days : '--')+'</div><div class="milestone-label">'+ms.label+'</div><div style="font-size:0.6rem;opacity:0.4;margin-top:8px;">'+(ms.data ? ms.data.date : '')+'</div></div>').join('');
-        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, i) => '<div class="moving-item '+(c.done?'done':'')+'"><div class="check-box">'+(c.done?'\\u2713':'')+'</div><span>'+c.name+'</span></div>').join('');
+        document.getElementById('wrapMilestones').innerHTML = [ { label: 'Inspection', data: m.inspection }, { label: 'Signature', data: m.signature } ].map(ms => '<div class="milestone-card"><div class="milestone-val">'+(ms.data ? ms.data.days : '--')+'</div><div class="milestone-label">'+ms.label+'</div><div style="font-size:0.6rem;opacity:0.4;margin-top:8px;">'+(ms.data ? ms.data.date : '')+'</div></div>').join('');
+        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map(c => '<div class="moving-item '+(c.done?'done':'')+'"><div class="check-box">'+(c.done?'\u2713':'')+'</div><span>'+c.name+'</span></div>').join('');
+        
+        // Concierge
+        const c = data.concierge || {};
+        document.getElementById('wrapTech').innerHTML = (c.tech || []).map(i => '<div class="tech-card"><span class="tech-badge">'+i.badge+'</span><span class="tech-icon">'+i.icon+'</span><div class="team-name" style="font-size:0.9rem;">'+i.name+'</div></div>').join('');
+        document.getElementById('wrapResources').innerHTML = (c.resources || []).map(r => '<a href="'+r.url+'" class="resource-link">'+r.name+'</a>').join('');
+        
         document.getElementById('wrapPartners').innerHTML = (data.partners || []).map(p => '<div class="partner-card"><div class="partner-promo-badge">'+p.benefit+'</div><div style="font-size:1.5rem;margin-bottom:10px;">'+p.icon+'</div><div class="team-name" style="font-size:1rem;">'+p.name+'</div><button class="copy-btn">Code: '+p.code+'</button></div>').join('');
     }
 
     async function handlePortalLogin(e) {
         e.preventDefault();
         const code = document.getElementById('inpPortalCode').value.trim();
-        const phone = document.getElementById('inpPortalPhone').value.trim();
         const btn = document.getElementById('btnPortalLogin');
         btn.innerText = "Connexion...";
         btn.disabled = true;
@@ -234,7 +267,7 @@
         try {
             const resp = await fetch('https://dossier.evanpatruno.ca/api/portal', {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ codePortal: code, phoneLast4: phone })
+                body: JSON.stringify({ codePortal: code })
             });
             if (!resp.ok) throw new Error("Dossier inexistant");
             const data = await resp.json();
@@ -246,13 +279,4 @@
     }
 
     function toggleSection(id) { document.getElementById(id).classList.toggle('collapsed'); }
-    function installPortalApp() { window.location.href = "https://dossier.evanpatruno.ca/mon-dossier.html?code=" + (document.getElementById('inpPortalCode').value || 'EP-1001'); }
-    
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            const isS = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-            if (isS) { const b = document.getElementById('btnPwaLogin'); if (b) b.style.display = 'none'; }
-            navigator.serviceWorker.register('/sw.js').catch(() => {});
-        });
-    }
 </script>
