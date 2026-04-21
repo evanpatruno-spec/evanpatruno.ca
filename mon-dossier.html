@@ -10,21 +10,7 @@
     
     <style>
         body { margin: 0; padding: 0; background-color: #1a0516; color: #fff; font-family: 'Inter', sans-serif; min-height: 100vh; overflow-x: hidden; }
-        
-        /* APP NAVBAR */
-        .app-nav {
-            padding: env(safe-area-inset-top, 20px) 25px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(15, 5, 13, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 10000;
-        }
+        .app-nav { padding: env(safe-area-inset-top, 20px) 25px 15px; display: flex; justify-content: space-between; align-items: center; background: rgba(15, 5, 13, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); position: sticky; top: 0; z-index: 10000; }
         @media (display-mode: standalone) { .app-nav { display: none; } }
         .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 1.1rem; }
         .nav-logo img { height: 35px; }
@@ -43,9 +29,9 @@
     </nav>
 
     ﻿<!-- 
-    SNIPPET : PORTAIL CLIENT PRIV&Eacute; (V2.2 - EXPANSION INTERVENANTS & DATES)
+    SNIPPET : PORTAIL CLIENT PRIVÉ (V2.2 - EXPANSION INTERVENANTS & DATES)
     DESCRIPTION : Ce snippet contient l'interface de connexion, le dashboard, les intervenants et le calendrier des dates.
-    INSTRUCTIONS : Collez ce code dans un &eacute;l&eacute;ment "Embed Code" sur votre page Zoho Sites.
+    INSTRUCTIONS : Collez ce code dans un élément "Embed Code" sur votre page Zoho Sites.
 -->
 
 <!-- PWA MANIFEST -->
@@ -72,7 +58,7 @@
         --dash-border: rgba(135, 50, 118, 0.6);
         /* Rose Magenta plus intense */
         --dash-glow: 0 0 25px rgba(135, 50, 118, 0.4);
-        /* Lueur Neon accentu&eacute;e */
+        /* Lueur Neon accentuée */
         --dash-success: #2ecc71;
         --dash-warning: #f1c40f;
     }
@@ -273,7 +259,7 @@
         }
     }
 
-    /* Bouton PWA : visible sur tous les &eacute;crans */
+    /* Bouton PWA : visible sur tous les écrans */
     .pwa-login-btn {
         display: flex;
         align-items: center;
@@ -404,7 +390,7 @@
         object-fit: cover;
     }
 
-    /* TIMELINE &mdash; Desktop */
+    /* TIMELINE — Desktop */
     .timeline-steps {
         display: flex;
         justify-content: space-between;
@@ -413,7 +399,7 @@
         gap: 20px;
     }
 
-    /* Rail gris de fond &mdash; Desktop */
+    /* Rail gris de fond — Desktop */
     .timeline-steps::before {
         content: '';
         position: absolute;
@@ -425,7 +411,7 @@
         z-index: 1;
     }
 
-    /* Barre de progression magenta &mdash; Desktop */
+    /* Barre de progression magenta — Desktop */
     .timeline-progress-bar {
         position: absolute;
         top: 27px;
@@ -438,7 +424,7 @@
         z-index: 1;
     }
 
-    /* NÃ&hellip;&acirc;€œud Desktop : colonne (dot haut, label bas) */
+    /* NÃ…&acirc;€œud Desktop : colonne (dot haut, label bas) */
     .step-node {
         position: relative;
         z-index: 2;           /* au-dessus de la barre */
@@ -465,7 +451,7 @@
     .node-dot {
         width: 54px;
         height: 54px;
-        background: var(--dash-bg);  /* fond opaque = cache la barre derri&egrave;re */
+        background: var(--dash-bg);  /* fond opaque = cache la barre derrière */
         border: 2px solid rgba(255, 255, 255, 0.15);
         border-radius: 50%;
         display: flex;
@@ -596,7 +582,7 @@
             gap: 0 !important;
         }
 
-        /* Rail vertical gris &mdash; left = padding-steps(15) + padding-node(10) + rayon-dot(27) = 52px, d&eacute;cal&eacute; -1px pour centrer le 2px */
+        /* Rail vertical gris — left = padding-steps(15) + padding-node(10) + rayon-dot(27) = 52px, décalé -1px pour centrer le 2px */
         .timeline-steps::before {
             top: 27px !important;
             left: 51px !important;
@@ -606,7 +592,7 @@
             background: rgba(255, 255, 255, 0.08) !important;
         }
 
-        /* Barre de progression verticale rose n&eacute;on */
+        /* Barre de progression verticale rose néon */
         /* IMPORTANT : pas de !important sur height/width/left/background/box-shadow */
         /* Ã¢&acirc;€ &acirc;€™ le JS inline style doit pouvoir les surclasser pour l'animation */
         .timeline-progress-bar {
@@ -621,7 +607,7 @@
             border-radius: 10px;
         }
 
-        /* NÃ&hellip;&acirc;€œud Mobile : ligne (dot gauche, label droite) */
+        /* NÃ…&acirc;€œud Mobile : ligne (dot gauche, label droite) */
         .step-node {
             flex-direction: row !important;
             width: 100% !important;
@@ -1232,15 +1218,15 @@
     <div id="overlayCelebration" class="celebration-overlay">
         <div class="success-card">
             <div style="font-size: 5rem; margin-bottom: 20px;">Ã°Å¸Â¥&acirc;€š</div>
-            <h1 style="font-family:'Outfit'; font-size: 3.5rem; margin-bottom: 10px; line-height: 1;">F&Eacute;LICITATIONS !
+            <h1 style="font-family:'Outfit'; font-size: 3.5rem; margin-bottom: 10px; line-height: 1;">FÉLICITATIONS !
             </h1>
             <p id="txtCelebrationMsg" style="font-size: 1.4rem; opacity: 0.8; margin-bottom: 30px;">Votre transaction
-                immobili&egrave;re est officiellement conclue.</p>
+                immobilière est officiellement conclue.</p>
             <div
                 style="height:2px; background:linear-gradient(90deg, transparent, var(--dash-primary), transparent); margin-bottom:40px;">
             </div>
 
-            <p style="font-weight: 600; margin-bottom: 5px;">Avez-vous aim&eacute; votre exp&eacute;rience ?</p>
+            <p style="font-weight: 600; margin-bottom: 5px;">Avez-vous aimé votre expérience ?</p>
             <div class="stars-wrap" id="wrapStars">
                 <span class="star-btn" onclick="setRating(1)">Ã¢Â­Â</span>
                 <span class="star-btn" onclick="setRating(2)">Ã¢Â­Â</span>
@@ -1256,7 +1242,7 @@
             <div class="ambassador-card">
                 <div class="ambassador-badge">Programme Ambassadeur</div>
                 <h4 style="color: #ffd700; margin-bottom: 5px;">Devenez Ambassadeur Evan Patruno</h4>
-                <p style="font-size: 0.9rem; opacity: 0.7;">R&eacute;f&eacute;rez un ami et recevez <span id="txtReward"
+                <p style="font-size: 0.9rem; opacity: 0.7;">Référez un ami et recevez <span id="txtReward"
                         style="color:#fff; font-weight:700;">--</span> une fois la transaction conclue.</p>
                 <div
                     style="margin-top:15px; font-size:0.8rem; background:rgba(255,255,255,0.1); padding:8px; border-radius:10px; border:1px solid rgba(255,255,255,0.1);">
@@ -1267,7 +1253,7 @@
 
             <div style="margin-top: 40px; opacity: 0.6; cursor: pointer; text-decoration: underline; font-size: 0.8rem;"
                 onclick="closeCelebration()">
-                Consulter les d&eacute;tails archiv&eacute;s de mon dossier
+                Consulter les détails archivés de mon dossier
             </div>
         </div>
     </div>
@@ -1275,18 +1261,18 @@
     <!-- CONNEXION -->
     <div class="portal-overlay" id="portalOverlay">
         <div class="login-card">
-            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 8px;">Acc&egrave;s au Dossier</h2>
+            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 8px;">Accès au Dossier</h2>
             <p style="color: rgba(255,255,255,0.6); margin-bottom: 35px;">Entrez votre Code Portail unique.</p>
             <form onsubmit="handlePortalLogin(event)">
                 <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode"
                     required>
-                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU T&Eacute;L&Eacute;PHONE" class="login-input"
+                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TÉLÉPHONE" class="login-input"
                     id="inpPortalPhone" required style="margin-top: -10px;">
                 <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon
                     dossier</button>
                 <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
-                    <span class="pwa-icon">&#x1f4f1;</span>
-                    <span>Installer l'app sur mon t&eacute;l&eacute;phone</span>
+                    <span class="pwa-icon">📲</span>
+                    <span>Installer l'app sur mon téléphone</span>
                 </button>
             </form>
         </div>
@@ -1300,12 +1286,12 @@
                 <div style="display: flex; align-items: center; gap: 15px;">
                     <span style="font-size: 2rem;">Ã°Å¸&acirc;€œÂ±</span>
                     <div>
-                        <div style="font-weight: 900; font-size: 1rem; color: #fff;">Vivez l'exp&eacute;rience App</div>
-                        <div style="font-size: 0.75rem; opacity: 0.8; color: #fff;">Suivi en temps r&eacute;el et notifications.</div>
+                        <div style="font-weight: 900; font-size: 1rem; color: #fff;">Vivez l'expérience App</div>
+                        <div style="font-size: 0.75rem; opacity: 0.8; color: #fff;">Suivi en temps réel et notifications.</div>
                     </div>
                 </div>
                 <button class="pwa-login-btn" style="display:flex; width:auto; margin-top:0; padding:12px 22px;" onclick="installPortalApp()">
-                    <span class="pwa-icon">&#x1f4f1;</span>
+                    <span class="pwa-icon">📲</span>
                     <span>Installer</span>
                 </button>
             </div>
@@ -1314,7 +1300,7 @@
                 <div style="padding: 6px 16px; background: rgba(135, 50, 118, 0.15); border: 1px solid rgba(135, 50, 118, 0.3); border-radius: 50px; display: flex; align-items: center; gap: 10px;">
                     <div style="width: 8px; height: 8px; background: var(--dash-accent); border-radius: 50%; box-shadow: 0 0 10px var(--dash-accent-glow);"></div>
                     <span style="color: var(--dash-accent); font-weight: 900; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">
-                        Portail Client Priv&eacute;
+                        Portail Client Privé
                     </span>
                 </div>
             </div>
@@ -1370,7 +1356,7 @@
                         <small>Avancement</small>
                     </div>
                 </div>
-                <div class="cockpit-label" id="ringLabel">Calcul en cours&hellip;</div>
+                <div class="cockpit-label" id="ringLabel">Calcul en cours…</div>
             </div>
         </div>
 
@@ -1380,13 +1366,13 @@
         <!-- FINANCEMENT SECTION (Checklist) - MOVED UP -->
         <div class="section-wrapper" id="secPrequal">
             <div class="section-header" onclick="toggleSection('secPrequal')">
-                <h3>Conditions &agrave; r&eacute;aliser</h3>
+                <h3>Conditions à réaliser</h3>
                 <div class="section-chevron">Ã¢&acirc;€“Â¼</div>
             </div>
             <div class="section-content"
                 style="background: linear-gradient(135deg, rgba(135,50,118,0.05), rgba(0,0,0,0.2));">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
-                    <span style="opacity:0.6; font-size:0.9rem;">Statut g&eacute;n&eacute;ral :</span>
+                    <span style="opacity:0.6; font-size:0.9rem;">Statut général :</span>
                     <div id="badgePrequal" class="badge-premium">--</div>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"
@@ -1409,7 +1395,7 @@
         <!-- EQUIPE SECTION -->
         <div class="section-wrapper" id="secTeam">
             <div class="section-header" onclick="toggleSection('secTeam')">
-                <h3>Votre &Eacute;quipe de Transaction</h3>
+                <h3>Votre Équipe de Transaction</h3>
                 <div class="section-chevron">Ã¢&acirc;€“Â¼</div>
             </div>
             <div class="section-content">
@@ -1420,12 +1406,12 @@
         <!-- CONCIERGERIE ADMINISTRATIVE SECTION -->
         <div class="section-wrapper" id="secMoving">
             <div class="section-header" onclick="toggleSection('secMoving')">
-                <h3>Apr&egrave;s-Vente (Checklist)</h3>
+                <h3>Après-Vente (Checklist)</h3>
                 <div class="section-chevron">Ã¢&acirc;€“Â¼</div>
             </div>
             <div class="section-content">
-                <p style="margin-bottom: 25px; opacity: 0.6; font-size: 0.9rem;">Ne manquez aucune &eacute;tape importante
-                    avant ou apr&egrave;s votre emm&eacute;nagement.</p>
+                <p style="margin-bottom: 25px; opacity: 0.6; font-size: 0.9rem;">Ne manquez aucune étape importante
+                    avant ou après votre emménagement.</p>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"
                     id="wrapMoving"></div>
             </div>
@@ -1442,7 +1428,7 @@
                     <div>
                         <h4
                             style="color:#00f3ff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">
-                            Ã°Å¸Å¡&acirc;‚¬ Domotique : &Eacute;quipez votre maison</h4>
+                            Ã°Å¸Å¡&acirc;‚¬ Domotique : Équipez votre maison</h4>
                         <div id="wrapSmartHome" class="concierge-grid"></div>
                     </div>
                     <div>
@@ -1469,7 +1455,7 @@
             </div>
             <div class="section-content">
                 <p style="color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 30px;">Profitez d'avantages
-                    exclusifs n&eacute;goci&eacute;s pour vous.</p>
+                    exclusifs négociés pour vous.</p>
                 <div class="partner-grid" id="wrapPartners"></div>
             </div>
         </div>
@@ -1482,19 +1468,19 @@
         firstName: "Evan",
         code: "Achat - Evan Patruno",
         property: "Achat - Evan Patruno",
-        city: "En attente de propri&eacute;t&eacute;",
+        city: "En attente de propriété",
         stage: "Analyse des offres",
         image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
         timeline: [
-            { label: "Pr&eacute;paration", icon: "Ã°Å¸&acirc;€œÂ", status: "completed" },
-            { label: "Offre d&eacute;pos&eacute;e", icon: "Ã°Å¸&acirc;€Â", status: "active" },
+            { label: "Préparation", icon: "Ã°Å¸&acirc;€œÂ", status: "completed" },
+            { label: "Offre déposée", icon: "Ã°Å¸&acirc;€Â", status: "active" },
             { label: "Conditions", icon: "Ã°Å¸&acirc;€ºÂ¡Ã¯Â¸Â", status: "pending" },
             { label: "Notaire", icon: "Ã¢Å“&acirc;€™Ã¯Â¸Â", status: "pending" },
-            { label: "Succ&egrave;s", icon: "Ã°Å¸ÂÂ ", status: "pending" }
+            { label: "Succès", icon: "Ã°Å¸ÂÂ ", status: "pending" }
         ],
         team: [
             { role: "Votre Courtier", name: "Evan Patruno", icon: "Ã°Å¸&acirc;€˜Â¨Ã¢&acirc;‚¬ÂÃ°Å¸&acirc;€™Â¼", contact: "tel:5145673249" },
-            { role: "Collaborateur", name: "Marc-Andr&eacute; Girard", icon: "&#x1f91d;", contact: "mailto:test@test.com" },
+            { role: "Collaborateur", name: "Marc-André Girard", icon: "🤝", contact: "mailto:test@test.com" },
             { role: "Courtier Hyp.", name: "Sophie Lapointe", icon: "Ã°Å¸&acirc;€™Â°", contact: "tel:5555555555" },
             { role: "Inspecteur", name: "Inspectec Inc.", icon: "Ã°Å¸&acirc;€Â", contact: "tel:4444444444" },
             { role: "Notaire", name: "Me Jean Picard", icon: "Ã°Å¸&acirc;€“&acirc;€¹Ã¯Â¸Â", contact: "tel:3333333333" }
@@ -1507,7 +1493,7 @@
             { label: "Date d'occupation", val: "18 Mai 2026" }
         ],
         checklist: [
-            { name: "Financement Approuv&eacute;", done: true },
+            { name: "Financement Approuvé", done: true },
             { name: "Offre d'achat", done: false },
             { name: "ID Photo", done: true }
         ],
@@ -1518,38 +1504,38 @@
             occupation: { days: 28, date: "18 Mai 2026" }
         },
         movingChecklist: [
-            { name: "Aviser son propri&eacute;taire (60 jours avant)", done: true },
-            { name: "Contacter Bell / Videotron / Hydro-Qu&eacute;bec", done: false },
-            { name: "Faire suivre son courrier &mdash; Postes Canada", done: false },
+            { name: "Aviser son propriétaire (60 jours avant)", done: true },
+            { name: "Contacter Bell / Videotron / Hydro-Québec", done: false },
+            { name: "Faire suivre son courrier — Postes Canada", done: false },
             { name: "Aviser la RAMQ et la SAAQ", done: false },
-            { name: "R&eacute;server la compagnie de d&eacute;m&eacute;nagement", done: false },
-            { name: "Commander les boites et mat&eacute;riaux", done: false },
+            { name: "Réserver la compagnie de déménagement", done: false },
+            { name: "Commander les boites et matériaux", done: false },
             { name: "Faire l'inventaire des biens assurables", done: false },
-            { name: "Changer les serrures &agrave; l'arriv&eacute;e", done: false }
+            { name: "Changer les serrures à l'arrivée", done: false }
         ],
         partners: [
-            { name: "D&eacute;m&eacute;nagement Express", icon: "Ã°Å¸Å¡Å¡", category: "D&eacute;m&eacute;nagement", benefit: "10% Rabais clients Evan", code: "EVAN10" },
-            { name: "CleanPro Montr&eacute;al", icon: "Ã°Å¸Â§Â¹", category: "Nettoyage", benefit: "-50$ sur 1&egrave;re visite", code: "PATRUNO" },
-            { name: "HomeD&eacute;cor Plus", icon: "Ã°Å¸&acirc;€™Â«", category: "Am&eacute;nagement", benefit: "Consultation gratuite", code: "PORTAIL" }
+            { name: "Déménagement Express", icon: "🚚", category: "Déménagement", benefit: "10% Rabais clients Evan", code: "EVAN10" },
+            { name: "CleanPro Montréal", icon: "🧹", category: "Nettoyage", benefit: "-50$ sur 1ère visite", code: "PATRUNO" },
+            { name: "HomeDécor Plus", icon: "Ã°Å¸&acirc;€™Â«", category: "Aménagement", benefit: "Consultation gratuite", code: "PORTAIL" }
         ],
         isCelebration: false,
         concierge: {
             smartHome: [
-                { category: "S&eacute;curit&eacute;", icon: "Ã°Å¸&acirc;€&acirc;€™", title: "Serrure intelligente", desc: "Remplacez vos serrures d&egrave;s l'emm&eacute;nagement pour plus de s&eacute;curit&eacute;." },
-                { category: "Confort", icon: "Ã°Å¸Å’Â¡Ã¯Â¸Â", title: "Thermostat connect&eacute;", desc: "Ecobee ou Nest pour optimiser votre consommation d'&eacute;nergie." },
-                { category: "Surveillance", icon: "Ã°Å¸&acirc;€œÂ¹", title: "Cam&eacute;ra ext&eacute;rieure", desc: "Ring ou Arlo : surveillez votre propri&eacute;t&eacute; &agrave; distance." }
+                { category: "Sécurité", icon: "Ã°Å¸&acirc;€&acirc;€™", title: "Serrure intelligente", desc: "Remplacez vos serrures dès l'emménagement pour plus de sécurité." },
+                { category: "Confort", icon: "Ã°Å¸Å’Â¡Ã¯Â¸Â", title: "Thermostat connecté", desc: "Ecobee ou Nest pour optimiser votre consommation d'énergie." },
+                { category: "Surveillance", icon: "Ã°Å¸&acirc;€œÂ¹", title: "Caméra extérieure", desc: "Ring ou Arlo : surveillez votre propriété à distance." }
             ],
             maintenance: [
-                { period: "PRINTEMPS", title: "Goutti&egrave;res & toiture", desc: "V&eacute;rifier les goutti&egrave;res et la toiture apr&egrave;s l'hiver." },
-                { period: "&Eacute;T&Eacute;", title: "Climatisation", desc: "Nettoyer les filtres et v&eacute;rifier la thermopompe." },
-                { period: "AUTOMNE", title: "Isolation & fenÃƒÂªtres", desc: "V&eacute;rifier les calfeutrages et pr&eacute;parer pour l'hiver." },
-                { period: "HIVER", title: "Syst&egrave;me de chauffage", desc: "Tester la fournaise et faire entretenir si n&eacute;cessaire." }
+                { period: "PRINTEMPS", title: "Gouttières & toiture", desc: "Vérifier les gouttières et la toiture après l'hiver." },
+                { period: "ÉTÉ", title: "Climatisation", desc: "Nettoyer les filtres et vérifier la thermopompe." },
+                { period: "AUTOMNE", title: "Isolation & fenêtres", desc: "Vérifier les calfeutrages et préparer pour l'hiver." },
+                { period: "HIVER", title: "Système de chauffage", desc: "Tester la fournaise et faire entretenir si nécessaire." }
             ],
             resources: [
-                { title: "R&eacute;gime d'Acc&egrave;s &agrave; la Propri&eacute;t&eacute; (RAP) &mdash; ARC", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-reer-ferr-autres-regimes-enregistres/retirer-votre-reer-regulier/regime-acces-propriete.html" },
-                { title: "Guide de l'acheteur &mdash; OACIQ officiel", url: "https://www.oaciq.com/fr/articles/rachetez-une-propriete" },
-                { title: "Calculateur de droit de mutation &mdash; " , url: "https://www.ville.montreal.qc.ca/portal/page?_pageid=44,52683200&_dad=portal&_schema=PORTAL" },
-                { title: "R&eacute;novation Qu&eacute;bec &mdash; R&eacute;noV&eacute;rt", url: "https://www.transitionenergetique.gouv.qc.ca/residences/programmes-rabais/renovert" }
+                { title: "Régime d'Accès à la Propriété (RAP) — ARC", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-reer-ferr-autres-regimes-enregistres/retirer-votre-reer-regulier/regime-acces-propriete.html" },
+                { title: "Guide de l'acheteur — OACIQ officiel", url: "https://www.oaciq.com/fr/articles/rachetez-une-propriete" },
+                { title: "Calculateur de droit de mutation — " , url: "https://www.ville.montreal.qc.ca/portal/page?_pageid=44,52683200&_dad=portal&_schema=PORTAL" },
+                { title: "Rénovation Québec — RénoVért", url: "https://www.transitionenergetique.gouv.qc.ca/residences/programmes-rabais/renovert" }
             ]
         }
     };
@@ -1562,11 +1548,11 @@
     function renderPortal(data) {
         if (!data || !document.getElementById('txtWelcome')) return; // Safety first
 
-        document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName || 'Client'}.`;
-        document.getElementById('txtCodeRef').innerText = `Dossier #${data.code}`;
-        document.getElementById('txtPropName').innerText = data.property;
-        document.getElementById('txtPropCity').innerText = data.city;
-        document.getElementById('badgeStage').innerText = data.stage;
+        document.getElementById('txtWelcome').innerHTML = `Bienvenue, ${data.firstName || 'Client'}.`;
+        document.getElementById('txtCodeRef').innerHTML = `Dossier #${data.code}`;
+        document.getElementById('txtPropName').innerHTML = data.property;
+        document.getElementById('txtPropCity').innerHTML = data.city;
+        document.getElementById('badgeStage').innerHTML = data.stage;
 
         // Timeline
         const wrapT = document.getElementById('wrapTimeline');
@@ -1650,9 +1636,9 @@
                     const activeStep = timeline.find(s => s.status === 'active');
                     const doneCount = timeline.filter(s => s.status === 'completed').length;
                     if (ringLabel) {
-                        if (pct >= 100) ringLabel.textContent = 'Ã°Å¸Â&acirc;€  Transaction compl&eacute;t&eacute;e!';
-                        else if (activeStep) ringLabel.textContent = `&Eacute;tape active : ${activeStep.label}`;
-                        else ringLabel.textContent = `${doneCount} &eacute;tape${doneCount > 1 ? 's' : ''} compl&eacute;t&eacute;e${doneCount > 1 ? 's' : ''}`;
+                        if (pct >= 100) ringLabel.textContent = 'Ã°Å¸Â&acirc;€  Transaction complétée!';
+                        else if (activeStep) ringLabel.textContent = `Étape active : ${activeStep.label}`;
+                        else ringLabel.textContent = `${doneCount} étape${doneCount > 1 ? 's' : ''} complétée${doneCount > 1 ? 's' : ''}`;
                     }
                 }, 400);
             }
@@ -1668,10 +1654,10 @@
                 <div class="team-name" style="margin-bottom:10px;">${t.name}</div>
                 <div style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:5px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-                        <span style="opacity:0.7;">Ã°Å¸&acirc;€œÅ¾</span> ${t.phone || 'Non d&eacute;fini'}
+                        <span style="opacity:0.7;">Ã°Å¸&acirc;€œÅ¾</span> ${t.phone || 'Non défini'}
                     </div>
                     <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="opacity:0.7;">Ã¢Å“&acirc;€°Ã¯Â¸Â</span> ${t.email || 'Non d&eacute;fini'}
+                        <span style="opacity:0.7;">Ã¢Å“&acirc;€°Ã¯Â¸Â</span> ${t.email || 'Non défini'}
                     </div>
                 </div>
             </div>
@@ -1683,7 +1669,7 @@
         // Checklist
         const badgePrequal = document.getElementById('badgePrequal');
         const checklist = data.checklist || [];
-        if (badgePrequal) badgePrequal.innerText = checklist.filter(c => c.done).length + "/" + checklist.length;
+        if (badgePrequal) badgePrequal.innerHTML = checklist.filter(c => c.done).length + "/" + checklist.length;
         
         const wrapChecklist = document.getElementById('wrapChecklist');
         if (wrapChecklist) {
@@ -1718,7 +1704,7 @@
             if (data.transactionType === "Vendeur" && data.sellerData) {
                 secSeller.style.display = 'block';
                 const visitsEl = document.getElementById('valVisits');
-                if (visitsEl) visitsEl.innerText = data.sellerData.visits || "0";
+                if (visitsEl) visitsEl.innerHTML = data.sellerData.visits || "0";
 
                 const wrapFeed = document.getElementById('wrapFeedback');
                 if (wrapFeed) {
@@ -1763,7 +1749,7 @@
 
             const isDone = days !== null && days < 0;
             const daysText = days !== null ? (isDone ? "Ã¢Å“&acirc;€¦" : days) : "--";
-            const subText = days !== null ? (isDone ? "COMPL&Eacute;T&Eacute;" : (days === 1 ? "JOUR RESTANT" : "JOURS RESTANTS")) : "D&Eacute;LAI Ãƒ&acirc;‚¬ CONFIRMER";
+            const subText = days !== null ? (isDone ? "COMPLÉTÉ" : (days === 1 ? "JOUR RESTANT" : "JOURS RESTANTS")) : "DÉLAI Ãƒ&acirc;‚¬ CONFIRMER";
             const statusClass = isDone ? "done" : (days <= 3 && days >= 0 ? "urgent" : "");
 
             return `
@@ -1779,8 +1765,8 @@
         // Celebration Mode
         if (data.isCelebration) {
             document.getElementById('overlayCelebration').classList.add('active');
-            document.getElementById('txtReward').innerText = data.ambassadorReward || "--";
-            document.getElementById('txtReferralCode').innerText = data.code || "--";
+            document.getElementById('txtReward').innerHTML = data.ambassadorReward || "--";
+            document.getElementById('txtReferralCode').innerHTML = data.code || "--";
             createConfetti();
         }
 
@@ -1823,7 +1809,7 @@
             stars[i].classList.toggle('active', i < val);
         }
         localStorage.setItem('portal_rating_' + currentDossierCode, val);
-        // On pourrait envoyer &ccedil;a &agrave; l'API ici
+        // On pourrait envoyer ça à l'API ici
     }
 
     function closeCelebration() {
@@ -1863,7 +1849,7 @@
 
     function copyPromoCode(code) {
         navigator.clipboard.writeText(code);
-        alert("Code promo " + code + " copi&eacute; !");
+        alert("Code promo " + code + " copié !");
     }
 
     function toggleMovingItem(code, idx) {
@@ -1879,14 +1865,14 @@
 
         // UI Update
         if (newState) {
-            box.innerText = "Ã¢Å“&acirc;€œ";
+            box.innerHTML = "Ã¢Å“&acirc;€œ";
             box.style.border = "2px solid #2ecc71";
             box.style.background = "rgba(46,204,113,0.1)";
             text.style.opacity = "1";
             text.style.textDecoration = "line-through";
             item.style.borderColor = "rgba(46,204,113,0.3)";
         } else {
-            box.innerText = "";
+            box.innerHTML = "";
             box.style.border = "2px solid rgba(255,255,255,0.2)";
             box.style.background = "transparent";
             text.style.opacity = "0.6";
@@ -1905,7 +1891,7 @@
         const phone = document.getElementById('inpPortalPhone').value.trim();
         const btn = document.getElementById('btnPortalLogin');
 
-        btn.innerText = "V&eacute;rification s&eacute;curis&eacute;e...";
+        btn.innerHTML = "Vérification sécurisée...";
         btn.disabled = true;
         setSafeStyle('btnPortalLogin', 'opacity', '0.7');
 
@@ -1927,9 +1913,9 @@
                     document.getElementById('portalOverlay').innerHTML = `
                         <div class="login-card" style="max-width: 500px; border: 1px solid ${errData.errorType === 'WON' ? '#2ecc71' : '#e74c3c'}; box-shadow: 0 0 30px ${errData.errorType === 'WON' ? 'rgba(46,204,113,0.2)' : 'rgba(231,76,60,0.2)'};">
                             <div style="font-size: 4rem; margin-bottom: 25px;">${errData.errorType === 'WON' ? 'Ã°Å¸Â&acirc;€ ' : 'Ã°Å¸&acirc;€œÂ'}</div>
-                            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 900; color: #fff;">${errData.errorType === 'WON' ? 'Dossier Archiv&eacute;' : 'Dossier Clos'}</h2>
+                            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 900; color: #fff;">${errData.errorType === 'WON' ? 'Dossier Archivé' : 'Dossier Clos'}</h2>
                             <p style="color: rgba(255,255,255,0.8); line-height: 1.6; margin: 25px 0;">${errData.message}</p>
-                            <button onclick="location.reload()" class="login-btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);">Retourner &agrave; l'accueil</button>
+                            <button onclick="location.reload()" class="login-btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);">Retourner à l'accueil</button>
                         </div>
                     `;
                     return;
@@ -1940,7 +1926,7 @@
 
             const data = await response.json();
 
-            // RENDU DES DONN&Eacute;ES R&Eacute;ELLES
+            // RENDU DES DONNÉES RÉELLES
             renderPortal(data);
 
             document.getElementById('portalOverlay').classList.add('hidden');
@@ -1951,7 +1937,7 @@
 
             // FALLBACK TEST (EP-1001)
             if (code === "EP-1001") {
-                console.log("Mode d&eacute;mo EP-1001");
+                console.log("Mode démo EP-1001");
                 renderPortal(MOCK_DATA);
                 document.getElementById('portalOverlay').classList.add('hidden');
                 document.getElementById('portalDash').classList.add('visible');
@@ -1964,10 +1950,10 @@
                     errBox.style.cssText = 'color:#e17;font-size:0.85rem;margin-top:15px;font-weight:600;';
                     document.querySelector('.login-card form').appendChild(errBox);
                 }
-                errBox.innerText = 'Ã¢Å¡Â Ã¯Â¸Â ' + (error.message || 'Code ou num&eacute;ro invalide.');
+                errBox.innerHTML = 'Ã¢Å¡Â Ã¯Â¸Â ' + (error.message || 'Code ou numéro invalide.');
             }
         } finally {
-            btn.innerText = "Ouvrir mon dossier";
+            btn.innerHTML = "Ouvrir mon dossier";
             btn.disabled = false;
             setSafeStyle('btnPortalLogin', 'opacity', '1');
         }
@@ -1990,7 +1976,7 @@
     // --- SERVICE WORKER REGISTRATION (PWA) ---
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            // Masquer le bouton d'installation si d&eacute;j&agrave; install&eacute;
+            // Masquer le bouton d'installation si déjà installé
             const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
             if (isStandalone) {
                 const btn = document.getElementById('btnPwaLogin');
