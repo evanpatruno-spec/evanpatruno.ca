@@ -1,0 +1,12 @@
+{
+  "name": "evanpatruno-automation",
+  "version": "1.0.0",
+  "description": "Automations for evanpatruno.ca",
+  "main": "puppeteer_convert.js",
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "scripts": {
+    "convert-pdf": "node puppeteer_convert.js"
+  }
+}

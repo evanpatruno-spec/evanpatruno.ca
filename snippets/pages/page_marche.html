@@ -501,8 +501,74 @@
     }
 
     .baro-cta-btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 18px 45px rgba(135, 50, 118, 0.65);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(135, 50, 118, 0.4);
+        background: #9d3f8a;
+    }
+
+    /* WAIT VS BUY WIDGET - BARO VERSION */
+    .baro-wait-widget {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px dashed rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 30px;
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    .wb-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .wb-input-group {
+        text-align: left;
+    }
+
+    .wb-input-group label {
+        display: block;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 8px;
+    }
+
+    .wb-input {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 12px;
+        border-radius: 8px;
+        color: white;
+        font-family: inherit;
+    }
+
+    .wb-verdict-box {
+        background: rgba(167, 255, 0, 0.05);
+        border: 1px solid rgba(167, 255, 0, 0.2);
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 25px;
+    }
+
+    .wb-verdict-title {
+        color: #a7ff00;
+        font-weight: 800;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .wb-verdict-text {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .wb-grid {
+            grid-template-columns: 1fr;
+        }
     }
 
     /* ── SKELETON LOADER ── */
@@ -1078,31 +1144,6 @@
 
         </div>
 
-        <!-- LEXICON -->
-        <div class="baro-section-title">📖 Décodeur du Marché — Lexique Expert</div>
-        <div class="lex-grid">
-            <div class="lex-card">
-                <div class="lex-term">Prix Médian</div>
-                <div class="lex-defn">Le prix "central" : 50% des ventes sont plus chères, 50% sont moins chères. Plus
-                    stable que le prix moyen car il n'est pas faussé par les maisons d'exception.</div>
-            </div>
-            <div class="lex-card">
-                <div class="lex-term">Nouveaux Vendeurs / Inscriptions</div>
-                <div class="lex-defn">Le nombre de nouvelles propriétés arrivées sur le marché. Un chiffre en hausse
-                    offre plus de choix et réduit la pression sur les prix.</div>
-            </div>
-            <div class="lex-card">
-                <div class="lex-term">Marché de Vendeurs</div>
-                <div class="lex-defn">Situation où la demande (acheteurs) excède l'offre. Se produit quand il y a moins
-                    de 5 mois d'inventaire. Entraîne souvent des surenchères.</div>
-            </div>
-            <div class="lex-card">
-                <div class="lex-term">RMR (Région Métropolitaine)</div>
-                <div class="lex-defn">Ensemble géographique incluant le centre-ville et ses couronnes (Laval, Rives).
-                    Les statistiques RMR donnent la tendance globale du "Grand Montréal".</div>
-            </div>
-        </div>
-
         <!-- ── ACTUALITÉS ── -->
         <div class="baro-section-title">📰 Actualités du Marché</div>
 
@@ -1126,6 +1167,56 @@
             <div class="skeleton-card skeleton"></div>
             <div class="skeleton-card skeleton"></div>
             <div class="skeleton-card skeleton"></div>
+        </div>
+
+        <!-- WAIT VS BUY WIDGET -->
+        <div class="baro-wait-widget">
+            <div class="baro-section-title" style="margin-top:0; border:none; text-align:center;">🤔 Attendre ou Acheter ?</div>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top:-10px; margin-bottom:20px;">Est-ce qu'une baisse de taux compense la hausse du prix des maisons ?</p>
+            <div class="wb-grid">
+                <div class="wb-input-group">
+                    <label>Prix actuel ($)</label>
+                    <input type="number" id="wb-price" class="wb-input" value="500000" oninput="calcWaitWidget()">
+                </div>
+                <div class="wb-input-group">
+                    <label>Mois d'attente</label>
+                    <input type="number" id="wb-months" class="wb-input" value="12" oninput="calcWaitWidget()">
+                </div>
+            </div>
+            <div class="wb-verdict-box" id="wb-verdict-box">
+                <div class="wb-verdict-title" id="wb-verdict-title">Calcul en cours...</div>
+                <div class="wb-verdict-text" id="wb-verdict-text">Entrez vos paramètres pour voir l'impact financier.</div>
+                <div style="margin-top: 15px;">
+                    <a href="/outils" class="baro-cta-btn" style="padding: 10px 20px; font-size: 0.8rem; background: rgba(167, 255, 0, 0.1); color: #a7ff00; border: 1px solid #a7ff00;">
+                        Analyse complète dans la Boîte à Outils ➔
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- LEXICON -->
+        <div class="baro-section-title">📖 Décodeur du Marché — Lexique Expert</div>
+        <div class="lex-grid">
+            <div class="lex-card">
+                <div class="lex-term">Prix Médian</div>
+                <div class="lex-defn">Le prix "central" : 50% des ventes sont plus chères, 50% sont moins chères. Plus
+                    stable que le prix moyen car il n'est pas faussé par les maisons d'exception.</div>
+            </div>
+            <div class="lex-card">
+                <div class="lex-term">Nouveaux Vendeurs / Inscriptions</div>
+                <div class="lex-defn">Le nombre de nouvelles propriétés arrivées sur le marché. Un chiffre en hausse
+                    offre plus de choix et réduit la pression sur les prix.</div>
+            </div>
+            <div class="lex-card">
+                <div class="lex-term">Marché de Vendeurs</div>
+                <div class="lex-defn">Situation où la demande (acheteurs) excède l'offre. Se produit quand il y a moins
+                    de 5 mois d'inventaire. Entraîne souvent des surenchères.</div>
+            </div>
+            <div class="lex-card">
+                <div class="lex-term">RMR (Région Métropolitaine)</div>
+                <div class="lex-defn">Ensemble géographique incluant le centre-ville et ses couronnes (Laval, Rives).
+                    Les statistiques RMR donnent la tendance globale du "Grand Montréal".</div>
+            </div>
         </div>
 
         <!-- ── CTA ── -->
@@ -1160,6 +1251,7 @@
 
         let allNews = [];
         let activeRegion = 'all';
+        let currentBocRate = 4.89; // Fallback
 
         async function loadData() {
             await Promise.all([loadBOC(), loadNews()]);
@@ -1259,6 +1351,7 @@
 
         function renderBOC(d) {
             const rate = parseFloat(d.rate) || 2.25;
+            currentBocRate = rate;
             document.getElementById('bocRateVal').textContent = rate.toFixed(2).replace('.', ',');
             const status = (d.status || 'a maintenu').toLowerCase();
             const pill = document.getElementById('bocStatusPill');
@@ -1328,4 +1421,54 @@
 
         loadData();
     })();
+
+    // WAIT VS BUY WIDGET LOGIC
+    function calcWaitWidget() {
+        const priceNow = parseFloat(document.getElementById('wb-price').value) || 0;
+        const months = parseInt(document.getElementById('wb-months').value) || 12;
+        const rateNow = currentBocRate; // Use the dynamic rate from BoC
+        const rateFuture = rateNow - 1.0; // Assume 1% drop for the quick analysis
+        const appreciationAnnuelle = 0.05; // 5% standard
+
+        const priceFuture = priceNow * (1 + (appreciationAnnuelle * (months / 12)));
+        const appreciationAmt = priceFuture - priceNow;
+
+        // Simplified Canadian Mortgage PMT formula
+        const getPmt = (P, R) => {
+            const i = Math.pow(1 + (R / 100) / 2, 1 / 6) - 1;
+            const n = 25 * 12;
+            const loan = P * 0.95;
+            return (loan * i) / (1 - Math.pow(1 + i, -n));
+        };
+
+        const pmtNow = getPmt(priceNow, rateNow);
+        const pmtFuture = getPmt(priceFuture, rateFuture);
+        const pmtDiff = pmtFuture - pmtNow;
+
+        // Impact on 5 years (Standard Term)
+        const totalImpact = appreciationAmt + (pmtDiff * 60);
+
+        const titleEl = document.getElementById('wb-verdict-title');
+        const textEl = document.getElementById('wb-verdict-text');
+        const boxEl = document.getElementById('wb-verdict-box');
+
+        const fmt = (v) => new Intl.NumberFormat('fr-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 }).format(v);
+
+        if (totalImpact > 0) {
+            titleEl.innerHTML = `⚠️ Coût Net : +${fmt(totalImpact)}`;
+            titleEl.style.color = "#f87171";
+            boxEl.style.borderColor = "rgba(248, 113, 113, 0.3)";
+            boxEl.style.background = "rgba(248, 113, 113, 0.05)";
+            textEl.innerHTML = `Même si les taux baissent à 4%, la maison passera à <strong>${fmt(priceFuture)}</strong> (+${fmt(appreciationAmt)}). <br>Attendre 1 an vous coûterait plus cher par mois et en équité.`;
+        } else {
+            titleEl.innerHTML = `✅ Économie Net : ${fmt(Math.abs(totalImpact))}`;
+            titleEl.style.color = "#a7ff00";
+            boxEl.style.borderColor = "rgba(167, 255, 0, 0.3)";
+            boxEl.style.background = "rgba(167, 255, 0, 0.05)";
+            textEl.innerHTML = `Dans ce scénario, la baisse de taux compense l'appréciation des prix. Bonne stratégie d'attente !`;
+        }
+    }
+
+    // Init
+    setTimeout(calcWaitWidget, 1000);
 </script>

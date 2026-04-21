@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapport de Marché Immobilier - {{ month_name }} {{ year }}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@300;700;900&display=swap');
+
+        :root {
+            --primary: #873276;
+            --accent: #a7ff00;
+            --bg: #120010;
+            --card: rgba(255, 255, 255, 0.05);
+            --text: #ffffff;
+            --text-dim: rgba(255, 255, 255, 0.6);
+            --border: rgba(135, 50, 118, 0.3);
+        }
+
+        @page {
+            size: Letter;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page-container {
+            width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto;
+            position: relative;
+            padding: 40px;
+            box-sizing: border-box;
+            background: radial-gradient(circle at top right, rgba(135, 50, 118, 0.15), transparent);
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .report-title {
+            text-align: right;
+        }
+
+        .report-title h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+        }
+
+        .report-title p {
+            margin: 3px 0 0;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+
+        /* GRID LAYOUT */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 25px;
+        }
+
+        .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent);
+        }
+
+        /* BOC RATE SECTION */
+        .boc-section {
+            text-align: center;
+        }
+
+        .rate-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin: 5px 0;
+        }
+
+        .rate-status {
+            font-size: 14px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-dim);
+        }
+
+        /* MARKET STATS TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th {
+            text-align: left;
+            color: var(--text-dim);
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .trend-up { color: #4ade80; }
+        .trend-down { color: #f87171; }
+
+        /* MESSAGE EVAN */
+        .message-box {
+            grid-column: span 2;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .evan-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            object-fit: cover;
+        }
+
+        .message-content {
+            flex: 1;
+        }
+
+        .message-content h3 {
+            margin: 0 0 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+        }
+
+        .message-content p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+
+        /* NEWS LIST */
+        .news-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .news-item:last-child { border: none; }
+
+        .news-source {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .news-headline {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+
+        /* FOOTER */
+        footer {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            font-size: 11px;
+            color: var(--text-dim);
+        }
+
+        .contact-info p { margin: 2px 0; }
+        .cta-btn {
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media print {
+            .page-container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <img src="https://evanpatruno.ca/logo-ep.png" alt="Evan Patruno Logo" class="logo">
+            <div class="report-title">
+                <h1>Rapport de Marché</h1>
+                <p>{{ month_name }} {{ year }} | Montréal, Laval & Rives</p>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- BOC RATE -->
+            <div class="card boc-section">
+                <div class="card-title">📉 Taux Directeur BoC</div>
+                <div class="rate-value">{{ boc_rate }}</div>
+                <div class="rate-status">{{ boc_status }} en date du {{ boc_date }}</div>
+                <p style="font-size: 12px; margin-top: 15px; color: var(--text-dim);">
+                    Prochaine annonce : {{ boc_next }}
+                </p>
+            </div>
+
+            <!-- MARKET TEMPERATURE -->
+            <div class="card">
+                <div class="card-title">🌡️ Thermomètre du Marché</div>
+                <div style="font-size: 20px; font-weight: 700; margin: 10px 0;">{{ market_temp }}</div>
+                <div style="height: 10px; background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden; margin: 15px 0; --p: {{ temp_width }}%;">
+                    <div style="width: var(--p); height: 100%; background: var(--primary);"></div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-dim);">
+                    Basé sur le ratio ventes/inscriptions et les délais de vente médians.
+                </p>
+            </div>
+
+            <!-- MESSAGE EVAN -->
+            <div class="card message-box">
+                <img src="https://evanpatruno.ca/pwa-icon-512.png" alt="Evan Patruno" class="evan-photo">
+                <div class="message-content">
+                    <h3>Le mot d'Evan</h3>
+                    <p>{{ message_evan }}</p>
+                </div>
+            </div>
+
+            <!-- STATS TABLE -->
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-title">📊 Statistiques par Région (Résidentiel)</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Région</th>
+                            <th>Prix Médian</th>
+                            <th>Variation</th>
+                            <th>Délai Moyen</th>
+                            <th>État</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for region, s in market_stats.items() %}
+                        {% if region != 'last_quarter' %}
+                        <tr>
+                            <td style="font-weight: 600; text-transform: capitalize;">{{ region.replace('-', ' ') }}</td>
+                            <td>{{ s.price }} $</td>
+                            <td class="{{ 'trend-up' if '+' in s.trend else 'trend-down' }}">{{ s.trend }}</td>
+                            <td>{{ s.days }} jours</td>
+                            <td style="font-weight: 700;">{{ s.condition }}</td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TOP NEWS -->
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-title">📰 À retenir ce mois-ci</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    {% for article in news[:4] %}
+                    <div class="news-item">
+                        <span class="news-source">{{ article.source }}</span>
+                        <div class="news-headline">{{ article.title }}</div>
+                        <div style="font-size: 12px; color: var(--text-dim); line-height: 1.4;">
+                            {{ article.description[:120] }}...
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="contact-info">
+                <p><strong>Evan Patruno</strong> | Courtier Immobilier & Hypothécaire</p>
+                <p>evan.patruno.ca | 514-000-0000</p>
+            </div>
+            <a href="https://calendar.app.google/a37T5exmNpFfBZ6SA" class="cta-btn">Réserver une consultation libre</a>
+        </footer>
+    </div>
+</body>
+</html>

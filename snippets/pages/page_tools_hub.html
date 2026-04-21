@@ -59,58 +59,94 @@ INSTRUCTIONS:
     }
 
     /* --- NAVIGATION --- */
-    .th-tabs-wrapper {
-        text-align: center;
-        margin-bottom: 30px;
-        position: sticky;
-        top: 10px;
-        z-index: 100;
+    /* === NAVIGATION GRILLE COCKPIT === */
+    .hub-nav-grid-wrapper {
+        margin-bottom: 35px;
     }
 
-    .th-tabs {
-        display: inline-flex;
-        background: var(--hub-card-bg);
-        padding: 6px;
-        border-radius: 60px;
-        border: 1px solid var(--hub-border);
-        backdrop-filter: blur(20px);
-        gap: 5px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-        max-width: 100%;
-        overflow-x: auto;
-        scrollbar-width: none;
-        /* Hide scrollbar */
+    .hub-nav-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-width: 760px;
+        margin: 0 auto;
     }
 
-    .th-tabs::-webkit-scrollbar {
-        display: none;
-    }
-
-    .th-tab-btn {
-        padding: 10px 22px;
-        white-space: nowrap;
-        border: none;
-        background: transparent;
-        border-radius: 50px;
+    .hub-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 16px 10px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
         cursor: pointer;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.7);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        font-size: 0.9rem;
-        font-family: 'Outfit', sans-serif;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-align: center;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        line-height: 1.2;
     }
 
-    .th-tab-btn.active {
-        background: var(--hub-primary);
-        color: white;
-        box-shadow: 0 4px 15px rgba(135, 50, 118, 0.4);
-        font-weight: 700;
-        transform: scale(1.05);
+    .hub-nav-item .nav-icon {
+        font-size: 1.6rem;
+        transition: transform 0.25s ease;
     }
 
-    .th-tab-btn:hover:not(.active) {
+    .hub-nav-item:hover {
+        background: rgba(255, 255, 255, 0.09);
+        border-color: rgba(135, 50, 118, 0.4);
         color: white;
-        background: rgba(255, 255, 255, 0.05);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hub-nav-item:hover .nav-icon {
+        transform: scale(1.2);
+    }
+
+    .hub-nav-item.active {
+        background: linear-gradient(135deg, rgba(135, 50, 118, 0.6), rgba(90, 30, 80, 0.6));
+        border-color: rgba(135, 50, 118, 0.8);
+        color: white;
+        box-shadow: 0 6px 20px rgba(135, 50, 118, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+        transform: translateY(-2px);
+    }
+
+    .hub-nav-item-new {
+        background: rgba(167, 255, 0, 0.07) !important;
+        border-color: rgba(167, 255, 0, 0.25) !important;
+        color: #a7ff00 !important;
+    }
+
+    .hub-nav-item-new.active {
+        background: linear-gradient(135deg, rgba(167, 255, 0, 0.3), rgba(120, 200, 0, 0.2)) !important;
+        border-color: rgba(167, 255, 0, 0.7) !important;
+        box-shadow: 0 6px 20px rgba(167, 255, 0, 0.25) !important;
+    }
+
+    .hub-nav-item-new .nav-icon {
+        filter: drop-shadow(0 0 6px rgba(167, 255, 0, 0.6));
+    }
+
+    @media (max-width: 600px) {
+        .hub-nav-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        .hub-nav-item {
+            padding: 12px 8px;
+            font-size: 0.72rem;
+        }
+        .hub-nav-item .nav-icon {
+            font-size: 1.3rem;
+        }
     }
 
     /* --- CONTENT WRAPPER --- */
@@ -374,6 +410,16 @@ INSTRUCTIONS:
         justify-content: center;
         font-size: 9px;
         font-weight: bold;
+    }
+    .evt-badge-new {
+        background: #a7ff00;
+        color: #1e0a19;
+        font-size: 0.65rem;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-left: 5px;
+        font-weight: 900;
+        vertical-align: middle;
     }
 </style>
 
@@ -755,14 +801,33 @@ INSTRUCTIONS:
     <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
 
 
-        <!-- NAVIGATION -->
-        <div class="th-tabs-wrapper">
-            <div class="th-tabs">
-                <button class="th-tab-btn active" onclick="switchTab('affordability')">Capacité d'Emprunt</button>
-                <button class="th-tab-btn" onclick="switchTab('mortgage')">Calculatrice Hypothécaire</button>
-                <button class="th-tab-btn" onclick="switchTab('closing')">Cash Dam (Clôture)</button>
-                <button class="th-tab-btn" onclick="switchTab('welcome')">Taxe Bienvenue</button>
-                <button class="th-tab-btn" onclick="switchTab('rvb')">Louer vs Acheter</button>
+        <!-- NAVIGATION GRILLE COCKPIT -->
+        <div class="hub-nav-grid-wrapper">
+            <div class="hub-nav-grid">
+                <a href="javascript:void(0)" class="hub-nav-item active" onclick="switchTab('affordability')">
+                    <span class="nav-icon">💰</span>
+                    Capacité d'Emprunt
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('mortgage')">
+                    <span class="nav-icon">🏠</span>
+                    Calculatrice Hypothécaire
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('closing')">
+                    <span class="nav-icon">📋</span>
+                    Frais de Clôture
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('welcome')">
+                    <span class="nav-icon">🏛️</span>
+                    Taxe Bienvenue
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('rvb')">
+                    <span class="nav-icon">⚖️</span>
+                    Louer vs Acheter
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item hub-nav-item-new" onclick="switchTab('wait-vs-buy')">
+                    <span class="nav-icon">⏳</span>
+                    Attendre vs Acheter <span class="evt-badge-new" style="display:block; margin-top:2px;">NEW</span>
+                </a>
             </div>
         </div>
 
@@ -1258,67 +1323,163 @@ INSTRUCTIONS:
             </div>
         </div>
 
+        <!-- 6. ATTENDRE VS ACHETER (COÛT DE L'ATTENTE) -->
+        <div id="tab-wait-vs-buy" class="th-content">
+            <div class="calc-card">
+                <h2 style="text-align:center; margin-bottom:10px; font-weight:300; font-size:1.8rem; color:#ffffff;">
+                    Le <span style="font-weight:700; color:#a7ff00;">Vrai Coût</span> de l'Attente
+                </h2>
+                <p style="text-align:center; color:var(--hub-text-muted); margin-bottom:40px; max-width:600px; margin-inline:auto;">
+                    Calculer l'impact d'une baisse de taux vs l'augmentation du prix des maisons et la perte d'équité.
+                </p>
+
+                <div class="calc-grid-2">
+                    <!-- Inputs -->
+                    <div>
+                        <div class="calc-col-title">Paramètres Actuels</div>
+                        <div class="form-group">
+                            <label>Prix de la maison souhaitée ($)</label>
+                            <input type="number" class="std-input" id="wait-price" value="500000" step="5000" oninput="runWait()">
+                        </div>
+                        <div class="form-group">
+                            <label>Taux disponible aujourd'hui (%)</label>
+                            <input type="number" class="std-input" id="wait-rate-now" value="4.89" step="0.05" oninput="runWait()">
+                        </div>
+                        
+                        <div class="calc-col-title" style="margin-top:40px;">Prospective (Attente)</div>
+                        <div class="form-group">
+                            <label>Délai d'attente estimé (mois)</label>
+                            <input type="range" id="wait-months-slider" min="6" max="36" value="12" step="6" style="margin-bottom:10px;" oninput="syncWaitSlider()">
+                            <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:var(--hub-text-muted);">
+                                <span>6 mois</span>
+                                <span id="label-wait-months" style="color:#a7ff00; font-weight:800;">12 mois</span>
+                                <span>3 ans</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Hausse annuelle moyenne estimée des prix de l'immobilier au Québec.">Appréciation Annuelle des prix (%) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="wait-appreciation" value="5" step="0.5" oninput="runWait()">
+                        </div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Le taux que vous espérez obtenir après la baisse.">Futur taux espéré (%) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="wait-rate-future" value="4.00" step="0.05" oninput="runWait()">
+                        </div>
+                    </div>
+
+                    <!-- Comparison Result Area -->
+                    <div>
+                        <div class="calc-col-title">Comparatif</div>
+                        
+                        <div id="wait-verdict" style="padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); margin-bottom:30px;">
+                            <div style="color:var(--hub-text-muted); font-size:0.9rem; margin-bottom:5px;">Verdict sur <span id="res-wait-period">12</span> mois :</div>
+                            <div id="wait-total-impact" style="font-size:1.8rem; font-weight:800; color:#a7ff00;">-- $</div>
+                            <div id="wait-verdict-summary" style="font-size:0.85rem; line-height:1.4; margin-top:10px;">
+                                En attendant, vous économiserez sur le taux mais paierez plus cher pour la même maison.
+                            </div>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+                            <div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
+                                <div style="font-size:0.75rem; color:var(--hub-text-muted); text-transform:uppercase;">Prix Futur</div>
+                                <div id="res-wait-future-price" style="font-size:1.1rem; font-weight:700; margin-top:5px; color:white;">-- $</div>
+                                <div id="res-wait-apprec-gain" style="font-size:0.8rem; color:#f87171; margin-top:3px;">+ 0 $</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
+                                <div style="font-size:0.75rem; color:var(--hub-text-muted); text-transform:uppercase;">Paiement Futur</div>
+                                <div id="res-wait-future-pmt" style="font-size:1.1rem; font-weight:700; margin-top:5px; color:white;">-- $</div>
+                                <div id="res-wait-pmt-diff" style="font-size:0.8rem; color:#4ade80; margin-top:3px;">- 0 $ /ms</div>
+                            </div>
+                        </div>
+
+                        <div class="result-panel" style="margin-top:20px; padding:25px; border-color:rgba(167, 255, 0, 0.3);">
+                            <div class="res-label">Équité Perdue en attendant</div>
+                            <div id="res-wait-equity-lost" class="res-value-main" style="font-size:2.4rem; background:linear-gradient(135deg, #fff, #a7ff00); -webkit-text-fill-color:transparent;">0 $</div>
+                            <p style="font-size:0.8rem; color:var(--hub-text-muted); margin:0;">C'est l'augmentation de valeur que vous ne capturez pas en n'étant pas propriétaire pendant cette période.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div> <!-- Close inner wrapper -->
 </div> <!-- Close tools-hub-container -->
 
 <script>
     // --- UTILS ---
-    const fmt = (n, dec = 0) => n.toLocaleString('fr-CA', {
-        style: 'currency',
-        currency: 'CAD',
-        maximumFractionDigits: dec,
-        minimumFractionDigits: dec
-    });
-    const getVal = (id) => parseFloat(document.getElementById(id).value) || 0;
-
-    // Canadian mortgage rate conversion (Semi-annual compounding)
-    // Monthly Rate = (1 + AnnualRate/2)^(2/12) - 1
-    const getRateEff = (annualRate) => Math.pow(Math.pow(1 + (annualRate / 100) / 2, 2), 1 / 12) - 1;
-
-
-
-    // --- NAVIGATION ---
-    function switchTab(id) {
-        document.querySelectorAll('.th-tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.th-content').forEach(c => c.classList.remove('active'));
-
-        const btn = Array.from(document.querySelectorAll('.th-tab-btn')).find(b => b.getAttribute('onclick').includes(id));
-        if (btn) btn.classList.add('active');
-
-        document.getElementById('tab-' + id).classList.add('active');
-
-        // Trigger initial calculation for the tab
-        if (id === 'mortgage') runMort();
-        if (id === 'affordability') runAff();
-        if (id === 'closing') runCC();
-        if (id === 'welcome') runWT();
-        if (id === 'rvb') runRvB();
+    function fmt(n, dec) {
+        dec = dec || 0;
+        return n.toLocaleString('fr-CA', {
+            style: 'currency',
+            currency: 'CAD',
+            maximumFractionDigits: dec,
+            minimumFractionDigits: dec
+        });
+    }
+    function getVal(id) {
+        var el = document.getElementById(id);
+        return el ? parseFloat(el.value) || 0 : 0;
     }
 
+    // --- NAVIGATION (defined first, before anything else) ---
+    window.switchTab = function(id) {
+        var allButtons = document.querySelectorAll('.hub-nav-item');
+        var allSections = document.querySelectorAll('.th-content');
 
+        for (var i = 0; i < allButtons.length; i++) {
+            allButtons[i].classList.remove('active');
+        }
+        for (var j = 0; j < allSections.length; j++) {
+            allSections[j].classList.remove('active');
+        }
 
-    // Cache for animations to prevent overlap
-    const animCache = {};
-    function smartAnimate(id, value, isCurrency = true, dec = 0) {
-        const obj = document.getElementById(id);
-        const currentText = obj.innerText.replace(/[^0-9,-]/g, '').replace(',', '.');
-        const startValue = parseFloat(currentText) || 0;
+        for (var k = 0; k < allButtons.length; k++) {
+            var attr = allButtons[k].getAttribute('onclick') || '';
+            if (attr.indexOf("'" + id + "'") !== -1) {
+                allButtons[k].classList.add('active');
+                break;
+            }
+        }
+
+        var target = document.getElementById('tab-' + id);
+        if (target) {
+            target.classList.add('active');
+            var offset = window.innerWidth < 768 ? 100 : 150;
+            window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        }
+
+        if (id === 'mortgage' && typeof runMort === 'function') { runMort(); }
+        if (id === 'wait-vs-buy' && typeof runWait === 'function') { runWait(); }
+        if (id === 'affordability' && typeof runAff === 'function') { runAff(); }
+        if (id === 'closing' && typeof runCC === 'function') { runCC(); }
+        if (id === 'welcome' && typeof runWT === 'function') { runWT(); }
+        if (id === 'rvb' && typeof runRvB === 'function') { runRvB(); }
+    };
+
+    // --- SHARED RATE HELPER ---
+    function getRateEff(annual) {
+        return Math.pow(1 + (annual / 100) / 2, 1 / 6) - 1;
+    }
+
+    // --- ANIMATION CACHE ---
+    var animCache = {};
+    function smartAnimate(id, value, isCurrency, dec) {
+        if (isCurrency === undefined) isCurrency = true;
+        if (dec === undefined) dec = 0;
+        var obj = document.getElementById(id);
+        if (!obj) return;
+        var currentText = obj.innerText.replace(/[^0-9,-]/g, '').replace(',', '.');
+        var startValue = parseFloat(currentText) || 0;
         if (Math.abs(startValue - value) < 0.01) return;
-
         if (animCache[id]) cancelAnimationFrame(animCache[id]);
-
-        const duration = 600;
-        const startTime = performance.now();
-
+        var duration = 600;
+        var startTime = performance.now();
         function update(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            // Easing function for smoother feel
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            const current = startValue + (value - startValue) * easeOut;
-
+            var elapsed = currentTime - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var easeOut = 1 - Math.pow(1 - progress, 3);
+            var current = startValue + (value - startValue) * easeOut;
             obj.innerText = isCurrency ? fmt(current, dec) : current.toLocaleString('fr-CA', { maximumFractionDigits: dec });
-
             if (progress < 1) {
                 animCache[id] = requestAnimationFrame(update);
             }
@@ -1326,69 +1487,49 @@ INSTRUCTIONS:
         animCache[id] = requestAnimationFrame(update);
     }
 
-
-
     // --- 1. AFFORDABILITY ---
     function runAff() {
-        const income = getVal('aff-income');
-        const debts = getVal('aff-debts'); // Monthly
-        const down = getVal('aff-down');
-        const taxes = getVal('aff-taxes'); // Yearly
-        const condo = getVal('aff-condo'); // Monthly
-        const heat = getVal('aff-heat'); // Monthly
-
-        // AUTO STRESS TEST : MAX(taux négocié + 2%, 5.25%) — Règle OSFI 2025
-        const negotiatedRate = getVal('aff-rate-neg') || 4.89;
-        const stressTestRate = Math.max(negotiatedRate + 2, 5.25);
+        var income = getVal('aff-income');
+        var debts = getVal('aff-debts');
+        var down = getVal('aff-down');
+        var taxes = getVal('aff-taxes');
+        var condo = getVal('aff-condo');
+        var heat = getVal('aff-heat');
+        var negotiatedRate = getVal('aff-rate-neg') || 4.89;
+        var stressTestRate = Math.max(negotiatedRate + 2, 5.25);
         document.getElementById('aff-rate').value = stressTestRate.toFixed(2);
         document.getElementById('aff-stress-badge').innerText = stressTestRate.toFixed(2) + ' %';
-        const rate = getRateEff(stressTestRate);
-
-        // Limits
-        const monthlyInc = income / 12;
-        const limitGDS = monthlyInc * 0.39;
-        const limitTDS = monthlyInc * 0.44;
-
-        const housingFixedCosts = heat + (taxes / 12) + (condo * 0.5); // 50% frais condo (règle OSFI/SCHL canadienne)
-        const maxPayGDS = limitGDS - housingFixedCosts;
-        const maxPayTDS = limitTDS - debts - housingFixedCosts;
-
-        const maxPayment = Math.max(0, Math.min(maxPayGDS, maxPayTDS));
-
-        // Total Max Loan (including insurance)
-        const n = 25 * 12;
-        const totalLoan = maxPayment * (1 - Math.pow(1 + rate, -n)) / rate;
-
+        var rate = getRateEff(stressTestRate);
+        var monthlyInc = income / 12;
+        var limitGDS = monthlyInc * 0.39;
+        var limitTDS = monthlyInc * 0.44;
+        var housingFixedCosts = heat + (taxes / 12) + (condo * 0.5);
+        var maxPayGDS = limitGDS - housingFixedCosts;
+        var maxPayTDS = limitTDS - debts - housingFixedCosts;
+        var maxPayment = Math.max(0, Math.min(maxPayGDS, maxPayTDS));
+        var n = 25 * 12;
+        var totalLoan = maxPayment * (1 - Math.pow(1 + rate, -n)) / rate;
         if (!isFinite(totalLoan) || totalLoan < 0) {
-            document.getElementById('aff-res-price').innerText = "$0";
+            document.getElementById('aff-res-price').innerText = '$0';
             return;
         }
-
-        // CMHC Multiplier logic to derive Price from Total Loan & Downpayment
-        // ratio = down / price
-        let price = totalLoan + down; // Placeholder for >20% down
-        let netLoan = totalLoan;
-
-        let ratio = down / price;
+        var price = totalLoan + down;
+        var netLoan = totalLoan;
+        var ratio = down / price;
         if (ratio < 0.20) {
-            // If < 20% down, totalLoan = (price - down) * (1 + premium)
-            // price = (totalLoan / (1 + premium)) + down
-            let premium = 0.040; // Default for 5%
+            var premium = 0.040;
             if (ratio >= 0.15) premium = 0.028;
             else if (ratio >= 0.10) premium = 0.031;
-
             price = (totalLoan / (1 + premium)) + down;
             netLoan = price - down;
         }
-
         smartAnimate('aff-res-price', price);
         smartAnimate('aff-res-mortgage', netLoan);
         smartAnimate('aff-res-down-req', down);
     }
 
-    // --- 2. MORTGAGE (Premium with Sliders & Chart) ---
-    let mcDonutChart = null;
-
+    // --- 2. MORTGAGE ---
+    var mcDonutChart = null;
     function syncMcLoan(val) {
         document.getElementById('mc-loan-display').innerText = parseInt(val).toLocaleString('fr-CA') + ' $';
         runMort();
@@ -1401,11 +1542,10 @@ INSTRUCTIONS:
         document.getElementById('mc-amort-display').innerText = val + ' ans';
         runMort();
     }
-
     function getMcValues() {
-        const loanSlider = document.getElementById('mc-loan-slider');
-        const rateSlider = document.getElementById('mc-rate-slider');
-        const amortSlider = document.getElementById('mc-amort-slider');
+        var loanSlider = document.getElementById('mc-loan-slider');
+        var rateSlider = document.getElementById('mc-rate-slider');
+        var amortSlider = document.getElementById('mc-amort-slider');
         return {
             P: loanSlider ? parseFloat(loanSlider.value) : 450000,
             rate: rateSlider ? parseFloat(rateSlider.value) : 4.89,
@@ -1413,51 +1553,40 @@ INSTRUCTIONS:
             freq: parseInt(document.getElementById('mc-freq').value)
         };
     }
-
     function runMort() {
-        const { P, rate, years, freq } = getMcValues();
-        const r = getRateEff(rate);
-        const n = years * 12;
-
-        // Monthly payment
-        const pMonthly = P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-        const payment = (pMonthly * 12) / freq;
-
-        const freqLabels = { 12: 'par mois', 24: 'bimensuel', 26: 'aux 2 semaines', 52: 'par semaine' };
+        var mc = getMcValues();
+        var P = mc.P, rate = mc.rate, years = mc.years, freq = mc.freq;
+        var r = getRateEff(rate);
+        var n = years * 12;
+        var pMonthly = P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        var payment = (pMonthly * 12) / freq;
+        var freqLabels = { 12: 'par mois', 24: 'bimensuel', 26: 'aux 2 semaines', 52: 'par semaine' };
         document.getElementById('mc-res-pay').innerText = fmt(payment, 2);
         document.getElementById('mc-res-label').innerText = freqLabels[freq] || 'par mois';
-
-        // Totals
-        const totalPaid = pMonthly * n;
-        const totalInterest = totalPaid - P;
-        const interestPct = Math.round((totalInterest / totalPaid) * 100);
-
+        var totalPaid = pMonthly * n;
+        var totalInterest = totalPaid - P;
+        var interestPct = Math.round((totalInterest / totalPaid) * 100);
         smartAnimate('mc-total-paid', totalPaid);
         smartAnimate('mc-total-interest', totalInterest);
-
-        // Accelerated savings vs monthly
-        const pAccel = (pMonthly * 12) / 26;
-        let balance = P, totalPaidAccel = 0, monthsAccel = 0;
+        var pAccel = (pMonthly * 12) / 26;
+        var balance = P, totalPaidAccel = 0, monthsAccel = 0;
         while (balance > 0 && monthsAccel < n * 2) {
-            const interestCharge = balance * r;
-            const principalThisMonth = pMonthly - interestCharge;
+            var interestCharge = balance * r;
+            var principalThisMonth = pMonthly - interestCharge;
             balance -= (principalThisMonth * 26 / 12);
             totalPaidAccel += pAccel * 26 / 12;
             monthsAccel++;
         }
-        const saving = totalPaid - totalPaidAccel;
+        var saving = totalPaid - totalPaidAccel;
         if (freq === 12 && saving > 0) {
             document.getElementById('mc-saving-accel').innerText = fmt(saving);
             document.getElementById('mc-accel-tip').innerText = fmt(saving);
         } else {
-            document.getElementById('mc-saving-accel').innerText = freq !== 12 ? '✓ Actif' : '—';
+            document.getElementById('mc-saving-accel').innerText = freq !== 12 ? 'Actif' : '-';
             document.getElementById('mc-accel-tip').innerText = fmt(saving > 0 ? saving : 0);
         }
-
         document.getElementById('mc-interest-pct').innerText = interestPct + '%';
-
-        // Update Donut Chart
-        const chartEl = document.getElementById('mc-donut-chart');
+        var chartEl = document.getElementById('mc-donut-chart');
         if (chartEl) {
             if (mcDonutChart) {
                 mcDonutChart.data.datasets[0].data = [P, totalInterest];
@@ -1465,24 +1594,10 @@ INSTRUCTIONS:
             } else {
                 mcDonutChart = new Chart(chartEl, {
                     type: 'doughnut',
-                    data: {
-                        datasets: [{
-                            data: [P, totalInterest],
-                            backgroundColor: ['#873276', '#f87171'],
-                            borderWidth: 0,
-                            hoverOffset: 8
-                        }]
-                    },
+                    data: { datasets: [{ data: [P, totalInterest], backgroundColor: ['#873276', '#f87171'], borderWidth: 0, hoverOffset: 8 }] },
                     options: {
-                        cutout: '72%',
-                        responsive: true,
-                        maintainAspectRatio: true,
-                        layout: { padding: 4 },
-                        plugins: {
-                            legend: { display: false }, tooltip: {
-                                callbacks: { label: ctx => ' ' + fmt(ctx.raw) }
-                            }
-                        },
+                        cutout: '72%', responsive: true, maintainAspectRatio: true, layout: { padding: 4 },
+                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(ctx) { return ' ' + fmt(ctx.raw); } } } },
                         animation: { duration: 600 }
                     }
                 });
@@ -1492,63 +1607,42 @@ INSTRUCTIONS:
 
     // --- 3. CLOSING COSTS ---
     function syncDown() {
-        // Slider controls downpayment purely for UX/Demo
-        // If slider moves, update Down input based on Price
-        const pct = document.getElementById('cc-slider').value;
-        const price = getVal('cc-price');
-        const amt = Math.round(price * (pct / 100));
+        var pct = document.getElementById('cc-slider').value;
+        var price = getVal('cc-price');
+        var amt = Math.round(price * (pct / 100));
         document.getElementById('cc-down').value = amt;
-        document.getElementById('cc-ratio-label').innerText = "Ratio: " + pct + "%";
+        document.getElementById('cc-ratio-label').innerText = 'Ratio: ' + pct + '%';
         runCC();
     }
-
     function runCC() {
-        const price = getVal('cc-price');
-        const down = getVal('cc-down');
-
-        // Minimum Downpayment Rules (5% on first 500k, 10% on remainder, 20% over 1M)
-        let minRequiredDown = 0;
+        var price = getVal('cc-price');
+        var down = getVal('cc-down');
+        var minRequiredDown = 0;
         if (price > 0) {
-            if (price <= 500000) {
-                minRequiredDown = price * 0.05;
-            } else if (price < 1000000) {
-                minRequiredDown = (500000 * 0.05) + ((price - 500000) * 0.10);
-            } else {
-                minRequiredDown = price * 0.20;
-            }
+            if (price <= 500000) { minRequiredDown = price * 0.05; }
+            else if (price < 1000000) { minRequiredDown = (500000 * 0.05) + ((price - 500000) * 0.10); }
+            else { minRequiredDown = price * 0.20; }
         }
-        
-        let ratio = (price > 0) ? (down / price) * 100 : 0;
-        
-        // Show error if downpayment is too low
+        var ratio = (price > 0) ? (down / price) * 100 : 0;
         if (down < minRequiredDown && price > 0) {
             document.getElementById('cc-ratio-label').style.color = '#f43f5e';
             document.getElementById('cc-error-container').style.display = 'block';
-            document.getElementById('cc-error-container').innerText = `⚠️ La mise de fonds légale pour ce prix est de ${fmt(minRequiredDown)}.`;
+            document.getElementById('cc-error-container').innerText = 'Mise de fonds minimale requise: ' + fmt(minRequiredDown);
         } else {
             document.getElementById('cc-ratio-label').style.color = 'var(--hub-success)';
             document.getElementById('cc-error-container').style.display = 'none';
         }
-
-        // 1. SCHL Tax
-        let schlRate = 0;
+        var schlRate = 0;
         if (ratio < 4.99) schlRate = 0;
         else if (ratio < 10) schlRate = 0.04;
         else if (ratio < 15) schlRate = 0.031;
         else if (ratio < 20) schlRate = 0.028;
-
-        const loan = price - down;
-        const schlPrem = down >= minRequiredDown ? loan * schlRate : 0;
-        const schlTax = schlPrem * 0.09; // QC PST
-
-        // 2. Welcome Tax
-        const welcome = calcWT(price, true); // Assume MTL worst case for estimation
-
-        // 3. Others
-        const others = getVal('cc-insp') + getVal('cc-notary') + getVal('cc-move');
-
-        const total = down + schlTax + welcome + others;
-
+        var loan = price - down;
+        var schlPrem = down >= minRequiredDown ? loan * schlRate : 0;
+        var schlTax = schlPrem * 0.09;
+        var welcome = calcWT(price, true);
+        var others = getVal('cc-insp') + getVal('cc-notary') + getVal('cc-move');
+        var total = down + schlTax + welcome + others;
         smartAnimate('cc-res-total', total);
         smartAnimate('cc-res-welcome', welcome);
         smartAnimate('cc-res-schl', schlTax);
@@ -1556,141 +1650,125 @@ INSTRUCTIONS:
     }
 
     // --- 4. WELCOME TAX ---
-    function runWT() {
-        const price = getVal('wt-price');
-        const isMtl = document.getElementById('wt-city').value === 'mtl';
-        const tax = calcWT(price, isMtl);
-        smartAnimate('wt-res-total', tax);
-
-        // Explanation
-        let text = "<ul style='padding-left:20px; margin:0;'>";
-        // Recalculate stages for display
-        const p1 = 61500;
-        const p2 = 307800;
-        let rem = price;
-
-        // 0.5%
-        let t1 = Math.min(rem, p1);
-        text += `<li>0.5% sur ${fmt(t1)} = ${fmt(t1 * 0.005)}</li>`;
-        rem -= t1;
-
-        if (rem > 0) {
-            if (isMtl) {
-                // Montreal 2025 Tranches
-                const mt2 = 307800;
-                const mt3 = 611500;
-                const mt4 = 1223100;
-
-                // 2. 61.5k to 307.8k @ 1.0%
-                let t2 = Math.min(rem, mt2 - p1);
-                text += `<li>1.0% sur tranche 61k-307k = ${fmt(t2 * 0.01)}</li>`;
-                rem -= t2;
-
-                if (rem > 0) {
-                    // 3. 307.8k to 611.5k @ 1.5%
-                    let t3 = Math.min(rem, mt3 - mt2);
-                    text += `<li>1.5% sur tranche 307k-611k = ${fmt(t3 * 0.015)}</li>`;
-                    rem -= t3;
-
-                    if (rem > 0) {
-                        // 4. 611.5k to 1.22M @ 2.0%
-                        let t4 = Math.min(rem, mt4 - mt3);
-                        text += `<li>2.0% sur tranche 611k-1.22M = ${fmt(t4 * 0.02)}</li>`;
-                        rem -= t4;
-
-                        if (rem > 0) {
-                            // 5. Over 1.22M @ 3%
-                            text += `<li>3.0% sur excédent 1.22M = ${fmt(rem * 0.03)}</li>`;
-                        }
-                    }
-                }
-            } else {
-                // Standard Provincial 2025
-                let t2 = Math.min(rem, p2 - p1);
-                text += `<li>1.0% sur tranche 61k-307k = ${fmt(t2 * 0.01)}</li>`;
-                rem -= t2;
-
-                if (rem > 0) {
-                    text += `<li>1.5% sur excédent 307k = ${fmt(rem * 0.015)}</li>`;
-                }
-            }
-        }
-        text += "</ul>";
-        document.getElementById('wt-explain').innerHTML = text;
-    }
-
-    // Shared Logic
     function calcWT(price, isMtl) {
-        let tax = 0;
-        let rem = price;
-        const p1 = 61500;
-
-        // 1. 0 - 61,500 @ 0.5%
-        let t1 = Math.min(rem, p1);
-        tax += t1 * 0.005;
-        rem -= t1;
-
+        var tax = 0, rem = price;
+        var p1 = 61500;
+        var t1 = Math.min(rem, p1); tax += t1 * 0.005; rem -= t1;
         if (rem > 0) {
             if (isMtl) {
-                const mt2 = 307800;
-                const mt3 = 611500;
-                const mt4 = 1223100;
-
-                let t2 = Math.min(rem, mt2 - p1);
-                tax += t2 * 0.01;
-                rem -= t2;
-
-                if (rem > 0) {
-                    let t3 = Math.min(rem, mt3 - mt2);
-                    tax += t3 * 0.015;
-                    rem -= t3;
-
-                    if (rem > 0) {
-                        let t4 = Math.min(rem, mt4 - mt3);
-                        tax += t4 * 0.02;
-                        rem -= t4;
-
-                        if (rem > 0) tax += rem * 0.03;
-                    }
-                }
+                var mt2 = 307800, mt3 = 611500, mt4 = 1223100;
+                var t2 = Math.min(rem, mt2 - p1); tax += t2 * 0.01; rem -= t2;
+                if (rem > 0) { var t3 = Math.min(rem, mt3 - mt2); tax += t3 * 0.015; rem -= t3; }
+                if (rem > 0) { var t4 = Math.min(rem, mt4 - mt3); tax += t4 * 0.02; rem -= t4; }
+                if (rem > 0) { tax += rem * 0.03; }
             } else {
-                const p2 = 307800;
-                let t2 = Math.min(rem, p2 - p1);
-                tax += t2 * 0.01;
-                rem -= t2;
-                if (rem > 0) tax += rem * 0.015;
+                var p2 = 307800;
+                var t2b = Math.min(rem, p2 - p1); tax += t2b * 0.01; rem -= t2b;
+                if (rem > 0) { tax += rem * 0.015; }
             }
         }
         return tax;
     }
+    function runWT() {
+        var price = getVal('wt-price');
+        var isMtl = document.getElementById('wt-city').value === 'mtl';
+        var tax = calcWT(price, isMtl);
+        smartAnimate('wt-res-total', tax);
+        var text = "<ul style='padding-left:20px; margin:0;'>";
+        var p1 = 61500, rem = price;
+        var t1 = Math.min(rem, p1); text += '<li>0.5% sur ' + fmt(t1) + ' = ' + fmt(t1 * 0.005) + '</li>'; rem -= t1;
+        if (rem > 0) {
+            if (isMtl) {
+                var mt2 = 307800, mt3 = 611500, mt4 = 1223100;
+                var t2 = Math.min(rem, mt2 - p1); text += '<li>1.0% (61k-307k) = ' + fmt(t2 * 0.01) + '</li>'; rem -= t2;
+                if (rem > 0) { var t3 = Math.min(rem, mt3 - mt2); text += '<li>1.5% (307k-611k) = ' + fmt(t3 * 0.015) + '</li>'; rem -= t3; }
+                if (rem > 0) { var t4 = Math.min(rem, mt4 - mt3); text += '<li>2.0% (611k-1.22M) = ' + fmt(t4 * 0.02) + '</li>'; rem -= t4; }
+                if (rem > 0) { text += '<li>3.0% (excedent) = ' + fmt(rem * 0.03) + '</li>'; }
+            } else {
+                var p2 = 307800;
+                var t2b = Math.min(rem, p2 - p1); text += '<li>1.0% (61k-307k) = ' + fmt(t2b * 0.01) + '</li>'; rem -= t2b;
+                if (rem > 0) { text += '<li>1.5% (excedent 307k) = ' + fmt(rem * 0.015) + '</li>'; }
+            }
+        }
+        text += '</ul>';
+        document.getElementById('wt-explain').innerHTML = text;
+    }
 
     // --- 5. RENT VS BUY ---
     function runRvB() {
-        const rent = getVal('rvb-rent');
-        const inc = getVal('rvb-rent-inc') / 100;
-        const years = getVal('rvb-years');
-        const rAnnual = getVal('rvb-rate') / 100;
-
-        // 1. Total Rent Loss (with compound increase)
-        let totalRent = 0;
-        let currentRent = rent;
-        for (let i = 0; i < years; i++) {
+        var rent = getVal('rvb-rent');
+        var inc = getVal('rvb-rent-inc') / 100;
+        var years = getVal('rvb-years');
+        var totalRent = 0, currentRent = rent;
+        for (var i = 0; i < years; i++) {
             totalRent += currentRent * 12;
             currentRent *= (1 + inc);
         }
-
-        // 2. Equivalent Buying Power (Reverse Mortgage)
-        const r = getRateEff(getVal('rvb-rate')); // Capitalisation semi-annuelle canadienne
-        const n = 25 * 12; // Standard 25y amortization for comparison
-        const buyingPower = rent * ((Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n)));
-
+        var r = getRateEff(getVal('rvb-rate'));
+        var n = 25 * 12;
+        var buyingPower = rent * ((Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n)));
         smartAnimate('rvb-res-total', totalRent);
         smartAnimate('rvb-res-power', buyingPower);
     }
 
-    // Init All
-    setTimeout(() => {
-        runAff(); runMort(); runCC(); runWT(); runRvB();
+    // --- 6. WAIT VS BUY ---
+    function syncWaitSlider() {
+        var months = document.getElementById('wait-months-slider').value;
+        document.getElementById('label-wait-months').innerText = months + ' mois';
+        document.getElementById('res-wait-period').innerText = months;
+        runWait();
+    }
+    function runWait() {
+        var priceNow = getVal('wait-price');
+        var rateNow = getVal('wait-rate-now');
+        var months = getVal('wait-months-slider');
+        var appreciation = getVal('wait-appreciation') / 100;
+        var rateFuture = getVal('wait-rate-future');
+        var amort = 25;
+        if (!priceNow || !rateNow) return;
+        var rNow = getRateEff(rateNow);
+        var n = amort * 12;
+        var loanNow = priceNow * 0.95;
+        var pmtNow = (loanNow * rNow) / (1 - Math.pow(1 + rNow, -n));
+        var appreciationAmt = priceNow * (appreciation * (months / 12));
+        var priceFuture = priceNow + appreciationAmt;
+        var loanFuture = priceFuture * 0.95;
+        var rFuture = getRateEff(rateFuture);
+        var pmtFuture = (loanFuture * rFuture) / (1 - Math.pow(1 + rFuture, -n));
+        var pmtDiff = pmtFuture - pmtNow;
+        var totalImpact = appreciationAmt + (pmtDiff * 60);
+        smartAnimate('res-wait-future-price', priceFuture);
+        document.getElementById('res-wait-apprec-gain').innerText = '+ ' + fmt(appreciationAmt);
+        smartAnimate('res-wait-future-pmt', pmtFuture);
+        var pmtLabel = document.getElementById('res-wait-pmt-diff');
+        if (pmtDiff > 0) {
+            pmtLabel.innerText = '+ ' + fmt(pmtDiff) + ' / mois';
+            pmtLabel.style.color = '#f87171';
+        } else {
+            pmtLabel.innerText = fmt(Math.abs(pmtDiff)) + ' / mois de moins';
+            pmtLabel.style.color = '#4ade80';
+        }
+        smartAnimate('res-wait-equity-lost', appreciationAmt);
+        var impactEl = document.getElementById('wait-total-impact');
+        impactEl.innerText = fmt(totalImpact);
+        impactEl.style.color = totalImpact > 0 ? '#f87171' : '#4ade80';
+        var summaryEl = document.getElementById('wait-verdict-summary');
+        if (totalImpact > 0) {
+            summaryEl.innerHTML = '<strong>Attendre vous couterait environ ' + fmt(totalImpact) + ' de plus</strong> sur 5 ans, a cause de la hausse des prix, meme si les taux baissent.';
+        } else {
+            summaryEl.innerHTML = "Attendre semble avantageux ici. L'economie sur le taux compense la hausse des prix.";
+        }
+    }
+
+    // --- INIT ALL ---
+    setTimeout(function() {
+        try { runAff(); } catch(e) { console.warn('runAff:', e); }
+        try { runMort(); } catch(e) { console.warn('runMort:', e); }
+        try { runCC(); } catch(e) { console.warn('runCC:', e); }
+        try { runWT(); } catch(e) { console.warn('runWT:', e); }
+        try { runRvB(); } catch(e) { console.warn('runRvB:', e); }
+        try { runWait(); } catch(e) { console.warn('runWait:', e); }
+        console.log('Portal Script Init - Success');
     }, 500);
 
 </script>

@@ -1,0 +1,170 @@
+<!-- 
+    SNIPPET : ARCHIVE DES RAPPORTS MENSUELS
+    PAGE   : /rapports
+    DATA   : /rapports/index.json (généré par report_generator.py)
+-->
+
+<style>
+    :root {
+        --r-primary: #873276;
+        --r-accent: #a7ff00;
+        --r-bg: #120010;
+        --r-card: rgba(255, 255, 255, 0.03);
+        --r-border: rgba(135, 50, 118, 0.3);
+    }
+
+    .rapp-container {
+        font-family: 'Inter', sans-serif;
+        color: #fff;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .rapp-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .rapp-header h1 {
+        font-family: 'Outfit', sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 900;
+        margin-bottom: 15px;
+        background: linear-gradient(135deg, #fff 30%, #d4a0c0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .rapp-header p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1.1rem;
+    }
+
+    .rapp-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .rapp-card {
+        background: var(--r-card);
+        border: 1px solid var(--r-border);
+        border-radius: 16px;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .rapp-card:hover {
+        background: rgba(255, 255, 255, 0.06);
+        transform: translateX(10px);
+        border-color: var(--r-primary);
+    }
+
+    .rapp-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .rapp-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .rapp-date {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .rapp-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(135, 50, 118, 0.1);
+        color: var(--r-primary);
+        padding: 8px 16px;
+        border-radius: 50px;
+        border: 1px solid var(--r-border);
+        font-size: 0.85rem;
+        font-weight: 700;
+        transition: all 0.2s ease;
+    }
+
+    .rapp-card:hover .rapp-btn {
+        background: var(--r-primary);
+        color: #fff;
+    }
+
+    .rapp-loading {
+        text-align: center;
+        padding: 40px;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: 600px) {
+        .rapp-card {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+        }
+        .rapp-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+</style>
+
+<div class="rapp-container">
+    <div class="rapp-header">
+        <h1>Archives des Rapports</h1>
+        <p>Analyses mensuelles du marché immobilier de Montréal et ses environs.</p>
+    </div>
+
+    <div id="rapportsGrid" class="rapp-grid">
+        <div class="rapp-loading">Chargement des rapports...</div>
+    </div>
+</div>
+
+<script>
+    async function loadRapports() {
+        const grid = document.getElementById('rapportsGrid');
+        try {
+            // On tente de lire l'index local généré par l'automatisation
+            const res = await fetch('/rapports/index.json?v=' + Date.now());
+            if (!res.ok) throw new Error('Index non trouvé');
+            
+            const rapports = await res.json();
+            
+            if (!rapports || rapports.length === 0) {
+                grid.innerHTML = '<div class="rapp-loading">Aucun rapport disponible pour le moment.</div>';
+                return;
+            }
+
+            grid.innerHTML = rapports.map(r => `
+                <a href="/rapports/${r.pdf}" class="rapp-card" target="_blank">
+                    <div class="rapp-info">
+                        <span class="rapp-title">${r.title}</span>
+                        <span class="rapp-date">Publié le ${new Date(r.date).toLocaleDateString('fr-CA', {year: 'numeric', month: 'long', day: 'numeric'})}</span>
+                    </div>
+                    <div class="rapp-btn">
+                        <span>Télécharger PDF</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                </a>
+            `).join('');
+
+        } catch (e) {
+            console.error('Error loading reports:', e);
+            grid.innerHTML = '<div class="rapp-loading">⚠️ Erreur lors du chargement des rapports. Revenez bientôt !</div>';
+        }
+    }
+
+    loadRapports();
+</script>

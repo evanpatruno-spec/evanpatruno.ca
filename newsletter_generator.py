@@ -213,6 +213,10 @@ def generate_newsletter_json(force_zoho=False):
     }
     month_name = months_fr[str(now.month)]
     year = now.year
+    
+    # Lien vers le rapport PDF généré
+    report_filename = now.strftime('%Y-%m.pdf')
+    report_url = f"https://evanpatruno.ca/rapports/{report_filename}"
 
     newsletter_data = {
         "campaign_id": f"NL-{now.month}-{year}",
@@ -235,6 +239,8 @@ def generate_newsletter_json(force_zoho=False):
         ],
         "daily_quote": daily_quote,
         "pro_tip": pro_tip,
+        "report_url": report_url,
+        "report_label": f"Rapport de Marché - {month_name} {year}",
         "expert_note": "Le marché s'équilibre. C'est le moment idéal pour réévaluer vos capacités de financement avant la prochaine vague immobilière.",
         "footer_msg": "Besoin d'une évaluation précise de votre propriété ?",
         "quick_links": [
