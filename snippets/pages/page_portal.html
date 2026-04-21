@@ -1,6 +1,5 @@
-<!-- SNIPPET v17 MASTER RECONSTRUCTION -->
+<!-- SNIPPET v18 - TOTAL ASCII RESTORATION -->
 <style>
-
     :root {
         --dash-primary: #873276;
         --dash-accent: #d4af37;
@@ -71,7 +70,6 @@
     .partner-promo-badge { position: absolute; top: 15px; right: 15px; background: var(--dash-accent); color: #000; font-size: 0.6rem; font-weight: 900; padding: 4px 10px; border-radius: 50px; }
     .copy-btn { width: 100%; margin-top: 15px; padding: 10px; background: rgba(135, 50, 118, 0.1); border: 1px dashed var(--dash-primary); color: var(--dash-primary); border-radius: 10px; font-size: 0.7rem; font-weight: 800; cursor: pointer; }
 
-    /* Moving Checklist */
     .moving-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
     .moving-item { padding: 20px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 15px; cursor: pointer; transition: 0.3s; }
     .moving-item.done { border-color: var(--dash-success); background: rgba(46, 204, 113, 0.05); }
@@ -80,14 +78,12 @@
 
     @media (max-width: 768px) {
         .portal-main-wrapper { border-radius: 30px; margin: 10px; }
-        .property-card-premium { flex-direction: column; padding: 30px; }
         .timeline-steps { flex-direction: column; padding: 20px; }
         .timeline-steps::before { left: 51px; top: 30px; width: 2px; height: 80%; }
         .timeline-progress-bar { left: 51px; top: 30px; width: 2px; height: 0%; }
         .step-node { flex-direction: row; width: 100%; gap: 20px; height: 70px; }
         .step-label { margin-top: 0; text-align: left; }
     }
-
 </style>
 
 <div class="portal-main-wrapper">
@@ -112,7 +108,6 @@
             <p id="txtCodeRef" style="opacity:0.6; font-weight:700;">Dossier #--</p>
         </header>
 
-        <!-- Cockpit Section -->
         <div style="background:rgba(255,255,255,0.03); padding:40px; border-radius:45px; border:1px solid var(--dash-border); display:flex; align-items:center; gap:50px; margin-bottom:40px; flex-wrap:wrap;">
             <div style="flex:1; min-width:300px;">
                 <div id="badgeStage" style="background:rgba(46,204,113,0.1); color:#2ecc71; padding:6px 16px; border-radius:50px; display:inline-block; font-size:0.75rem; font-weight:900; margin-bottom:15px; border:1px solid rgba(46,204,113,0.3);">ANALYSE</div>
@@ -134,10 +129,7 @@
         <div class="section-wrapper" id="secTimeline">
             <div class="section-header" onclick="toggleSection('secTimeline')"><h3>Timeline de Transaction</h3><div class="section-chevron">&#9660;</div></div>
             <div class="section-content">
-                <div class="timeline-steps" id="wrapTimeline">
-                    <div class="timeline-progress-bar" id="barProgress"></div>
-                    <!-- Filled by JS -->
-                </div>
+                <div class="timeline-steps" id="wrapTimeline"><div class="timeline-progress-bar" id="barProgress"></div></div>
             </div>
         </div>
 
@@ -159,7 +151,6 @@
 </div>
 
 <script>
-
     const MOCK_DATA = {
         firstName: "Evan", code: "EP-1001", property: "Avenue Patruno", city: "Montr\u00e9al", stage: "Analyse des offres",
         timeline: [
@@ -175,26 +166,22 @@
         ],
         milestones: {
             signature: { days: 25, date: "15 Mai 2026" },
-            inspection: { days: 12, date: "2 Mai 2026" },
-            signature: { days: 25, date: "15 Mai 2026" }
+            inspection: { days: 12, date: "2 Mai 2026" }
         },
         movingChecklist: [
             { name: "Aviser son propri\u00e9taire", done: true },
-            { name: "R\u00e9server d\u00e9m\u00e9nageurs", done: false },
             { name: "Changer les serrures", done: false }
         ],
         partners: [{ name: "D\u00e9m\u00e9nagement Expert", icon: "\uD83D\uDE66", category: "Services", benefit: "10% Rabais", code: "EVAN10" }]
     };
 
     function renderPortal(data) {
-        // Use innerHTML everywhere to ensure hex-escaped strings render correctly
         document.getElementById('txtWelcome').innerHTML = "Bienvenue, " + (data.firstName || 'Client') + ".";
         document.getElementById('txtCodeRef').innerHTML = "Dossier #" + data.code;
         document.getElementById('txtPropName').innerHTML = data.property;
         document.getElementById('txtPropCity').innerHTML = data.city;
         document.getElementById('badgeStage').innerHTML = data.stage;
 
-        // Timeline
         const wrapT = document.getElementById('wrapTimeline');
         wrapT.querySelectorAll('.step-node').forEach(n => n.remove());
         let completed = 0;
@@ -208,7 +195,7 @@
         });
 
         setTimeout(() => {
-            const bar = document.getElementById('barProgress') || document.querySelector('.timeline-progress-bar');
+            const bar = document.getElementById('barProgress');
             if (bar) {
                 const total = (data.timeline || []).length;
                 const safePct = total > 1 ? Math.round(((completed - 1) / (total - 1)) * 100) : 0;
@@ -218,22 +205,12 @@
             }
         }, 300);
 
-        // Team
         document.getElementById('wrapTeam').innerHTML = (data.team || []).map(t => '<div class="team-card"><div class="team-icon">'+t.icon+'</div><div class="team-role">'+t.role+'</div><div class="team-name">'+t.name+'</div><div style="font-size:0.75rem;opacity:0.6;">'+t.phone+'</div></div>').join('');
-        
-        // Milestones
         const m = data.milestones || {};
-        const milestones = [
-            { label: 'Inspection', data: m.inspection },
-            { label: 'Signature', data: m.signature }
-        ];
+        const milestones = [ { label: 'Inspection', data: m.inspection }, { label: 'Signature', data: m.signature } ];
         document.getElementById('wrapMilestones').innerHTML = milestones.map(ms => '<div class="milestone-card"><div class="milestone-val">'+(ms.data ? ms.data.days : '--')+'</div><div class="milestone-label">'+ms.label+'</div><div style="font-size:0.6rem;opacity:0.4;margin-top:8px;">'+(ms.data ? ms.data.date : '')+'</div></div>').join('');
-        
-        // Moving
-        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, i) => '<div class="moving-item '+(c.done?'done':'')+'"><div class="check-box">'+(c.done?'\u2713':'')+'</div><span>'+c.name+'</span></div>').join('');
-        
-        // Partners
-        document.getElementById('wrapPartners').innerHTML = (data.partners || []).map(p => '<div class="partner-card"><div class="partner-promo-badge">'+p.benefit+'</div><div style="font-size:1.5rem;margin-bottom:10px;">'+p.icon+'</div><div class="team-role" style="font-size:0.5rem;">'+p.category+'</div><div class="team-name" style="font-size:1rem;">'+p.name+'</div><button class="copy-btn">Code: '+p.code+'</button></div>').join('');
+        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, i) => '<div class="moving-item '+(c.done?'done':'')+'"><div class="check-box">'+(c.done?'\\u2713':'')+'</div><span>'+c.name+'</span></div>').join('');
+        document.getElementById('wrapPartners').innerHTML = (data.partners || []).map(p => '<div class="partner-card"><div class="partner-promo-badge">'+p.benefit+'</div><div style="font-size:1.5rem;margin-bottom:10px;">'+p.icon+'</div><div class="team-name" style="font-size:1rem;">'+p.name+'</div><button class="copy-btn">Code: '+p.code+'</button></div>').join('');
     }
 
     async function handlePortalLogin(e) {
@@ -269,14 +246,7 @@
     }
 
     function toggleSection(id) { document.getElementById(id).classList.toggle('collapsed'); }
-
-    // PWA
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; });
-    async function installPortalApp() {
-        if (!deferredPrompt) { window.location.href = "https://dossier.evanpatruno.ca/mon-dossier.html?code=" + (document.getElementById('inpPortalCode').value || 'EP-1001'); return; }
-        deferredPrompt.prompt();
-    }
+    function installPortalApp() { window.location.href = "https://dossier.evanpatruno.ca/mon-dossier.html?code=" + (document.getElementById('inpPortalCode').value || 'EP-1001'); }
     
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -285,5 +255,4 @@
             navigator.serviceWorker.register('/sw.js').catch(() => {});
         });
     }
-
 </script>
