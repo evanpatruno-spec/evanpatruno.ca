@@ -42,20 +42,12 @@ function escapeString(str, isHtml = false) {
     return result;
 }
 
-// Logic components
-const SNIPPET_HEAD = `<!-- 
-    SNIPPET : PORTAIL CLIENT PRIV&Eacute; (V2.3 - RESTAURATION TOTALE HEX)
-    DESCRIPTION : Restauration de l'interface apr&egrave;s corruption d'encodage.
--->
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#1a0516">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">`;
-
-// Build the FULL content as a giant template literal
-// I will keep the CSS and HTML structure seen in previous turns
-// but ensure every accent is escaped.
+const SNIPPET_HEAD = "<!-- SNIPPET : PORTAIL CLIENT V2.3 nuclear -->" +
+"<link rel='manifest' href='/manifest.json'>" +
+"<meta name='theme-color' content='#1a0516'>" +
+"<meta name='mobile-web-app-capable' content='yes'>" +
+"<meta name='apple-mobile-web-app-capable' content='yes'>" +
+"<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>";
 
 const CSS_CONTENT = escapeString(`
     :root {
@@ -79,9 +71,9 @@ const CSS_CONTENT = escapeString(`
     .section-wrapper { margin-bottom: 25px; border: 1px solid var(--dash-border); border-radius: 40px; overflow: hidden; background: rgba(0, 0, 0, 0.2); box-shadow: var(--dash-glow); }
     .section-header { padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: rgba(255, 255, 255, 0.03); }
     .section-chevron { width:30px; height:30px; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.1); border-radius:50%; transition:0.4s; color:var(--dash-primary); }
-    .section-wrapper.collapsed .section-content { max-height: 0; padding: 0 40px; opacity: 0; }
+    .section-wrapper.collapsed .section-content { max-height: 0; padding: 0 !important; opacity: 0; }
     .section-wrapper.collapsed .section-chevron { transform: rotate(-90deg); }
-    .section-content { padding: 40px; transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); max-height: 4000px; opacity: 1; }
+    .section-content { padding: 40px; transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); max-height: 4000px; opacity: 1; overflow: hidden; }
     .login-card { background: rgba(15, 5, 13, 0.95); padding: 50px; border-radius: 40px; border: 2px solid var(--dash-border); text-align: center; width: 100%; max-width: 420px; }
     .login-input { width: 100%; padding: 20px; background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; color: #fff; font-size: 1.1rem; margin-bottom: 15px; outline: none; }
     .login-btn { width: 100%; padding: 20px; background: var(--dash-primary); color: #fff; border: none; border-radius: 20px; font-weight: 900; cursor: pointer; transition: 0.3s; }
@@ -128,7 +120,7 @@ const HTML_BODY = escapeString(`
 
         <div style="background: rgba(255,255,255,0.03); padding: 40px; border-radius: 40px; border: 1px solid var(--dash-border); display: flex; align-items: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 300px;">
-                <div id="badgeStage" style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; padding: 6px 16px; border-radius: 50px; display: inline-block; font-size: 0.8rem; font-weight: 990; margin-bottom: 15px; border: 1px solid rgba(46, 204, 113, 0.3);">--</div>
+                <div id="badgeStage" style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; padding: 6px 16px; border-radius: 50px; display: inline-block; font-size: 0.8rem; font-weight: 900; margin-bottom: 15px; border: 1px solid rgba(46, 204, 113, 0.3);">--</div>
                 <h2 id="txtPropName" style="font-size: 2.5rem; margin: 0; font-family: 'Outfit';">--</h2>
                 <p id="txtPropCity" style="opacity: 0.5; font-size: 1.2rem; margin-top: 5px;">--</p>
             </div>
@@ -193,6 +185,7 @@ const JS_LOGIC = `
         document.getElementById('badgeStage').innerHTML = data.stage;
 
         const wrapT = document.getElementById('wrapTimeline');
+        wrapT.innerHTML = '<div class="timeline-progress-bar" id="barProgress"></div>';
         let completed = 0;
         data.timeline.forEach((s, i) => {
             const node = document.createElement('div');
@@ -219,31 +212,20 @@ const JS_LOGIC = `
     async function handlePortalLogin(e) {
         e.preventDefault();
         const code = document.getElementById('inpPortalCode').value;
-        if (code === "EP-1001") {
+        if (code === "EP-1001" || code === "EP-1") {
             renderPortal(MOCK_DATA);
-            document.getElementById('portalOverlay').style.display = 'none';
+            document.getElementById('portalOverlay').classList.add('hidden');
             document.getElementById('portalDash').style.display = 'block';
             setTimeout(() => document.getElementById('portalDash').classList.add('visible'), 50);
         }
     }
 `;
 
-const SNIPPET_FILE = \`
-\${SNIPPET_HEAD}
-<style>
-\${CSS_CONTENT}
-</style>
-\${HTML_BODY}
-<script>
-\${JS_LOGIC}
-</script>
-\`;
+const SNIPPET_FILE = SNIPPET_HEAD + "\n<style>\n" + CSS_CONTENT + "\n</style>\n" + HTML_BODY + "\n<script>\n" + JS_LOGIC + "\n</script>";
 
 fs.writeFileSync('c:/Users/evanp/OneDrive/Desktop/PROGRAMME AI/evanpatruno.ca/snippets/pages/page_portal.html', SNIPPET_FILE, 'utf8');
 
-const ROOT_FILE = \`<!DOCTYPE html>
-<html lang="fr"><head><meta charset="UTF-8"><title>Portail Client</title><style>body{margin:0;background:#1a0516;}\${CSS_CONTENT}</style></head>
-<body>\${HTML_BODY}<script>\${JS_LOGIC}</script></body></html>\`;
+const ROOT_FILE = "<!DOCTYPE html>\n<html lang='fr'><head><meta charset='UTF-8'><title>Portail Client</title><style>body{margin:0;background:#1a0516;}\n" + CSS_CONTENT + "\n</style></head>\n<body>\n" + HTML_BODY + "\n<script>\n" + JS_LOGIC + "\n</script></body></html>";
 
 fs.writeFileSync('c:/Users/evanp/OneDrive/Desktop/PROGRAMME AI/evanpatruno.ca/mon-dossier.html', ROOT_FILE, 'utf8');
 
