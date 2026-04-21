@@ -1643,11 +1643,12 @@
         const wrapChecklist = document.getElementById('wrapChecklist');
         if (wrapChecklist) {
             wrapChecklist.innerHTML = checklist.map(c => `
-            <div style="background:${c.done ? 'rgba(46,204,113,0.05)' : 'rgba(255,255,255,0.02)'};padding:22px;border-radius:25px;display:flex;align-items:center;gap:18px;border:1px solid ${c.done ? 'rgba(46,204,113,0.2)' : 'rgba(255,255,255,0.1)'}">
-                <div style="width:30px;height:30px;background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.05)'};border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:${c.done ? '#fff' : 'rgba(255,255,255,0.2)'}">${c.done ? '✓' : '!'}</div>
-                <span style="font-size:1rem;font-weight:600;color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name}</span>
-            </div>
-        `).join('');
+                <div style="background:${c.done ? 'rgba(46,204,113,0.05)' : 'rgba(255,255,255,0.02)'};padding:22px;border-radius:25px;display:flex;align-items:center;gap:18px;border:1px solid ${c.done ? 'rgba(46,204,113,0.2)' : 'rgba(255,255,255,0.1)'}">
+                    <div style="width:30px;height:30px;background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.05)'};border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:${c.done ? '#fff' : 'rgba(255,255,255,0.2)'}">${c.done ? '✓' : '!'}</div>
+                    <span style="font-size:1rem;font-weight:600;color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name}</span>
+                </div>
+            `).join('');
+        }
 
         // (Global Countdown removed because integrated in cockpit milestones)
 
