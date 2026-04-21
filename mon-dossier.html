@@ -1,1858 +1,238 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Portail Client | Evan Patruno</title></head><body>&#65279;<!-- 
-    SNIPPET : PORTAIL CLIENT PRIV&Eacute; (V2.2 - EXPANSION INTERVENANTS & DATES)
-    DESCRIPTION : Ce snippet contient l'interface de connexion, le dashboard, les intervenants et le calendrier des dates.
-    INSTRUCTIONS : Collez ce code dans un &eacute;l&eacute;ment "Embed Code" sur votre page Zoho Sites.
--->
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"><title>Portail Client | Evan Patruno</title><style>body{margin:0;background:#1a0516;}
 
-<!-- PWA MANIFEST -->
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#1a0516">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="EP Portail">
-<link rel="apple-touch-icon" href="/pwa-icon-512.png">
-
-<style>
-    * {
-        box-sizing: border-box !important;
-    }
     :root {
         --dash-primary: #873276;
-        --dash-primary-glow: rgba(135, 50, 118, 0.4);
         --dash-accent: #d4af37;
-        --dash-accent-glow: rgba(212, 175, 55, 0.4);
         --dash-bg: #1a0516;
-        /* Violet Prune profond pour matcher le site */
         --dash-card-bg: rgba(255, 255, 255, 0.04);
         --dash-border: rgba(135, 50, 118, 0.6);
-        /* Rose Magenta plus intense */
         --dash-glow: 0 0 25px rgba(135, 50, 118, 0.4);
-        /* Lueur Neon accentu&eacute;e */
         --dash-success: #2ecc71;
-        --dash-warning: #f1c40f;
     }
+    .portal-main-wrapper { 
+        font-family: 'Inter', sans-serif; color: #fff; background: var(--dash-bg); 
+        min-height: 900px; position: relative; overflow: hidden; border-radius: 60px; 
+        border: 1px solid rgba(135, 50, 118, 0.5); box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6); 
+        margin: 20px 0; isolation: isolate; 
+    }
+    .portal-aura { position: absolute; width: 100%; height: 100%; background: radial-gradient(circle at center, #000000 0%, var(--dash-bg) 80%); z-index: 1; pointer-events: none; }
+    .portal-container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; z-index: 5; opacity: 0; transform: translateY(30px); transition: 1.2s cubic-bezier(0.2, 1, 0.3, 1); display: none; }
+    .portal-container.visible { opacity: 1; transform: translateY(0); display: block; }
+    .portal-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; min-height: 100vh; background: rgba(15, 5, 13, 0.92); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); z-index: 1000; display: flex; align-items: center; justify-content: center; }
+    .portal-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; transform: scale(1.1); }
+    .section-wrapper { margin-bottom: 25px; border: 1px solid var(--dash-border); border-radius: 40px; overflow: hidden; background: rgba(0, 0, 0, 0.2); box-shadow: var(--dash-glow); }
+    .section-header { padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: rgba(255, 255, 255, 0.03); }
+    .section-header h3 { margin: 0; font-family: 'Outfit'; font-size: 1.5rem; color: #fff !important; }
+    .section-chevron { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.1); border-radius: 50%; transition: 0.4s; color: var(--dash-primary); font-size: 10px; }
+    .section-wrapper.collapsed .section-content { max-height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; }
+    .section-wrapper.collapsed .section-chevron { transform: rotate(-90deg); }
+    .section-content { padding: 40px; transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); max-height: 4000px; opacity: 1; overflow: hidden; }
+    .login-card { background: rgba(15, 5, 13, 0.95); padding: 50px; border-radius: 40px; border: 2px solid var(--dash-border); text-align: center; width: 100%; max-width: 420px; box-shadow: var(--dash-glow); }
+    .login-input { width: 100%; padding: 20px; background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; color: #fff; font-size: 1.1rem; margin-bottom: 15px; outline: none; text-align: center; }
+    .login-btn { width: 100%; padding: 20px; background: linear-gradient(135deg, var(--dash-primary), #6d235c); color: #fff; border: none; border-radius: 50px; font-weight: 900; text-transform: uppercase; cursor: pointer; transition: 0.3s; letter-spacing: 1px; }
+    .pwa-login-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; margin-top: 16px; padding: 14px 20px; background: transparent; border: 1px solid rgba(135, 50, 118, 0.5); border-radius: 50px; color: rgba(255,255,255,0.7); font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: 0.3s; }
+    
+    /* Timeline Desktop */
+    .timeline-steps { display: flex; justify-content: space-between; position: relative; padding: 0 40px; }
+    .timeline-steps::before { content: ''; position: absolute; top: 27px; left: 10%; width: 80%; height: 2px; background: rgba(255, 255, 255, 0.08); z-index: 1; }
+    .timeline-progress-bar { position: absolute; top: 27px; left: 10%; width: 0%; height: 2px; background: var(--dash-primary); box-shadow: 0 0 20px var(--dash-primary); transition: width 1.8s ease; z-index: 1; }
+    .step-node { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; width: 100px; flex-shrink: 0; }
+    .node-dot { width: 54px; height: 54px; background: var(--dash-bg); border: 2px solid rgba(255, 255, 255, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; transition: 0.6s; z-index: 3; }
+    .step-node.completed .node-dot { border-color: var(--dash-success); box-shadow: 0 0 15px var(--dash-success); }
+    .step-node.active .node-dot { border-color: var(--dash-primary); box-shadow: 0 0 20px var(--dash-primary); transform: scale(1.1); }
+    .step-label { font-size: 0.8rem; font-weight: 700; margin-top: 12px; text-align: center; color: rgba(255, 255, 255, 0.5); }
+    .step-node.active .step-label { color: var(--dash-primary); opacity: 1; }
+    .step-node.completed .step-label { color: var(--dash-success); opacity: 1; }
 
-    .portal-main-wrapper {
-        font-family: 'Inter', sans-serif;
-        color: #fff;
-        background: var(--dash-bg);
-        min-height: 900px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 60px;
-        border: 1px solid rgba(135, 50, 118, 0.5);
-        outline: 1px solid rgba(135, 50, 118, 0.15);   /* halo ext. visible sur Zoho */
-        outline-offset: 2px;
-        box-shadow:
-            0 40px 100px rgba(0, 0, 0, 0.6),
-            0 0 0 2px rgba(135, 50, 118, 0.12),
-            0 0 60px rgba(135, 50, 118, 0.22),
-            0 0 130px rgba(135, 50, 118, 0.10);
-        margin: 20px 0;
-        isolation: isolate;
-        transition: all 0.5s ease;
-    }
+    /* Cockpit Ring */
+    .cockpit-ring-wrap { position: relative; width: 160px; height: 160px; margin: 0; flex-shrink: 0; }
+    .cockpit-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .ring-bg { fill: none; stroke: rgba(255, 255, 255, 0.05); stroke-width: 7; }
+    .ring-progress { fill: none; stroke: url(#ringGrad); stroke-width: 7; stroke-linecap: round; stroke-dasharray: 314.16; stroke-dashoffset: 314.16; transition: stroke-dashoffset 1.8s ease; filter: drop-shadow(0 0 8px #873276); }
+    .cockpit-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+    .cockpit-center span { display: block; font-size: 2rem; font-weight: 900; color: #fff; }
+    .cockpit-center small { display: block; font-size: 0.6rem; font-weight: 800; text-transform: uppercase; color: var(--dash-primary); letter-spacing: 1px; }
 
-    @media (max-width: 768px) {
-        .portal-main-wrapper {
-            border-radius: 28px;
-            margin: 10px 6px;
-            min-height: 680px;
-            padding: 0 !important;
-            outline-offset: 2px;
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.6),
-                0 0 40px rgba(135, 50, 118, 0.25),
-                0 0 0 2px rgba(135, 50, 118, 0.4);
-        }
-    }
+    /* Grids */
+    .milestone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px; }
+    .milestone-card { background: var(--dash-card-bg); border: 1px solid var(--dash-border); border-radius: 30px; padding: 25px; text-align: center; }
+    .milestone-val { font-family: 'Outfit'; font-size: 2.2rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 5px; }
+    .milestone-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--dash-accent); }
+    
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+    .team-card { background: var(--dash-card-bg); border: 1px solid var(--dash-border); border-radius: 25px; padding: 25px; text-align: center; }
+    .team-icon { font-size: 2rem; margin-bottom: 15px; }
+    .team-role { font-size: 0.7rem; font-weight: 900; text-transform: uppercase; color: var(--dash-accent); }
+    .team-name { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 5px; }
 
-    .portal-main-wrapper * {
-        box-sizing: border-box !important;
-    }
+    .partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .partner-card { background: var(--dash-card-bg); border: 1px solid var(--dash-border); border-radius: 25px; padding: 25px; position: relative; overflow: hidden; }
+    .partner-promo-badge { position: absolute; top: 15px; right: 15px; background: var(--dash-accent); color: #000; font-size: 0.6rem; font-weight: 900; padding: 4px 10px; border-radius: 50px; }
+    .copy-btn { width: 100%; margin-top: 15px; padding: 10px; background: rgba(135, 50, 118, 0.1); border: 1px dashed var(--dash-primary); color: var(--dash-primary); border-radius: 10px; font-size: 0.7rem; font-weight: 800; cursor: pointer; }
 
-    /* BACKGROUND AURA & BLEND */
-    .portal-aura {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at center, #000000 0%, var(--dash-bg) 80%);
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .portal-container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 60px 20px;
-        position: relative;
-        z-index: 5;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1);
-        display: none;
-    }
-
-    @media (max-width: 768px) {
-        .portal-container {
-            padding: 25px 15px;
-            border-radius: 0;
-        }
-    }
-
-    .portal-container.visible {
-        opacity: 1;
-        transform: translateY(0);
-        display: block;
-    }
-
-    /* LOGIN OVERLAY */
-    .portal-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        min-height: 100vh;
-        background: rgba(15, 5, 13, 0.92);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 1s ease;
-    }
+    /* Moving Checklist */
+    .moving-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+    .moving-item { padding: 20px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 15px; cursor: pointer; transition: 0.3s; }
+    .moving-item.done { border-color: var(--dash-success); background: rgba(46, 204, 113, 0.05); }
+    .check-box { width: 24px; height: 24px; border: 2px solid rgba(255,255,255,0.2); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+    .moving-item.done .check-box { background: var(--dash-success); border-color: var(--dash-success); color: #fff; }
 
     @media (max-width: 768px) {
-        .portal-overlay {
-            position: absolute;   /* reste dans le flux, ne cache pas nav/footer */
-            padding: 20px;
-        }
-    }
-
-    .portal-overlay.hidden {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transform: scale(1.1);
-    }
-
-    /* ACCORDION SYSTEM */
-    .section-wrapper {
-        margin-bottom: 25px;
-        border: 1px solid var(--dash-border);
-        border-radius: 40px;
-        overflow: hidden;
-        background: rgba(0, 0, 0, 0.2);
-        transition: 0.4s;
-        box-shadow: var(--dash-glow);
-    }
-
-    .section-header {
-        padding: 25px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        background: rgba(255, 255, 255, 0.03);
-        transition: 0.3s;
-    }
-
-    .section-header:hover {
-        background: rgba(135, 50, 118, 0.1);
-    }
-
-    .section-header h3 {
-        margin: 0;
-        font-family: 'Outfit';
-        font-size: 1.5rem;
-        color: #fff;
-    }
-
-    .section-chevron {
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        transition: 0.4s;
-        color: var(--dash-primary);
-    }
-
-    .section-wrapper.collapsed .section-content {
-        max-height: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    .section-wrapper.collapsed .section-chevron {
-        transform: rotate(-90deg);
-    }
-
-    .section-content {
-        padding: 40px;
-        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        max-height: 2000px;
-        opacity: 1;
-        overflow: hidden;
-    }
-
-    @media (max-width: 768px) {
-        .section-content {
-            padding: 20px 15px;
-        }
-    }
-
-    .login-card {
-        background: rgba(15, 5, 13, 0.95);
-        padding: 50px;
-        border-radius: 40px;
-        border: 2px solid var(--dash-border);
-        box-shadow: var(--dash-glow), 0 0 60px rgba(135, 50, 118, 0.2);
-        text-align: center;
-        width: 100%;
-        max-width: 420px;
-        backdrop-filter: blur(20px);
-    }
-
-    @media (max-width: 768px) {
-        .login-card {
-            padding: 35px 25px;
-            border-radius: 30px;
-            max-width: 100%;
-        }
-    }
-
-    /* Bouton PWA : visible sur tous les &eacute;crans */
-    .pwa-login-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-        margin-top: 16px;
-        padding: 14px 20px;
-        background: transparent;
-        border: 1px solid rgba(135, 50, 118, 0.5);
-        border-radius: 50px;
-        color: rgba(255,255,255,0.75);
-        font-family: 'Outfit', sans-serif;
-        font-size: 0.85rem;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        cursor: pointer;
-        transition: all 0.35s ease;
-    }
-    .pwa-login-btn:hover {
-        background: rgba(135, 50, 118, 0.15);
-        border-color: var(--dash-primary);
-        color: #fff;
-        box-shadow: 0 0 20px rgba(135, 50, 118, 0.35);
-    }
-    .pwa-login-btn span.pwa-icon {
-        font-size: 1.2rem;
-    }
-
-    .login-input {
-        width: 100% !important;
-        max-width: 100%;
-        padding: 20px 25px !important;
-        background: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        color: #fff;
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-        outline: none;
-        text-align: center;
-        display: block;
-    }
-
-    .login-btn {
-        width: 100%;
-        padding: 22px;
-        background: linear-gradient(135deg, var(--dash-primary), #b0549c);
-        color: white;
-        border: none;
-        border-radius: 50px;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        cursor: pointer;
-        transition: 0.5s;
-        box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5);
-    }
-
-    .login-btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 25px 60px rgba(135, 50, 118, 0.7);
-    }
-
-    /* PROPERTY CARD */
-    .property-card-premium {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-        border: 1px solid var(--dash-border);
-        border-radius: 45px;
-        padding: 50px;
-        display: flex;
-        gap: 50px;
-        align-items: center;
-        margin-bottom: 60px;
-        box-shadow: var(--dash-glow);
-        transition: 0.3s;
-    }
-
-    @media (max-width: 768px) {
-        .property-card-premium {
-            padding: 30px 20px;
-            flex-direction: column;
-            gap: 20px;
-            border-radius: 30px;
-            margin-bottom: 40px;
-        }
-    }
-
-    .badge-premium {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        font-weight: 800;
-        letter-spacing: 2px;
-        padding: 6px 16px;
-        border-radius: 50px;
-        display: inline-block;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        margin-bottom: 20px;
-    }
-
-    .badge-gold {
-        background: linear-gradient(135deg, #d4af37, #aa8c2c);
-        color: #000 !important;
-        border: none !important;
-    }
-
-    .prop-img-wrap {
-        flex: 0 0 340px;
-        height: 240px;
-        border-radius: 35px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    @media (max-width: 768px) {
-        .prop-img-wrap {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 200px;
-            border-radius: 20px;
-        }
-    }
-
-    .prop-img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* TIMELINE &mdash;&#157; Desktop */
-    .timeline-steps {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        padding: 0 40px;
-        gap: 20px;
-    }
-
-    /* Rail gris de fond &mdash;&#157; Desktop */
-    .timeline-steps::before {
-        content: '';
-        position: absolute;
-        top: 27px;
-        left: 10%;
-        width: 80%;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.08);
-        z-index: 1;
-    }
-
-    /* Barre de progression magenta &mdash;&#157; Desktop */
-    .timeline-progress-bar {
-        position: absolute;
-        top: 27px;
-        left: 10%;
-        width: 0%;
-        height: 2px;
-        background: var(--dash-primary);
-        box-shadow: 0 0 20px var(--dash-primary);
-        transition: width 1.8s ease, height 1.8s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1;
-    }
-
-    /* N&#195;&hellip;&acirc;&#8364;&#339;ud Desktop : colonne (dot haut, label bas) */
-    .step-node {
-        position: relative;
-        z-index: 2;           /* au-dessus de la barre */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100px;
-        flex-shrink: 0;
-    }
-
-    .step-label {
-        font-size: 0.8rem;
-        font-weight: 700;
-        margin-top: 12px;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.8);
-        line-height: 1.3;
-    }
-
-    .step-node.completed .step-label { color: #2ecc71; }
-    .step-node.active .step-label    { color: var(--dash-primary); font-weight: 900; }
-
-    /* Dot */
-    .node-dot {
-        width: 54px;
-        height: 54px;
-        background: var(--dash-bg);  /* fond opaque = cache la barre derri&egrave;re */
-        border: 2px solid rgba(255, 255, 255, 0.15);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 900;
-        transition: all 0.6s ease;
-        flex-shrink: 0;
-        position: relative;
-        z-index: 3;               /* dot par-dessus tout */
-    }
-
-    .step-node.completed .node-dot {
-        background: rgba(10, 5, 12, 0.95);
-        border-color: #2ecc71;
-        box-shadow: 0 0 14px rgba(46, 204, 113, 0.7), 0 0 30px rgba(46, 204, 113, 0.35), inset 0 0 12px rgba(46, 204, 113, 0.1);
-    }
-
-    .step-node.active .node-dot {
-        background: rgba(10, 5, 12, 0.95);
-        border-color: var(--dash-primary);
-        box-shadow: 0 0 16px var(--dash-primary-glow), 0 0 32px var(--dash-primary-glow), inset 0 0 12px rgba(135, 50, 118, 0.15);
-        animation: pulseDot 2.2s ease-in-out infinite;
-    }
-
-    .step-node.done .node-dot {
-        background: var(--dash-primary);
-        border-color: var(--dash-primary);
-    }
-
-    @keyframes pulseDot {
-        0%, 100% { box-shadow: 0 0 16px var(--dash-primary-glow), 0 0 32px var(--dash-primary-glow); }
-        50%       { box-shadow: 0 0 24px rgba(135, 50, 118, 0.9), 0 0 50px rgba(135, 50, 118, 0.5); }
-    }
-
-    /* &#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172;&#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172;&#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172; COCKPIT PROGRESS RING &#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172;&#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172;&#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172; */
-    .cockpit-ring-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0; /* Removed margin auto */
-        position: relative;
-        width: 160px;
-        height: 160px;
-        flex-shrink: 0;
-    }
-
-    @media (max-width: 768px) {
-        .cockpit-ring-wrap { width: 130px; height: 130px; margin: 10px auto 0; }
-    }
-
-    .cockpit-svg {
-        width: 100%;
-        height: 100%;
-        transform: rotate(-90deg); /* Start from top */
-    }
-
-    .ring-bg {
-        fill: none;
-        stroke: rgba(255, 255, 255, 0.06);
-        stroke-width: 7;
-    }
-
-    .ring-progress {
-        fill: none;
-        stroke: url(#ringGrad);
-        stroke-width: 7;
-        stroke-linecap: round;
-        stroke-dasharray: 314.16;
-        stroke-dashoffset: 314.16; /* Starts empty, JS fills it */
-        transition: stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1),
-                    filter 1.8s ease;
-        filter: drop-shadow(0 0 8px #873276) drop-shadow(0 0 18px rgba(135,50,118,0.5));
-    }
-
-    .cockpit-center {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        pointer-events: none;
-    }
-
-    .cockpit-center span {
-        display: block;
-        font-family: 'Outfit', sans-serif;
-        font-size: 2rem;
-        font-weight: 900;
-        color: #fff;
-        line-height: 1;
-        text-shadow: 0 0 20px rgba(135, 50, 118, 0.8);
-    }
-
-    @media (max-width: 768px) {
-        .cockpit-center span { font-size: 1.6rem; }
-    }
-
-    .cockpit-center small {
-        display: block;
-        font-size: 0.6rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--dash-primary);
-        margin-top: 3px;
-        opacity: 0.85;
-    }
-
-    .cockpit-label {
-        margin-top: 10px;
-        font-size: 0.7rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: rgba(255,255,255,0.4);
-        text-align: center;
-    }
-
-    /* &#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172;&#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172;&#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172; MOBILE TIMELINE &#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172;&#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172;&#195;&#162;&acirc;&#8364;&#157;&acirc;&#8218;&#172; */
-    @media (max-width: 768px) {
-
-        .timeline-steps {
-            flex-direction: column !important;
-            justify-content: flex-start !important;
-            padding: 15px 15px 15px 15px !important;
-            gap: 0 !important;
-        }
-
-        /* Rail vertical gris &mdash;&#157; left = padding-steps(15) + padding-node(10) + rayon-dot(27) = 52px, d&eacute;cal&eacute; -1px pour centrer le 2px */
-        .timeline-steps::before {
-            top: 27px !important;
-            left: 51px !important;
-            width: 2px !important;
-            height: calc(100% - 54px) !important;
-            bottom: auto !important;
-            background: rgba(255, 255, 255, 0.08) !important;
-        }
-
-        /* Barre de progression verticale rose n&eacute;on */
-        /* IMPORTANT : pas de !important sur height/width/left/background/box-shadow */
-        /* &#195;&#162;&acirc;&#8364;&#160;&acirc;&#8364;&#8482; le JS inline style doit pouvoir les surclasser pour l'animation */
-        .timeline-progress-bar {
-            top: 27px !important;
-            left: 51px;
-            width: 2px;
-            height: 0;
-            bottom: auto !important;
-            background: linear-gradient(to bottom, var(--dash-primary), #ff4db8);
-            box-shadow: 0 0 12px var(--dash-primary), 0 0 24px rgba(135, 50, 118, 0.6), 0 0 4px #ff4db8;
-            transition: height 1.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
-            border-radius: 10px;
-        }
-
-        /* N&#195;&hellip;&acirc;&#8364;&#339;ud Mobile : ligne (dot gauche, label droite) */
-        .step-node {
-            flex-direction: row !important;
-            width: 100% !important;
-            align-items: center !important;
-            justify-content: flex-start !important;
-            gap: 18px !important;
-            padding: 12px 10px !important;
-            text-align: left !important;
-        }
-
-        .step-label {
-            margin-top: 0 !important;
-            text-align: left !important;
-            font-size: 0.85rem !important;
-        }
-    }
-
-    /* INTERVENANTS & DATES GRID */
-    .section-title {
-        font-family: 'Outfit', sans-serif;
-        font-size: 2rem;
-        margin-bottom: 30px;
-        color: #fff;
-    }
-
-    .team-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
-    }
-
-    @media (max-width: 768px) {
-        .team-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .team-card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid var(--dash-border);
-        border-radius: 20px;
-        padding: 20px;
-        transition: 0.4s;
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        cursor: default;
-        box-shadow: var(--dash-glow);
-    }
-
-    .team-card:hover {
-        transform: translateY(-5px);
-        border-color: rgba(255, 255, 255, 0.2);
-        background: rgba(255, 255, 255, 0.05);
-    }
-
-    .team-icon {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-    }
-
-    .team-role {
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: var(--dash-accent);
-        font-weight: 800;
-        margin-bottom: 5px;
-    }
-
-    .team-name {
-        font-size: 1.25rem;
-        font-weight: 800;
-        color: #fff;
-    }
-
-    /* DATES TABLE */
-    .date-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .date-row:last-child {
-        border-bottom: none;
-    }
-
-    .date-label {
-        color: rgba(255, 255, 255, 0.6);
-        font-weight: 600;
-    }
-
-    .date-val {
-        font-weight: 800;
-        color: #fff;
-    }
-
-    .badge-premium {
-        padding: 10px 20px;
-        border-radius: 50px;
-        font-size: 0.75rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-    }
-
-    /* COUNTDOWN WIDGET */
-    .countdown-widget {
-        background: linear-gradient(135deg, var(--dash-primary), #602353);
-        padding: 15px 30px;
-        border-radius: 20px;
-        display: inline-flex;
-        align-items: center;
-        gap: 15px;
-        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        margin-top: 20px;
-    }
-
-    .countdown-num {
-        font-size: 2rem;
-        font-weight: 900;
-        line-height: 1;
-        color: #fff;
-    }
-
-    .countdown-txt {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        opacity: 0.8;
-        font-weight: 700;
-        text-align: left;
-        color: #fff;
-    }
-
-    /* SELLER STATS */
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        margin-bottom: 40px;
-    }
-
-    .stat-card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid var(--dash-border);
-        border-radius: 25px;
-        padding: 25px;
-        text-align: center;
-    }
-
-    .stat-val {
-        font-size: 2.5rem;
-        font-weight: 900;
-        color: var(--dash-accent);
-        margin-bottom: 5px;
-    }
-
-    .stat-label {
-        font-size: 0.8rem;
-        opacity: 0.6;
-        text-transform: uppercase;
-    }
-
-    /* FEEDBACK LIST */
-    /* MILESTONE COCKPIT (NEW) */
-    .milestone-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-        margin-bottom: 30px;
-    }
-
-    .milestone-card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid var(--dash-border);
-        border-radius: 30px;
-        padding: 25px 20px;
-        text-align: center;
-        transition: 0.3s;
-    }
-
-    .milestone-card.urgent {
-        border-color: #e74c3c;
-        box-shadow: 0 0 15px rgba(231, 76, 60, 0.4);
-    }
-
-    .milestone-card.done {
-        border-color: #2ecc71;
-        box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
-    }
-
-    .milestone-val {
-        font-family: 'Outfit';
-        font-size: 2.2rem;
-        font-weight: 900;
-        color: #fff;
-        line-height: 1;
-        margin-bottom: 5px;
-    }
-
-    .milestone-label {
-        font-size: 0.65rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        color: var(--dash-accent);
-        letter-spacing: 1px;
-    }
-
-    .feedback-item {
-        background: rgba(255, 255, 255, 0.02);
-        border-left: 4px solid var(--dash-primary);
-        padding: 20px;
-        border-radius: 0 20px 20px 0;
-        margin-bottom: 15px;
-    }
-
-    /* PARTNER CARDS */
-    .partner-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 20px;
-        margin-top: 30px;
-    }
-
-    .partner-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid var(--dash-border);
-        border-radius: 25px;
-        padding: 25px;
-        transition: 0.3s;
-        position: relative;
-        overflow: hidden;
-        user-select: none;
-    }
-
-    .partner-card:hover {
-        transform: scale(1.02);
-        border-color: var(--dash-primary);
-        box-shadow: var(--dash-glow);
-    }
-
-    .partner-promo-badge {
-        position: absolute;
-        top: 15px;
-        right: -30px;
-        background: var(--dash-primary);
-        color: #fff;
-        padding: 5px 35px;
-        transform: rotate(45deg);
-        font-size: 0.6rem;
-        font-weight: 900;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .copy-btn {
-        background: rgba(135, 50, 118, 0.1);
-        border: 1px dashed var(--dash-primary);
-        color: var(--dash-primary);
-        padding: 8px 15px;
-        border-radius: 10px;
-        font-size: 0.7rem;
-        font-weight: 800;
-        cursor: pointer;
-        width: 100%;
-        margin-top: 15px;
-        transition: 0.2s;
-    }
-
-    .copy-btn:hover {
-        background: var(--dash-primary);
-        color: #fff;
-        border-style: solid;
-    }
-
-    /* CELEBRATION MODE */
-    .celebration-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at center, rgba(135, 50, 118, 0.95), rgba(15, 5, 13, 0.99));
-        z-index: 10000;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 40px;
-        color: #fff;
-        transform: scale(1.1);
-        opacity: 0;
-        transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .celebration-overlay.active {
-        display: flex;
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    .success-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 2px solid var(--dash-primary);
-        padding: 60px;
-        border-radius: 50px;
-        box-shadow: 0 0 50px rgba(135, 50, 118, 0.5);
-        max-width: 600px;
-    }
-
-    .google-btn {
-        background: #fff;
-        color: #000;
-        padding: 20px 40px;
-        border-radius: 40px;
-        font-weight: 900;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        margin-top: 30px;
-        transition: 0.3s;
-        font-size: 1.1rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .google-btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(135, 50, 118, 0.4);
-    }
-
-    .google-btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(135, 50, 118, 0.4);
-    }
-
-    /* AMBASSADOR & RATING */
-    .ambassador-badge {
-        background: linear-gradient(135deg, #ffd700, #b8860b);
-        color: #000;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.7rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        display: inline-block;
-        margin-bottom: 10px;
-    }
-
-    .ambassador-card {
-        background: rgba(255, 215, 0, 0.05);
-        border: 1px solid rgba(255, 215, 0, 0.3);
-        padding: 25px;
-        border-radius: 25px;
-        margin-top: 30px;
-        border-style: dashed;
-        transition: 0.3s;
-    }
-
-    .ambassador-card:hover {
-        background: rgba(255, 215, 0, 0.1);
-        border-style: solid;
-        box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-    }
-
-    .stars-wrap {
-        display: flex;
-        gap: 10px;
-        margin-top: 15px;
-        justify-content: center;
-    }
-
-    .star-btn.active {
-        filter: grayscale(0);
-        opacity: 1;
-        transform: scale(1.2);
-    }
-
-    /* CONCIERGERIE CARDS */
-    .concierge-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 15px;
-        margin-top: 20px;
-    }
-
-    .tech-card {
-        background: rgba(0, 243, 255, 0.03);
-        border: 1px solid rgba(0, 243, 255, 0.1);
-        border-radius: 20px;
-        padding: 20px;
-        transition: 0.3s;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .tech-card:hover {
-        transform: translateY(-5px);
-        border-color: #00f3ff;
-        box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
-    }
-
-    .tech-badge {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: rgba(0, 243, 255, 0.1);
-        color: #00f3ff;
-        padding: 4px 10px;
-        font-size: 0.6rem;
-        text-transform: uppercase;
-        border-bottom-left-radius: 12px;
-    }
-
-    .tech-icon {
-        font-size: 1.8rem;
-        margin-bottom: 12px;
-        display: block;
-    }
-
-    .maintenance-item {
-        display: flex;
-        align-items: start;
-        gap: 12px;
-        padding: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .resource-link {
-        display: block;
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 10px;
-        background: rgba(255, 255, 255, 0.05);
-        color: #fff;
-        text-decoration: none;
-        border-radius: 12px;
-        text-align: center;
-        font-weight: 600;
-        font-size: 0.85rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: 0.3s;
-    }
-
-    .resource-link:hover {
-        background: #fff;
-        color: #000;
-    }
-
-    /* MOBILE OPTIMIZATIONS (PWA READY) */
-    @media (max-width: 768px) {
-        .portal-main-wrapper {
-            border-radius: 0;
-            /* Full screen feel on mobile */
-            margin: 0;
-        }
-
-        .portal-container {
-            padding: 40px 15px 120px;
-            /* Extra padding to avoid chat overlap */
-        }
-
-        .property-card-premium {
-            padding: 30px 20px;
-            margin-bottom: 30px;
-            text-align: center;
-            border-radius: 30px;
-        }
-
-        .section-header {
-            padding: 20px;
-        }
-
-        .section-header h3 {
-            font-size: 1.1rem;
-        }
-
-        .section-content {
-            padding: 20px;
-        }
-
-        .milestone-grid {
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-
-        .team-grid {
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-
-        .team-card {
-            padding: 15px;
-        }
-
-        .moving-item {
-            padding: 12px 15px !important;
-            gap: 12px !important;
-            border-radius: 15px !important;
-        }
-
-        .moving-item span {
-            font-size: 0.8rem !important;
-            white-space: normal !important;
-            line-height: 1.3 !important;
-        }
-
-        .concierge-main-grid {
-            grid-template-columns: 1fr !important;
-            /* Stack domestic/maintenance */
-        }
-
-        .stat-val {
-            font-size: 2rem;
-        }
-
-        .login-card {
-            padding: 30px 20px;
-            margin: 15px;
-        }
-
-        /* PWA INSTALL BANNER (FLOATING GLASS CARD) */
-        .install-banner {
-            display: none;
-            position: relative;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 25px;
-            margin-bottom: 40px;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-            animation: slideIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .banner-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0.5;
-            transition: 0.3s;
-            color: #fff;
-            font-size: 1.2rem;
-        }
-
-        .banner-close:hover {
-            opacity: 1;
-        }
-
-        .install-btn {
-            background: linear-gradient(135deg, #873276, #b0549c);
-            color: #fff;
-            border: none;
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 900;
-            font-size: 0.85rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            box-shadow: 0 10px 25px rgba(135, 50, 118, 0.5);
-            transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
-        }
-
-        .install-btn:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(135, 50, 118, 0.7);
-        }
-
-        #iosInstructions {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 400px;
-            background: #fff;
-            color: #000;
-            padding: 20px;
-            border-radius: 25px;
-            z-index: 10001;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-    }
-</style>
-
+        .portal-main-wrapper { border-radius: 30px; margin: 10px; }
+        .property-card-premium { flex-direction: column; padding: 30px; }
+        .timeline-steps { flex-direction: column; padding: 20px; }
+        .timeline-steps::before { left: 51px; top: 30px; width: 2px; height: 80%; }
+        .timeline-progress-bar { left: 51px; top: 30px; width: 2px; height: 0%; }
+        .step-node { flex-direction: row; width: 100%; gap: 20px; height: 70px; }
+        .step-label { margin-top: 0; text-align: left; }
+    }
+
+</style></head><body>
 
 <div class="portal-main-wrapper">
     <div class="portal-aura"></div>
-
-    <!-- CELEBRATION OVERLAY -->
-    <div id="overlayCelebration" class="celebration-overlay">
-        <div class="success-card">
-            <div style="font-size: 5rem; margin-bottom: 20px;">&#195;&#176;&#197;&#184;&#194;&#165;&acirc;&#8364;&#353;</div>
-            <h1 style="font-family:'Outfit'; font-size: 3.5rem; margin-bottom: 10px; line-height: 1;">F&Eacute;LICITATIONS !
-            </h1>
-            <p id="txtCelebrationMsg" style="font-size: 1.4rem; opacity: 0.8; margin-bottom: 30px;">Votre transaction
-                immobili&egrave;re est officiellement conclue.</p>
-            <div
-                style="height:2px; background:linear-gradient(90deg, transparent, var(--dash-primary), transparent); margin-bottom:40px;">
-            </div>
-
-            <p style="font-weight: 600; margin-bottom: 5px;">Avez-vous aim&eacute; votre exp&eacute;rience ?</p>
-            <div class="stars-wrap" id="wrapStars">
-                <span class="star-btn" onclick="setRating(1)">&#195;&#162;&#194;&#173;&#194;&#144;</span>
-                <span class="star-btn" onclick="setRating(2)">&#195;&#162;&#194;&#173;&#194;&#144;</span>
-                <span class="star-btn" onclick="setRating(3)">&#195;&#162;&#194;&#173;&#194;&#144;</span>
-                <span class="star-btn" onclick="setRating(4)">&#195;&#162;&#194;&#173;&#194;&#144;</span>
-                <span class="star-btn" onclick="setRating(5)">&#195;&#162;&#194;&#173;&#194;&#144;</span>
-            </div>
-
-            <a href="https://g.page/r/CdypKbg57LonEAE/review" target="_blank" class="google-btn">
-                <span>&#195;&#162;&#194;&#173;&#194;&#144; Laisser un avis Google</span>
-            </a>
-
-            <div class="ambassador-card">
-                <div class="ambassador-badge">Programme Ambassadeur</div>
-                <h4 style="color: #ffd700; margin-bottom: 5px;">Devenez Ambassadeur Evan Patruno</h4>
-                <p style="font-size: 0.9rem; opacity: 0.7;">R&eacute;f&eacute;rez un ami et recevez <span id="txtReward"
-                        style="color:#fff; font-weight:700;">--</span> une fois la transaction conclue.</p>
-                <div
-                    style="margin-top:15px; font-size:0.8rem; background:rgba(255,255,255,0.1); padding:8px; border-radius:10px; border:1px solid rgba(255,255,255,0.1);">
-                    Dites-leur de mentionner <strong>votre nom</strong> ou votre code : <strong
-                        id="txtReferralCode">--</strong>
-                </div>
-            </div>
-
-            <div style="margin-top: 40px; opacity: 0.6; cursor: pointer; text-decoration: underline; font-size: 0.8rem;"
-                onclick="closeCelebration()">
-                Consulter les d&eacute;tails archiv&eacute;s de mon dossier
-            </div>
-        </div>
-    </div>
-
-    <!-- CONNEXION -->
     <div class="portal-overlay" id="portalOverlay">
         <div class="login-card">
-            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 8px;">Acc&egrave;s au Dossier</h2>
-            <p style="color: rgba(255,255,255,0.6); margin-bottom: 35px;">Entrez votre Code Portail unique.</p>
+            <h2 style="font-family:'Outfit'; font-size:2.2rem; font-weight:900; margin-bottom:8px; color:#fff;">Acc&#232;s au Dossier</h2>
+            <p style="color:rgba(255,255,255,0.6); margin-bottom:35px;">Connectez-vous pour voir l'avancement.</p>
             <form onsubmit="handlePortalLogin(event)">
-                <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode"
-                    required>
-                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU T&Eacute;L&Eacute;PHONE" class="login-input"
-                    id="inpPortalPhone" required style="margin-top: -10px;">
-                <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon
-                    dossier</button>
+                <input type="text" placeholder="CODE DOSSIER" class="login-input" id="inpPortalCode" required>
+                <input type="password" maxlength="4" placeholder="CODE T&#201;L&#201;PHONE" class="login-input" id="inpPortalPhone" required>
+                <button type="submit" class="login-btn" id="btnPortalLogin">Ouvrir mon dossier</button>
                 <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
-                    <span class="pwa-icon">&#x1f4f1;</span>
-                    <span>Installer l'app sur mon t&eacute;l&eacute;phone</span>
+                    <span>&#128242;</span> <span>Installer l'app PWA</span>
                 </button>
             </form>
         </div>
     </div>
-
-    <!-- DASHBOARD -->
     <div class="portal-container" id="portalDash">
-        <header style="margin-bottom: 60px; position: relative;">
-            <div id="pwaInstallBanner" class="install-banner">
-                <div class="banner-close" onclick="closePwaBanner()">&#10005;</div>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <span style="font-size: 2rem;">&#195;&#176;&#197;&#184;&acirc;&#8364;&#339;&#194;&#177;</span>
-                    <div>
-                        <div style="font-weight: 900; font-size: 1rem; color: #fff;">Vivez l'exp&eacute;rience App</div>
-                        <div style="font-size: 0.75rem; opacity: 0.8; color: #fff;">Suivi en temps r&eacute;el et notifications.</div>
-                    </div>
-                </div>
-                <button class="pwa-login-btn" style="display:flex; width:auto; margin-top:0; padding:12px 22px;" onclick="installPortalApp()">
-                    <span class="pwa-icon">&#x1f4f1;</span>
-                    <span>Installer</span>
-                </button>
-            </div>
-
-            <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                <div style="padding: 6px 16px; background: rgba(135, 50, 118, 0.15); border: 1px solid rgba(135, 50, 118, 0.3); border-radius: 50px; display: flex; align-items: center; gap: 10px;">
-                    <div style="width: 8px; height: 8px; background: var(--dash-accent); border-radius: 50%; box-shadow: 0 0 10px var(--dash-accent-glow);"></div>
-                    <span style="color: var(--dash-accent); font-weight: 900; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">
-                        Portail Client Priv&eacute;
-                    </span>
-                </div>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 5px;">
-                <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 900; margin: 0; color: #fff; line-height: 1; text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                    --
-                </h1>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <div style="padding: 4px 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: rgba(255,255,255,0.6); font-size: 0.9rem; font-weight: 700; letter-spacing: 1px;">
-                        <span id="txtCodeRef">Dossier #--</span>
-                    </div>
-                </div>
-            </div>
-
-            <div id="wrapCountdown" style="display: none; margin-top: 30px;">
-                <div class="countdown-widget">
-                    <div class="countdown-num" id="valCountdown">--</div>
-                    <div class="countdown-txt">Jours avant la signature<br>chez le notaire</div>
-                </div>
-            </div>
+        <header style="margin-bottom:50px;">
+            <h1 id="txtWelcome" style="font-family:'Outfit'; font-size:3.5rem; font-weight:900; margin:0; color:#fff;">Bienvenue.</h1>
+            <p id="txtCodeRef" style="opacity:0.6; font-weight:700;">Dossier #--</p>
         </header>
 
-        <div class="property-card-premium">
-            <div style="flex: 1;">
-                <div class="badge-premium" id="badgeStage" style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.5);">
-                    --
-                </div>
-                <h2 id="txtPropName" style="font-size: clamp(2rem, 5vw, 3.2rem); margin: 0; font-family: 'Outfit', sans-serif; color: #fff; line-height: 1; letter-spacing: -1px;">
-                    --
-                </h2>
-                <p id="txtPropCity" style="color: rgba(255,255,255,0.5); font-size: 1.2rem; margin-top: 10px; font-weight: 500;">
-                    --
-                </p>
+        <!-- Cockpit Section -->
+        <div style="background:rgba(255,255,255,0.03); padding:40px; border-radius:45px; border:1px solid var(--dash-border); display:flex; align-items:center; gap:50px; margin-bottom:40px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:300px;">
+                <div id="badgeStage" style="background:rgba(46,204,113,0.1); color:#2ecc71; padding:6px 16px; border-radius:50px; display:inline-block; font-size:0.75rem; font-weight:900; margin-bottom:15px; border:1px solid rgba(46,204,113,0.3);">ANALYSE</div>
+                <h2 id="txtPropName" style="font-size:2.5rem; margin:0; font-family:'Outfit'; color:#fff;">Propri&#233;t&#233; Priv&#233;e</h2>
+                <p id="txtPropCity" style="opacity:0.5; font-size:1.2rem; margin-top:5px;">Montr&#233;al</p>
             </div>
-
-            <!-- COCKPIT PROGRESS RING (Side by side on desktop) -->
-            <div style="text-align: center; flex-shrink: 0;">
-                <div class="cockpit-ring-wrap" id="cockpitRingWrap">
-                    <svg class="cockpit-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#873276"/>
-                                <stop offset="50%" stop-color="#c040a0" id="ringGradMid"/>
-                                <stop offset="100%" stop-color="#ff4db8" id="ringGradEnd"/>
-                            </linearGradient>
-                        </defs>
-                        <circle class="ring-bg" cx="60" cy="60" r="50"/>
-                        <circle class="ring-progress" id="ringProgress" cx="60" cy="60" r="50"/>
-                    </svg>
-                    <div class="cockpit-center">
-                        <span id="ringPct">0%</span>
-                        <small>Avancement</small>
-                    </div>
-                </div>
-                <div class="cockpit-label" id="ringLabel">Calcul en cours&hellip;</div>
+            <div class="cockpit-ring-wrap">
+                <svg class="cockpit-svg" viewBox="0 0 120 120">
+                    <defs><linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#873276"/><stop offset="100%" stop-color="#ff4db8"/></linearGradient></defs>
+                    <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                    <circle class="ring-progress" id="ringProgress" cx="60" cy="60" r="50"/>
+                </svg>
+                <div class="cockpit-center"><span id="ringPct">0%</span><small>Avancement</small></div>
             </div>
         </div>
 
-        <!-- MILESTONE COCKPIT -->
         <div class="milestone-grid" id="wrapMilestones"></div>
 
-        <!-- FINANCEMENT SECTION (Checklist) - MOVED UP -->
-        <div class="section-wrapper" id="secPrequal">
-            <div class="section-header" onclick="toggleSection('secPrequal')">
-                <h3>Conditions &agrave; r&eacute;aliser</h3>
-                <div class="section-chevron">&#195;&#162;&acirc;&#8364;&#8220;&#194;&#188;</div>
-            </div>
-            <div class="section-content"
-                style="background: linear-gradient(135deg, rgba(135,50,118,0.05), rgba(0,0,0,0.2));">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
-                    <span style="opacity:0.6; font-size:0.9rem;">Statut g&eacute;n&eacute;ral :</span>
-                    <div id="badgePrequal" class="badge-premium">--</div>
-                </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"
-                    id="wrapChecklist"></div>
-            </div>
-        </div>
-
         <div class="section-wrapper" id="secTimeline">
-            <div class="section-header" onclick="toggleSection('secTimeline')">
-                <h3>Timeline de Transaction</h3>
-                <div class="section-chevron">&#195;&#162;&acirc;&#8364;&#8220;&#194;&#188;</div>
-            </div>
+            <div class="section-header" onclick="toggleSection('secTimeline')"><h3>Timeline de Transaction</h3><div class="section-chevron">&#9660;</div></div>
             <div class="section-content">
                 <div class="timeline-steps" id="wrapTimeline">
                     <div class="timeline-progress-bar" id="barProgress"></div>
+                    <!-- Filled by JS -->
                 </div>
             </div>
         </div>
 
-        <!-- EQUIPE SECTION -->
         <div class="section-wrapper" id="secTeam">
-            <div class="section-header" onclick="toggleSection('secTeam')">
-                <h3>Votre &Eacute;quipe de Transaction</h3>
-                <div class="section-chevron">&#195;&#162;&acirc;&#8364;&#8220;&#194;&#188;</div>
-            </div>
-            <div class="section-content">
-                <div class="team-grid" id="wrapTeam"></div>
-            </div>
-        </div>
-        <div id="sectionSeller" style="display: none;"></div>
-        <!-- CONCIERGERIE ADMINISTRATIVE SECTION -->
-        <div class="section-wrapper" id="secMoving">
-            <div class="section-header" onclick="toggleSection('secMoving')">
-                <h3>Apr&egrave;s-Vente (Checklist)</h3>
-                <div class="section-chevron">&#195;&#162;&acirc;&#8364;&#8220;&#194;&#188;</div>
-            </div>
-            <div class="section-content">
-                <p style="margin-bottom: 25px; opacity: 0.6; font-size: 0.9rem;">Ne manquez aucune &eacute;tape importante
-                    avant ou apr&egrave;s votre emm&eacute;nagement.</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"
-                    id="wrapMoving"></div>
-            </div>
+            <div class="section-header" onclick="toggleSection('secTeam')"><h3>Votre &#201;quipe</h3><div class="section-chevron">&#9660;</div></div>
+            <div class="section-content"><div class="team-grid" id="wrapTeam"></div></div>
         </div>
 
-        <!-- ESPACE CONCIERGERIE (TECH & CONSEILS) -->
-        <div class="section-wrapper collapsed" id="secConcierge">
-            <div class="section-header" onclick="toggleSection('secConcierge')">
-                <h3>Espace Maison & Conseils</h3>
-                <div class="section-chevron">&#195;&#162;&acirc;&#8364;&#8220;&#194;&#188;</div>
-            </div>
-            <div class="section-content">
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px;" class="concierge-main-grid">
-                    <div>
-                        <h4
-                            style="color:#00f3ff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">
-                            &#195;&#176;&#197;&#184;&#197;&#161;&acirc;&#8218;&#172; Domotique : &Eacute;quipez votre maison</h4>
-                        <div id="wrapSmartHome" class="concierge-grid"></div>
-                    </div>
-                    <div>
-                        <h4
-                            style="color:#ffd700; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:15px;">
-                            &#195;&#176;&#197;&#184;&#194;&#141;&acirc;&#8364;&#353; Entretien Saisonnier</h4>
-                        <div id="wrapMaintenance"
-                            style="background:rgba(255,255,255,0.02); border-radius:15px; padding:10px;"></div>
-
-                        <h4
-                            style="color:#fff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:25px 0 15px;">
-                            &#195;&#176;&#197;&#184;&acirc;&#8364;&#339;&#197;&#161; Ressources Utiles</h4>
-                        <div id="wrapResources"></div>
-                    </div>
-                </div>
-            </div>
+        <div class="section-wrapper collapsed" id="secMoving">
+            <div class="section-header" onclick="toggleSection('secMoving')"><h3>Checklist de D&#233;m&#233;nagement</h3><div class="section-chevron">&#9660;</div></div>
+            <div class="section-content"><div class="moving-grid" id="wrapMoving"></div></div>
         </div>
 
-        <!-- PARTNERS SECTION -->
         <div class="section-wrapper collapsed" id="secPartners">
-            <div class="section-header" onclick="toggleSection('secPartners')">
-                <h3>Vos Partenaires Experts</h3>
-                <div class="section-chevron">&#195;&#162;&acirc;&#8364;&#8220;&#194;&#188;</div>
-            </div>
-            <div class="section-content">
-                <p style="color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 30px;">Profitez d'avantages
-                    exclusifs n&eacute;goci&eacute;s pour vous.</p>
-                <div class="partner-grid" id="wrapPartners"></div>
-            </div>
+            <div class="section-header" onclick="toggleSection('secPartners')"><h3>Partenaires Experts</h3><div class="section-chevron">&#9660;</div></div>
+            <div class="section-content"><div class="partner-grid" id="wrapPartners"></div></div>
         </div>
     </div>
 </div>
 
 <script>
-    // --- REAL MAPPING (Ready for Zoho) ---
+
     const MOCK_DATA = {
-        firstName: "Evan",
-        code: "Achat - Evan Patruno",
-        property: "Achat - Evan Patruno",
-        city: "En attente de propri&eacute;t&eacute;",
-        stage: "Analyse des offres",
-        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
+        firstName: "Evan", code: "EP-1001", property: "Avenue Patruno", city: "Montr\u00e9al", stage: "Analyse des offres",
         timeline: [
-            { label: "Pr&eacute;paration", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u0153\u00c2\u009d", status: "completed" },
-            { label: "Offre d&eacute;pos&eacute;e", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u009d\u00c2\u008d", status: "active" },
-            { label: "Conditions", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u00ba\u00c2\u00a1\u00c3\u00af\u00c2\u00b8\u00c2\u008f", status: "pending" },
-            { label: "Notaire", icon: "\u00c3\u00a2\u00c5\u201c&acirc;\u20ac\u2122\u00c3\u00af\u00c2\u00b8\u00c2\u008f", status: "pending" },
-            { label: "Succ&egrave;s", icon: "\u00c3\u00b0\u00c5\u00b8\u00c2\u008f\u00c2\u00a0", status: "pending" }
+            { label: "Pr\u00e9paration", icon: "\uD83D\uDCCB", status: "completed" },
+            { label: "Offre d\u00e9pos\u00e9e", icon: "\uD83D\uDD0D", status: "active" },
+            { label: "Conditions", icon: "\uD83D\uDEE1\uFE0F", status: "pending" },
+            { label: "Notaire", icon: "\u2712\uFE0F", status: "pending" },
+            { label: "Succ\u00e8s", icon: "\uD83C\uDFE0", status: "pending" }
         ],
         team: [
-            { role: "Votre Courtier", name: "Evan Patruno", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u02dc\u00c2\u00a8\u00c3\u00a2&acirc;\u201a\u00ac\u00c2\u008d\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u2122\u00c2\u00bc", contact: "tel:5145673249" },
-            { role: "Collaborateur", name: "Marc-Andr&eacute; Girard", icon: "&#x1f91d;\u009d", contact: "mailto:test@test.com" },
-            { role: "Courtier Hyp.", name: "Sophie Lapointe", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u2122\u00c2\u00b0", contact: "tel:5555555555" },
-            { role: "Inspecteur", name: "Inspectec Inc.", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u009d\u00c2\u008d", contact: "tel:4444444444" },
-            { role: "Notaire", name: "Me Jean Picard", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u201c&acirc;\u20ac\u00b9\u00c3\u00af\u00c2\u00b8\u00c2\u008f", contact: "tel:3333333333" }
-        ],
-        dates: [
-            { label: "Signature du contrat", val: "15 Avril 2026" },
-            { label: "Date limite financement", val: "22 Avril 2026" },
-            { label: "Rendez-vous Inspection", val: "\u00c3\u0192&acirc;\u201a\u00ac confirmer" },
-            { label: "Date de cl&ocirc;ture (Notaire)", val: "15 Mai 2026" },
-            { label: "Date d'occupation", val: "18 Mai 2026" }
-        ],
-        checklist: [
-            { name: "Financement Approuv&eacute;", done: true },
-            { name: "Offre d'achat", done: false },
-            { name: "ID Photo", done: true }
+            { role: "Votre Courtier", name: "Evan Patruno", icon: "\uD83D\uDCF1", phone: "514-567-3249", email: "evan@patruno.ca" },
+            { role: "Notaire", name: "Me Jean Picard", icon: "\u2712\uFE0F", phone: "514-555-0101", email: "jean@notaire.ca" }
         ],
         milestones: {
-            financing: { days: 5, date: "25 Avril 2026" },
-            inspection: { days: 12, date: "2 Mai 2026" },
             signature: { days: 25, date: "15 Mai 2026" },
-            occupation: { days: 28, date: "18 Mai 2026" }
+            inspection: { days: 12, date: "2 Mai 2026" },
+            signature: { days: 25, date: "15 Mai 2026" }
         },
         movingChecklist: [
-            { name: "Aviser son propri&eacute;taire (60 jours avant)", done: true },
-            { name: "Contacter Bell / Videotron / Hydro-Qu&eacute;bec", done: false },
-            { name: "Faire suivre son courrier &mdash;\u009d Postes Canada", done: false },
-            { name: "Aviser la RAMQ et la SAAQ", done: false },
-            { name: "R&eacute;server la compagnie de d&eacute;m&eacute;nagement", done: false },
-            { name: "Commander les boites et mat&eacute;riaux", done: false },
-            { name: "Faire l'inventaire des biens assurables", done: false },
-            { name: "Changer les serrures &agrave; l'arriv&eacute;e", done: false }
+            { name: "Aviser son propri\u00e9taire", done: true },
+            { name: "R\u00e9server d\u00e9m\u00e9nageurs", done: false },
+            { name: "Changer les serrures", done: false }
         ],
-        partners: [
-            { name: "D&eacute;m&eacute;nagement Express", icon: "\u00c3\u00b0\u00c5\u00b8\u00c5\u00a1\u00c5\u00a1", category: "D&eacute;m&eacute;nagement", benefit: "10% Rabais clients Evan", code: "EVAN10" },
-            { name: "CleanPro Montr&eacute;al", icon: "\u00c3\u00b0\u00c5\u00b8\u00c2\u00a7\u00c2\u00b9", category: "Nettoyage", benefit: "-50$ sur 1&egrave;re visite", code: "PATRUNO" },
-            { name: "HomeD&eacute;cor Plus", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u2122\u00c2\u00ab", category: "Am&eacute;nagement", benefit: "Consultation gratuite", code: "PORTAIL" }
-        ],
-        isCelebration: false,
-        concierge: {
-            smartHome: [
-                { category: "S&eacute;curit&eacute;", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u009d&acirc;\u20ac\u2122", title: "Serrure intelligente", desc: "Remplacez vos serrures d&egrave;s l'emm&eacute;nagement pour plus de s&eacute;curit&eacute;." },
-                { category: "Confort", icon: "\u00c3\u00b0\u00c5\u00b8\u00c5\u2019\u00c2\u00a1\u00c3\u00af\u00c2\u00b8\u00c2\u008f", title: "Thermostat connect&eacute;", desc: "Ecobee ou Nest pour optimiser votre consommation d'&eacute;nergie." },
-                { category: "Surveillance", icon: "\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u0153\u00c2\u00b9", title: "Cam&eacute;ra ext&eacute;rieure", desc: "Ring ou Arlo : surveillez votre propri&eacute;t&eacute; &agrave; distance." }
-            ],
-            maintenance: [
-                { period: "PRINTEMPS", title: "Goutti&egrave;res & toiture", desc: "V&eacute;rifier les goutti&egrave;res et la toiture apr&egrave;s l'hiver." },
-                { period: "&Eacute;T&Eacute;", title: "Climatisation", desc: "Nettoyer les filtres et v&eacute;rifier la thermopompe." },
-                { period: "AUTOMNE", title: "Isolation & fen\u00c3\u0192\u00c2\u00aatres", desc: "V&eacute;rifier les calfeutrages et pr&eacute;parer pour l'hiver." },
-                { period: "HIVER", title: "Syst&egrave;me de chauffage", desc: "Tester la fournaise et faire entretenir si n&eacute;cessaire." }
-            ],
-            resources: [
-                { title: "R&eacute;gime d'Acc&egrave;s &agrave; la Propri&eacute;t&eacute; (RAP) &mdash;\u009d ARC", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-reer-ferr-autres-regimes-enregistres/retirer-votre-reer-regulier/regime-acces-propriete.html" },
-                { title: "Guide de l'acheteur &mdash;\u009d OACIQ officiel", url: "https://www.oaciq.com/fr/articles/rachetez-une-propriete" },
-                { title: "Calculateur de droit de mutation &mdash;\u009d " , url: "https://www.ville.montreal.qc.ca/portal/page?_pageid=44,52683200&_dad=portal&_schema=PORTAL" },
-                { title: "R&eacute;novation Qu&eacute;bec &mdash;\u009d R&eacute;noV&eacute;rt", url: "https://www.transitionenergetique.gouv.qc.ca/residences/programmes-rabais/renovert" }
-            ]
-        }
+        partners: [{ name: "D\u00e9m\u00e9nagement Expert", icon: "\uD83D\uDE66", category: "Services", benefit: "10% Rabais", code: "EVAN10" }]
     };
 
-    function setSafeStyle(id, prop, val) {
-        const el = document.getElementById(id);
-        if (el) el.style[prop] = val;
-    }
-
     function renderPortal(data) {
-        if (!data || !document.getElementById('txtWelcome')) return; // Safety first
-
-        document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName || 'Client'}.`;
-        document.getElementById('txtCodeRef').innerText = `Dossier #${data.code}`;
-        document.getElementById('txtPropName').innerText = data.property;
-        document.getElementById('txtPropCity').innerText = data.city;
-        document.getElementById('badgeStage').innerText = data.stage;
+        // Use innerHTML everywhere to ensure hex-escaped strings render correctly
+        document.getElementById('txtWelcome').innerHTML = "Bienvenue, " + (data.firstName || 'Client') + ".";
+        document.getElementById('txtCodeRef').innerHTML = "Dossier #" + data.code;
+        document.getElementById('txtPropName').innerHTML = data.property;
+        document.getElementById('txtPropCity').innerHTML = data.city;
+        document.getElementById('badgeStage').innerHTML = data.stage;
 
         // Timeline
         const wrapT = document.getElementById('wrapTimeline');
-        if (wrapT) {
-            wrapT.querySelectorAll('.step-node').forEach(n => n.remove());
-        }
+        wrapT.querySelectorAll('.step-node').forEach(n => n.remove());
         let completed = 0;
-        const timeline = data.timeline || [];
-        timeline.forEach((s, i) => {
-            if (!wrapT) return;
+        (data.timeline || []).forEach((s, i) => {
             const node = document.createElement('div');
-            node.className = `step-node ${s.status}`;
-            node.innerHTML = `<div class="node-dot">${s.icon}</div><span class="step-label">${s.label}</span>`;
+            node.className = "step-node " + s.status;
+            node.innerHTML = '<div class="node-dot">' + s.icon + '</div><span class="step-label">' + s.label + '</span>';
             wrapT.appendChild(node);
             if (s.status === 'completed') completed++;
             if (s.status === 'active') completed += 0.5;
         });
+
         setTimeout(() => {
-            const bar = document.getElementById('barProgress');
+            const bar = document.getElementById('barProgress') || document.querySelector('.timeline-progress-bar');
             if (bar) {
                 const total = (data.timeline || []).length;
-                const safePct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
-                
-                if (window.innerWidth <= 768) {
-                    // Mobile : barre verticale en pixels absolus
-                    const railH = wrapT.offsetHeight - 54; // hauteur disponible du rail
-                    const pxH = (safePct / 100) * railH;
-                    bar.style.removeProperty('width');
-                    bar.style.height = pxH + 'px';
-                    bar.style.width = '2px';
-                    bar.style.left = '51px';
-                    bar.style.background = 'linear-gradient(to bottom, #873276, #ff4db8)';
-                    bar.style.boxShadow = '0 0 12px #873276, 0 0 24px rgba(135,50,118,0.6), 0 0 4px #ff4db8';
-                } else {
-                    bar.style.removeProperty('height');
-                    bar.style.width = `${safePct * 0.8}%`; // Garde le 80% pour le desktop horizontal
-                    bar.style.height = '2px';
-                    bar.style.left = '10%';
-                    bar.style.boxShadow = '0 0 20px #873276';
-                }
+                const safePct = total > 1 ? Math.round(((completed - 1) / (total - 1)) * 100) : 0;
+                bar.style.width = safePct + "%";
+                document.getElementById('ringProgress').style.strokeDashoffset = 314.16 - (safePct / 100) * 314.16;
+                document.getElementById('ringPct').innerHTML = safePct + "%";
             }
-
-            // \u00c3\u00a2&acirc;\u20ac\u009d&acirc;\u201a\u00ac\u00c3\u00a2&acirc;\u20ac\u009d&acirc;\u201a\u00ac COCKPIT RING ANIMATION \u00c3\u00a2&acirc;\u20ac\u009d&acirc;\u201a\u00ac\u00c3\u00a2&acirc;\u20ac\u009d&acirc;\u201a\u00ac
-            const ring = document.getElementById('ringProgress');
-            const ringPctEl = document.getElementById('ringPct');
-            const ringLabel = document.getElementById('ringLabel');
-            if (ring && ringPctEl) {
-                const timeline = data.timeline || [];
-                const total = timeline.length;
-                const pct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
-                const circumference = 314.16;
-                const offset = circumference - (pct / 100) * circumference;
-
-                // Couleur adaptative selon le %
-                const gradMid = document.getElementById('ringGradMid');
-                const gradEnd = document.getElementById('ringGradEnd');
-                if (pct >= 100) {
-                    if (gradMid) gradMid.setAttribute('stop-color', '#27ae60');
-                    if (gradEnd) gradEnd.setAttribute('stop-color', '#2ecc71');
-                    ring.style.filter = 'drop-shadow(0 0 10px #2ecc71) drop-shadow(0 0 22px rgba(46,204,113,0.5))';
-                } else if (pct >= 60) {
-                    if (gradMid) gradMid.setAttribute('stop-color', '#c89b2a');
-                    if (gradEnd) gradEnd.setAttribute('stop-color', '#d4af37');
-                    ring.style.filter = 'drop-shadow(0 0 10px #d4af37) drop-shadow(0 0 22px rgba(212,175,55,0.5))';
-                }
-
-                // Animate stroke + count-up
-                setTimeout(() => {
-                    ring.style.strokeDashoffset = offset;
-                    let current = 0;
-                    const target = Math.round(pct);
-                    const step = Math.max(1, Math.ceil(target / 60));
-                    const timer = setInterval(() => {
-                        current = Math.min(current + step, target);
-                        ringPctEl.textContent = current + '%';
-                        if (current >= target) clearInterval(timer);
-                    }, 30);
-
-                    // Label contextuel
-                    const timeline = data.timeline || [];
-                    const activeStep = timeline.find(s => s.status === 'active');
-                    const doneCount = timeline.filter(s => s.status === 'completed').length;
-                    if (ringLabel) {
-                        if (pct >= 100) ringLabel.textContent = '\u00c3\u00b0\u00c5\u00b8\u00c2\u008f&acirc;\u20ac\u00a0 Transaction compl&eacute;t&eacute;e!';
-                        else if (activeStep) ringLabel.textContent = `&Eacute;tape active : ${activeStep.label}`;
-                        else ringLabel.textContent = `${doneCount} &eacute;tape${doneCount > 1 ? 's' : ''} compl&eacute;t&eacute;e${doneCount > 1 ? 's' : ''}`;
-                    }
-                }, 400);
-            }
-        }, 200);
+        }, 300);
 
         // Team
-        const wrapTeam = document.getElementById('wrapTeam');
-        if (wrapTeam) {
-            wrapTeam.innerHTML = (data.team || []).map(t => `
-            <div class="team-card">
-                <div class="team-icon">${t.icon}</div>
-                <div class="team-role">${t.role}</div>
-                <div class="team-name" style="margin-bottom:10px;">${t.name}</div>
-                <div style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:5px;">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-                        <span style="opacity:0.7;">\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u0153\u00c5\u00be</span> ${t.phone || 'Non d&eacute;fini'}
-                    </div>
-                    <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="opacity:0.7;">\u00c3\u00a2\u00c5\u201c&acirc;\u20ac\u00b0\u00c3\u00af\u00c2\u00b8\u00c2\u008f</span> ${t.email || 'Non d&eacute;fini'}
-                    </div>
-                </div>
-            </div>
-        `).join('');
-        }
-
-        // (Dates removed because integrated in cockpit)
-
-        // Checklist
-        const badgePrequal = document.getElementById('badgePrequal');
-        const checklist = data.checklist || [];
-        if (badgePrequal) badgePrequal.innerText = checklist.filter(c => c.done).length + "/" + checklist.length;
+        document.getElementById('wrapTeam').innerHTML = (data.team || []).map(t => '<div class="team-card"><div class="team-icon">'+t.icon+'</div><div class="team-role">'+t.role+'</div><div class="team-name">'+t.name+'</div><div style="font-size:0.75rem;opacity:0.6;">'+t.phone+'</div></div>').join('');
         
-        const wrapChecklist = document.getElementById('wrapChecklist');
-        if (wrapChecklist) {
-            wrapChecklist.innerHTML = checklist.map(c => `
-                <div style="background:${c.done ? 'rgba(46,204,113,0.05)' : 'rgba(255,255,255,0.02)'};padding:22px;border-radius:25px;display:flex;align-items:center;gap:18px;border:1px solid ${c.done ? 'rgba(46,204,113,0.2)' : 'rgba(255,255,255,0.1)'}">
-                    <div style="width:30px;height:30px;background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.05)'};border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:${c.done ? '#fff' : 'rgba(255,255,255,0.2)'}">${c.done ? '\u00c3\u00a2\u00c5\u201c&acirc;\u20ac\u0153' : '!'}</div>
-                    <span style="font-size:1rem;font-weight:600;color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name}</span>
-                </div>
-            `).join('');
-        }
-
-        // (Global Countdown removed because integrated in cockpit milestones)
-
-        // Moving Checklist (With LocalStorage Persistence)
-        const savedMoving = JSON.parse(localStorage.getItem(`moving_${data.code}`) || "{}");
-
-        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, idx) => {
-            const isDone = savedMoving[idx] !== undefined ? savedMoving[idx] : c.done;
-            return `
-                <div class="moving-item ${isDone ? 'done' : ''}" onclick="toggleMovingItem('${data.code}', ${idx})" id="moving-${idx}" style="background:rgba(255,255,255,0.02);padding:20px;border-radius:20px;display:flex;align-items:center;gap:15px;border:1px solid rgba(255,255,255,0.1); cursor:pointer; transition: 0.3s; box-shadow: var(--dash-glow); user-select:none;">
-                    <div class="check-box" style="width:24px;height:24px;border:2px solid ${isDone ? '#2ecc71' : 'rgba(255,255,255,0.2)'};border-radius:6px;display:flex;align-items:center;justify-content:center;color:#2ecc71;font-weight:900; background: ${isDone ? 'rgba(46,204,113,0.1)' : 'transparent'};">
-                        ${isDone ? '\u00c3\u00a2\u00c5\u201c&acirc;\u20ac\u0153' : ''}
-                    </div>
-                    <span style="font-size:0.9rem;opacity:${isDone ? '1' : '0.85'}; text-decoration: ${isDone ? 'line-through' : 'none'};">${c.name}</span>
-                </div>
-            `;
-        }).join('');
-
-        // Seller Section
-        const secSeller = document.getElementById('sectionSeller');
-        if (secSeller) {
-            if (data.transactionType === "Vendeur" && data.sellerData) {
-                secSeller.style.display = 'block';
-                const visitsEl = document.getElementById('valVisits');
-                if (visitsEl) visitsEl.innerText = data.sellerData.visits || "0";
-
-                const wrapFeed = document.getElementById('wrapFeedback');
-                if (wrapFeed) {
-                    wrapFeed.innerHTML = data.sellerData.feedback.map(f => `
-                        <div class="feedback-item">
-                            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                                <span style="font-size:0.8rem; color:var(--dash-accent); font-weight:800;">${f.date}</span>
-                                <span style="color:var(--dash-warning);"> ${'\u00c3\u00a2\u00cb\u0153&acirc;\u20ac\u00a6'.repeat(f.rating || 5)}${'\u00c3\u00a2\u00c2\u00ad\u00c2\u0090'.repeat(5 - (f.rating || 5))}</span>
-                            </div>
-                            <p style="margin:0; font-style:italic; opacity:0.9;">"${f.comment}"</p>
-                        </div>
-                    `).join('');
-                }
-            } else {
-                secSeller.style.display = 'none';
-            }
-        }
-
-        // Partners (Idea 3)
-        document.getElementById('wrapPartners').innerHTML = (data.partners || []).map(p => `
-            <div class="partner-card">
-                <div class="partner-promo-badge">${p.benefit.split(' ')[0]}</div>
-                <div style="font-size: 1.5rem; margin-bottom: 10px;">${p.icon}</div>
-                <div style="color: var(--dash-accent); font-size: 0.65rem; font-weight: 900; text-transform: uppercase; margin-bottom: 5px;">${p.category}</div>
-                <div style="font-family: 'Outfit'; color: #fff; font-size: 1.1rem; font-weight: 800; margin-bottom: 5px;">${p.name}</div>
-                <div style="color: rgba(255,255,255,0.6); font-size: 0.8rem; font-weight: 600;">${p.benefit}</div>
-                <button class="copy-btn" onclick="copyPromoCode('${p.code}')">Copier Code: ${p.code} \u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u0153&acirc;\u20ac\u00b9</button>
-            </div>
-        `).join('');
+        // Milestones
         const m = data.milestones || {};
-        const milestonesConfig = [
-            { id: 'mFinancing', lab: 'Financement', data: m.financing },
-            { id: 'mInspection', lab: 'Inspection', data: m.inspection },
-            { id: 'mSignature', lab: 'Signature', data: m.signature },
-            { id: 'mOccupation', lab: 'Occupation', data: m.occupation }
+        const milestones = [
+            { label: 'Inspection', data: m.inspection },
+            { label: 'Signature', data: m.signature }
         ];
-
-        document.getElementById('wrapMilestones').innerHTML = milestonesConfig.map(ms => {
-            const hasData = ms.data && ms.data.days !== null;
-            const days = hasData ? ms.data.days : null;
-            const targetDate = hasData ? ms.data.date : "\u00c3\u0192&acirc;\u201a\u00ac confirmer";
-
-            const isDone = days !== null && days < 0;
-            const daysText = days !== null ? (isDone ? "\u00c3\u00a2\u00c5\u201c&acirc;\u20ac\u00a6" : days) : "--";
-            const subText = days !== null ? (isDone ? "COMPL&Eacute;T&Eacute;" : (days === 1 ? "JOUR RESTANT" : "JOURS RESTANTS")) : "D&Eacute;LAI \u00c3\u0192&acirc;\u201a\u00ac CONFIRMER";
-            const statusClass = isDone ? "done" : (days <= 3 && days >= 0 ? "urgent" : "");
-
-            return `
-                <div class="milestone-card ${statusClass}">
-                    <div style="font-size:0.55rem; opacity:0.5; margin-bottom:5px; font-weight:800; text-transform:uppercase;">${subText}</div>
-                    <div class="milestone-val">${daysText}</div>
-                    <div class="milestone-label">${ms.lab}</div>
-                    <div style="margin-top:10px; font-size:0.7rem; color:rgba(255,255,255,0.4); font-weight:700; border-top:1px solid rgba(255,255,255,0.05); padding-top:8px;">${targetDate}</div>
-                </div>
-            `;
-        }).join('');
-
-        // Celebration Mode
-        if (data.isCelebration) {
-            document.getElementById('overlayCelebration').classList.add('active');
-            document.getElementById('txtReward').innerText = data.ambassadorReward || "--";
-            document.getElementById('txtReferralCode').innerText = data.code || "--";
-            createConfetti();
-        }
-
-        // Conciergerie Content
-        if (data.concierge) {
-            // Smart Home
-            const wrapSmart = document.getElementById('wrapSmartHome');
-            wrapSmart.innerHTML = data.concierge.smartHome.map(h => `
-                <div class="tech-card">
-                    <span class="tech-badge">${h.category}</span>
-                    <span class="tech-icon">${h.icon}</span>
-                    <h5 style="color:#fff; margin-bottom:5px;">${h.title}</h5>
-                    <p style="font-size:0.8rem; opacity:0.6; line-height:1.4;">${h.desc}</p>
-                </div>
-            `).join('');
-
-            // Maintenance
-            const wrapMaint = document.getElementById('wrapMaintenance');
-            wrapMaint.innerHTML = data.concierge.maintenance.map(m => `
-                <div class="maintenance-item">
-                    <span style="background:rgba(255,215,0,0.1); color:#ffd700; padding:2px 6px; border-radius:5px; font-size:0.6rem; font-weight:700;">${m.period}</span>
-                    <div>
-                        <div style="font-weight:600; font-size:0.85rem;">${m.title}</div>
-                        <div style="font-size:0.75rem; opacity:0.6;">${m.desc}</div>
-                    </div>
-                </div>
-            `).join('');
-
-            // Resources
-            const wrapRes = document.getElementById('wrapResources');
-            wrapRes.innerHTML = data.concierge.resources.map(r => `
-                <a href="${r.url}" target="_blank" class="resource-link">${r.title} \u00c3\u00a2&acirc;\u20ac\u00a0&acirc;\u20ac\u201d</a>
-            `).join('');
-        }
-    }
-
-    function setRating(val) {
-        const stars = document.getElementById('wrapStars').children;
-        for (let i = 0; i < stars.length; i++) {
-            stars[i].classList.toggle('active', i < val);
-        }
-        localStorage.setItem('portal_rating_' + currentDossierCode, val);
-        // On pourrait envoyer &ccedil;a &agrave; l'API ici
-    }
-
-    function closeCelebration() {
-        const overlay = document.getElementById('overlayCelebration');
-        if (overlay) {
-            overlay.classList.remove('active');
-            setTimeout(() => {
-                overlay.style.display = 'none';
-            }, 800);
-        }
-    }
-
-    function createConfetti() {
-        for (let i = 0; i < 50; i++) {
-            const c = document.createElement('div');
-            c.style.position = 'fixed';
-            c.style.width = '10px';
-            c.style.height = '10px';
-            c.style.background = i % 2 === 0 ? 'var(--dash-primary)' : '#ffd700';
-            c.style.left = Math.random() * 100 + 'vw';
-            c.style.top = '-10px';
-            c.style.zIndex = '10001';
-            c.style.borderRadius = '2px';
-            c.style.opacity = Math.random();
-            document.body.appendChild(c);
-
-            const anim = c.animate([
-                { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
-                { transform: `translateY(110vh) rotate(${Math.random() * 720}deg)`, opacity: 0 }
-            ], {
-                duration: 2000 + Math.random() * 3000,
-                easing: 'cubic-bezier(0, .9, .6, 1)'
-            });
-            anim.onfinish = () => c.remove();
-        }
-    }
-
-    function copyPromoCode(code) {
-        navigator.clipboard.writeText(code);
-        alert("Code promo " + code + " copi&eacute; !");
-    }
-
-    function toggleMovingItem(code, idx) {
-        const key = `moving_${code}`;
-        const saved = JSON.parse(localStorage.getItem(key) || "{}");
-        const item = document.getElementById(`moving-${idx}`);
-        const box = item.querySelector('.check-box');
-        const text = item.querySelector('span');
-
-        const newState = !saved[idx];
-        saved[idx] = newState;
-        localStorage.setItem(key, JSON.stringify(saved));
-
-        // UI Update
-        if (newState) {
-            box.innerText = "\u00c3\u00a2\u00c5\u201c&acirc;\u20ac\u0153";
-            box.style.border = "2px solid #2ecc71";
-            box.style.background = "rgba(46,204,113,0.1)";
-            text.style.opacity = "1";
-            text.style.textDecoration = "line-through";
-            item.style.borderColor = "rgba(46,204,113,0.3)";
-        } else {
-            box.innerText = "";
-            box.style.border = "2px solid rgba(255,255,255,0.2)";
-            box.style.background = "transparent";
-            text.style.opacity = "0.6";
-            text.style.textDecoration = "none";
-            item.style.borderColor = "rgba(255,255,255,0.1)";
-        }
-    }
-
-    function toggleSection(id) {
-        document.getElementById(id).classList.toggle('collapsed');
+        document.getElementById('wrapMilestones').innerHTML = milestones.map(ms => '<div class="milestone-card"><div class="milestone-val">'+(ms.data ? ms.data.days : '--')+'</div><div class="milestone-label">'+ms.label+'</div><div style="font-size:0.6rem;opacity:0.4;margin-top:8px;">'+(ms.data ? ms.data.date : '')+'</div></div>').join('');
+        
+        // Moving
+        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, i) => '<div class="moving-item '+(c.done?'done':'')+'"><div class="check-box">'+(c.done?'\u2713':'')+'</div><span>'+c.name+'</span></div>').join('');
+        
+        // Partners
+        document.getElementById('wrapPartners').innerHTML = (data.partners || []).map(p => '<div class="partner-card"><div class="partner-promo-badge">'+p.benefit+'</div><div style="font-size:1.5rem;margin-bottom:10px;">'+p.icon+'</div><div class="team-role" style="font-size:0.5rem;">'+p.category+'</div><div class="team-name" style="font-size:1rem;">'+p.name+'</div><button class="copy-btn">Code: '+p.code+'</button></div>').join('');
     }
 
     async function handlePortalLogin(e) {
@@ -1860,163 +240,49 @@
         const code = document.getElementById('inpPortalCode').value.trim();
         const phone = document.getElementById('inpPortalPhone').value.trim();
         const btn = document.getElementById('btnPortalLogin');
-
-        btn.innerText = "V&eacute;rification s&eacute;curis&eacute;e...";
+        btn.innerText = "Connexion...";
         btn.disabled = true;
-        setSafeStyle('btnPortalLogin', 'opacity', '0.7');
 
-        try {
-            const response = await fetch('https://dossier.evanpatruno.ca/api/portal', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    codePortal: code,
-                    phoneLast4: phone
-                })
-            });
-
-            if (!response.ok) {
-                const errData = await response.json();
-
-                // --- GESTION DES DOSSIERS CLOS ---
-                if (errData.errorType === "WON" || errData.errorType === "LOST") {
-                    document.getElementById('portalOverlay').innerHTML = `
-                        <div class="login-card" style="max-width: 500px; border: 1px solid ${errData.errorType === 'WON' ? '#2ecc71' : '#e74c3c'}; box-shadow: 0 0 30px ${errData.errorType === 'WON' ? 'rgba(46,204,113,0.2)' : 'rgba(231,76,60,0.2)'};">
-                            <div style="font-size: 4rem; margin-bottom: 25px;">${errData.errorType === 'WON' ? '\u00c3\u00b0\u00c5\u00b8\u00c2\u008f&acirc;\u20ac\u00a0' : '\u00c3\u00b0\u00c5\u00b8&acirc;\u20ac\u0153\u00c2\u0081'}</div>
-                            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 900; color: #fff;">${errData.errorType === 'WON' ? 'Dossier Archiv&eacute;' : 'Dossier Clos'}</h2>
-                            <p style="color: rgba(255,255,255,0.8); line-height: 1.6; margin: 25px 0;">${errData.message}</p>
-                            <button onclick="location.reload()" class="login-btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);">Retourner &agrave; l'accueil</button>
-                        </div>
-                    `;
-                    return;
-                }
-
-                throw new Error(errData.details ? `${errData.error} (${errData.details})` : errData.error || 'Dossier introuvable');
-            }
-
-            const data = await response.json();
-
-            // RENDU DES DONN&Eacute;ES R&Eacute;ELLES
-            renderPortal(data);
-
-            document.getElementById('portalOverlay').classList.add('hidden');
-            document.getElementById('portalDash').classList.add('visible');
-
-        } catch (error) {
-            console.error('Erreur Portail:', error);
-
-            // FALLBACK TEST (EP-1001)
-            if (code === "EP-1001") {
-                console.log("Mode d&eacute;mo EP-1001");
+        if (code === "EP-1001" || code === "EP-1") {
+            setTimeout(() => {
                 renderPortal(MOCK_DATA);
                 document.getElementById('portalOverlay').classList.add('hidden');
-                document.getElementById('portalDash').classList.add('visible');
-            } else {
-                // Afficher l'erreur sous le formulaire (pas d'alert!)
-                let errBox = document.getElementById('loginErrorMsg');
-                if (!errBox) {
-                    errBox = document.createElement('p');
-                    errBox.id = 'loginErrorMsg';
-                    errBox.style.cssText = 'color:#e17;font-size:0.85rem;margin-top:15px;font-weight:600;';
-                    document.querySelector('.login-card form').appendChild(errBox);
-                }
-                errBox.innerText = '\u00c3\u00a2\u00c5\u00a1\u00c2\u00a0\u00c3\u00af\u00c2\u00b8\u00c2\u008f ' + (error.message || 'Code ou num&eacute;ro invalide.');
-            }
-        } finally {
-            btn.innerText = "Ouvrir mon dossier";
-            btn.disabled = false;
-            setSafeStyle('btnPortalLogin', 'opacity', '1');
+                document.getElementById('portalDash').style.display = 'block';
+                setTimeout(() => document.getElementById('portalDash').classList.add('visible'), 50);
+            }, 800);
+            return;
         }
+
+        try {
+            const resp = await fetch('https://dossier.evanpatruno.ca/api/portal', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ codePortal: code, phoneLast4: phone })
+            });
+            if (!resp.ok) throw new Error("Dossier inexistant");
+            const data = await resp.json();
+            renderPortal(data);
+            document.getElementById('portalOverlay').classList.add('hidden');
+            document.getElementById('portalDash').style.display = 'block';
+            setTimeout(() => document.getElementById('portalDash').classList.add('visible'), 50);
+        } catch (err) { alert(err.message); } finally { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
     }
 
-    // --- HELPERS (DECLARED FIRST) ---
-    const isIos = () => {
-        const userAgent = window.navigator.userAgent.toLowerCase();
-        return /iphone|ipad|ipod/.test(userAgent);
-    };
-    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+    function toggleSection(id) { document.getElementById(id).classList.toggle('collapsed'); }
 
-    const closePwaBanner = () => {
-        const banner = document.getElementById('pwaInstallBanner');
-        if (banner) banner.style.display = 'none';
-        // Optional: save to localStorage to not show again
-        localStorage.setItem('pwaBannerDismissed', 'true');
-    };
-
-    // --- SERVICE WORKER REGISTRATION (PWA) ---
+    // PWA
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; });
+    async function installPortalApp() {
+        if (!deferredPrompt) { window.location.href = "https://dossier.evanpatruno.ca/mon-dossier.html?code=" + (document.getElementById('inpPortalCode').value || 'EP-1001'); return; }
+        deferredPrompt.prompt();
+    }
+    
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            // Masquer le bouton d'installation si d&eacute;j&agrave; install&eacute;
-            const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-            if (isStandalone) {
-                const btn = document.getElementById('btnPwaLogin');
-                if (btn) btn.style.display = 'none';
-            }
-
-            navigator.serviceWorker.register('/sw.js')
-                .then(reg => console.log('SW Registered'))
-                .catch(err => console.log('SW Registration Failed', err));
+            const isS = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+            if (isS) { const b = document.getElementById('btnPwaLogin'); if (b) b.style.display = 'none'; }
+            navigator.serviceWorker.register('/sw.js').catch(() => {});
         });
     }
 
-    // --- PWA INSTALL LOGIC ---
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        const banner = document.getElementById('pwaInstallBanner');
-        if (banner) banner.style.display = 'flex';
-        console.log("PWA prompt capture ok");
-    });
-
-    // Fallback logic
-    setTimeout(() => {
-        const banner = document.getElementById('pwaInstallBanner');
-        if (banner && !localStorage.getItem('pwaBannerDismissed')) {
-            banner.style.display = 'flex';
-        }
-    }, 4000);
-
-    window.addEventListener('load', () => {
-        if (window.innerWidth <= 991 && !isInStandaloneMode() && !localStorage.getItem('pwaBannerDismissed')) {
-            const banner = document.getElementById('pwaInstallBanner');
-            if (banner) banner.style.display = 'flex';
-        }
-    });
-
-    function showPwaToast(msg) {
-        const existing = document.getElementById('pwaToast');
-        if (existing) existing.remove();
-        const toast = document.createElement('div');
-        toast.id = 'pwaToast';
-        toast.style.position = 'fixed';
-        toast.style.bottom = '30px';
-        toast.style.left = '50%';
-        toast.style.transform = 'translateX(-50%)';
-        toast.style.background = 'rgba(20,8,18,0.96)';
-        toast.style.color = '#fff';
-        toast.style.border = '1px solid rgba(135,50,118,0.6)';
-        toast.style.boxShadow = '0 0 30px rgba(135,50,118,0.3)';
-        toast.style.padding = '14px 24px';
-        toast.style.borderRadius = '50px';
-        toast.style.fontFamily = "'Outfit', sans-serif";
-        toast.style.fontSize = '0.85rem';
-        toast.style.fontWeight = '600';
-        toast.style.zIndex = '20000';
-        toast.style.textAlign = 'center';
-        toast.style.maxWidth = '90vw';
-        toast.innerHTML = msg;
-        document.body.appendChild(toast);
-        setTimeout(() => toast.remove(), 5000);
-    }
-
-    async function installPortalApp() {
-        const code = document.getElementById('inpPortalCode').value.toUpperCase() || 'EP-1001';
-        // Redirection vers la page sur le sous-domaine officiel
-        window.location.href = `https://dossier.evanpatruno.ca/mon-dossier.html?code=${code}`;
-    }
-
-</script>
-
-
-</body></html>
+</script></body></html>

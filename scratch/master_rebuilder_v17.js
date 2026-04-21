@@ -1,6 +1,59 @@
-<!-- SNIPPET v17 MASTER RECONSTRUCTION -->
-<style>
+const fs = require('fs');
 
+/**
+ * MASTER REBUILDER v17 - THE DEFINITIVE PORTAL RESTORATION
+ * - No file reading (bypass corrupted sources).
+ * - Full Design V8 (High-Fidelity).
+ * - 100% ASCII-safe (Hex escapes for every accent/icon).
+ */
+
+const PATH_SNIPPET = 'c:/Users/evanp/OneDrive/Desktop/PROGRAMME AI/evanpatruno.ca/snippets/pages/page_portal.html';
+const PATH_ROOT = 'c:/Users/evanp/OneDrive/Desktop/PROGRAMME AI/evanpatruno.ca/mon-dossier.html';
+
+// 1. Helper to escape strings for JS (\uXXXX) and HTML (&XXXX;)
+function hJs(str) {
+    let out = '';
+    for (let i = 0; i < str.length; i++) {
+        const c = str.charCodeAt(i);
+        if (c > 127) {
+            if (c >= 0xD800 && c <= 0xDBFF && i + 1 < str.length) {
+                const next = str.charCodeAt(i+1);
+                if (next >= 0xDC00 && next <= 0xDFFF) {
+                    out += `\\u${c.toString(16).padStart(4, '0')}\\u${next.toString(16).padStart(4, '0')}`;
+                    i++; continue;
+                }
+            }
+            out += `\\u${c.toString(16).padStart(4, '0')}`;
+        } else {
+            out += str[i];
+        }
+    }
+    return out;
+}
+
+function hHtml(str) {
+    let out = '';
+    for (let i = 0; i < str.length; i++) {
+        const c = str.charCodeAt(i);
+        if (c > 127) {
+            if (c >= 0xD800 && c <= 0xDBFF && i + 1 < str.length) {
+                const next = str.charCodeAt(i+1);
+                if (next >= 0xDC00 && next <= 0xDFFF) {
+                    const full = ((c - 0xD800) << 10) + (next - 0xDC00) + 0x10000;
+                    out += `&#${full};`;
+                    i++; continue;
+                }
+            }
+            out += `&#${c};`;
+        } else {
+            out += str[i];
+        }
+    }
+    return out;
+}
+
+// 2. CSS - Full v8 design (White titles, Magenta bar, etc.)
+const css = hHtml(`
     :root {
         --dash-primary: #873276;
         --dash-accent: #d4af37;
@@ -87,21 +140,22 @@
         .step-node { flex-direction: row; width: 100%; gap: 20px; height: 70px; }
         .step-label { margin-top: 0; text-align: left; }
     }
+`);
 
-</style>
-
+// 3. HTML - Restoration of all blocks
+const html = hHtml(`
 <div class="portal-main-wrapper">
     <div class="portal-aura"></div>
     <div class="portal-overlay" id="portalOverlay">
         <div class="login-card">
-            <h2 style="font-family:'Outfit'; font-size:2.2rem; font-weight:900; margin-bottom:8px; color:#fff;">Acc&#232;s au Dossier</h2>
+            <h2 style="font-family:'Outfit'; font-size:2.2rem; font-weight:900; margin-bottom:8px; color:#fff;">Accès au Dossier</h2>
             <p style="color:rgba(255,255,255,0.6); margin-bottom:35px;">Connectez-vous pour voir l'avancement.</p>
             <form onsubmit="handlePortalLogin(event)">
                 <input type="text" placeholder="CODE DOSSIER" class="login-input" id="inpPortalCode" required>
-                <input type="password" maxlength="4" placeholder="CODE T&#201;L&#201;PHONE" class="login-input" id="inpPortalPhone" required>
+                <input type="password" maxlength="4" placeholder="CODE TÉLÉPHONE" class="login-input" id="inpPortalPhone" required>
                 <button type="submit" class="login-btn" id="btnPortalLogin">Ouvrir mon dossier</button>
                 <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
-                    <span>&#128242;</span> <span>Installer l'app PWA</span>
+                    <span>📲</span> <span>Installer l'app PWA</span>
                 </button>
             </form>
         </div>
@@ -116,8 +170,8 @@
         <div style="background:rgba(255,255,255,0.03); padding:40px; border-radius:45px; border:1px solid var(--dash-border); display:flex; align-items:center; gap:50px; margin-bottom:40px; flex-wrap:wrap;">
             <div style="flex:1; min-width:300px;">
                 <div id="badgeStage" style="background:rgba(46,204,113,0.1); color:#2ecc71; padding:6px 16px; border-radius:50px; display:inline-block; font-size:0.75rem; font-weight:900; margin-bottom:15px; border:1px solid rgba(46,204,113,0.3);">ANALYSE</div>
-                <h2 id="txtPropName" style="font-size:2.5rem; margin:0; font-family:'Outfit'; color:#fff;">Propri&#233;t&#233; Priv&#233;e</h2>
-                <p id="txtPropCity" style="opacity:0.5; font-size:1.2rem; margin-top:5px;">Montr&#233;al</p>
+                <h2 id="txtPropName" style="font-size:2.5rem; margin:0; font-family:'Outfit'; color:#fff;">Propriété Privée</h2>
+                <p id="txtPropCity" style="opacity:0.5; font-size:1.2rem; margin-top:5px;">Montréal</p>
             </div>
             <div class="cockpit-ring-wrap">
                 <svg class="cockpit-svg" viewBox="0 0 120 120">
@@ -132,7 +186,7 @@
         <div class="milestone-grid" id="wrapMilestones"></div>
 
         <div class="section-wrapper" id="secTimeline">
-            <div class="section-header" onclick="toggleSection('secTimeline')"><h3>Timeline de Transaction</h3><div class="section-chevron">&#9660;</div></div>
+            <div class="section-header" onclick="toggleSection('secTimeline')"><h3>Timeline de Transaction</h3><div class="section-chevron">▼</div></div>
             <div class="section-content">
                 <div class="timeline-steps" id="wrapTimeline">
                     <div class="timeline-progress-bar" id="barProgress"></div>
@@ -142,36 +196,37 @@
         </div>
 
         <div class="section-wrapper" id="secTeam">
-            <div class="section-header" onclick="toggleSection('secTeam')"><h3>Votre &#201;quipe</h3><div class="section-chevron">&#9660;</div></div>
+            <div class="section-header" onclick="toggleSection('secTeam')"><h3>Votre Équipe</h3><div class="section-chevron">▼</div></div>
             <div class="section-content"><div class="team-grid" id="wrapTeam"></div></div>
         </div>
 
         <div class="section-wrapper collapsed" id="secMoving">
-            <div class="section-header" onclick="toggleSection('secMoving')"><h3>Checklist de D&#233;m&#233;nagement</h3><div class="section-chevron">&#9660;</div></div>
+            <div class="section-header" onclick="toggleSection('secMoving')"><h3>Checklist de Déménagement</h3><div class="section-chevron">▼</div></div>
             <div class="section-content"><div class="moving-grid" id="wrapMoving"></div></div>
         </div>
 
         <div class="section-wrapper collapsed" id="secPartners">
-            <div class="section-header" onclick="toggleSection('secPartners')"><h3>Partenaires Experts</h3><div class="section-chevron">&#9660;</div></div>
+            <div class="section-header" onclick="toggleSection('secPartners')"><h3>Partenaires Experts</h3><div class="section-chevron">▼</div></div>
             <div class="section-content"><div class="partner-grid" id="wrapPartners"></div></div>
         </div>
     </div>
 </div>
+`);
 
-<script>
-
+// 4. JS Logic - Full Prod + Demonstration strings
+const logic = hJs(`
     const MOCK_DATA = {
-        firstName: "Evan", code: "EP-1001", property: "Avenue Patruno", city: "Montr\u00e9al", stage: "Analyse des offres",
+        firstName: "Evan", code: "EP-1001", property: "Avenue Patruno", city: "Montr\\u00e9al", stage: "Analyse des offres",
         timeline: [
-            { label: "Pr\u00e9paration", icon: "\uD83D\uDCCB", status: "completed" },
-            { label: "Offre d\u00e9pos\u00e9e", icon: "\uD83D\uDD0D", status: "active" },
-            { label: "Conditions", icon: "\uD83D\uDEE1\uFE0F", status: "pending" },
-            { label: "Notaire", icon: "\u2712\uFE0F", status: "pending" },
-            { label: "Succ\u00e8s", icon: "\uD83C\uDFE0", status: "pending" }
+            { label: "Pr\\u00e9paration", icon: "\\uD83D\\uDCCB", status: "completed" },
+            { label: "Offre d\\u00e9pos\\u00e9e", icon: "\\uD83D\\uDD0D", status: "active" },
+            { label: "Conditions", icon: "\\uD83D\\uDEE1\\uFE0F", status: "pending" },
+            { label: "Notaire", icon: "\\u2712\\uFE0F", status: "pending" },
+            { label: "Succ\\u00e8s", icon: "\\uD83C\\uDFE0", status: "pending" }
         ],
         team: [
-            { role: "Votre Courtier", name: "Evan Patruno", icon: "\uD83D\uDCF1", phone: "514-567-3249", email: "evan@patruno.ca" },
-            { role: "Notaire", name: "Me Jean Picard", icon: "\u2712\uFE0F", phone: "514-555-0101", email: "jean@notaire.ca" }
+            { role: "Votre Courtier", name: "Evan Patruno", icon: "\\uD83D\\uDCF1", phone: "514-567-3249", email: "evan@patruno.ca" },
+            { role: "Notaire", name: "Me Jean Picard", icon: "\\u2712\\uFE0F", phone: "514-555-0101", email: "jean@notaire.ca" }
         ],
         milestones: {
             signature: { days: 25, date: "15 Mai 2026" },
@@ -179,11 +234,11 @@
             signature: { days: 25, date: "15 Mai 2026" }
         },
         movingChecklist: [
-            { name: "Aviser son propri\u00e9taire", done: true },
-            { name: "R\u00e9server d\u00e9m\u00e9nageurs", done: false },
+            { name: "Aviser son propri\\u00e9taire", done: true },
+            { name: "Réserver d\\u00e9m\\u00e9nageurs", done: false },
             { name: "Changer les serrures", done: false }
         ],
-        partners: [{ name: "D\u00e9m\u00e9nagement Expert", icon: "\uD83D\uDE66", category: "Services", benefit: "10% Rabais", code: "EVAN10" }]
+        partners: [{ name: "D\\u00e9m\\u00e9nagement Expert", icon: "\\uD83D\\uDE66", category: "Services", benefit: "10% Rabais", code: "EVAN10" }]
     };
 
     function renderPortal(data) {
@@ -230,7 +285,7 @@
         document.getElementById('wrapMilestones').innerHTML = milestones.map(ms => '<div class="milestone-card"><div class="milestone-val">'+(ms.data ? ms.data.days : '--')+'</div><div class="milestone-label">'+ms.label+'</div><div style="font-size:0.6rem;opacity:0.4;margin-top:8px;">'+(ms.data ? ms.data.date : '')+'</div></div>').join('');
         
         // Moving
-        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, i) => '<div class="moving-item '+(c.done?'done':'')+'"><div class="check-box">'+(c.done?'\u2713':'')+'</div><span>'+c.name+'</span></div>').join('');
+        document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map((c, i) => '<div class="moving-item '+(c.done?'done':'')+'"><div class="check-box">'+(c.done?'\\u2713':'')+'</div><span>'+c.name+'</span></div>').join('');
         
         // Partners
         document.getElementById('wrapPartners').innerHTML = (data.partners || []).map(p => '<div class="partner-card"><div class="partner-promo-badge">'+p.benefit+'</div><div style="font-size:1.5rem;margin-bottom:10px;">'+p.icon+'</div><div class="team-role" style="font-size:0.5rem;">'+p.category+'</div><div class="team-name" style="font-size:1rem;">'+p.name+'</div><button class="copy-btn">Code: '+p.code+'</button></div>').join('');
@@ -285,5 +340,13 @@
             navigator.serviceWorker.register('/sw.js').catch(() => {});
         });
     }
+`);
 
-</script>
+// 5. Final Assembly
+const snippet = `<!-- SNIPPET v17 MASTER RECONSTRUCTION -->\n<style>\n${css}\n</style>\n${html}\n<script>\n${logic}\n</script>`;
+const root = `<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"><title>Portail Client | Evan Patruno</title><style>body{margin:0;background:#1a0516;}\n${css}\n</style></head><body>\n${html}\n<script>\n${logic}\n</script></body></html>`;
+
+fs.writeFileSync(PATH_SNIPPET, snippet, 'utf8');
+fs.writeFileSync(PATH_ROOT, root, 'utf8');
+
+console.log('Master v17 Reconstruction Successful.');
