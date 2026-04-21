@@ -385,7 +385,7 @@
         height: 2px;
         background: var(--dash-primary);
         box-shadow: 0 0 20px var(--dash-primary);
-        transition: all 1.8s ease;
+        transition: width 1.8s ease, height 1.8s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1;
     }
 
@@ -452,6 +452,91 @@
         50%       { box-shadow: 0 0 24px rgba(135, 50, 118, 0.9), 0 0 50px rgba(135, 50, 118, 0.5); }
     }
 
+    /* ─── COCKPIT PROGRESS RING ─── */
+    .cockpit-ring-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0; /* Removed margin auto */
+        position: relative;
+        width: 160px;
+        height: 160px;
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+        .cockpit-ring-wrap { width: 130px; height: 130px; margin: 10px auto 0; }
+    }
+
+    .cockpit-svg {
+        width: 100%;
+        height: 100%;
+        transform: rotate(-90deg); /* Start from top */
+    }
+
+    .ring-bg {
+        fill: none;
+        stroke: rgba(255, 255, 255, 0.06);
+        stroke-width: 7;
+    }
+
+    .ring-progress {
+        fill: none;
+        stroke: url(#ringGrad);
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-dasharray: 314.16;
+        stroke-dashoffset: 314.16; /* Starts empty, JS fills it */
+        transition: stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1),
+                    filter 1.8s ease;
+        filter: drop-shadow(0 0 8px #873276) drop-shadow(0 0 18px rgba(135,50,118,0.5));
+    }
+
+    .cockpit-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        pointer-events: none;
+    }
+
+    .cockpit-center span {
+        display: block;
+        font-family: 'Outfit', sans-serif;
+        font-size: 2rem;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1;
+        text-shadow: 0 0 20px rgba(135, 50, 118, 0.8);
+    }
+
+    @media (max-width: 768px) {
+        .cockpit-center span { font-size: 1.6rem; }
+    }
+
+    .cockpit-center small {
+        display: block;
+        font-size: 0.6rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--dash-primary);
+        margin-top: 3px;
+        opacity: 0.85;
+    }
+
+    .cockpit-label {
+        margin-top: 10px;
+        font-size: 0.7rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: rgba(255,255,255,0.4);
+        text-align: center;
+    }
+
     /* ─── MOBILE TIMELINE ─── */
     @media (max-width: 768px) {
 
@@ -462,23 +547,29 @@
             gap: 0 !important;
         }
 
-        /* Rail vertical gris */
+        /* Rail vertical gris — left = padding-steps(15) + padding-node(10) + rayon-dot(27) = 52px, décalé -1px pour centrer le 2px */
         .timeline-steps::before {
             top: 27px !important;
-            left: 27px !important;
+            left: 51px !important;
             width: 2px !important;
             height: calc(100% - 54px) !important;
             bottom: auto !important;
+            background: rgba(255, 255, 255, 0.08) !important;
         }
 
-        /* Barre de progression verticale magenta */
+        /* Barre de progression verticale rose néon */
+        /* IMPORTANT : pas de !important sur height/width/left/background/box-shadow */
+        /* → le JS inline style doit pouvoir les surclasser pour l'animation */
         .timeline-progress-bar {
             top: 27px !important;
-            left: 27px !important;
-            width: 2px !important;
-            height: 0% !important;
+            left: 51px;
+            width: 2px;
+            height: 0;
             bottom: auto !important;
-            transition: height 1.8s ease !important;
+            background: linear-gradient(to bottom, var(--dash-primary), #ff4db8);
+            box-shadow: 0 0 12px var(--dash-primary), 0 0 24px rgba(135, 50, 118, 0.6), 0 0 4px #ff4db8;
+            transition: height 1.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            border-radius: 10px;
         }
 
         /* Nœud Mobile : ligne (dot gauche, label droite) */
@@ -1198,7 +1289,7 @@
             </div>
         </header>
 
-        <div class="property-card-premium" style="justify-content: center; text-align: center;">
+        <div class="property-card-premium">
             <div style="flex: 1;">
                 <div class="badge-premium" id="badgeStage" style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.5);">
                     --
@@ -1209,6 +1300,28 @@
                 <p id="txtPropCity" style="color: rgba(255,255,255,0.5); font-size: 1.2rem; margin-top: 10px; font-weight: 500;">
                     --
                 </p>
+            </div>
+
+            <!-- COCKPIT PROGRESS RING (Side by side on desktop) -->
+            <div style="text-align: center; flex-shrink: 0;">
+                <div class="cockpit-ring-wrap" id="cockpitRingWrap">
+                    <svg class="cockpit-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#873276"/>
+                                <stop offset="50%" stop-color="#c040a0" id="ringGradMid"/>
+                                <stop offset="100%" stop-color="#ff4db8" id="ringGradEnd"/>
+                            </linearGradient>
+                        </defs>
+                        <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                        <circle class="ring-progress" id="ringProgress" cx="60" cy="60" r="50"/>
+                    </svg>
+                    <div class="cockpit-center">
+                        <span id="ringPct">0%</span>
+                        <small>Avancement</small>
+                    </div>
+                </div>
+                <div class="cockpit-label" id="ringLabel">Calcul en cours…</div>
             </div>
         </div>
 
@@ -1422,14 +1535,71 @@
             const bar = document.getElementById('barProgress');
             if (bar) {
                 const total = data.timeline.length;
-                const safePct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 80) : 0;
+                const safePct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
+                
                 if (window.innerWidth <= 768) {
+                    // Mobile : barre verticale en pixels absolus
+                    const railH = wrapT.offsetHeight - 54; // hauteur disponible du rail
+                    const pxH = (safePct / 100) * railH;
                     bar.style.removeProperty('width');
-                    bar.style.height = `${safePct}%`;
+                    bar.style.height = pxH + 'px';
+                    bar.style.width = '2px';
+                    bar.style.left = '51px';
+                    bar.style.background = 'linear-gradient(to bottom, #873276, #ff4db8)';
+                    bar.style.boxShadow = '0 0 12px #873276, 0 0 24px rgba(135,50,118,0.6), 0 0 4px #ff4db8';
                 } else {
                     bar.style.removeProperty('height');
-                    bar.style.width = `${safePct}%`;
+                    bar.style.width = `${safePct * 0.8}%`; // Garde le 80% pour le desktop horizontal
+                    bar.style.height = '2px';
+                    bar.style.left = '10%';
+                    bar.style.boxShadow = '0 0 20px #873276';
                 }
+            }
+
+            // ── COCKPIT RING ANIMATION ──
+            const ring = document.getElementById('ringProgress');
+            const ringPctEl = document.getElementById('ringPct');
+            const ringLabel = document.getElementById('ringLabel');
+            if (ring && ringPctEl) {
+                const total = data.timeline.length;
+                const pct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
+                const circumference = 314.16;
+                const offset = circumference - (pct / 100) * circumference;
+
+                // Couleur adaptative selon le %
+                const gradMid = document.getElementById('ringGradMid');
+                const gradEnd = document.getElementById('ringGradEnd');
+                if (pct >= 100) {
+                    if (gradMid) gradMid.setAttribute('stop-color', '#27ae60');
+                    if (gradEnd) gradEnd.setAttribute('stop-color', '#2ecc71');
+                    ring.style.filter = 'drop-shadow(0 0 10px #2ecc71) drop-shadow(0 0 22px rgba(46,204,113,0.5))';
+                } else if (pct >= 60) {
+                    if (gradMid) gradMid.setAttribute('stop-color', '#c89b2a');
+                    if (gradEnd) gradEnd.setAttribute('stop-color', '#d4af37');
+                    ring.style.filter = 'drop-shadow(0 0 10px #d4af37) drop-shadow(0 0 22px rgba(212,175,55,0.5))';
+                }
+
+                // Animate stroke + count-up
+                setTimeout(() => {
+                    ring.style.strokeDashoffset = offset;
+                    let current = 0;
+                    const target = Math.round(pct);
+                    const step = Math.max(1, Math.ceil(target / 60));
+                    const timer = setInterval(() => {
+                        current = Math.min(current + step, target);
+                        ringPctEl.textContent = current + '%';
+                        if (current >= target) clearInterval(timer);
+                    }, 30);
+
+                    // Label contextuel
+                    const activeStep = data.timeline.find(s => s.status === 'active');
+                    const doneCount = data.timeline.filter(s => s.status === 'completed').length;
+                    if (ringLabel) {
+                        if (pct >= 100) ringLabel.textContent = '🏆 Transaction complétée!';
+                        else if (activeStep) ringLabel.textContent = `Étape active : ${activeStep.label}`;
+                        else ringLabel.textContent = `${doneCount} étape${doneCount > 1 ? 's' : ''} complétée${doneCount > 1 ? 's' : ''}`;
+                    }
+                }, 400);
             }
         }, 200);
 

@@ -7,7 +7,7 @@ from datetime import datetime
 BIN_ID = "694462e7d0ea881f4032d140" # We can use the same bin under a different key or a dedicated one. 
 # Let's use a dedicated key 'boc_data' inside the same bin to keep it simple, 
 # or a separate Bin. For safety, let's use a separate Bin for the info hub.
-BOC_BIN_ID = "69e2a081856a682189465e17"
+BOC_BIN_ID = "69e6d40f856a6821895644ed"
 MASTER_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
 
 def get_boc_rates():
@@ -94,7 +94,8 @@ def save_to_cloud(data):
     url = f"https://api.jsonbin.io/v3/b/{BOC_BIN_ID}"
     headers = {
         "Content-Type": "application/json",
-        "X-Master-Key": MASTER_KEY
+        "X-Master-Key": MASTER_KEY,
+        "X-Bin-Private": "false" # CRITICAL: Ensure bin is public
     }
     try:
         response = requests.put(url, json=data, headers=headers)

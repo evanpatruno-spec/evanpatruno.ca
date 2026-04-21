@@ -294,52 +294,80 @@ INSTRUCTIONS:
         display: none !important;
     }
 
-    /* 7. Dropdown Menu Arrow Color Fix - AGGRESSIVE OVERRIDE */
-    /* Cible tous les SVG dans la navigation (chevrons, flèches, etc.) */
-    header svg,
-    nav svg,
-    .zpmenu svg,
-    .zpmenu-container svg,
-    .theme-header-wrapper svg,
-    .theme-nav svg,
-    [class*="menu"] svg,
-    [class*="nav"] svg,
-    [class*="header"] svg {
-        fill: #FFFFFF !important;
-        stroke: #FFFFFF !important;
-        color: #FFFFFF !important;
+    /* 7. PREMIUM MENU FIX (Dark Cockpit Aesthetic) */
+    
+    /* Avoid wrapping on desktop: Larger container and tighter spacing */
+    .theme-header .zpcontainer,
+    .theme-menu-area .zpcontainer {
+        max-width: 1400px !important;
+        width: 95% !important;
     }
 
-    /* Cible les pseudo-éléments ::after utilisés comme flèches CSS */
-    .zpmenu li a::after,
-    .zpmenu li span::after,
-    [class*="submenu-indicator"]::after,
-    [class*="menu-arrow"]::after,
-    [class*="dropdown"]::after {
-        border-color: #FFFFFF transparent transparent transparent !important;
-        border-top-color: #FFFFFF !important;
+    .zpmenu-wrapper .zpnav-item a {
+        font-size: 13px !important;
+        letter-spacing: 0.05em !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        transition: all 0.3s ease !important;
     }
 
-    /* Cible les paths SVG directement */
-    header path,
-    nav path,
-    .zpmenu path,
-    .zpmenu-container path,
-    [class*="menu"] path,
-    [class*="nav"] path {
-        fill: #FFFFFF !important;
-        stroke: #FFFFFF !important;
+    /* Target "MON DOSSIER" specifically for a button look */
+    .zpnav-item a[href*="dossier" i],
+    .zpnav-item a[href*="portal" i] {
+        border: 1px solid rgba(212, 175, 55, 0.4) !important;
+        border-radius: 50px !important;
+        padding: 6px 16px !important;
+        margin-left: 10px !important;
+        background: rgba(212, 175, 55, 0.05) !important;
+        color: #d4af37 !important;
+    }
+    
+    .zpnav-item a[href*="dossier" i]:hover {
+        background: rgba(212, 175, 55, 0.15) !important;
+        border-color: #d4af37 !important;
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.3) !important;
     }
 
-    /* Forcer la couleur sur l'élément span/i indicateur */
-    [class*="indicator"],
-    [class*="caret"],
-    [class*="arrow"],
-    .zpmenu-indicator,
+    /* Clean up separators (No more neon green) */
+    .zpnav-sep {
+        color: rgba(135, 50, 118, 0.4) !important;
+        font-weight: 300 !important;
+        margin: 0 4px !important;
+    }
+
+    /* Dropdown Arrows & Indicators (Professional Chevrons) */
+    header svg, nav svg, .zpmenu svg, [class*="nav"] svg {
+        fill: #873276 !important;
+        stroke: #873276 !important;
+        color: #873276 !important;
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    /* Fix the "==" mobile indicator issue */
+    .zpnav-arrow, 
+    .zpmenu-indicator, 
     .zpsubmenu-indicator {
-        color: #FFFFFF !important;
-        border-color: #FFFFFF transparent transparent !important;
+        color: #873276 !important;
+        font-size: 10px !important;
+        border: none !important;
+        background: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
+
+    /* Ensure mobile menu header is dark */
+    .zpmenu-mobile-header, 
+    .theme-mobile-header-slidewrapper {
+        background-color: #120010 !important;
+    }
+
+    /* Mobile Menu Items spacing */
+    .zpmenu-mobile-container .zpnav-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
 </style>
 
 <script>
@@ -381,14 +409,18 @@ INSTRUCTIONS:
 </script>
 
 
-<!-- Indique au téléphone que le thème est sombre (UI barre d'adresse) -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<meta name="theme-color" content="#1e0a19">
+<!-- PWA & MOBILE OPTIMIZATION -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="EP Portail">
+<meta name="theme-color" content="#1a0516">
 <meta name="color-scheme" content="dark">
 
 <!-- Icons & Favicons -->
+<link rel="manifest" href="/manifest.json">
 <link rel="icon" type="image/png" href="https://www.evanpatruno.ca/files/logo.png">
-<link rel="apple-touch-icon" href="https://www.evanpatruno.ca/files/logo.png">
+<link rel="apple-touch-icon" href="/pwa-icon-512.png">
 <link rel="shortcut icon" href="https://www.evanpatruno.ca/files/logo.png">
 
 <!-- Primary Meta Tags -->
