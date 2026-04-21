@@ -236,7 +236,19 @@
 
         document.getElementById('wrapTeam').innerHTML = (data.team || []).map(t => '<div class="team-card"><div class="team-icon">'+t.icon+'</div><div class="team-role">'+t.role+'</div><div class="team-name">'+t.name+'</div></div>').join('');
         const m = data.milestones || {};
-        document.getElementById('wrapMilestones').innerHTML = [ { label: 'Inspection', data: m.inspection }, { label: 'Signature', data: m.signature } ].map(ms => '<div class="milestone-card"><div class="milestone-val">'+(ms.data ? ms.data.days : '--')+'</div><div class="milestone-label">'+ms.label+'</div><div style="font-size:0.6rem;opacity:0.4;margin-top:8px;">'+(ms.data ? ms.data.date : '')+'</div></div>').join('');
+        const milestonesConfig = [
+            { label: 'Financement', data: m.financing },
+            { label: 'Inspection', data: m.inspection },
+            { label: 'Conditions', data: m.otherConditions },
+            { label: 'Signature', data: m.signature },
+            { label: 'Occupation', data: m.occupation }
+        ];
+        document.getElementById('wrapMilestones').innerHTML = milestonesConfig.map(ms => {
+            const hasData = ms.data && ms.data.days !== undefined && ms.data.days !== null;
+            const days = hasData ? ms.data.days : '--';
+            const date = hasData ? ms.data.date : '';
+            return '<div class="milestone-card"><div class="milestone-val">'+days+'</div><div class="milestone-label">'+ms.label+'</div><div style="font-size:0.6rem;opacity:0.4;margin-top:8px;">'+date+'</div></div>';
+        }).join('');
         document.getElementById('wrapMoving').innerHTML = (data.movingChecklist || []).map(c => '<div class="moving-item '+(c.done?'done':'')+'"><div class="check-box">'+(c.done?'\u2713':'')+'</div><span>'+c.name+'</span></div>').join('');
         
         // Concierge
