@@ -33,19 +33,19 @@ export default async function handler(req, res) {
 
         // --- GESTION MLS (SÉCURISÉE) ---
         if (action === 'requestMLS') {
-            const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
+            const mlsSearchResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
                 method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
-            const sData = await sResp.json();
-            let dealId = (cleanCode === "EP-1") ? "6466486000011930049" : (sData.data ? sData.data[0].id : null);
+            const mlsSearchData = await mlsSearchResp.json();
+            let dealIdForNote = (cleanCode === "EP-1") ? "6466486000011930049" : (mlsSearchData.data ? mlsSearchData.data[0].id : null);
             
-            if (dealId) {
+            if (dealIdForNote) {
                 await fetch(`${apiDomain}/crm/v2/Notes`, {
                     method: 'POST',
                     headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         data: [{
-                            Parent_Id: dealId,
+                            Parent_Id: dealIdForNote,
                             Note_Title: "DEMANDE DOCUMENTS MLS",
                             Note_Content: `MLS: ${mlsNumber}`,
                             se_module: "Potentials"
