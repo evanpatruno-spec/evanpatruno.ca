@@ -2055,9 +2055,31 @@
     }
 
     async function installPortalApp() {
-        const code = document.getElementById('inpPortalCode').value.toUpperCase() || 'EP-1001';
-        // Redirection vers la page sur le sous-domaine officiel
-        window.location.href = `https://dossier.evanpatruno.ca/mon-dossier.html?code=${code}`;
+        const codeInput = document.getElementById('inpPortalCode');
+        const code = codeInput ? codeInput.value.toUpperCase() : '';
+        
+        // Si d&eacute;j&agrave; sur le serveur PWA d&eacute;di&eacute; (Vercel)
+        if (window.location.hostname.includes('dossier.evanpatruno.ca')) {
+            if (isIos()) {
+                showPwaToast("&#x1f34e; Sur iPhone : Touchez l'ic&ocirc;ne <b>Partager</b> en bas de l'&eacute;cran, puis choisissez <b>Sur l'&eacute;cran d'accueil</b>.");
+                return;
+            }
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    console.log('Installation accept&eacute;e');
+                }
+                deferredPrompt = null;
+            } else {
+                showPwaToast("&#x1f4a1; Ouvrez les options de votre navigateur (les 3 petits points) et s&eacute;lectionnez 'Ajouter &agrave; l'&eacute;cran d'accueil'.");
+            }
+        } 
+        // Si sur Zoho Sites, on tire l'utilisateur vers le serveur PWA
+        else {
+            const redirectUrl = `https://dossier.evanpatruno.ca/mon-dossier.html${code ? '?code=' + code : ''}`;
+            window.location.href = redirectUrl;
+        }
     }
 
 </script>
