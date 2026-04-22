@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V5.8 - STABLE PRODUCTION)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V5.9 - FULL CONTENT RESTORE)
  */
 
 export default async function handler(req, res) {
@@ -30,24 +30,23 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Auth failed' });
 
-        // --- TRAITEMENT MLS ---
+        // --- ACTION MLS ---
         if (action === 'requestMLS' && mlsNumber) {
-            let dealId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
-            if (!dealId) {
+            let targetId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
+            if (!targetId) {
                 const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
                     method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
                 });
                 const sData = await sResp.json();
-                if (sData.data) dealId = sData.data[0].id;
+                if (sData.data) targetId = sData.data[0].id;
             }
-
-            if (dealId) {
+            if (targetId) {
                 await fetch(`${apiDomain}/crm/v2/Notes`, {
                     method: 'POST',
                     headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         data: [{
-                            Parent_Id: dealId,
+                            Parent_Id: targetId,
                             Note_Title: "DEMANDE DOCUMENTS MLS",
                             Note_Content: `MLS: ${mlsNumber}`,
                             se_module: "Potentials"
@@ -58,7 +57,7 @@ export default async function handler(req, res) {
             }
         }
 
-        // --- CHARGEMENT DASHBOARD ---
+        // --- DASHBOARD DATA ---
         let deal = null;
         if (cleanCode === "EP-1") {
             const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
@@ -118,7 +117,22 @@ export default async function handler(req, res) {
                 { category: "Assurances", name: "Tranquillité Plus", icon: "&#x1f6e1;&#xfe0f;", benefit: "50$ en carte cadeau", code: "EP-PROMO" }
             ],
             team: team,
-            concierge: { smartHome: [], maintenance: [] }
+            concierge: {
+                smartHome: [
+                    { category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte.", icon: "&#x1f514;" },
+                    { category: "Confort", title: "Thermostat", desc: "Optimisez votre chauffage.", icon: "&#x1f321;&#xfe0f;" },
+                    { category: "Surveillance", title: "Caméra Extérieure", desc: "Gardez un œil sur votre entrée.", icon: "&#x1f4f9;" }
+                ],
+                maintenance: [
+                    { title: "Gouttières", period: "Automne", desc: "Nettoyage avant les gels." },
+                    { title: "Filtres Fournaise", period: "3 mois", desc: "Assurez la qualité de l'air." },
+                    { title: "Toiture", period: "Printemps", desc: "Vérification après l'hiver." }
+                ],
+                resources: [
+                    { title: "Tout sur le CELIAPP", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" },
+                    { title: "Régime d'Accès à la Propriété (RAP)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-enregistres-epargne-retraite/regime-accession-a-propriete.html" }
+                ]
+            }
         });
     } catch (error) {
         return res.status(500).json({ error: 'Erreur', details: error.message });
