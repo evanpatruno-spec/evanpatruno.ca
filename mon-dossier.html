@@ -2075,13 +2075,53 @@
                 showPwaToast("&#x1f4a1; Ouvrez les options de votre navigateur (les 3 petits points) et s&eacute;lectionnez 'Ajouter &agrave; l'&eacute;cran d'accueil'.");
             }
         } 
-        // Si sur Zoho Sites, on tire l'utilisateur vers le serveur PWA
+        // Si sur Zoho Sites, on tire l'utilisateur vers le serveur PWA avec l'intention d'installation en m&eacute;moire
         else {
-            const redirectUrl = `https://dossier.evanpatruno.ca/mon-dossier.html${code ? '?code=' + code : ''}`;
+            const redirectUrl = `https://dossier.evanpatruno.ca/mon-dossier.html?action=install${code ? '&code=' + code : ''}`;
             window.location.href = redirectUrl;
         }
     }
 
+</script>
+<script>
+    // UX D'INSTALLATION AUTOMATIS&Eacute;E (VERCEL SEULEMENT)
+    if (window.location.hostname.includes('dossier.evanpatruno.ca')) {
+        // Cacher ind&eacute;finiment le bouton depuis l'interface standard (redondant ici)
+        const btnPwa = document.getElementById('btnPwaLogin');
+        if (btnPwa) btnPwa.style.display = 'none';
+
+        // Si l'utilisateur a expess&eacute;ment r&eacute;clam&eacute; l'installation via la redirection
+        if (window.location.search.includes('action=install')) {
+            const installOverlay = document.createElement('div');
+            installOverlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(20,8,18,0.98);z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Outfit';";
+            installOverlay.innerHTML = `
+                <div style="font-size:4.5rem;margin-bottom:20px;animation:pulseDot 2s infinite;">&#x1f4f1;</div>
+                <h2 style="font-size:2.2rem;margin-bottom:10px;">Derni&egrave;re &Eacute;tape</h2>
+                <p style="opacity:0.6;margin-bottom:45px;text-align:center;padding:0 25px;">Veuillez confirmer l'installation pour activer l'App.</p>
+                <button id="btnFinalInstall" style="background:#873276;border:none;color:#fff;padding:18px 45px;font-size:1.15rem;font-weight:900;border-radius:50px;box-shadow:0 0 30px rgba(135,50,118,0.5);cursor:pointer;display:flex;align-items:center;gap:10px;">Confirmer l'installation &#x2193;</button>
+                <button id="btnCancelInstall" style="background:transparent;border:none;color:#fff;opacity:0.4;margin-top:25px;text-decoration:underline;cursor:pointer;">Me connecter normalement</button>
+            `;
+            document.body.appendChild(installOverlay);
+
+            document.getElementById('btnCancelInstall').addEventListener('click', () => {
+                installOverlay.remove();
+            });
+
+            document.getElementById('btnFinalInstall').addEventListener('click', async () => {
+                if (isIos()) {
+                    showPwaToast("&#x1f34e; Sur iPhone : Touchez l'ic&ocirc;ne <b>Partager</b> en bas de l'&eacute;cran, puis choisissez <b>Sur l'&eacute;cran d'accueil</b>.");
+                    installOverlay.style.background = "rgba(20,8,18,0.9)";
+                } else if (typeof deferredPrompt !== 'undefined' && deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { installOverlay.remove(); }
+                    deferredPrompt = null;
+                } else {
+                    showPwaToast("&#x1f4a1; Bloqu&eacute; ou d&eacute;j&agrave; install&eacute;. Ouvrez les options de votre navigateur pour ajouter &agrave; l'&eacute;cran d'accueil.");
+                }
+            });
+        }
+    }
 </script>
 
 
