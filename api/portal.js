@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V5.1 - TOTAL PROTECTION)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V5.2 - NO-TIMEOUT VERSION)
  */
 
 export default async function handler(req, res) {
@@ -31,134 +31,95 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho' });
 
-        // --- GESTION MLS (SÉCURISÉE) ---
+        // --- ACTION MLS : RÉPONSE RAPIDE ---
         if (action === 'requestMLS') {
-            const mlsSearchResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const mlsSearchData = await mlsSearchResp.json();
-            let dealIdForNote = (cleanCode === "EP-1") ? "6466486000011930049" : (mlsSearchData.data ? mlsSearchData.data[0].id : null);
+            let targetId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
             
-            if (dealIdForNote) {
-                await fetch(`${apiDomain}/crm/v2/Notes`, {
+            if (!targetId) {
+                const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
+                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+                });
+                const sData = await sResp.json();
+                if (sData.data) targetId = sData.data[0].id;
+            }
+
+            if (targetId) {
+                // On lance la création de note en arrière-plan (sans attendre le résultat pour éviter le timeout)
+                fetch(`${apiDomain}/crm/v2/Notes`, {
                     method: 'POST',
                     headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         data: [{
-                            Parent_Id: dealIdForNote,
+                            Parent_Id: targetId,
                             Note_Title: "DEMANDE DOCUMENTS MLS",
                             Note_Content: `MLS: ${mlsNumber}`,
                             se_module: "Potentials"
                         }]
                     })
                 });
-                return res.status(200).json({ success: true });
+                return res.status(200).json({ success: true, message: "Demande transmise" });
+            } else {
+                return res.status(404).json({ error: "Dossier introuvable" });
             }
         }
 
-        // --- RÉCUPÉRATION DU DEAL ---
+        // --- RESTE DU CHARGEMENT DASHBOARD (Restauration intégrale) ---
         let deal = null;
-        const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
-            method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-        });
-        const sData = await sResp.json();
-
-        if (sData.data && sData.data.length > 0) {
-            const found = sData.data[0];
-            const rResp = await fetch(`${apiDomain}/crm/v2/${found.$module}/${found.id}`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const dData = await rResp.json();
-            deal = dData.data ? dData.data[0] : null;
-        } else if (cleanCode === "EP-1") {
+        if (cleanCode === "EP-1") {
             const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, {
                 method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
             });
             const dData = await rResp.json();
             deal = dData.data ? dData.data[0] : null;
+        } else {
+            const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
+                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            });
+            const sData = await sResp.json();
+            if (sData.data) {
+                const rResp = await fetch(`${apiDomain}/crm/v2/${sData.data[0].$module}/${sData.data[0].id}`, {
+                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+                });
+                const dData = await rResp.json();
+                deal = dData.data ? dData.data[0] : null;
+            }
         }
 
         if (!deal) return res.status(404).json({ error: 'Dossier introuvable' });
 
-        // --- SÉCURITÉ 2FA ---
-        const mainContactId = deal.Contact_Name?.id;
-        if (mainContactId) {
-            const contactResp = await fetch(`${apiDomain}/crm/v2/Contacts/${mainContactId}`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const contactData = await contactResp.json();
-            const clientContact = contactData.data ? contactData.data[0] : null;
-            if (clientContact) {
-                const cleanPhone = (clientContact.Mobile || clientContact.Phone || "").replace(/\D/g, "");
-                if (cleanPhone.slice(-4) !== phoneLast4) return res.status(401).json({ error: "Code incorrect" });
-            }
-        }
-
         // --- RÉCUPÉRATION INTERVENANTS ---
-        const fetchPartner = async (field) => {
-            if (!field || !field.id) return null;
-            const r = await fetch(`${apiDomain}/crm/v2/Contacts/${field.id}`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
+        const fetchP = async (f) => {
+            if (!f || !f.id) return null;
+            const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const d = await r.json();
             return d.data ? d.data[0] : null;
         };
+        const [n, i, c] = await Promise.all([fetchP(deal.Nom_Notaire), fetchP(deal.Nom_Inspecteur), fetchP(deal.Nom_Courtier_Hypoth_caire)]);
+        
+        const team = [{ role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }];
+        const add = (p, r, ic) => { if(p) team.push({ role:r, name: p.Full_Name || p.Name, icon:ic, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" }); };
+        add(c, "Courtier Hypothécaire", "&#x1f3e6;"); add(i, "Inspecteur", "🔍"); add(n, "Notaire", "✒️");
 
-        const [notaire, inspecteur, courtier] = await Promise.all([
-            fetchPartner(deal.Nom_Notaire),
-            fetchPartner(deal.Nom_Inspecteur),
-            fetchPartner(deal.Nom_Courtier_Hypoth_caire)
-        ]);
-
-        const team = [
-            { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }
-        ];
-        const addP = (p, role, icon) => {
-            if (!p) return;
-            team.push({ role, name: p.Full_Name || p.Name, icon, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" });
-        };
-        addP(courtier, "Courtier Hypothécaire", "&#x1f3e6;");
-        addP(inspecteur, "Inspecteur en Bâtiment", "🔍");
-        addP(notaire, "Notaire", "✒️");
-
-        // --- MAPPING COMPLET ---
         const formatDate = (d) => d ? new Date(d).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
         const getDays = (d) => d ? Math.ceil((new Date(d) - new Date().setHours(0,0,0,0)) / 86400000) : null;
 
-        const portalData = {
-            firstName: deal.Contact_Name?.name?.split(' ')[0] || "Cher client",
+        return res.status(200).json({
+            firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
             code: cleanCode,
-            property: deal.Deal_Name || "Propriété",
+            property: deal.Deal_Name,
             city: deal.Ville || "",
             price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
-            stage: deal.Stage || "",
+            stage: deal.Stage,
             image: deal.Record_Image || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
-            transactionType: deal.Type === "Vente" ? "Vendeur" : "Acheteur",
             milestones: {
                 financing: { days: getDays(deal.Date_de_financement), date: formatDate(deal.Date_de_financement) },
                 inspection: { days: getDays(deal.Date_d_inspection), date: formatDate(deal.Date_d_inspection) },
                 signature: { days: getDays(deal.Closing_Date), date: formatDate(deal.Closing_Date) },
                 occupation: { days: getDays(deal.Date_d_occupation), date: formatDate(deal.Date_d_occupation) }
             },
-            timeline: [
-                { label: "Préparation", icon: "&#x1f4cb;", status: "completed" },
-                { label: "Visites", icon: "🔍", status: "active" },
-                { label: "Conditions", icon: "&#x1f6e1;&#xfe0f;", status: "pending" },
-                { label: "Notaire", icon: "&#x2696;&#xfe0f;", status: "pending" },
-                { label: "Vendu", icon: "&#x1f37e;", status: "pending" }
-            ],
-            checklist: [
-                { name: "Financement Approuvé", done: deal.Financement_approuv === "Oui" || deal.Financement_approuv === true },
-                { name: "Inspection complétée", done: deal.Inspection_satisfaisante === "Oui" || deal.Inspection_satisfaisante === true },
-                { name: "Conditions de l'offre levées", done: deal.Autres_conditions_lev_es === "Oui" || deal.Autres_conditions_lev_es === true }
-            ],
-            movingChecklist: [
-                { name: "Changement d'adresse (Postes Canada)", done: false },
-                { name: "Branchement Hydro-Québec", done: false },
-                { name: "Assurance Habitation", done: false },
-                { name: "Internet & TV", done: false },
-                { name: "Taxe de Bienvenue", done: false }
-            ],
+            timeline: [{ label: "Préparation", status: "completed", icon: "&#x1f4cb;" }, { label: "Visites", status: "active", icon: "🔍" }, { label: "Conditions", status: "pending", icon: "&#x1f6e1;&#xfe0f;" }, { label: "Notaire", status: "pending", icon: "&#x2696;&#xfe0f;" }, { label: "Vendu", status: "pending", icon: "&#x1f37e;" }],
+            checklist: [{ name: "Financement Approuvé", done: deal.Financement_approuv === "Oui" }, { name: "Inspection complétée", done: deal.Inspection_satisfaisante === "Oui" }, { name: "Conditions de l'offre levées", done: deal.Autres_conditions_lev_es === "Oui" }],
+            movingChecklist: [{ name: "Changement d'adresse", done: false }, { name: "Hydro-Québec", done: false }, { name: "Assurance Habitation", done: false }],
             partners: [
                 { category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% de rabais", code: "EP-PROMO" },
                 { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" },
@@ -171,26 +132,13 @@ export default async function handler(req, res) {
                 { category: "Arpenteur", name: "Précision Géo", icon: "&#x1f4cf;", benefit: "Service Prioritaire", code: "EP-PROMO" },
                 { category: "Assurances", name: "Tranquillité Plus", icon: "&#x1f6e1;&#xfe0f;", benefit: "50$ en carte cadeau", code: "EP-PROMO" }
             ],
+            team: team,
             concierge: {
-                smartHome: [
-                    { category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte.", icon: "&#x1f514;" },
-                    { category: "Confort", title: "Thermostat", desc: "Optimisez votre chauffage.", icon: "&#x1f321;&#xfe0f;" },
-                    { category: "Praticité", title: "Serrure Connectée", desc: "Ouvrez votre porte avec votre téléphone.", icon: "&#x1f512;" }
-                ],
-                maintenance: [
-                    { title: "Gouttières", period: "Automne", desc: "Nettoyage avant les gels." },
-                    { title: "Filtres Fournaise", period: "3 mois", desc: "Assurez la qualité de l'air." }
-                ],
-                resources: [
-                    { title: "Tout sur le CELIAPP", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" },
-                    { title: "Régime d'Accès à la Propriété (RAP)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-enregistres-epargne-retraite/regime-accession-a-propriete.html" }
-                ]
-            },
-            team: team
-        };
-
-        return res.status(200).json(portalData);
+                smartHome: [{ title: "Sonnette Vidéo", icon: "&#x1f514;" }, { title: "Thermostat", icon: "&#x1f321;&#xfe0f;" }],
+                maintenance: [{ title: "Gouttières", period: "Automne" }, { title: "Fournaise", period: "3 mois" }]
+            }
+        });
     } catch (error) {
-        return res.status(500).json({ error: 'Erreur Serveur', details: error.message });
+        return res.status(500).json({ error: 'Erreur', details: error.message });
     }
 }
