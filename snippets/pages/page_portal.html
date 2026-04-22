@@ -1408,6 +1408,12 @@
                             &#x1f3e1; Entretien Saisonnier</h4>
                         <div id="wrapMaintenance"
                             style="background:rgba(255,255,255,0.02); border-radius:15px; padding:10px;"></div>
+
+                        <h4
+                            style="color:#2ecc71; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:35px 0 15px;">
+                            &#x1f6e1;&#xfe0f; S&eacute;curit&eacute; & Essentiels</h4>
+                        <div id="wrapTips"
+                            style="background:rgba(255,255,255,0.02); border-radius:15px; padding:10px;"></div>
                     </div>
                 </div>
             </div>
@@ -1776,6 +1782,26 @@
                     </div>
                 </div>
             `).join('');
+
+            // Tips Essentiels
+            const wrapTips = document.getElementById('wrapTips');
+            const fixedTips = [
+                { badge: "URGENCE", title: "Valve d'Eau Principale", desc: "Localisez l'entr&eacute;e d'eau picipale d&egrave;s le jour 1 pour r&eacute;agir vite en cas de fuite.", color: "#e74c3c" },
+                { badge: "&Eacute;LECTRICIT&Eacute;", title: "Panneau &Eacute;lectrique", desc: "Identifiez clairement chaque disjoncteur du panneau pour &eacute;viter de chercher dans le noir.", color: "#3498db" },
+                { badge: "PR&Eacute;VENTION", title: "S&eacute;curit&eacute; Incendie", desc: "Un extincteur par &eacute;tage et un avertisseur de monoxyde de carbone pr&egrave;s des chambres.", color: "#e67e22" },
+                { badge: "&Eacute;CONOMIES", title: "Efficacit&eacute; &Eacute;nerg&eacute;tique", desc: "Passez compl&egrave;tement aux ampoules LED et v&eacute;rifiez le calfeutrage des fen&ecirc;tres.", color: "#2ecc71" }
+            ];
+            if(wrapTips) {
+                wrapTips.innerHTML = fixedTips.map(t => `
+                    <div class="maintenance-item">
+                        <span style="background:${t.color}20; color:${t.color}; padding:2px 6px; border-radius:5px; font-size:0.6rem; font-weight:700;">${t.badge}</span>
+                        <div>
+                            <div style="font-weight:600; font-size:0.85rem;">${t.title}</div>
+                            <div style="font-size:0.75rem; opacity:0.6;">${t.desc}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
 
             // Resources
             const wrapRes = document.getElementById('wrapResources');
