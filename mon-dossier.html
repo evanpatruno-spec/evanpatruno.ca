@@ -1971,12 +1971,16 @@
             const code = localStorage.getItem('portalCode');
             const phone = localStorage.getItem('portalPhone');
 
-            // APPEL À L'API DE SUPPORT DÉDIÉE (BYPASS 405)
-            const url = `/api/contact-support?m=${encodeURIComponent(mls)}&c=${encodeURIComponent(code)}`;
-            
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: { 'Accept': 'application/json' }
+            // APPEL STEALTH PAR HEADERS SUR L'ENDPOINT PORTAL (BYPASS TOTAL)
+            const response = await fetch('/api/portal', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'X-Action': 'requestMLS',
+                    'X-MLS': mls,
+                    'X-Code': code
+                },
+                body: JSON.stringify({ ping: true })
             });
 
             if (!response.ok) {
