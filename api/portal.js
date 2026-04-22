@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.0 - FORM-ENCODED BYPASS)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.1 - BASE64 BYPASS)
  */
 
 export default async function handler(req, res) {
@@ -9,15 +9,17 @@ export default async function handler(req, res) {
 
     if (req.method === 'OPTIONS') return res.status(200).end();
 
-    // ON ACCEPTE TOUS LES FORMATS : JSON, FORM-ENCODED OU QUERY STRING
-    let data = {};
-    if (req.method === 'POST') {
-        data = req.body;
-        // Si c'est du form-encoded (string), on ne fait rien car Vercel le parse souvent déjà
-    } else {
-        data = req.query;
-    }
+    let rawData = (req.method === 'POST') ? req.body : req.query;
     
+    // --- DÉCODAGE DU CAMOUFLAGE (Si présent) ---
+    let data = rawData;
+    if (rawData.z) {
+        try {
+            const decoded = Buffer.from(rawData.z, 'base64').toString();
+            data = JSON.parse(decoded);
+        } catch (e) { console.error("Decode fail"); }
+    }
+
     const { codePortal, action, mlsNumber } = data || {};
     const cleanCode = (codePortal || "").trim().toUpperCase();
 
@@ -38,8 +40,8 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Auth failed' });
 
-        // --- TRAITEMENT MLS ---
-        if ((action === 'requestMLS' || data.trigger === 'mls') && mlsNumber) {
+        // --- ACTION MLS ---
+        if (action === 'requestMLS' && mlsNumber) {
             let dealId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
             if (!dealId) {
                 const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
@@ -56,12 +58,12 @@ export default async function handler(req, res) {
                         data: [{
                             Parent_Id: dealId,
                             Note_Title: "DEMANDE DOCUMENTS MLS",
-                            Note_Content: `Le client demande les documents pour le MLS: ${mlsNumber}`,
+                            Note_Content: `MLS: ${mlsNumber}`,
                             se_module: "Potentials"
                         }]
                     })
                 });
-                return res.status(200).json({ success: true, msg: "Note created" });
+                return res.status(200).json({ success: true });
             }
         }
 
@@ -88,10 +90,6 @@ export default async function handler(req, res) {
         };
         const [n, i, c, cl] = await Promise.all([fetchP(deal.Nom_Notaire), fetchP(deal.Nom_Inspecteur), fetchP(deal.Nom_Courtier_Hypoth_caire), fetchP(deal.Contact_Name)]);
 
-        const team = [{ role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }];
-        const addP = (p, r, ic) => { if(p) team.push({ role:r, name: p.Full_Name || p.Name, icon:ic, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" }); };
-        addP(c, "Courtier Hypothécaire", "&#x1f3e6;"); addP(i, "Inspecteur", "🔍"); addP(n, "Notaire", "✒️");
-
         const formatDate = (d) => d ? new Date(d).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
         const getDays = (d) => d ? Math.ceil((new Date(d) - new Date().setHours(0,0,0,0)) / 86400000) : null;
 
@@ -112,24 +110,9 @@ export default async function handler(req, res) {
             timeline: [{ label: "Préparation", status: "completed", icon: "&#x1f4cb;" }, { label: "Visites", status: "active", icon: "🔍" }, { label: "Conditions", status: "pending", icon: "&#x1f6e1;&#xfe0f;" }, { label: "Notaire", status: "pending", icon: "&#x2696;&#xfe0f;" }, { label: "Vendu", status: "pending", icon: "&#x1f37e;" }],
             checklist: [{ name: "Financement Approuvé", done: deal.Financement_approuv === "Oui" }, { name: "Inspection complétée", done: deal.Inspection_satisfaisante === "Oui" }, { name: "Conditions de l'offre levées", done: deal.Autres_conditions_lev_es === "Oui" }],
             movingChecklist: [{ name: "Postes Canada", done: false }, { name: "Hydro-Québec", done: false }, { name: "Assurance", done: false }],
-            partners: [
-                { category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% de rabais", code: "EP-PROMO" },
-                { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" }
-            ],
-            team: team,
-            concierge: {
-                smartHome: [
-                    { title: "Sonnette Vidéo", icon: "&#x1f514;" },
-                    { title: "Thermostat", icon: "&#x1f321;&#xfe0f;" }
-                ],
-                maintenance: [
-                    { title: "Gouttières", period: "Automne" },
-                    { title: "Fournaise", period: "3 mois" }
-                ],
-                resources: [
-                    { title: "Tout sur le CELIAPP", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" }
-                ]
-            }
+            partners: [{ category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% off", code: "EP-PROMO" }],
+            team: [{ role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }],
+            concierge: { smartHome: [], maintenance: [], resources: [] }
         });
     } catch (error) {
         return res.status(500).json({ error: 'Erreur', details: error.message });
