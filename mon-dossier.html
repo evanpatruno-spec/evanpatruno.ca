@@ -114,7 +114,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        min-height: 100vh;
         background: rgba(15, 5, 13, 0.92);
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
@@ -1430,6 +1429,19 @@
 </div>
 
 <script>
+    // --- VERCEL PWA STANDALONE STYLING FIX ---
+    if (window.location.hostname.includes('dossier.evanpatruno.ca') || window.location.search.includes('code=')) {
+        document.body.style.margin = '0';
+        document.body.style.background = '#1a0516';
+        const wrap = document.getElementById('portalAppContainer');
+        if (wrap) {
+            wrap.style.margin = '0';
+            wrap.style.borderRadius = '0';
+            wrap.style.minHeight = '100vh';
+            wrap.style.border = 'none';
+        }
+    }
+
     // --- REAL MAPPING (Ready for Zoho) ---
     const MOCK_DATA = {
         firstName: "Evan",
