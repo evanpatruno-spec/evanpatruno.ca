@@ -1603,7 +1603,7 @@
                     const activeStep = timeline.find(s => s.status === 'active');
                     const doneCount = timeline.filter(s => s.status === 'completed').length;
                     if (ringLabel) {
-                        if (pct >= 100) ringLabel.innerHTML = 'Ã°Å¸&Acirc;&acirc;€  Transaction compl&eacute;t&eacute;e!';
+                        if (pct >= 100) ringLabel.innerHTML = 'Ã°Å¸&Acirc; &acirc;€  Transaction compl&eacute;t&eacute;e!';
                         else if (activeStep) ringLabel.innerHTML = `&Eacute;TAPE ACTIVE : ${activeStep.label}`;
                         else ringLabel.innerHTML = `${doneCount} &eacute;tape${doneCount > 1 ? 's' : ''} compl&eacute;t&eacute;e${doneCount > 1 ? 's' : ''}`;
                     }
@@ -1614,21 +1614,24 @@
         // Team
         const wrapTeam = document.getElementById('wrapTeam');
         if (wrapTeam) {
-            wrapTeam.innerHTML = (data.team || []).map(t => `
+            wrapTeam.innerHTML = (data.team || []).map(t => {
+                const cleanPhone = (t.phone || 'Non d&eacute;fini').replace(/Ã°Å¸&acirc;€œÅ¾|Ã°Å¸â€œÅ¾|📞/g, '').trim();
+                const cleanEmail = (t.email || 'Non d&eacute;fini').replace(/Ã¢Å“&acirc;€°Ã¯&Acirc;¸&Acirc; |Ã¢Å“â€°Ã¯Â¸Â|✉️|&#x2709;&#xfe0f;/g, '').trim();
+                return `
             <div class="team-card">
                 <div class="team-icon">${t.icon}</div>
                 <div class="team-role">${t.role}</div>
                 <div class="team-name" style="margin-bottom:10px;">${t.name}</div>
                 <div style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:5px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-                        <span style="opacity:0.7;">&#x1f4de;</span> ${t.phone || 'Non d&eacute;fini'}
+                        <span style="opacity:0.7;">&#x1f4de;</span> ${cleanPhone}
                     </div>
                     <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="opacity:0.7;">Ã¢Å“&acirc;€°Ã¯&Acirc;¸&Acirc;</span> ${t.email || 'Non d&eacute;fini'}
+                        <span style="opacity:0.7;">&#x2709;&#xfe0f;</span> ${cleanEmail}
                     </div>
                 </div>
             </div>
-        `).join('');
+        `}).join('');
         }
 
         // (Dates removed because integrated in cockpit)
