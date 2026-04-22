@@ -1767,7 +1767,13 @@
 
             // Resources
             const wrapRes = document.getElementById('wrapResources');
-            wrapRes.innerHTML = data.concierge.resources.map(r => `
+            const fixedResources = [
+                { title: "Tout sur le CELIAPP (Gouv. Canada)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" },
+                { title: "R&eacute;gime d'Acc&egrave;s &agrave; la Propri&eacute;t&eacute; (RAP)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-connexes/est-regime-accession-a-propriete.html" },
+                { title: "Guide de l'acheteur (OACIQ)", url: "https://www.oaciq.com/fr/grand-public/acheter/guide-acheteur/" },
+                { title: "Guide du vendeur (OACIQ)", url: "https://www.oaciq.com/fr/grand-public/vendre/guide-vendeur/" }
+            ];
+            wrapRes.innerHTML = fixedResources.map(r => `
                 <a href="${r.url}" target="_blank" class="resource-link">${r.title} &#x2192;</a>
             `).join('');
         }
