@@ -1370,6 +1370,18 @@
             </div>
         </div>
         <div id="sectionSeller" style="display: none;"></div>
+
+        <!-- VISITES SECTION -->
+        <div class="section-wrapper collapsed" id="secVisites">
+            <div class="section-header" onclick="toggleSection('secVisites')">
+                <h3>Agenda des Visites</h3>
+                <div class="section-chevron">&#x25bc;</div>
+            </div>
+            <div class="section-content">
+                <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
+            </div>
+        </div>
+
         <!-- CONCIERGERIE ADMINISTRATIVE SECTION -->
         <div class="section-wrapper" id="secMoving">
             <div class="section-header" onclick="toggleSection('secMoving')">
@@ -1458,18 +1470,18 @@
         stage: "Analyse des offres",
         image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
         timeline: [
-            { label: "Pr&eacute;paration", icon: "Ã°Å¸&acirc;€œ&Acirc;", status: "completed" },
-            { label: "Offre d&eacute;pos&eacute;e", icon: "Ã°Å¸&acirc;€&Acirc;", status: "active" },
-            { label: "Conditions", icon: "Ã°Å¸&acirc;€º&Acirc;¡Ã¯&Acirc;¸&Acirc;", status: "pending" },
-            { label: "Notaire", icon: "Ã¢Å“&acirc;€™Ã¯&Acirc;¸&Acirc;", status: "pending" },
-            { label: "Succ&egrave;s", icon: "Ã°Å¸&Acirc;&Acirc; ", status: "pending" }
+            { label: "Pr&eacute;paration", icon: "&#x1f4cb;", status: "completed" },
+            { label: "Offre d&eacute;pos&eacute;e", icon: "&#x1f91d;", status: "active" },
+            { label: "Conditions", icon: "&#x1f6e1;&#xfe0f;", status: "pending" },
+            { label: "Notaire", icon: "&#x2696;&#xfe0f;", status: "pending" },
+            { label: "Succ&egrave;s", icon: "&#x1f37e;", status: "pending" }
         ],
         team: [
-            { role: "Votre Courtier", name: "Evan Patruno", icon: "Ã°Å¸&acirc;€˜&Acirc;¨Ã¢&acirc;‚¬&Acirc;Ã°Å¸&acirc;€™&Acirc;¼", contact: "tel:5145673249" },
-            { role: "Collaborateur", name: "Marc-Andr&eacute; Girard", icon: "&#x1f91d;", contact: "mailto:test@test.com" },
+            { role: "Votre Courtier", name: "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", contact: "tel:5145673249" },
+            { role: "Collaborateur", name: "Marc-Andr&eacute; Girard", icon: "&#x1f91d;", contact: "mailto:test@test.com" },
             { role: "Courtier Hyp.", name: "Sophie Lapointe", icon: "&#x1f4b0;", contact: "tel:5555555555" },
-            { role: "Inspecteur", name: "Inspectec Inc.", icon: "Ã°Å¸&acirc;€&Acirc;", contact: "tel:4444444444" },
-            { role: "Notaire", name: "Me Jean Picard", icon: "Ã°Å¸&acirc;€“&acirc;€¹Ã¯&Acirc;¸&Acirc;", contact: "tel:3333333333" }
+            { role: "Inspecteur", name: "Inspectec Inc.", icon: "&#x1f575;&#xfe0f;", contact: "tel:4444444444" },
+            { role: "Notaire", name: "Me Jean Picard", icon: "&#x2696;&#xfe0f;", contact: "tel:3333333333" }
         ],
         dates: [
             { label: "Signature du contrat", val: "15 Avril 2026" },
@@ -1498,6 +1510,10 @@
             { name: "Commander les boites et mat&eacute;riaux", done: false },
             { name: "Faire l'inventaire des biens assurables", done: false },
             { name: "Changer les serrures &agrave; l'arriv&eacute;e", done: false }
+        ],
+        visites: [
+            { id: 1, date: "12 Mai 2026", heure: "14h00", location: "282 rue Bouthillier N.", type: "Visite acheteur", statut: "Confirm&eacute;" },
+            { id: 2, date: "14 Mai 2026", heure: "18h30", location: "85 rue des Champs", type: "2e Visite", statut: "En attente" }
         ],
         partners: [
             { name: "D&eacute;m&eacute;nagement Express", icon: "&#x1f69a;", category: "D&eacute;m&eacute;nagement", benefit: "10% Rabais clients Evan", code: "EVAN10" },
@@ -1723,6 +1739,41 @@
                 <button class="copy-btn" onclick="copyPromoCode('${p.code}')">Copier Code: ${p.code} &#x1f4cb;</button>
             </div>
         `).join('');
+
+        // Visites
+        const wrapVisites = document.getElementById('wrapVisites');
+        if (wrapVisites) {
+            const visitesData = data.visites || [];
+            if (visitesData.length > 0) {
+                wrapVisites.innerHTML = visitesData.map(v => {
+                    const isConfirmed = v.statut.toLowerCase().includes('confirm');
+                    const badgeColor = isConfirmed ? 'rgba(46,204,113,0.2)' : 'rgba(241,196,15,0.2)';
+                    const badgeText = isConfirmed ? '#2ecc71' : '#f1c40f';
+                    return `
+                    <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:20px; display:flex; flex-direction: column; gap: 15px; box-shadow: var(--dash-glow);">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 10px;">
+                            <div>
+                                <div style="font-weight:900; font-family:'Outfit'; font-size:1.3rem; color:#fff;">${v.date}</div>
+                                <div style="font-size:1rem; color:var(--dash-accent); font-weight:700;">&#x23f0; ${v.heure}</div>
+                            </div>
+                            <div style="background:${badgeColor}; color:${badgeText}; padding:6px 14px; border-radius:50px; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; border: 1px solid ${badgeText}50;">
+                                ${v.statut}
+                            </div>
+                        </div>
+                        <div style="border-top:1px solid rgba(255,255,255,0.05); padding-top:15px; display:flex; flex-direction:column; gap:5px;">
+                            <div style="font-size:0.9rem; color:#fff; font-weight:600;">&#x1f4cd; ${v.location}</div>
+                            <div style="font-size:0.8rem; color:rgba(255,255,255,0.5);">${v.type}</div>
+                        </div>
+                    </div>
+                `}).join('');
+            } else {
+                wrapVisites.innerHTML = \`<div style="text-align:center; padding:30px; background:rgba(255,255,255,0.02); border-radius:20px; border:1px dashed rgba(255,255,255,0.1);">
+                    <div style="font-size:2rem; margin-bottom:10px; opacity:0.5;">&#x1f4c5;</div>
+                    <p style="color:rgba(255,255,255,0.6); margin:0;">Aucune visite planifi&eacute;e pour le moment.</p>
+                </div>\`;
+            }
+        }
+
         const m = data.milestones || {};
         const milestonesConfig = [
             { id: 'mFinancing', lab: 'Financement', data: m.financing },
