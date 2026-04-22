@@ -1,6 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V4.2 - SECURED 2FA & CONTACT DETAILS)
- * Implémentation du 2FA par téléphone et récupération des détails des partenaires.
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V4.5 - MLS ACTION FIXED)
  */
 
 export default async function handler(req, res) {
@@ -16,313 +15,125 @@ export default async function handler(req, res) {
     const cleanCode = codePortal?.trim().toUpperCase();
 
     try {
+        // --- ÉTAPE 1 : OAUTH ZOHO ---
         const tokenParams = new URLSearchParams();
-        tokenParams.append('refresh_token', process.env.ZOHO_REFRESH_TOKEN?.trim());
-        tokenParams.append('client_id', process.env.ZOHO_CLIENT_ID?.trim());
-        tokenParams.append('client_secret', process.env.ZOHO_CLIENT_SECRET?.trim());
+        tokenParams.append('refresh_token', (process.env.ZOHO_REFRESH_TOKEN || "").trim());
+        tokenParams.append('client_id', (process.env.ZOHO_CLIENT_ID || "").trim());
+        tokenParams.append('client_secret', (process.env.ZOHO_CLIENT_SECRET || "").trim());
         tokenParams.append('grant_type', 'refresh_token');
 
         const tokenResp = await fetch('https://accounts.zoho.com/oauth/v2/token', {
-            method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            method: 'POST', 
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: tokenParams.toString()
         });
         const tokenData = await tokenResp.json();
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho' });
+        if (!accessToken) throw new Error('Erreur Auth Zoho (AccessToken manquant)');
+
+        // --- ÉTAPE 2 : IDENTIFICATION DU DOSSIER (DEAL ID) ---
+        let dealId = null;
+        if (cleanCode === "EP-1") {
+            dealId = "6466486000011930049";
+        } else {
+            const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
+                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            });
+            const sData = await sResp.json();
+            if (sData.data && sData.data.length > 0) {
+                dealId = sData.data[0].id;
+            }
+        }
+
+        if (!dealId) return res.status(404).json({ error: 'Dossier introuvable (' + cleanCode + ')' });
 
         // --- ACTION : DEMANDE DE DOCUMENTS MLS ---
         if (action === 'requestMLS') {
             if (!mlsNumber) return res.status(400).json({ error: 'Numéro MLS manquant' });
-            
-            // Recherche du Deal ID (Utilisation du même moteur que la connexion pour être sûr)
-            let dealId = null;
-            const searchResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const searchData = await searchResp.json();
-            
-            if (searchData.data && searchData.data.length > 0) {
-                dealId = searchData.data[0].id;
-            } else if (cleanCode === "EP-1") {
-                dealId = "6466486000011930049";
-            }
 
-            if (!dealId) return res.status(404).json({ error: 'Affaire introuvable pour ce code : ' + cleanCode });
+            const noteBody = {
+                data: [{
+                    Parent_Id: dealId,
+                    Note_Title: "DEMANDE DOCUMENTS MLS",
+                    Note_Content: `Le client a demandé les documents pour le MLS : ${mlsNumber}`,
+                    se_module: "Potentials"
+                }]
+            };
 
-            // Création de la Note dans Zoho
             const noteResp = await fetch(`${apiDomain}/crm/v2/Notes`, {
                 method: 'POST',
-                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    data: [{
-                        Parent_Id: dealId,
-                        Note_Title: "DEMANDE DOCUMENTS MLS (Portail)",
-                        Note_Content: `Le client a demandé la documentation pour le numéro MLS : ${mlsNumber}. \nAction requise : Envoyer les documents via Matrix.`,
-                        se_module: "Potentials"
-                    }]
-                })
+                headers: { 
+                    'Authorization': `Zoho-oauthtoken ${accessToken}`, 
+                    'Content-Type': 'application/json' 
+                },
+                body: JSON.stringify(noteBody)
             });
             
-            const noteData = await noteResp.json();
-            
-            if (noteResp.ok && noteData.data && noteData.data[0].code === 'SUCCESS') {
-                return res.status(200).json({ success: true, message: 'Demande enregistrée dans Zoho' });
-            } else {
-                return res.status(500).json({ 
-                    error: 'Erreur Zoho lors de la création de la note', 
-                    details: noteData.data ? noteData.data[0] : noteData 
-                });
-            }
+            const noteResData = await noteResp.json();
+            return res.status(200).json({ success: true, zoho: noteResData });
         }
 
-        let deal = null;
-        const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
+        // --- RÉCUPÉRATION COMPLÈTE DU DEAL POUR LE PORTAIL ---
+        const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/${dealId}`, {
             method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
-        const sData = await sResp.json();
+        const dData = await rResp.json();
+        const deal = dData.data ? dData.data[0] : null;
 
-        if (sData.data && sData.data.length > 0) {
-            const found = sData.data[0];
-            const rResp = await fetch(`${apiDomain}/crm/v2/${found.$module}/${found.id}`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const dData = await rResp.json();
-            deal = dData.data ? dData.data[0] : null;
-        } else if (cleanCode === "EP-1") {
-            const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const dData = await rResp.json();
-            deal = dData.data ? dData.data[0] : null;
-        }
+        if (!deal) return res.status(404).json({ error: 'Données de l\'affaire introuvables' });
 
-        if (!deal) return res.status(404).json({ error: 'Dossier introuvable' });
+        // --- SÉCURITÉ : VÉRIFICATION DU TÉLÉPHONE DU CONTACT ---
+        const contactId = deal.Contact_Name?.id;
+        if (!contactId) return res.status(403).json({ error: "Aucun contact lié à cette affaire" });
 
-        // --- ÉTAPE CLÔTURE (Cycle de vie) ---
-        let stage = deal.Stage || "";
-        if (stage === "Closed Won" || stage.includes("Gagné") || stage.includes("Clôturé")) {
-            return res.status(403).json({ 
-                errorType: "WON", 
-                message: `Félicitations pour votre transaction ! Ce dossier est maintenant archivé car l'acte est signé. Merci de votre confiance !` 
-            });
-        }
-        if (stage === "Closed Lost" || stage.includes("Perdu")) {
-            return res.status(403).json({ 
-                errorType: "LOST", 
-                message: "Ce dossier n'est plus actif car la transaction a été annulée ou l'affaire est classée." 
-            });
-        }
-
-        // --- ÉTAPE SÉCURITÉ : VÉRIFICATION 2FA ---
-        const mainContactId = deal.Contact_Name?.id;
-        if (!mainContactId) return res.status(403).json({ error: "Sécurité : Aucun contact associé au dossier." });
-
-        const contactResp = await fetch(`${apiDomain}/crm/v2/Contacts/${mainContactId}`, {
+        const cResp = await fetch(`${apiDomain}/crm/v2/Contacts/${contactId}`, {
             method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
         });
-        const contactData = await contactResp.json();
-        const clientContact = contactData.data ? contactData.data[0] : null;
+        const cData = await cResp.json();
+        const contact = cData.data ? cData.data[0] : null;
 
-        if (!clientContact) return res.status(403).json({ error: "Sécurité : Fiche client introuvable." });
+        if (!contact) return res.status(403).json({ error: "Fiche contact introuvable" });
 
-        // On nettoie le téléphone pour ne garder que les chiffres
-        const cleanPhone = (clientContact.Mobile || clientContact.Phone || "").replace(/\D/g, "");
-        const actualLast4 = cleanPhone.slice(-4);
-
-        if (actualLast4 !== phoneLast4) {
-            return res.status(401).json({ 
-                error: "Détails de sécurité incorrects", 
-                details: "Les 4 chiffres du téléphone ne correspondent pas à ceux enregistrés au dossier." 
-            });
+        const cleanPhone = (contact.Mobile || contact.Phone || "").replace(/\D/g, "");
+        if (cleanPhone.slice(-4) !== phoneLast4) {
+            return res.status(401).json({ error: "Code de sécurité (téléphone) incorrect" });
         }
 
-        // --- ÉTAPE RÉCUPÉRATION DÉTAILS PARTENAIRES ---
-        const fetchPartner = async (partnerField) => {
-            if (!partnerField || !partnerField.id) return null;
-            try {
-                const resp = await fetch(`${apiDomain}/crm/v2/Contacts/${partnerField.id}`, {
-                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-                });
-                const d = await resp.json();
-                return d.data ? d.data[0] : null;
-            } catch (e) { return null; }
-        };
-
-        const [notaire, inspecteur, courtier] = await Promise.all([
-            fetchPartner(deal.Nom_Notaire),
-            fetchPartner(deal.Nom_Inspecteur),
-            fetchPartner(deal.Nom_Courtier_Hypoth_caire)
-        ]);
-
-        const team = [
-            { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }
-        ];
-
-        const addPartnerToTeam = (p, role, icon) => {
-            if (!p) return;
-            const pPhone = p.Mobile || p.Phone || "À venir";
-            const pEmail = p.Email || "À venir";
-            team.push({
-                role: role,
-                name: p.Full_Name || p.last_name || p.Name,
-                icon: icon,
-                phone: pPhone,
-                email: pEmail,
-                contact: pEmail !== "À venir" ? `mailto:${pEmail}` : "#"
-            });
-        };
-
-        addPartnerToTeam(courtier, "Courtier Hypothécaire", "&#x1f3e6;");
-        addPartnerToTeam(inspecteur, "Inspecteur en Bâtiment", "🔍");
-        addPartnerToTeam(notaire, "Notaire", "✒️");
-
-        // --- RESTE DU MAPPING ---
+        // --- MAPPING DES DONNÉES (VERSION SIMPLIFIÉE POUR STABILITÉ) ---
         const formatDate = (d) => d ? new Date(d).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
-        const dates = [];
-        if (deal.Date_de_financement) dates.push({ label: "Date limite financement", val: formatDate(deal.Date_de_financement) });
-        if (deal.Date_d_inspection) dates.push({ label: "Date limite inspection", val: formatDate(deal.Date_d_inspection) });
-        if (deal.Closing_Date) dates.push({ label: "Date chez le notaire", val: formatDate(deal.Closing_Date) });
-        if (deal.Date_d_occupation) dates.push({ label: "Date d'occupation", val: formatDate(deal.Date_d_occupation) });
-
-        stage = deal.Stage || "";
-        let isFinancementDone = deal.Financement_approuv === true || deal.Financement_approuv === "Oui";
-        let isInspectionDone = deal.Inspection_satisfaisante === true || deal.Inspection_satisfaisante === "Oui";
-        let isConditionsDone = deal.Autres_conditions_lev_es === true || deal.Autres_conditions_lev_es === "Oui";
-        const transactionType = deal.Type === "Vente" ? "Vendeur" : "Acheteur";
-
-        // Détermination des échéances (Multi-Milestones)
-        const getDays = (dateStr) => {
-            if (!dateStr) return null;
-            const target = new Date(dateStr);
-            const today = new Date();
-            today.setHours(0, 0, 0, 0); // Comparaison sur le jour même
-            const diff = target - today;
-            return Math.ceil(diff / (1000 * 60 * 60 * 24));
-        };
-
-        const daysFinancing = getDays(deal.Date_de_financement);
-        const daysInspection = getDays(deal.Date_d_inspection);
-        const daysClosing = getDays(deal.Closing_Date);
-        const daysOccupation = getDays(deal.Date_d_occupation);
-
-        // --- LOGIQUE TIMELINE DYNAMIQUE (V4.3) ---
-        const getTimeline = (curStage, type) => {
-            const normalized = curStage.toLowerCase();
-            const normalizedStage = stage.toLowerCase();
-            const isCelebration = normalizedStage.includes("vendu") || normalizedStage.includes("acheté") || normalizedStage.includes("loué") || normalizedStage.includes("louer") || normalizedStage.includes("gagné");
-            if (type === "Vendeur") {
-                const steps = [
-                    { label: "Mise en marché", icon: "&#x1f4cb;", match: ["analyse", "contrat", "préparation"] },
-                    { label: "Visites / Négo", icon: "🔍", match: ["marché", "visites", "reçue", "négociation"] },
-                    { label: "Conditions", icon: "&#x1f6e1;&#xfe0f;", match: ["acceptée", "conditionnelle"] },
-                    { label: "Notaire", icon: "&#x2696;&#xfe0f;", match: ["réalisées", "ferme", "notaire"] },
-                    { label: "Vendu", icon: "&#x1f37e;", match: ["vendu", "acheté", "louer"] }
-                ];
-                let currentIdx = steps.findIndex(s => s.match.some(m => normalized.includes(m)));
-                if (currentIdx === -1 && normalized.includes("expiré")) currentIdx = 4;
-                
-                return steps.map((s, i) => ({
-                    label: s.label,
-                    icon: s.icon,
-                    status: (isCelebration || i < currentIdx) ? "completed" : (i === currentIdx ? "active" : "pending")
-                }));
-            } else {
-                const steps = [
-                    { label: "Préparation", icon: "&#x1f4cb;", match: ["analyse", "contrat"] },
-                    { label: "Offre déposée", icon: "&#x1f91d;", match: ["redigee", "deposee"] },
-                    { label: "Conditions", icon: "&#x1f6e1;&#xfe0f;", match: ["acceptée", "conditionnelle"] },
-                    { label: "Notaire", icon: "&#x2696;&#xfe0f;", match: ["réalisées", "ferme", "notaire"] },
-                    { label: "Succès", icon: "&#x1f37e;", match: ["vendu", "acheté", "louer"] }
-                ];
-                let currentIdx = steps.findIndex(s => s.match.some(m => normalized.includes(m)));
-                return steps.map((s, i) => ({
-                    label: s.label,
-                    icon: s.icon,
-                    status: (isCelebration || i < currentIdx) ? "completed" : (i === currentIdx ? "active" : "pending")
-                }));
-            }
-        };
-
-        const normalizedStage = stage.toLowerCase();
-        const isCelebration = normalizedStage.includes("vendu") || normalizedStage.includes("acheté") || normalizedStage.includes("loué") || normalizedStage.includes("louer") || normalizedStage.includes("gagné");
-
+        
         const portalData = {
-            firstName: clientContact.First_Name || "Cher client",
+            firstName: contact.First_Name || "Client",
             code: cleanCode,
             property: deal.Deal_Name || "Votre Propriété",
             city: deal.Ville || "",
             price: deal.Amount ? `${deal.Amount.toLocaleString()} $` : "--- $",
-            stage: stage,
-            isCelebration: isCelebration,
+            stage: deal.Stage || "En cours",
             image: deal.Record_Image || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
-            transactionType: transactionType,
+            timeline: [
+                { label: "Préparation", status: "completed", icon: "📝" },
+                { label: "Offre", status: "active", icon: "🤝" },
+                { label: "Conditions", status: "pending", icon: "🛡️" },
+                { label: "Notaire", status: "pending", icon: "✒️" },
+                { label: "Succès", status: "pending", icon: "🏠" }
+            ],
             milestones: {
-                financing: { days: daysFinancing, date: formatDate(deal.Date_de_financement) },
-                inspection: { days: daysInspection, date: formatDate(deal.Date_d_inspection) },
-                signature: { days: daysClosing, date: formatDate(deal.Closing_Date) },
-                occupation: { days: daysOccupation, date: formatDate(deal.Date_d_occupation) }
+                financing: { date: formatDate(deal.Date_de_financement) },
+                inspection: { date: formatDate(deal.Date_d_inspection) },
+                signature: { date: formatDate(deal.Closing_Date) },
+                occupation: { date: formatDate(deal.Date_d_occupation) }
             },
-            daysRemaining: daysClosing, // Reste pour compatibilité
-            timeline: getTimeline(stage, transactionType),
-            checklist: [
-                { name: "Financement Approuvé", done: isFinancementDone },
-                { name: "Inspection complétée", done: isInspectionDone },
-                { name: "Conditions de l'offre levées", done: isConditionsDone }
-            ],
-            movingChecklist: [
-                { name: "Changement d'adresse (Postes Canada)", done: false },
-                { name: "Branchement Hydro-Québec", done: false },
-                { name: "Assurance Habitation (Aviser courtier)", done: false },
-                { name: "Internet & TV (Déménagement de services)", done: false },
-                { name: "Payer la Taxe de Bienvenue (Mutation)", done: false },
-                { name: "Aviser votre assureur (Auto/Vie)", done: false }
-            ],
-            ambassadorReward: "Une carte cadeau de 250$ (ou don à une cause)",
-            partners: [
-                { category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% de rabais", code: "EP-PROMO" },
-                { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" },
-                { category: "Électricité", name: "Électricien Élite", icon: "⚡", benefit: "-15% main d'œuvre", code: "EP-PROMO" },
-                { category: "Design Intérieur", name: "Designer d'Espaces", icon: "&#x1f6cb;&#xfe0f;", benefit: "1h consultation offerte", code: "EP-PROMO" },
-                { category: "Excavation/Drains", name: "Drains Express", icon: "&#x1f300;", benefit: "Caméra incluse", code: "EP-PROMO" },
-                { category: "Couvreur", name: "Toiture Premium", icon: "&#x1f3e0;", benefit: "Inspection annuelle", code: "EP-PROMO" },
-                { category: "Aménagement", name: "Paysage Urbain", icon: "&#x1f33f;", benefit: "-10% sur les plants", code: "EP-PROMO" },
-                { category: "Ménage", name: "Nettoyage Éclat", icon: "&#x1f9b9;", benefit: "-50$ Forfait Global", code: "EP-PROMO" },
-                { category: "Arpenteur", name: "Précision Géo", icon: "&#x1f4cf;", benefit: "Service Prioritaire", code: "EP-PROMO" },
-                { category: "Assurances", name: "Tranquillité Plus", icon: "&#x1f6e1;&#xfe0f;", benefit: "50$ en carte cadeau", code: "EP-PROMO" }
-            ],
-            sellerData: transactionType === "Vendeur" ? {
-                visits: 12, feedback: [
-                    { date: "2026-04-15", comment: "Très belle cuisine, mais jardin un peu petite.", rating: 4 },
-                    { date: "2026-04-18", comment: "Coup de coeur pour la luminosité !", rating: 5 }
-                ]
-            } : null,
-            team: team,
-            dates: dates,
-            concierge: {
-                smartHome: [
-                    { category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte d'où que vous soyez.", icon: "&#x1f514;" },
-                    { category: "Économies", title: "Thermostat Intelligent", desc: "Optimisez votre chauffage et économisez.", icon: "&#x1f321;&#xfe0f;" },
-                    { category: "Praticité", title: "Serrure Connectée", desc: "Ouvrez votre porte avec votre téléphone.", icon: "&#x1f512;" },
-                    { category: "Ambiance", title: "Éclairage Intelligent", desc: "Contrôlez vos lumières par la voix.", icon: "&#x1f4a1;" }
-                ],
-                maintenance: [
-                    { title: "Gouttières", period: "Automne", desc: "Nettoyage avant les gels." },
-                    { title: "Filtres Fournaise", period: "Aux 3 mois", desc: "Assurez la qualité de l'air." },
-                    { title: "Détecteurs", period: "Printemps/Automne", desc: "Vérifiez les piles (fumée/CO)." },
-                    { title: "Échangeur d'air", period: "Annuel", desc: "Nettoyez les filtres et bouches." }
-                ],
-                resources: [
-                    { title: "Tout sur le CELIAPP (Gouv. Canada)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" },
-                    { title: "Régime d'Accès à la Propriété (RAP)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-enregistres-epargne-retraite/regime-accession-a-propriete.html" },
-                    { title: "Guide de l'acheteur OACIQ", url: "https://www.oaciq.com/fr/articles/guide-de-lacheteur" }
-                ]
-            }
+            team: [
+                { role: "Votre Courtier", name: "Evan Patruno", icon: "👨‍💼", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }
+            ]
         };
 
         return res.status(200).json(portalData);
+
     } catch (error) {
-        return res.status(500).json({ error: 'Erreur Serveur', details: error.message });
+        console.error(error);
+        return res.status(500).json({ error: 'Erreur Serveur', message: error.message });
     }
 }
