@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     if (req.method === 'OPTIONS') return res.status(200).end();
     if (req.method !== 'POST') return res.status(405).json({ error: 'Méthode non autorisée' });
 
-    const { codePortal, phoneLast4 } = req.body;
+    const { codePortal, phoneLast4, action, mlsNumber } = req.body;
     const cleanCode = codePortal?.trim().toUpperCase();
 
     try {
@@ -31,6 +31,51 @@ export default async function handler(req, res) {
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
         if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho' });
+
+        // --- ACTION : DEMANDE DE DOCUMENTS MLS ---
+        if (action === 'requestMLS') {
+            if (!mlsNumber) return res.status(400).json({ error: 'Numéro MLS manquant' });
+            
+            // Recherche du Deal ID (Utilisation du même moteur que la connexion pour être sûr)
+            let dealId = null;
+            const searchResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
+                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+            });
+            const searchData = await searchResp.json();
+            
+            if (searchData.data && searchData.data.length > 0) {
+                dealId = searchData.data[0].id;
+            } else if (cleanCode === "EP-1") {
+                dealId = "6466486000011930049";
+            }
+
+            if (!dealId) return res.status(404).json({ error: 'Affaire introuvable pour ce code : ' + cleanCode });
+
+            // Création de la Note dans Zoho
+            const noteResp = await fetch(`${apiDomain}/crm/v2/Notes`, {
+                method: 'POST',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    data: [{
+                        Parent_Id: dealId,
+                        Note_Title: "DEMANDE DOCUMENTS MLS (Portail)",
+                        Note_Content: `Le client a demandé la documentation pour le numéro MLS : ${mlsNumber}. \nAction requise : Envoyer les documents via Matrix.`,
+                        se_module: "Potentials"
+                    }]
+                })
+            });
+            
+            const noteData = await noteResp.json();
+            
+            if (noteResp.ok && noteData.data && noteData.data[0].code === 'SUCCESS') {
+                return res.status(200).json({ success: true, message: 'Demande enregistrée dans Zoho' });
+            } else {
+                return res.status(500).json({ 
+                    error: 'Erreur Zoho lors de la création de la note', 
+                    details: noteData.data ? noteData.data[0] : noteData 
+                });
+            }
+        }
 
         let deal = null;
         const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
@@ -112,7 +157,7 @@ export default async function handler(req, res) {
         ]);
 
         const team = [
-            { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }
+            { role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }
         ];
 
         const addPartnerToTeam = (p, role, icon) => {
@@ -129,7 +174,7 @@ export default async function handler(req, res) {
             });
         };
 
-        addPartnerToTeam(courtier, "Courtier Hypothécaire", "🏦");
+        addPartnerToTeam(courtier, "Courtier Hypothécaire", "&#x1f3e6;");
         addPartnerToTeam(inspecteur, "Inspecteur en Bâtiment", "🔍");
         addPartnerToTeam(notaire, "Notaire", "✒️");
 
@@ -165,13 +210,15 @@ export default async function handler(req, res) {
         // --- LOGIQUE TIMELINE DYNAMIQUE (V4.3) ---
         const getTimeline = (curStage, type) => {
             const normalized = curStage.toLowerCase();
+            const normalizedStage = stage.toLowerCase();
+            const isCelebration = normalizedStage.includes("vendu") || normalizedStage.includes("acheté") || normalizedStage.includes("loué") || normalizedStage.includes("louer") || normalizedStage.includes("gagné");
             if (type === "Vendeur") {
                 const steps = [
-                    { label: "Mise en marché", icon: "📝", match: ["analyse", "contrat", "préparation"] },
+                    { label: "Mise en marché", icon: "&#x1f4cb;", match: ["analyse", "contrat", "préparation"] },
                     { label: "Visites / Négo", icon: "🔍", match: ["marché", "visites", "reçue", "négociation"] },
-                    { label: "Conditions", icon: "🛡️", match: ["acceptée", "conditionnelle"] },
-                    { label: "Notaire", icon: "✒️", match: ["réalisées", "ferme", "notaire"] },
-                    { label: "Vendu", icon: "🏠", match: ["vendu", "acheté", "louer"] }
+                    { label: "Conditions", icon: "&#x1f6e1;&#xfe0f;", match: ["acceptée", "conditionnelle"] },
+                    { label: "Notaire", icon: "&#x2696;&#xfe0f;", match: ["réalisées", "ferme", "notaire"] },
+                    { label: "Vendu", icon: "&#x1f37e;", match: ["vendu", "acheté", "louer"] }
                 ];
                 let currentIdx = steps.findIndex(s => s.match.some(m => normalized.includes(m)));
                 if (currentIdx === -1 && normalized.includes("expiré")) currentIdx = 4;
@@ -183,11 +230,11 @@ export default async function handler(req, res) {
                 }));
             } else {
                 const steps = [
-                    { label: "Préparation", icon: "📝", match: ["analyse", "contrat"] },
-                    { label: "Offre déposée", icon: "🔍", match: ["redigee", "deposee"] },
-                    { label: "Conditions", icon: "🛡️", match: ["acceptée", "conditionnelle"] },
-                    { label: "Notaire", icon: "✒️", match: ["réalisées", "ferme", "notaire"] },
-                    { label: "Succès", icon: "🏠", match: ["vendu", "acheté", "louer"] }
+                    { label: "Préparation", icon: "&#x1f4cb;", match: ["analyse", "contrat"] },
+                    { label: "Offre déposée", icon: "&#x1f91d;", match: ["redigee", "deposee"] },
+                    { label: "Conditions", icon: "&#x1f6e1;&#xfe0f;", match: ["acceptée", "conditionnelle"] },
+                    { label: "Notaire", icon: "&#x2696;&#xfe0f;", match: ["réalisées", "ferme", "notaire"] },
+                    { label: "Succès", icon: "&#x1f37e;", match: ["vendu", "acheté", "louer"] }
                 ];
                 let currentIdx = steps.findIndex(s => s.match.some(m => normalized.includes(m)));
                 return steps.map((s, i) => ({
@@ -234,16 +281,16 @@ export default async function handler(req, res) {
             ],
             ambassadorReward: "Une carte cadeau de 250$ (ou don à une cause)",
             partners: [
-                { category: "Peinture", name: "Peinture Excellence", icon: "🎨", benefit: "10% de rabais", code: "EP-PROMO" },
-                { category: "Plomberie", name: "Plombier Pro", icon: "🚰", benefit: "Estimation gratuite", code: "EP-PROMO" },
+                { category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% de rabais", code: "EP-PROMO" },
+                { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" },
                 { category: "Électricité", name: "Électricien Élite", icon: "⚡", benefit: "-15% main d'œuvre", code: "EP-PROMO" },
-                { category: "Design Intérieur", name: "Designer d'Espaces", icon: "🛋️", benefit: "1h consultation offerte", code: "EP-PROMO" },
-                { category: "Excavation/Drains", name: "Drains Express", icon: "🌀", benefit: "Caméra incluse", code: "EP-PROMO" },
-                { category: "Couvreur", name: "Toiture Premium", icon: "🏠", benefit: "Inspection annuelle", code: "EP-PROMO" },
-                { category: "Aménagement", name: "Paysage Urbain", icon: "🌿", benefit: "-10% sur les plants", code: "EP-PROMO" },
-                { category: "Ménage", name: "Nettoyage Éclat", icon: "🧹", benefit: "-50$ Forfait Global", code: "EP-PROMO" },
-                { category: "Arpenteur", name: "Précision Géo", icon: "📏", benefit: "Service Prioritaire", code: "EP-PROMO" },
-                { category: "Assurances", name: "Tranquillité Plus", icon: "🛡️", benefit: "50$ en carte cadeau", code: "EP-PROMO" }
+                { category: "Design Intérieur", name: "Designer d'Espaces", icon: "&#x1f6cb;&#xfe0f;", benefit: "1h consultation offerte", code: "EP-PROMO" },
+                { category: "Excavation/Drains", name: "Drains Express", icon: "&#x1f300;", benefit: "Caméra incluse", code: "EP-PROMO" },
+                { category: "Couvreur", name: "Toiture Premium", icon: "&#x1f3e0;", benefit: "Inspection annuelle", code: "EP-PROMO" },
+                { category: "Aménagement", name: "Paysage Urbain", icon: "&#x1f33f;", benefit: "-10% sur les plants", code: "EP-PROMO" },
+                { category: "Ménage", name: "Nettoyage Éclat", icon: "&#x1f9b9;", benefit: "-50$ Forfait Global", code: "EP-PROMO" },
+                { category: "Arpenteur", name: "Précision Géo", icon: "&#x1f4cf;", benefit: "Service Prioritaire", code: "EP-PROMO" },
+                { category: "Assurances", name: "Tranquillité Plus", icon: "&#x1f6e1;&#xfe0f;", benefit: "50$ en carte cadeau", code: "EP-PROMO" }
             ],
             sellerData: transactionType === "Vendeur" ? {
                 visits: 12, feedback: [
@@ -255,10 +302,10 @@ export default async function handler(req, res) {
             dates: dates,
             concierge: {
                 smartHome: [
-                    { category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte d'où que vous soyez.", icon: "🔔" },
-                    { category: "Économies", title: "Thermostat Intelligent", desc: "Optimisez votre chauffage et économisez.", icon: "🌡️" },
-                    { category: "Praticité", title: "Serrure Connectée", desc: "Ouvrez votre porte avec votre téléphone.", icon: "🔐" },
-                    { category: "Ambiance", title: "Éclairage Intelligent", desc: "Contrôlez vos lumières par la voix.", icon: "💡" }
+                    { category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte d'où que vous soyez.", icon: "&#x1f514;" },
+                    { category: "Économies", title: "Thermostat Intelligent", desc: "Optimisez votre chauffage et économisez.", icon: "&#x1f321;&#xfe0f;" },
+                    { category: "Praticité", title: "Serrure Connectée", desc: "Ouvrez votre porte avec votre téléphone.", icon: "&#x1f512;" },
+                    { category: "Ambiance", title: "Éclairage Intelligent", desc: "Contrôlez vos lumières par la voix.", icon: "&#x1f4a1;" }
                 ],
                 maintenance: [
                     { title: "Gouttières", period: "Automne", desc: "Nettoyage avant les gels." },
