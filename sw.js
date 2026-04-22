@@ -1,9 +1,10 @@
-﻿const CACHE_NAME = 'ep-portal-cache-v2';
+const CACHE_NAME = 'ep-portal-cache-v3';
 const ASSETS_TO_CACHE = [
   '/',
   '/mon-dossier.html',
   '/manifest.json',
-  '/pwa-icon-512.png'
+  '/pwa-icon-512.png',
+  '/pwa-icon-192.png'
 ];
 
 // Installation : Mise en cache des ressources critiques
