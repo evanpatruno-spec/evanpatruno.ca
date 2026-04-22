@@ -1310,7 +1310,7 @@
             <!-- COCKPIT PROGRESS RING (Side by side on desktop) -->
             <div style="text-align: center; flex-shrink: 0;">
                 <div class="cockpit-ring-wrap" id="cockpitRingWrap">
-                    <svg class="cockpit-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="cockpit-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
                         <defs>
                             <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#873276"/>
@@ -1318,12 +1318,12 @@
                                 <stop offset="100%" stop-color="#ff4db8" id="ringGradEnd"/>
                             </linearGradient>
                         </defs>
-                        <circle class="ring-bg" cx="60" cy="60" r="50"/>
-                        <circle class="ring-progress" id="ringProgress" cx="60" cy="60" r="50"/>
+                        <circle class="ring-bg" cx="80" cy="80" r="50"/>
+                        <circle class="ring-progress" id="ringProgress" cx="80" cy="80" r="50"/>
                     </svg>
                     <div class="cockpit-center">
                         <span id="ringPct">0%</span>
-                        <small>Avancement</small>
+                        <small style="white-space: nowrap;">Avancement</small>
                     </div>
                 </div>
                 <div class="cockpit-label" id="ringLabel">Calcul en cours&hellip;</div>
