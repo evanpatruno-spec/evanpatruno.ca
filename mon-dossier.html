@@ -1971,16 +1971,16 @@
             const code = localStorage.getItem('portalCode');
             const phone = localStorage.getItem('portalPhone');
 
-            // APPEL UNIFORMISÉ (EXACTEMENT COMME LE LOGIN)
-            const apiUrl = '/api/portal';
-            const response = await fetch(apiUrl, {
+            // APPEL FORMAT FORMULAIRE (MAXIMUM BYPASS)
+            const formData = new URLSearchParams();
+            formData.append('action', 'requestMLS');
+            formData.append('mlsNumber', mls);
+            formData.append('codePortal', code);
+
+            const response = await fetch('/api/portal', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    action: 'requestMLS',
-                    mlsNumber: mls,
-                    codePortal: code
-                })
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formData.toString()
             });
 
             if (!response.ok) {

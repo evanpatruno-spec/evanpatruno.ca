@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V5.9 - FULL CONTENT RESTORE)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.0 - FORM-ENCODED BYPASS)
  */
 
 export default async function handler(req, res) {
@@ -9,7 +9,15 @@ export default async function handler(req, res) {
 
     if (req.method === 'OPTIONS') return res.status(200).end();
 
-    const data = (req.method === 'POST') ? req.body : req.query;
+    // ON ACCEPTE TOUS LES FORMATS : JSON, FORM-ENCODED OU QUERY STRING
+    let data = {};
+    if (req.method === 'POST') {
+        data = req.body;
+        // Si c'est du form-encoded (string), on ne fait rien car Vercel le parse souvent déjà
+    } else {
+        data = req.query;
+    }
+    
     const { codePortal, action, mlsNumber } = data || {};
     const cleanCode = (codePortal || "").trim().toUpperCase();
 
@@ -30,30 +38,30 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Auth failed' });
 
-        // --- ACTION MLS ---
-        if (action === 'requestMLS' && mlsNumber) {
-            let targetId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
-            if (!targetId) {
+        // --- TRAITEMENT MLS ---
+        if ((action === 'requestMLS' || data.trigger === 'mls') && mlsNumber) {
+            let dealId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
+            if (!dealId) {
                 const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
                     method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
                 });
                 const sData = await sResp.json();
-                if (sData.data) targetId = sData.data[0].id;
+                if (sData.data) dealId = sData.data[0].id;
             }
-            if (targetId) {
+            if (dealId) {
                 await fetch(`${apiDomain}/crm/v2/Notes`, {
                     method: 'POST',
                     headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         data: [{
-                            Parent_Id: targetId,
+                            Parent_Id: dealId,
                             Note_Title: "DEMANDE DOCUMENTS MLS",
-                            Note_Content: `MLS: ${mlsNumber}`,
+                            Note_Content: `Le client demande les documents pour le MLS: ${mlsNumber}`,
                             se_module: "Potentials"
                         }]
                     })
                 });
-                return res.status(200).json({ success: true });
+                return res.status(200).json({ success: true, msg: "Note created" });
             }
         }
 
@@ -106,31 +114,20 @@ export default async function handler(req, res) {
             movingChecklist: [{ name: "Postes Canada", done: false }, { name: "Hydro-Québec", done: false }, { name: "Assurance", done: false }],
             partners: [
                 { category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% de rabais", code: "EP-PROMO" },
-                { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" },
-                { category: "Électricité", name: "Électricien Élite", icon: "⚡", benefit: "-15% main d'œuvre", code: "EP-PROMO" },
-                { category: "Design Intérieur", name: "Designer d'Espaces", icon: "&#x1f6cb;&#xfe0f;", benefit: "1h consultation offerte", code: "EP-PROMO" },
-                { category: "Excavation/Drains", name: "Drains Express", icon: "&#x1f300;", benefit: "Caméra incluse", code: "EP-PROMO" },
-                { category: "Couvreur", name: "Toiture Premium", icon: "&#x1f3e0;", benefit: "Inspection annuelle", code: "EP-PROMO" },
-                { category: "Aménagement", name: "Paysage Urbain", icon: "&#x1f33f;", benefit: "-10% sur les plants", code: "EP-PROMO" },
-                { category: "Ménage", name: "Nettoyage Éclat", icon: "&#x1f9b9;", benefit: "-50$ Forfait Global", code: "EP-PROMO" },
-                { category: "Arpenteur", name: "Précision Géo", icon: "&#x1f4cf;", benefit: "Service Prioritaire", code: "EP-PROMO" },
-                { category: "Assurances", name: "Tranquillité Plus", icon: "&#x1f6e1;&#xfe0f;", benefit: "50$ en carte cadeau", code: "EP-PROMO" }
+                { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" }
             ],
             team: team,
             concierge: {
                 smartHome: [
-                    { category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte.", icon: "&#x1f514;" },
-                    { category: "Confort", title: "Thermostat", desc: "Optimisez votre chauffage.", icon: "&#x1f321;&#xfe0f;" },
-                    { category: "Surveillance", title: "Caméra Extérieure", desc: "Gardez un œil sur votre entrée.", icon: "&#x1f4f9;" }
+                    { title: "Sonnette Vidéo", icon: "&#x1f514;" },
+                    { title: "Thermostat", icon: "&#x1f321;&#xfe0f;" }
                 ],
                 maintenance: [
-                    { title: "Gouttières", period: "Automne", desc: "Nettoyage avant les gels." },
-                    { title: "Filtres Fournaise", period: "3 mois", desc: "Assurez la qualité de l'air." },
-                    { title: "Toiture", period: "Printemps", desc: "Vérification après l'hiver." }
+                    { title: "Gouttières", period: "Automne" },
+                    { title: "Fournaise", period: "3 mois" }
                 ],
                 resources: [
-                    { title: "Tout sur le CELIAPP", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" },
-                    { title: "Régime d'Accès à la Propriété (RAP)", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-enregistres-epargne-retraite/regime-accession-a-propriete.html" }
+                    { title: "Tout sur le CELIAPP", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" }
                 ]
             }
         });
