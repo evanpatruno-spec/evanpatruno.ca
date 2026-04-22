@@ -1,5 +1,5 @@
 /**
- * API : DEMANDE DOCUMENTS MLS (NOUVELLE ROUTE VIERGE)
+ * API : DEMANDE DOCUMENTS MLS (FORMAT GET UNIVERSEL)
  */
 
 export default async function handler(req, res) {
@@ -9,12 +9,12 @@ export default async function handler(req, res) {
 
     if (req.method === 'OPTIONS') return res.status(200).end();
     
-    // On accepte POST ou GET pour éviter tout problème de redirection
-    const data = req.method === 'POST' ? req.body : req.query;
+    // On prend les données de l'URL (GET) ou du corps (POST)
+    const data = (req.method === 'GET') ? req.query : req.body;
     const { mlsNumber, codePortal } = data || {};
     const cleanCode = (codePortal || "").trim().toUpperCase();
 
-    if (!mlsNumber) return res.status(200).json({ status: "waiting", msg: "En attente du numéro MLS" });
+    if (!mlsNumber) return res.status(200).json({ error: "MLS Manquant" });
 
     try {
         const tokenParams = new URLSearchParams();
@@ -43,7 +43,8 @@ export default async function handler(req, res) {
         }
 
         if (targetId) {
-            await fetch(`${apiDomain}/crm/v2/Notes`, {
+            // Tentative de création de note
+            const nResp = await fetch(`${apiDomain}/crm/v2/Notes`, {
                 method: 'POST',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -55,7 +56,7 @@ export default async function handler(req, res) {
                     }]
                 })
             });
-            return res.status(200).json({ success: true });
+            return res.status(200).json({ success: true, method: req.method });
         } else {
             return res.status(404).json({ error: "Dossier non trouvé" });
         }

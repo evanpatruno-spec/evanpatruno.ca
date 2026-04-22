@@ -1971,14 +1971,11 @@
             const code = localStorage.getItem('portalCode');
             const phone = localStorage.getItem('portalPhone');
 
-            // APPEL À LA NOUVELLE ROUTE VIERGE (ANTI-CACHE)
-            const response = await fetch('/api/request-mls-doc', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    mlsNumber: mls,
-                    codePortal: code
-                })
+            // APPEL EN FORMAT GET (PLUS ROBUSTE AUX BLOCAGES)
+            const url = `/api/request-mls-doc?mlsNumber=${encodeURIComponent(mls)}&codePortal=${encodeURIComponent(code)}`;
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: { 'Accept': 'application/json' }
             });
 
             if (!response.ok) {
