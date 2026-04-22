@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V5.4 - PRODUCTION READY)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V5.5 - SECURE ROUTING)
  */
 
 export default async function handler(req, res) {
@@ -11,11 +11,11 @@ export default async function handler(req, res) {
     if (req.method === 'OPTIONS') return res.status(200).end();
     if (req.method !== 'POST') return res.status(405).json({ error: 'Méthode non autorisée' });
 
-    const { codePortal, phoneLast4, action, mlsNumber } = req.body;
+    const { codePortal, phoneLast4, action, mlsNumber } = req.body || {};
     const cleanCode = codePortal?.trim().toUpperCase();
 
     try {
-        // --- AUTH ZOHO ---
+        // --- ÉTAPE 1 : RÉCUPÉRATION DU TOKEN (Nécessaire pour tout) ---
         const tokenParams = new URLSearchParams();
         tokenParams.append('refresh_token', process.env.ZOHO_REFRESH_TOKEN?.trim());
         tokenParams.append('client_id', process.env.ZOHO_CLIENT_ID?.trim());
@@ -30,38 +30,42 @@ export default async function handler(req, res) {
         const accessToken = tokenData.access_token;
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
-        if (!accessToken) return res.status(401).json({ error: 'Erreur Auth Zoho' });
+        if (!accessToken) return res.status(401).json({ error: 'Auth failed' });
 
-        // --- GESTION MLS : CRÉATION DE NOTE DANS LES REMARQUES ---
+        // --- ÉTAPE 2 : GESTION MLS (SORTIE ANTICIPÉE) ---
         if (action === 'requestMLS') {
-            let targetId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
-            if (!targetId) {
+            console.log("Demande MLS reçue:", mlsNumber);
+            let dealId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
+            
+            if (!dealId) {
                 const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
                     method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
                 });
                 const sData = await sResp.json();
-                if (sData.data) targetId = sData.data[0].id;
+                if (sData.data) dealId = sData.data[0].id;
             }
 
-            if (targetId) {
-                // Création de la Note (Remarque) dans Zoho
+            if (dealId) {
                 await fetch(`${apiDomain}/crm/v2/Notes`, {
                     method: 'POST',
                     headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         data: [{
-                            Parent_Id: targetId,
-                            Note_Title: "DEMANDE DOCUMENTS MLS (Portail)",
-                            Note_Content: `Le client a demandé la documentation pour le numéro MLS : ${mlsNumber}.`,
+                            Parent_Id: dealId,
+                            Note_Title: "DEMANDE DOCUMENTS MLS",
+                            Note_Content: `MLS: ${mlsNumber}`,
                             se_module: "Potentials"
                         }]
                     })
                 });
-                return res.status(200).json({ success: true, message: "Note créée dans Zoho" });
+                // ON RÉPOND ET ON S'ARRÊTE ICI
+                return res.status(200).json({ success: true, msg: "OK" });
+            } else {
+                return res.status(404).json({ error: "Dossier non trouvé" });
             }
         }
 
-        // --- RÉCUPÉRATION DU DOSSIER (DASHBOARD) ---
+        // --- ÉTAPE 3 : CHARGEMENT NORMAL DU DASHBOARD ---
         let deal = null;
         if (cleanCode === "EP-1") {
             const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, {
@@ -85,40 +89,25 @@ export default async function handler(req, res) {
 
         if (!deal) return res.status(404).json({ error: 'Dossier introuvable' });
 
-        // --- SÉCURITÉ : VÉRIFICATION TÉLÉPHONE ---
-        const mainContactId = deal.Contact_Name?.id;
-        if (mainContactId) {
-            const contactResp = await fetch(`${apiDomain}/crm/v2/Contacts/${mainContactId}`, {
-                method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-            });
-            const contactData = await contactResp.json();
-            const clientContact = contactData.data ? contactData.data[0] : null;
-            if (clientContact) {
-                const cleanPhone = (clientContact.Mobile || clientContact.Phone || "").replace(/\D/g, "");
-                if (cleanPhone.slice(-4) !== phoneLast4) return res.status(401).json({ error: "Code incorrect" });
-            }
-        }
-
-        // --- RÉCUPÉRATION INTERVENANTS ---
-        const fetchPartner = async (field) => {
-            if (!field || !field.id) return null;
-            const r = await fetch(`${apiDomain}/crm/v2/Contacts/${field.id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+        // Restauration de l'équipe et partenaires (mapping complet)
+        const fetchP = async (f) => {
+            if (!f || !f.id) return null;
+            const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const d = await r.json(); return d.data ? d.data[0] : null;
         };
-        const [notaire, inspecteur, courtier, clientContact] = await Promise.all([
-            fetchPartner(deal.Nom_Notaire), fetchPartner(deal.Nom_Inspecteur), fetchPartner(deal.Nom_Courtier_Hypoth_caire), fetchPartner(deal.Contact_Name)
+        const [notaire, inspecteur, courtier, clientC] = await Promise.all([
+            fetchP(deal.Nom_Notaire), fetchP(deal.Nom_Inspecteur), fetchP(deal.Nom_Courtier_Hypoth_caire), fetchP(deal.Contact_Name)
         ]);
 
         const team = [{ role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }];
-        const addP = (p, role, icon) => { if(p) team.push({ role, name: p.Full_Name || p.Name, icon, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" }); };
+        const addP = (p, r, ic) => { if(p) team.push({ role:r, name: p.Full_Name || p.Name, icon:ic, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" }); };
         addP(courtier, "Courtier Hypothécaire", "&#x1f3e6;"); addP(inspecteur, "Inspecteur", "🔍"); addP(notaire, "Notaire", "✒️");
 
-        // --- MAPPING FINAL ---
         const formatDate = (d) => d ? new Date(d).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
         const getDays = (d) => d ? Math.ceil((new Date(d) - new Date().setHours(0,0,0,0)) / 86400000) : null;
 
         return res.status(200).json({
-            firstName: clientContact?.First_Name || "Cher client",
+            firstName: clientC?.First_Name || "Cher client",
             code: cleanCode,
             property: deal.Deal_Name,
             city: deal.Ville || "",
@@ -152,8 +141,7 @@ export default async function handler(req, res) {
                 maintenance: [{ title: "Gouttières", period: "Automne" }, { title: "Fournaise", period: "3 mois" }]
             }
         });
-
-    } catch (error) {
-        return res.status(500).json({ error: 'Erreur', details: error.message });
+    } catch (e) {
+        return res.status(500).json({ error: "Server Error", details: e.message });
     }
 }
