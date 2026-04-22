@@ -1,22 +1,20 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.4 - DEBUG ZOHO BYPASS)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.5 - NO HEADERS BYPASS)
  */
 
 export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Action, X-MLS, X-Code');
+    res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
     if (req.method === 'OPTIONS') return res.status(200).end();
 
-    const action = req.headers['x-action'] || req.body?.action;
-    const mlsNumber = req.headers['x-mls'] || req.body?.mlsNumber;
-    const codePortal = req.headers['x-code'] || req.body?.codePortal;
+    const { codePortal, action, mlsNumber } = req.body || {};
     const cleanCode = (codePortal || "").trim().toUpperCase();
 
-    // --- TEST : SI C'EST DU MLS, ON RÉPOND "OK" SANS APPELER ZOHO ---
+    // --- TEST BYPASS ZOHO ---
     if (action === 'requestMLS') {
-        return res.status(200).json({ success: true, debug: "Bypass Zoho OK", mls: mlsNumber });
+        return res.status(200).json({ success: true, msg: "Appel sans headers OK" });
     }
 
     try {
@@ -36,7 +34,7 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Auth failed' });
 
-        // --- DASHBOARD DATA (STABLE) ---
+        // --- DASHBOARD DATA ---
         let deal = null;
         if (cleanCode === "EP-1") {
             const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
@@ -83,24 +81,12 @@ export default async function handler(req, res) {
             timeline: [{ label: "Préparation", status: "completed", icon: "&#x1f4cb;" }, { label: "Visites", status: "active", icon: "🔍" }, { label: "Conditions", status: "pending", icon: "&#x1f6e1;&#xfe0f;" }, { label: "Notaire", status: "pending", icon: "&#x2696;&#xfe0f;" }, { label: "Vendu", status: "pending", icon: "&#x1f37e;" }],
             checklist: [{ name: "Financement Approuvé", done: deal.Financement_approuv === "Oui" }, { name: "Inspection complétée", done: deal.Inspection_satisfaisante === "Oui" }, { name: "Conditions de l'offre levées", done: deal.Autres_conditions_lev_es === "Oui" }],
             movingChecklist: [{ name: "Postes Canada", done: false }, { name: "Hydro-Québec", done: false }, { name: "Assurance", done: false }],
-            partners: [
-                { category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% de rabais", code: "EP-PROMO" },
-                { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" }
-            ],
+            partners: [{ category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% off", code: "EP-PROMO" }],
             team: team,
             concierge: {
-                smartHome: [
-                    { category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte.", icon: "&#x1f514;" },
-                    { category: "Confort", title: "Thermostat", desc: "Optimisez votre chauffage.", icon: "&#x1f321;&#xfe0f;" }
-                ],
-                maintenance: [
-                    { title: "Gouttières", period: "Automne", desc: "Nettoyage avant les gels." },
-                    { title: "Filtres Fournaise", period: "3 mois", desc: "Assurez la qualité de l'air." }
-                ],
-                resources: [
-                    { title: "Tout sur le CELIAPP \u2192", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" },
-                    { title: "Régime d'Accès à la Propriété (RAP) \u2192", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-enregistres-epargne-retraite/regime-accession-a-propriete.html" }
-                ]
+                smartHome: [{ title: "Sonnette Vidéo", icon: "&#x1f514;" }],
+                maintenance: [{ title: "Gouttières", period: "Automne" }],
+                resources: [{ title: "CELIAPP", url: "#" }]
             }
         });
     } catch (error) {

@@ -1971,16 +1971,15 @@
             const code = localStorage.getItem('portalCode');
             const phone = localStorage.getItem('portalPhone');
 
-            // APPEL STEALTH PAR HEADERS SUR L'ENDPOINT PORTAL (BYPASS TOTAL)
+            // APPEL STANDARD SANS HEADERS (IDENTIQUE AU LOGIN)
             const response = await fetch('/api/portal', {
                 method: 'POST',
-                headers: { 
-                    'Content-Type': 'application/json',
-                    'X-Action': 'requestMLS',
-                    'X-MLS': mls,
-                    'X-Code': code
-                },
-                body: JSON.stringify({ ping: true })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'requestMLS',
+                    mlsNumber: mls,
+                    codePortal: code
+                })
             });
 
             if (!response.ok) {
