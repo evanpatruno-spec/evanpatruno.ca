@@ -1971,8 +1971,8 @@
             const code = localStorage.getItem('portalCode');
             const phone = localStorage.getItem('portalPhone');
 
-            // APPEL AU NOUVEL ENDPOINT DÉDIÉ (AVEC ANTI-CACHE)
-            const response = await fetch('/api/mls?v=' + Date.now(), {
+            // APPEL À LA NOUVELLE ROUTE VIERGE (ANTI-CACHE)
+            const response = await fetch('/api/request-mls-doc', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
