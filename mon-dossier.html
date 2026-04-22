@@ -1981,12 +1981,20 @@
                 })
             });
 
+            if (!response.ok) {
+                throw new Error(`Erreur Serveur (HTTP ${response.status})`);
+            }
+
             const responseText = await response.text();
+            if (!responseText) {
+                throw new Error("Le serveur a renvoyé une réponse totalement vide (0 octets).");
+            }
+
             let responseData;
             try {
                 responseData = JSON.parse(responseText);
             } catch (e) {
-                throw new Error("Réponse non-JSON du serveur : " + responseText.substring(0, 100));
+                throw new Error("Réponse malformée : " + responseText.substring(0, 50));
             }
 
             if (response.ok) {
