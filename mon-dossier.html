@@ -1971,8 +1971,9 @@
             const code = localStorage.getItem('portalCode');
             const phone = localStorage.getItem('portalPhone');
 
-            // APPEL AVEC URL ABSOLUE POUR ÉVITER LES REDIRECTIONS
-            const response = await fetch(window.location.origin + '/api/portal', {
+            // APPEL UNIFORMISÉ (EXACTEMENT COMME LE LOGIN)
+            const apiUrl = '/api/portal';
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -1983,7 +1984,7 @@
             });
 
             if (!response.ok) {
-                throw new Error(`Erreur Serveur (HTTP ${response.status})`);
+                throw new Error(`Erreur HTTP ${response.status} sur ${apiUrl}`);
             }
 
             const responseText = await response.text();
