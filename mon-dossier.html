@@ -1330,6 +1330,36 @@
             </div>
         </div>
 
+        <!-- SMART CONCIERGERIE MLS -->
+        <div class="section-wrapper" id="secConciergeMLS" style="border: 2px solid #00f2ff30; box-shadow: 0 0 20px rgba(0,242,255,0.1); margin-top: 30px;">
+            <div style="padding:25px;">
+                <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
+                    <div style="font-size:2rem;">⚡</div>
+                    <div>
+                        <h3 style="margin:0; color:#fff; font-family:'Outfit';">Smart Concierge</h3>
+                        <p style="margin:0; font-size:0.85rem; opacity:0.7;">Documentation confidentielle instantan&eacute;e</p>
+                    </div>
+                </div>
+                
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <div style="flex:1; min-width:200px; position:relative;">
+                        <input type="text" id="inpMLS" placeholder="Num&eacute;ro MLS (ex: 12345678)" 
+                            style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px 18px; border-radius:12px; color:#fff; font-family:'Inter'; outline:none; transition:0.3s;"
+                            onfocus="this.style.borderColor='var(--dash-accent)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                    </div>
+                    <button onclick="requestMLSDoc()" id="btnMLS"
+                        style="background:var(--dash-grad); color:#fff; border:none; padding:0 30px; border-radius:12px; font-weight:800; cursor:pointer; transition:0.3s; height:48px;">
+                        Demander PDF
+                    </button>
+                </div>
+                
+                <div id="statusMLS" style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
+                    <div class="loader-mini"></div>
+                    <span id="txtStatusMLS" style="color:rgba(255,255,255,0.8);">Recherche sur Matrix...</span>
+                </div>
+            </div>
+        </div>
+
         <!-- MILESTONE COCKPIT -->
         <div class="milestone-grid" id="wrapMilestones"></div>
 
@@ -1504,7 +1534,7 @@
         movingChecklist: [
             { name: "Aviser son propri&eacute;taire (60 jours avant)", done: true },
             { name: "Contacter Bell / Videotron / Hydro-Qu&eacute;bec", done: false },
-            { name: "Faire suivre son courrier &mdash; Postes Canada", done: false },
+            { name: "Faire suivre son courrier &mdash;  Postes Canada", done: false },
             { name: "Aviser la RAMQ et la SAAQ", done: false },
             { name: "R&eacute;server la compagnie de d&eacute;m&eacute;nagement", done: false },
             { name: "Commander les boites et mat&eacute;riaux", done: false },
@@ -1523,8 +1553,8 @@
         isCelebration: false,
         concierge: {
             smartHome: [
-                { category: "S&eacute;curit&eacute;", icon: "Ã°Å¸&acirc;€&acirc;€™", title: "Serrure intelligente", desc: "Remplacez vos serrures d&egrave;s l'emm&eacute;nagement pour plus de s&eacute;curit&eacute;." },
-                { category: "Confort", icon: "Ã°Å¸Å’&Acirc;¡Ã¯&Acirc;¸&Acirc;", title: "Thermostat connect&eacute;", desc: "Ecobee ou Nest pour optimiser votre consommation d'&eacute;nergie." },
+                { category: "S&eacute;curit&eacute;", icon: "Ã°Å¸&acirc;€ &acirc;€™", title: "Serrure intelligente", desc: "Remplacez vos serrures d&egrave;s l'emm&eacute;nagement pour plus de s&eacute;curit&eacute;." },
+                { category: "Confort", icon: "Ã°Å¸Å’&Acirc;¡Ã¯&Acirc;¸&Acirc; ", title: "Thermostat connect&eacute;", desc: "Ecobee ou Nest pour optimiser votre consommation d'&eacute;nergie." },
                 { category: "Surveillance", icon: "&#x1f4f9;", title: "Cam&eacute;ra ext&eacute;rieure", desc: "Ring ou Arlo : surveillez votre propri&eacute;t&eacute; &agrave; distance." }
             ],
             maintenance: [
@@ -1534,10 +1564,10 @@
                 { period: "HIVER", title: "Syst&egrave;me de chauffage", desc: "Tester la fournaise et faire entretenir si n&eacute;cessaire." }
             ],
             resources: [
-                { title: "R&eacute;gime d'Acc&egrave;s &agrave; la Propri&eacute;t&eacute; (RAP) &mdash; ARC", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-reer-ferr-autres-regimes-enregistres/retirer-votre-reer-regulier/regime-acces-propriete.html" },
-                { title: "Guide de l'acheteur &mdash; OACIQ officiel", url: "https://www.oaciq.com/fr/articles/rachetez-une-propriete" },
-                { title: "Calculateur de droit de mutation &mdash; " , url: "https://www.ville.montreal.qc.ca/portal/page?_pageid=44,52683200&_dad=portal&_schema=PORTAL" },
-                { title: "R&eacute;novation Qu&eacute;bec &mdash; R&eacute;noV&eacute;rt", url: "https://www.transitionenergetique.gouv.qc.ca/residences/programmes-rabais/renovert" }
+                { title: "R&eacute;gime d'Acc&egrave;s &agrave; la Propri&eacute;t&eacute; (RAP) &mdash;  ARC", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-reer-ferr-autres-regimes-enregistres/retirer-votre-reer-regulier/regime-acces-propriete.html" },
+                { title: "Guide de l'acheteur &mdash;  OACIQ officiel", url: "https://www.oaciq.com/fr/articles/rachetez-une-propriete" },
+                { title: "Calculateur de droit de mutation &mdash;  " , url: "https://www.ville.montreal.qc.ca/portal/page?_pageid=44,52683200&_dad=portal&_schema=PORTAL" },
+                { title: "R&eacute;novation Qu&eacute;bec &mdash;  R&eacute;noV&eacute;rt", url: "https://www.transitionenergetique.gouv.qc.ca/residences/programmes-rabais/renovert" }
             ]
         }
     };
@@ -1597,7 +1627,7 @@
                 }
             }
 
-            // Ã¢&acirc;€&acirc;‚¬Ã¢&acirc;€&acirc;‚¬ COCKPIT RING ANIMATION Ã¢&acirc;€&acirc;‚¬Ã¢&acirc;€&acirc;‚¬
+            // Ã¢&acirc;€ &acirc;‚¬Ã¢&acirc;€ &acirc;‚¬ COCKPIT RING ANIMATION Ã¢&acirc;€ &acirc;‚¬Ã¢&acirc;€ &acirc;‚¬
             const ring = document.getElementById('ringProgress');
             const ringPctEl = document.getElementById('ringPct');
             const ringLabel = document.getElementById('ringLabel');
@@ -1915,7 +1945,71 @@
 
     function copyPromoCode(code) {
         navigator.clipboard.writeText(code);
-        alert("Code promo " + code + " copi&eacute; !");
+        alert('Code promo copi\u00e9 : ' + code);
+    }
+
+    async function requestMLSDoc() {
+        const inp = document.getElementById('inpMLS');
+        const mls = inp.value.trim();
+        const status = document.getElementById('statusMLS');
+        const txt = document.getElementById('txtStatusMLS');
+        const btn = document.getElementById('btnMLS');
+
+        if (!mls) {
+            alert('Veuillez entrer un num\u00e9ro MLS.');
+            return;
+        }
+
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+        status.style.display = 'flex';
+        txt.innerText = 'Connexion au serveur...';
+        txt.style.color = 'rgba(255,255,255,0.8)';
+
+        try {
+            // Récupération des infos de session (code et téléphone)
+            const code = localStorage.getItem('portalCode');
+            const phone = localStorage.getItem('portalPhone');
+
+            const response = await fetch('/api/portal', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'requestMLS',
+                    mlsNumber: mls,
+                    codePortal: code,
+                    phoneLast4: phone
+                })
+            });
+
+            const responseText = await response.text();
+            let responseData;
+            try {
+                responseData = JSON.parse(responseText);
+            } catch (e) {
+                throw new Error("Réponse non-JSON du serveur : " + responseText.substring(0, 100));
+            }
+
+            if (response.ok) {
+                txt.innerText = 'Demande enregistr\u00e9e dans Zoho CRM ! \u2705';
+                txt.style.color = '#00f2ff';
+                setTimeout(() => {
+                    txt.innerText = 'Matrix Agent va vous envoyer les PDF...';
+                    setTimeout(() => {
+                        inp.value = '';
+                        btn.disabled = false;
+                        btn.style.opacity = '1';
+                    }, 2000);
+                }, 2000);
+            } else {
+                throw new Error(responseData.error || 'Erreur serveur');
+            }
+        } catch (error) {
+            txt.innerText = 'Erreur : ' + error.message;
+            txt.style.color = '#ff4b2b';
+            btn.disabled = false;
+            btn.style.opacity = '1';
+        }
     }
 
     function toggleMovingItem(code, idx) {
