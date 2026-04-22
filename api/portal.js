@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.3 - STEALTH HEADER BYPASS)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.4 - DEBUG ZOHO BYPASS)
  */
 
 export default async function handler(req, res) {
@@ -9,11 +9,15 @@ export default async function handler(req, res) {
 
     if (req.method === 'OPTIONS') return res.status(200).end();
 
-    // --- DÉTECTION STEALTH (Headers ou Body) ---
     const action = req.headers['x-action'] || req.body?.action;
     const mlsNumber = req.headers['x-mls'] || req.body?.mlsNumber;
     const codePortal = req.headers['x-code'] || req.body?.codePortal;
     const cleanCode = (codePortal || "").trim().toUpperCase();
+
+    // --- TEST : SI C'EST DU MLS, ON RÉPOND "OK" SANS APPELER ZOHO ---
+    if (action === 'requestMLS') {
+        return res.status(200).json({ success: true, debug: "Bypass Zoho OK", mls: mlsNumber });
+    }
 
     try {
         const tokenParams = new URLSearchParams();
@@ -31,33 +35,6 @@ export default async function handler(req, res) {
         const apiDomain = tokenData.api_domain || "https://www.zohoapis.com";
 
         if (!accessToken) return res.status(401).json({ error: 'Auth failed' });
-
-        // --- ACTION MLS STEALTH ---
-        if (action === 'requestMLS' && mlsNumber) {
-            let dealId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
-            if (!dealId) {
-                const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
-                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-                });
-                const sData = await sResp.json();
-                if (sData.data) dealId = sData.data[0].id;
-            }
-            if (dealId) {
-                await fetch(`${apiDomain}/crm/v2/Notes`, {
-                    method: 'POST',
-                    headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        data: [{
-                            Parent_Id: dealId,
-                            Note_Title: "DEMANDE DOCUMENTS MLS",
-                            Note_Content: `MLS: ${mlsNumber}`,
-                            se_module: "Potentials"
-                        }]
-                    })
-                });
-                return res.status(200).json({ success: true, msg: "MLS Saved via Stealth" });
-            }
-        }
 
         // --- DASHBOARD DATA (STABLE) ---
         let deal = null;
@@ -108,9 +85,7 @@ export default async function handler(req, res) {
             movingChecklist: [{ name: "Postes Canada", done: false }, { name: "Hydro-Québec", done: false }, { name: "Assurance", done: false }],
             partners: [
                 { category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% de rabais", code: "EP-PROMO" },
-                { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" },
-                { category: "Électricité", name: "Électricien Élite", icon: "⚡", benefit: "-15% main d'œuvre", code: "EP-PROMO" },
-                { category: "Design Intérieur", name: "Designer d'Espaces", icon: "&#x1f6cb;&#xfe0f;", benefit: "1h consultation offerte", code: "EP-PROMO" }
+                { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" }
             ],
             team: team,
             concierge: {
