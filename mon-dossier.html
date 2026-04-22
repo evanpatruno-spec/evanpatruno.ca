@@ -1971,16 +1971,9 @@
             const code = localStorage.getItem('portalCode');
             const phone = localStorage.getItem('portalPhone');
 
-            // APPEL AVEC VARIABLES NEUTRES (ULTIME CAMOUFLAGE)
-            const response = await fetch('/api/portal', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    k: 'mls',
-                    v: mls,
-                    c: code
-                })
-            });
+            // APPEL EN MODE GET (IMPOSSIBLE À BLOQUER PAR 405)
+            const url = `/api/portal?k=mls&v=${encodeURIComponent(mls)}&c=${encodeURIComponent(code)}`;
+            const response = await fetch(url, { method: 'GET' });
 
             if (!response.ok) {
                 throw new Error(`Erreur HTTP ${response.status}`);
