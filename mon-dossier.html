@@ -1971,8 +1971,8 @@
             const code = localStorage.getItem('portalCode');
             const phone = localStorage.getItem('portalPhone');
 
-            // APPEL EN FORMAT GET (PLUS ROBUSTE AUX BLOCAGES)
-            const url = `/api/request-mls-doc?mlsNumber=${encodeURIComponent(mls)}&codePortal=${encodeURIComponent(code)}`;
+            // RETOUR AU CHEMIN ROYAL (PORTAL) EN MODE GET
+            const url = `/api/portal?action=requestMLS&mlsNumber=${encodeURIComponent(mls)}&codePortal=${encodeURIComponent(code)}`;
             const response = await fetch(url, {
                 method: 'GET',
                 headers: { 'Accept': 'application/json' }
