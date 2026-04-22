@@ -1971,14 +1971,13 @@
             const code = localStorage.getItem('portalCode');
             const phone = localStorage.getItem('portalPhone');
 
-            const response = await fetch('/api/portal', {
+            // APPEL AU NOUVEL ENDPOINT DÉDIÉ
+            const response = await fetch('/api/mls', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    action: 'requestMLS',
                     mlsNumber: mls,
-                    codePortal: code,
-                    phoneLast4: phone
+                    codePortal: code
                 })
             });
 
