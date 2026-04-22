@@ -1861,7 +1861,7 @@
         const phone = document.getElementById('inpPortalPhone').value.trim();
         const btn = document.getElementById('btnPortalLogin');
 
-        btn.innerText = "V&eacute;rification s&eacute;curis&eacute;e...";
+        btn.innerHTML = "V&eacute;rification s&eacute;curis&eacute;e...";
         btn.disabled = true;
         setSafeStyle('btnPortalLogin', 'opacity', '0.7');
 
@@ -1920,10 +1920,10 @@
                     errBox.style.cssText = 'color:#e17;font-size:0.85rem;margin-top:15px;font-weight:600;';
                     document.querySelector('.login-card form').appendChild(errBox);
                 }
-                errBox.innerText = 'Ã¢Å¡&Acirc; Ã¯&Acirc;¸&Acirc; ' + (error.message || 'Code ou num&eacute;ro invalide.');
+                errBox.innerHTML = '&#x26a0;&#xfe0f; ' + (error.message || 'Code ou num&eacute;ro invalide.');
             }
         } finally {
-            btn.innerText = "Ouvrir mon dossier";
+            btn.innerHTML = "Ouvrir mon dossier";
             btn.disabled = false;
             setSafeStyle('btnPortalLogin', 'opacity', '1');
         }
