@@ -82,7 +82,15 @@ async function debugState(page, stepName) {
         }
 
         console.log("[GitHub Worker] ✅ Connecté !");
-        await debugState(page, "État connecté");
+        
+        // --- NOUVEAU : BYPASS DU PROMPT 'START SETUP' ---
+        if (await page.isVisible('text="Start setup"')) {
+            console.log("[GitHub Worker] 🛡️ Blocage 'Start setup' détecté. Tentative de bypass forcé...");
+            await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
+            await page.waitForTimeout(5000);
+        }
+        
+        await debugState(page, "État après bypass");
         
         // RECHERCHE
         console.log("[GitHub Worker] 🔍 Recherche MLS...");
