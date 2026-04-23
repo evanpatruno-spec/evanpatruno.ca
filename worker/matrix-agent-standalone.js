@@ -100,10 +100,12 @@ async function getMfaCode() {
         console.log("[GitHub Worker] ✅ Connecté !");
         
         // RECHERCHE
-        console.log("[GitHub Worker] 🔍 Recherche MLS...");
-        await page.waitForTimeout(5000);
+        console.log("[GitHub Worker] 🔍 Chargement de l'interface Matrix...");
+        await page.waitForTimeout(10000); // On donne 10s pour que tout s'affiche
         await page.keyboard.press('Escape');
-        const searchInput = await page.waitForSelector('input[name*="SpeedBar"]', { timeout: 20000 });
+        
+        console.log("[GitHub Worker] 🔍 Recherche MLS...");
+        const searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 30000 });
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
         
