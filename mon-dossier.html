@@ -2049,7 +2049,7 @@
         setSafeStyle('btnPortalLogin', 'opacity', '0.7');
 
         try {
-            const response = await fetch('https://dossier.evanpatruno.ca/api/portal', {
+            const response = await fetch('/api/portal', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -2079,7 +2079,7 @@
 
             const data = await response.json();
 
-            // RENDU DES DONN&Eacute;ES R&Eacute;ELLES
+            // RENDU DES DONNÉES RÉELLES
             renderPortal(data);
 
             document.getElementById('portalOverlay').classList.add('hidden');
@@ -2087,25 +2087,15 @@
 
         } catch (error) {
             console.error('Erreur Portail:', error);
-
-            // FALLBACK TEST (EP-1001)
-            if (code === "EP-1001") {
-                console.log("Mode d&eacute;mo EP-1001");
-                renderPortal(MOCK_DATA);
-                document.getElementById('portalOverlay').classList.add('hidden');
-                document.getElementById('portalDash').classList.add('visible');
-            } else {
-                // Afficher l'erreur de manière sécurisée
-                let errBox = document.getElementById('loginErrorMsg');
-                if (!errBox) {
-                    errBox = document.createElement('p');
-                    errBox.id = 'loginErrorMsg';
-                    errBox.style.cssText = 'color:#ff4b2b;font-size:0.85rem;margin-top:15px;font-weight:600;text-align:center;';
-                    const loginCard = document.querySelector('.portal-overlay .login-card');
-                    if (loginCard) loginCard.appendChild(errBox);
-                }
-                errBox.innerHTML = '&#x26a0;&#xfe0f; ' + (error.message || 'Code ou numéro invalide.');
+            let errBox = document.getElementById('loginErrorMsg');
+            if (!errBox) {
+                errBox = document.createElement('p');
+                errBox.id = 'loginErrorMsg';
+                errBox.style.cssText = 'color:#ff4b2b;font-size:0.85rem;margin-top:15px;font-weight:600;text-align:center;';
+                const loginCard = document.querySelector('.portal-overlay .login-card');
+                if (loginCard) loginCard.appendChild(errBox);
             }
+            errBox.innerHTML = '&#x26a0;&#xfe0f; ' + (error.message || 'Code ou num&eacute;ro invalide.');
         } finally {
             if (btn) {
                 btn.innerHTML = "Ouvrir mon dossier";
