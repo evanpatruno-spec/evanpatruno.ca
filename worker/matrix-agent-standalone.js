@@ -52,7 +52,17 @@ const { chromium } = require('playwright');
         
         console.log("[GitHub Worker] Succès !");
     } catch (e) {
-        console.error("[GitHub Worker] Erreur:", e);
+        console.error("[GitHub Worker] ❌ ERREUR DÉTECTÉE :");
+        console.error(`- Message: ${e.message}`);
+        console.error(`- URL au moment du crash: ${page.url()}`);
+        try {
+            const pageTitle = await page.title();
+            console.error(`- Titre de la page: ${pageTitle}`);
+            const textContent = await page.innerText('body');
+            console.error(`- Début du texte visible: ${textContent.substring(0, 500)}...`);
+        } catch (diagErr) {
+            console.error("- Impossible de récupérer plus de détails visuels.");
+        }
         process.exit(1);
     } finally {
         await browser.close();
