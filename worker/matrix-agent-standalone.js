@@ -74,7 +74,14 @@ async function getMfaCode() {
         console.log("[GitHub Worker] 🌐 Accès à Matrix...");
         await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
         
-        // Si on voit encore le login
+        // --- NOUVEAU : ENTRÉE DANS L'OUTIL ---
+        if (page.url().includes('espace-pro')) {
+            console.log("[GitHub Worker] 🛠️ Clic sur l'onglet Matrix...");
+            await page.click('text="Matrix"');
+            await page.waitForTimeout(5000);
+        }
+
+        // Si on voit encore le login... (la suite reste la même)
         if (await page.isVisible('#Username, #username')) {
             console.log("[GitHub Worker] 🔑 Login requis...");
             await page.fill('input[type="text"], #Username', process.env.MATRIX_USER);
@@ -98,11 +105,14 @@ async function getMfaCode() {
         }
 
         console.log("[GitHub Worker] ✅ Connecté !");
+        console.log(`[GitHub Worker] 📍 URL actuelle: ${page.url()}`);
+        console.log(`[GitHub Worker] 🏷️ Titre page: ${await page.title()}`);
         
         // RECHERCHE
         console.log("[GitHub Worker] 🔍 Navigation directe vers la recherche MLS...");
         await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
-        await page.waitForTimeout(5000);
+        await page.reload(); // Forcer le rechargement pour voir la SpeedBar
+        await page.waitForTimeout(10000);
         
         console.log("[GitHub Worker] 🔍 Saisie du numéro MLS...");
         // On cherche n'importe quel champ qui pourrait être la SpeedBar ou un champ de recherche
