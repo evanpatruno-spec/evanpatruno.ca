@@ -74,7 +74,8 @@ export default async function handler(req, res) {
                         Num_ro_MLS: mls,
                         Code_Portail: cleanCode,
                         Affaire: dealId // Le lien vers l'affaire
-                    }]
+                    }],
+                    trigger: ["workflow"] // Force le déclenchement des automatisations CRM
                 })
             });
             const createData = await createResp.json();
