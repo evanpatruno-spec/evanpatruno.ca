@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.8 - MASTER RESTORE + GET BYPASS)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.9 - CRITERIA SEARCH)
  */
 
 export default async function handler(req, res) {
@@ -9,7 +9,6 @@ export default async function handler(req, res) {
 
     if (req.method === 'OPTIONS') return res.status(200).end();
 
-    // ON ACCEPTE LES DONNÉES EN POST OU EN GET (POUR LE BYPASS)
     const data = (req.method === 'POST') ? req.body : req.query;
     const code = data.c || data.codePortal;
     const action = data.k || data.action;
@@ -33,49 +32,51 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Auth failed' });
 
-        // --- ACTION MLS (BYPASS POSSIBLE EN GET OU POST) ---
-        if ((action === 'mls' || action === 'requestMLS') && mls) {
-            let dealId = (cleanCode === "EP-1") ? "6466486000011930049" : null;
-            if (!dealId) {
-                const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, {
-                    method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
-                });
-                const sData = await sResp.json();
-                if (sData.data) dealId = sData.data[0].id;
-            }
-            if (dealId) {
-                await fetch(`${apiDomain}/crm/v2/Notes`, {
-                    method: 'POST',
-                    headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        data: [{
-                            Parent_Id: dealId,
-                            Note_Title: "DEMANDE DOCUMENTS MLS (PORTAIL)",
-                            Note_Content: `MLS: ${mls}`,
-                            se_module: "Potentials"
-                        }]
-                    })
-                });
-                return res.status(200).json({ s: true, msg: "MLS Saved" });
-            }
-        }
-
-        // --- DASHBOARD DATA ---
+        // --- RECHERCHE DU DOSSIER ---
         let deal = null;
         if (cleanCode === "EP-1") {
             const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const dData = await rResp.json(); deal = dData.data ? dData.data[0] : null;
-        } else {
-            const sResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+        } else if (cleanCode) {
+            // ON CHERCHE D'ABORD PAR CRITÈRE (Plus rapide/précis)
+            // On essaie le champ 'Code_Portail' (nom probable de l'API)
+            const criteria = encodeURIComponent(`(Code_Portail:equals:${cleanCode})`);
+            const sResp = await fetch(`${apiDomain}/crm/v2/Potentials/search?criteria=${criteria}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const sData = await sResp.json();
+            
             if (sData.data) {
-                const rResp = await fetch(`${apiDomain}/crm/v2/${sData.data[0].$module}/${sData.data[0].id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-                const dData = await rResp.json(); deal = dData.data ? dData.data[0] : null;
+                deal = sData.data[0];
+            } else {
+                // FALLBACK : Recherche globale si le critère échoue (champ nommé différemment)
+                const gResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const gData = await gResp.json();
+                if (gData.data) {
+                    const rResp = await fetch(`${apiDomain}/crm/v2/${gData.data[0].$module}/${gData.data[0].id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                    const dData = await rResp.json(); deal = dData.data ? dData.data[0] : null;
+                }
             }
         }
 
         if (!deal) return res.status(404).json({ error: 'Dossier introuvable' });
 
+        // --- ACTION MLS ---
+        if ((action === 'mls' || action === 'requestMLS') && mls) {
+            await fetch(`${apiDomain}/crm/v2/Notes`, {
+                method: 'POST',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    data: [{
+                        Parent_Id: deal.id,
+                        Note_Title: "DEMANDE DOCUMENTS MLS (PORTAIL)",
+                        Note_Content: `MLS: ${mls}`,
+                        se_module: "Potentials"
+                    }]
+                })
+            });
+            return res.status(200).json({ s: true, msg: "MLS Saved" });
+        }
+
+        // --- MAPPING DASHBOARD ---
         const fetchP = async (f) => {
             if (!f || !f.id) return null;
             const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
