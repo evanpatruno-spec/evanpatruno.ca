@@ -154,14 +154,21 @@ async function handlePopups(page) {
         
         // RECHERCHE DIRECTE (Solution 3)
         console.log("[GitHub Worker] 🔍 Navigation vers la page d'accueil Matrix...");
-        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
+        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' }).catch(() => {});
         await page.waitForTimeout(5000);
         
         // NETTOYAGE INITIAL DES POPUPS
         await handlePopups(page);
+        
         console.log("[GitHub Worker] 🔍 Recherche de la SpeedBar...");
         let searchInput = null;
         let attemptsSearch = 0;
+        
+        // Log debug
+        try {
+            const inputs = await page.$$eval('input', els => els.map(e => ({id: e.id, name: e.name, placeholder: e.placeholder})));
+            console.log(`[GitHub Worker] 🔍 DEBUG: ${inputs.length} inputs trouvés. Ex: ${inputs.slice(0,3).map(i => i.id || i.name).join(', ')}`);
+        } catch(e) {}
         
         while (!searchInput && attemptsSearch < 12) {
             attemptsSearch++;
@@ -175,9 +182,13 @@ async function handlePopups(page) {
                     // Liste de sélecteurs possibles pour la SpeedBar
                     const selectors = [
                         '#m_txtSpeedBarInput',
+                        '#m_pSearch_m_txtSpeedBarInput',
                         'input[name*="SpeedBar"]',
                         'input[id*="SpeedBar"]',
-                        '.m_txtSpeedBarInput'
+                        'input[placeholder*="SpeedBar"]',
+                        'input[placeholder*="Recherche"]',
+                        '.m_txtSpeedBarInput',
+                        '#m_pSearch_m_txtSpeedBarInput'
                     ];
                     
                     for (const selector of selectors) {
