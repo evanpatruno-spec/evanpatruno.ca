@@ -7,14 +7,23 @@ const { chromium } = require('playwright');
     console.log(`[GitHub Worker] Démarrage: MLS ${mlsNumber} pour ${clientEmail}`);
 
     const browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
+    const context = await browser.newContext({
+        viewport: { width: 1920, height: 1080 },
+        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'
+    });
+    const page = await context.newPage();
 
     try {
         // --- 1. CONNEXION ---
-        console.log("[GitHub Worker] Connexion à Centris...");
-        await page.goto('https://accounts.centris.ca/account/login', { waitUntil: 'networkidle' });
+        console.log("[GitHub Worker] Accès à Centris.ca...");
+        await page.goto('https://www.centris.ca/fr', { waitUntil: 'networkidle' });
         
-        // Attendre que le champ Username soit visible
+        // On cherche le bouton connexion (Souvent en haut à droite)
+        console.log("[GitHub Worker] Clic sur Connexion...");
+        await page.click('text="Connexion"');
+        await page.waitForTimeout(2000);
+
+        // Attendre que le champ Username soit visible (page de login)
         await page.waitForSelector('#Username', { timeout: 30000 });
         await page.fill('#Username', process.env.MATRIX_USER);
         await page.fill('#Password', process.env.MATRIX_PASS);
