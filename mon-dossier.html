@@ -2096,15 +2096,16 @@
                 document.getElementById('portalOverlay').classList.add('hidden');
                 document.getElementById('portalDash').classList.add('visible');
             } else {
-                // Afficher l'erreur sous le formulaire (pas d'alert!)
+                // Afficher l'erreur de manière sécurisée
                 let errBox = document.getElementById('loginErrorMsg');
                 if (!errBox) {
                     errBox = document.createElement('p');
                     errBox.id = 'loginErrorMsg';
-                    errBox.style.cssText = 'color:#e17;font-size:0.85rem;margin-top:15px;font-weight:600;';
-                    document.querySelector('.login-card form').appendChild(errBox);
+                    errBox.style.cssText = 'color:#ff4b2b;font-size:0.85rem;margin-top:15px;font-weight:600;text-align:center;';
+                    const loginCard = document.querySelector('.portal-overlay .login-card');
+                    if (loginCard) loginCard.appendChild(errBox);
                 }
-                errBox.innerHTML = '&#x26a0;&#xfe0f; ' + (error.message || 'Code ou num&eacute;ro invalide.');
+                errBox.innerHTML = '&#x26a0;&#xfe0f; ' + (error.message || 'Code ou numéro invalide.');
             }
         } finally {
             btn.innerHTML = "Ouvrir mon dossier";
