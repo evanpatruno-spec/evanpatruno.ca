@@ -85,6 +85,14 @@ async function debugState(page, stepName) {
 
         console.log("[GitHub Worker] ✅ Connecté !");
         
+        // --- PASSAGE EN MODE CLASSIQUE SI BESOIN ---
+        await page.waitForTimeout(5000);
+        if (await page.isVisible('text="Aller au tableau de bord classique"')) {
+            console.log("[GitHub Worker] 🔄 Basculement vers l'interface classique...");
+            await page.click('text="Aller au tableau de bord classique"');
+            await page.waitForTimeout(5000);
+        }
+        
         // RECHERCHE
         console.log("[GitHub Worker] 🔍 Recherche MLS...");
         await page.waitForTimeout(5000);
