@@ -20,22 +20,71 @@ async function getMfaCode() {
                 let message = await client.fetchOne(lastIds[i], { source: true });
                 let parsed = await simpleParser(message.source);
                 const codeMatch = parsed.text.match(/\b\d{6}\b/);
-                if (codeMatch) {
-                    console.log(`[GitHub Worker] 🔑 Code trouvé (Exp: ${parsed.from.text})`);
-                    return codeMatch[0];
-                }
+                if (codeMatch) return codeMatch[0];
             }
             return null;
         } finally { lock.release(); }
-    } catch (err) { return null; } finally { await client.logout(); }
+} finally { await client.logout(); }
 }
 
-async function debugState(page, stepName) {
-    console.log(`\n--- DEBUG: ${stepName} ---`);
-    console.log(`URL: ${page.url()}`);
-    const buttons = await page.evaluate(() => Array.from(document.querySelectorAll('button')).map(b => b.innerText).filter(t => t.length > 0));
-    console.log(`Boutons: ${buttons.join(', ')}`);
-    console.log('---------------------------\n');
+/**
+ * Nettoie les fenêtres surgissantes qui bloquent l'interface Matrix
+ */
+async function handlePopups(page) {
+    console.log("[GitHub Worker] 🧹 Nettoyage des popups...");
+    const popupSelectors = [
+        'button:has-text("Je l\'ai lu")',
+        'button:has-text("I have read")',
+        'button:has-text("I Agree")',
+        'button:has-text("J\'accepte")',
+        'button:has-text("Close")',
+        'button:has-text("Fermer")',
+        '.ui-dialog-buttonset button',
+        '.modal-footer button'
+    ];
+
+    let foundAny = false;
+    // On tente jusqu'à 3 itérations pour les popups qui s'enchaînent
+    for (let i = 0; i < 3; i++) {
+        let foundInThisIteration = false;
+        
+        // Vérifier la page principale
+        for (const selector of popupSelectors) {
+            try {
+                const buttons = await page.$$(selector);
+                for (const btn of buttons) {
+                    if (await btn.isVisible()) {
+                        console.log(`[GitHub Worker] ✨ Fermeture popup: ${selector}`);
+                        await btn.click();
+                        await page.waitForTimeout(1500);
+                        foundInThisIteration = true;
+                        foundAny = true;
+                    }
+                }
+            } catch (e) {}
+        }
+
+        // Vérifier tous les cadres (iframes)
+        for (const frame of page.frames()) {
+            for (const selector of popupSelectors) {
+                try {
+                    const buttons = await frame.$$(selector);
+                    for (const btn of buttons) {
+                        if (await btn.isVisible()) {
+                            console.log(`[GitHub Worker] ✨ Fermeture popup (dans cadre): ${selector}`);
+                            await btn.click();
+                            await page.waitForTimeout(1500);
+                            foundInThisIteration = true;
+                            foundAny = true;
+                        }
+                    }
+                } catch (e) {}
+            }
+        }
+        
+        if (!foundInThisIteration) break;
+    }
+    return foundAny;
 }
 
 (async () => {
@@ -48,15 +97,6 @@ async function debugState(page, stepName) {
         viewport: { width: 1280, height: 720 },
         userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'
     });
-
-    if (process.env.MATRIX_COOKIES) {
-        const cookies = process.env.MATRIX_COOKIES.split(';').map(pair => {
-            const parts = pair.trim().split('=');
-            return { name: parts[0], value: parts.slice(1).join('='), domain: '.centris.ca', path: '/' };
-        });
-        await context.addCookies(cookies);
-    }
-
     const page = await context.newPage();
 
     try {
@@ -68,77 +108,114 @@ async function debugState(page, stepName) {
             await page.fill('input[name*="ser"], #Username', process.env.MATRIX_USER);
             await page.fill('input[type="password"]', process.env.MATRIX_PASS);
             await page.click('button[type="submit"], button:has-text("Connect")');
+            
             await page.waitForTimeout(10000);
-
-            if (page.url().includes('challenge') || page.url().includes('prompt') || await page.isVisible('input[name*="Code"]')) {
-                console.log("[GitHub Worker] 🛡️ MFA détecté...");
-                await page.waitForTimeout(20000); // Attente transfert email
+            if (page.url().includes('challenge') || await page.isVisible('input[name*="Code"]')) {
+                console.log("[GitHub Worker] 🛡️ MFA...");
+                await page.waitForTimeout(25000); // Attente transfert
                 const code = await getMfaCode();
                 if (code) {
-                    console.log(`[GitHub Worker] 🔑 Code injecté: ${code}`);
                     await page.fill('input[name*="Code"], #VerificationCode, input[type="text"]', code);
-                    await page.click('button:has-text("Continue"), button[type="submit"]');
-                    await page.waitForTimeout(10000);
+                    await page.click('button:has-text("Continue"), button:has-text("Je l\'ai lu"), button[type="submit"]');
+                    await page.waitForTimeout(15000);
                 }
             }
         }
 
-        console.log("[GitHub Worker] ✅ Connecté !");
+        // --- ATTENTE DE LA SORTIE DE LA PAGE DE TRANSITION ET MFA ---
+        console.log("[GitHub Worker] ⏳ Attente de la redirection finale...");
+        let attempts = 0;
+        const loginDomains = ['auth0.com', 'accounts.centris.ca', 'LoginIntermediateMLD.aspx'];
         
-        // --- NAVIGATION FORCÉE VERS LE TABLEAU DE BORD ---
-        console.log("[GitHub Worker] 🌐 Chargement forcé de Matrix...");
-        // --- NETTOYAGE DES POPUPS ---
-        console.log("[GitHub Worker] 🧼 Nettoyage de l'interface...");
-        await page.waitForTimeout(5000);
-        
-        // On cherche le bouton "Je l'ai lu" ou équivalent
-        const readBtn = await page.$('text="Je l\'ai lu", text="I have read", .btn-read');
-        if (readBtn) {
-            console.log("[GitHub Worker] 👆 Clic sur 'Je l'ai lu'...");
-            await readBtn.click();
-            await page.waitForTimeout(2000);
-        }
-        await page.keyboard.press('Escape');
-        
-        // RECHERCHE (Scan de tous les cadres/iframes)
-        console.log("[GitHub Worker] 🔍 Recherche de la SpeedBar...");
-        await page.keyboard.press('Escape');
-        
-        let searchInput = null;
-        const frames = page.frames();
-        console.log(`[GitHub Worker] 🖼️ ${frames.length} cadres détectés.`);
-        
-        for (const frame of frames) {
+        while (attempts < 20) {
+            const currentUrl = page.url();
+            const stillLoggingIn = loginDomains.some(domain => currentUrl.includes(domain));
+            
+            if (!stillLoggingIn && currentUrl.includes('Matrix/Default.aspx')) {
+                break;
+            }
+
+            console.log(`[GitHub Worker] ... Toujours en transition (${currentUrl.split('/')[2]}), attente (${attempts+1}/20)`);
+            
+            // Si on est bloqué sur une page avec un bouton "Continue", on clique
             try {
-                searchInput = await frame.$('#m_txtSpeedBarInput, input[name*="SpeedBar"]');
-                if (searchInput) {
-                    console.log("[GitHub Worker] ✅ SpeedBar trouvée dans un cadre !");
-                    await searchInput.fill(mlsNumber);
-                    await frame.keyboard.press('Enter');
-                    break;
+                const continueBtn = await page.$('button:has-text("Continue"), button:has-text("Continuer")');
+                if (continueBtn && await continueBtn.isVisible()) {
+                    console.log("[GitHub Worker] ➡️ Clic sur 'Continue' détecté...");
+                    await continueBtn.click();
                 }
             } catch (e) {}
+
+            await page.waitForTimeout(4000);
+            attempts++;
         }
 
-        if (!searchInput) {
-            // Tentative finale en mode direct sur la page principale
-            searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 10000 });
-            await searchInput.fill(mlsNumber);
-            await page.keyboard.press('Enter');
-        }
+        console.log("[GitHub Worker] ✅ Arrivé sur Matrix !");
         
+        // RECHERCHE DIRECTE (Solution 3)
+        console.log("[GitHub Worker] 🔍 Navigation vers la page d'accueil Matrix...");
+        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
+        await page.waitForTimeout(5000);
+        
+        // NETTOYAGE INITIAL DES POPUPS
+        await handlePopups(page);
+        console.log("[GitHub Worker] 🔍 Recherche de la SpeedBar...");
+        let searchInput = null;
+        let attemptsSearch = 0;
+        
+        while (!searchInput && attemptsSearch < 12) {
+            attemptsSearch++;
+            
+            // Tentative de nettoyage si on ne trouve pas (ou dès le début si on veut être sûr)
+            await handlePopups(page);
+            await page.waitForTimeout(2000);
+
+            for (const frame of page.frames()) {
+                try {
+                    // Liste de sélecteurs possibles pour la SpeedBar
+                    const selectors = [
+                        '#m_txtSpeedBarInput',
+                        'input[name*="SpeedBar"]',
+                        'input[id*="SpeedBar"]',
+                        '.m_txtSpeedBarInput'
+                    ];
+                    
+                    for (const selector of selectors) {
+                        const el = await frame.$(selector);
+                        if (el && await el.isVisible()) {
+                            searchInput = el;
+                            console.log(`[GitHub Worker] ✅ SpeedBar trouvée dans un cadre (${selector}) !`);
+                            
+                            // On s'assure qu'elle est cliquable (parfois cachée par un overlay transparent)
+                            await el.click({ force: true }).catch(() => {});
+                            await el.fill(mlsNumber);
+                            await frame.keyboard.press('Enter');
+                            break;
+                        }
+                    }
+                } catch (e) {}
+                if (searchInput) break;
+            }
+            
+            if (!searchInput) {
+                console.log(`[GitHub Worker] ... SpeedBar non trouvée, nouvelle tentative (${attemptsSearch}/12)`);
+                await page.waitForTimeout(3000);
+            }
+        }
+
+        if (!searchInput) throw new Error("Barre de recherche introuvable après 60s.");
+
         // DOCUMENTS
         console.log("[GitHub Worker] 📄 Accès documents...");
-        await page.waitForTimeout(10000);
+        await page.waitForTimeout(15000);
         const docsBtn = await page.waitForSelector('a[title*="Document"], text="Documents"', { timeout: 30000 });
         await docsBtn.click();
         
         // PARTAGE
         console.log("[GitHub Worker] 📧 Partage...");
-        await page.waitForTimeout(5000);
+        await page.waitForTimeout(8000);
         await page.click('#chkSelectAll');
         await page.click('button:has-text("Partager"), #btnShare');
-        
         await page.waitForSelector('#txtEmailTo');
         await page.fill('#txtEmailTo', clientEmail);
         await page.fill('#txtSubject', `Documentation - MLS ${mlsNumber}`);
@@ -148,7 +225,6 @@ async function debugState(page, stepName) {
 
     } catch (e) {
         console.error("[GitHub Worker] ❌ ÉCHEC:", e.message);
-        await debugState(page, "CRASH");
         process.exit(1);
     } finally { await browser.close(); }
 })();
