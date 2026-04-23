@@ -65,47 +65,22 @@ export default async function handler(req, res) {
 
         // --- ACTION MLS DIRECTE ---
         if ((action === 'mls' || action === 'requestMLS') && mls) {
-            // 1. Création de l'interaction dans le CRM
-            const createResp = await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
-                method: 'POST',
-                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    data: [{
-                        Name: `Demande MLS ${mls}`,
-                        Num_ro_MLS: mls,
-                        Code_Portail: cleanCode,
-                        Affaire: dealId
-                    }],
-                    trigger: ["workflow"]
-                })
-            });
+            console.log("Demande MLS reçue pour:", mls);
             
-            // 2. Signal à GitHub Actions (Le robot puissant)
-            const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
-            
+            // 1. Enregistrement rapide dans le CRM (Action test)
             try {
-                // On prévient GitHub de lancer le robot Matrix
-                await fetch(`https://api.github.com/repos/evanpatruno-spec/evanpatruno.ca/dispatches`, {
+                await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
                     method: 'POST',
-                    headers: {
-                        'Authorization': `token ${process.env.GH_TOKEN}`,
-                        'Accept': 'application/vnd.github.v3+json',
-                        'User-Agent': 'Vercel-Serverless-Function'
-                    },
+                    headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        event_type: 'run-matrix-agent',
-                        client_payload: {
-                            mlsNumber: mls,
-                            clientEmail: clientEmail
-                        }
+                        data: [{ Name: `Test Direct ${mls}`, Num_ro_MLS: mls, Code_Portail: cleanCode, Affaire: dealId }]
                     })
                 });
-                console.log("Signal envoyé à GitHub pour MLS:", mls);
-            } catch (dispatchErr) {
-                console.error("Erreur Dispatch GitHub:", dispatchErr);
+            } catch (e) {
+                console.error("Erreur CRM:", e);
             }
 
-            return res.status(200).json({ s: true, msg: "Demande traitée" });
+            return res.status(200).json({ s: true, msg: "OK" });
         }
 
         // --- MAPPING DASHBOARD ---
