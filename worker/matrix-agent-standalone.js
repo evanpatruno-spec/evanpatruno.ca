@@ -126,6 +126,14 @@ async function getMfaCode() {
         console.error("[GitHub Worker] ❌ ÉCHEC");
         console.error(`- Cause: ${e.message}`);
         console.error(`- URL finale: ${page.url()}`);
+        try {
+            const pageTitle = await page.title();
+            console.error(`- Titre: ${pageTitle}`);
+            const textContent = await page.innerText('body');
+            console.error(`- Texte visible: ${textContent.substring(0, 800)}...`);
+        } catch (diagErr) {
+            console.error("- Impossible de récupérer les détails visuels.");
+        }
         process.exit(1);
     } finally {
         await browser.close();
