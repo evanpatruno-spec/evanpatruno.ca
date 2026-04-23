@@ -20,11 +20,17 @@ async function getMfaCode() {
                 let message = await client.fetchOne(lastIds[i], { source: true });
                 let parsed = await simpleParser(message.source);
                 const codeMatch = parsed.text.match(/\b\d{6}\b/);
-                if (codeMatch) return codeMatch[0];
+                if (codeMatch) {
+                    console.log(`[GitHub Worker] 🔑 Code trouvé: ${codeMatch[0]} (Exp: ${parsed.from.text})`);
+                    return codeMatch[0];
+                }
             }
             return null;
         } finally { lock.release(); }
-} finally { await client.logout(); }
+    } catch (err) {
+        console.log(`[GitHub Worker] ❌ Erreur Gmail: ${err.message}`);
+        return null;
+    } finally { await client.logout(); }
 }
 
 /**
@@ -109,17 +115,36 @@ async function handlePopups(page) {
             await page.fill('input[type="password"]', process.env.MATRIX_PASS);
             await page.click('button[type="submit"], button:has-text("Connect")');
             
-            await page.waitForTimeout(10000);
-            if (page.url().includes('challenge') || await page.isVisible('input[name*="Code"]')) {
-                console.log("[GitHub Worker] 🛡️ MFA...");
-                await page.waitForTimeout(25000); // Attente transfert
-                const code = await getMfaCode();
-                if (code) {
-                    await page.fill('input[name*="Code"], #VerificationCode, input[type="text"]', code);
-                    await page.click('button:has-text("Continue"), button:has-text("Je l\'ai lu"), button[type="submit"]');
-                    await page.waitForTimeout(15000);
-                }
+        // --- DÉTECTION MFA ---
+        console.log("[GitHub Worker] 🛡️ Recherche du challenge MFA...");
+        let mfaPageFound = false;
+        for (let i = 0; i < 15; i++) {
+            const url = page.url();
+            if (url.includes('challenge') || url.includes('auth0') || await page.isVisible('input[name*="Code"], #VerificationCode')) {
+                mfaPageFound = true;
+                console.log(`[GitHub Worker] 🛡️ Challenge détecté sur: ${url.split('/')[2]}`);
+                break;
             }
+            await page.waitForTimeout(2000);
+        }
+
+        if (mfaPageFound) {
+            console.log("[GitHub Worker] 🛡️ MFA actif, attente de l'email...");
+            await page.waitForTimeout(20000); // Attente réception
+            const code = await getMfaCode();
+            if (code) {
+                console.log(`[GitHub Worker] 🔑 Injection du code: ${code}`);
+                await page.fill('input[name*="Code"], #VerificationCode, input[type="text"]', code);
+                await page.waitForTimeout(1000);
+                await page.click('button:has-text("Continue"), button:has-text("Je l\'ai lu"), button[type="submit"], .btn-primary');
+                console.log("[GitHub Worker] ➡️ Formulaire MFA soumis.");
+                await page.waitForTimeout(10000);
+            } else {
+                console.log("[GitHub Worker] ❌ Échec MFA: Code non reçu.");
+            }
+        } else {
+            console.log("[GitHub Worker] 🛡️ Aucun MFA détecté, suite du login...");
+        }
         }
 
         // --- ATTENTE DE LA SORTIE DE LA PAGE DE TRANSITION ET MFA ---
