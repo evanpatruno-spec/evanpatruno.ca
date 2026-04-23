@@ -4,6 +4,8 @@
   "description": "Automations for evanpatruno.ca",
   "main": "puppeteer_convert.js",
   "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
+    "playwright-core": "^1.59.1",
     "puppeteer": "^21.0.0"
   },
   "scripts": {
