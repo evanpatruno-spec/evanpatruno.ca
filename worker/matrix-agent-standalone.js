@@ -9,26 +9,27 @@ async function getMfaCode() {
         auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASS },
         logger: false
     });
-    try {
-        await client.connect();
-        let lock = await client.getMailboxLock('INBOX');
         try {
-            // Chercher les emails de RingCentral ou Centris
-            const messages = await client.search({ 
-                or: [
-                    { from: 'service@ringcentral.com' },
-                    { from: 'noreply@centris.ca' },
-                    { subject: 'RingCentral' }
-                ]
-            });
-            if (messages.length === 0) return null;
-            const lastId = messages[messages.length - 1];
-            let message = await client.fetchOne(lastId, { source: true });
-            let parsed = await simpleParser(message.source);
-            // Extraire le code (6 chiffres)
-            const codeMatch = parsed.text.match(/\b\d{6}\b/);
-            return codeMatch ? codeMatch[0] : null;
-        } finally { lock.release(); }
+            await client.connect();
+            let lock = await client.getMailboxLock('INBOX');
+            try {
+                // Chercher les 5 derniers messages sans filtre (plus robuste avec les transferts)
+                const messages = await client.search({ all: true });
+                if (messages.length === 0) return null;
+                
+                // On vérifie les 3 derniers messages pour trouver un code
+                const lastIds = messages.slice(-3);
+                for (let i = lastIds.length - 1; i >= 0; i--) {
+                    let message = await client.fetchOne(lastIds[i], { source: true });
+                    let parsed = await simpleParser(message.source);
+                    const codeMatch = parsed.text.match(/\b\d{6}\b/);
+                    if (codeMatch) {
+                        console.log(`[GitHub Worker] 🔑 Code trouvé dans un email de: ${parsed.from.text}`);
+                        return codeMatch[0];
+                    }
+                }
+                return null;
+            } finally { lock.release(); }
     } catch (err) { return null; } finally { await client.logout(); }
 }
 
