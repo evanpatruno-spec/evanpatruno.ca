@@ -13,11 +13,19 @@ async function getMfaCode() {
         await client.connect();
         let lock = await client.getMailboxLock('INBOX');
         try {
-            const messages = await client.search({ from: 'noreply@centris.ca' });
+            // Chercher les emails de RingCentral ou Centris
+            const messages = await client.search({ 
+                or: [
+                    { from: 'service@ringcentral.com' },
+                    { from: 'noreply@centris.ca' },
+                    { subject: 'RingCentral' }
+                ]
+            });
             if (messages.length === 0) return null;
             const lastId = messages[messages.length - 1];
             let message = await client.fetchOne(lastId, { source: true });
             let parsed = await simpleParser(message.source);
+            // Extraire le code (6 chiffres)
             const codeMatch = parsed.text.match(/\b\d{6}\b/);
             return codeMatch ? codeMatch[0] : null;
         } finally { lock.release(); }
