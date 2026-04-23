@@ -87,11 +87,21 @@ async function debugState(page, stepName) {
         
         // --- NAVIGATION FORCÉE VERS LE TABLEAU DE BORD ---
         console.log("[GitHub Worker] 🌐 Chargement forcé de Matrix...");
-        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
-        await page.waitForTimeout(10000); // On laisse 10s pour passer la page intermédiaire
+        // --- NETTOYAGE DES POPUPS ---
+        console.log("[GitHub Worker] 🧼 Nettoyage de l'interface...");
+        await page.waitForTimeout(5000);
+        
+        // On cherche le bouton "Je l'ai lu" ou équivalent
+        const readBtn = await page.$('text="Je l\'ai lu", text="I have read", .btn-read');
+        if (readBtn) {
+            console.log("[GitHub Worker] 👆 Clic sur 'Je l'ai lu'...");
+            await readBtn.click();
+            await page.waitForTimeout(2000);
+        }
+        await page.keyboard.press('Escape');
         
         // RECHERCHE (Scan de tous les cadres/iframes)
-        console.log("[GitHub Worker] 🔍 Recherche de la SpeedBar dans les cadres...");
+        console.log("[GitHub Worker] 🔍 Recherche de la SpeedBar...");
         await page.keyboard.press('Escape');
         
         let searchInput = null;
