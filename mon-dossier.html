@@ -1233,18 +1233,17 @@
         <div class="login-card">
             <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 8px;">Acc&egrave;s au Dossier</h2>
             <p style="color: rgba(255,255,255,0.6); margin-bottom: 35px;">Entrez votre Code Portail unique.</p>
-            <form onsubmit="handlePortalLogin(event)">
-                <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode"
-                    required>
-                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU T&Eacute;L&Eacute;PHONE" class="login-input"
-                    id="inpPortalPhone" required style="margin-top: -10px;">
-                <button type="submit" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">Ouvrir mon
-                    dossier</button>
+            <div id="loginFormContainer">
+                <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode" required>
+                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU T&Eacute;L&Eacute;PHONE" class="login-input" id="inpPortalPhone" required style="margin-top: -10px;">
+                <button type="button" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;" onclick="handlePortalLogin(event)">
+                    Ouvrir mon dossier
+                </button>
                 <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
                     <span class="pwa-icon">&#x1f4f1;</span>
                     <span>Installer l'app sur mon t&eacute;l&eacute;phone</span>
                 </button>
-            </form>
+            </div>
         </div>
     </div>
 
@@ -2108,11 +2107,23 @@
                 errBox.innerHTML = '&#x26a0;&#xfe0f; ' + (error.message || 'Code ou numéro invalide.');
             }
         } finally {
-            btn.innerHTML = "Ouvrir mon dossier";
-            btn.disabled = false;
-            setSafeStyle('btnPortalLogin', 'opacity', '1');
+            if (btn) {
+                btn.innerHTML = "Ouvrir mon dossier";
+                btn.disabled = false;
+                setSafeStyle('btnPortalLogin', 'opacity', '1');
+            }
         }
     }
+
+    // Gestion de la touche ENTREE pour la connexion
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            const overlay = document.getElementById('portalOverlay');
+            if (overlay && !overlay.classList.contains('hidden')) {
+                handlePortalLogin(e);
+            }
+        }
+    });
 
     // --- HELPERS (DECLARED FIRST) ---
     const isIos = () => {
