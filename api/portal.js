@@ -67,18 +67,40 @@ export default async function handler(req, res) {
         if ((action === 'mls' || action === 'requestMLS') && mls) {
             console.log("Demande MLS reçue pour:", mls);
             
-            // 1. Enregistrement rapide dans le CRM (Action test)
-            try {
-                await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
+            // 1. Enregistrement CRM (Indispensable)
+            const crmData = {
+                data: [{ Name: `Demande MLS ${mls}`, Num_ro_MLS: mls, Code_Portail: cleanCode, Affaire: dealId }],
+                trigger: ["workflow"]
+            };
+
+            // 2. Appel GitHub (Le robot) - On utilise une méthode asynchrone
+            const dispatch = async () => {
+                try {
+                    const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
+                    await fetch(`https://api.github.com/repos/evanpatruno-spec/evanpatruno.ca/dispatches`, {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `token ${process.env.GH_TOKEN}`,
+                            'Accept': 'application/vnd.github.v3+json',
+                            'User-Agent': 'Vercel-Server'
+                        },
+                        body: JSON.stringify({
+                            event_type: 'run-matrix-agent',
+                            client_payload: { mlsNumber: mls, clientEmail: clientEmail }
+                        })
+                    });
+                } catch (e) { console.error("Agent Trigger Error:", e); }
+            };
+
+            // On lance l'agent et le CRM en parallèle sans bloquer
+            Promise.all([
+                fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
                     method: 'POST',
                     headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        data: [{ Name: `Test Direct ${mls}`, Num_ro_MLS: mls, Code_Portail: cleanCode, Affaire: dealId }]
-                    })
-                });
-            } catch (e) {
-                console.error("Erreur CRM:", e);
-            }
+                    body: JSON.stringify(crmData)
+                }),
+                dispatch()
+            ]).catch(err => console.error("Parallel Error:", err));
 
             return res.status(200).json({ s: true, msg: "OK" });
         }
