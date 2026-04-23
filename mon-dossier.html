@@ -1969,30 +1969,23 @@
         try {
             // Récupération des infos de session (code et téléphone)
             const code = localStorage.getItem('portalCode');
-            const phone = localStorage.getItem('portalPhone');
+            const dealId = localStorage.getItem('portalDealId');
+            const formUrl = "https://forms.zohopublic.com/evanpatrunocourtier1/form/BoutonMLSPortail/formperma/tclbZtQALIBd4u4Blu2wBMxKRfv49fCxAHCHBaWNmXk/html/submit";
+            
+            const formData = new FormData();
+            formData.append('SingleLine', code);     // Code Portail
+            formData.append('SingleLine2', mls);    // Numéro MLS
+            formData.append('SingleLine1', dealId); // ID Affaire
 
-            // APPEL EN MODE GET (IMPOSSIBLE À BLOQUER PAR 405)
-            const url = `/api/portal?k=mls&v=${encodeURIComponent(mls)}&c=${encodeURIComponent(code)}`;
-            const response = await fetch(url, { method: 'GET' });
+            // On envoie en mode "no-cors" pour que le navigateur ne bloque pas
+            fetch(formUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            });
 
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP ${response.status}`);
-            }
-
-            const responseText = await response.text();
-            if (!responseText) {
-                throw new Error("Le serveur a renvoyé une réponse totalement vide (0 octets).");
-            }
-
-            let responseData;
-            try {
-                responseData = JSON.parse(responseText);
-            } catch (e) {
-                throw new Error("Réponse malformée : " + responseText.substring(0, 50));
-            }
-
-            if (response.ok || (responseData && responseData.s)) {
-                txt.innerText = 'Demande enregistr\u00e9e ! \u2705';
+            // On affiche le succès immédiatement car no-cors ne donne pas de réponse
+            txt.innerText = 'Demande enregistrée ! \u2705';
                 txt.style.color = '#00f2ff';
                 setTimeout(() => {
                     txt.innerText = 'Matrix Agent va vous envoyer les PDF...';

@@ -92,6 +92,7 @@ export default async function handler(req, res) {
         const getDays = (d) => d ? Math.ceil((new Date(d) - new Date().setHours(0,0,0,0)) / 86400000) : null;
 
         return res.status(200).json({
+            id: deal.id,
             firstName: clientC?.First_Name || "Client",
             code: cleanCode,
             property: deal.Deal_Name,
