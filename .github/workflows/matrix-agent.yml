@@ -16,7 +16,7 @@ jobs:
           node-version: '18'
           
       - name: Install Dependencies
-        run: npm install playwright-core playwright
+        run: npm install playwright-core playwright imapflow mailparser
         
       - name: Install Playwright Browsers
         run: npx playwright install chromium --with-deps
@@ -27,4 +27,6 @@ jobs:
           MATRIX_PASS: ${{ secrets.MATRIX_PASS }}
           MLS_NUMBER: ${{ github.event.client_payload.mlsNumber }}
           CLIENT_EMAIL: ${{ github.event.client_payload.clientEmail }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
         run: node worker/matrix-agent-standalone.js

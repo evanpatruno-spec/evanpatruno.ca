@@ -1,4 +1,50 @@
 const { chromium } = require('playwright');
+const { ImapFlow } = require('imapflow');
+const { simpleParser } = require('mailparser');
+
+async function getMfaCode() {
+    console.log("[GitHub Worker] 📧 Connexion à Gmail pour récupérer le code...");
+    const client = new ImapFlow({
+        host: 'imap.gmail.com',
+        port: 993,
+        secure: true,
+        auth: {
+            user: process.env.GMAIL_USER,
+            pass: process.env.GMAIL_APP_PASS
+        },
+        logger: false
+    });
+
+    try {
+        await client.connect();
+        let lock = await client.getMailboxLock('INBOX');
+        try {
+            // Chercher les emails de Centris reçus dans les 2 dernières minutes
+            const messages = await client.search({ from: 'noreply@centris.ca' });
+            if (messages.length === 0) throw new Error("Aucun email Centris trouvé.");
+
+            // Prendre le plus récent
+            const lastId = messages[messages.length - 1];
+            let message = await client.fetchOne(lastId, { source: true });
+            let parsed = await simpleParser(message.source);
+            
+            // Extraire le code (6 chiffres)
+            const codeMatch = parsed.text.match(/\b\d{6}\b/);
+            if (codeMatch) {
+                console.log("[GitHub Worker] 🔑 Code trouvé dans l'email !");
+                return codeMatch[0];
+            }
+            throw new Error("Code non trouvé dans le texte de l'email.");
+        } finally {
+            lock.release();
+        }
+    } catch (err) {
+        console.error("[GitHub Worker] ❌ Erreur Gmail:", err.message);
+        return null;
+    } finally {
+        await client.logout();
+    }
+}
 
 (async () => {
     const mlsNumber = process.env.MLS_NUMBER;
@@ -19,24 +65,38 @@ const { chromium } = require('playwright');
         await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
         
         console.log("[GitHub Worker] 🔑 Recherche du formulaire...");
-        // On cherche n'importe quel champ de texte pour le login
-        const userField = await page.waitForSelector('input[type="text"], input[name*="ser"], #Username, #username', { timeout: 30000 });
+        const userField = await page.waitForSelector('input[type="text"], #Username, #username', { timeout: 30000 });
         await userField.fill(process.env.MATRIX_USER);
         
         const passField = await page.waitForSelector('input[type="password"], #Password, #password', { timeout: 5000 });
         await passField.fill(process.env.MATRIX_PASS);
         
-        console.log("[GitHub Worker] 📤 Envoi...");
         await Promise.all([
             page.waitForNavigation({ waitUntil: 'networkidle' }),
-            page.click('button[type="submit"], input[type="submit"], .btn-primary')
+            page.click('button[type="submit"], #login-button')
         ]);
+
+        // --- GESTION MFA (SI PRÉSENTE) ---
+        await page.waitForTimeout(5000); // Attendre de voir si l'écran MFA arrive
+        const isMfa = await page.isVisible('text="verification", text="code", #VerificationCode');
+        if (isMfa || page.url().includes('challenge')) {
+            console.log("[GitHub Worker] 🛡️ MFA détecté !");
+            await page.waitForTimeout(10000); // Laisser 10s à l'email pour arriver
+            const code = await getMfaCode();
+            if (code) {
+                await page.fill('input[name*="Code"], #VerificationCode', code);
+                await Promise.all([
+                    page.waitForNavigation({ waitUntil: 'networkidle' }),
+                    page.click('button[type="submit"], .btn-primary')
+                ]);
+            }
+        }
 
         console.log("[GitHub Worker] ✅ Authentifié !");
         
         // --- 2. RECHERCHE ---
         console.log("[GitHub Worker] 🔍 Recherche MLS...");
-        const searchInput = await page.waitForSelector('input[name*="SpeedBar"]', { timeout: 10000 });
+        const searchInput = await page.waitForSelector('input[name*="SpeedBar"]', { timeout: 15000 });
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
         
@@ -58,15 +118,9 @@ const { chromium } = require('playwright');
         console.log("[GitHub Worker] ✨ MISSION RÉUSSIE !");
 
     } catch (e) {
-        console.error("[GitHub Worker] ❌ ÉCHEC DU ROBOT");
+        console.error("[GitHub Worker] ❌ ÉCHEC");
         console.error(`- Cause: ${e.message}`);
         console.error(`- URL finale: ${page.url()}`);
-        try {
-            const pageTitle = await page.title();
-            console.error(`- Titre: ${pageTitle}`);
-            const text = await page.innerText('body');
-            console.error(`- Contenu: ${text.substring(0, 300)}...`);
-        } catch (diagErr) {}
         process.exit(1);
     } finally {
         await browser.close();
