@@ -83,15 +83,30 @@ export default async function handler(req, res) {
             // 2. Lancement du Matrix Agent (Envoi des PDF)
             const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
             
+            // 2. Signal à GitHub Actions (Le robot puissant)
+            const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
+            
             try {
-                const { runMatrixAgent } = require('../worker/matrix-agent');
-                // On ne met pas de "await" ici pour ne pas faire attendre le client
-                runMatrixAgent(mls, clientEmail).then(() => console.log("Agent Matrix fini")).catch(e => console.error("Agent Matrix Error:", e));
-            } catch (agentErr) {
-                console.error("Impossible de charger l'agent:", agentErr);
+                await fetch(`https://api.github.com/repos/evanpatruno-spec/evanpatruno.ca/dispatches`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `token ${process.env.GH_TOKEN}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    body: JSON.stringify({
+                        event_type: 'run-matrix-agent',
+                        client_payload: {
+                            mlsNumber: mls,
+                            clientEmail: clientEmail
+                        }
+                    })
+                });
+                console.log("Signal envoyé à GitHub");
+            } catch (dispatchErr) {
+                console.error("Erreur Dispatch GitHub:", dispatchErr);
             }
 
-            return res.status(200).json({ s: true, msg: "Demande enregistrée" });
+            return res.status(200).json({ s: true, msg: "Demande traitée" });
         }
 
         // --- MAPPING DASHBOARD ---

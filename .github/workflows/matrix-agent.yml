@@ -1,0 +1,27 @@
+name: Matrix Agent Worker
+
+on:
+  repository_dispatch:
+    types: [run-matrix-agent]
+
+jobs:
+  matrix-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install Dependencies
+        run: npm install playwright-core playwright
+        
+      - name: Run Matrix Agent
+        env:
+          MATRIX_USER: ${{ secrets.MATRIX_USER }}
+          MATRIX_PASS: ${{ secrets.MATRIX_PASS }}
+          MLS_NUMBER: ${{ github.event.client_payload.mlsNumber }}
+          CLIENT_EMAIL: ${{ github.event.client_payload.clientEmail }}
+        run: node worker/matrix-agent-standalone.js
