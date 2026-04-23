@@ -3,6 +3,7 @@ const { ImapFlow } = require('imapflow');
 const { simpleParser } = require('mailparser');
 
 async function getMfaCode() {
+    console.log("[GitHub Worker] 📧 Connexion Gmail...");
     const client = new ImapFlow({
         host: 'imap.gmail.com', port: 993, secure: true,
         auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASS },
@@ -23,10 +24,22 @@ async function getMfaCode() {
     } catch (err) { return null; } finally { await client.logout(); }
 }
 
+async function debugState(page, stepName) {
+    console.log(`\n--- DEBUG: ${stepName} ---`);
+    console.log(`URL: ${page.url()}`);
+    console.log(`Titre: ${await page.title()}`);
+    // Lister les éléments visibles pour comprendre le blocage
+    const inputs = await page.evaluate(() => Array.from(document.querySelectorAll('input')).map(i => `${i.name || i.id} (${i.type})`));
+    console.log(`Inputs trouvés: ${inputs.join(', ') || 'Aucun'}`);
+    const buttons = await page.evaluate(() => Array.from(document.querySelectorAll('button')).map(b => b.innerText).filter(t => t.length > 0));
+    console.log(`Boutons trouvés: ${buttons.join(', ') || 'Aucun'}`);
+    console.log('---------------------------\n');
+}
+
 (async () => {
     const mlsNumber = process.env.MLS_NUMBER;
     const clientEmail = process.env.CLIENT_EMAIL;
-    console.log(`[GitHub Worker] 🚀 MLS ${mlsNumber} pour ${clientEmail}`);
+    console.log(`[GitHub Worker] 🚀 DÉMARRAGE: MLS ${mlsNumber}`);
 
     const browser = await chromium.launch({ headless: true });
     const context = await browser.newContext({
@@ -47,14 +60,18 @@ async function getMfaCode() {
     try {
         console.log("[GitHub Worker] 🌐 Accès Matrix...");
         await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
-        
+        await debugState(page, "Après chargement initial");
+
         if (await page.isVisible('input[name*="ser"], #Username')) {
             console.log("[GitHub Worker] 🔑 Login...");
             await page.fill('input[name*="ser"], #Username', process.env.MATRIX_USER);
             await page.fill('input[type="password"]', process.env.MATRIX_PASS);
             await page.click('button[type="submit"]');
             await page.waitForTimeout(10000);
+            await debugState(page, "Après clic Login");
+
             if (page.url().includes('challenge') || await page.isVisible('input[name*="Code"]')) {
+                console.log("[GitHub Worker] 🛡️ MFA détecté...");
                 const code = await getMfaCode();
                 if (code) {
                     await page.fill('input[name*="Code"]', code);
@@ -65,17 +82,17 @@ async function getMfaCode() {
         }
 
         console.log("[GitHub Worker] ✅ Connecté !");
+        await debugState(page, "État connecté");
         
         // RECHERCHE
-        console.log("[GitHub Worker] 🔍 Nettoyage des popups Matrix...");
-        await page.waitForTimeout(8000); 
+        console.log("[GitHub Worker] 🔍 Recherche MLS...");
+        await page.waitForTimeout(8000);
         await page.keyboard.press('Escape');
-        await page.waitForTimeout(1000);
         await page.keyboard.press('Escape');
-        // Cliquer dans un coin vide pour enlever le focus des popups
         await page.mouse.click(10, 10);
         
-        console.log("[GitHub Worker] 🔍 Recherche MLS...");
+        await debugState(page, "Avant saisie MLS");
+        
         const searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 30000 });
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
@@ -83,7 +100,6 @@ async function getMfaCode() {
         // DOCUMENTS
         console.log("[GitHub Worker] 📄 Accès documents...");
         await page.waitForTimeout(10000);
-        // Essayer de trouver le bouton documents par titre ou texte
         const docsBtn = await page.waitForSelector('a[title*="Document"], text="Documents"', { timeout: 30000 });
         await docsBtn.click();
         
@@ -101,7 +117,8 @@ async function getMfaCode() {
         console.log("[GitHub Worker] ✨ MISSION RÉUSSIE !");
 
     } catch (e) {
-        console.error("[GitHub Worker] ❌ ÉCHEC:", e.message);
+        console.error("[GitHub Worker] ❌ ÉCHEC");
+        await debugState(page, "CRASH");
         process.exit(1);
     } finally { await browser.close(); }
 })();
