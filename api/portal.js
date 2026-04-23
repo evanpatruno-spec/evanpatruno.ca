@@ -107,15 +107,15 @@ export default async function handler(req, res) {
                 } catch (e) { console.error("Agent Trigger Error:", e); }
             };
 
-            // Exécution
-            Promise.all([
-                fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
-                    method: 'POST',
-                    headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                    body: JSON.stringify(crmData)
-                }),
-                dispatch()
-            ]).catch(err => console.error("Parallel Error:", err));
+            // 1. Enregistrement CRM
+            await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
+                method: 'POST',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify(crmData)
+            });
+
+            // 2. Lancement Robot (GitHub)
+            await dispatch();
 
             return res.status(200).json({ s: true, msg: "OK" });
         }
