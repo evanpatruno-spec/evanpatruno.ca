@@ -95,8 +95,13 @@ async function getMfaCode() {
         console.log("[GitHub Worker] ✅ Authentifié !");
         
         // --- 2. RECHERCHE ---
+        console.log("[GitHub Worker] 🔍 Préparation de l'interface Matrix...");
+        await page.waitForTimeout(5000); // Laisser Matrix finir de charger les outils
+        await page.keyboard.press('Escape'); // Fermer une éventuelle popup de bienvenue
+        
         console.log("[GitHub Worker] 🔍 Recherche MLS...");
-        const searchInput = await page.waitForSelector('input[name*="SpeedBar"]', { timeout: 15000 });
+        // On essaie plusieurs variantes pour la barre de recherche SpeedBar
+        const searchInput = await page.waitForSelector('input[name*="SpeedBar"], input#m_txtSpeedBarInput, .SpeedBarInput', { timeout: 20000 });
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
         
