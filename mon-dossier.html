@@ -1679,7 +1679,7 @@
                     const activeStep = timeline.find(s => s.status === 'active');
                     const doneCount = timeline.filter(s => s.status === 'completed').length;
                     if (ringLabel) {
-                        if (pct >= 100) ringLabel.innerHTML = 'Ã°Å¸&Acirc; &acirc;€  Transaction compl&eacute;t&eacute;e!';
+                        if (pct >= 100) ringLabel.innerHTML = '🥂 Transaction compl&eacute;t&eacute;e!';
                         else if (activeStep) ringLabel.innerHTML = `&Eacute;TAPE ACTIVE : ${activeStep.label}`;
                         else ringLabel.innerHTML = `${doneCount} &eacute;tape${doneCount > 1 ? 's' : ''} compl&eacute;t&eacute;e${doneCount > 1 ? 's' : ''}`;
                     }
@@ -1687,12 +1687,11 @@
             }
         }, 200);
 
-        // Team
         const wrapTeam = document.getElementById('wrapTeam');
         if (wrapTeam) {
             wrapTeam.innerHTML = (data.team || []).map(t => {
-                const cleanPhone = (t.phone || 'Non d&eacute;fini').replace(/Ã°Å¸&acirc;€œÅ¾|Ã°Å¸â€œÅ¾|📞/g, '').trim();
-                const cleanEmail = (t.email || 'Non d&eacute;fini').replace(/Ã¢Å“&acirc;€°Ã¯&Acirc;¸&Acirc; |Ã¢Å“â€°Ã¯Â¸Â|✉️|&#x2709;&#xfe0f;/g, '').trim();
+                const cleanPhone = (t.phone || 'Non d&eacute;fini').trim();
+                const cleanEmail = (t.email || 'Non d&eacute;fini').trim();
                 return `
             <div class="team-card">
                 <div class="team-icon">${t.icon}</div>
@@ -2077,7 +2076,7 @@
                 if (errData.errorType === "WON" || errData.errorType === "LOST") {
                     document.getElementById('portalOverlay').innerHTML = `
                         <div class="login-card" style="max-width: 500px; border: 1px solid ${errData.errorType === 'WON' ? '#2ecc71' : '#e74c3c'}; box-shadow: 0 0 30px ${errData.errorType === 'WON' ? 'rgba(46,204,113,0.2)' : 'rgba(231,76,60,0.2)'};">
-                            <div style="font-size: 4rem; margin-bottom: 25px;">${errData.errorType === 'WON' ? 'Ã°Å¸&Acirc;&acirc;€ ' : 'Ã°Å¸&acirc;€œ&Acirc;'}</div>
+                            <div style="font-size: 4rem; margin-bottom: 25px;">${errData.errorType === 'WON' ? '🏆' : '📁'}</div>
                             <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 900; color: #fff;">${errData.errorType === 'WON' ? 'Dossier Archiv&eacute;' : 'Dossier Clos'}</h2>
                             <p style="color: rgba(255,255,255,0.8); line-height: 1.6; margin: 25px 0;">${errData.message}</p>
                             <button onclick="location.reload()" class="login-btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);">Retourner &agrave; l'accueil</button>
