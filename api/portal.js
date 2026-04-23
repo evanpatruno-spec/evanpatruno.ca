@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V6.9 - CRITERIA SEARCH)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V7.0 - ULTRA-ROBUST SEARCH)
  */
 
 export default async function handler(req, res) {
@@ -32,48 +32,46 @@ export default async function handler(req, res) {
 
         if (!accessToken) return res.status(401).json({ error: 'Auth failed' });
 
-        // --- RECHERCHE DU DOSSIER ---
-        let deal = null;
+        // --- RECHERCHE DU DOSSIER (MULTI-MÉTHODE) ---
+        let dealId = null;
+        let moduleName = "Potentials";
+
         if (cleanCode === "EP-1") {
-            const rResp = await fetch(`${apiDomain}/crm/v2/Potentials/6466486000011930049`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            const dData = await rResp.json(); deal = dData.data ? dData.data[0] : null;
+            dealId = "6466486000011930049";
         } else if (cleanCode) {
-            // ON CHERCHE D'ABORD PAR CRITÈRE (Plus rapide/précis)
-            // On essaie le champ 'Code_Portail' (nom probable de l'API)
-            const criteria = encodeURIComponent(`(Code_Portail:equals:${cleanCode})`);
-            const sResp = await fetch(`${apiDomain}/crm/v2/Potentials/search?criteria=${criteria}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            const sData = await sResp.json();
+            // Méthode 1 : Recherche globale (la plus souple)
+            const gResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const gData = await gResp.json();
             
-            if (sData.data) {
-                deal = sData.data[0];
+            if (gData.data) {
+                dealId = gData.data[0].id;
+                moduleName = gData.data[0].$module;
             } else {
-                // FALLBACK : Recherche globale si le critère échoue (champ nommé différemment)
-                const gResp = await fetch(`${apiDomain}/crm/v2/search?word=${encodeURIComponent(cleanCode)}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-                const gData = await gResp.json();
-                if (gData.data) {
-                    const rResp = await fetch(`${apiDomain}/crm/v2/${gData.data[0].$module}/${gData.data[0].id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-                    const dData = await rResp.json(); deal = dData.data ? dData.data[0] : null;
-                }
+                // Méthode 2 : Recherche par critère (si la globale échoue)
+                const sResp = await fetch(`${apiDomain}/crm/v2/Potentials/search?criteria=${encodeURIComponent(`(Code_Portail:equals:${cleanCode})`)}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const sData = await sResp.json();
+                if (sData.data) dealId = sData.data[0].id;
             }
         }
 
-        if (!deal) return res.status(404).json({ error: 'Dossier introuvable' });
+        if (!dealId) return res.status(404).json({ error: 'Dossier introuvable' });
+
+        // RÉCUPÉRATION DE LA FICHE COMPLÈTE (Pour avoir tous les champs)
+        const fullResp = await fetch(`${apiDomain}/crm/v2/${moduleName}/${dealId}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+        const fullData = await fullResp.json();
+        const deal = fullData.data ? fullData.data[0] : null;
+
+        if (!deal) return res.status(404).json({ error: 'Erreur lors de la lecture du dossier' });
 
         // --- ACTION MLS ---
+        // On laisse cette partie même si on utilise maintenant Zoho Forms en direct, au cas où.
         if ((action === 'mls' || action === 'requestMLS') && mls) {
             await fetch(`${apiDomain}/crm/v2/Notes`, {
                 method: 'POST',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    data: [{
-                        Parent_Id: deal.id,
-                        Note_Title: "DEMANDE DOCUMENTS MLS (PORTAIL)",
-                        Note_Content: `MLS: ${mls}`,
-                        se_module: "Potentials"
-                    }]
-                })
+                body: JSON.stringify({ data: [{ Parent_Id: dealId, Note_Title: "DEMANDE MLS", Note_Content: `MLS: ${mls}`, se_module: "Potentials" }] })
             });
-            return res.status(200).json({ s: true, msg: "MLS Saved" });
+            return res.status(200).json({ s: true });
         }
 
         // --- MAPPING DASHBOARD ---
@@ -123,18 +121,9 @@ export default async function handler(req, res) {
             ],
             team: team,
             concierge: {
-                smartHome: [
-                    { category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte.", icon: "&#x1f514;" },
-                    { category: "Confort", title: "Thermostat", desc: "Optimisez votre chauffage.", icon: "&#x1f321;&#xfe0f;" }
-                ],
-                maintenance: [
-                    { title: "Gouttières", period: "Automne", desc: "Nettoyage avant les gels." },
-                    { title: "Filtres Fournaise", period: "3 mois", desc: "Assurez la qualité de l'air." }
-                ],
-                resources: [
-                    { title: "Tout sur le CELIAPP \u2192", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html" },
-                    { title: "Régime d'Accès à la Propriété (RAP) \u2192", url: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-enregistres-epargne-retraite/regime-accession-a-propriete.html" }
-                ]
+                smartHome: [{ category: "Sécurité", title: "Sonnette Vidéo", desc: "Voyez qui est à la porte.", icon: "&#x1f514;" }, { category: "Confort", title: "Thermostat", desc: "Optimisez votre chauffage.", icon: "&#x1f321;&#xfe0f;" }],
+                maintenance: [{ title: "Gouttières", period: "Automne", desc: "Nettoyage avant les gels." }, { title: "Filtres Fournaise", period: "3 mois", desc: "Assurez la qualité de l'air." }],
+                resources: [{ title: "Tout sur le CELIAPP \u2192", url: "#" }, { title: "Régime d'Accès à la Propriété (RAP) \u2192", url: "#" }]
             }
         });
     } catch (error) {
