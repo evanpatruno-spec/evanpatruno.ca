@@ -1982,6 +1982,7 @@
             const dealId = localStorage.getItem('portalDealId');
             const formUrl = "https://forms.zohopublic.com/evanpatrunocourtier1/form/BoutonMLSPortail/formperma/tclbZtQALIBd4u4Blu2wBMxKRfv49fCxAHCHBaWNmXk/html/submit";
             
+            console.log("Submission MLS:", { code, mls, dealId });
             const formData = new FormData();
             formData.append('SingleLine', code);     // Code Portail
             formData.append('SingleLine2', mls);    // Numéro MLS
@@ -2000,9 +2001,11 @@
                     txt.innerText = 'Matrix Agent va vous envoyer les PDF...';
                     setTimeout(() => {
                         inp.value = '';
+                        txt.innerText = ''; // On efface le message pour libérer l'interface
+                        status.style.display = 'none'; // On cache le bloc de statut
                         btn.disabled = false;
                         btn.style.opacity = '1';
-                    }, 2000);
+                    }, 3000);
                 }, 2000);
         } catch (error) {
             console.error('Erreur MLS:', error);
