@@ -1996,7 +1996,6 @@
 
             // On affiche le succès immédiatement car no-cors ne donne pas de réponse
             txt.innerText = 'Demande enregistrée ! \u2705';
-                txt.style.color = '#00f2ff';
                 setTimeout(() => {
                     txt.innerText = 'Matrix Agent va vous envoyer les PDF...';
                     setTimeout(() => {
@@ -2005,10 +2004,8 @@
                         btn.style.opacity = '1';
                     }, 2000);
                 }, 2000);
-            } else {
-                throw new Error(responseData.error || 'Erreur serveur');
-            }
         } catch (error) {
+            console.error('Erreur MLS:', error);
             txt.innerText = 'Erreur : ' + error.message;
             txt.style.color = '#ff4b2b';
             btn.disabled = false;
