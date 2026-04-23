@@ -100,12 +100,15 @@ async function getMfaCode() {
         console.log("[GitHub Worker] ✅ Connecté !");
         
         // RECHERCHE
-        console.log("[GitHub Worker] 🔍 Chargement de l'interface Matrix...");
-        await page.waitForTimeout(10000); // On donne 10s pour que tout s'affiche
-        await page.keyboard.press('Escape');
+        console.log("[GitHub Worker] 🔍 Navigation directe vers la recherche MLS...");
+        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
+        await page.waitForTimeout(5000);
         
-        console.log("[GitHub Worker] 🔍 Recherche MLS...");
-        const searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 30000 });
+        console.log("[GitHub Worker] 🔍 Saisie du numéro MLS...");
+        // On cherche n'importe quel champ qui pourrait être la SpeedBar ou un champ de recherche
+        const searchInput = await page.waitForSelector('input[name*="SpeedBar"], #m_txtSpeedBarInput, .SpeedBarInput', { timeout: 30000 });
+        await searchInput.click();
+        await page.waitForTimeout(1000);
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
         
