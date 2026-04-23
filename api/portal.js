@@ -63,15 +63,23 @@ export default async function handler(req, res) {
 
         if (!deal) return res.status(404).json({ error: 'Erreur lors de la lecture du dossier' });
 
-        // --- ACTION MLS ---
-        // On laisse cette partie même si on utilise maintenant Zoho Forms en direct, au cas où.
+        // --- ACTION MLS DIRECTE ---
         if ((action === 'mls' || action === 'requestMLS') && mls) {
-            await fetch(`${apiDomain}/crm/v2/Notes`, {
+            const createResp = await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
                 method: 'POST',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify({ data: [{ Parent_Id: dealId, Note_Title: "DEMANDE MLS", Note_Content: `MLS: ${mls}`, se_module: "Potentials" }] })
+                body: JSON.stringify({
+                    data: [{
+                        Name: `Demande MLS ${mls}`,
+                        Num_ro_MLS: mls,
+                        Code_Portail: cleanCode,
+                        Affaire: dealId // Le lien vers l'affaire
+                    }]
+                })
             });
-            return res.status(200).json({ s: true });
+            const createData = await createResp.json();
+            console.log("CRM Create Response:", createData);
+            return res.status(200).json({ s: true, data: createData });
         }
 
         // --- MAPPING DASHBOARD ---

@@ -1980,29 +1980,23 @@
             // Récupération des infos de session (code et téléphone)
             const code = localStorage.getItem('portalCode') || "";
             const dealId = localStorage.getItem('portalDealId') || "";
-            const formData = new FormData();
-            formData.append('formName', 'BoutonMLSPortail');
-            formData.append('formPerma', 'tclbZtQALIBd4u4Blu2wBMxKRfv49fCxAHCHBaWNmXk');
-            formData.append('isPaymentForm', 'false');
-            formData.append('isDocsPublicForm', 'false');
-            formData.append('date_format', 'dd-MMM-yyyy');
-            formData.append('resizeform', '0');
             
-            formData.append('SingleLine', code);     // Code Portail
-            formData.append('SingleLine2', mls);    // Numéro MLS
-            formData.append('SingleLine1', dealId); // ID Affaire
-
-            console.log("Submission MLS (Full):", { code, mls, dealId });
-
-            const submitUrl = "https://forms.zohopublic.com/evanpatrunocourtier1/form/BoutonMLSPortail/formperma/tclbZtQALIBd4u4Blu2wBMxKRfv49fCxAHCHBaWNmXk/html/submit";
-
-            fetch(submitUrl, {
+            const response = await fetch('https://dossier.evanpatruno.ca/api/portal', {
                 method: 'POST',
-                mode: 'no-cors',
-                body: formData
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'requestMLS',
+                    codePortal: code,
+                    mlsNumber: mls,
+                    dealId: dealId
+                })
             });
 
-            // On affiche le succès immédiatement car no-cors ne donne pas de réponse
+            if (!response.ok) throw new Error('Erreur de communication avec le serveur');
+            const resData = await response.json();
+            console.log("MLS Request Result:", resData);
+
+            // On affiche le succès
             txt.innerText = 'Demande enregistrée ! \u2705';
                 setTimeout(() => {
                     txt.innerText = 'Matrix Agent va vous envoyer les PDF...';
