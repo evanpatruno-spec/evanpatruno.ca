@@ -131,23 +131,34 @@ async function handlePopups(page) {
             const currentUrl = page.url();
             const stillLoggingIn = loginDomains.some(domain => currentUrl.includes(domain));
             
-            if (!stillLoggingIn && currentUrl.includes('Matrix/Default.aspx')) {
+            if (!stillLoggingIn && (currentUrl.includes('Matrix/Default.aspx') || currentUrl.includes('matrix.centris.ca/matrix'))) {
+                console.log(`[GitHub Worker] 🎯 Destination atteinte: ${currentUrl}`);
                 break;
             }
 
-            console.log(`[GitHub Worker] ... Toujours en transition (${currentUrl.split('/')[2]}), attente (${attempts+1}/20)`);
+            console.log(`[GitHub Worker] ... Toujours bloqué sur: ${currentUrl.split('/')[2]} (${attempts+1}/20)`);
             
+            // Log des boutons dispos pour debug
+            try {
+                const buttons = await page.$$eval('button', btns => btns.map(b => b.innerText).filter(t => t.length > 1));
+                if (buttons.length > 0) console.log(`[GitHub Worker] 🔘 Boutons vus: ${buttons.join(', ')}`);
+            } catch(e) {}
+
             // Si on est bloqué sur une page avec un bouton "Continue", on clique
             try {
-                const continueBtn = await page.$('button:has-text("Continue"), button:has-text("Continuer")');
+                const continueBtn = await page.$('button:has-text("Continue"), button:has-text("Continuer"), button[type="submit"]');
                 if (continueBtn && await continueBtn.isVisible()) {
-                    console.log("[GitHub Worker] ➡️ Clic sur 'Continue' détecté...");
+                    console.log("[GitHub Worker] ➡️ Tentative de clic sur bouton de progression...");
                     await continueBtn.click();
                 }
             } catch (e) {}
 
-            await page.waitForTimeout(4000);
+            await page.waitForTimeout(5000);
             attempts++;
+        }
+
+        if (!page.url().includes('Matrix')) {
+            throw new Error(`Échec de connexion : Le robot est resté bloqué sur ${page.url()}`);
         }
 
         console.log("[GitHub Worker] ✅ Arrivé sur Matrix !");
