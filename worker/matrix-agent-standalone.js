@@ -28,41 +28,46 @@ const { chromium } = require('playwright');
             console.log("[GitHub Worker] Pas de popup cookies détectée.");
         }
         
-        // On cherche le bouton connexion (Souvent en haut à droite)
-        console.log("[GitHub Worker] Clic sur Connexion...");
-        await page.click('text="Connexion"');
-        await page.waitForTimeout(2000);
+        // On cherche le bouton connexion et on capture le nouvel onglet
+        console.log("[GitHub Worker] Clic sur Connexion (attente nouvel onglet)...");
+        const [loginPage] = await Promise.all([
+            context.waitForEvent('page'),
+            page.click('text="Connexion"')
+        ]);
+
+        await loginPage.waitForLoadState('networkidle');
 
         // Attendre que le champ Username soit visible (page de login)
-        await page.waitForSelector('#Username', { timeout: 30000 });
-        await page.fill('#Username', process.env.MATRIX_USER);
-        await page.fill('#Password', process.env.MATRIX_PASS);
+        console.log("[GitHub Worker] Saisie des identifiants...");
+        await loginPage.waitForSelector('#Username', { timeout: 30000 });
+        await loginPage.fill('#Username', process.env.MATRIX_USER);
+        await loginPage.fill('#Password', process.env.MATRIX_PASS);
         
         await Promise.all([
-            page.waitForNavigation({ waitUntil: 'networkidle' }),
-            page.click('button[type="submit"]')
+            loginPage.waitForNavigation({ waitUntil: 'networkidle' }),
+            loginPage.click('button[type="submit"]')
         ]);
 
         console.log("[GitHub Worker] Authentifié, direction Matrix...");
         // --- 2. MATRIX ---
-        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
-        const searchInput = await page.waitForSelector('input[name="m_pSearch_m_txtSpeedBarInput"]');
+        await loginPage.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
+        const searchInput = await loginPage.waitForSelector('input[name="m_pSearch_m_txtSpeedBarInput"]');
         await searchInput.fill(mlsNumber);
-        await page.keyboard.press('Enter');
+        await loginPage.keyboard.press('Enter');
         
         // --- 3. ENVOI ---
         // Attendre que les résultats chargent
-        await page.waitForTimeout(5000); 
-        await page.click('a[title="Documents"]');
-        await page.waitForTimeout(3000);
+        await loginPage.waitForTimeout(5000); 
+        await loginPage.click('a[title="Documents"]');
+        await loginPage.waitForTimeout(3000);
         
-        await page.click('#chkSelectAll');
-        await page.click('button:has-text("Partager")');
+        await loginPage.click('#chkSelectAll');
+        await loginPage.click('button:has-text("Partager")');
         
-        await page.waitForSelector('#txtEmailTo');
-        await page.fill('#txtEmailTo', clientEmail);
-        await page.fill('#txtSubject', `Documentation - Inscription MLS ${mlsNumber}`);
-        await page.click('button:has-text("Partager")');
+        await loginPage.waitForSelector('#txtEmailTo');
+        await loginPage.fill('#txtEmailTo', clientEmail);
+        await loginPage.fill('#txtSubject', `Documentation - Inscription MLS ${mlsNumber}`);
+        await loginPage.click('button:has-text("Partager")');
         
         console.log("[GitHub Worker] Succès !");
     } catch (e) {
