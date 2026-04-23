@@ -63,25 +63,35 @@ export default async function handler(req, res) {
 
         if (!deal) return res.status(404).json({ error: 'Erreur lors de la lecture du dossier' });
 
-        // --- ACTION MLS DIRECTE ---
+        // --- MAPPING DASHBOARD ---
+        const fetchP = async (f) => {
+            if (!f || !f.id) return null;
+            const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const d = await r.json(); return d.data ? d.data[0] : null;
+        };
+        const [notaire, inspecteur, courtier, clientC] = await Promise.all([fetchP(deal.Nom_Notaire), fetchP(deal.Nom_Inspecteur), fetchP(deal.Nom_Courtier_Hypoth_caire), fetchP(deal.Contact_Name)]);
+
+        // --- ACTION MLS DIRECTE (Déplacée ici pour avoir accès à clientC) ---
         if ((action === 'mls' || action === 'requestMLS') && mls) {
             console.log("Demande MLS reçue pour:", mls);
             
-            // 1. Enregistrement CRM (Indispensable)
+            // 1. Enregistrement CRM
             const crmData = {
                 data: [{ Name: `Demande MLS ${mls}`, Num_ro_MLS: mls, Code_Portail: cleanCode, Affaire: dealId }],
                 trigger: ["workflow"]
             };
 
-            // 2. Appel GitHub (Le robot) - On utilise une méthode asynchrone
+            // 2. Appel GitHub (Le robot)
             const dispatch = async () => {
                 try {
                     const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
+                    console.log(`Déclenchement robot Matrix pour ${clientEmail}...`);
                     await fetch(`https://api.github.com/repos/evanpatruno-spec/evanpatruno.ca/dispatches`, {
                         method: 'POST',
                         headers: {
-                            'Authorization': `token ${process.env.GH_TOKEN}`,
+                            'Authorization': `Bearer ${process.env.GH_TOKEN}`,
                             'Accept': 'application/vnd.github.v3+json',
+                            'X-GitHub-Api-Version': '2022-11-28',
                             'User-Agent': 'Vercel-Server'
                         },
                         body: JSON.stringify({
@@ -92,7 +102,7 @@ export default async function handler(req, res) {
                 } catch (e) { console.error("Agent Trigger Error:", e); }
             };
 
-            // On lance l'agent et le CRM en parallèle sans bloquer
+            // Exécution
             Promise.all([
                 fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
                     method: 'POST',
@@ -104,14 +114,6 @@ export default async function handler(req, res) {
 
             return res.status(200).json({ s: true, msg: "OK" });
         }
-
-        // --- MAPPING DASHBOARD ---
-        const fetchP = async (f) => {
-            if (!f || !f.id) return null;
-            const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            const d = await r.json(); return d.data ? d.data[0] : null;
-        };
-        const [notaire, inspecteur, courtier, clientC] = await Promise.all([fetchP(deal.Nom_Notaire), fetchP(deal.Nom_Inspecteur), fetchP(deal.Nom_Courtier_Hypoth_caire), fetchP(deal.Contact_Name)]);
 
         const team = [{ role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }];
         const addP = (p, role, icon) => { if(p) team.push({ role, name: p.Full_Name || p.Name, icon, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" }); };
