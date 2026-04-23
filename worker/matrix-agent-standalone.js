@@ -14,46 +14,27 @@ const { chromium } = require('playwright');
     const page = await context.newPage();
 
     try {
-        // --- 1. CONNEXION ---
-        console.log("[GitHub Worker] Accès à Centris.ca...");
-        await page.goto('https://www.centris.ca/fr', { waitUntil: 'networkidle' });
+        // --- 1. CONNEXION DIRECTE VIA MATRIX ---
+        console.log("[GitHub Worker] Accès direct à Matrix (redirection automatique)...");
+        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
         
-        // --- NOUVEAU : GESTION DES COOKIES (Didomi) ---
-        try {
-            console.log("[GitHub Worker] Fermeture popup Cookies...");
-            await page.waitForSelector('#didomi-notice-agree-button', { timeout: 5000 });
-            await page.click('#didomi-notice-agree-button');
-            await page.waitForTimeout(1000);
-        } catch (e) {
-            console.log("[GitHub Worker] Pas de popup cookies détectée.");
-        }
-        
-        // On cherche le bouton connexion et on capture le nouvel onglet
-        console.log("[GitHub Worker] Clic sur Connexion (attente nouvel onglet)...");
-        const [loginPage] = await Promise.all([
-            context.waitForEvent('page'),
-            page.click('text="Connexion"')
-        ]);
-
-        await loginPage.waitForLoadState('networkidle');
-
-        // Attendre que le champ Username soit visible (page de login)
+        // Attendre que le champ Username apparaisse (après redirection)
         console.log("[GitHub Worker] Saisie des identifiants...");
-        await loginPage.waitForSelector('#Username', { timeout: 30000 });
-        await loginPage.fill('#Username', process.env.MATRIX_USER);
-        await loginPage.fill('#Password', process.env.MATRIX_PASS);
+        await page.waitForSelector('#Username', { timeout: 30000 });
+        await page.fill('#Username', process.env.MATRIX_USER);
+        await page.fill('#Password', process.env.MATRIX_PASS);
         
         await Promise.all([
-            loginPage.waitForNavigation({ waitUntil: 'networkidle' }),
-            loginPage.click('button[type="submit"]')
+            page.waitForNavigation({ waitUntil: 'networkidle' }),
+            page.click('button[type="submit"]')
         ]);
 
-        console.log("[GitHub Worker] Authentifié, direction Matrix...");
-        // --- 2. MATRIX ---
-        await loginPage.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
-        const searchInput = await loginPage.waitForSelector('input[name="m_pSearch_m_txtSpeedBarInput"]');
+        console.log("[GitHub Worker] Authentifié sur Matrix !");
+        
+        // --- 2. RECHERCHE MLS ---
+        const searchInput = await page.waitForSelector('input[name="m_pSearch_m_txtSpeedBarInput"]');
         await searchInput.fill(mlsNumber);
-        await loginPage.keyboard.press('Enter');
+        await page.keyboard.press('Enter');
         
         // --- 3. ENVOI ---
         // Attendre que les résultats chargent
