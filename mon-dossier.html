@@ -1978,18 +1978,25 @@
 
         try {
             // Récupération des infos de session (code et téléphone)
-            const code = localStorage.getItem('portalCode');
-            const dealId = localStorage.getItem('portalDealId');
-            const formUrl = "https://forms.zohopublic.com/evanpatrunocourtier1/form/BoutonMLSPortail/formperma/tclbZtQALIBd4u4Blu2wBMxKRfv49fCxAHCHBaWNmXk/html/submit";
-            
-            console.log("Submission MLS:", { code, mls, dealId });
+            const code = localStorage.getItem('portalCode') || "";
+            const dealId = localStorage.getItem('portalDealId') || "";
             const formData = new FormData();
+            formData.append('formName', 'BoutonMLSPortail');
+            formData.append('formPerma', 'tclbZtQALIBd4u4Blu2wBMxKRfv49fCxAHCHBaWNmXk');
+            formData.append('isPaymentForm', 'false');
+            formData.append('isDocsPublicForm', 'false');
+            formData.append('date_format', 'dd-MMM-yyyy');
+            formData.append('resizeform', '0');
+            
             formData.append('SingleLine', code);     // Code Portail
             formData.append('SingleLine2', mls);    // Numéro MLS
             formData.append('SingleLine1', dealId); // ID Affaire
 
-            // On envoie en mode "no-cors" pour que le navigateur ne bloque pas
-            fetch(formUrl, {
+            console.log("Submission MLS (Full):", { code, mls, dealId });
+
+            const submitUrl = "https://forms.zohopublic.com/evanpatrunocourtier1/form/BoutonMLSPortail/formperma/tclbZtQALIBd4u4Blu2wBMxKRfv49fCxAHCHBaWNmXk/html/submit";
+
+            fetch(submitUrl, {
                 method: 'POST',
                 mode: 'no-cors',
                 body: formData
