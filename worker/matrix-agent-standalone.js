@@ -63,13 +63,22 @@ async function getMfaCode() {
         }
 
         console.log("[GitHub Worker] ✅ Connecté !");
-        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
         
         // --- RECHERCHE ---
-        console.log("[GitHub Worker] 🔍 Recherche MLS...");
+        console.log("[GitHub Worker] 🔍 Ouverture du menu Recherche...");
         await page.waitForTimeout(5000);
         await page.keyboard.press('Escape');
-        const searchInput = await page.waitForSelector('input[name*="SpeedBar"], #m_txtSpeedBarInput', { timeout: 30000 });
+        
+        // On clique sur l'onglet Recherche en haut
+        try {
+            await page.click('text="Recherche"', { timeout: 10000 });
+            await page.waitForTimeout(2000);
+        } catch (e) {
+            console.log("[GitHub Worker] Onglet Recherche non trouvé, on tente direct...");
+        }
+
+        console.log("[GitHub Worker] 🔍 Saisie du numéro MLS...");
+        const searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 30000 });
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
 
