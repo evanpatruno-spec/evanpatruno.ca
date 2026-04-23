@@ -18,6 +18,16 @@ const { chromium } = require('playwright');
         console.log("[GitHub Worker] Accès à Centris.ca...");
         await page.goto('https://www.centris.ca/fr', { waitUntil: 'networkidle' });
         
+        // --- NOUVEAU : GESTION DES COOKIES (Didomi) ---
+        try {
+            console.log("[GitHub Worker] Fermeture popup Cookies...");
+            await page.waitForSelector('#didomi-notice-agree-button', { timeout: 5000 });
+            await page.click('#didomi-notice-agree-button');
+            await page.waitForTimeout(1000);
+        } catch (e) {
+            console.log("[GitHub Worker] Pas de popup cookies détectée.");
+        }
+        
         // On cherche le bouton connexion (Souvent en haut à droite)
         console.log("[GitHub Worker] Clic sur Connexion...");
         await page.click('text="Connexion"');
