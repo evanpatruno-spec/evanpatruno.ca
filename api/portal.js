@@ -80,18 +80,17 @@ export default async function handler(req, res) {
                 })
             });
             
-            // 2. Lancement du Matrix Agent (Envoi des PDF)
-            const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
-            
             // 2. Signal à GitHub Actions (Le robot puissant)
             const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
             
             try {
+                // On prévient GitHub de lancer le robot Matrix
                 await fetch(`https://api.github.com/repos/evanpatruno-spec/evanpatruno.ca/dispatches`, {
                     method: 'POST',
                     headers: {
                         'Authorization': `token ${process.env.GH_TOKEN}`,
-                        'Accept': 'application/vnd.github.v3+json'
+                        'Accept': 'application/vnd.github.v3+json',
+                        'User-Agent': 'Vercel-Serverless-Function'
                     },
                     body: JSON.stringify({
                         event_type: 'run-matrix-agent',
@@ -101,7 +100,7 @@ export default async function handler(req, res) {
                         }
                     })
                 });
-                console.log("Signal envoyé à GitHub");
+                console.log("Signal envoyé à GitHub pour MLS:", mls);
             } catch (dispatchErr) {
                 console.error("Erreur Dispatch GitHub:", dispatchErr);
             }
