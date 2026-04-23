@@ -18,6 +18,9 @@ jobs:
       - name: Install Dependencies
         run: npm install playwright-core playwright
         
+      - name: Install Playwright Browsers
+        run: npx playwright install chromium --with-deps
+        
       - name: Run Matrix Agent
         env:
           MATRIX_USER: ${{ secrets.MATRIX_USER }}
