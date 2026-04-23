@@ -9,46 +9,39 @@ async function getMfaCode() {
         auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASS },
         logger: false
     });
+    try {
+        await client.connect();
+        let lock = await client.getMailboxLock('INBOX');
         try {
-            await client.connect();
-            let lock = await client.getMailboxLock('INBOX');
-            try {
-                // Chercher les 5 derniers messages sans filtre (plus robuste avec les transferts)
-                const messages = await client.search({ all: true });
-                if (messages.length === 0) return null;
-                
-                // On vérifie les 3 derniers messages pour trouver un code
-                const lastIds = messages.slice(-3);
-                for (let i = lastIds.length - 1; i >= 0; i--) {
-                    let message = await client.fetchOne(lastIds[i], { source: true });
-                    let parsed = await simpleParser(message.source);
-                    const codeMatch = parsed.text.match(/\b\d{6}\b/);
-                    if (codeMatch) {
-                        console.log(`[GitHub Worker] 🔑 Code trouvé dans un email de: ${parsed.from.text}`);
-                        return codeMatch[0];
-                    }
+            const messages = await client.search({ all: true });
+            if (messages.length === 0) return null;
+            const lastIds = messages.slice(-3);
+            for (let i = lastIds.length - 1; i >= 0; i--) {
+                let message = await client.fetchOne(lastIds[i], { source: true });
+                let parsed = await simpleParser(message.source);
+                const codeMatch = parsed.text.match(/\b\d{6}\b/);
+                if (codeMatch) {
+                    console.log(`[GitHub Worker] 🔑 Code trouvé (Exp: ${parsed.from.text})`);
+                    return codeMatch[0];
                 }
-                return null;
-            } finally { lock.release(); }
+            }
+            return null;
+        } finally { lock.release(); }
     } catch (err) { return null; } finally { await client.logout(); }
 }
 
 async function debugState(page, stepName) {
     console.log(`\n--- DEBUG: ${stepName} ---`);
     console.log(`URL: ${page.url()}`);
-    console.log(`Titre: ${await page.title()}`);
-    // Lister les éléments visibles pour comprendre le blocage
-    const inputs = await page.evaluate(() => Array.from(document.querySelectorAll('input')).map(i => `${i.name || i.id} (${i.type})`));
-    console.log(`Inputs trouvés: ${inputs.join(', ') || 'Aucun'}`);
     const buttons = await page.evaluate(() => Array.from(document.querySelectorAll('button')).map(b => b.innerText).filter(t => t.length > 0));
-    console.log(`Boutons trouvés: ${buttons.join(', ') || 'Aucun'}`);
+    console.log(`Boutons: ${buttons.join(', ')}`);
     console.log('---------------------------\n');
 }
 
 (async () => {
     const mlsNumber = process.env.MLS_NUMBER;
     const clientEmail = process.env.CLIENT_EMAIL;
-    console.log(`[GitHub Worker] 🚀 DÉMARRAGE: MLS ${mlsNumber}`);
+    console.log(`[GitHub Worker] 🚀 MLS ${mlsNumber}`);
 
     const browser = await chromium.launch({ headless: true });
     const context = await browser.newContext({
@@ -69,22 +62,22 @@ async function debugState(page, stepName) {
     try {
         console.log("[GitHub Worker] 🌐 Accès Matrix...");
         await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
-        await debugState(page, "Après chargement initial");
 
         if (await page.isVisible('input[name*="ser"], #Username')) {
             console.log("[GitHub Worker] 🔑 Login...");
             await page.fill('input[name*="ser"], #Username', process.env.MATRIX_USER);
             await page.fill('input[type="password"]', process.env.MATRIX_PASS);
-            await page.click('button[type="submit"]');
+            await page.click('button[type="submit"], button:has-text("Connect")');
             await page.waitForTimeout(10000);
-            await debugState(page, "Après clic Login");
 
-            if (page.url().includes('challenge') || await page.isVisible('input[name*="Code"]')) {
+            if (page.url().includes('challenge') || page.url().includes('prompt') || await page.isVisible('input[name*="Code"]')) {
                 console.log("[GitHub Worker] 🛡️ MFA détecté...");
+                await page.waitForTimeout(20000); // Attente transfert email
                 const code = await getMfaCode();
                 if (code) {
-                    await page.fill('input[name*="Code"]', code);
-                    await page.click('button[type="submit"]');
+                    console.log(`[GitHub Worker] 🔑 Code injecté: ${code}`);
+                    await page.fill('input[name*="Code"], #VerificationCode, input[type="text"]', code);
+                    await page.click('button:has-text("Continue"), button[type="submit"]');
                     await page.waitForTimeout(10000);
                 }
             }
@@ -92,25 +85,11 @@ async function debugState(page, stepName) {
 
         console.log("[GitHub Worker] ✅ Connecté !");
         
-        // --- NOUVEAU : BYPASS DU PROMPT 'START SETUP' ---
-        if (await page.isVisible('text="Start setup"')) {
-            console.log("[GitHub Worker] 🛡️ Blocage 'Start setup' détecté. Tentative de bypass forcé...");
-            await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
-            await page.waitForTimeout(5000);
-        }
-        
-        await debugState(page, "État après bypass");
-        
         // RECHERCHE
         console.log("[GitHub Worker] 🔍 Recherche MLS...");
-        await page.waitForTimeout(8000);
+        await page.waitForTimeout(5000);
         await page.keyboard.press('Escape');
-        await page.keyboard.press('Escape');
-        await page.mouse.click(10, 10);
-        
-        await debugState(page, "Avant saisie MLS");
-        
-        const searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 30000 });
+        const searchInput = await page.waitForSelector('input[name*="SpeedBar"], #m_txtSpeedBarInput', { timeout: 30000 });
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
         
@@ -123,18 +102,18 @@ async function debugState(page, stepName) {
         // PARTAGE
         console.log("[GitHub Worker] 📧 Partage...");
         await page.waitForTimeout(5000);
-        await page.click('#chkSelectAll, .select-all');
+        await page.click('#chkSelectAll');
         await page.click('button:has-text("Partager"), #btnShare');
         
-        await page.waitForSelector('#txtEmailTo, input[name*="Email"]');
-        await page.fill('#txtEmailTo, input[name*="Email"]', clientEmail);
+        await page.waitForSelector('#txtEmailTo');
+        await page.fill('#txtEmailTo', clientEmail);
         await page.fill('#txtSubject', `Documentation - MLS ${mlsNumber}`);
         await page.click('button:has-text("Partager"), .btn-send');
         
         console.log("[GitHub Worker] ✨ MISSION RÉUSSIE !");
 
     } catch (e) {
-        console.error("[GitHub Worker] ❌ ÉCHEC");
+        console.error("[GitHub Worker] ❌ ÉCHEC:", e.message);
         await debugState(page, "CRASH");
         process.exit(1);
     } finally { await browser.close(); }
