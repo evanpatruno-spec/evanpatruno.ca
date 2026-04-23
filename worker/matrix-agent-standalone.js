@@ -90,12 +90,32 @@ async function debugState(page, stepName) {
         await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
         await page.waitForTimeout(10000); // On laisse 10s pour passer la page intermédiaire
         
-        // RECHERCHE
-        console.log("[GitHub Worker] 🔍 Recherche MLS...");
+        // RECHERCHE (Scan de tous les cadres/iframes)
+        console.log("[GitHub Worker] 🔍 Recherche de la SpeedBar dans les cadres...");
         await page.keyboard.press('Escape');
-        const searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 30000 });
-        await searchInput.fill(mlsNumber);
-        await page.keyboard.press('Enter');
+        
+        let searchInput = null;
+        const frames = page.frames();
+        console.log(`[GitHub Worker] 🖼️ ${frames.length} cadres détectés.`);
+        
+        for (const frame of frames) {
+            try {
+                searchInput = await frame.$('#m_txtSpeedBarInput, input[name*="SpeedBar"]');
+                if (searchInput) {
+                    console.log("[GitHub Worker] ✅ SpeedBar trouvée dans un cadre !");
+                    await searchInput.fill(mlsNumber);
+                    await frame.keyboard.press('Enter');
+                    break;
+                }
+            } catch (e) {}
+        }
+
+        if (!searchInput) {
+            // Tentative finale en mode direct sur la page principale
+            searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 10000 });
+            await searchInput.fill(mlsNumber);
+            await page.keyboard.press('Enter');
+        }
         
         // DOCUMENTS
         console.log("[GitHub Worker] 📄 Accès documents...");
