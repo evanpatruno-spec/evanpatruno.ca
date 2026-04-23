@@ -85,19 +85,15 @@ async function debugState(page, stepName) {
 
         console.log("[GitHub Worker] ✅ Connecté !");
         
-        // --- PASSAGE EN MODE CLASSIQUE SI BESOIN ---
-        await page.waitForTimeout(5000);
-        if (await page.isVisible('text="Aller au tableau de bord classique"')) {
-            console.log("[GitHub Worker] 🔄 Basculement vers l'interface classique...");
-            await page.click('text="Aller au tableau de bord classique"');
-            await page.waitForTimeout(5000);
-        }
+        // --- NAVIGATION FORCÉE VERS LE TABLEAU DE BORD ---
+        console.log("[GitHub Worker] 🌐 Chargement forcé de Matrix...");
+        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
+        await page.waitForTimeout(10000); // On laisse 10s pour passer la page intermédiaire
         
         // RECHERCHE
         console.log("[GitHub Worker] 🔍 Recherche MLS...");
-        await page.waitForTimeout(5000);
         await page.keyboard.press('Escape');
-        const searchInput = await page.waitForSelector('input[name*="SpeedBar"], #m_txtSpeedBarInput', { timeout: 30000 });
+        const searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 30000 });
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
         
