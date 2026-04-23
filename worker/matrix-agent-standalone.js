@@ -3,7 +3,6 @@ const { ImapFlow } = require('imapflow');
 const { simpleParser } = require('mailparser');
 
 async function getMfaCode() {
-    console.log("[GitHub Worker] 📧 Connexion Gmail...");
     const client = new ImapFlow({
         host: 'imap.gmail.com', port: 993, secure: true,
         auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASS },
@@ -34,29 +33,32 @@ async function getMfaCode() {
         viewport: { width: 1280, height: 720 },
         userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'
     });
+
+    if (process.env.MATRIX_COOKIES) {
+        const cookies = process.env.MATRIX_COOKIES.split(';').map(pair => {
+            const parts = pair.trim().split('=');
+            return { name: parts[0], value: parts.slice(1).join('='), domain: '.centris.ca', path: '/' };
+        });
+        await context.addCookies(cookies);
+    }
+
     const page = await context.newPage();
 
     try {
-        console.log("[GitHub Worker] 🌐 Navigation vers Matrix...");
+        console.log("[GitHub Worker] 🌐 Accès Matrix...");
         await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
-
-        // --- LOGIN SI BESOIN ---
-        if (await page.isVisible('input[name="Username"], #Username, #username')) {
-            console.log("[GitHub Worker] 🔑 Saisie identifiants...");
-            await page.fill('input[name="Username"], #Username, #username', process.env.MATRIX_USER);
-            await page.fill('input[name="Password"], #Password, #password', process.env.MATRIX_PASS);
-            await page.click('button[type="submit"], #login-button');
+        
+        if (await page.isVisible('input[name*="ser"], #Username')) {
+            console.log("[GitHub Worker] 🔑 Login...");
+            await page.fill('input[name*="ser"], #Username', process.env.MATRIX_USER);
+            await page.fill('input[type="password"]', process.env.MATRIX_PASS);
+            await page.click('button[type="submit"]');
             await page.waitForTimeout(10000);
-
-            // --- MFA ---
-            if (page.url().includes('challenge') || page.url().includes('prompt') || await page.isVisible('input[name*="Code"]')) {
-                console.log("[GitHub Worker] 🛡️ MFA détecté, attente du code email...");
-                await page.waitForTimeout(15000); // Attendre l'email
+            if (page.url().includes('challenge') || await page.isVisible('input[name*="Code"]')) {
                 const code = await getMfaCode();
                 if (code) {
-                    console.log(`[GitHub Worker] 🔑 Code récupéré: ${code}`);
-                    await page.fill('input[name*="Code"], #VerificationCode', code);
-                    await page.click('button[type="submit"], .btn-primary');
+                    await page.fill('input[name*="Code"]', code);
+                    await page.click('button[type="submit"]');
                     await page.waitForTimeout(10000);
                 }
             }
@@ -64,35 +66,32 @@ async function getMfaCode() {
 
         console.log("[GitHub Worker] ✅ Connecté !");
         
-        // --- RECHERCHE ---
-        console.log("[GitHub Worker] 🔍 Ouverture du menu Recherche...");
+        // RECHERCHE
+        console.log("[GitHub Worker] 🔍 Recherche MLS...");
         await page.waitForTimeout(5000);
         await page.keyboard.press('Escape');
-        
-        // On clique sur l'onglet Recherche en haut
-        try {
-            await page.click('text="Recherche"', { timeout: 10000 });
-            await page.waitForTimeout(2000);
-        } catch (e) {
-            console.log("[GitHub Worker] Onglet Recherche non trouvé, on tente direct...");
-        }
-
-        console.log("[GitHub Worker] 🔍 Saisie du numéro MLS...");
-        const searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 30000 });
+        const searchInput = await page.waitForSelector('input[name*="SpeedBar"], #m_txtSpeedBarInput', { timeout: 30000 });
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
-
-        // --- ENVOI ---
-        console.log("[GitHub Worker] 📄 Envoi documents...");
+        
+        // DOCUMENTS
+        console.log("[GitHub Worker] 📄 Accès documents...");
+        await page.waitForTimeout(10000);
+        // Essayer de trouver le bouton documents par titre ou texte
+        const docsBtn = await page.waitForSelector('a[title*="Document"], text="Documents"', { timeout: 30000 });
+        await docsBtn.click();
+        
+        // PARTAGE
+        console.log("[GitHub Worker] 📧 Partage...");
         await page.waitForTimeout(5000);
-        await page.click('a[title*="Document"], text="Documents"');
-        await page.waitForTimeout(5000);
-        await page.click('#chkSelectAll');
+        await page.click('#chkSelectAll, .select-all');
         await page.click('button:has-text("Partager"), #btnShare');
-        await page.waitForSelector('#txtEmailTo');
-        await page.fill('#txtEmailTo', clientEmail);
-        await page.fill('#txtSubject', `Documentation - Inscription MLS ${mlsNumber}`);
+        
+        await page.waitForSelector('#txtEmailTo, input[name*="Email"]');
+        await page.fill('#txtEmailTo, input[name*="Email"]', clientEmail);
+        await page.fill('#txtSubject', `Documentation - MLS ${mlsNumber}`);
         await page.click('button:has-text("Partager"), .btn-send');
+        
         console.log("[GitHub Worker] ✨ MISSION RÉUSSIE !");
 
     } catch (e) {
