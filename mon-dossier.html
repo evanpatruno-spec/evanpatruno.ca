@@ -1236,7 +1236,7 @@
             <div id="loginFormContainer">
                 <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode" required>
                 <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU T&Eacute;L&Eacute;PHONE" class="login-input" id="inpPortalPhone" required style="margin-top: -10px;">
-                <button type="button" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;" onclick="handlePortalLogin(event)">
+                <button type="button" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;" onclick="handlePortalLogin(event); return false;">
                     Ouvrir mon dossier
                 </button>
                 <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
