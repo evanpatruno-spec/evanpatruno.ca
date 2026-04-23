@@ -67,10 +67,16 @@ async function getMfaCode() {
         console.log("[GitHub Worker] ✅ Connecté !");
         
         // RECHERCHE
-        console.log("[GitHub Worker] 🔍 Recherche MLS...");
-        await page.waitForTimeout(5000);
+        console.log("[GitHub Worker] 🔍 Nettoyage des popups Matrix...");
+        await page.waitForTimeout(8000); 
         await page.keyboard.press('Escape');
-        const searchInput = await page.waitForSelector('input[name*="SpeedBar"], #m_txtSpeedBarInput', { timeout: 30000 });
+        await page.waitForTimeout(1000);
+        await page.keyboard.press('Escape');
+        // Cliquer dans un coin vide pour enlever le focus des popups
+        await page.mouse.click(10, 10);
+        
+        console.log("[GitHub Worker] 🔍 Recherche MLS...");
+        const searchInput = await page.waitForSelector('#m_txtSpeedBarInput, input[name*="SpeedBar"]', { timeout: 30000 });
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
         
