@@ -81,15 +81,17 @@ export default async function handler(req, res) {
             });
             
             // 2. Lancement du Matrix Agent (Envoi des PDF)
-            // On récupère l'email du client pour l'envoi
             const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
             
-            // Note: Sur Vercel, on utilise une exécution asynchrone si possible 
-            // ou on attend la fin selon le timeout configuré.
-            const { runMatrixAgent } = require('../worker/matrix-agent');
-            runMatrixAgent(mls, clientEmail).catch(e => console.error("Matrix Agent Async Error:", e));
+            try {
+                const { runMatrixAgent } = require('../worker/matrix-agent');
+                // On ne met pas de "await" ici pour ne pas faire attendre le client
+                runMatrixAgent(mls, clientEmail).then(() => console.log("Agent Matrix fini")).catch(e => console.error("Agent Matrix Error:", e));
+            } catch (agentErr) {
+                console.error("Impossible de charger l'agent:", agentErr);
+            }
 
-            return res.status(200).json({ s: true, msg: "Demande CRM créée et Agent Matrix lancé" });
+            return res.status(200).json({ s: true, msg: "Demande enregistrée" });
         }
 
         // --- MAPPING DASHBOARD ---
