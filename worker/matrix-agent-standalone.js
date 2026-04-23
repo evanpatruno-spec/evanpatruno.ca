@@ -11,14 +11,22 @@ const { chromium } = require('playwright');
 
     try {
         // --- 1. CONNEXION ---
-        await page.goto('https://accounts.centris.ca/account/login');
+        console.log("[GitHub Worker] Connexion à Centris...");
+        await page.goto('https://accounts.centris.ca/account/login', { waitUntil: 'networkidle' });
+        
+        // Attendre que le champ Username soit visible
+        await page.waitForSelector('#Username', { timeout: 30000 });
         await page.fill('#Username', process.env.MATRIX_USER);
         await page.fill('#Password', process.env.MATRIX_PASS);
-        await page.click('button[type="submit"]');
-        await page.waitForNavigation();
+        
+        await Promise.all([
+            page.waitForNavigation({ waitUntil: 'networkidle' }),
+            page.click('button[type="submit"]')
+        ]);
 
+        console.log("[GitHub Worker] Authentifié, direction Matrix...");
         // --- 2. MATRIX ---
-        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx');
+        await page.goto('https://matrix.centris.ca/Matrix/Default.aspx', { waitUntil: 'networkidle' });
         const searchInput = await page.waitForSelector('input[name="m_pSearch_m_txtSpeedBarInput"]');
         await searchInput.fill(mlsNumber);
         await page.keyboard.press('Enter');
