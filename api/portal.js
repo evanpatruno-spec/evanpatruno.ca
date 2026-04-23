@@ -86,7 +86,7 @@ export default async function handler(req, res) {
                 try {
                     const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
                     console.log(`Déclenchement robot Matrix pour ${clientEmail}...`);
-                    await fetch(`https://api.github.com/repos/evanpatruno-spec/evanpatruno.ca/dispatches`, {
+                    const ghResp = await fetch(`https://api.github.com/repos/evanpatruno-spec/evanpatruno.ca/dispatches`, {
                         method: 'POST',
                         headers: {
                             'Authorization': `Bearer ${process.env.GH_TOKEN}`,
@@ -99,6 +99,11 @@ export default async function handler(req, res) {
                             client_payload: { mlsNumber: mls, clientEmail: clientEmail }
                         })
                     });
+                    console.log(`GitHub Response: ${ghResp.status} ${ghResp.statusText}`);
+                    if (ghResp.status >= 400) {
+                        const errText = await ghResp.text();
+                        console.error("GitHub Error Detail:", errText);
+                    }
                 } catch (e) { console.error("Agent Trigger Error:", e); }
             };
 
