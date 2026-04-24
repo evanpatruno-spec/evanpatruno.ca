@@ -70,6 +70,21 @@ export default async function handler(req, res) {
             const d = await r.json(); return d.data ? d.data[0] : null;
         };
         const [notaire, inspecteur, courtier, clientC] = await Promise.all([fetchP(deal.Nom_Notaire), fetchP(deal.Nom_Inspecteur), fetchP(deal.Nom_Courtier_Hypoth_caire), fetchP(deal.Contact_Name)]);
+        
+        // --- RÉCUPÉRATION DES VISITES ---
+        const vResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail/search?criteria=${encodeURIComponent(`(Affaire:equals:${dealId})`)}`, {
+            method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }
+        });
+        const vData = await vResp.json();
+        const rawVisites = vData.data || [];
+        const visites = rawVisites.map(v => ({
+            id: v.id,
+            date: v.Date_de_visite ? new Date(v.Date_de_visite).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' }) : "À confirmer",
+            heure: v.Heure || "À confirmer",
+            location: v.Name || "Adresse à venir",
+            type: v.Type || "Visite",
+            statut: v.Statut || "En attente"
+        }));
 
         // --- ACTION MLS DIRECTE ---
         if ((action === 'mls' || action === 'requestMLS') && mls) {
@@ -146,6 +161,7 @@ export default async function handler(req, res) {
             timeline: [{ label: "Préparation", status: "completed", icon: "&#x1f4cb;" }, { label: "Visites", status: "active", icon: "🔍" }, { label: "Conditions", status: "pending", icon: "&#x1f6e1;&#xfe0f;" }, { label: "Notaire", status: "pending", icon: "&#x2696;&#xfe0f;" }, { label: "Vendu", status: "pending", icon: "&#x1f37e;" }],
             checklist: [{ name: "Financement Approuvé", done: deal.Financement_approuv === "Oui" }, { name: "Inspection complétée", done: deal.Inspection_satisfaisante === "Oui" }, { name: "Conditions de l'offre levées", done: deal.Autres_conditions_lev_es === "Oui" }],
             movingChecklist: [{ name: "Postes Canada", done: false }, { name: "Hydro-Québec", done: false }, { name: "Assurance", done: false }],
+            visites: visites,
             partners: [
                 { category: "Peinture", name: "Peinture Excellence", icon: "&#x1f3a8;", benefit: "10% de rabais", code: "EP-PROMO" },
                 { category: "Plomberie", name: "Plombier Pro", icon: "&#x1f6bf;", benefit: "Estimation gratuite", code: "EP-PROMO" },
