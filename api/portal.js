@@ -136,6 +136,32 @@ export default async function handler(req, res) {
             return res.status(200).json({ s: true, msg: "Demande enregistrée" });
         }
 
+        // --- ACTION DEMANDE DE VISITE ---
+        if (action === 'requestVisit' && location) {
+            console.log("Demande de visite reçue pour:", location);
+            const vDate = body.date || "";
+            const vTime = body.time || "";
+
+            const crmData = {
+                data: [{ 
+                    Name: `Demande de Visite - ${location}`, 
+                    Num_ro_MLS: location.length < 10 ? location : "", // Si c'est un MLS
+                    Code_Portail: cleanCode, 
+                    Affaire: dealId,
+                    Description: `Demande de visite reçue depuis le portail.\n\nLIEU : ${location}\nDATE : ${vDate}\nHEURE : ${vTime}\n\nCLIENT : ${clientC?.Full_Name || 'Inconnu'} (${clientC?.Email} / ${clientC?.Mobile || 'Pas de tel'})`
+                }],
+                trigger: ["workflow"]
+            };
+
+            await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
+                method: 'POST',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify(crmData)
+            });
+
+            return res.status(200).json({ s: true, msg: "Demande de visite enregistrée" });
+        }
+
         const team = [{ role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }];
         const addP = (p, role, icon) => { if(p) team.push({ role, name: p.Full_Name || p.Name, icon, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" }); };
         addP(courtier, "Courtier Hypothécaire", "&#x1f3e6;"); addP(inspecteur, "Inspecteur", "🔍"); addP(notaire, "Notaire", "✒️");

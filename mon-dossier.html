@@ -1584,6 +1584,33 @@
                 <div class="section-chevron">&#x25bc;</div>
             </div>
             <div class="section-content">
+                <!-- FORMULAIRE DE DEMANDE DE VISITE -->
+                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:25px; margin-bottom:30px;">
+                    <h4 style="margin:0 0 15px 0; color:#fff; font-family:'Outfit'; font-size:1.1rem;">📅 Demander une visite</h4>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-bottom:15px;" class="visit-form-grid">
+                        <div style="grid-column: span 2;">
+                            <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse complète" 
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
+                        </div>
+                        <div>
+                            <input type="date" id="inpVisitDate" 
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
+                        </div>
+                        <div>
+                            <input type="text" id="inpVisitTime" placeholder="Heure (ex: 14h00)" 
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
+                        </div>
+                    </div>
+                    <button onclick="requestVisit()" id="btnVisitReq"
+                        style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:15px; border-radius:12px; font-weight:800; cursor:pointer; transition:0.3s;">
+                        Envoyer la demande de visite
+                    </button>
+                    <div id="statusVisit" style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
+                        <div class="loader-mini"></div>
+                        <span id="txtStatusVisit" style="color:rgba(255,255,255,0.8);">Envoi en cours...</span>
+                    </div>
+                </div>
+
                 <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
             </div>
         </div>
@@ -2129,6 +2156,61 @@
     function copyPromoCode(code) {
         navigator.clipboard.writeText(code);
         alert('Code promo copi\u00e9 : ' + code);
+    }
+
+    async function requestVisit() {
+        const loc = document.getElementById('inpVisitLoc').value.trim();
+        const date = document.getElementById('inpVisitDate').value;
+        const time = document.getElementById('inpVisitTime').value.trim();
+        const status = document.getElementById('statusVisit');
+        const txt = document.getElementById('txtStatusVisit');
+        const btn = document.getElementById('btnVisitReq');
+
+        if (!loc || !date || !time) {
+            alert('Veuillez remplir tous les champs (Lieu, Date et Heure).');
+            return;
+        }
+
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+        status.style.display = 'flex';
+        txt.innerText = 'Envoi de votre demande...';
+        txt.style.color = 'rgba(255,255,255,0.8)';
+
+        try {
+            const code = localStorage.getItem('portalCode') || "";
+            const dealId = localStorage.getItem('portalDealId') || "";
+
+            const response = await fetch('https://dossier.evanpatruno.ca/api/portal', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'requestVisit',
+                    codePortal: code,
+                    dealId: dealId,
+                    location: loc,
+                    date: date,
+                    time: time
+                })
+            });
+
+            if (!response.ok) throw new Error('Erreur de communication');
+            
+            txt.innerText = 'Demande de visite envoyée ! 🚀';
+            setTimeout(() => {
+                document.getElementById('inpVisitLoc').value = '';
+                document.getElementById('inpVisitDate').value = '';
+                document.getElementById('inpVisitTime').value = '';
+                status.style.display = 'none';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            }, 4000);
+        } catch (error) {
+            txt.innerText = 'Erreur : ' + error.message;
+            txt.style.color = '#ff4b2b';
+            btn.disabled = false;
+            btn.style.opacity = '1';
+        }
     }
 
     async function requestMLSDoc() {
