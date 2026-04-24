@@ -1306,7 +1306,7 @@
 
     <!-- NAVIGATION DOCK -->
     <nav class="portal-nav" id="portalNav">
-        <div class="nav-item active" onclick="navTo('portalDash', this)">
+        <div class="nav-item active" onclick="navTo('secCockpit', this)">
             <div class="nav-icon">&#x1f3e0;</div>
             <span>Cockpit</span>
         </div>
@@ -1410,7 +1410,7 @@
 
     <!-- DASHBOARD -->
     <div class="portal-container" id="portalDash">
-        <header style="margin-bottom: 60px; position: relative;">
+        <header id="secCockpit" style="margin-bottom: 60px; position: relative;">
             <div id="pwaInstallBanner" class="install-banner">
                 <div class="banner-close" onclick="closePwaBanner()">&#10005;</div>
                 <div style="display: flex; align-items: center; gap: 15px;">
@@ -2306,25 +2306,33 @@
     }
 
     // --- NAVIGATION DOCK LOGIC ---
+    let isNavigating = false;
     function navTo(id, el) {
         const target = document.getElementById(id);
         if (!target) return;
 
+        isNavigating = true;
+        
         // Si la section est repliée, on l'ouvre
         if (target.classList.contains('collapsed')) {
             target.classList.remove('collapsed');
         }
 
-        // Smooth scroll
-        const offset = window.innerWidth <= 768 ? 20 : 40;
-        window.scrollTo({
-            top: target.offsetTop - offset,
-            behavior: 'smooth'
-        });
-
         // Active state update
         document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
         el.classList.add('active');
+
+        // Smooth scroll
+        const offset = window.innerWidth <= 768 ? 60 : 80;
+        const targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        
+        window.scrollTo({
+            top: targetPos,
+            behavior: 'smooth'
+        });
+
+        // Re-enable scroll spy after animation
+        setTimeout(() => { isNavigating = false; }, 800);
     }
 
     // Show Nav after login success
@@ -2335,10 +2343,10 @@
 
     // Scroll Spy (Auto-highlight active section)
     window.addEventListener('scroll', () => {
-        if (!document.getElementById('portalNav').classList.contains('visible')) return;
+        if (isNavigating || !document.getElementById('portalNav').classList.contains('visible')) return;
 
         const sections = [
-            { id: 'portalDash', navIdx: 0 },
+            { id: 'secCockpit', navIdx: 0 },
             { id: 'secPrequal', navIdx: 1 },
             { id: 'secVisites', navIdx: 2 },
             { id: 'secConciergeMLS', navIdx: 3 },
@@ -2346,21 +2354,26 @@
         ];
 
         let current = '';
-        const scrollPos = window.scrollY + 150;
+        const scrollPos = window.pageYOffset + 200;
 
         sections.forEach(s => {
             const el = document.getElementById(s.id);
-            if (el && scrollPos >= el.offsetTop) {
-                current = s.id;
+            if (el) {
+                const top = el.getBoundingClientRect().top + window.pageYOffset;
+                if (scrollPos >= top) {
+                    current = s.id;
+                }
             }
         });
 
         if (current) {
             const navItems = document.querySelectorAll('.nav-item');
-            const targetIdx = sections.find(s => s.id === current).navIdx;
-            navItems.forEach((item, idx) => {
-                item.classList.toggle('active', idx === targetIdx);
-            });
+            const section = sections.find(s => s.id === current);
+            if (section) {
+                navItems.forEach((item, idx) => {
+                    item.classList.toggle('active', idx === section.navIdx);
+                });
+            }
         }
     });
 
