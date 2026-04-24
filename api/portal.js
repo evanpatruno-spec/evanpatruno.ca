@@ -71,17 +71,24 @@ export default async function handler(req, res) {
         };
         const [notaire, inspecteur, courtier, clientC] = await Promise.all([fetchP(deal.Nom_Notaire), fetchP(deal.Nom_Inspecteur), fetchP(deal.Nom_Courtier_Hypoth_caire), fetchP(deal.Contact_Name)]);
 
-        // --- ACTION MLS DIRECTE (Déplacée ici pour avoir accès à clientC) ---
+        // --- ACTION MLS DIRECTE ---
         if ((action === 'mls' || action === 'requestMLS') && mls) {
             console.log("Demande MLS reçue pour:", mls);
             
-            // 1. Enregistrement CRM
+            // 1. Enregistrement CRM (Module Interactions_Portail)
             const crmData = {
-                data: [{ Name: `Demande MLS ${mls}`, Num_ro_MLS: mls, Code_Portail: cleanCode, Affaire: dealId }],
-                trigger: ["workflow"]
+                data: [{ 
+                    Name: `Demande MLS ${mls}`, 
+                    Num_ro_MLS: mls, 
+                    Code_Portail: cleanCode, 
+                    Affaire: dealId,
+                    Description: `Client ${clientC?.Full_Name || 'Inconnu'} (${clientC?.Email}) demande la documentation pour MLS ${mls}.`
+                }],
+                trigger: ["workflow"] // Important pour déclencher la notification Zoho
             };
 
-            // 2. Appel GitHub (Le robot)
+            // 2. Appel GitHub (DÉSACTIVÉ - Workflow Manuel)
+            /*
             const dispatch = async () => {
                 try {
                     const clientEmail = clientC?.Email || "evan.patruno@gmail.com";
@@ -99,25 +106,19 @@ export default async function handler(req, res) {
                             client_payload: { mlsNumber: mls, clientEmail: clientEmail }
                         })
                     });
-                    console.log(`GitHub Response: ${ghResp.status} ${ghResp.statusText}`);
-                    if (ghResp.status >= 400) {
-                        const errText = await ghResp.text();
-                        console.error("GitHub Error Detail:", errText);
-                    }
                 } catch (e) { console.error("Agent Trigger Error:", e); }
             };
+            await dispatch();
+            */
 
-            // 1. Enregistrement CRM
+            // Enregistrement dans Zoho
             await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
                 method: 'POST',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify(crmData)
             });
 
-            // 2. Lancement Robot (GitHub)
-            await dispatch();
-
-            return res.status(200).json({ s: true, msg: "OK" });
+            return res.status(200).json({ s: true, msg: "Demande enregistrée" });
         }
 
         const team = [{ role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "&#x1f468;&#x200d;&#x1f4bc;", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }];
