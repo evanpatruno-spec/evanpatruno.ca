@@ -1382,6 +1382,25 @@
 </style>
 
 
+<script>
+    // Vérification immédiate pour éviter le flash de l'écran de connexion
+    if (localStorage.getItem('portal_code') && localStorage.getItem('portal_phone')) {
+        document.documentElement.classList.add('portal-authenticated');
+    }
+</script>
+
+<style>
+    /* Si authentifié, on cache l'overlay immédiatement via CSS */
+    .portal-authenticated .portal-overlay {
+        display: none !important;
+    }
+    .portal-authenticated .portal-container {
+        display: block !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+</style>
+
 <div class="portal-main-wrapper">
     <div class="portal-aura"></div>
 
