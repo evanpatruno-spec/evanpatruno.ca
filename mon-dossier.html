@@ -1756,6 +1756,12 @@
                 </div>
             </div>
         </div>
+        </div>
+        
+        <!-- BOUTON DEBUG (TEMPORAIRE) -->
+        <div id="debugSyncArea" style="margin-top:20px; text-align:center; padding-bottom:40px;">
+            <button onclick="requestNotificationPermission()" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.4); padding:10px 20px; border-radius:10px; font-size:0.7rem; cursor:pointer;">🔄 Forcer Sync Notifications</button>
+        </div>
     </div>
 </div>
 
@@ -1808,6 +1814,10 @@
                     const dossierCode = localStorage.getItem('portal_code') || "";
                     const portalPhone = localStorage.getItem('portal_phone') || "";
                     
+                    if (window.location.search.includes('debug=1')) {
+                        alert("DEBUG: Token généré !\n\nPhone utilisé: " + portalPhone + "\n\nToken: " + token.substring(0,20) + "...");
+                    }
+
                     // Automatiquement envoyer à Zoho
                     const syncResult = await sendTokenToZoho(token, dossierCode, portalPhone);
                     
