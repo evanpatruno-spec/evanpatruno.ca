@@ -1,7 +1,7 @@
-const CACHE_NAME = 'ep-portal-cache-v7';
+const CACHE_NAME = 'ep-portal-cache-v8';
 const ASSETS_TO_CACHE = [
-  '/',
   '/mon-dossier.html',
+  '/mon-dossier-v10.html',
   '/manifest.json',
   '/pwa-icon-512.png',
   '/pwa-icon-192.png'
@@ -52,7 +52,14 @@ self.addEventListener('notificationclick', (event) => {
 
 // 2. CACHE LOGIC
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE)));
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      // On tente de tout cacher, mais on ne bloque pas si un fichier échoue
+      return Promise.all(ASSETS_TO_CACHE.map(url => {
+        return cache.add(url).catch(err => console.warn(`[SW] Failed to cache ${url}:`, err));
+      }));
+    })
+  );
   self.skipWaiting();
 });
 
