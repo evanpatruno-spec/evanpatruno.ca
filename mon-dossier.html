@@ -1509,24 +1509,18 @@
                             style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">--</span>
                         <span id="txtProgressPct"
                             style="background: rgba(135, 50, 118, 0.2); color: var(--dash-primary); padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 900; margin-left: 5px;">0%</span>
-                        <span style="color:rgba(255,255,255,0.15); font-size:0.6rem; font-weight:700; margin-left:10px;">v9.2</span>
+                        <span style="color:rgba(255,255,255,0.1); font-size:0.5rem; font-weight:700; margin-left:10px;">v10.1</span>
                     </div>
-                    <div id="newVersionBanner" style="background:#e74c3c; color:#fff; padding:5px 10px; border-radius:8px; font-size:0.7rem; font-weight:900; margin-top:10px; display:inline-block; animation: pulse 1s infinite;">🔥 NOUVELLE VERSION 9.2 DÉTECTÉE</div>
                     <h1 id="txtWelcome"
                         style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">
                         --</h1>
                     <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--
                     </div>
                     <div id="pushPromptContainer"></div>
-                    <div id="debugSyncArea" style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
-                        <button onclick="requestNotificationPermission()"
-                            style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:8px 15px; border-radius:10px; font-size:0.7rem; font-weight:800; cursor:pointer;">🔄
-                            Forcer Sync</button>
-                        <button onclick="nuclearReset()"
-                            style="background:rgba(231,76,60,0.1); border:1px solid rgba(231,76,60,0.3); color:#e74c3c; padding:8px 15px; border-radius:10px; font-size:0.7rem; font-weight:800; cursor:pointer;">⚠️
-                            Reset Cache</button>
+                    <div id="debugSyncArea" style="margin-top:10px; display:none;">
+                        <button onclick="requestNotificationPermission()">🔄 Sync</button>
                     </div>
-                    <div id="epDebugLog" style="margin-top:10px; max-height:100px; overflow-y:auto; background:rgba(0,0,0,0.3); border-radius:10px; padding:8px; font-family:monospace; font-size:0.6rem; color:#0f0; display:none;"></div>
+                    <div id="epDebugLog" style="display:none;"></div>
                 </div>
 
                 <div id="wrapCountdown" style="display: none;">
@@ -1833,7 +1827,7 @@
             for (let r of regs) { await r.unregister(); }
 
             epLog("4. Registering...");
-            const reg = await navigator.serviceWorker.register('/firebase-messaging-sw.js?v=9.1');
+            const reg = await navigator.serviceWorker.register('/firebase-messaging-sw.js?v=10');
             
             epLog("5. Ready (Wait max 5s)...");
             const activeReg = await Promise.race([
