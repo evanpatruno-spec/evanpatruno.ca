@@ -386,15 +386,15 @@
         z-index: 1;
     }
 
-    /* Barre de progression magenta &mdash; Desktop */
+    /* Barre de progression VERT FLUO — Desktop */
     .timeline-progress-bar {
         position: absolute;
         top: 27px;
         left: 10%;
         width: 0%;
         height: 2px;
-        background: var(--dash-primary);
-        box-shadow: 0 0 20px var(--dash-primary);
+        background: #2ecc71;
+        box-shadow: 0 0 20px rgba(46, 204, 113, 0.8);
         transition: width 1.8s ease, height 1.8s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1;
     }
@@ -601,8 +601,8 @@
             width: 2px;
             height: 0;
             bottom: auto !important;
-            background: linear-gradient(to bottom, var(--dash-primary), #ff4db8);
-            box-shadow: 0 0 12px var(--dash-primary), 0 0 24px rgba(135, 50, 118, 0.6), 0 0 4px #ff4db8;
+            background: #2ecc71 !important;
+            box-shadow: 0 0 15px rgba(46, 204, 113, 0.8), 0 0 25px rgba(46, 204, 113, 0.4) !important;
             transition: height 1.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
             border-radius: 10px;
         }
@@ -1880,9 +1880,13 @@
         showNav(); // Show floating dock
         document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName || 'Client'}.`;
 
-        // DASHBOARD SUMMARY LOGIC
-        const nextTask = (data.checklist || []).find(c => !c.done);
-        document.getElementById('dashNextStep').innerText = nextTask ? nextTask.name : "Tout est compl&eacute;t&eacute; !";
+        // DASHBOARD SUMMARY LOGIC (Transaction Stage)
+        const activeStage = (data.timeline || []).find(s => s.status === 'active') || 
+                           (data.timeline || []).find(s => s.status === 'pending');
+        
+        // Clean HTML entities if needed
+        const stageLabel = activeStage ? activeStage.label.replace(/&eacute;/g, 'é').replace(/&egrave;/g, 'è') : "Terminé";
+        document.getElementById('dashNextStep').innerText = stageLabel;
         
         const upcomingVisit = (data.visites || []).find(v => v.statut.toLowerCase().includes('confirm'));
         if (upcomingVisit) {
