@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     if (req.method === 'OPTIONS') return res.status(200).end();
 
     const data = (req.method === 'POST') ? req.body : req.query;
-    const code = data.c || data.codePortal;
+    const code = data.c || data.codePortal || data.code;
     const action = data.k || data.action;
     const mls = data.v || data.mlsNumber;
     const cleanCode = (code || "").trim().toUpperCase();
