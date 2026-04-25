@@ -34,7 +34,7 @@ export default async function handler(req, res) {
 
         // --- RECHERCHE DU DOSSIER (MULTI-MÉTHODE) ---
         let dealId = null;
-        let moduleName = "Potentials";
+        let moduleName = "Deals";
 
         if (cleanCode === "EP-1") {
             dealId = "6466486000011930049";
@@ -48,7 +48,7 @@ export default async function handler(req, res) {
                 moduleName = gData.data[0].$module;
             } else {
                 // Méthode 2 : Recherche par critère (si la globale échoue)
-                const sResp = await fetch(`${apiDomain}/crm/v2/Potentials/search?criteria=${encodeURIComponent(`(Code_Portail:equals:${cleanCode})`)}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const sResp = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=${encodeURIComponent(`(Code_Portail:equals:${cleanCode})`)}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
                 const sData = await sResp.json();
                 if (sData.data) dealId = sData.data[0].id;
             }
