@@ -1371,8 +1371,7 @@
                 grid-template-columns: 1fr;
             }
         }
-    }
-</style>
+    </style>
 
 
 <div class="portal-main-wrapper">
@@ -1870,15 +1869,16 @@
             if (s.status === 'completed') completed++;
             if (s.status === 'active') completed += 0.5;
         });
+        
         setTimeout(() => {
             const bar = document.getElementById('barProgress');
-            if (bar) {
-                const total = (data.timeline || []).length;
-                const safePct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
+            const total = (data.timeline || []).length;
+            const safePct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
 
+            if (bar) {
                 if (window.innerWidth <= 768) {
                     // Mobile : barre verticale en pixels absolus
-                    const railH = wrapT.offsetHeight - 54; // hauteur disponible du rail
+                    const railH = wrapT.offsetHeight - 54; 
                     const pxH = (safePct / 100) * railH;
                     bar.style.removeProperty('width');
                     bar.style.height = pxH + 'px';
@@ -1888,26 +1888,24 @@
                     bar.style.boxShadow = '0 0 12px #873276, 0 0 24px rgba(135,50,118,0.6), 0 0 4px #ff4db8';
                 } else {
                     bar.style.removeProperty('height');
-                    bar.style.width = `${safePct * 0.8}%`; // Garde le 80% pour le desktop horizontal
+                    bar.style.width = `${safePct * 0.8}%`; 
                     bar.style.height = '2px';
                     bar.style.left = '10%';
                     bar.style.boxShadow = '0 0 20px #873276';
                 }
             }
-
-            // --- COCKPIT RING ANIMATION ---
-                // Update progress percentage in header badge
-                const headerPct = document.getElementById('txtProgressPct');
-                const targetPct = Math.round(pct);
-                if (headerPct) {
-                    let current = 0;
-                    const step = Math.max(1, Math.ceil(targetPct / 30));
-                    const timer = setInterval(() => {
-                        current = Math.min(current + step, targetPct);
-                        headerPct.innerText = current + '%';
-                        if (current >= targetPct) clearInterval(timer);
-                    }, 30);
-                }
+            
+            // --- HEADER PROGRESS BADGE ---
+            const headerPct = document.getElementById('txtProgressPct');
+            const targetPct = Math.round(safePct);
+            if (headerPct) {
+                let current = 0;
+                const step = Math.max(1, Math.ceil(targetPct / 30));
+                const timer = setInterval(() => {
+                    current = Math.min(current + step, targetPct);
+                    headerPct.innerText = current + '%';
+                    if (current >= targetPct) clearInterval(timer);
+                }, 30);
             }
         }, 200);
 
@@ -2132,9 +2130,11 @@
                 { title: "Guide de l'acheteur (OACIQ)", url: "https://www.oaciq.com/fr/grand-public/acheter/guide-acheteur/" },
                 { title: "Guide du vendeur (OACIQ)", url: "https://www.oaciq.com/fr/grand-public/vendre/guide-vendeur/" }
             ];
-            wrapRes.innerHTML = fixedResources.map(r => `
-                <a href="${r.url}" target="_blank" class="resource-link">${r.title} &#x2192;</a>
-            `).join('');
+            if (wrapRes) {
+                wrapRes.innerHTML = fixedResources.map(r => `
+                    <a href="${r.url}" target="_blank" class="resource-link">${r.title} &#x2192;</a>
+                `).join('');
+            }
         }
     }
 
@@ -2644,17 +2644,38 @@
             });
 
             document.getElementById('btnFinalInstall').addEventListener('click', async () => {
+                console.log("PWA: Final Install Clicked");
+                // Feedback visuel immédiat
+                const btn = document.getElementById('btnFinalInstall');
+                btn.innerHTML = "Traitement en cours...";
+                btn.style.opacity = "0.7";
+
                 if (isIos()) {
-                    showPwaToast("&#x1f34e; Sur iPhone : Touchez l'ic&ocirc;ne <b>Partager</b> en bas de l'&eacute;cran, puis choisissez <b>Sur l'&eacute;cran d'accueil</b>.");
-                    installOverlay.style.background = "rgba(20,8,18,0.9)";
-                } else if (typeof deferredPrompt !== 'undefined' && deferredPrompt) {
-                    deferredPrompt.prompt();
-                    const { outcome } = await deferredPrompt.userChoice;
-                    if (outcome === 'accepted') { installOverlay.remove(); }
-                    deferredPrompt = null;
+                    showPwaToast("🍎 Sur iPhone : Touchez 'Partager' puis 'Sur l'écran d'accueil'.");
+                    installOverlay.style.background = "rgba(20,8,18,0.95)";
+                } else if (window.deferredPrompt) {
+                    try {
+                        window.deferredPrompt.prompt();
+                        const { outcome } = await window.deferredPrompt.userChoice;
+                        console.log("PWA: Install Outcome:", outcome);
+                        if (outcome === 'accepted') { installOverlay.remove(); }
+                    } catch (err) {
+                        console.error("PWA: Install Error:", err);
+                        showPwaToast("💡 Installation manuelle : Utilisez le menu de votre navigateur (3 points ou flèche) et 'Installer l'application'.");
+                    }
+                    window.deferredPrompt = null;
                 } else {
-                    showPwaToast("&#x1f4a1; Bloqu&eacute; ou d&eacute;j&agrave; install&eacute;. Ouvrez les options de votre navigateur pour ajouter &agrave; l'&eacute;cran d'accueil.");
+                    // Fallback si deferredPrompt est déjà passé ou bloqué
+                    showPwaToast("💡 Installation : Allez dans le menu de votre navigateur (les 3 points en haut) et choisissez 'Installer l'application'.");
                 }
+                
+                // Reset bouton si l'overlay n'est pas fermé
+                setTimeout(() => {
+                    if (document.getElementById('btnFinalInstall')) {
+                        btn.innerHTML = "Confirmer l'installation ↓";
+                        btn.style.opacity = "1";
+                    }
+                }, 3000);
             });
         }
     }
