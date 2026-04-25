@@ -1788,7 +1788,11 @@
             const permission = await Notification.requestPermission();
             if (permission === 'granted') {
                 console.log('FCM: Notification permission granted.');
-                const token = await getToken(messaging, { vapidKey: VAPID_KEY });
+                const reg = await navigator.serviceWorker.getRegistration();
+                const token = await getToken(messaging, { 
+                    vapidKey: VAPID_KEY,
+                    serviceWorkerRegistration: reg
+                });
                 if (token) {
                     console.log('FCM: Token generated:', token);
                     localStorage.setItem('fcm_token', token);
@@ -1805,13 +1809,6 @@
     }
 
     window.requestNotificationPermission = requestNotificationPermission;
-
-    // Register Firebase Service Worker explicitly
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/firebase-messaging-sw.js')
-            .then(reg => console.log('FCM: SW Registered', reg))
-            .catch(err => console.log('FCM: SW Registration Failed', err));
-    }
 
     // Listen for foreground messages
     onMessage(messaging, (payload) => {
