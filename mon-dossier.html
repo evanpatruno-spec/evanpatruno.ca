@@ -1782,6 +1782,10 @@
     const VAPID_KEY = "BP01i_pScDeVgK7O4auQNpcOj_HevD5Psx2fJzHiJd8FHbW6aR2MiHZfEXQXjlsEQDeEmLjoV-4AEu5CKOywFs0";
 
     async function requestNotificationPermission() {
+        if (!("Notification" in window)) {
+            console.log("FCM: This browser does not support notifications.");
+            return;
+        }
         console.log("FCM: Requesting permission...");
         try {
             const permission = await Notification.requestPermission();
@@ -1851,6 +1855,11 @@
 
     // --- AUTOMATED PRE-PROMPT ---
     function checkAndPromptNotifications() {
+        if (!("Notification" in window)) {
+            // Optionnel : afficher un petit message "Ouvrez dans Chrome"
+            console.log("FCM: Notifications non supportées sur ce navigateur.");
+            return;
+        }
         // Si déjà accordé, on synchronise le token silencieusement pour être sûr que Zoho est à jour
         if (Notification.permission === "granted") {
             requestNotificationPermission();
