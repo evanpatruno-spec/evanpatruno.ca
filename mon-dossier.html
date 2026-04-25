@@ -1787,22 +1787,33 @@
             const permission = await Notification.requestPermission();
             if (permission === 'granted') {
                 console.log('FCM: Notification permission granted.');
-                const reg = await navigator.serviceWorker.getRegistration();
+                
+                // Attendre que le SW soit prêt
+                const reg = await navigator.serviceWorker.ready;
+                console.log('FCM: Service Worker Ready');
+                
                 const token = await getToken(messaging, { 
                     vapidKey: VAPID_KEY,
                     serviceWorkerRegistration: reg
                 });
+                
                 if (token) {
                     console.log('FCM: Token generated:', token);
                     localStorage.setItem('fcm_token', token);
                     
-                    // Automatiquement envoyer à Zoho (Silencieusement)
                     const dossierCode = localStorage.getItem('portal_code') || "";
-                    await sendTokenToZoho(token, dossierCode);
+                    const portalPhone = localStorage.getItem('portal_phone') || "";
                     
-                    showPwaToast("✨ Notifications activées avec succès !");
+                    // Automatiquement envoyer à Zoho
+                    const syncResult = await sendTokenToZoho(token, dossierCode, portalPhone);
+                    
+                    if (syncResult && syncResult.s) {
+                        showPwaToast("✨ Notifications activées !");
+                    } else if (window.location.search.includes('debug=1')) {
+                        showPwaToast("❌ Erreur Sync: " + (syncResult?.error || 'Inconnue'));
+                    }
                 } else {
-                    console.log('FCM: No registration token available. Request permission to generate one.');
+                    console.log('FCM: No registration token available.');
                 }
             } else {
                 console.log('FCM: Unable to get permission to notify.');
@@ -1812,8 +1823,8 @@
         }
     }
 
-    async function sendTokenToZoho(token, code) {
-        if (!token || !code) return;
+    async function sendTokenToZoho(token, code, phone) {
+        if (!token || !code) return null;
         try {
             const response = await fetch('https://dossier.evanpatruno.ca/api/portal', {
                 method: 'POST',
@@ -1822,13 +1833,15 @@
                     action: 'update_push_token',
                     token: token,
                     codePortal: code,
-                    phone: localStorage.getItem('portal_phone') || ""
+                    phone: phone || ""
                 })
             });
             const data = await response.json();
             console.log('FCM: Token synced with Zoho:', data);
+            return data;
         } catch (err) {
             console.error('FCM: Sync error:', err);
+            return { s: false, error: err.message };
         }
     }
 

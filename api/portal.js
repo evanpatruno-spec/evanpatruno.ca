@@ -163,10 +163,11 @@ export default async function handler(req, res) {
             let targetContactId = contactId; // Par défaut le principal
             
             const matches = (c) => {
-                if (!c) return false;
+                if (!c || !portalPhone) return false;
                 const cMob = (c.Mobile || "").replace(/\D/g, "");
                 const cPh = (c.Phone || "").replace(/\D/g, "");
-                return (portalPhone && (cMob.endsWith(portalPhone) || portalPhone.endsWith(cMob) || cPh.endsWith(portalPhone) || portalPhone.endsWith(cPh)));
+                // Match si l'un est inclus dans l'autre (plus souple)
+                return (cMob.includes(portalPhone) || portalPhone.includes(cMob) || cPh.includes(portalPhone) || portalPhone.includes(cPh));
             };
 
             if (matches(contact1)) targetContactId = contact1.id;
