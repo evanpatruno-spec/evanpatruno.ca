@@ -55,13 +55,19 @@ export default async function handler(req, res) {
         }
 
         if (!dealId) return res.status(404).json({ error: 'Dossier introuvable' });
-
-        // RÉCUPÉRATION DE LA FICHE COMPLÈTE (Pour avoir tous les champs)
-        const fullResp = await fetch(`${apiDomain}/crm/v2/${moduleName}/${dealId}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+        
+        // RÉCUPÉRATION DE LA FICHE COMPLÈTE (Avec demande explicite du contact)
+        const fullResp = await fetch(`${apiDomain}/crm/v2/${moduleName}/${dealId}`, { 
+            method: 'GET', 
+            headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } 
+        });
         const fullData = await fullResp.json();
         const deal = fullData.data ? fullData.data[0] : null;
 
         if (!deal) return res.status(404).json({ error: 'Erreur lors de la lecture du dossier' });
+
+        // On identifie l'ID du contact (Peut s'appeler Contact_Name ou autre selon Zoho)
+        const contactId = deal.Contact_Name?.id || deal.Contact_Id?.id || (deal.Contact_Name ? deal.Contact_Name.id : null);
 
         // --- MAPPING DASHBOARD ---
         const fetchP = async (f) => {
@@ -138,11 +144,13 @@ export default async function handler(req, res) {
 
         // --- ACTION UPDATE PUSH TOKEN ---
         if (action === 'update_push_token' && data.token) {
-            console.log("FCM: Syncing token for:", cleanCode);
-            const contactId = deal.Contact_Name?.id;
-            if (!contactId) return res.status(400).json({ error: 'Aucun contact lié à cette affaire' });
+            console.log("FCM: Syncing token for:", cleanCode, "Contact ID:", contactId);
+            if (!contactId) {
+                console.error("FCM Error: No contact found for deal", dealId);
+                return res.status(400).json({ error: 'Aucun contact lié à cette affaire' });
+            }
 
-            await fetch(`${apiDomain}/crm/v2/Contacts/${contactId}`, {
+            const updateResp = await fetch(`${apiDomain}/crm/v2/Contacts/${contactId}`, {
                 method: 'PUT',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -152,6 +160,8 @@ export default async function handler(req, res) {
                     }]
                 })
             });
+            const updateResult = await updateResp.json();
+            console.log("Zoho Sync Result:", JSON.stringify(updateResult));
 
             return res.status(200).json({ s: true, msg: "Token synchronisé" });
         }
