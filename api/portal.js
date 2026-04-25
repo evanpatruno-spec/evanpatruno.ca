@@ -136,6 +136,26 @@ export default async function handler(req, res) {
             return res.status(200).json({ s: true, msg: "Demande enregistrée" });
         }
 
+        // --- ACTION UPDATE PUSH TOKEN ---
+        if (action === 'update_push_token' && data.token) {
+            console.log("FCM: Syncing token for:", cleanCode);
+            const contactId = deal.Contact_Name?.id;
+            if (!contactId) return res.status(400).json({ error: 'Aucun contact lié à cette affaire' });
+
+            await fetch(`${apiDomain}/crm/v2/Contacts/${contactId}`, {
+                method: 'PUT',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    data: [{
+                        id: contactId,
+                        FCM_Token: data.token 
+                    }]
+                })
+            });
+
+            return res.status(200).json({ s: true, msg: "Token synchronisé" });
+        }
+
         // --- ACTION DEMANDE DE VISITE ---
         if (action === 'requestVisit' && location) {
             console.log("Demande de visite reçue pour:", location);
