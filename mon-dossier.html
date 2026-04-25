@@ -1806,6 +1806,13 @@
 
     window.requestNotificationPermission = requestNotificationPermission;
 
+    // Register Firebase Service Worker explicitly
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/firebase-messaging-sw.js')
+            .then(reg => console.log('FCM: SW Registered', reg))
+            .catch(err => console.log('FCM: SW Registration Failed', err));
+    }
+
     // Listen for foreground messages
     onMessage(messaging, (payload) => {
         console.log('FCM: Message received in foreground: ', payload);
