@@ -1758,6 +1758,27 @@
     </div>
 </div>
 
+<!-- FIREBASE SDKS -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyCPtTKjhtrNoRdED5xp-HuSS11PW8J1D1k",
+        authDomain: "evanpatruno-pwa.firebaseapp.com",
+        projectId: "evanpatruno-pwa",
+        storageBucket: "evanpatruno-pwa.firebasestorage.app",
+        messagingSenderId: "873208257496",
+        appId: "1:873208257496:web:7cf7ff8eb863bc7029b0ad",
+        measurementId: "G-QT65EYGP5Q"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const messaging = getMessaging(app);
+    window.firebaseMessaging = messaging; // Expose for other scripts
+    window.firebaseGetToken = getToken;
+</script>
+
 <script>
     // --- PWA INSTALLATION LOGIC ---
     let deferredPrompt;
@@ -1765,7 +1786,7 @@
         console.log("PWA: beforeinstallprompt event fired");
         e.preventDefault();
         window.deferredPrompt = e;
-        
+
         // Show install banner if present
         const banner = document.getElementById('pwaInstallBanner');
         if (banner && !localStorage.getItem('pwaBannerDismissed')) {
