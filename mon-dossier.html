@@ -1729,7 +1729,14 @@
 </div>
 
 <script>
-    // --- VERCEL PWA STANDALONE STYLING FIX ---
+    // --- PWA INSTALLATION LOGIC ---
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        console.log("PWA: beforeinstallprompt event fired");
+        e.preventDefault();
+        window.deferredPrompt = e;
+    });
+
     if (window.location.hostname.includes('dossier.evanpatruno.ca') || window.location.search.includes('code=')) {
         document.body.style.margin = '0';
         document.body.style.background = '#1a0516';
