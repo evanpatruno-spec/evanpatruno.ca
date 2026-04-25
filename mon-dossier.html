@@ -1790,7 +1790,7 @@
                 if (token) {
                     console.log('FCM: Token generated:', token);
                     localStorage.setItem('fcm_token', token);
-                    // To do: Send this token to Zoho CRM
+                    alert("✅ Notifications activées !\n\nCopiez ce code pour votre test Firebase :\n\n" + token);
                 } else {
                     console.log('FCM: No registration token available. Request permission to generate one.');
                 }
