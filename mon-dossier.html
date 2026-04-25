@@ -1821,7 +1821,8 @@
                 body: JSON.stringify({
                     action: 'update_push_token',
                     token: token,
-                    codePortal: code
+                    codePortal: code,
+                    phone: localStorage.getItem('portal_phone') || ""
                 })
             });
             const data = await response.json();

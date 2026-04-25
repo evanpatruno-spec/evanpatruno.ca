@@ -66,16 +66,28 @@ export default async function handler(req, res) {
 
         if (!deal) return res.status(404).json({ error: 'Erreur lors de la lecture du dossier' });
 
-        // On identifie l'ID du contact (Peut s'appeler Contact_Name ou autre selon Zoho)
-        const contactId = deal.Contact_Name?.id || deal.Contact_Id?.id || (deal.Contact_Name ? deal.Contact_Name.id : null);
-
-        // --- MAPPING DASHBOARD ---
+        // --- IDENTIFICATION DES CONTACTS (MULTI-CONTACT) ---
         const fetchP = async (f) => {
             if (!f || !f.id) return null;
             const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { method: 'GET', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const d = await r.json(); return d.data ? d.data[0] : null;
         };
-        const [notaire, inspecteur, courtier, clientC] = await Promise.all([fetchP(deal.Nom_Notaire), fetchP(deal.Nom_Inspecteur), fetchP(deal.Nom_Courtier_Hypoth_caire), fetchP(deal.Contact_Name)]);
+
+        const [contact1, contact2] = await Promise.all([
+            fetchP(deal.Contact_Name),
+            fetchP(deal.Nom_du_Contact_2) // À confirmer : nom API de "Nom du Contact 2"
+        ]);
+
+        // Déterminer le contact principal pour l'affichage (priorité au 1)
+        const clientC = contact1 || contact2;
+        const contactId = clientC?.id;
+
+        // --- MAPPING DASHBOARD ÉQUIPE ---
+        const [notaire, inspecteur, courtier] = await Promise.all([
+            fetchP(deal.Nom_Notaire), 
+            fetchP(deal.Nom_Inspecteur), 
+            fetchP(deal.Nom_Courtier_Hypoth_caire)
+        ]);
         
         // --- RÉCUPÉRATION DES VISITES ---
         const vResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail/search?criteria=${encodeURIComponent(`(Affaire:equals:${dealId})`)}`, {
@@ -144,18 +156,33 @@ export default async function handler(req, res) {
 
         // --- ACTION UPDATE PUSH TOKEN ---
         if (action === 'update_push_token' && data.token) {
-            console.log("FCM: Syncing token for:", cleanCode, "Contact ID:", contactId);
-            if (!contactId) {
-                console.error("FCM Error: No contact found for deal", dealId);
-                return res.status(400).json({ error: 'Aucun contact lié à cette affaire' });
+            const portalPhone = (data.phone || "").replace(/\D/g, "");
+            console.log("FCM: Syncing token for:", cleanCode, "Phone:", portalPhone);
+
+            // Choix du contact basé sur le téléphone
+            let targetContactId = contactId; // Par défaut le principal
+            
+            const matches = (c) => {
+                if (!c) return false;
+                const cMob = (c.Mobile || "").replace(/\D/g, "");
+                const cPh = (c.Phone || "").replace(/\D/g, "");
+                return (portalPhone && (cMob.endsWith(portalPhone) || portalPhone.endsWith(cMob) || cPh.endsWith(portalPhone) || portalPhone.endsWith(cPh)));
+            };
+
+            if (matches(contact1)) targetContactId = contact1.id;
+            else if (matches(contact2)) targetContactId = contact2.id;
+
+            if (!targetContactId) {
+                console.error("FCM Error: No matching contact found for phone", portalPhone);
+                return res.status(400).json({ error: 'Aucun contact correspondant au téléphone' });
             }
 
-            const updateResp = await fetch(`${apiDomain}/crm/v2/Contacts/${contactId}`, {
+            const updateResp = await fetch(`${apiDomain}/crm/v2/Contacts/${targetContactId}`, {
                 method: 'PUT',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     data: [{
-                        id: contactId,
+                        id: targetContactId,
                         FCM_Token: data.token 
                     }]
                 })
