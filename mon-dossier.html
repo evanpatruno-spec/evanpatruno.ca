@@ -1418,8 +1418,22 @@
         <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:var(--dash-primary); border-radius:30px; filter:blur(40px); opacity:0.3; animation: glowPulse 3s infinite ease-in-out;"></div>
         <img src="/pwa-icon-512.png" style="position:relative; width:100%; height:100%; border-radius:30px; box-shadow:0 20px 50px rgba(0,0,0,0.5); animation: pulseLogo 3s infinite ease-in-out;">
     </div>
-    <div style="color:rgba(255,255,255,0.4); font-family:'Outfit'; font-size:0.75rem; letter-spacing:4px; font-weight:700; text-transform:uppercase; animation: fadeText 2s infinite ease-in-out;">Chargement s&eacute;curis&eacute;</div>
+    <div id="splashStatus" style="color:rgba(255,255,255,0.4); font-family:'Outfit'; font-size:0.75rem; letter-spacing:4px; font-weight:700; text-transform:uppercase; animation: fadeText 2s infinite ease-in-out;">Chargement s&eacute;curis&eacute;</div>
+    
+    <!-- Bouton de secours si ça bloque -->
+    <button id="btnSplashRescue" onclick="hideSplashForce()" style="display:none; margin-top:40px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:10px 20px; border-radius:50px; font-family:'Outfit'; font-size:0.7rem; letter-spacing:1px; cursor:pointer; text-transform:uppercase;">Accéder manuellement</button>
 </div>
+
+<script>
+    function hideSplashForce() {
+        const s = document.getElementById('portalSplash');
+        if (s) {
+            s.style.opacity = '0';
+            setTimeout(() => { s.style.visibility = 'hidden'; s.style.display = 'none'; }, 800);
+        }
+    }
+    window.hideSplashForce = hideSplashForce;
+</script>
 
 <style>
     @keyframes glowPulse {
@@ -2400,8 +2414,7 @@
         showPushPrePrompt();
 
         // Hide splash screen after render
-        const splash = document.getElementById('portalSplash');
-        if (splash) splash.classList.add('hidden');
+        hideSplashForce();
     }
 
     function setRating(val) {
@@ -2759,8 +2772,7 @@
             errBox.innerHTML = '&#x26a0;&#xfe0f; ' + (error.message || 'Code ou num&eacute;ro invalide.');
         } finally {
             // Sécurité : toujours cacher le splash
-            const splash = document.getElementById('portalSplash');
-            if (splash) splash.classList.add('hidden');
+            hideSplashForce();
 
             if (btn) {
                 btn.innerHTML = "Ouvrir mon dossier";
@@ -2977,14 +2989,19 @@
     // Lancement de l'auto-login au démarrage
     window.addEventListener('DOMContentLoaded', () => {
         checkAutoLogin();
-        // Sécurité ultime : cacher après 8s max
+        
+        // Sécurité 1 : Afficher le bouton de secours après 4s
         setTimeout(() => {
-            const splash = document.getElementById('portalSplash');
-            if (splash && !splash.classList.contains('hidden')) {
-                splash.classList.add('hidden');
-                epLog("Splash caché par sécurité (Timeout 8s)");
+            const btn = document.getElementById('btnSplashRescue');
+            const status = document.getElementById('splashStatus');
+            if (btn && document.getElementById('portalSplash').style.visibility !== 'hidden') {
+                btn.style.display = 'block';
+                if (status) status.innerText = "Connexion ralentie...";
             }
-        }, 8000);
+        }, 4000);
+
+        // Sécurité 2 : Cacher de force après 10s
+        setTimeout(hideSplashForce, 10000);
     });
 </script>
 </body>
