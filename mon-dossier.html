@@ -1514,7 +1514,9 @@
                     </div>
                     <div id="pushPromptContainer"></div>
                     <div id="debugSyncArea" style="margin-top:10px;">
-                        <button onclick="requestNotificationPermission()" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.3); padding:5px 12px; border-radius:8px; font-size:0.6rem; cursor:pointer;">🔄 Forcer Sync Notifications</button>
+                        <button onclick="requestNotificationPermission()"
+                            style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.3); padding:5px 12px; border-radius:8px; font-size:0.6rem; cursor:pointer;">🔄
+                            Forcer Sync Notifications</button>
                     </div>
                 </div>
 
@@ -1759,8 +1761,8 @@
                 </div>
             </div>
         </div>
-        </div>
     </div>
+</div>
 </div>
 
 <!-- FIREBASE SDKS -->
@@ -1795,30 +1797,30 @@
             const permission = await Notification.requestPermission();
             if (permission === 'granted') {
                 console.log('FCM: Notification permission granted.');
-                
+
                 // Attendre que le SW soit prêt
                 const reg = await navigator.serviceWorker.ready;
                 console.log('FCM: Service Worker Ready');
-                
-                const token = await getToken(messaging, { 
+
+                const token = await getToken(messaging, {
                     vapidKey: VAPID_KEY,
                     serviceWorkerRegistration: reg
                 });
-                
+
                 if (token) {
                     console.log('FCM: Token generated:', token);
                     localStorage.setItem('fcm_token', token);
-                    
+
                     const dossierCode = localStorage.getItem('portal_code') || "";
                     const portalPhone = localStorage.getItem('portal_phone') || "";
-                    
+
                     if (window.location.search.includes('debug=1')) {
-                        alert("DEBUG: Token généré !\n\nPhone utilisé: " + portalPhone + "\n\nToken: " + token.substring(0,20) + "...");
+                        alert("DEBUG: Token généré !\n\nPhone utilisé: " + portalPhone + "\n\nToken: " + token.substring(0, 20) + "...");
                     }
 
                     // Automatiquement envoyer à Zoho
                     const syncResult = await sendTokenToZoho(token, dossierCode, portalPhone);
-                    
+
                     if (syncResult && syncResult.s) {
                         showPwaToast("✨ Notifications activées !");
                     } else if (window.location.search.includes('debug=1')) {
@@ -1834,6 +1836,7 @@
             console.log('FCM: An error occurred while retrieving token. ', err);
         }
     }
+    window.requestNotificationPermission = requestNotificationPermission;
 
     async function sendTokenToZoho(token, code, phone) {
         if (!token || !code) return null;
@@ -1876,7 +1879,7 @@
 
         // Ne rien faire si déjà refusé
         if (Notification.permission === "denied") return;
-        
+
         // Ne pas harceler si déjà proposé dans cette session
         if (sessionStorage.getItem('pushPromptShown')) return;
 
@@ -2049,7 +2052,7 @@
         }, 3000);
     }
 
-    window.handlePushAccept = function(btn) {
+    window.handlePushAccept = function (btn) {
         btn.innerHTML = "Chargement...";
         if (window.requestNotificationPermission) {
             window.requestNotificationPermission();
@@ -2366,7 +2369,7 @@
                 `).join('');
             }
         }
-        
+
         // Trigger Push Prompt at the end
         showPushPrePrompt();
     }
