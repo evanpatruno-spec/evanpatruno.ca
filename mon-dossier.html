@@ -1208,8 +1208,10 @@
             text-align: center;
         }
 
-        /* FLOATING NAVIGATION DOCK */
-        .portal-nav {
+    }
+
+    /* FLOATING NAVIGATION DOCK */
+    .portal-nav {
             position: fixed;
             bottom: 25px;
             left: 50%;
@@ -1297,7 +1299,73 @@
                 font-size: 0.5rem;
             }
         }
-    }
+
+        /* DYNAMIC SUMMARY DASHBOARD */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .summary-card:hover {
+            background: rgba(135, 50, 118, 0.08);
+            border-color: rgba(135, 50, 118, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .summary-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(135, 50, 118, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 15px rgba(135, 50, 118, 0.2);
+        }
+
+        .summary-content {
+            overflow: hidden;
+        }
+
+        .summary-label {
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--dash-accent);
+            margin-bottom: 2px;
+        }
+
+        .summary-value {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 480px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 </style>
 
 
@@ -1502,36 +1570,29 @@
             </div>
         </div>
 
-        <!-- SMART CONCIERGERIE MLS -->
-        <div class="section-wrapper" id="secConciergeMLS"
-            style="border: 2px solid #00f2ff30; box-shadow: 0 0 20px rgba(0,242,255,0.1); margin-top: 30px;">
-            <div style="padding:25px;">
-                <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
-                    <div style="font-size:2rem;">⚡</div>
-                    <div>
-                        <h3 style="margin:0; color:#fff; font-family:'Outfit';">Smart Concierge</h3>
-                        <p style="margin:0; font-size:0.85rem; opacity:0.7;">Documentation confidentielle
-                            instantan&eacute;e</p>
-                    </div>
-                </div>
+        </div>
 
-                <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                    <div style="flex:1; min-width:200px; position:relative;">
-                        <input type="text" id="inpMLS" placeholder="Num&eacute;ro MLS (ex: 12345678)"
-                            style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px 18px; border-radius:12px; color:#fff; font-family:'Inter'; outline:none; transition:0.3s;"
-                            onfocus="this.style.borderColor='var(--dash-accent)'"
-                            onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
-                    </div>
-                    <button onclick="requestMLSDoc()" id="btnMLS"
-                        style="background:var(--dash-grad); color:#fff; border:none; padding:0 30px; border-radius:12px; font-weight:800; cursor:pointer; transition:0.3s; height:48px;">
-                        Demander document
-                    </button>
+        <!-- DYNAMIC SUMMARY DASHBOARD -->
+        <div class="summary-grid">
+            <div class="summary-card" onclick="navTo('secPrequal', this)">
+                <div class="summary-icon">&#x2705;</div>
+                <div class="summary-content">
+                    <div class="summary-label">Prochaine &Eacute;tape</div>
+                    <div class="summary-value" id="dashNextStep">V&eacute;rification...</div>
                 </div>
-
-                <div id="statusMLS"
-                    style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
-                    <div class="loader-mini"></div>
-                    <span id="txtStatusMLS" style="color:rgba(255,255,255,0.8);">Recherche sur Matrix...</span>
+            </div>
+            <div class="summary-card" onclick="navTo('secVisites', this)">
+                <div class="summary-icon">&#x1f4c5;</div>
+                <div class="summary-content">
+                    <div class="summary-label">Rendez-vous</div>
+                    <div class="summary-value" id="dashNextVisit">Aucun planifi&eacute;</div>
+                </div>
+            </div>
+            <div class="summary-card" onclick="navTo('secConciergeMLS', this)">
+                <div class="summary-icon">⚡</div>
+                <div class="summary-content">
+                    <div class="summary-label">Service Rapide</div>
+                    <div class="summary-value">Demander un document</div>
                 </div>
             </div>
         </div>
@@ -1678,6 +1739,34 @@
                 <div class="partner-grid" id="wrapPartners"></div>
             </div>
         </div>
+
+        <!-- SMART CONCIERGERIE MLS (MOVED DOWN) -->
+        <div class="section-wrapper collapsed" id="secConciergeMLS"
+            style="border: 1px solid #00f2ff30; box-shadow: 0 0 15px rgba(0,242,255,0.05);">
+            <div class="section-header" onclick="toggleSection('secConciergeMLS')">
+                <h3>⚡ Smart Concierge (Matrix)</h3>
+                <div class="section-chevron">&#x25bc;</div>
+            </div>
+            <div class="section-content">
+                <div style="padding:10px 0;">
+                    <p style="margin:0 0 15px 0; font-size:0.85rem; opacity:0.7;">Demandez la documentation confidentielle pour n'importe quel numéro MLS.</p>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <div style="flex:1; min-width:200px; position:relative;">
+                            <input type="text" id="inpMLS" placeholder="Num&eacute;ro MLS (ex: 12345678)"
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px 18px; border-radius:12px; color:#fff; font-family:'Inter'; outline:none;">
+                        </div>
+                        <button onclick="requestMLSDoc()" id="btnMLS"
+                            style="background:var(--dash-grad); color:#fff; border:none; padding:0 30px; border-radius:12px; font-weight:800; cursor:pointer; transition:0.3s; height:48px;">
+                            Demander
+                        </button>
+                    </div>
+                    <div id="statusMLS" style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
+                        <div class="loader-mini"></div>
+                        <span id="txtStatusMLS" style="color:rgba(255,255,255,0.8);">Envoi...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -1785,8 +1874,19 @@
         if (!data || !document.getElementById('txtWelcome')) return; // Safety first
 
         showNav(); // Show floating dock
-
         document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName || 'Client'}.`;
+
+        // DASHBOARD SUMMARY LOGIC
+        const nextTask = (data.checklist || []).find(c => !c.done);
+        document.getElementById('dashNextStep').innerText = nextTask ? nextTask.name : "Tout est compl&eacute;t&eacute; !";
+        
+        const upcomingVisit = (data.visites || []).find(v => v.statut.toLowerCase().includes('confirm'));
+        if (upcomingVisit) {
+            document.getElementById('dashNextVisit').innerText = `${upcomingVisit.date} - ${upcomingVisit.heure}`;
+        } else {
+            document.getElementById('dashNextVisit').innerText = "Aucun planifi&eacute;";
+        }
+
         document.getElementById('txtCodeRef').innerText = `Dossier #${data.code}`;
         document.getElementById('txtPropName').innerText = data.property;
         document.getElementById('txtPropCity').innerText = data.city;
