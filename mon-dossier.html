@@ -1512,8 +1512,11 @@
                         --</h1>
                     <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--
                     </div>
-                    <!-- BOUTON TEST PUSH TEMPORAIRE -->
-                    <button onclick="requestNotificationPermission()" style="margin-top:10px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:5px 10px; border-radius:5px; font-size:0.6rem; cursor:pointer;">🔑 Voir mon code de test Push</button>
+                    <!-- BOUTONS DEBUG PUSH -->
+                    <div style="display:flex; gap:10px; margin-top:10px;">
+                        <button onclick="requestNotificationPermission()" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:5px 10px; border-radius:5px; font-size:0.6rem; cursor:pointer;">🔑 Voir Token</button>
+                        <button onclick="testLocalNotification()" style="background:rgba(0,242,255,0.1); border:1px solid rgba(0,242,255,0.3); color:#00f2ff; padding:5px 10px; border-radius:5px; font-size:0.6rem; cursor:pointer;">🔔 Test Local</button>
+                    </div>
                 </div>
 
                 <div id="wrapCountdown" style="display: none;">
@@ -1808,7 +1811,24 @@
         }
     }
 
-    window.requestNotificationPermission = requestNotificationPermission;
+    async function testLocalNotification() {
+        if (!("Notification" in window)) {
+            alert("Ce navigateur ne supporte pas les notifications.");
+            return;
+        }
+        if (Notification.permission === "granted") {
+            const reg = await navigator.serviceWorker.ready;
+            reg.showNotification("Test Local Réussi ! 🚀", {
+                body: "Le système de notifications est actif. Si vous recevez ceci, votre téléphone est prêt.",
+                icon: "/pwa-icon-192.png",
+                vibrate: [200, 100, 200]
+            });
+        } else {
+            alert("La permission n'a pas été accordée. Cliquez sur 'Voir Token' pour la demander.");
+        }
+    }
+
+    window.testLocalNotification = testLocalNotification;
 
     // Listen for foreground messages
     onMessage(messaging, (payload) => {
@@ -2670,7 +2690,7 @@
                 if (btn) btn.style.display = 'none';
             }
 
-            navigator.serviceWorker.register('/sw-v5.js')
+            navigator.serviceWorker.register('/firebase-messaging-sw.js')
                 .then(reg => console.log('SW Registered'))
                 .catch(err => console.log('SW Registration Failed', err));
         });
