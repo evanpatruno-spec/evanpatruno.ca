@@ -1388,28 +1388,24 @@
     <!-- NAVIGATION DOCK -->
     <nav class="portal-nav" id="portalNav">
         <div class="nav-item active" onclick="navTo('secCockpit', this)">
-            <div class="nav-icon">&#x1f3e0;</div>
-            <span>Accueil</span>
+            <div class="nav-icon">&#x1f680;</div>
+            <span>Cockpit</span>
         </div>
         <div class="nav-item" onclick="navTo('secPrequal', this)">
-            <div class="nav-icon">&#x1f4cb;</div>
-            <span>Dossier</span>
+            <div class="nav-icon">&#x2705;</div>
+            <span>Checklist</span>
         </div>
         <div class="nav-item" onclick="navTo('secVisites', this)">
             <div class="nav-icon">&#x1f4c5;</div>
             <span>Visites</span>
         </div>
         <div class="nav-item" onclick="navTo('secConciergeMLS', this)">
-            <div class="nav-icon">&#x1f4da;</div>
-            <span>Docs</span>
+            <div class="nav-icon">⚡</div>
+            <span>Matrix</span>
         </div>
-        <div class="nav-item" onclick="navTo('secConcierge', this)">
-            <div class="nav-icon">&#x1f525;</div>
-            <span>Outils</span>
-        </div>
-        <div class="nav-item" onclick="navTo('secTeam', this)">
-            <div class="nav-icon">&#x1f4de;</div>
-            <span>Contact</span>
+        <div class="nav-item" onclick="handleLogout()">
+            <div class="nav-icon">&#x1f6aa;</div>
+            <span>Quitter</span>
         </div>
     </nav>
 
@@ -2717,6 +2713,33 @@
         }
     });
 
+    function handleLogout() {
+        if (!confirm("Voulez-vous vous déconnecter ?")) return;
+        localStorage.removeItem('portal_code');
+        localStorage.removeItem('portal_phone');
+        localStorage.removeItem('portal_deal_id');
+        location.reload();
+    }
+    window.handleLogout = handleLogout;
+
+    // --- AUTO-LOGIN LOGIC ---
+    async function checkAutoLogin() {
+        const savedCode = localStorage.getItem('portal_code');
+        const savedPhone = localStorage.getItem('portal_phone');
+        
+        if (savedCode && savedPhone) {
+            epLog("Tentative de connexion automatique...");
+            // On remplit les champs visuellement (optionnel mais propre)
+            const inpCode = document.getElementById('inpPortalCode');
+            const inpPhone = document.getElementById('inpPortalPhone');
+            if (inpCode) inpCode.value = savedCode;
+            if (inpPhone) inpPhone.value = savedPhone;
+            
+            // On déclenche la connexion (sans event e)
+            handlePortalLogin({ preventDefault: () => {} });
+        }
+    }
+
     // --- HELPERS (DECLARED FIRST) ---
     const isIos = () => {
         const userAgent = window.navigator.userAgent.toLowerCase();
@@ -2879,6 +2902,9 @@
             });
         }
     }
+
+    // Lancement de l'auto-login au démarrage
+    window.addEventListener('DOMContentLoaded', checkAutoLogin);
 </script>
 </body>
 </html>
