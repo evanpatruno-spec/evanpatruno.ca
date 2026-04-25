@@ -1371,6 +1371,51 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* FLOATING CONTACT BUTTON */
+        .fab-container {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            z-index: 9998;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+            transform: translateX(100px);
+            opacity: 0;
+        }
+
+        .fab-container.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .fab-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .fab-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .fab-container {
+                bottom: 110px;
+                right: 15px;
+            }
+        }
+    }
 </style>
 
 
@@ -1381,7 +1426,7 @@
     <nav class="portal-nav" id="portalNav">
         <div class="nav-item active" onclick="navTo('secCockpit', this)">
             <div class="nav-icon">&#x1f3e0;</div>
-            <span>Cockpit</span>
+            <span>Accueil</span>
         </div>
         <div class="nav-item" onclick="navTo('secPrequal', this)">
             <div class="nav-icon">&#x1f4cb;</div>
@@ -1485,21 +1530,27 @@
     <div class="portal-container" id="portalDash">
         <header id="secCockpit" style="margin-bottom: 20px; position: relative;">
 
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <div style="width: 6px; height: 6px; background: var(--dash-accent); border-radius: 50%; box-shadow: 0 0 8px var(--dash-accent-glow);"></div>
-                        <span style="color: var(--dash-accent); font-weight: 900; font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase;">Portail Priv&eacute;</span>
-                        <span style="opacity: 0.3; color: #fff;">|</span>
-                        <span id="txtCodeRef" style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700;">Dossier #--</span>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div id="imgThumbWrap" style="width: 60px; height: 60px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); flex-shrink: 0;">
+                        <img id="imgProp" src="" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">--</h1>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                            <span style="color: var(--dash-accent); font-weight: 900; font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase;">Accueil</span>
+                            <span style="opacity: 0.3; color: #fff;">|</span>
+                            <span id="txtCodeRef" style="color: rgba(255,255,255,0.5); font-size: 0.7rem; font-weight: 700;">#--</span>
+                            <span id="badgeStage" style="background: rgba(46, 204, 113, 0.15); color: #2ecc71; padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase;">--</span>
+                        </div>
+                        <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 900; margin: 0; color: #fff; line-height: 1.1;">--</h1>
+                        <div id="txtPropName" style="font-size: 0.85rem; opacity: 0.6; font-weight: 600;">--</div>
+                    </div>
                 </div>
                 
                 <div id="wrapCountdown" style="display: none;">
-                    <div class="countdown-widget" style="padding: 8px 15px; margin: 0; gap: 10px; border-radius: 12px;">
-                        <div class="countdown-num" id="valCountdown" style="font-size: 1.2rem;">--</div>
-                        <div class="countdown-txt" style="font-size: 0.55rem;">Jours avant<br>Signature</div>
+                    <div class="countdown-widget" style="padding: 10px 20px; margin: 0; gap: 12px; border-radius: 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="countdown-num" id="valCountdown" style="font-size: 1.4rem; color: var(--dash-accent);">--</div>
+                        <div class="countdown-txt" style="font-size: 0.55rem; line-height: 1.2;">Jours avant<br>Signature</div>
                     </div>
                 </div>
             </div>
@@ -1572,7 +1623,7 @@
             </div>
         </div>
 
-        <!-- MILESTONE COCKPIT -->
+        <!-- MILESTONE ACCUEIL -->
         <div class="milestone-grid" id="wrapMilestones"></div>
 
         <!-- FINANCEMENT SECTION (Checklist) - MOVED UP -->
@@ -1684,6 +1735,23 @@
                             style="color:#fff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:35px 0 15px;">
                             &#x1f4da; Ressources Utiles</h4>
                         <div id="wrapResources"></div>
+
+                        <!-- CALCULATEUR TAXE DE BIENVENUE -->
+                        <div style="margin-top: 35px; background: rgba(135, 50, 118, 0.1); border: 1px solid rgba(135, 50, 118, 0.3); border-radius: 20px; padding: 20px;">
+                            <h4 style="color:#fff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:0 0 15px 0;">&#x1f4b5; Taxe de Bienvenue</h4>
+                            <p style="font-size:0.75rem; opacity:0.7; margin-bottom:15px;">Estimez vos frais de mutation (Hors Montr&eacute;al).</p>
+                            <input type="number" id="inpTaxPrice" placeholder="Prix d'achat ($)" style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; margin-bottom:15px; outline:none;" oninput="updateTaxCalc()">
+                            <div style="background:rgba(0,0,0,0.2); padding:15px; border-radius:10px;">
+                                <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:5px;">
+                                    <span>Taxe estim&eacute;e :</span>
+                                    <span style="color:var(--dash-accent); font-weight:800;" id="valTaxTotal">$ 0</span>
+                                </div>
+                                <div style="display:flex; justify-content:space-between; font-size:0.75rem; opacity:0.6;">
+                                    <span>Frais de Notaire (est.) :</span>
+                                    <span id="valNotaryTotal">$ 1 500</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <h4
@@ -1742,6 +1810,12 @@
                 </div>
             </div>
         </div>
+        <!-- FLOATING CONTACT BUTTON -->
+        <div class="fab-container" id="fabContact">
+            <a href="tel:514-567-3249" class="fab-btn" style="background:#3498db;" title="Appeler">&#x1f4de;</a>
+            <a href="sms:514-567-3249" class="fab-btn" style="background:#2ecc71;" title="Texto">&#x1f4da;</a>
+            <a href="https://wa.me/15145673249" class="fab-btn" style="background:#25d366;" title="WhatsApp">&#x1f4ac;</a>
+        </div>
     </div>
 </div>
 
@@ -1762,8 +1836,8 @@
     // --- REAL MAPPING (Ready for Zoho) ---
     const MOCK_DATA = {
         firstName: "Evan",
-        code: "282 rue Bouthillier Nord",
-        property: "Achat - Evan Patruno",
+        code: "282-BOU",
+        property: "282 rue Bouthillier Nord",
         city: "Saint-Jean-sur-Richelieu",
         stage: "Analyse des offres",
         image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
@@ -1866,10 +1940,10 @@
             document.getElementById('dashNextVisit').innerText = "Aucun planifi&eacute;";
         }
 
-        document.getElementById('txtCodeRef').innerText = `Dossier #${data.code}`;
-        document.getElementById('txtPropName').innerText = data.property;
-        document.getElementById('txtPropCity').innerText = data.city;
-        document.getElementById('badgeStage').innerText = data.stage;
+        document.getElementById('txtCodeRef').innerText = `#${data.code}`;
+        document.getElementById('txtPropName').innerText = `${data.property} - ${data.city}`;
+        document.getElementById('imgProp').src = data.image || "";
+        document.getElementById('badgeStage').innerText = stageLabel;
 
         // Timeline
         const wrapT = document.getElementById('wrapTimeline');
@@ -2384,6 +2458,28 @@
         document.getElementById(id).classList.toggle('collapsed');
     }
 
+    function updateTaxCalc() {
+        const price = parseFloat(document.getElementById('inpTaxPrice').value) || 0;
+        let tax = 0;
+        
+        // Quebec Standard Tiers (2024 approximation)
+        if (price > 0) {
+            // First 58,900 @ 0.5%
+            tax += Math.min(price, 58900) * 0.005;
+            // 58,900 to 294,600 @ 1.0%
+            if (price > 58900) {
+                tax += (Math.min(price, 294600) - 58900) * 0.01;
+            }
+            // Over 294,600 @ 1.5%
+            if (price > 294600) {
+                tax += (price - 294600) * 0.015;
+            }
+        }
+        
+        document.getElementById('valTaxTotal').innerText = `$ ${Math.round(tax).toLocaleString('fr-CA')}`;
+        document.getElementById('valNotaryTotal').innerText = `$ ${(price > 0 ? 1500 : 0).toLocaleString('fr-CA')}`;
+    }
+
     // --- NAVIGATION DOCK LOGIC ---
     let isNavigating = false;
     function navTo(id, el) {
@@ -2419,6 +2515,8 @@
     function showNav() {
         const nav = document.getElementById('portalNav');
         if (nav) nav.classList.add('visible');
+        const fab = document.getElementById('fabContact');
+        if (fab) fab.classList.add('visible');
     }
 
     // Scroll Spy (Auto-highlight active section)
