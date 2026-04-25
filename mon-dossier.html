@@ -1777,6 +1777,40 @@
     const messaging = getMessaging(app);
     window.firebaseMessaging = messaging; // Expose for other scripts
     window.firebaseGetToken = getToken;
+
+    const VAPID_KEY = "BP01i_pScDeVgK7O4auQNpcOj_HevD5Psx2fJzHiJd8FHbW6aR2MiHZfEXQXjlsEQDeEmLjoV-4AEu5CKOywFs0";
+
+    async function requestNotificationPermission() {
+        console.log("FCM: Requesting permission...");
+        try {
+            const permission = await Notification.requestPermission();
+            if (permission === 'granted') {
+                console.log('FCM: Notification permission granted.');
+                const token = await getToken(messaging, { vapidKey: VAPID_KEY });
+                if (token) {
+                    console.log('FCM: Token generated:', token);
+                    localStorage.setItem('fcm_token', token);
+                    // To do: Send this token to Zoho CRM
+                } else {
+                    console.log('FCM: No registration token available. Request permission to generate one.');
+                }
+            } else {
+                console.log('FCM: Unable to get permission to notify.');
+            }
+        } catch (err) {
+            console.log('FCM: An error occurred while retrieving token. ', err);
+        }
+    }
+
+    window.requestNotificationPermission = requestNotificationPermission;
+
+    // Listen for foreground messages
+    onMessage(messaging, (payload) => {
+        console.log('FCM: Message received in foreground: ', payload);
+        if (typeof showPwaToast === 'function') {
+            showPwaToast(`🔔 <b>${payload.notification.title}</b><br>${payload.notification.body}`);
+        }
+    });
 </script>
 
 <script>
@@ -1892,6 +1926,36 @@
         if (el) el.style[prop] = val;
     }
 
+    function showPushPrePrompt() {
+        // Ne pas demander si déjà accordé ou déjà refusé cette session
+        if (Notification.permission !== 'default' || localStorage.getItem('push_prompt_ignored')) return;
+
+        setTimeout(() => {
+            if (typeof showPwaToast === 'function') {
+                const msg = `
+                    <div style="text-align:left;">
+                        <div style="font-weight:900; margin-bottom:5px;">🔔 Restez inform&eacute; !</div>
+                        <div style="font-size:0.75rem; opacity:0.8; margin-bottom:10px;">Recevez une alerte dès qu'une visite est confirm&eacute;e ou qu'une &eacute;tape avance.</div>
+                        <div style="display:flex; gap:10px;">
+                            <button onclick="handlePushAccept(this)" style="background:#fff; color:#1a0516; border:none; padding:5px 12px; border-radius:5px; font-size:0.7rem; font-weight:800; cursor:pointer;">Activer</button>
+                            <button onclick="this.parentElement.parentElement.parentElement.remove(); localStorage.setItem('push_prompt_ignored', 'true')" style="background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.3); padding:5px 12px; border-radius:5px; font-size:0.7rem; cursor:pointer;">Plus tard</button>
+                        </div>
+                    </div>
+                `;
+                showPwaToast(msg, 15000); // Garder 15s pour laisser le temps de lire
+            }
+        }, 3000);
+    }
+
+    window.handlePushAccept = function(btn) {
+        btn.innerHTML = "Chargement...";
+        if (window.requestNotificationPermission) {
+            window.requestNotificationPermission();
+        }
+        btn.parentElement.parentElement.parentElement.remove();
+    };
+
+    // --- RENDER PORTAL MAIN ---
     function renderPortal(data) {
         if (!data || !document.getElementById('txtWelcome')) return; // Safety first
 
@@ -2200,6 +2264,9 @@
                 `).join('');
             }
         }
+        
+        // Trigger Push Prompt at the end
+        showPushPrePrompt();
     }
 
     function setRating(val) {
