@@ -1413,6 +1413,23 @@
     }
 </style>
 
+<div id="portalSplash" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#1a0516; z-index:100000; display:flex; flex-direction:column; align-items:center; justify-content:center; transition: opacity 0.6s ease, visibility 0.6s;">
+    <img src="/pwa-icon-512.png" style="width:120px; height:120px; border-radius:30px; margin-bottom:20px; box-shadow:0 0 50px rgba(135,50,118,0.4); animation: pulseLogo 2s infinite ease-in-out;">
+    <div style="color:rgba(255,255,255,0.4); font-family:'Outfit'; font-size:0.8rem; letter-spacing:3px; font-weight:700; text-transform:uppercase;">Chargement</div>
+</div>
+
+<style>
+    @keyframes pulseLogo {
+        0% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 20px rgba(135,50,118,0.2); }
+        50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 60px rgba(135,50,118,0.5); }
+        100% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 20px rgba(135,50,118,0.2); }
+    }
+    #portalSplash.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+</script>
+
 <div class="portal-main-wrapper">
     <div class="portal-aura"></div>
 
@@ -2370,6 +2387,10 @@
 
         // Trigger Push Prompt at the end
         showPushPrePrompt();
+
+        // Hide splash screen after render
+        const splash = document.getElementById('portalSplash');
+        if (splash) splash.classList.add('hidden');
     }
 
     function setRating(val) {
@@ -2768,6 +2789,10 @@
             
             // On déclenche la connexion (sans event e)
             handlePortalLogin({ preventDefault: () => {} });
+        } else {
+            // No saved session: hide splash to show login
+            const splash = document.getElementById('portalSplash');
+            if (splash) splash.classList.add('hidden');
         }
     }
 
