@@ -1071,7 +1071,8 @@
         }
 
         .portal-container {
-            padding: 30px 15px 100px; /* Reduced top padding */
+            padding: 30px 15px 100px;
+            /* Reduced top padding */
         }
 
         .property-card-premium {
@@ -1080,11 +1081,13 @@
         }
 
         .summary-grid {
-            margin-bottom: 20px; /* Reduced from 30 */
+            margin-bottom: 20px;
+            /* Reduced from 30 */
         }
 
         .section-wrapper {
-            margin-bottom: 15px; /* Tighter sections */
+            margin-bottom: 15px;
+            /* Tighter sections */
         }
 
         .section-header {
@@ -1217,161 +1220,163 @@
 
     /* FLOATING NAVIGATION DOCK */
     .portal-nav {
-            position: fixed;
-            bottom: 25px;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: rgba(20, 8, 18, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(135, 50, 118, 0.3);
-            border-radius: 100px;
-            padding: 8px 12px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            z-index: 9999;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(135, 50, 118, 0.15);
-            transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.4s;
-            opacity: 0;
-            pointer-events: none;
-        }
+        position: fixed;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%) translateY(100px);
+        background: rgba(20, 8, 18, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(135, 50, 118, 0.3);
+        border-radius: 100px;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        z-index: 9999;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(135, 50, 118, 0.15);
+        transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.4s;
+        opacity: 0;
+        pointer-events: none;
+    }
 
-        .portal-nav.visible {
-            transform: translateX(-50%) translateY(0);
-            opacity: 1;
-            pointer-events: auto;
+    .portal-nav.visible {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: all 0.3s;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .nav-item .nav-icon {
+        font-size: 1.2rem;
+        margin-bottom: 2px;
+        transition: transform 0.3s;
+    }
+
+    .nav-item span {
+        font-size: 0.55rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        opacity: 0.7;
+    }
+
+    .nav-item.active {
+        color: #fff;
+        background: rgba(135, 50, 118, 0.3);
+        box-shadow: inset 0 0 10px rgba(135, 50, 118, 0.2);
+    }
+
+    .nav-item.active .nav-icon {
+        transform: scale(1.1);
+        color: var(--dash-accent);
+    }
+
+    .nav-item:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 480px) {
+        .portal-nav {
+            width: 92%;
+            bottom: 15px;
+            padding: 6px;
+            gap: 2px;
+            justify-content: space-around;
         }
 
         .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            transition: all 0.3s;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .nav-item .nav-icon {
-            font-size: 1.2rem;
-            margin-bottom: 2px;
-            transition: transform 0.3s;
+            width: 50px;
+            height: 50px;
         }
 
         .nav-item span {
-            font-size: 0.55rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            opacity: 0.7;
+            font-size: 0.5rem;
         }
+    }
 
-        .nav-item.active {
-            color: #fff;
-            background: rgba(135, 50, 118, 0.3);
-            box-shadow: inset 0 0 10px rgba(135, 50, 118, 0.2);
-        }
+    /* DYNAMIC SUMMARY DASHBOARD */
+    .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+    }
 
-        .nav-item.active .nav-icon {
-            transform: scale(1.1);
-            color: var(--dash-accent);
-        }
+    .summary-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
 
-        .nav-item:hover:not(.active) {
-            background: rgba(255, 255, 255, 0.05);
-            color: rgba(255, 255, 255, 0.8);
-        }
+    .summary-card:hover {
+        background: rgba(135, 50, 118, 0.08);
+        border-color: rgba(135, 50, 118, 0.4);
+        transform: translateY(-2px);
+    }
 
-        @media (max-width: 480px) {
-            .portal-nav {
-                width: 92%;
-                bottom: 15px;
-                padding: 6px;
-                gap: 2px;
-                justify-content: space-around;
-            }
-            .nav-item {
-                width: 50px;
-                height: 50px;
-            }
-            .nav-item span {
-                font-size: 0.5rem;
-            }
-        }
+    .summary-icon {
+        width: 45px;
+        height: 45px;
+        background: rgba(135, 50, 118, 0.2);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        box-shadow: 0 0 15px rgba(135, 50, 118, 0.2);
+    }
 
-        /* DYNAMIC SUMMARY DASHBOARD */
+    .summary-content {
+        overflow: hidden;
+    }
+
+    .summary-label {
+        font-size: 0.65rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--dash-accent);
+        margin-bottom: 2px;
+    }
+
+    .summary-value {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    @media (max-width: 480px) {
         .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
+            grid-template-columns: 1fr;
         }
-
-        .summary-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .summary-card:hover {
-            background: rgba(135, 50, 118, 0.08);
-            border-color: rgba(135, 50, 118, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .summary-icon {
-            width: 45px;
-            height: 45px;
-            background: rgba(135, 50, 118, 0.2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-            box-shadow: 0 0 15px rgba(135, 50, 118, 0.2);
-        }
-
-        .summary-content {
-            overflow: hidden;
-        }
-
-        .summary-label {
-            font-size: 0.65rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--dash-accent);
-            margin-bottom: 2px;
-        }
-
-        .summary-value {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #fff;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        @media (max-width: 480px) {
-            .summary-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    }
+</style>
 
 
 <div class="portal-main-wrapper">
@@ -1489,22 +1494,33 @@
     <div class="portal-container" id="portalDash">
         <header id="secCockpit" style="margin-bottom: 20px; position: relative;">
 
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+            <div
+                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
                 <div>
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-                        <span style="background: var(--dash-accent); color: #000; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">Accueil</span>
-                        <span id="txtCodeRef" style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 700; margin: 0 5px;">#--</span>
-                        <span id="badgeStage" style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">--</span>
-                        <span id="txtProgressPct" style="background: rgba(135, 50, 118, 0.2); color: var(--dash-primary); padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 900; margin-left: 5px;">0%</span>
+                        <span
+                            style="background: var(--dash-accent); color: #000; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">Accueil</span>
+                        <span id="txtCodeRef"
+                            style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 700; margin: 0 5px;">#--</span>
+                        <span id="badgeStage"
+                            style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">--</span>
+                        <span id="txtProgressPct"
+                            style="background: rgba(135, 50, 118, 0.2); color: var(--dash-primary); padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 900; margin-left: 5px;">0%</span>
                     </div>
-                    <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">--</h1>
-                    <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--</div>
+                    <h1 id="txtWelcome"
+                        style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">
+                        --</h1>
+                    <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--
+                    </div>
                 </div>
-                
+
                 <div id="wrapCountdown" style="display: none;">
-                    <div class="countdown-widget" style="padding: 10px 20px; margin: 0; gap: 12px; border-radius: 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);">
-                        <div class="countdown-num" id="valCountdown" style="font-size: 1.4rem; color: var(--dash-accent);">--</div>
-                        <div class="countdown-txt" style="font-size: 0.55rem; line-height: 1.2;">Jours avant<br>Signature</div>
+                    <div class="countdown-widget"
+                        style="padding: 10px 20px; margin: 0; gap: 12px; border-radius: 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="countdown-num" id="valCountdown"
+                            style="font-size: 1.4rem; color: var(--dash-accent);">--</div>
+                        <div class="countdown-txt" style="font-size: 0.55rem; line-height: 1.2;">Jours
+                            avant<br>Signature</div>
                     </div>
                 </div>
             </div>
@@ -1587,19 +1603,22 @@
             </div>
             <div class="section-content">
                 <!-- FORMULAIRE DE DEMANDE DE VISITE -->
-                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:25px; margin-bottom:30px;">
-                    <h4 style="margin:0 0 15px 0; color:#fff; font-family:'Outfit'; font-size:1.1rem;">📅 Demander une visite</h4>
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-bottom:15px;" class="visit-form-grid">
+                <div
+                    style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:25px; margin-bottom:30px;">
+                    <h4 style="margin:0 0 15px 0; color:#fff; font-family:'Outfit'; font-size:1.1rem;">📅 Demander une
+                        visite</h4>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-bottom:15px;"
+                        class="visit-form-grid">
                         <div style="grid-column: span 2;">
-                            <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse complète" 
+                            <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse complète"
                                 style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
                         </div>
                         <div>
-                            <input type="date" id="inpVisitDate" 
+                            <input type="date" id="inpVisitDate"
                                 style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
                         </div>
                         <div>
-                            <input type="text" id="inpVisitTime" placeholder="Heure (ex: 14h00)" 
+                            <input type="text" id="inpVisitTime" placeholder="Heure (ex: 14h00)"
                                 style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
                         </div>
                     </div>
@@ -1607,7 +1626,8 @@
                         style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:15px; border-radius:12px; font-weight:800; cursor:pointer; transition:0.3s;">
                         Envoyer la demande de visite
                     </button>
-                    <div id="statusVisit" style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
+                    <div id="statusVisit"
+                        style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
                         <div class="loader-mini"></div>
                         <span id="txtStatusVisit" style="color:rgba(255,255,255,0.8);">Envoi en cours...</span>
                     </div>
@@ -1652,16 +1672,24 @@
                         <div id="wrapResources"></div>
 
                         <!-- CALCULATEUR TAXE DE BIENVENUE -->
-                        <div style="margin-top: 35px; background: rgba(135, 50, 118, 0.1); border: 1px solid rgba(135, 50, 118, 0.3); border-radius: 20px; padding: 20px;">
-                            <h4 style="color:#fff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:0 0 15px 0;">&#x1f4b5; Taxe de Bienvenue</h4>
-                            <p style="font-size:0.75rem; opacity:0.7; margin-bottom:15px;">Estimez vos frais de mutation (Hors Montr&eacute;al).</p>
-                            <input type="number" id="inpTaxPrice" placeholder="Prix d'achat ($)" style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; margin-bottom:15px; outline:none;" oninput="updateTaxCalc()">
+                        <div
+                            style="margin-top: 35px; background: rgba(135, 50, 118, 0.1); border: 1px solid rgba(135, 50, 118, 0.3); border-radius: 20px; padding: 20px;">
+                            <h4
+                                style="color:#fff; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase; margin:0 0 15px 0;">
+                                &#x1f4b5; Taxe de Bienvenue</h4>
+                            <p style="font-size:0.75rem; opacity:0.7; margin-bottom:15px;">Estimez vos frais de mutation
+                                (Hors Montr&eacute;al).</p>
+                            <input type="number" id="inpTaxPrice" placeholder="Prix d'achat ($)"
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; margin-bottom:15px; outline:none;"
+                                oninput="updateTaxCalc()">
                             <div style="background:rgba(0,0,0,0.2); padding:15px; border-radius:10px;">
-                                <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:5px;">
+                                <div
+                                    style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:5px;">
                                     <span>Taxe estim&eacute;e :</span>
                                     <span style="color:var(--dash-accent); font-weight:800;" id="valTaxTotal">$ 0</span>
                                 </div>
-                                <div style="display:flex; justify-content:space-between; font-size:0.75rem; opacity:0.6;">
+                                <div
+                                    style="display:flex; justify-content:space-between; font-size:0.75rem; opacity:0.6;">
                                     <span>Frais de Notaire (est.) :</span>
                                     <span id="valNotaryTotal">$ 1 500</span>
                                 </div>
@@ -1707,7 +1735,8 @@
             </div>
             <div class="section-content">
                 <div style="padding:10px 0;">
-                    <p style="margin:0 0 15px 0; font-size:0.85rem; opacity:0.7;">Demandez la documentation confidentielle pour n'importe quel numéro MLS.</p>
+                    <p style="margin:0 0 15px 0; font-size:0.85rem; opacity:0.7;">Demandez la documentation
+                        confidentielle pour n'importe quel numéro MLS.</p>
                     <div style="display:flex; gap:10px; flex-wrap:wrap;">
                         <div style="flex:1; min-width:200px; position:relative;">
                             <input type="text" id="inpMLS" placeholder="Num&eacute;ro MLS (ex: 12345678)"
@@ -1718,7 +1747,8 @@
                             Demander
                         </button>
                     </div>
-                    <div id="statusMLS" style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
+                    <div id="statusMLS"
+                        style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
                         <div class="loader-mini"></div>
                         <span id="txtStatusMLS" style="color:rgba(255,255,255,0.8);">Envoi...</span>
                     </div>
@@ -1735,6 +1765,12 @@
         console.log("PWA: beforeinstallprompt event fired");
         e.preventDefault();
         window.deferredPrompt = e;
+        
+        // Show install banner if present
+        const banner = document.getElementById('pwaInstallBanner');
+        if (banner && !localStorage.getItem('pwaBannerDismissed')) {
+            banner.style.display = 'flex';
+        }
     });
 
     if (window.location.hostname.includes('dossier.evanpatruno.ca') || window.location.search.includes('code=')) {
@@ -1842,13 +1878,13 @@
         document.getElementById('txtWelcome').innerText = `Bienvenue, ${data.firstName || 'Client'}.`;
 
         // DASHBOARD SUMMARY LOGIC (Transaction Stage)
-        const activeStage = (data.timeline || []).find(s => s.status === 'active') || 
-                           (data.timeline || []).find(s => s.status === 'pending');
-        
+        const activeStage = (data.timeline || []).find(s => s.status === 'active') ||
+            (data.timeline || []).find(s => s.status === 'pending');
+
         // Clean HTML entities if needed
         const stageLabel = activeStage ? activeStage.label.replace(/&eacute;/g, 'é').replace(/&egrave;/g, 'è') : "Terminé";
         document.getElementById('dashNextStep').innerText = stageLabel;
-        
+
         const upcomingVisit = (data.visites || []).find(v => v.statut.toLowerCase().includes('confirm'));
         if (upcomingVisit) {
             document.getElementById('dashNextVisit').innerText = `${upcomingVisit.date} - ${upcomingVisit.heure}`;
@@ -1876,7 +1912,7 @@
             if (s.status === 'completed') completed++;
             if (s.status === 'active') completed += 0.5;
         });
-        
+
         setTimeout(() => {
             const bar = document.getElementById('barProgress');
             const total = (data.timeline || []).length;
@@ -1885,7 +1921,7 @@
             if (bar) {
                 if (window.innerWidth <= 768) {
                     // Mobile : barre verticale en pixels absolus
-                    const railH = wrapT.offsetHeight - 54; 
+                    const railH = wrapT.offsetHeight - 54;
                     const pxH = (safePct / 100) * railH;
                     bar.style.removeProperty('width');
                     bar.style.height = pxH + 'px';
@@ -1895,13 +1931,13 @@
                     bar.style.boxShadow = '0 0 12px #873276, 0 0 24px rgba(135,50,118,0.6), 0 0 4px #ff4db8';
                 } else {
                     bar.style.removeProperty('height');
-                    bar.style.width = `${safePct * 0.8}%`; 
+                    bar.style.width = `${safePct * 0.8}%`;
                     bar.style.height = '2px';
                     bar.style.left = '10%';
                     bar.style.boxShadow = '0 0 20px #873276';
                 }
             }
-            
+
             // --- HEADER PROGRESS BADGE ---
             const headerPct = document.getElementById('txtProgressPct');
             const targetPct = Math.round(safePct);
@@ -2231,7 +2267,7 @@
             });
 
             if (!response.ok) throw new Error('Erreur de communication');
-            
+
             txt.innerText = 'Demande de visite envoyée ! 🚀';
             setTimeout(() => {
                 document.getElementById('inpVisitLoc').value = '';
@@ -2293,8 +2329,8 @@
                 txt.innerText = 'Evan prépare vos documents officiels. Vous les recevrez par courriel sous peu.';
                 setTimeout(() => {
                     inp.value = '';
-                    txt.innerText = ''; 
-                    status.style.display = 'none'; 
+                    txt.innerText = '';
+                    status.style.display = 'none';
                     btn.disabled = false;
                     btn.style.opacity = '1';
                 }, 4000);
@@ -2344,7 +2380,7 @@
     function updateTaxCalc() {
         const price = parseFloat(document.getElementById('inpTaxPrice').value) || 0;
         let tax = 0;
-        
+
         // Quebec Standard Tiers (2024 approximation)
         if (price > 0) {
             // First 58,900 @ 0.5%
@@ -2358,7 +2394,7 @@
                 tax += (price - 294600) * 0.015;
             }
         }
-        
+
         document.getElementById('valTaxTotal').innerText = `$ ${Math.round(tax).toLocaleString('fr-CA')}`;
         document.getElementById('valNotaryTotal').innerText = `$ ${(price > 0 ? 1500 : 0).toLocaleString('fr-CA')}`;
     }
@@ -2370,7 +2406,7 @@
         if (!target) return;
 
         isNavigating = true;
-        
+
         // Si la section est repliée, on l'ouvre
         if (target.classList.contains('collapsed')) {
             target.classList.remove('collapsed');
@@ -2384,7 +2420,7 @@
         // Smooth scroll
         const offset = window.innerWidth <= 768 ? 70 : 90;
         const targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
-        
+
         window.scrollTo({
             top: targetPos,
             behavior: 'smooth'
@@ -2546,15 +2582,7 @@
         });
     }
 
-    // --- PWA INSTALL LOGIC ---
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        const banner = document.getElementById('pwaInstallBanner');
-        if (banner) banner.style.display = 'flex';
-        console.log("PWA prompt capture ok");
-    });
+    // (PWA logic merged at top of script)
 
     // Fallback logic
     setTimeout(() => {
@@ -2675,7 +2703,7 @@
                     // Fallback si deferredPrompt est déjà passé ou bloqué
                     showPwaToast("💡 Installation : Allez dans le menu de votre navigateur (les 3 points en haut) et choisissez 'Installer l'application'.");
                 }
-                
+
                 // Reset bouton si l'overlay n'est pas fermé
                 setTimeout(() => {
                     if (document.getElementById('btnFinalInstall')) {
