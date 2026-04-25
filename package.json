@@ -5,6 +5,7 @@
   "main": "puppeteer_convert.js",
   "dependencies": {
     "chrome-aws-lambda": "^10.1.0",
+    "google-auth-library": "^10.6.2",
     "playwright-core": "^1.59.1",
     "puppeteer": "^21.0.0"
   },

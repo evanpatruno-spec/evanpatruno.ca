@@ -1,5 +1,7 @@
+import { JWT } from 'google-auth-library';
+
 /**
- * API : ENVOI DE NOTIFICATIONS PUSH FCM (v1.0)
+ * API : ENVOI DE NOTIFICATIONS PUSH FCM (v1.0 - HTTP v1 API)
  */
 
 export default async function handler(req, res) {
@@ -11,31 +13,55 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: 'Missing parameters (token, title, body)' });
     }
 
-    // NOTE : Nous utilisons l'API Legacy FCM pour la simplicité de configuration initiale.
-    // L'utilisateur devra ajouter FBCM_SERVER_KEY dans les variables d'environnement Vercel.
-    const SERVER_KEY = process.env.FBCM_SERVER_KEY;
+    const projectId = process.env.FCM_PROJECT_ID;
+    const clientEmail = process.env.FCM_CLIENT_EMAIL;
+    const privateKey = process.env.FCM_PRIVATE_KEY?.replace(/\\n/g, '\n');
 
-    if (!SERVER_KEY) {
-        return res.status(500).json({ error: 'FCM Server Key not configured on Vercel' });
+    if (!projectId || !clientEmail || !privateKey) {
+        return res.status(500).json({ error: 'FCM Credentials not fully configured on Vercel' });
     }
 
     try {
-        const response = await fetch('https://fcm.googleapis.com/fcm/send', {
+        // 1. Authentification avec JWT pour FCM v1
+        const client = new JWT({
+            email: clientEmail,
+            key: privateKey,
+            scopes: ['https://www.googleapis.com/auth/firebase.messaging'],
+        });
+
+        const tokenResponse = await client.authorize();
+        const accessToken = tokenResponse.access_token;
+
+        // 2. Envoi de la notification via l'API v1
+        const fcmUrl = `https://fcm.googleapis.com/v1/projects/${projectId}/messages:send`;
+        
+        const response = await fetch(fcmUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `key=${SERVER_KEY}`
+                'Authorization': `Bearer ${accessToken}`
             },
             body: JSON.stringify({
-                to: token,
-                notification: {
-                    title: title,
-                    body: body,
-                    icon: icon || "https://dossier.evanpatruno.ca/pwa-icon-192.png",
-                    click_action: url || "https://dossier.evanpatruno.ca/mon-dossier.html"
-                },
-                data: {
-                    url: url || "https://dossier.evanpatruno.ca/mon-dossier.html"
+                message: {
+                    token: token,
+                    notification: {
+                        title: title,
+                        body: body
+                    },
+                    webpush: {
+                        notification: {
+                            icon: icon || "https://dossier.evanpatruno.ca/pwa-icon-192.png",
+                            actions: [
+                                {
+                                    action: "open_url",
+                                    title: "Voir le dossier"
+                                }
+                            ]
+                        },
+                        fcm_options: {
+                            link: url || "https://dossier.evanpatruno.ca/mon-dossier.html"
+                        }
+                    }
                 }
             })
         });
@@ -43,6 +69,7 @@ export default async function handler(req, res) {
         const result = await response.json();
         return res.status(200).json({ success: true, result });
     } catch (error) {
+        console.error("FCM v1 Error:", error);
         return res.status(500).json({ error: error.message });
     }
 }
