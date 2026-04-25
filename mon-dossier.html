@@ -1483,40 +1483,27 @@
 
     <!-- DASHBOARD -->
     <div class="portal-container" id="portalDash">
-        <header id="secCockpit" style="margin-bottom: 60px; position: relative;">
+        <header id="secCockpit" style="margin-bottom: 20px; position: relative;">
 
-            <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                <div
-                    style="padding: 6px 16px; background: rgba(135, 50, 118, 0.15); border: 1px solid rgba(135, 50, 118, 0.3); border-radius: 50px; display: flex; align-items: center; gap: 10px;">
-                    <div
-                        style="width: 8px; height: 8px; background: var(--dash-accent); border-radius: 50%; box-shadow: 0 0 10px var(--dash-accent-glow);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        <div style="width: 6px; height: 6px; background: var(--dash-accent); border-radius: 50%; box-shadow: 0 0 8px var(--dash-accent-glow);"></div>
+                        <span style="color: var(--dash-accent); font-weight: 900; font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase;">Portail Priv&eacute;</span>
+                        <span style="opacity: 0.3; color: #fff;">|</span>
+                        <span id="txtCodeRef" style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700;">Dossier #--</span>
                     </div>
-                    <span
-                        style="color: var(--dash-accent); font-weight: 900; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">
-                        Portail Client Priv&eacute;
-                    </span>
+                    <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">--</h1>
                 </div>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 5px;">
-                <h1 id="txtWelcome"
-                    style="font-family: 'Outfit', sans-serif; font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 900; margin: 0; color: #fff; line-height: 1; text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                    --
-                </h1>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <div
-                        style="padding: 4px 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: rgba(255,255,255,0.6); font-size: 0.9rem; font-weight: 700; letter-spacing: 1px;">
-                        <span id="txtCodeRef">Dossier #--</span>
+                
+                <div id="wrapCountdown" style="display: none;">
+                    <div class="countdown-widget" style="padding: 8px 15px; margin: 0; gap: 10px; border-radius: 12px;">
+                        <div class="countdown-num" id="valCountdown" style="font-size: 1.2rem;">--</div>
+                        <div class="countdown-txt" style="font-size: 0.55rem;">Jours avant<br>Signature</div>
                     </div>
                 </div>
             </div>
 
-            <div id="wrapCountdown" style="display: none; margin-top: 30px;">
-                <div class="countdown-widget">
-                    <div class="countdown-num" id="valCountdown">--</div>
-                    <div class="countdown-txt">Jours avant la signature<br>chez le notaire</div>
-                </div>
-            </div>
         </header>
 
         <div class="property-card-premium">
