@@ -1512,11 +1512,7 @@
                         --</h1>
                     <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--
                     </div>
-                    <!-- BOUTONS DEBUG PUSH -->
-                    <div style="display:flex; gap:10px; margin-top:10px;">
-                        <button onclick="requestNotificationPermission()" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:5px 10px; border-radius:5px; font-size:0.6rem; cursor:pointer;">🔑 Voir Token</button>
-                        <button onclick="testLocalNotification()" style="background:rgba(0,242,255,0.1); border:1px solid rgba(0,242,255,0.3); color:#00f2ff; padding:5px 10px; border-radius:5px; font-size:0.6rem; cursor:pointer;">🔔 Test Local</button>
-                    </div>
+                    <div id="pushPromptContainer"></div>
                 </div>
 
                 <div id="wrapCountdown" style="display: none;">
@@ -1800,11 +1796,11 @@
                     console.log('FCM: Token generated:', token);
                     localStorage.setItem('fcm_token', token);
                     
-                    // Automatiquement envoyer à Zoho
+                    // Automatiquement envoyer à Zoho (Silencieusement)
                     const dossierCode = localStorage.getItem('portal_code') || "";
                     await sendTokenToZoho(token, dossierCode);
                     
-                    alert("✅ Notifications activées et liées à votre dossier !\n\nCopiez ce code pour votre test Firebase :\n\n" + token);
+                    showPwaToast("✨ Notifications activées avec succès !");
                 } else {
                     console.log('FCM: No registration token available. Request permission to generate one.');
                 }
@@ -1836,20 +1832,39 @@
     }
 
     async function testLocalNotification() {
-        if (!("Notification" in window)) {
-            alert("Ce navigateur ne supporte pas les notifications.");
-            return;
-        }
-        if (Notification.permission === "granted") {
-            const reg = await navigator.serviceWorker.ready;
-            reg.showNotification("Test Local Réussi ! 🚀", {
-                body: "Le système de notifications est actif. Si vous recevez ceci, votre téléphone est prêt.",
-                icon: "/pwa-icon-192.png",
-                vibrate: [200, 100, 200]
-            });
-        } else {
-            alert("La permission n'a pas été accordée. Cliquez sur 'Voir Token' pour la demander.");
-        }
+        // ... (removed for production)
+    }
+
+    // --- AUTOMATED PRE-PROMPT ---
+    function checkAndPromptNotifications() {
+        // Ne rien faire si déjà accordé ou refusé
+        if (Notification.permission !== "default") return;
+        
+        // Ne pas harceler si déjà proposé dans cette session
+        if (sessionStorage.getItem('pushPromptShown')) return;
+
+        setTimeout(() => {
+            const container = document.getElementById('pushPromptContainer');
+            if (!container) return;
+
+            const prompt = document.createElement('div');
+            prompt.style.cssText = "background:rgba(135,50,118,0.15); border:1px solid rgba(135,50,118,0.3); padding:12px 15px; border-radius:12px; margin-top:15px; display:flex; align-items:center; gap:12px; animation: fadeInUp 0.5s ease-out;";
+            prompt.innerHTML = `
+                <div style="font-size:1.2rem;">🔔</div>
+                <div style="flex:1;">
+                    <div style="font-size:0.75rem; font-weight:700; color:#fff;">Restez informé !</div>
+                    <div style="font-size:0.65rem; opacity:0.7; line-height:1.2;">Recevez une alerte dès que votre dossier avance.</div>
+                </div>
+                <button onclick="this.parentElement.remove(); requestNotificationPermission();" style="background:#873276; color:#fff; border:none; padding:6px 12px; border-radius:6px; font-size:0.65rem; font-weight:800; cursor:pointer;">Activer</button>
+            `;
+            container.appendChild(prompt);
+            sessionStorage.setItem('pushPromptShown', 'true');
+        }, 5000);
+    }
+
+    // Appeler le prompt si on est connecté
+    if (localStorage.getItem('portal_code')) {
+        checkAndPromptNotifications();
     }
 
     window.testLocalNotification = testLocalNotification;
