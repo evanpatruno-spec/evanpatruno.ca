@@ -1795,19 +1795,22 @@
         console.log("FCM: Requesting permission...");
         try {
             const permission = await Notification.requestPermission();
+            if (window.location.search.includes('debug=1')) alert("DEBUG Step 1: Permission = " + permission);
+            
             if (permission === 'granted') {
-                console.log('FCM: Notification permission granted.');
-
+                if (window.location.search.includes('debug=1')) alert("DEBUG Step 2: Attente Service Worker...");
+                
                 // Attendre que le SW soit prêt
                 const reg = await navigator.serviceWorker.ready;
-                console.log('FCM: Service Worker Ready');
-
+                if (window.location.search.includes('debug=1')) alert("DEBUG Step 3: SW Prêt !");
+                
                 const token = await getToken(messaging, {
                     vapidKey: VAPID_KEY,
                     serviceWorkerRegistration: reg
                 });
 
                 if (token) {
+                    if (window.location.search.includes('debug=1')) alert("DEBUG Step 4: Token généré !");
                     console.log('FCM: Token generated:', token);
                     localStorage.setItem('fcm_token', token);
 
@@ -1834,6 +1837,7 @@
             }
         } catch (err) {
             console.log('FCM: An error occurred while retrieving token. ', err);
+            if (window.location.search.includes('debug=1')) alert("DEBUG ERROR: " + err.message);
         }
     }
     window.requestNotificationPermission = requestNotificationPermission;
