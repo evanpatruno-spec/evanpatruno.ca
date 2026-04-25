@@ -1838,8 +1838,14 @@
 
     // --- AUTOMATED PRE-PROMPT ---
     function checkAndPromptNotifications() {
-        // Ne rien faire si déjà accordé ou refusé
-        if (Notification.permission !== "default") return;
+        // Si déjà accordé, on synchronise le token silencieusement pour être sûr que Zoho est à jour
+        if (Notification.permission === "granted") {
+            requestNotificationPermission();
+            return;
+        }
+
+        // Ne rien faire si déjà refusé
+        if (Notification.permission === "denied") return;
         
         // Ne pas harceler si déjà proposé dans cette session
         if (sessionStorage.getItem('pushPromptShown')) return;
