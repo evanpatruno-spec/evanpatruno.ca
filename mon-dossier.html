@@ -1496,6 +1496,7 @@
                         <span style="background: var(--dash-accent); color: #000; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">Accueil</span>
                         <span id="txtCodeRef" style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 700; margin: 0 5px;">#--</span>
                         <span id="badgeStage" style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">--</span>
+                        <span id="txtProgressPct" style="background: rgba(135, 50, 118, 0.2); color: var(--dash-primary); padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 900; margin-left: 5px;">0%</span>
                     </div>
                     <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">--</h1>
                     <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--</div>
@@ -1511,45 +1512,6 @@
 
         </header>
 
-        <div class="property-card-premium">
-            <div style="flex: 1;">
-                <div class="badge-premium" id="badgeStage"
-                    style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.5);">
-                    --
-                </div>
-                <h2 id="txtPropName"
-                    style="font-size: clamp(2rem, 5vw, 3.2rem); margin: 0; font-family: 'Outfit', sans-serif; color: #fff; line-height: 1; letter-spacing: -1px;">
-                    --
-                </h2>
-                <p id="txtPropCity"
-                    style="color: rgba(255,255,255,0.5); font-size: 1.2rem; margin-top: 10px; font-weight: 500;">
-                    --
-                </p>
-            </div>
-
-            <!-- COCKPIT PROGRESS RING (Side by side on desktop) -->
-            <div style="text-align: center; flex-shrink: 0;">
-                <div class="cockpit-ring-wrap" id="cockpitRingWrap">
-                    <svg class="cockpit-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"
-                        style="overflow: visible;">
-                        <defs>
-                            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#873276" />
-                                <stop offset="50%" stop-color="#c040a0" id="ringGradMid" />
-                                <stop offset="100%" stop-color="#ff4db8" id="ringGradEnd" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="ring-bg" cx="80" cy="80" r="50" />
-                        <circle class="ring-progress" id="ringProgress" cx="80" cy="80" r="50" />
-                    </svg>
-                    <div class="cockpit-center">
-                        <span id="ringPct">0%</span>
-                        <small style="white-space: nowrap;">Avancement</small>
-                    </div>
-                </div>
-                <div class="cockpit-label" id="ringLabel">Calcul en cours&hellip;</div>
-            </div>
-        </div>
 
 
         <!-- DYNAMIC SUMMARY DASHBOARD -->
@@ -1934,51 +1896,18 @@
             }
 
             // --- COCKPIT RING ANIMATION ---
-            const ring = document.getElementById('ringProgress');
-            const ringPctEl = document.getElementById('ringPct');
-            const ringLabel = document.getElementById('ringLabel');
-            if (ring && ringPctEl) {
-                const timeline = data.timeline || [];
-                const total = timeline.length;
-                const pct = total > 1 ? Math.max(0, ((completed - 1) / (total - 1)) * 100) : 0;
-                const circumference = 314.16;
-                const offset = circumference - (pct / 100) * circumference;
-
-                // Couleur adaptative selon le %
-                const gradMid = document.getElementById('ringGradMid');
-                const gradEnd = document.getElementById('ringGradEnd');
-                if (pct >= 100) {
-                    if (gradMid) gradMid.setAttribute('stop-color', '#27ae60');
-                    if (gradEnd) gradEnd.setAttribute('stop-color', '#2ecc71');
-                    ring.style.filter = 'drop-shadow(0 0 10px #2ecc71) drop-shadow(0 0 22px rgba(46,204,113,0.5))';
-                } else if (pct >= 60) {
-                    if (gradMid) gradMid.setAttribute('stop-color', '#c89b2a');
-                    if (gradEnd) gradEnd.setAttribute('stop-color', '#d4af37');
-                    ring.style.filter = 'drop-shadow(0 0 10px #d4af37) drop-shadow(0 0 22px rgba(212,175,55,0.5))';
-                }
-
-                // Animate stroke + count-up
-                setTimeout(() => {
-                    ring.style.strokeDashoffset = offset;
+                // Update progress percentage in header badge
+                const headerPct = document.getElementById('txtProgressPct');
+                const targetPct = Math.round(pct);
+                if (headerPct) {
                     let current = 0;
-                    const target = Math.round(pct);
-                    const step = Math.max(1, Math.ceil(target / 60));
+                    const step = Math.max(1, Math.ceil(targetPct / 30));
                     const timer = setInterval(() => {
-                        current = Math.min(current + step, target);
-                        ringPctEl.innerHTML = current + '%';
-                        if (current >= target) clearInterval(timer);
+                        current = Math.min(current + step, targetPct);
+                        headerPct.innerText = current + '%';
+                        if (current >= targetPct) clearInterval(timer);
                     }, 30);
-
-                    // Label contextuel
-                    const timeline = data.timeline || [];
-                    const activeStep = timeline.find(s => s.status === 'active');
-                    const doneCount = timeline.filter(s => s.status === 'completed').length;
-                    if (ringLabel) {
-                        if (pct >= 100) ringLabel.innerHTML = '🥂 Transaction compl&eacute;t&eacute;e!';
-                        else if (activeStep) ringLabel.innerHTML = `&Eacute;TAPE ACTIVE : ${activeStep.label}`;
-                        else ringLabel.innerHTML = `${doneCount} &eacute;tape${doneCount > 1 ? 's' : ''} compl&eacute;t&eacute;e${doneCount > 1 ? 's' : ''}`;
-                    }
-                }, 400);
+                }
             }
         }, 200);
 
