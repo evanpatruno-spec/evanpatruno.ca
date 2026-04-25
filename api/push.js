@@ -46,11 +46,14 @@ export default async function handler(req, res) {
                     token: token,
                     notification: {
                         title: title,
-                        body: body
+                        body: body,
+                        icon: icon || "https://dossier.evanpatruno.ca/pwa-icon-192.png",
+                        tag: "ep-portal-notif"
                     },
                     webpush: {
                         notification: {
                             icon: icon || "https://dossier.evanpatruno.ca/pwa-icon-192.png",
+                            tag: "ep-portal-notif",
                             actions: [
                                 {
                                     action: "open_url",
