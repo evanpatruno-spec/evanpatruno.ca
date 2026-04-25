@@ -24,22 +24,7 @@ const messaging = firebase.messaging();
 
 // Intercepteur universel de messages (Arrière-plan)
 messaging.onBackgroundMessage((payload) => {
-  console.log('[SW] Message reçu en arrière-plan:', payload);
-  
-  const title = payload.notification?.title || payload.data?.title || "Nouveau message";
-  const body = payload.notification?.body || payload.data?.body || "Consultez votre dossier.";
-  
-  const options = {
-    body: body,
-    icon: '/pwa-icon-192.png',
-    badge: '/pwa-icon-192.png',
-    vibrate: [200, 100, 200],
-    data: {
-        url: 'https://dossier.evanpatruno.ca/mon-dossier.html'
-    }
-  };
-
-  return self.registration.showNotification(title, options);
+  console.log('[SW] Message reçu:', payload);
 });
 
 // Gérer le clic sur la notification
