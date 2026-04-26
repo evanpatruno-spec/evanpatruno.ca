@@ -1925,7 +1925,7 @@
 
             epLog("1. Firebase SDK...");
             const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js");
-            const { getMessaging, getToken } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js");
+            const { getMessaging, getToken, onMessage } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js");
 
             const firebaseConfig = {
                 apiKey: "AIzaSyCPtTKjhtrNoRdED5xp-HuSS11PW8J1D1k",
@@ -1938,6 +1938,15 @@
 
             const app = initializeApp(firebaseConfig);
             const messaging = getMessaging(app);
+
+            // Écouteur Premier Plan (Foreground)
+            onMessage(messaging, (payload) => {
+                epLog("Message reçu (foreground): " + JSON.stringify(payload));
+                if (payload.notification) {
+                    showPwaToast(`🔔 <b>${payload.notification.title}</b><br>${payload.notification.body}`);
+                }
+            });
+
             const VAPID_KEY = "BP01i_pScDeVgK7O4auQNpcOj_HevD5Psx2fJzHiJd8FHbW6aR2MiHZfEXQXjlsEQDeEmLjoV-4AEu5CKOywFs0";
 
             epLog("2. Service Worker Check...");
@@ -2968,8 +2977,8 @@
                 if (btn) btn.style.display = 'none';
             }
 
-            navigator.serviceWorker.register('/firebase-messaging-sw.js')
-                .then(reg => console.log('SW Registered'))
+            navigator.serviceWorker.register('/firebase-messaging-sw.js?v=10')
+                .then(reg => console.log('SW Registered (v10)'))
                 .catch(err => console.log('SW Registration Failed', err));
         });
     }

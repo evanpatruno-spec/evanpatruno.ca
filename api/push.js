@@ -47,13 +47,20 @@ export default async function handler(req, res) {
                     notification: {
                         title: title,
                         body: body,
-                        icon: "https://dossier.evanpatruno.ca/notification-icon.png",
+                        icon: "https://dossier.evanpatruno.ca/pwa-icon-192.png",
                         tag: "ep-portal-notif"
+                    },
+                    data: {
+                        title: title,
+                        body: body,
+                        url: url || "https://dossier.evanpatruno.ca/mon-dossier.html"
                     },
                     webpush: {
                         notification: {
-                            icon: "https://dossier.evanpatruno.ca/notification-icon.png",
+                            icon: "https://dossier.evanpatruno.ca/pwa-icon-192.png",
                             tag: "ep-portal-notif",
+                            renotify: true,
+                            requireInteraction: true,
                             actions: [
                                 {
                                     action: "open_url",

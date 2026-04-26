@@ -24,7 +24,20 @@ const messaging = firebase.messaging();
 
 // Intercepteur universel de messages (Arrière-plan)
 messaging.onBackgroundMessage((payload) => {
-  console.log('[SW] Message reçu:', payload);
+  console.log('[SW] Message reçu en arrière-plan:', payload);
+  
+  // Si on a des données mais pas de notification visuelle automatique
+  if (payload.data && !payload.notification) {
+    const notificationTitle = payload.data.title || "EP Portail";
+    const notificationOptions = {
+      body: payload.data.body || "Mise à jour de votre dossier",
+      icon: '/pwa-icon-192.png',
+      data: { url: payload.data.url || '/mon-dossier.html' },
+      tag: 'ep-portal-notif',
+      renotify: true
+    };
+    self.registration.showNotification(notificationTitle, notificationOptions);
+  }
 });
 
 // Gérer le clic sur la notification
