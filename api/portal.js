@@ -206,8 +206,8 @@ export default async function handler(req, res) {
                 data: [{
                     Name: location,
                     Statut: "En attente",
-                    Date_heure_de_visite: vDateTime,
-                    Affaire: dealId
+                    Date_heure_de_visite: vDateTime.includes('T') && vDateTime.length === 16 ? vDateTime + ":00" : vDateTime,
+                    Affaire: { id: dealId }
                 }],
                 trigger: ["workflow"]
             };
