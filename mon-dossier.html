@@ -2103,9 +2103,16 @@
         const upcomingVisit = (data.visites || []).find(v => v.statut && v.statut.toLowerCase().includes('confirm'));
         if (upcomingVisit) {
             let visitText = "";
-            if (upcomingVisit.Date_heure_de_visite) {
-                const dt = new Date(upcomingVisit.Date_heure_de_visite);
-                visitText = dt.toLocaleDateString('fr-CA', { day: 'numeric', month: 'short' }) + " - " + dt.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' }).replace(':', 'h');
+            let rawDt = upcomingVisit.Date_heure_de_visite;
+            if (rawDt) {
+                // Rendre le format Zoho (espace) compatible ISO (T) pour JS
+                const cleanDt = rawDt.replace(' ', 'T');
+                const dt = new Date(cleanDt);
+                if (!isNaN(dt.getTime())) {
+                    visitText = dt.toLocaleDateString('fr-CA', { day: 'numeric', month: 'short' }) + " - " + dt.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' }).replace(':', 'h');
+                } else {
+                    visitText = rawDt;
+                }
             } else {
                 visitText = `${upcomingVisit.date || '--'} - ${upcomingVisit.heure || '--'}`;
             }
@@ -2281,10 +2288,16 @@
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 10px;">
                             <div>
                                 <div style="font-weight:900; font-family:'Outfit'; font-size:1.3rem; color:#fff;">
-                                    ${v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite).toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' }) : (v.date || '--')}
+                                    ${v.Date_heure_de_visite ? (function(){
+                                        const dt = new Date(v.Date_heure_de_visite.replace(' ', 'T'));
+                                        return isNaN(dt.getTime()) ? v.Date_heure_de_visite : dt.toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
+                                    })() : (v.date || '--')}
                                 </div>
                                 <div style="font-size:1rem; color:var(--dash-accent); font-weight:700;">
-                                    &#x23f0; ${v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite).toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' }).replace(':', 'h') : (v.heure || '--')}
+                                    &#x23f0; ${v.Date_heure_de_visite ? (function(){
+                                        const dt = new Date(v.Date_heure_de_visite.replace(' ', 'T'));
+                                        return isNaN(dt.getTime()) ? '' : dt.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' }).replace(':', 'h');
+                                    })() : (v.heure || '--')}
                                 </div>
                             </div>
                             <div style="background:${badgeColor}; color:${badgeText}; padding:6px 14px; border-radius:50px; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; border: 1px solid ${badgeText}50;">
