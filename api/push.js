@@ -46,9 +46,7 @@ export default async function handler(req, res) {
                     token: token,
                     notification: {
                         title: title,
-                        body: body,
-                        icon: "https://dossier.evanpatruno.ca/pwa-icon-192.png",
-                        tag: "ep-portal-notif"
+                        body: body
                     },
                     data: {
                         title: title,
