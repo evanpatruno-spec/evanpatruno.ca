@@ -198,24 +198,39 @@ export default async function handler(req, res) {
         // --- ACTION DEMANDE DE VISITE ---
         if (action === 'requestVisit' && location) {
             console.log("Demande de visite reçue pour:", location);
-            const vDate = body.date || "";
-            const vTime = body.time || "";
+            const vDateTime = data.Date_heure_de_visite || "";
 
-            const crmData = {
-                data: [{ 
-                    Name: `Demande de Visite - ${location}`, 
-                    Num_ro_MLS: location.length < 10 ? location : "", // Si c'est un MLS
-                    Code_Portail: cleanCode, 
-                    Affaire: dealId,
-                    Description: `Demande de visite reçue depuis le portail.\n\nLIEU : ${location}\nDATE : ${vDate}\nHEURE : ${vTime}\n\nCLIENT : ${clientC?.Full_Name || 'Inconnu'} (${clientC?.Email} / ${clientC?.Mobile || 'Pas de tel'})`
+            // 1. Création de la visite officielle (Module Visites_Portail)
+            const visitRecord = {
+                data: [{
+                    Name: location,
+                    Statut: "En attente",
+                    Date_heure_de_visite: vDateTime,
+                    Affaire: dealId
                 }],
                 trigger: ["workflow"]
+            };
+
+            await fetch(`${apiDomain}/crm/v2/Visites_Portail`, {
+                method: 'POST',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify(visitRecord)
+            });
+
+            // 2. Log dans Interactions_Portail (Optionnel mais utile pour l'historique)
+            const logData = {
+                data: [{ 
+                    Name: `Demande Visite: ${location}`, 
+                    Code_Portail: cleanCode, 
+                    Affaire: dealId,
+                    Description: `Le client demande une visite.\nLIEU: ${location}\nDATE/HEURE: ${vDateTime}`
+                }]
             };
 
             await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
                 method: 'POST',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify(crmData)
+                body: JSON.stringify(logData)
             });
 
             return res.status(200).json({ s: true, msg: "Demande de visite enregistrée" });
