@@ -2348,6 +2348,13 @@
         if (wrapVisites) {
             const visitesData = data.visites || [];
             if (visitesData.length > 0) {
+                // Tri chronologique global
+                visitesData.sort((a, b) => {
+                    const da = new Date((a.Date_heure_de_visite || "9999-12-31").replace(' ', 'T'));
+                    const db = new Date((b.Date_heure_de_visite || "9999-12-31").replace(' ', 'T'));
+                    return da - db;
+                });
+
                 const now = new Date();
                 const upcoming = [];
                 const past = [];
@@ -2362,6 +2369,9 @@
                         else past.push(v);
                     }
                 });
+
+                // Pour l'historique, on veut la plus récente en premier
+                past.reverse();
 
                 const renderVisitCard = (v, isArchive = false) => {
                     const statusLower = (v.statut || "").toLowerCase();
