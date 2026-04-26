@@ -16,9 +16,6 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging-compat.js"></script>
 
 <style>
     * {
@@ -1472,49 +1469,6 @@
         }
     }
     window.hideSplashForce = hideSplashForce;
-
-    // --- INITIALISATION FIREBASE ---
-    const firebaseConfig = {
-        apiKey: "AIzaSyCPtTKjhtrNoRdED5xp-HuSS11PW8J1D1k",
-        authDomain: "evanpatruno-pwa.firebaseapp.com",
-        projectId: "evanpatruno-pwa",
-        storageBucket: "evanpatruno-pwa.firebasestorage.app",
-        messagingSenderId: "873208257496",
-        appId: "1:873208257496:web:7cf7ff8eb863bc7029b0ad"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const messaging = firebase.messaging();
-
-    async function requestNotificationPermission() {
-        console.log("FCM: Requesting Permission...");
-        try {
-            const permission = await Notification.requestPermission();
-            if (permission === 'granted') {
-                const token = await messaging.getToken({ vapidKey: 'BOF-V-lM6i9R0W9u8r5yX5O-RzE4zY0Z5U-Q8i7u9s0X-A' }); // Remplacer par ton VAPID key si besoin
-                if (token) {
-                    console.log("FCM Token:", token);
-                    syncPushToken(token);
-                }
-            }
-        } catch (error) {
-            console.error("FCM Permission Error:", error);
-        }
-    }
-    window.requestNotificationPermission = requestNotificationPermission;
-
-    async function syncPushToken(token) {
-        const code = localStorage.getItem('portal_code');
-        const phone = localStorage.getItem('portal_phone');
-        if (!code) return;
-        try {
-            await fetch('https://dossier.evanpatruno.ca/api/portal', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ action: 'update_push_token', codePortal: code, phone: phone, token: token })
-            });
-            console.log("FCM: Token synced to Zoho.");
-        } catch (e) { console.error("FCM Sync Error:", e); }
-    }
 </script>
 
 <style>
@@ -1933,22 +1887,19 @@
     }
 
     async function requestNotificationPermission() {
-        epLog("--- START v9.1 ---");
+        epLog("--- FCM START ---");
         
         if (!("Notification" in window)) {
-            alert("❌ Notifications non supportées."); return;
+            epLog("❌ Notifications non supportées."); return;
         }
         
         try {
-            epLog("1. Permission...");
             const permission = await Notification.requestPermission();
-            epLog("Result: " + permission);
-            
             if (permission !== 'granted') {
-                alert("⚠️ Permission bloquée."); return;
+                epLog("⚠️ Permission refusée."); return;
             }
 
-            epLog("2. Firebase SDK...");
+            epLog("1. Firebase SDK...");
             const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js");
             const { getMessaging, getToken } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js");
 
@@ -1965,43 +1916,39 @@
             const messaging = getMessaging(app);
             const VAPID_KEY = "BP01i_pScDeVgK7O4auQNpcOj_HevD5Psx2fJzHiJd8FHbW6aR2MiHZfEXQXjlsEQDeEmLjoV-4AEu5CKOywFs0";
 
-            epLog("3. Nettoyage...");
-            const regs = await navigator.serviceWorker.getRegistrations();
-            for (let r of regs) { await r.unregister(); }
+            epLog("2. Service Worker Check...");
+            let reg = await navigator.serviceWorker.getRegistration('/firebase-messaging-sw.js');
+            
+            // Si pas de SW ou mauvaise version, on enregistre
+            if (!reg || !reg.active) {
+                epLog("Registering new SW...");
+                reg = await navigator.serviceWorker.register('/firebase-messaging-sw.js?v=10');
+                await navigator.serviceWorker.ready;
+            }
 
-            epLog("4. Registering...");
-            const reg = await navigator.serviceWorker.register('/firebase-messaging-sw.js?v=10');
-            
-            epLog("5. Ready (Wait max 5s)...");
-            const activeReg = await Promise.race([
-                navigator.serviceWorker.ready,
-                new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout: Le moteur ne répond pas (SW Ready)")), 5000))
-            ]);
-            
-            epLog("6. Get Token...");
+            epLog("3. Get Token...");
             const token = await getToken(messaging, {
                 vapidKey: VAPID_KEY,
-                serviceWorkerRegistration: activeReg
+                serviceWorkerRegistration: reg
             });
 
             if (token) {
-                epLog("7. Token: " + token.substring(0,8) + "...");
-                localStorage.setItem('fcm_token', token);
+                epLog("4. Sync Token...");
                 const code = localStorage.getItem('portal_code') || "";
                 const phone = localStorage.getItem('portal_phone') || "";
                 
-                epLog("8. Sync Zoho...");
-                const res = await fetch('https://dossier.evanpatruno.ca/api/portal', {
+                await fetch('https://dossier.evanpatruno.ca/api/portal', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ action: 'update_push_token', token, codePortal: code, phone })
                 });
-                const data = await res.json();
-                epLog("9. Result: " + (data.s ? "SUCCESS" : "FAIL"));
-                if (data.s) showPwaToast("✨ Notifications activées !");
+                epLog("✅ SUCCESS");
+                localStorage.setItem('fcm_token', token);
+                // Notification visuelle discrète
+                if (typeof showPwaToast === 'function') showPwaToast("✨ Notifications actives");
             }
         } catch (err) {
-            epLog("❌ ERROR: " + err.message);
+            epLog("❌ FCM ERROR: " + err.message);
             console.error(err);
         }
     }
