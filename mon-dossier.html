@@ -1469,6 +1469,26 @@
         }
     }
     window.hideSplashForce = hideSplashForce;
+
+    // --- DEBUG & UI HELPERS ---
+    function epLog(msg) {
+        console.log(`[EP-PORTAL] ${msg}`);
+    }
+    window.epLog = epLog;
+
+    function showPwaToast(msg) {
+        const toast = document.createElement('div');
+        toast.style.cssText = "position:fixed; bottom:100px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,0.8); color:#fff; padding:12px 25px; border-radius:50px; font-family:'Outfit'; font-size:0.85rem; z-index:200000; border:1px solid rgba(135,50,118,0.5); box-shadow:0 10px 30px rgba(0,0,0,0.5); animation: toastIn 0.5s ease-out;";
+        toast.innerHTML = msg;
+        document.body.appendChild(toast);
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(-50%) translateY(20px)';
+            toast.style.transition = 'all 0.5s ease-in';
+            setTimeout(() => toast.remove(), 500);
+        }, 3000);
+    }
+    window.showPwaToast = showPwaToast;
 </script>
 
 <style>
@@ -1483,6 +1503,10 @@
     @keyframes pulseLogo {
         0%, 100% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(135, 50, 118, 0.8)); }
         50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(135, 50, 118, 1)); }
+    }
+    @keyframes toastIn {
+        from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+        to { transform: translateX(-50%) translateY(0); opacity: 1; }
     }
 </style>
 
