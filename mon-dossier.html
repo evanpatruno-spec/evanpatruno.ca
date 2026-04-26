@@ -2348,12 +2348,35 @@
         if (wrapVisites) {
             const visitesData = data.visites || [];
             if (visitesData.length > 0) {
-                wrapVisites.innerHTML = visitesData.map(v => {
-                    const isConfirmed = v.statut.toLowerCase().includes('confirm');
-                    const badgeColor = isConfirmed ? 'rgba(46,204,113,0.2)' : 'rgba(241,196,15,0.2)';
-                    const badgeText = isConfirmed ? '#2ecc71' : '#f1c40f';
+                const now = new Date();
+                const upcoming = [];
+                const past = [];
+                
+                visitesData.forEach(v => {
+                    const vDateStr = v.Date_heure_de_visite || v.date;
+                    if (!vDateStr) {
+                        upcoming.push(v);
+                    } else {
+                        const vDate = new Date(vDateStr.replace(' ', 'T'));
+                        if (isNaN(vDate.getTime()) || vDate > now) upcoming.push(v);
+                        else past.push(v);
+                    }
+                });
+
+                const renderVisitCard = (v, isArchive = false) => {
+                    const statusLower = (v.statut || "").toLowerCase();
+                    const isConfirmed = statusLower.includes('confirm');
+                    const isCancelled = statusLower.includes('annul');
+                    
+                    let badgeColor = 'rgba(241,196,15,0.2)';
+                    let badgeText = '#f1c40f';
+                    if (isConfirmed) { badgeColor = 'rgba(46,204,113,0.2)'; badgeText = '#2ecc71'; }
+                    if (isCancelled) { badgeColor = 'rgba(231,76,60,0.2)'; badgeText = '#e74c3c'; }
+
+                    const canCancel = !isCancelled && !isArchive;
+
                     return `
-                    <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:20px; display:flex; flex-direction: column; gap: 15px; box-shadow: var(--dash-glow);">
+                    <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:20px; display:flex; flex-direction: column; gap: 15px; box-shadow: var(--dash-glow); opacity: ${isArchive ? '0.7' : '1'}">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 10px;">
                             <div>
                                 <div style="font-weight:900; font-family:'Outfit'; font-size:1.3rem; color:#fff;">
@@ -2382,8 +2405,31 @@
                             </a>
                             <div style="font-size:0.8rem; color:rgba(255,255,255,0.5); padding-left:25px;">${v.type}</div>
                         </div>
+                        ${canCancel ? `
+                        <button onclick="handleCancelVisit('${v.id}', '${v.location}')" style="background:rgba(231,76,60,0.1); color:#e74c3c; border:1px solid rgba(231,76,60,0.3); padding:8px; border-radius:12px; font-size:0.75rem; font-weight:800; cursor:pointer; transition:0.3s;" onmouseover="this.style.background='rgba(231,76,60,0.2)'" onmouseout="this.style.background='rgba(231,76,60,0.1)'">
+                            &#x2716; ANNULER LA VISITE
+                        </button>
+                        ` : ''}
                     </div>
-                `}).join('');
+                `};
+
+                let html = upcoming.map(v => renderVisitCard(v)).join('');
+                
+                if (past.length > 0) {
+                    html += `
+                        <div style="margin-top:30px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; cursor:pointer;" onclick="document.getElementById('archiveVisits').style.display = document.getElementById('archiveVisits').style.display === 'none' ? 'flex' : 'none'; this.querySelector('span').innerText = document.getElementById('archiveVisits').style.display === 'none' ? 'voir' : 'cacher';">
+                                <h3 style="font-family:'Outfit'; font-size:1rem; opacity:0.5; text-transform:uppercase; letter-spacing:2px; margin:0;">Historique des visites</h3>
+                                <span style="font-size:0.7rem; color:var(--dash-accent); text-transform:uppercase; font-weight:800; opacity:0.7;">voir</span>
+                            </div>
+                            <div id="archiveVisits" style="display:none; flex-direction:column; gap:15px; margin-top:15px;">
+                                ${past.map(v => renderVisitCard(v, true)).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                wrapVisites.innerHTML = html;
             } else {
                 wrapVisites.innerHTML = `<div style="text-align:center; padding:30px; background:rgba(255,255,255,0.02); border-radius:20px; border:1px dashed rgba(255,255,255,0.1);">
                     <div style="font-size:2rem; margin-bottom:10px; opacity:0.5;">&#x1f4c5;</div>
@@ -2782,6 +2828,39 @@
             }
         }
     });
+
+    async function handleCancelVisit(visitId, locationName) {
+        if (!confirm(`Voulez-vous vraiment annuler la visite pour ${locationName} ?`)) return;
+        
+        try {
+            const code = localStorage.getItem('portal_code');
+            const phone = localStorage.getItem('portal_phone');
+            
+            const response = await fetch('https://dossier.evanpatruno.ca/api/portal', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'cancelVisit',
+                    visitId: visitId,
+                    codePortal: code,
+                    phone: phone
+                })
+            });
+            
+            const result = await response.json();
+            if (result.s) {
+                showPwaToast("✅ Visite annulée");
+                // Rafraîchir les données
+                handlePortalLogin({ preventDefault: () => {} });
+            } else {
+                alert("Erreur lors de l'annulation : " + (result.error || "Inconnu"));
+            }
+        } catch (err) {
+            console.error("Cancel Visit Error:", err);
+            alert("Erreur réseau lors de l'annulation.");
+        }
+    }
+    window.handleCancelVisit = handleCancelVisit;
 
     async function handlePortalLogin(e) {
         e.preventDefault();

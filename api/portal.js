@@ -196,6 +196,27 @@ export default async function handler(req, res) {
             return res.status(200).json({ s: true, msg: "Token synchronisé" });
         }
 
+        // --- ACTION ANNULER VISITE ---
+        if (action === 'cancelVisit' && data.visitId) {
+            console.log("Annulation de visite demandée pour ID:", data.visitId);
+            
+            const cancelResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail/${data.visitId}`, {
+                method: 'PUT',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    data: [{
+                        id: data.visitId,
+                        Statut: "Annulé"
+                    }]
+                })
+            });
+            
+            const cancelResult = await cancelResp.json();
+            console.log("Zoho Cancel Result:", JSON.stringify(cancelResult));
+            
+            return res.status(200).json({ s: true, msg: "Visite annulée dans Zoho" });
+        }
+
         // --- ACTION DEMANDE DE VISITE ---
         if (action === 'requestVisit' && data.location) {
             const location = data.location;
