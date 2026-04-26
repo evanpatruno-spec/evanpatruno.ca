@@ -173,10 +173,11 @@ export default async function handler(req, res) {
 
             if (matches(contact1)) targetContactId = contact1.id;
             else if (matches(contact2)) targetContactId = contact2.id;
+            else if (contact1) targetContactId = contact1.id; // Fallback sur le contact principal si pas de match tel
 
             if (!targetContactId) {
-                console.error("FCM Error: No matching contact found for phone", portalPhone);
-                return res.status(400).json({ error: 'Aucun contact correspondant au téléphone' });
+                console.error("FCM Error: No target contact found");
+                return res.status(400).json({ error: 'Aucun contact trouvé pour ce dossier' });
             }
 
             const updateResp = await fetch(`${apiDomain}/crm/v2/Contacts/${targetContactId}`, {
