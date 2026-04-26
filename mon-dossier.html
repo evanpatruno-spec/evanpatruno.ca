@@ -1520,13 +1520,13 @@
             <div class="nav-icon">&#x1f680;</div>
             <span>Cockpit</span>
         </div>
-        <div class="nav-item" onclick="navTo('secPrequal', this)">
-            <div class="nav-icon">&#x2705;</div>
-            <span>Checklist</span>
-        </div>
         <div class="nav-item" onclick="navTo('secVisites', this)">
             <div class="nav-icon">&#x1f4c5;</div>
             <span>Visites</span>
+        </div>
+        <div class="nav-item" onclick="navTo('secPrequal', this)">
+            <div class="nav-icon">&#x2705;</div>
+            <span>Checklist</span>
         </div>
         <div class="nav-item" onclick="navTo('secConciergeMLS', this)">
             <div class="nav-icon">⚡</div>
@@ -1691,6 +1691,44 @@
         <!-- MILESTONE ACCUEIL -->
         <div class="milestone-grid" id="wrapMilestones"></div>
 
+        <!-- VISITES SECTION (MOVED UP) -->
+        <div class="section-wrapper" id="secVisites">
+            <div class="section-header" onclick="toggleSection('secVisites')">
+                <h3>Agenda des Visites</h3>
+                <div class="section-chevron">&#x25bc;</div>
+            </div>
+            <div class="section-content">
+                <!-- FORMULAIRE DE DEMANDE DE VISITE -->
+                <div
+                    style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:25px; margin-bottom:30px;">
+                    <h4 style="margin:0 0 15px 0; color:#fff; font-family:'Outfit'; font-size:1.1rem;">📅 Demander une
+                        visite</h4>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-bottom:15px;"
+                        class="visit-form-grid">
+                        <div style="grid-column: span 2;">
+                            <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse complète"
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
+                        </div>
+                        <div style="grid-column: span 2;">
+                            <input type="datetime-local" id="inpVisitDateTime"
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none; font-family:'Inter';">
+                        </div>
+                    </div>
+                    <button onclick="requestVisit()" id="btnVisitReq"
+                        style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:15px; border-radius:12px; font-weight:800; cursor:pointer; transition:0.3s;">
+                        Envoyer la demande de visite
+                    </button>
+                    <div id="statusVisit"
+                        style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
+                        <div class="loader-mini"></div>
+                        <span id="txtStatusVisit" style="color:rgba(255,255,255,0.8);">Envoi en cours...</span>
+                    </div>
+                </div>
+
+                <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
+            </div>
+        </div>
+
         <!-- FINANCEMENT SECTION (Checklist) - MOVED UP -->
         <div class="section-wrapper" id="secPrequal">
             <div class="section-header" onclick="toggleSection('secPrequal')">
@@ -1729,43 +1767,6 @@
         </div>
         <div id="sectionSeller" style="display: none;"></div>
 
-        <!-- VISITES SECTION -->
-        <div class="section-wrapper collapsed" id="secVisites">
-            <div class="section-header" onclick="toggleSection('secVisites')">
-                <h3>Agenda des Visites</h3>
-                <div class="section-chevron">&#x25bc;</div>
-            </div>
-            <div class="section-content">
-                <!-- FORMULAIRE DE DEMANDE DE VISITE -->
-                <div
-                    style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:25px; margin-bottom:30px;">
-                    <h4 style="margin:0 0 15px 0; color:#fff; font-family:'Outfit'; font-size:1.1rem;">📅 Demander une
-                        visite</h4>
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-bottom:15px;"
-                        class="visit-form-grid">
-                        <div style="grid-column: span 2;">
-                            <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse complète"
-                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
-                        </div>
-                        <div style="grid-column: span 2;">
-                            <input type="datetime-local" id="inpVisitDateTime"
-                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none; font-family:'Inter';">
-                        </div>
-                    </div>
-                    <button onclick="requestVisit()" id="btnVisitReq"
-                        style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:15px; border-radius:12px; font-weight:800; cursor:pointer; transition:0.3s;">
-                        Envoyer la demande de visite
-                    </button>
-                    <div id="statusVisit"
-                        style="margin-top:15px; font-size:0.85rem; display:none; align-items:center; gap:10px;">
-                        <div class="loader-mini"></div>
-                        <span id="txtStatusVisit" style="color:rgba(255,255,255,0.8);">Envoi en cours...</span>
-                    </div>
-                </div>
-
-                <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
-            </div>
-        </div>
 
         <!-- CONCIERGERIE ADMINISTRATIVE SECTION -->
         <div class="section-wrapper" id="secMoving">
