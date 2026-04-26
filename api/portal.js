@@ -97,6 +97,7 @@ export default async function handler(req, res) {
         const rawVisites = vData.data || [];
         const visites = rawVisites.map(v => ({
             id: v.id,
+            Date_heure_de_visite: v.Date_heure_de_visite || null,
             date: v.Date_de_visite ? new Date(v.Date_de_visite).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' }) : "À confirmer",
             heure: v.Heure || "À confirmer",
             location: v.Name || "Adresse à venir",
