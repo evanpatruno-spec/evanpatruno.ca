@@ -196,7 +196,8 @@ export default async function handler(req, res) {
         }
 
         // --- ACTION DEMANDE DE VISITE ---
-        if (action === 'requestVisit' && location) {
+        if (action === 'requestVisit' && data.location) {
+            const location = data.location;
             console.log("Demande de visite reçue pour:", location);
             const vDateTime = data.Date_heure_de_visite || "";
 
