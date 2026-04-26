@@ -264,7 +264,10 @@
     }
 
     .pwa-login-btn span.pwa-icon {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        display: inline-flex;
+        align-self: center;
+        margin-top: -2px; /* Ajustement fin pour l'alignement */
     }
 
     .login-input {
@@ -280,6 +283,16 @@
         outline: none;
         text-align: center;
         display: block;
+    }
+
+    @media (max-width: 480px) {
+        .login-input {
+            font-size: 0.9rem !important;
+            padding: 15px 20px !important;
+        }
+        .login-card h2 {
+            font-size: 1.8rem !important;
+        }
     }
 
     .login-btn {
@@ -1084,8 +1097,9 @@
         }
 
         .summary-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
             margin-bottom: 20px;
-            /* Reduced from 30 */
         }
 
         .section-wrapper {
@@ -1399,6 +1413,11 @@
     if (localStorage.getItem('portal_code') && localStorage.getItem('portal_phone')) {
         document.documentElement.classList.add('portal-authenticated');
     }
+    // Détection immédiate du mode installation pour supprimer le splash
+    if (window.location.search.includes('action=install')) {
+        document.documentElement.classList.add('portal-install');
+        window.__isPwaInstall = true;
+    }
 </script>
 
 <style>
@@ -1411,49 +1430,19 @@
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
+    .hidden {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
 </style>
 
-<div id="portalSplash" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background: radial-gradient(circle at center, #2a0a24 0%, #000 100%); z-index:100000; display:flex; flex-direction:column; align-items:center; justify-content:center; transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;">
-    <div style="position:relative; width:120px; height:120px; margin-bottom:30px;">
-        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:var(--dash-primary); border-radius:30px; filter:blur(40px); opacity:0.3; animation: glowPulse 3s infinite ease-in-out;"></div>
-        <img src="/pwa-icon-512.png" style="position:relative; width:100%; height:100%; border-radius:30px; box-shadow:0 20px 50px rgba(0,0,0,0.5); animation: pulseLogo 3s infinite ease-in-out;">
-    </div>
-    <div id="splashStatus" style="color:rgba(255,255,255,0.4); font-family:'Outfit'; font-size:0.75rem; letter-spacing:4px; font-weight:700; text-transform:uppercase; animation: fadeText 2s infinite ease-in-out;">Chargement s&eacute;curis&eacute;</div>
-    
-    <!-- Bouton de secours si ça bloque -->
-    <button id="btnSplashRescue" onclick="hideSplashForce()" style="display:none; margin-top:40px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:10px 20px; border-radius:50px; font-family:'Outfit'; font-size:0.7rem; letter-spacing:1px; cursor:pointer; text-transform:uppercase;">Accéder manuellement</button>
-</div>
-
 <script>
-    function hideSplashForce() {
-        const s = document.getElementById('portalSplash');
-        if (s) {
-            s.style.opacity = '0';
-            setTimeout(() => { s.style.visibility = 'hidden'; s.style.display = 'none'; }, 800);
-        }
-    }
+    // Suppression des anciennes références au splash
+    function hideSplashForce() { console.log("Splash removed from codebase."); }
     window.hideSplashForce = hideSplashForce;
 </script>
 
-<style>
-    @keyframes glowPulse {
-        0%, 100% { transform: scale(0.8); opacity: 0.2; }
-        50% { transform: scale(1.2); opacity: 0.5; }
-    }
-    @keyframes fadeText {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 0.6; }
-    }
-    @keyframes pulseLogo {
-        0%, 100% { transform: scale(1); filter: brightness(1); }
-        50% { transform: scale(1.03); filter: brightness(1.2); }
-    }
-    #portalSplash.hidden {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
-</script>
 
 <div class="portal-main-wrapper">
     <div class="portal-aura"></div>
@@ -1532,15 +1521,15 @@
         <div class="login-card">
             <h2
                 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 8px;">
-                Acc&egrave;s au Dossier</h2>
+                <span style="white-space: nowrap; letter-spacing: -0.07em; display: inline-block;">Accès au Dossier</span></h2>
             <p style="color: rgba(255,255,255,0.6); margin-bottom: 35px;">Entrez votre Code Portail unique.</p>
             <div id="loginFormContainer">
                 <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode"
                     required>
-                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU T&Eacute;L&Eacute;PHONE"
+                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TEL."
                     class="login-input" id="inpPortalPhone" required style="margin-top: -10px;">
                 <button type="button" class="login-btn" id="btnPortalLogin" style="margin-top: 10px;">
-                    Ouvrir mon dossier
+                    <span>Ouvrir mon dossier</span>
                 </button>
                 <button type="button" class="pwa-login-btn" onclick="installPortalApp()" id="btnPwaLogin">
                     <span class="pwa-icon">&#x1f4f1;</span>
@@ -1691,13 +1680,9 @@
                             <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse complète"
                                 style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
                         </div>
-                        <div>
-                            <input type="date" id="inpVisitDate"
-                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
-                        </div>
-                        <div>
-                            <input type="text" id="inpVisitTime" placeholder="Heure (ex: 14h00)"
-                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none;">
+                        <div style="grid-column: span 2;">
+                            <input type="datetime-local" id="inpVisitDateTime"
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:#fff; outline:none; font-family:'Inter';">
                         </div>
                     </div>
                     <button onclick="requestVisit()" id="btnVisitReq"
@@ -2036,8 +2021,8 @@
             { name: "Changer les serrures &agrave; l'arriv&eacute;e", done: false }
         ],
         visites: [
-            { id: 1, date: "12 Mai 2026", heure: "14h00", location: "282 rue Bouthillier N.", type: "Visite acheteur", statut: "Confirm&eacute;" },
-            { id: 2, date: "14 Mai 2026", heure: "18h30", location: "85 rue des Champs", type: "2e Visite", statut: "En attente" }
+            { id: 1, Date_heure_de_visite: "2026-05-12T14:00:00", location: "282 rue Bouthillier N.", type: "Visite acheteur", statut: "Confirm&eacute;" },
+            { id: 2, Date_heure_de_visite: "2026-05-14T18:30:00", location: "85 rue des Champs", type: "2e Visite", statut: "En attente" }
         ],
         partners: [
             { name: "D&eacute;m&eacute;nagement Express", icon: "&#x1f69a;", category: "D&eacute;m&eacute;nagement", benefit: "10% Rabais clients Evan", code: "EVAN10" },
@@ -2115,9 +2100,16 @@
         const stageLabel = activeStage ? activeStage.label.replace(/&eacute;/g, 'é').replace(/&egrave;/g, 'è') : "Terminé";
         document.getElementById('dashNextStep').innerText = stageLabel;
 
-        const upcomingVisit = (data.visites || []).find(v => v.statut.toLowerCase().includes('confirm'));
+        const upcomingVisit = (data.visites || []).find(v => v.statut && v.statut.toLowerCase().includes('confirm'));
         if (upcomingVisit) {
-            document.getElementById('dashNextVisit').innerText = `${upcomingVisit.date} - ${upcomingVisit.heure}`;
+            let visitText = "";
+            if (upcomingVisit.Date_heure_de_visite) {
+                const dt = new Date(upcomingVisit.Date_heure_de_visite);
+                visitText = dt.toLocaleDateString('fr-CA', { day: 'numeric', month: 'short' }) + " - " + dt.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' }).replace(':', 'h');
+            } else {
+                visitText = `${upcomingVisit.date || '--'} - ${upcomingVisit.heure || '--'}`;
+            }
+            document.getElementById('dashNextVisit').innerText = visitText;
         } else {
             document.getElementById('dashNextVisit').innerText = "Aucun planifi&eacute;";
         }
@@ -2288,8 +2280,12 @@
                     <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:20px; display:flex; flex-direction: column; gap: 15px; box-shadow: var(--dash-glow);">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 10px;">
                             <div>
-                                <div style="font-weight:900; font-family:'Outfit'; font-size:1.3rem; color:#fff;">${v.date}</div>
-                                <div style="font-size:1rem; color:var(--dash-accent); font-weight:700;">&#x23f0; ${v.heure}</div>
+                                <div style="font-weight:900; font-family:'Outfit'; font-size:1.3rem; color:#fff;">
+                                    ${v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite).toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' }) : (v.date || '--')}
+                                </div>
+                                <div style="font-size:1rem; color:var(--dash-accent); font-weight:700;">
+                                    &#x23f0; ${v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite).toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' }).replace(':', 'h') : (v.heure || '--')}
+                                </div>
                             </div>
                             <div style="background:${badgeColor}; color:${badgeText}; padding:6px 14px; border-radius:50px; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; border: 1px solid ${badgeText}50;">
                                 ${v.statut}
@@ -2468,13 +2464,12 @@
 
     async function requestVisit() {
         const loc = document.getElementById('inpVisitLoc').value.trim();
-        const date = document.getElementById('inpVisitDate').value;
-        const time = document.getElementById('inpVisitTime').value.trim();
+        const dateTime = document.getElementById('inpVisitDateTime').value;
         const status = document.getElementById('statusVisit');
         const txt = document.getElementById('txtStatusVisit');
         const btn = document.getElementById('btnVisitReq');
 
-        if (!loc || !date || !time) {
+        if (!loc || !dateTime) {
             alert('Veuillez remplir tous les champs (Lieu, Date et Heure).');
             return;
         }
@@ -2497,8 +2492,7 @@
                     codePortal: code,
                     dealId: dealId,
                     location: loc,
-                    date: date,
-                    time: time
+                    Date_heure_de_visite: dateTime
                 })
             });
 
@@ -2507,8 +2501,7 @@
             txt.innerText = 'Demande de visite envoyée ! 🚀';
             setTimeout(() => {
                 document.getElementById('inpVisitLoc').value = '';
-                document.getElementById('inpVisitDate').value = '';
-                document.getElementById('inpVisitTime').value = '';
+                document.getElementById('inpVisitDateTime').value = '';
                 status.style.display = 'none';
                 btn.disabled = false;
                 btn.style.opacity = '1';
@@ -2801,10 +2794,51 @@
     }
     window.handleLogout = handleLogout;
 
+    // --- SÉCURITÉ : DÉCONNEXION AUTOMATIQUE ---
+    const IDLE_TIMEOUT = 10 * 60 * 1000; // 10 minutes
+
+    function updateActivity() {
+        localStorage.setItem('portal_last_activity', Date.now());
+    }
+
+    function initIdleTimer() {
+        // Liste des événements considérés comme une activité
+        ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(evt => {
+            document.addEventListener(evt, updateActivity, { passive: true });
+        });
+
+        // Vérification périodique (toutes les minutes)
+        setInterval(() => {
+            checkSessionTimeout();
+        }, 60000);
+    }
+
+    function checkSessionTimeout() {
+        const lastActivity = localStorage.getItem('portal_last_activity');
+        const savedCode = localStorage.getItem('portal_code');
+        
+        if (savedCode && lastActivity) {
+            const diff = Date.now() - parseInt(lastActivity);
+            if (diff > IDLE_TIMEOUT) {
+                epLog("Session expirée pour inactivité.");
+                // Pas de confirm() ici, on déconnecte pour la sécurité
+                localStorage.removeItem('portal_code');
+                localStorage.removeItem('portal_phone');
+                localStorage.removeItem('portal_deal_id');
+                location.reload();
+            }
+        }
+    }
+
     // --- AUTO-LOGIN LOGIC ---
     async function checkAutoLogin() {
         const savedCode = localStorage.getItem('portal_code');
         const savedPhone = localStorage.getItem('portal_phone');
+        
+        // Avant de tenter l'auto-login, on vérifie si la session n'est pas trop vieille
+        checkSessionTimeout();
+        updateActivity(); // On marque l'activité du chargement de page
+        initIdleTimer();  // On lance l'écouteur d'activité
         
         if (savedCode && savedPhone) {
             epLog("Tentative de connexion automatique...");
@@ -2817,10 +2851,10 @@
             // On déclenche la connexion (sans event e)
             handlePortalLogin({ preventDefault: () => {} });
         } else {
-            // No saved session: hide splash to show login
-            const splash = document.getElementById('portalSplash');
-            if (splash) splash.classList.add('hidden');
+            // No saved session: splash removed
         }
+        
+        // Safety: splash removed
     }
 
     // --- HELPERS (DECLARED FIRST) ---
@@ -2935,7 +2969,8 @@
         // Si l'utilisateur a expess&eacute;ment r&eacute;clam&eacute; l'installation via la redirection
         if (window.location.search.includes('action=install')) {
             const installOverlay = document.createElement('div');
-            installOverlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(20,8,18,0.98);z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Outfit';";
+            installOverlay.id = "pwaInstallOverlay";
+            installOverlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(20,8,18,0.98);z-index:200000;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Outfit';";
             installOverlay.innerHTML = `
                 <div style="font-size:4.5rem;margin-bottom:20px;animation:pulseDot 2s infinite;">&#x1f4f1;</div>
                 <h2 style="font-size:2.2rem;margin-bottom:10px;">Derni&egrave;re &Eacute;tape</h2>
@@ -2990,18 +3025,7 @@
     window.addEventListener('DOMContentLoaded', () => {
         checkAutoLogin();
         
-        // Sécurité 1 : Afficher le bouton de secours après 4s
-        setTimeout(() => {
-            const btn = document.getElementById('btnSplashRescue');
-            const status = document.getElementById('splashStatus');
-            if (btn && document.getElementById('portalSplash').style.visibility !== 'hidden') {
-                btn.style.display = 'block';
-                if (status) status.innerText = "Connexion ralentie...";
-            }
-        }, 4000);
-
-        // Sécurité 2 : Cacher de force après 10s
-        setTimeout(hideSplashForce, 10000);
+        // Sécurité 1 & 2 : splash supprimé
     });
 </script>
 </body>
