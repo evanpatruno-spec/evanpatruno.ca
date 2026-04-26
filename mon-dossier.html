@@ -1430,6 +1430,10 @@
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
+    /* Mode Installation : Splash invisible */
+    .portal-install #portalSplash {
+        display: none !important;
+    }
     .hidden {
         opacity: 0 !important;
         visibility: hidden !important;
@@ -1438,10 +1442,49 @@
 </style>
 
 <script>
-    // Suppression des anciennes références au splash
-    function hideSplashForce() { console.log("Splash removed from codebase."); }
+    // Détection immédiate du mode installation pour supprimer le splash
+    if (window.location.search.includes('action=install')) {
+        document.documentElement.classList.add('portal-install');
+    }
+</script>
+
+<div id="portalSplash" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background: radial-gradient(circle at center, #2a0a24 0%, #000 100%); z-index:100000; display:flex; flex-direction:column; align-items:center; justify-content:center; transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;">
+    <div style="position:relative; width:120px; height:120px; margin-bottom:30px; display:flex; align-items:center; justify-content:center;">
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:var(--dash-primary); border-radius:30px; filter:blur(40px); opacity:0.3; animation: glowPulse 3s infinite ease-in-out;"></div>
+        <img src="pwa-icon-192.png" 
+             onerror="this.src='https://evanpatruno.ca/pwa-icon-192.png'; this.onerror=function(){this.style.display='none'; document.getElementById('splashFallback').style.display='block';};" 
+             style="position:relative; width:130px; height:130px; border-radius:35px; filter: drop-shadow(0 0 15px rgba(135, 50, 118, 0.8)); animation: pulseLogo 3s infinite ease-in-out; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+        <div id="splashFallback" style="display:none; position:relative; font-family:'Outfit'; font-weight:900; font-size:2.5rem; color:#fff; text-shadow:0 0 20px var(--dash-primary);">EP</div>
+    </div>
+    <div id="splashStatus" style="color:rgba(255,255,255,0.4); font-family:'Outfit'; font-size:0.75rem; letter-spacing:4px; font-weight:700; text-transform:uppercase; animation: fadeText 2s infinite ease-in-out;">Chargement s&eacute;curis&eacute;</div>
+    <button id="btnSplashRescue" onclick="hideSplashForce()" style="display:none; margin-top:40px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:10px 20px; border-radius:50px; font-family:'Outfit'; font-size:0.7rem; letter-spacing:1px; cursor:pointer; text-transform:uppercase;">Accéder au dossier</button>
+</div>
+
+<script>
+    function hideSplashForce() {
+        const s = document.getElementById('portalSplash');
+        if (s) {
+            s.style.opacity = '0';
+            setTimeout(() => { s.style.visibility = 'hidden'; s.style.display = 'none'; }, 800);
+        }
+    }
     window.hideSplashForce = hideSplashForce;
 </script>
+
+<style>
+    @keyframes glowPulse {
+        0%, 100% { transform: scale(0.9); opacity: 0.25; filter: blur(30px); }
+        50% { transform: scale(1.3); opacity: 0.45; filter: blur(45px); }
+    }
+    @keyframes fadeText {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.6; }
+    }
+    @keyframes pulseLogo {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(135, 50, 118, 0.8)); }
+        50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(135, 50, 118, 1)); }
+    }
+</style>
 
 
 <div class="portal-main-wrapper">
@@ -2864,10 +2907,14 @@
             // On déclenche la connexion (sans event e)
             handlePortalLogin({ preventDefault: () => {} });
         } else {
-            // No saved session: splash removed
+            // Pas de session : on cache quand même le splash après un court délai
+            setTimeout(hideSplashForce, 1500);
         }
         
-        // Safety: splash removed
+        // Sécurité supplémentaire : cacher si on est sur l'installateur
+        if (window.location.search.includes('action=install')) {
+            hideSplashForce();
+        }
     }
 
     // --- HELPERS (DECLARED FIRST) ---
@@ -3038,7 +3085,19 @@
     window.addEventListener('DOMContentLoaded', () => {
         checkAutoLogin();
         
-        // Sécurité 1 & 2 : splash supprimé
+        // Sécurité 1 : Afficher le bouton de secours après 4s si bloqué
+        setTimeout(() => {
+            const btn = document.getElementById('btnSplashRescue');
+            const status = document.getElementById('splashStatus');
+            const splash = document.getElementById('portalSplash');
+            if (btn && splash && splash.style.visibility !== 'hidden') {
+                btn.style.display = 'block';
+                if (status) status.innerText = "Connexion ralentie...";
+            }
+        }, 4000);
+
+        // Sécurité 2 : Cacher de force après 8s quoi qu'il arrive
+        setTimeout(hideSplashForce, 8000);
     });
 </script>
 </body>
