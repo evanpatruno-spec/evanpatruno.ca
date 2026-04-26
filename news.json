@@ -1,6 +1,14 @@
 {
   "news": [
     {
+      "title": "Comment choisir le bon courtier ?",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-04-26/comment-choisir-le-bon-courtier.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Contrairement à d’autres professions, il n’y a pas de pénurie de courtiers immobiliers, ce qui signifie que comme consommateur, vous avez le choix. Comment trouver celui qu’il vous faut ? Vaut-il mieux le choisir seul ou avec l’aide d’une plateforme ? Explorons le sujet. Un dossier d’Isabelle Dubé",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Démystifier l’économie | Contrôler les prix pour contrer l’inflation alimentaire ?",
       "link": "https://www.lapresse.ca/affaires/2026-04-25/demystifier-l-economie/controler-les-prix-pour-contrer-l-inflation-alimentaire.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
@@ -17,26 +25,10 @@
       "category": "general"
     },
     {
-      "title": "Le PDG de la Banque Nationale invite la Banque du Canada à la prudence",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-04-24/le-pdg-de-la-banque-nationale-invite-la-banque-du-canada-a-la-prudence.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Inquiet des conséquences qu’une hausse de taux pourrait avoir au pays, le patron de la Banque Nationale invite la Banque du Canada à la prudence malgré l’intensification des pressions inflationnistes.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Les gros défis du développement de minimaisons",
       "link": "https://www.ledevoir.com/economie/974879/gros-defis-developpement-minimaisons",
       "source": "Le Devoir",
       "description": "De plus en plus de municipalités autorisent des habitations plus petites, mais les obstacles demeurent nombreux.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Des élections de mi-mandat aux États-Unis sous le signe de l’inflation",
-      "link": "https://www.ledevoir.com/economie/974567/elections-mi-mandat-etats-unis-sous-signe-inflation",
-      "source": "Le Devoir",
-      "description": "Le Parti démocrate n’arrive pas pour autant à tirer profit de cette insatisfaction.",
       "cities": [],
       "category": "general"
     },
@@ -57,14 +49,6 @@
       "category": "general"
     },
     {
-      "title": "Conflit d’intérêts: guidé par «l’appât du gain», ce courtier s’est fait 52 000$ sur le dos de clients vulnérables - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOMkRHQVN2VmlVSUtSdkFzcUdZZ3FjeUpDS1hfZ3NrODVVNTF6VWRScWlSSnlsenU0U2RTaVJUYk5vLW1nRlFaeEF6QjVCUGg3OER0cnN6aTVvSlE1N1MyeG9OR2V2RWNQSjhLYXFDTWxaeFJneG9QWDhQbFBlZk95cndUN25oMFZtc0o4MTdTQ2lNM25hSEh6TlFQbkFRVFNpcTlmM2VMVGxHZlBKWDlYaHdZUGRTaFc1VXJlMTU1b1d5S1UwQ2dBajQ3MTZsTjlaV0hzQTQwcGZ2bnpoLVdjS1BTUFBhYUk?oc=5",
-      "source": "news.google.com",
-      "description": "Conflit d’intérêts: guidé par «l’appât du gain», ce courtier s’est fait 52 000$ sur le dos de clients vulnérables  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Un marché immobilier largement à l’avantage des vendeurs à Québec - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOV29CN0ppaS1sTTR6SGg1M0k4SXdnSDNlX0xBZzZ4SDJxS3pUcDdXX0VKbXdaUmRQUnI2VVNhS01Nd2wwZFBFZ1RWbEtsNlhhbklKSnpiYm9sOUQ5amE4cXFVLXB2bHFTeFZFaV9jM2xRYnZpbHA1ZFduZVl0clVmdkpKZEEzLVBNQ05paUNyUlZCQ1hZSU1XT3dWdy1nNTFCZGdvQnZVbDZGMnpYZHlxbkcxOTBWRXhyTUtEOUxQUm1Eblk?oc=5",
       "source": "news.google.com",
@@ -77,6 +61,14 @@
       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRjRkQnVtTGRERkl2eERvVDRPa2dzTE16WFJKNVdfZzR4aTNUT2tZRGk4YzBleVBzalBqenZCM21LZDMxM25LM0lES2Q4MGhQLVp4UUsyUFRqbElxQ2U0V29GV3dRc3duTDZVYzhiZTVNTnRFMHdnQ0tyRHkxR2I3RTNSSENBV19tUDRXd1BVNFF5eHR4RlllSzRCSmFJT2M?oc=5",
       "source": "news.google.com",
       "description": "QS ramène l’idée d’éliminer les offres à l’aveugle sur les propriétés  Le Devoir",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Conflit d’intérêts: guidé par «l’appât du gain», ce courtier s’est fait 52 000$ sur le dos de clients vulnérables - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOMkRHQVN2VmlVSUtSdkFzcUdZZ3FjeUpDS1hfZ3NrODVVNTF6VWRScWlSSnlsenU0U2RTaVJUYk5vLW1nRlFaeEF6QjVCUGg3OER0cnN6aTVvSlE1N1MyeG9OR2V2RWNQSjhLYXFDTWxaeFJneG9QWDhQbFBlZk95cndUN25oMFZtc0o4MTdTQ2lNM25hSEh6TlFQbkFRVFNpcTlmM2VMVGxHZlBKWDlYaHdZUGRTaFc1VXJlMTU1b1d5S1UwQ2dBajQ3MTZsTjlaV0hzQTQwcGZ2bnpoLVdjS1BTUFBhYUk?oc=5",
+      "source": "news.google.com",
+      "description": "Conflit d’intérêts: guidé par «l’appât du gain», ce courtier s’est fait 52 000$ sur le dos de clients vulnérables  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -115,14 +107,6 @@
       "category": "local"
     },
     {
-      "title": "Sélectionnez votre courtier immobilier pour sa compétence plutôt que pour sa photo - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPU1ZyeHpMallxTjdZSTk1czB0el9ieHRjLXNmVUJRUWkyeThLUTZxM1l6NTVqOExIQjNlMjlEUmZnMVBqbjZ2bVFCYm9JdEJTN2Z5dnFvMzlOVktsWUtiMm5QbGJrTGVfXzJNbWZDMzAwRllLc25mMi0xcXhXRUM1UW5RbmhYYWVEcmdRNWxFb0xta21vSmhvWTF1N05uNDY0bDdlWTlLc3Rab1RhaU9hc1FLTUh5emlVLS1zMHk0SFJLQkhyVEh6YXFSSTJBdG5O?oc=5",
-      "source": "news.google.com",
-      "description": "Sélectionnez votre courtier immobilier pour sa compétence plutôt que pour sa photo  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
       "source": "news.google.com",
@@ -139,14 +123,6 @@
       "category": "general"
     },
     {
-      "title": "Subvention de 1,3 M$: le Boisé des Estacades pourrait échapper au développement immobilier à Trois-Rivières - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOWnU2dmo0V09YVkNlRHU4cGEwOVMzWEJUVlIwaHY3dEpySE5ySS1ERVUxaXFBSE1ybEdrUWthUEF3R0sxRzhEcGtsY2Y2RnRsUFhVbHF1WFdtWVBRZW5aZW5VbTBWci1OTXZOQUZmOF9YUmlvMERqblpQRHhHUWhOajVoU25VZVlJZ29Ed2RINWNxbDVVQUNRa0JMVFlkdWJ2ZEhQZVRsUW1MY29SUlE4Tk9VSTFfMGNSZVp1YktlbkhFZ0xXZTVzMzhGOU9QR2tQUENJUzZjR3lRQXFxeTEwaQ?oc=5",
-      "source": "news.google.com",
-      "description": "Subvention de 1,3 M$: le Boisé des Estacades pourrait échapper au développement immobilier à Trois-Rivières  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Ayant agi dans l’appât du gain, un courtier immobilier lanaudois est sanctionné - Mon Joliette",
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORHJlNDRXTVg4cThCdjRzcFROazZMeFIzMlh5N0NSSHpWVmUwaklVZ3JaOUVKcVJVZ3c2TEN5V3hhUXpKbktZRmwwMWNmWTVwcGNlZlNhVGVLWGFXLTh0ZlljaU11Zk8zc2J2UkhFaHZFQUd4bjVPUzFLVkpXaGxtdmJoS0VvMlBEUkhGalVxajdkRXVhTFlRX0tHLVV6bDhhZU5XNFNpZG9SaFVwY25LakFSYw?oc=5",
       "source": "news.google.com",
@@ -159,6 +135,14 @@
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPY2todkw4S1RIbjJEOEx4RXZSVHBLNzJyM3diUjI1NF9YWTVPcUZZVVJ4ZENEN0hNaTJOVThWdWtqb1VfejBsalY2VFBOWXJ5dG1EU0tiUW1hdklSbzdpQndURmZTYTRRVVljVnlIQndyN2NESUp6bWdGYmROWFpBY1RnbEFjbV9yZVd5b3lqQlVWS09qN3BLQVhlQ3U?oc=5",
       "source": "news.google.com",
       "description": "Les nouveaux logements touristiques dans le Vieux-Québec interdits jusqu’à l’automne  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Subvention de 1,3 M$: le Boisé des Estacades pourrait échapper au développement immobilier à Trois-Rivières - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOWnU2dmo0V09YVkNlRHU4cGEwOVMzWEJUVlIwaHY3dEpySE5ySS1ERVUxaXFBSE1ybEdrUWthUEF3R0sxRzhEcGtsY2Y2RnRsUFhVbHF1WFdtWVBRZW5aZW5VbTBWci1OTXZOQUZmOF9YUmlvMERqblpQRHhHUWhOajVoU25VZVlJZ29Ed2RINWNxbDVVQUNRa0JMVFlkdWJ2ZEhQZVRsUW1MY29SUlE4Tk9VSTFfMGNSZVp1YktlbkhFZ0xXZTVzMzhGOU9QR2tQUENJUzZjR3lRQXFxeTEwaQ?oc=5",
+      "source": "news.google.com",
+      "description": "Subvention de 1,3 M$: le Boisé des Estacades pourrait échapper au développement immobilier à Trois-Rivières  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -237,22 +221,6 @@
       "category": "general"
     },
     {
-      "title": "Taxe de bienvenue remboursée au Québec: êtes-vous admissible à ce paiement rétroactif? - Rose Pingouin",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPNTFhNkVObDRwOURhbG5KWDFObHNKQkp4RGtjNXIxMGJjUHQ0QTJUTjhCdHRXUjUwLXpSTlhWSEhQd240UFNLTU9sTTMzZnZqeXoyT0taczRSTnREWnAyVmFqVDVFOXUtdTg5eTg3a015cHhpbDFOWFI1SVFwcDVzOTk0RVlIZmZ4elpPaVBFSFkyd1JBc2g0WVBBZGFVT2pXZkNzcjg3ZTVKWnNCLU5nczNzT1V0aEwyNzlaRVoyUWVxZmRMUDZCT2VJVFZ3YnVfemc?oc=5",
-      "source": "news.google.com",
-      "description": "Taxe de bienvenue remboursée au Québec: êtes-vous admissible à ce paiement rétroactif?  Rose Pingouin",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Prêts hypothécaires: le conflit au Moyen-Orient incite les Canadiens à se tourner vers le taux variable - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOTnpTaVFtRGhyWll6aDA3aU9UWGF3VVJXUkIyTi1MRkdvb2xndTdzNzlrS0s1a1RMb203bHJ3clJjRVZuNmhMMmdEc0tXU2lxVTJLd0NGSFBvNWlMdVpaUXZPV1k4TzI4MmJRZ1ozN1RpU1RCOERHeDEtb2t3V1ZSN3Z5TVRoN2t1RjgtcmhkUnM3NmhjU0VIUGhFNmZ0OWRLVnVnYXR1YThiMGpTWENJX01XMFVDOUpDMWNPWlp2RnhkNDA4RXF3cy1BbExDSm5DclcyVzRnSWI?oc=5",
-      "source": "news.google.com",
-      "description": "Prêts hypothécaires: le conflit au Moyen-Orient incite les Canadiens à se tourner vers le taux variable  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le taux préférentiel au Canada - nesto.ca",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9XeGQxcVpDOV9DY25JYkU5M2NYU3JISEU5ZDdMbmJlVjlUaEVyX2lEQ0p1d21wUHp5U3hRN2R2TVQwU0s2OHkxRlVpZ2FYVllXa3p5MFJ2NGlqcU9QM2kycV93?oc=5",
       "source": "news.google.com",
@@ -261,10 +229,10 @@
       "category": "general"
     },
     {
-      "title": "Le PDG de la Banque Nationale invite la Banque du Canada à la prudence - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTzhjaVJjSndSUlRsMWhHeTVCN09BU2FwVGVoM1kyTk1lUnJIR3V4TnVUUHlDMk5VYjJSb05PZXlrRmFfZThodnpTSkpOS1huMXdsdE1XeGdGV2c3TkdxWkdJcnRRc3hrcUl1Y1RqRUxoVTNLZ1pBRWVQc01aMGFXTFRVcVdQYUtfOW1Ed1Q1ZGJOSHlVbjlHcU8wZ20wVDZPM0hkZmxDeU5XMkgyUDZlTFQ1d3dmQmgwdzg3dzk2U2hFaDBrbkE?oc=5",
+      "title": "La Banque du Canada publie la livraison du premier trimestre de l’Enquête sur les perspectives des entreprises et de l’Enquête sur les attentes des consommateurs au Canada - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxObjRTNjF2SDE2SWxTc0JmVDh5R3VNb2xFMTA1X0dlZFl1Z2pJREhBaEdMek82bTRSOS1sRTBqMGFyWjExa2tVeGwzX1ZVRnkxc01vOS1SLU9vNEM5YUFfamVweE84ZEthc3VLQ2Zoc0hMVnN6YnVGTUxsZTBZa0t3cXRJNmU2ekZGbHozeFRRVjlfT2gzV1d3c1YxQnQ3Skh4UG1hOHZLTGdKNTlFcnJudFFjdGh6cDJkZVEzTlUwV1Z6OXhHaUpSczhkejNTNTZZVkg4TG4yaG9XaEtqQXB6MVRoRDlETFQxS2JZUXltRTdGRkZYQ0pGbXF1SXpfSGttWVE?oc=5",
       "source": "news.google.com",
-      "description": "Le PDG de la Banque Nationale invite la Banque du Canada à la prudence  La Presse",
+      "description": "La Banque du Canada publie la livraison du premier trimestre de l’Enquête sur les perspectives des entreprises et de l’Enquête sur les attentes des consommateurs au Canada  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -279,10 +247,10 @@
       "category": "local"
     },
     {
-      "title": "Enquête sur les perspectives des entreprises – Premier trimestre de 2026 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWUU4MEw3ZWtHbGNsN2ZqZ1o2VE9ITml5bU5mcU1pY21lUzNxYnZqN3lWa0R5by1tZ0lBUGFMa29vZGdiaXh0eVAxdFY0UU9nc3hCUlRZekR2czJTQ2NHeGtYMWQyQmVSMEdud2k1ZGNPbzZSQVBrOGNBeXFZaVltMHZ1Mm93SmdxeFdubWdfNTBqaHRvSkhQam9HdjNoUTRFVHRNak1wdWN1NXpoX1E?oc=5",
+      "title": "Enquête de la Banque du Canada | Le moral des entreprises s’améliorait, avant la guerre au Moyen-Orient - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdGx1emJwb1B6RVhjMTk3akZadkhKVjczblNEVUNYVVFHQnhGZHV2a2dhNEZsMmF4SFQ5TTB2Uzc1T2h6alIyT0lTcF9ZUVcwRnB3Q2ZFUUZFaVZQNW1HR05GN01CRFJjX2t4b2wtZ0dmbHBBS3JZMUsxUTQySXhPc3R5QVhJNU9Pb3hSdkp3YTF1RnpXZU9LNmtGWEM2YjJqRWdCOWlZUXRkY1V6dUdvU1lyUWczSjZUaEZHVFFZSTdwWHZCVkxscnVLb1V3RFBWZkIxVXVQeE5xYjFicGZMY2V3?oc=5",
       "source": "news.google.com",
-      "description": "Enquête sur les perspectives des entreprises – Premier trimestre de 2026  Banque du Canada",
+      "description": "Enquête de la Banque du Canada | Le moral des entreprises s’améliorait, avant la guerre au Moyen-Orient  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -303,6 +271,14 @@
       "category": "general"
     },
     {
+      "title": "TD mise sur des taux stables - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbTd2VjlOQTBIcmdIbmpaclM0SFZpTnlfQ3VUbFVkbm1yclNtNjNHazBPY3ktemY4MW04T3Z2ZzczczhFbmJBYlN2VWl5VjVlUmhYc3BCUE5YMFZWNVRacXV2blRpX0VpMExFT19PcEM5dWdfbDV1eWw4SFZWR0pCLXlRVTVmdGhNczJDMHhwMU9IYlhnenc?oc=5",
+      "source": "news.google.com",
+      "description": "TD mise sur des taux stables  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Les stablecoins : le Canada adopte sa loi et importe le débat sur le rendement - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNX3JZZ1REb0llMmNOTFVVZURMUmxidWdFTkxLaWZ3X0VLbFlZQ0ZGbkJ0YWNyeGpPdDNsQXpmVUZVbWhTV0xfUjJqUC1fQlBjb01MaXZiUFVUdEpHa3FuQk05ZTBlcnRUWDlpYTI0US1vU3JOY2FVTkw0ZjYtc3ZSYktkWllueENiNGtWT1hTNVpmYnJya090N0loN2FiSE9pTkcxWlR5Y09zU2R5QXFNRWpUaDliZmQ5R1JQQldhS2MtbGlFZHI1SkZB?oc=5",
       "source": "news.google.com",
@@ -311,10 +287,18 @@
       "category": "general"
     },
     {
-      "title": "Enquête de la Banque du Canada | Le moral des entreprises s’améliorait, avant la guerre au Moyen-Orient - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdGx1emJwb1B6RVhjMTk3akZadkhKVjczblNEVUNYVVFHQnhGZHV2a2dhNEZsMmF4SFQ5TTB2Uzc1T2h6alIyT0lTcF9ZUVcwRnB3Q2ZFUUZFaVZQNW1HR05GN01CRFJjX2t4b2wtZ0dmbHBBS3JZMUsxUTQySXhPc3R5QVhJNU9Pb3hSdkp3YTF1RnpXZU9LNmtGWEM2YjJqRWdCOWlZUXRkY1V6dUdvU1lyUWczSjZUaEZHVFFZSTdwWHZCVkxscnVLb1V3RFBWZkIxVXVQeE5xYjFicGZMY2V3?oc=5",
+      "title": "Enquête sur les perspectives des entreprises – Premier trimestre de 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWUU4MEw3ZWtHbGNsN2ZqZ1o2VE9ITml5bU5mcU1pY21lUzNxYnZqN3lWa0R5by1tZ0lBUGFMa29vZGdiaXh0eVAxdFY0UU9nc3hCUlRZekR2czJTQ2NHeGtYMWQyQmVSMEdud2k1ZGNPbzZSQVBrOGNBeXFZaVltMHZ1Mm93SmdxeFdubWdfNTBqaHRvSkhQam9HdjNoUTRFVHRNak1wdWN1NXpoX1E?oc=5",
       "source": "news.google.com",
-      "description": "Enquête de la Banque du Canada | Le moral des entreprises s’améliorait, avant la guerre au Moyen-Orient  La Presse",
+      "description": "Enquête sur les perspectives des entreprises – Premier trimestre de 2026  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le PDG de la Banque Nationale invite la Banque du Canada à la prudence - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTzhjaVJjSndSUlRsMWhHeTVCN09BU2FwVGVoM1kyTk1lUnJIR3V4TnVUUHlDMk5VYjJSb05PZXlrRmFfZThodnpTSkpOS1huMXdsdE1XeGdGV2c3TkdxWkdJcnRRc3hrcUl1Y1RqRUxoVTNLZ1pBRWVQc01aMGFXTFRVcVdQYUtfOW1Ed1Q1ZGJOSHlVbjlHcU8wZ20wVDZPM0hkZmxDeU5XMkgyUDZlTFQ1d3dmQmgwdzg3dzk2U2hFaDBrbkE?oc=5",
+      "source": "news.google.com",
+      "description": "Le PDG de la Banque Nationale invite la Banque du Canada à la prudence  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -331,6 +315,14 @@
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQX2g3NEVXd2JFZzYzWHVJeTBzQnQwVEtiejdoSHZ0WXV5aUJHTHdhc1lUbVVGMk9WMml0UmhaTmQ1X1VPTi1lRGlJemp0b2VIeWJIQ0VTNGhMajVKQ3ZuQ2FYdENGcW1WN0tIdzNPZG9qYmtMem1TMFdWN0xjem5YZExqRGk0d0w2SGdxOHhpYnd6VnI0Smc1WHFPS081R1NNYnFoUFQ3NVhXYUhKeTE5NEJEUF9WNkx4ZTNqN3VCR1JUY2tLcmpNTnVkOWs?oc=5",
       "source": "news.google.com",
       "description": "L’inflation pétrolière ne devrait pas forcer la main de la Banque du Canada  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Comment économiser 13 000 $ lors du renouvellement de votre hypothèque en 2026 - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWlh4T3g2SjB1WFRFejhCcnRVX21aUmp0Tjh6MkcyNmZ0THM1MHRSTS1tME5ydXI3SEt1Z3VZRkZORE1LYmFaSXBaZmwydXhaenBRNlZmbVJ6cHp4dUxpT0NTOVFKSXVwRGo2b2ZnWjgyaHVNckExWEpfN2ZkRFZUWTRaV201dTYwSms4OEZiOEdmanozaEd1RVRDbjFuWUhtck5ydWtkUUJ3cTQxVHlETjJONnZvZEE?oc=5",
+      "source": "news.google.com",
+      "description": "Comment économiser 13 000 $ lors du renouvellement de votre hypothèque en 2026  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -359,18 +351,18 @@
       "category": "general"
     },
     {
-      "title": "L’abordabilité du logement plus inquiétante que la guerre commerciale - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQY2QwcWZOVFh2LTR3ejAxeDg2em9uLXBDZ0RmVXZHZEdlZlhwRWMxS3hueTEwSjVOM1RYUzJraklmMkRfa21XVFhLMGhDRWtnRFFucGNMQzM3cnZZOGQ2amF6WHFSdURRSXZTSFhmOWJqRmR3MkhiZUJjYTRKSWkxb0QxRUxsNHdPY0t0MzVSSVNsbEg1cmV0VjkzYjVyN2dGM3RhZnE0ejY?oc=5",
+      "title": "L’inflation a augmenté à 2,4 % en mars au Canada - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNWkhlNDU1azlHTW5PUk5fTTdyQjRqaG5wdmt4alBWLVVvaE9ra3RVMkpyWFNSU1ZJUXFlanFMeEJwUkFQem1NZjVxNUd3VEJTUEtHWDl3dHBaMlBVN0J1MU1UNnQ2VWNvNmNkSGQ5ejJZZGJ3WHBKWlFXYXlobzM1UmQ5aw?oc=5",
       "source": "news.google.com",
-      "description": "L’abordabilité du logement plus inquiétante que la guerre commerciale  Canadian Mortgage Trends",
+      "description": "L’inflation a augmenté à 2,4 % en mars au Canada  Radio-Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Immobilier commercial: la distribution a la cote - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNRHlnam5tOTFQSWNWUGVyRDVaaWtyRFUxeHdzY1J4SGJzUEtJU0VKam9XZm4wN1BLaGpUMXRmTi1ab2dMcTN4eDhjdE1kY1JqclYyU0V5dVp6c0lxajFiT09vWHZybHNYYUdmcnk5T1BXam1rd2dPVk1lWTNNbjhZbGY1RDdXbnV6VFY2bzRIaFFyNTZkX1ZuNXg0OEtBU09NcXpyZkxEeEx6ZmFFQXU2ZFBlN2hEenllQUlqMV9fOVhMS2VuV3IwQmNlcTA?oc=5",
+      "title": "L’abordabilité du logement plus inquiétante que la guerre commerciale - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQY2QwcWZOVFh2LTR3ejAxeDg2em9uLXBDZ0RmVXZHZEdlZlhwRWMxS3hueTEwSjVOM1RYUzJraklmMkRfa21XVFhLMGhDRWtnRFFucGNMQzM3cnZZOGQ2amF6WHFSdURRSXZTSFhmOWJqRmR3MkhiZUJjYTRKSWkxb0QxRUxsNHdPY0t0MzVSSVNsbEg1cmV0VjkzYjVyN2dGM3RhZnE0ejY?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier commercial: la distribution a la cote  Les Affaires",
+      "description": "L’abordabilité du logement plus inquiétante que la guerre commerciale  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -391,14 +383,6 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada annonce la nomination de deux sous-gouverneurs - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPa1BxNmFFak00N2l3REFzdnpjRktyNjlUNlFVZGZGVy1LdTlrNEd2eDVuMXdncGg5VHBwdzVkY1lSbklYTzZYRUVWUGNuVEtKdGpDS29LVVBnWVpwNGFmckk0d2tyZXZ0el9qZmViSVd5ZnFwZi1NOUxPSkF3a1Z5WU5VN1BsbEUyQnhrUnl4cjBTakRhYnUxUXdUekdNek50RFI2MnhEUW9vbXBRUEhFZkRVZldTT0JWbExES1pwRkJ6eUJz?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada annonce la nomination de deux sous-gouverneurs  Zonebourse Suisse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Une enquête de la Banque du Canada montre que les consommateurs anticipent une hausse des prix liée à la guerre au Moyen-Orient - Investing.com France",
       "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPTGNicEx3alpYOW9tQXEta2NYZ0ZqZW5XNzc3NmJtbHo5QTVNa2YzUktoUjRhbVo5MGZmN0wxam1jMlExdXUtaVJDb2F5LVduNkgzQ05HTWdvcmdvU2FuTUFiUXZYM3pjX1plbGtPNEJKeFNHRk1rTTFvLXBUOUc2c01qWEh4RDU5cXVPbTJSNTRKbTlXT1M2RkRMNXpnTVp5VWpOUUNac3pSNzQtZV80bm9TSlZuSHFhYnJWZ2pBYzJocnlVOE9iTmZRTjlkMkZuSS1YOUJZTUg4YjNPMVJjang3YUxCNG5nR3pKa1VnVXFGc3RCcElpelU2RmwxOUFRejNHM1kyUXVZZXlQM1I4?oc=5",
       "source": "news.google.com",
@@ -415,18 +399,18 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada nomme Gosselin et Vincent vice-gouverneurs - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOb2RtaTF1Rm1TREtxOUVnZ295M1VRay02U3c1aXJiMUp1U3k1dG5ESThvRllhODRJUzBnNk1nVFZKSDN6Q0J0cHN1SE9ubnQ1VU9EQlVJUXlBV0ZQSmZTM3JzYmZfWUhZZE1HSGdGem9ma2oyR1BRa0JsWUNBYUhmNXIxNGl1eGw5QnJzVlBLcms0ajU4YklCZFh2WEVvdFBDaVM3aFBwZDdYajkzTEVqZWZrRjBJdw?oc=5",
+      "title": "La Banque du Canada annonce la nomination de deux sous-gouverneurs - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMlNlVmUycVJqRGwxMWdiejExRkV0eFpXbGZnek9hLVNPeEpFNjVhWVBnNkdoeVFhc3ROcU9EY0ZoMHZzNkFnNEJVYUg1bXhBLXp4YU1TZ1BMbmZPUUtBYm5sOGxEb0FoTFJhbHdRVnVXbmdpU1BDZ0lxZDJuLTdEQ1FqSDYxUWtadkxsN0Rac3FQZi16RUVQWktlbncxTXpOWEttT1BtbWM2bk9EVzhfbTJMMjR4S2FwTnZCaEJINFVwNUNnVHc?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada nomme Gosselin et Vincent vice-gouverneurs  Investing.com France",
+      "description": "La Banque du Canada annonce la nomination de deux sous-gouverneurs  Zonebourse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Policy rate: the Bank of Canada pauses, ending a series of seven consecutive cuts - Multi-Prêts Hypothèques",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQSEJqaXg3VEVVaHFNQkxWYnQ1MWxrNXFZdlFvdTg3Rzg5MEt6bllfVzBzc0pUY3JIaWdNTkVWX1MzWWNYd2ctWmN3M3QybTNDUElPc3JyTm9EcjgxWWlnUWRselRTdGk0N2g4Y2pKRERjRXM4N244VHVYN2Jmel9DR1lwaGhmOE9SX1JQMVNra2RSMk1lNzNVZjY4SkV5bEQ3TkZCLVNGbWJGeGlIOTVvbXpMYXlSOGR0WkdkampmbVR6cUlRZ3V3?oc=5",
+      "title": "La Banque du Canada nomme Gosselin et Vincent vice-gouverneurs - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOb2RtaTF1Rm1TREtxOUVnZ295M1VRay02U3c1aXJiMUp1U3k1dG5ESThvRllhODRJUzBnNk1nVFZKSDN6Q0J0cHN1SE9ubnQ1VU9EQlVJUXlBV0ZQSmZTM3JzYmZfWUhZZE1HSGdGem9ma2oyR1BRa0JsWUNBYUhmNXIxNGl1eGw5QnJzVlBLcms0ajU4YklCZFh2WEVvdFBDaVM3aFBwZDdYajkzTEVqZWZrRjBJdw?oc=5",
       "source": "news.google.com",
-      "description": "Policy rate: the Bank of Canada pauses, ending a series of seven consecutive cuts  Multi-Prêts Hypothèques",
+      "description": "La Banque du Canada nomme Gosselin et Vincent vice-gouverneurs  Investing.com France",
       "cities": [],
       "category": "general"
     },
@@ -439,10 +423,10 @@
       "category": "general"
     },
     {
-      "title": "UBS s'attend à ce que le RPM de la Banque du Canada intègre la hausse des cours du pétrole la semaine prochaine ; commentaires sur la nomination de deux nouveaux sous-gouverneurs - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOYlVNVzVjM200aWt1RUpRd1Q0YUdWN2VBZ3lPbnNaMEhiWXZ5ZmpBdHEtNjRWcnQtQks5VmNBTkRMaU1WZ2UtNGJBMVZIV1pCOERzTlh1X3hmRGxrbkV4UnlXQm5XcW5ETkN5enAzaHVnWVNQbWxyQ2xGSmo5Q2ZYQmpnVWhBbDF4a1JWMWRKTl95cmM4ZU1wMHVIRmdyc0E1V2VObHljR3kxRHBhNVhrQktWNDM1aGJZbnhZb3lYVlhhRUlPNTNONld6cXJWY3QzRWdYSlFkeU0yTkVfZDAtZDVQLUlzNEdfdVdsTUwybzV1UQ?oc=5",
+      "title": "UBS s'attend à ce que le RPM de la Banque du Canada intègre la hausse des cours du pétrole la semaine prochaine ; commentaires sur la nomination de deux nouveaux sous-gouverneurs - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQb3dacG9WQVMxZ2l4cTZuUlNmMWxzakpZdlJ6aV9xOXlZcFpIa2t1Y244b2Z5OEQ3dENCYk1UVE51UXo3V2ZhSlhnMk53N1liZHR6LVdhREJ5bHc4dW5ySm9iM0lwbFE0akF0T194RzVOc2Z6RWxFdGZUajVKNFRzU2dsV0NpUzRMY0ZEMXQ5V2VVYXVzZDZKa0VMSGJvM3ZBaFBMSjFlaURHM3Ffb21iVEpqdmw1SjFpbW1rTE9BSUhiZlp6THZQdDFnVkNYSHFpTnFrVkRDY1h6VHNLZVR6MEdEcEdTa2JpTlB6cUZnZVZrYXc?oc=5",
       "source": "news.google.com",
-      "description": "UBS s'attend à ce que le RPM de la Banque du Canada intègre la hausse des cours du pétrole la semaine prochaine ; commentaires sur la nomination de deux nouveaux sous-gouverneurs  Zonebourse Suisse",
+      "description": "UBS s'attend à ce que le RPM de la Banque du Canada intègre la hausse des cours du pétrole la semaine prochaine ; commentaires sur la nomination de deux nouveaux sous-gouverneurs  Zonebourse",
       "cities": [],
       "category": "general"
     }
@@ -499,5 +483,5 @@
     },
     "last_quarter": "Q1 2026"
   },
-  "last_update": "2026-04-25 14:03"
+  "last_update": "2026-04-26 14:04"
 }
