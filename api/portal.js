@@ -218,22 +218,6 @@ export default async function handler(req, res) {
                 body: JSON.stringify(visitRecord)
             });
 
-            // 2. Log dans Interactions_Portail (Optionnel mais utile pour l'historique)
-            const logData = {
-                data: [{ 
-                    Name: `Demande Visite: ${location}`, 
-                    Code_Portail: cleanCode, 
-                    Affaire: dealId,
-                    Description: `Le client demande une visite.\nLIEU: ${location}\nDATE/HEURE: ${vDateTime}`
-                }]
-            };
-
-            await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
-                method: 'POST',
-                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify(logData)
-            });
-
             return res.status(200).json({ s: true, msg: "Demande de visite enregistrée" });
         }
 
