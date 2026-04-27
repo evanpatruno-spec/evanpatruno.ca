@@ -22,7 +22,7 @@
         try {
             const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
             const data = await res.json();
-            if (!res.ok) throw new Error(data.error || "Accès refusé.");
+            if (!res.ok) throw new Error((data.error || "Accès refusé.") + (data.details ? ": " + data.details : ""));
             localStorage.setItem('portal_code', code);
             localStorage.setItem('portal_phone', phone);
             localStorage.setItem('portal_deal_id', data.id);
@@ -30,7 +30,8 @@
             document.getElementById('portalOverlay').classList.add('hidden');
             document.getElementById('portalDash').classList.add('visible');
         } catch (error) { 
-            alert("⚠️ Erreur : " + error.message); 
+            const msg = error.message || "Erreur inconnue";
+            alert("⚠️ Erreur : " + msg); 
             if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; } 
         }
     }

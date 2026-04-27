@@ -202,7 +202,7 @@
         try {
             const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, phoneLast4: p }) });
             const data = await res.json();
-            if (!res.ok) throw new Error(data.error || "Accès refusé");
+            if (!res.ok) throw new Error((data.error || "Accès refusé") + (data.details ? ": " + data.details : ""));
             localStorage.setItem('portal_code', c); localStorage.setItem('portal_phone', p); localStorage.setItem('portal_deal_id', data.id);
             renderPortal(data);
             document.getElementById('portalOverlay').classList.add('hidden');
