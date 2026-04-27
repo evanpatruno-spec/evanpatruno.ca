@@ -21,15 +21,18 @@
         if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
         try {
             const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
-            if (!res.ok) throw new Error("Accès refusé.");
             const data = await res.json();
+            if (!res.ok) throw new Error(data.error || "Accès refusé.");
             localStorage.setItem('portal_code', code);
             localStorage.setItem('portal_phone', phone);
             localStorage.setItem('portal_deal_id', data.id);
             renderPortal(data);
             document.getElementById('portalOverlay').classList.add('hidden');
             document.getElementById('portalDash').classList.add('visible');
-        } catch (error) { alert("⚠️ " + error.message); if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; } }
+        } catch (error) { 
+            alert("⚠️ Erreur : " + error.message); 
+            if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; } 
+        }
     }
 
     function formatVisitDate(dt) {
@@ -186,5 +189,25 @@
     function renderPartners(partners) { const w = document.getElementById('wrapPartners'); if (!w || !partners) return; w.innerHTML = partners.map(p => `<div style="background:rgba(255,255,255,0.02); padding:20px; border-radius:25px; border:1px solid var(--dash-border); position:relative; overflow:hidden;"><div style="position:absolute; top:12px; right:-25px; background:var(--dash-primary); color:#fff; padding:3px 30px; transform:rotate(45deg); font-size:0.55rem; font-weight:900;">PROMO</div><div style="font-size:1.5rem; margin-bottom:10px;">${p.icon || '🤝'}</div><div style="font-family:'Outfit'; font-weight:800; color:#fff;">${p.name || 'Partenaire'}</div><div style="font-size:0.75rem; opacity:0.6; margin-top:5px;">${p.benefit || 'Avantage exclusif'}</div></div>`).join(''); }
     async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
     function toggleSection(id) { const el = document.getElementById(id); if (el) el.classList.toggle('collapsed'); }
+    
+    // --- GESTION PWA ---
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault(); deferredPrompt = e;
+        const btn = document.getElementById('btnInstallPWA');
+        if (btn) btn.style.display = 'block';
+    });
+
+    const btnPWA = document.getElementById('btnInstallPWA');
+    if (btnPWA) {
+        btnPWA.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') { btnPWA.style.display = 'none'; }
+            deferredPrompt = null;
+        });
+    }
+
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initPortal); } else { initPortal(); }
 </script>

@@ -74,7 +74,8 @@
             <p style="color:rgba(255,255,255,0.6); margin-bottom:35px;">Entrez votre Code Portail unique.</p>
             <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode">
             <input type="password" maxlength="4" placeholder="4 CHIFFRES DU TEL." class="login-input" id="inpPortalPhone" style="margin-top:-10px;">
-            <button class="login-btn" onclick="handlePortalLogin()">Ouvrir mon dossier</button>
+            <button class="login-btn" onclick="handlePortalLogin()" id="btnPortalLogin">Ouvrir mon dossier</button>
+            <button id="btnInstallPWA" style="display:none; margin-top:20px; background:rgba(255,255,255,0.05); color:#00f2ff; border:1px solid #00f2ff50; padding:12px; border-radius:12px; font-weight:800; cursor:pointer; width:100%; font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; transition:0.3s; font-family:'Outfit',sans-serif;">📲 Installer l'App sur mon mobile</button>
         </div>
     </div>
 
@@ -192,19 +193,42 @@
     function initPortal() { const c = localStorage.getItem('portal_code'), p = localStorage.getItem('portal_phone'); if (c && p) handlePortalLogin(); }
 
     async function handlePortalLogin(e) {
-        if (e) e.preventDefault();
+        if (e && e.preventDefault) e.preventDefault();
+        const btn = document.getElementById('btnPortalLogin');
         const c = (document.getElementById('inpPortalCode')?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
         const p = (document.getElementById('inpPortalPhone')?.value || localStorage.getItem('portal_phone'))?.trim();
         if (!c || !p) return;
+        if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
         try {
             const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, phoneLast4: p }) });
-            if (!res.ok) throw new Error("Accès refusé");
             const data = await res.json();
+            if (!res.ok) throw new Error(data.error || "Accès refusé");
             localStorage.setItem('portal_code', c); localStorage.setItem('portal_phone', p); localStorage.setItem('portal_deal_id', data.id);
             renderPortal(data);
             document.getElementById('portalOverlay').classList.add('hidden');
             document.getElementById('portalDash').classList.add('visible');
-        } catch (error) { alert("⚠️ " + error.message); }
+        } catch (error) { 
+            alert("⚠️ Erreur : " + error.message); 
+            if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
+        }
+    }
+
+    // --- GESTION PWA ---
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault(); deferredPrompt = e;
+        const b = document.getElementById('btnInstallPWA');
+        if (b) b.style.display = 'block';
+    });
+    const btnPWA = document.getElementById('btnInstallPWA');
+    if (btnPWA) {
+        btnPWA.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') btnPWA.style.display = 'none';
+            deferredPrompt = null;
+        });
     }
 
     function renderPortal(data) {
