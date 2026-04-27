@@ -1,0 +1,190 @@
+<script>
+    /**
+     * PORTAL SCRIPTS v14.13 - FIX TIME DISPLAY & SYNC
+     */
+    const API_URL = 'https://dossier.evanpatruno.ca/api/portal';
+
+    function initPortal() {
+        const code = localStorage.getItem('portal_code');
+        const phone = localStorage.getItem('portal_phone');
+        if (code && phone) handlePortalLogin();
+    }
+
+    async function handlePortalLogin(e) {
+        if (e && e.preventDefault) e.preventDefault();
+        const inpCode = document.getElementById('inpPortalCode');
+        const inpPhone = document.getElementById('inpPortalPhone');
+        const btn = document.getElementById('btnPortalLogin');
+        const code = (inpCode?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
+        const phone = (inpPhone?.value || localStorage.getItem('portal_phone'))?.trim();
+        if (!code || !phone) return;
+        if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
+        try {
+            const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
+            if (!res.ok) throw new Error("Accès refusé.");
+            const data = await res.json();
+            localStorage.setItem('portal_code', code);
+            localStorage.setItem('portal_phone', phone);
+            localStorage.setItem('portal_deal_id', data.id);
+            renderPortal(data);
+            document.getElementById('portalOverlay').classList.add('hidden');
+            document.getElementById('portalDash').classList.add('visible');
+        } catch (error) { alert("⚠️ " + error.message); if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; } }
+    }
+
+    function formatVisitDate(dt) {
+        if (!dt) return "À venir";
+        try {
+            // Zoho envoie parfois "YYYY-MM-DD HH:mm:ss" au lieu de "YYYY-MM-DDTHH:mm:ss"
+            const cleanDT = dt.replace(' ', 'T'); 
+            const dateObj = new Date(cleanDT);
+            if (isNaN(dateObj)) return dt; // Fallback si invalide
+            const datePart = dateObj.toLocaleDateString('fr-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
+            const timePart = dateObj.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' });
+            return `${datePart} à ${timePart}`;
+        } catch (e) { return dt; }
+    }
+
+    function renderPortal(data) {
+        if (!data) return;
+        const setT = (id, v) => { const el = document.getElementById(id); if(el) el.innerText = v || "--"; };
+        setT('txtWelcome', `Bonjour ${data.firstName || 'Evan'}.`);
+        setT('txtPropName', `${data.property || ''} - ${data.city || ''}`);
+        setT('txtCodeRef', `#${data.code || ''}`);
+        const s = (data.timeline || []).find(x => x.status === 'active') || (data.timeline || []).find(x => x.status === 'pending');
+        setT('badgeStage', s ? s.label : "Dossier Actif");
+
+        const nextCondition = (data.checklist || []).find(c => !c.done);
+        setT('dashNextStep', nextCondition ? nextCondition.name : "Terminé !");
+        const nextVisit = (data.visites || []).find(v => v.statut === 'Confirmée' || v.statut === 'Prévue');
+        setT('dashNextVisit', nextVisit ? formatVisitDate(nextVisit.Date_heure_de_visite) : "Aucun planifié");
+
+        const safe = (fn) => { try { fn(); } catch(e) { console.warn(e); } };
+        safe(() => renderMilestones(data.milestones || {}));
+        safe(() => renderTimeline(data.timeline || []));
+        safe(() => renderChecklist(data.checklist || []));
+        safe(() => renderVisites(data.visites || [], data.code));
+        safe(() => renderTeam(data.team || []));
+        safe(() => renderPartners(data.partners || []));
+    }
+
+    function renderMilestones(m) {
+        const wrap = document.getElementById('wrapMilestones'); if (!wrap) return;
+        const config = [{l:'Financement', d:m.financing}, {l:'Inspection', d:m.inspection}, {l:'Signature', d:m.signature}, {l:'Occupation', d:m.occupation}];
+        wrap.innerHTML = config.map(ms => {
+            const days = ms.d?.days; const done = days !== null && days < 0;
+            return `<div class="milestone-card"><div style="font-size:0.55rem; opacity:0.5; margin-bottom:5px; font-weight:800;">${done?'TERMINÉ':'JOURS'}</div><div class="milestone-val">${days!==null && days!==undefined ? (done?'✓':days) : '--'}</div><div class="milestone-label">${ms.l}</div></div>`;
+        }).join('');
+    }
+
+    function renderTimeline(timeline) {
+        const wrap = document.getElementById('wrapTimeline'); if (!wrap) return;
+        wrap.querySelectorAll('.step-node:not(.timeline-progress-bar)').forEach(n => n.remove());
+        let completed = 0;
+        timeline.forEach(s => {
+            const node = document.createElement('div'); node.className = `step-node ${s.status}`;
+            node.innerHTML = `<div class="node-dot">${s.icon || '○'}</div><div style="font-size:0.8rem; font-weight:700; margin-top:12px; text-align:center;">${s.label}</div>`;
+            wrap.appendChild(node);
+            if (s.status === 'completed') completed++; if (s.status === 'active') completed += 0.5;
+        });
+        setTimeout(() => {
+            const bar = document.getElementById('barProgress');
+            const pct = timeline.length > 1 ? Math.max(0, ((completed - 1) / (timeline.length - 1)) * 100) : 0;
+            if (bar) {
+                if (window.innerWidth <= 768) { bar.style.height = `${pct * 0.8}%`; bar.style.width = '2px'; }
+                else { bar.style.width = `${pct * 0.8}%`; bar.style.height = '2px'; }
+            }
+        }, 300);
+    }
+
+    function renderChecklist(checklist) {
+        const wrap = document.getElementById('wrapChecklist'); if (!wrap) return;
+        wrap.innerHTML = checklist.map(c => `<div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:15px; border:1px solid ${c.done?'rgba(46,204,113,0.2)':'rgba(255,255,255,0.1)'}; display:flex; align-items:center; gap:12px;"><div style="width:20px; height:20px; border-radius:50%; background:${c.done?'#2ecc71':'rgba(255,255,255,0.1)'}; color:#fff; font-size:0.6rem; display:flex; align-items:center; justify-content:center;">${c.done?'✓':'!'}</div><span style="font-size:0.85rem; font-weight:600; color:${c.done?'#fff':'rgba(255,255,255,0.4)'}">${c.name || '--'}</span></div>`).join('');
+    }
+
+    function renderVisites(visites, portalCode) {
+        const wrap = document.getElementById('wrapVisites'); if (!wrap) return;
+        if (!visites || visites.length === 0) { wrap.innerHTML = `<p style="text-align:center; opacity:0.5;">Aucune visite.</p>`; return; }
+        wrap.innerHTML = visites.map(v => {
+            const localFB = JSON.parse(localStorage.getItem(`visit_fb_${portalCode}_${v.id}`) || "{}");
+            const verdict = v.verdict || localFB.verdict || "";
+            const rating = v.evaluation || localFB.rating || 0;
+            return `<div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:25px; padding:25px; margin-bottom:15px;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:15px;">
+                    <div><div style="font-weight:900; color:#fff; font-size:1.1rem;">${formatVisitDate(v.Date_heure_de_visite)}</div><div style="font-size:0.85rem; color:var(--dash-accent);">📍 ${v.location || 'Lieu'}</div></div>
+                    <div style="background:rgba(255,255,255,0.1); padding:5px 12px; border-radius:8px; font-size:0.65rem; font-weight:800; color:#fff;">${v.statut || 'En attente'}</div>
+                </div>
+                <div style="background:rgba(0,0,0,0.2); border-radius:15px; padding:15px; border:1px solid rgba(255,255,255,0.05);">
+                    <div style="text-align:center; font-size:0.7rem; font-weight:800; color:var(--dash-accent); text-transform:uppercase; margin-bottom:5px;">Évaluation visite</div>
+                    <div style="display:flex; gap:8px; justify-content:center; margin-bottom:15px;">
+                        ${[1,2,3,4,5].map(s => `<span onclick="saveRating('${v.id}', ${s}, this)" style="cursor:pointer; font-size:1.5rem; filter:${s<=rating?'none':'grayscale(1) opacity(0.2)'}; transition:0.3s;">⭐</span>`).join('')}
+                    </div>
+
+                    <div style="text-align:center; font-size:0.7rem; font-weight:800; color:var(--dash-accent); text-transform:uppercase; margin-bottom:10px;">Verdict visite</div>
+                    <div style="display:flex; gap:15px; justify-content:center; margin-bottom:15px;">
+                        <button onclick="saveVerdict('${v.id}', 'Coup de coeur', this)" style="background:${verdict==='Coup de coeur'?'rgba(135,50,118,0.4)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">❤️</button>
+                        <button onclick="saveVerdict('${v.id}', 'À réfléchir', this)" style="background:${verdict==='À réfléchir'?'rgba(135,50,118,0.4)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">🧐</button>
+                        <button onclick="saveVerdict('${v.id}', 'Pas pour moi', this)" style="background:${verdict==='Pas pour moi'?'rgba(135,50,118,0.4)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">👎</button>
+                    </div>
+
+                    <textarea id="comm-${v.id}" oninput="updateLocalFB('${v.id}', 'comm', this.value)" style="width:100%; height:70px; background:rgba(0,0,0,0.3); color:#fff; border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:12px; font-size:0.85rem; margin-bottom:15px; outline:none;" placeholder="Commentaire visite...">${v.commentaire || localFB.comm || ""}</textarea>
+                    
+                    <button onclick="syncVisitFeedback('${v.id}')" id="btn-sync-${v.id}" style="width:100%; padding:15px; border-radius:12px; background:var(--dash-grad); color:#fff; border:none; font-weight:800; cursor:pointer;">Enregistrer mon avis ✨</button>
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    function updateLocalFB(id, key, val) {
+        const code = localStorage.getItem('portal_code');
+        const storageKey = `visit_fb_${code}_${id}`;
+        const fb = JSON.parse(localStorage.getItem(storageKey) || "{}");
+        fb[key] = val; localStorage.setItem(storageKey, JSON.stringify(fb));
+    }
+
+    function saveRating(id, r, el) {
+        updateLocalFB(id, 'rating', r);
+        const stars = el.parentElement.querySelectorAll('span');
+        stars.forEach((s, idx) => s.style.filter = (idx < r) ? 'none' : 'grayscale(1) opacity(0.2)');
+    }
+
+    function saveVerdict(id, v, btn) {
+        updateLocalFB(id, 'verdict', v);
+        btn.parentElement.querySelectorAll('button').forEach(b => b.style.background = 'transparent');
+        btn.style.background = 'rgba(135, 50, 118, 0.4)';
+    }
+
+    async function syncVisitFeedback(id) {
+        const code = localStorage.getItem('portal_code'), dealId = localStorage.getItem('portal_deal_id'), btn = document.getElementById(`btn-sync-${id}`);
+        const comm = document.getElementById(`comm-${id}`).value;
+        const localFB = JSON.parse(localStorage.getItem(`visit_fb_${code}_${id}`) || "{}");
+        if (!dealId || !btn) return;
+        btn.innerText = "Sync..."; btn.disabled = true;
+        try {
+            const payload = { 
+                codePortal: code, 
+                dealId: dealId, 
+                visitId: id, 
+                evaluation: localFB.rating || 5,
+                verdict: localFB.verdict || "À réfléchir", 
+                commentaire: comm
+            };
+            const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+            const result = await res.json();
+            if (result.s) { btn.innerText = "Avis enregistré ! ✨"; btn.style.background = "#2ecc71"; } 
+            else { throw new Error(result.error || "Erreur API"); }
+        } catch (e) { btn.innerText = "Réessayer"; btn.disabled = false; console.error("Sync Error:", e); }
+    }
+
+    async function requestVisit() {
+        const loc = document.getElementById('inpVisitLoc').value.trim(), dt = document.getElementById('inpVisitDateTime').value, d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code');
+        if (!loc || !dt) { alert("Veuillez remplir l'adresse et la date."); return; }
+        try { const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestVisit', codePortal: c, dealId: d, location: loc, dateTime: dt }) }); if (res.ok) { alert("✅ Demande de visite envoyée !"); document.getElementById('inpVisitLoc').value=''; document.getElementById('inpVisitDateTime').value=''; } } catch (e) { alert("Erreur."); }
+    }
+
+    function renderTeam(team) { const w = document.getElementById('wrapTeam'); if (!w || !team) return; w.innerHTML = team.map(t => `<div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); text-align:center;"><div style="font-size:1.8rem; margin-bottom:8px;">${t.icon || '👤'}</div><div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${t.role || 'Expert'}</div><div style="font-weight:700; color:#fff;">${t.name || '--'}</div></div>`).join(''); }
+    function renderPartners(partners) { const w = document.getElementById('wrapPartners'); if (!w || !partners) return; w.innerHTML = partners.map(p => `<div style="background:rgba(255,255,255,0.02); padding:20px; border-radius:25px; border:1px solid var(--dash-border); position:relative; overflow:hidden;"><div style="position:absolute; top:12px; right:-25px; background:var(--dash-primary); color:#fff; padding:3px 30px; transform:rotate(45deg); font-size:0.55rem; font-weight:900;">PROMO</div><div style="font-size:1.5rem; margin-bottom:10px;">${p.icon || '🤝'}</div><div style="font-family:'Outfit'; font-weight:800; color:#fff;">${p.name || 'Partenaire'}</div><div style="font-size:0.75rem; opacity:0.6; margin-top:5px;">${p.benefit || 'Avantage exclusif'}</div></div>`).join(''); }
+    async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
+    function toggleSection(id) { const el = document.getElementById(id); if (el) el.classList.toggle('collapsed'); }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initPortal); } else { initPortal(); }
+</script>

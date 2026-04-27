@@ -1,0 +1,131 @@
+<style>
+    /* --- PORTAL STYLES v14.8 - ULTRA PREMIUM & FIXES --- */
+    * { box-sizing: border-box !important; }
+    :root {
+        --dash-primary: #873276;
+        --dash-primary-glow: rgba(135, 50, 118, 0.4);
+        --dash-accent: #d4af37;
+        --dash-accent-glow: rgba(212, 175, 55, 0.4);
+        --dash-bg: #0f050d;
+        --dash-card-bg: rgba(255, 255, 255, 0.03);
+        --dash-border: rgba(135, 50, 118, 0.5);
+        --dash-glow: 0 0 30px rgba(135, 50, 118, 0.3);
+        --dash-grad: linear-gradient(135deg, #873276 0%, #b0549c 100%);
+    }
+
+    .portal-main-wrapper {
+        font-family: 'Inter', sans-serif;
+        color: #fff;
+        background: var(--dash-bg);
+        min-height: 900px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50px;
+        border: 1px solid var(--dash-border);
+        box-shadow: 0 50px 120px rgba(0, 0, 0, 0.8);
+        margin: 20px 0;
+    }
+
+    .portal-aura {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: radial-gradient(circle at 30% 30%, rgba(135, 50, 118, 0.15) 0%, transparent 70%),
+                    radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+        z-index: 0; pointer-events: none;
+    }
+
+    .portal-container {
+        display: none;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 60px 25px;
+        position: relative;
+        z-index: 10;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .portal-container.visible { display: block; opacity: 1; transform: translateY(0); }
+
+    /* SECTIONS & COLLAPSE */
+    .section-wrapper {
+        margin-bottom: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 35px;
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
+    .section-wrapper:hover { border-color: var(--dash-border); box-shadow: var(--dash-glow); }
+
+    .section-header {
+        padding: 22px 30px;
+        display: flex; justify-content: space-between; align-items: center;
+        cursor: pointer; background: rgba(255, 255, 255, 0.02);
+    }
+    .section-header h3 { 
+        color: #fff !important; margin: 0; font-family: 'Outfit'; font-size: 1.5rem; font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+    .section-header .toggle-icon { 
+        color: var(--dash-primary); font-size: 1.2rem; transition: transform 0.4s ease; 
+        background: rgba(135, 50, 118, 0.1); width: 32px; height: 32px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+    }
+
+    .section-content { padding: 30px; transition: all 0.4s ease; }
+    
+    /* FIX COLLAPSE */
+    .section-wrapper.collapsed .section-content { display: none; }
+    .section-wrapper.collapsed .toggle-icon { transform: rotate(-90deg); }
+
+    /* MILESTONES */
+    .milestone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px; }
+    .milestone-card { 
+        background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255,255,255,0.05); 
+        border-radius: 35px; padding: 30px 20px; text-align: center; transition: 0.3s;
+    }
+    .milestone-card:hover { transform: translateY(-5px); border-color: var(--dash-border); background: rgba(135, 50, 118, 0.05); }
+    .milestone-val { font-family: 'Outfit'; font-size: 2.5rem; font-weight: 900; color: #fff; margin-bottom: 5px; text-shadow: 0 0 20px rgba(255,255,255,0.2); }
+    .milestone-label { font-size: 0.7rem; font-weight: 900; text-transform: uppercase; color: var(--dash-accent); letter-spacing: 1px; }
+
+    /* TIMELINE */
+    .timeline-steps { display: flex; justify-content: space-between; position: relative; padding: 30px 50px; }
+    .timeline-steps::before { content: ''; position: absolute; top: 57px; left: 10%; width: 80%; height: 3px; background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+    .timeline-progress-bar { position: absolute; top: 57px; left: 10%; height: 3px; background: #2ecc71; box-shadow: 0 0 20px #2ecc71; transition: 1.5s cubic-bezier(0.16, 1, 0.3, 1); border-radius: 10px; }
+    .step-node { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 5; width: 120px; }
+    .node-dot { 
+        width: 60px; height: 60px; border-radius: 50%; background: #0f050d; 
+        border: 2px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; 
+        font-size: 1.2rem; transition: all 0.5s ease; 
+    }
+    .step-node.completed .node-dot { border-color: #2ecc71; color: #2ecc71; box-shadow: 0 0 20px rgba(46, 204, 113, 0.3); }
+    .step-node.active .node-dot { border-color: var(--dash-primary); color: #fff; box-shadow: 0 0 25px var(--dash-primary-glow); transform: scale(1.15); background: var(--dash-grad); }
+
+    /* OVERLAY */
+    .portal-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 5, 13, 0.98); backdrop-filter: blur(40px); z-index: 9999; display: flex; align-items: center; justify-content: center; }
+    .portal-overlay.hidden { display: none; }
+    .login-card { 
+        background: rgba(255, 255, 255, 0.03); padding: 60px; border-radius: 50px; 
+        border: 1px solid var(--dash-border); text-align: center; width: 450px;
+        box-shadow: 0 30px 100px rgba(0,0,0,0.5);
+    }
+
+    /* BUTTONS */
+    .login-btn, .action-btn { 
+        width: 100%; padding: 22px; background: var(--dash-grad); color: #fff; 
+        border: none; border-radius: 50px; font-weight: 800; cursor: pointer; 
+        text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;
+        transition: 0.3s; box-shadow: 0 10px 30px rgba(135, 50, 118, 0.3);
+    }
+    .login-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5); }
+
+    @media (max-width: 768px) {
+        .portal-main-wrapper { border-radius: 40px; margin: 10px 5px; }
+        .timeline-steps { flex-direction: column; padding: 0 30px; gap: 40px; }
+        .timeline-steps::before { left: 59px; width: 3px; height: 75%; top: 12%; }
+        .timeline-progress-bar { left: 59px; width: 3px; top: 12%; }
+        .step-node { flex-direction: row; width: 100%; gap: 30px; padding: 0; align-items: center; }
+    }
+</style>
