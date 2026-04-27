@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V14.22 - FULL DATA RESTORE)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V14.23 - FULL PORTAL DATA)
  */
 
 export default async function handler(req, res) {
@@ -20,11 +20,7 @@ export default async function handler(req, res) {
         tokenParams.append('client_secret', process.env.ZOHO_CLIENT_SECRET || "");
         tokenParams.append('grant_type', 'refresh_token');
 
-        const tResp = await fetch('https://accounts.zoho.com/oauth/v2/token', { 
-            method: 'POST', 
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: tokenParams.toString() 
-        });
+        const tResp = await fetch('https://accounts.zoho.com/oauth/v2/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: tokenParams.toString() });
         const tData = await tResp.json();
         const accessToken = tData.access_token;
         const apiDomain = tData.api_domain || "https://www.zohoapis.com";
@@ -35,9 +31,7 @@ export default async function handler(req, res) {
         if (code.includes("EP-1") || code.includes("TEST")) {
             dealId = "6466486000011930049";
         } else if (!dealId && code) {
-            const sResp = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=(Code_Portail:equals:'${encodeURIComponent(code)}')`, { 
-                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } 
-            });
+            const sResp = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=(Code_Portail:equals:'${encodeURIComponent(code)}')`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const sData = await sResp.json();
             if (sData.data) dealId = sData.data[0].id;
         }
@@ -47,14 +41,6 @@ export default async function handler(req, res) {
         const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
         const dData = await dResp.json();
         const deal = dData.data[0];
-
-        // ACTION : ENVOI AVIS (pushAvisV13)
-        if (action === 'pushAvisV13') {
-            const { visitId, evaluation, verdict, commentaire } = data;
-            const updateBody = { data: [{ id: visitId, Evaluation_visite: parseInt(evaluation) || 0, Verdict_visite: verdict || "", Commentaire_visite: commentaire || "" }] };
-            await fetch(`${apiDomain}/crm/v2/CustomModule7/${visitId}`, { method: 'PUT', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }, body: JSON.stringify(updateBody) });
-            return res.status(200).json({ s: true });
-        }
 
         // 4. RÉCUPÉRATION VISITES
         let visites = [];
@@ -72,8 +58,24 @@ export default async function handler(req, res) {
             }));
         }
 
+        // 5. CONSTRUCTION ÉQUIPE
+        const fetchP = async (f) => {
+            if (!f || !f.id) return null;
+            const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const d = await r.json(); return d.data ? d.data[0] : null;
+        };
+
+        const [notaire, inspecteur, courtier] = await Promise.all([
+            fetchP(deal.Nom_Notaire), fetchP(deal.Nom_Inspecteur), fetchP(deal.Nom_Courtier_Hypoth_caire)
+        ]);
+
+        const team = [{ role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }];
+        const addP = (p, role, icon) => { if(p) team.push({ role, name: p.Full_Name || p.Name, icon, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" }); };
+        addP(courtier, "Courtier Hypothécaire", "🏦"); addP(inspecteur, "Inspecteur", "🔍"); addP(notaire, "Notaire", "✒️");
+
         const getDays = (d) => d ? Math.ceil((new Date(d) - new Date().setHours(0,0,0,0)) / 86400000) : null;
 
+        // 6. RÉPONSE GLOBALE
         return res.status(200).json({
             id: deal.id,
             firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
@@ -90,13 +92,23 @@ export default async function handler(req, res) {
             timeline: [
                 { label: "Préparation", status: "completed", icon: "📋" },
                 { label: "Visites", status: "active", icon: "🔍" },
-                { label: "Offre", status: "pending", icon: "📄" },
+                { label: "Conditions", status: "pending", icon: "📄" },
                 { label: "Vendu", status: "pending", icon: "✨" }
             ],
             checklist: [
                 { name: "Financement", done: deal.Financement_approuv === "Oui" },
-                { name: "Inspection", done: deal.Inspection_satisfaisante === "Oui" }
-            ]
+                { name: "Inspection", done: deal.Inspection_satisfaisante === "Oui" },
+                { name: "Conditions levées", done: deal.Autres_conditions_lev_es === "Oui" }
+            ],
+            team: team,
+            partners: [
+                { category: "Peinture", name: "Peinture Excellence", icon: "🎨", benefit: "10% de rabais", code: "EP-PROMO" },
+                { category: "Plomberie", name: "Plombier Pro", icon: "🚿", benefit: "Estimation gratuite", code: "EP-PROMO" },
+                { category: "Électricité", name: "Électricien Élite", icon: "⚡", benefit: "-15% main d'œuvre", code: "EP-PROMO" }
+            ],
+            concierge: {
+                resources: [{ title: "Tout sur le CELIAPP →", url: "#" }, { title: "Régime d'Accès à la Propriété (RAP) →", url: "#" }]
+            }
         });
 
     } catch (err) {
