@@ -1,5 +1,5 @@
 /**
- * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V14.23 - FULL PORTAL DATA)
+ * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V14.24 - FIX VISITS SEARCH)
  */
 
 export default async function handler(req, res) {
@@ -13,7 +13,6 @@ export default async function handler(req, res) {
     const code = (data.codePortal || data.code || "").trim().toUpperCase();
 
     try {
-        // 1. AUTHENTIFICATION ZOHO
         const tokenParams = new URLSearchParams();
         tokenParams.append('refresh_token', process.env.ZOHO_REFRESH_TOKEN || "");
         tokenParams.append('client_id', process.env.ZOHO_CLIENT_ID || "");
@@ -26,7 +25,6 @@ export default async function handler(req, res) {
         const apiDomain = tData.api_domain || "https://www.zohoapis.com";
         if (!accessToken) throw new Error("AUTH_FAILED");
 
-        // 2. RECHERCHE DOSSIER
         let dealId = data.dealId;
         if (code.includes("EP-1") || code.includes("TEST")) {
             dealId = "6466486000011930049";
@@ -37,15 +35,35 @@ export default async function handler(req, res) {
         }
         if (!dealId) return res.status(404).json({ error: "DOSSIER_NON_TROUVE" });
 
-        // 3. RÉCUPÉRATION AFFAIRE
         const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
         const dData = await dResp.json();
         const deal = dData.data[0];
 
-        // 4. RÉCUPÉRATION VISITES
+        if (action === 'pushAvisV13') {
+            const { visitId, evaluation, verdict, commentaire } = data;
+            const updateBody = { data: [{ id: visitId, Evaluation_visite: parseInt(evaluation) || 0, Verdict_visite: verdict || "", Commentaire_visite: commentaire || "" }] };
+            await fetch(`${apiDomain}/crm/v2/CustomModule7/${visitId}`, { method: 'PUT', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }, body: JSON.stringify(updateBody) });
+            return res.status(200).json({ s: true });
+        }
+
+        // --- RÉCUPÉRATION VISITES (ULTRA-ROBUSTE) ---
         let visites = [];
-        const vResp = await fetch(`${apiDomain}/crm/v2/CustomModule7/search?criteria=(Affaire:equals:${dealId})`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-        const vData = await vResp.json();
+        // Test 1: CustomModule7 avec ID brut
+        let vResp = await fetch(`${apiDomain}/crm/v2/CustomModule7/search?criteria=(Affaire:equals:${dealId})`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+        let vData = await vResp.json();
+        
+        // Test 2: Si rien, tenter avec guillemets
+        if (!vData.data) {
+            vResp = await fetch(`${apiDomain}/crm/v2/CustomModule7/search?criteria=(Affaire:equals:'${dealId}')`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            vData = await vResp.json();
+        }
+
+        // Test 3: Si toujours rien, tenter via le nom du module "Visites_Portail"
+        if (!vData.data) {
+            vResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail/search?criteria=(Affaire:equals:${dealId})`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            vData = await vResp.json();
+        }
+
         if (vData.data) {
             visites = vData.data.map(v => ({
                 id: v.id,
@@ -58,11 +76,12 @@ export default async function handler(req, res) {
             }));
         }
 
-        // 5. CONSTRUCTION ÉQUIPE
         const fetchP = async (f) => {
             if (!f || !f.id) return null;
-            const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            const d = await r.json(); return d.data ? d.data[0] : null;
+            try {
+                const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const d = await r.json(); return d.data ? d.data[0] : null;
+            } catch(e) { return null; }
         };
 
         const [notaire, inspecteur, courtier] = await Promise.all([
@@ -75,7 +94,6 @@ export default async function handler(req, res) {
 
         const getDays = (d) => d ? Math.ceil((new Date(d) - new Date().setHours(0,0,0,0)) / 86400000) : null;
 
-        // 6. RÉPONSE GLOBALE
         return res.status(200).json({
             id: deal.id,
             firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
@@ -92,7 +110,7 @@ export default async function handler(req, res) {
             timeline: [
                 { label: "Préparation", status: "completed", icon: "📋" },
                 { label: "Visites", status: "active", icon: "🔍" },
-                { label: "Conditions", status: "pending", icon: "📄" },
+                { label: "Offre", status: "pending", icon: "📄" },
                 { label: "Vendu", status: "pending", icon: "✨" }
             ],
             checklist: [
@@ -106,9 +124,7 @@ export default async function handler(req, res) {
                 { category: "Plomberie", name: "Plombier Pro", icon: "🚿", benefit: "Estimation gratuite", code: "EP-PROMO" },
                 { category: "Électricité", name: "Électricien Élite", icon: "⚡", benefit: "-15% main d'œuvre", code: "EP-PROMO" }
             ],
-            concierge: {
-                resources: [{ title: "Tout sur le CELIAPP →", url: "#" }, { title: "Régime d'Accès à la Propriété (RAP) →", url: "#" }]
-            }
+            concierge: { resources: [{ title: "Tout sur le CELIAPP →", url: "#" }, { title: "Régime d'Accès à la Propriété (RAP) →", url: "#" }] }
         });
 
     } catch (err) {
