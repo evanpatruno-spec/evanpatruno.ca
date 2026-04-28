@@ -300,27 +300,34 @@
     }
 
     @media (max-width: 768px) {
-        .portal-main-wrapper { border-radius: 0; margin: 0; padding: 10px 5px; }
+        .portal-main-wrapper { border-radius: 0; margin: 0; padding: 10px 5px; overflow: visible; }
+        .portal-container { padding: 25px 10px; }
         .summary-grid { grid-template-columns: 1fr; gap: 10px; }
         .milestone-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
         .milestone-card:last-child { grid-column: span 2; }
         .milestone-card { padding: 12px 8px; min-height: 90px; border-radius: 15px; }
-        .milestone-val { font-size: 1.5rem !important; }
-        .milestone-label { font-size: 0.55rem !important; }
         
         .timeline-steps { flex-direction: column; padding: 15px 10px 15px 25px; gap: 25px; }
-        .timeline-steps::before { left: 44px; width: 2px; height: 85%; top: 7%; } /* Alignement parfait 25+19 */
+        .timeline-steps::before { left: 44px; width: 2px; height: 85%; top: 7%; }
         .timeline-progress-bar { left: 44px; width: 2px; top: 7%; }
         .step-node { flex-direction: row; width: 100%; gap: 15px; align-items: center; }
-        .node-dot { width: 38px !important; height: 38px !important; font-size: 0.8rem !important; flex-shrink: 0; }
-        .step-node div:last-child { margin-top: 0 !important; text-align: left !important; font-size: 0.85rem !important; color: #fff !important; }
+        .node-dot { width: 38px !important; height: 38px !important; font-size: 0.8rem !important; }
         
-        /* Correction Cartes Visites Overflow */
-        .visit-card { padding: 15px; }
+        /* Harmonisation parfaite des boites */
+        .visit-card, .section-content > div[style*="background"] { 
+            padding: 15px !important; 
+            margin-left: 0 !important; 
+            margin-right: 0 !important; 
+            width: 100% !important;
+            border-radius: 15px !important;
+        }
         .visit-header { flex-direction: column; gap: 10px; align-items: flex-start !important; }
-        .visit-badge { align-self: flex-start; }
         
-        input[type="text"], input[type="datetime-local"], select { height: 50px !important; font-size: 0.95rem !important; }
+        .portal-quick-menu { 
+            display: flex; position: fixed; bottom: 20px; left: 50%; 
+            transform: translateX(-50%); width: 85%; justify-content: center;
+        }
+        
         .login-card { padding: 30px 15px; border-radius: 0; }
     }
 </style>
