@@ -39,31 +39,40 @@ export default async function handler(req, res) {
         const dData = await dResp.json();
         const deal = dData.data[0];
 
+        // --- DEBUG: LISTE DES MODULES ---
+        if (action === 'listModules') {
+            const mResp = await fetch(`${apiDomain}/crm/v2/settings/modules`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const mData = await mResp.json();
+            const modules = (mData.modules || []).map(m => ({ api_name: m.api_name, singular_label: m.singular_label, plural_label: m.plural_label }));
+            return res.status(200).json({ modules });
+        }
+
         if (action === 'pushAvisV13') {
             const { visitId, evaluation, verdict, commentaire } = data;
-            // On envoie seulement les 3 champs d'avis
             const updateBody = { data: [{ 
                 id: visitId, 
                 Evaluation_visite: parseInt(evaluation) || 0, 
                 Verdict_visite: verdict || "", 
                 Commentaire_visite: commentaire || "" 
             }] };
-            const upResp = await fetch(`${apiDomain}/crm/v2/CustomModule7`, { 
-                method: 'PUT', 
-                headers: { 
-                    'Authorization': `Zoho-oauthtoken ${accessToken}`,
-                    'Content-Type': 'application/json'
-                }, 
-                body: JSON.stringify(updateBody) 
-            });
-            // On considère toute réponse 2xx comme un succès (structure Zoho variable)
-            if (upResp.ok) {
-                return res.status(200).json({ s: true });
-            } else {
-                const upData = await upResp.text();
-                return res.status(500).json({ error: "ZOHO_UPDATE_FAILED", details: upData.substring(0, 200) });
+            
+            // Tenter plusieurs noms de module jusqu'à ce qu'un fonctionne
+            const modulesToTry = ['CustomModule7', 'CustomModule8', 'CustomModule6', 'CustomModule9', 'Visites_Portail'];
+            let lastErr = "";
+            for (const mod of modulesToTry) {
+                const upResp = await fetch(`${apiDomain}/crm/v2/${mod}`, { 
+                    method: 'PUT', 
+                    headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify(updateBody) 
+                });
+                if (upResp.ok) return res.status(200).json({ s: true, module: mod });
+                lastErr = await upResp.text();
+                const parsed = JSON.parse(lastErr || "{}");
+                if (parsed.code !== 'INVALID_MODULE') break; // Autre erreur = bon module, mauvais champs
             }
+            return res.status(500).json({ error: "ZOHO_UPDATE_FAILED", details: lastErr.substring(0, 200) });
         }
+
         if (action === 'requestVisit') {
             const { location, dateTime } = data;
             const newVisit = { data: [{ 
