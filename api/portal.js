@@ -60,24 +60,31 @@ export default async function handler(req, res) {
 
         // --- RÉCUPÉRATION VISITES (ULTRA-ROBUSTE) ---
         let visites = [];
-        // Test 1: CustomModule7 avec ID brut
-        let vResp = await fetch(`${apiDomain}/crm/v2/CustomModule7/search?criteria=(Affaire:equals:${dealId})`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-        let vData = await vResp.json();
-        
-        // Test 2: Si rien, tenter avec guillemets
-        if (!vData.data) {
-            vResp = await fetch(`${apiDomain}/crm/v2/CustomModule7/search?criteria=(Affaire:equals:'${dealId}')`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            vData = await vResp.json();
+        const trySearch = async (module, crit) => {
+            try {
+                const r = await fetch(`${apiDomain}/crm/v2/${module}/search?criteria=${encodeURIComponent(crit)}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const d = await r.json(); return d.data || null;
+            } catch(e) { return null; }
+        };
+
+        // Stratégie 1 & 2 & 3: Recherche directe
+        let vData = await trySearch("CustomModule7", `(Affaire:equals:${dealId})`);
+        if (!vData) vData = await trySearch("CustomModule7", `(Affaire:equals:'${dealId}')`);
+        if (!vData) vData = await trySearch("Visites_Portail", `(Affaire:equals:${dealId})`);
+
+        // Stratégie 4: Fallback large - On prend les 200 dernières et on filtre en JS
+        if (!vData) {
+            try {
+                const r = await fetch(`${apiDomain}/crm/v2/CustomModule7?sort_by=Created_Time&sort_order=desc`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const d = await r.json();
+                if (d.data) {
+                    vData = d.data.filter(v => v.Affaire && (v.Affaire.id === dealId || v.Affaire.name === deal.Deal_Name));
+                }
+            } catch(e) {}
         }
 
-        // Test 3: Si toujours rien, tenter via le nom du module "Visites_Portail"
-        if (!vData.data) {
-            vResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail/search?criteria=(Affaire:equals:${dealId})`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            vData = await vResp.json();
-        }
-
-        if (vData.data) {
-            visites = vData.data.map(v => ({
+        if (vData) {
+            visites = vData.map(v => ({
                 id: v.id,
                 Date_heure_de_visite: v.Date_heure_de_visite || null,
                 location: v.Name || "Lieu",
