@@ -69,7 +69,7 @@ export default async function handler(req, res) {
             const { location, dateTime } = data;
             const newVisit = { data: [{ 
                 Name: location || "Visite à planifier",
-                Date_heure_de_visite: dateTime ? new Date(dateTime).toISOString().replace('T', ' ').substring(0, 19) : null,
+                Date_heure_de_visite: dateTime ? dateTime.replace('T', ' ') + ':00' : null,
                 Affaire: { id: dealId },
                 Statut: "En attente"
             }] };
@@ -78,9 +78,10 @@ export default async function handler(req, res) {
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify(newVisit) 
             });
-            if (createResp.ok) return res.status(200).json({ s: true });
-            const cErr = await createResp.text();
-            return res.status(500).json({ error: "VISIT_CREATE_FAILED", details: cErr.substring(0, 200) });
+            const createData = await createResp.json();
+            const createStatus = createData?.data?.[0]?.status;
+            if (createStatus === 'success') return res.status(200).json({ s: true });
+            return res.status(500).json({ error: "VISIT_CREATE_FAILED", details: JSON.stringify(createData?.data?.[0] || createData).substring(0, 300) });
         }
 
         if (action === 'requestMLS') {
