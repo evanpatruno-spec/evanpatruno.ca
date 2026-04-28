@@ -209,7 +209,7 @@ export default async function handler(req, res) {
                     .map(p => ({
                         category: p.Service || "Partenaire",
                         name: p.Name || "Expert",
-                        icon: p.Icone || "🤝",
+                        icon: (p.Icone || "").trim() || "🤝",
                         benefit: p.Avantage_Exclusif || "",
                         isPromo: !!p.Badge_Promo,
                         contactName: p.Contact_Lie?.name || "",
