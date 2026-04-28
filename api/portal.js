@@ -49,9 +49,20 @@ export default async function handler(req, res) {
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify(updateBody) 
             });
-            if (upResp.ok) return res.status(200).json({ s: true });
-            const upErr = await upResp.text();
-            return res.status(500).json({ error: "ZOHO_UPDATE_FAILED", details: upErr.substring(0, 200) });
+            // Zoho retourne TOUJOURS 200 - il faut lire le corps JSON pour savoir si c'est un succès
+            const upData = await upResp.json();
+            const status = upData?.data?.[0]?.status;
+            const zohoCode = upData?.data?.[0]?.code;
+            if (status === 'success') {
+                return res.status(200).json({ s: true });
+            } else {
+                // Renvoyer le code d'erreur Zoho exact pour diagnostic
+                return res.status(500).json({ 
+                    error: "ZOHO_UPDATE_FAILED", 
+                    zohoCode: zohoCode,
+                    details: JSON.stringify(upData?.data?.[0] || upData).substring(0, 300)
+                });
+            }
         }
 
         if (action === 'requestVisit') {
