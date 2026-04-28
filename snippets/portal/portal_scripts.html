@@ -280,21 +280,8 @@
         if (btn) btn.style.display = 'none';
     }
 
-    window.installPWA = async function() {
-        const btn = document.getElementById('btnInstallPWA');
-        if (deferredPrompt) {
-            // Android / Chrome : installation native
-            deferredPrompt.prompt();
-            const { outcome } = await deferredPrompt.userChoice;
-            if (outcome === 'accepted' && btn) btn.style.display = 'none';
-            deferredPrompt = null;
-        } else if (isIOS) {
-            // iOS Safari : instructions manuelles
-            alert("📲 Pour installer l'app sur iOS :\n\n1. Appuyez sur le bouton Partager (⬆️) en bas de Safari\n2. Faites défiler et appuyez sur « Sur l'écran d'accueil »\n3. Appuyez sur « Ajouter »");
-        } else {
-            // Déjà installé ou navigateur non supporté
-            alert("✅ L'application est déjà installée ou votre navigateur ne supporte pas l'installation directe.\n\nEssayez depuis Chrome sur Android ou Safari sur iOS.");
-        }
+    window.installPWA = function() {
+        window.location.href = "https://evanpatruno-ca.vercel.app/r/portal";
     };
 
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initPortal); } else { initPortal(); }
