@@ -57,7 +57,7 @@ export default async function handler(req, res) {
             }] };
             
             // Tenter plusieurs noms de module jusqu'à ce qu'un fonctionne
-            const modulesToTry = ['CustomModule7', 'CustomModule8', 'CustomModule6', 'CustomModule9', 'Visites_Portail'];
+            const modulesToTry = ['Visites_Portail'];
             let lastErr = "";
             for (const mod of modulesToTry) {
                 const upResp = await fetch(`${apiDomain}/crm/v2/${mod}`, { 
@@ -81,7 +81,7 @@ export default async function handler(req, res) {
                 Affaire: { id: dealId },
                 Statut: "En attente"
             }] };
-            const createResp = await fetch(`${apiDomain}/crm/v2/CustomModule7`, { 
+            const createResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
                 method: 'POST', 
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify(newVisit) 
@@ -102,14 +102,14 @@ export default async function handler(req, res) {
         };
 
         // Stratégie 1 & 2 & 3: Recherche directe
-        let vData = await trySearch("CustomModule7", `(Affaire:equals:${dealId})`);
-        if (!vData) vData = await trySearch("CustomModule7", `(Affaire:equals:'${dealId}')`);
+        let vData = await trySearch("Visites_Portail", `(Affaire:equals:${dealId})`);
+        if (!vData) vData = await trySearch("Visites_Portail", `(Affaire:equals:'${dealId}')`);
         if (!vData) vData = await trySearch("Visites_Portail", `(Affaire:equals:${dealId})`);
 
         // Stratégie 4: Fallback large - On prend les 200 dernières et on filtre en JS
         if (!vData) {
             try {
-                const r = await fetch(`${apiDomain}/crm/v2/CustomModule7?sort_by=Created_Time&sort_order=desc`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const r = await fetch(`${apiDomain}/crm/v2/Visites_Portail?sort_by=Created_Time&sort_order=desc`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
                 const d = await r.json();
                 if (d.data) {
                     vData = d.data.filter(v => v.Affaire && (v.Affaire.id === dealId || v.Affaire.name === deal.Deal_Name));
