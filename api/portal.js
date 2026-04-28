@@ -40,7 +40,7 @@ export default async function handler(req, res) {
             const { visitId, evaluation, verdict, commentaire } = data;
             const updateBody = { data: [{ 
                 id: visitId, 
-                Evaluation_visite: parseInt(evaluation) || 0, 
+                Evaluation_visite: String(evaluation || "0"), 
                 Verdict_visite: verdict || "", 
                 Commentaire_visite: commentaire || "" 
             }] };
