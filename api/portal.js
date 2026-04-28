@@ -181,9 +181,12 @@ export default async function handler(req, res) {
             },
             timeline: [
                 { label: "Préparation", status: "completed", icon: "📋" },
-                { label: "Visites", status: "active", icon: "🔍" },
-                { label: "Offre", status: "pending", icon: "📄" },
-                { label: "Vendu", status: "pending", icon: "✨" }
+                { label: "Mise en marché", status: (['Mise en marché', 'Visites'].includes(deal.Stage) ? 'active' : (deal.Stage.includes('Offre') || deal.Stage.includes('Vendu') ? 'completed' : 'pending')), icon: "📢" },
+                { label: "Visites", status: (deal.Stage === 'Visites' ? 'active' : (deal.Stage.includes('Offre') || deal.Stage.includes('Vendu') ? 'completed' : 'pending')), icon: "🔍" },
+                { label: "Offre", status: (deal.Stage.includes('Offre') ? 'active' : (deal.Stage.includes('Vendu') ? 'completed' : 'pending')), icon: "📄" },
+                { label: "Conditions", status: (deal.Stage === 'Offre Acceptee (Conditionnelle)' ? 'active' : (deal.Stage.includes('Vendu') ? 'completed' : 'pending')), icon: "⏳" },
+                { label: "Notaire", status: (deal.Stage === 'Chez le Notaire' ? 'active' : (deal.Stage === 'Vendu' ? 'completed' : 'pending')), icon: "🖋️" },
+                { label: "Vendu", status: (deal.Stage === 'Vendu' ? 'completed' : 'pending'), icon: "✨" }
             ],
             checklist: [
                 { name: "Financement", done: !!deal.Financement_approuv },
