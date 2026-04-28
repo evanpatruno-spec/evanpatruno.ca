@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         const tData = await tResp.json();
         const accessToken = tData.access_token;
         const apiDomain = tData.api_domain || "https://www.zohoapis.com";
-        if (!accessToken) throw new Error("AUTH_FAILED");
+        if (!accessToken) throw new Error("AUTH_FAILED: " + JSON.stringify(tData).substring(0, 150));
 
         let dealId = data.dealId;
         if (code.includes("EP-1") || code.includes("TEST")) {
@@ -35,18 +35,7 @@ export default async function handler(req, res) {
         }
         if (!dealId) return res.status(404).json({ error: "DOSSIER_NON_TROUVE" });
 
-        const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-        const dData = await dResp.json();
-        const deal = dData.data[0];
-
-        // --- DEBUG: LISTE DES MODULES ---
-        if (action === 'listModules') {
-            const mResp = await fetch(`${apiDomain}/crm/v2/settings/modules`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            const mData = await mResp.json();
-            const modules = (mData.modules || []).map(m => ({ api_name: m.api_name, singular_label: m.singular_label, plural_label: m.plural_label }));
-            return res.status(200).json({ modules });
-        }
-
+        // --- ACTIONS LÉGÈRES (sans chargement complet de l'affaire) ---
         if (action === 'pushAvisV13') {
             const { visitId, evaluation, verdict, commentaire } = data;
             const updateBody = { data: [{ 
@@ -55,22 +44,14 @@ export default async function handler(req, res) {
                 Verdict_visite: verdict || "", 
                 Commentaire_visite: commentaire || "" 
             }] };
-            
-            // Tenter plusieurs noms de module jusqu'à ce qu'un fonctionne
-            const modulesToTry = ['Visites_Portail'];
-            let lastErr = "";
-            for (const mod of modulesToTry) {
-                const upResp = await fetch(`${apiDomain}/crm/v2/${mod}`, { 
-                    method: 'PUT', 
-                    headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                    body: JSON.stringify(updateBody) 
-                });
-                if (upResp.ok) return res.status(200).json({ s: true, module: mod });
-                lastErr = await upResp.text();
-                const parsed = JSON.parse(lastErr || "{}");
-                if (parsed.code !== 'INVALID_MODULE') break; // Autre erreur = bon module, mauvais champs
-            }
-            return res.status(500).json({ error: "ZOHO_UPDATE_FAILED", details: lastErr.substring(0, 200) });
+            const upResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
+                method: 'PUT', 
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify(updateBody) 
+            });
+            if (upResp.ok) return res.status(200).json({ s: true });
+            const upErr = await upResp.text();
+            return res.status(500).json({ error: "ZOHO_UPDATE_FAILED", details: upErr.substring(0, 200) });
         }
 
         if (action === 'requestVisit') {
@@ -87,10 +68,21 @@ export default async function handler(req, res) {
                 body: JSON.stringify(newVisit) 
             });
             if (createResp.ok) return res.status(200).json({ s: true });
-            else {
-                const err = await createResp.text();
-                return res.status(500).json({ error: "VISIT_CREATE_FAILED", details: err.substring(0, 200) });
-            }
+            const cErr = await createResp.text();
+            return res.status(500).json({ error: "VISIT_CREATE_FAILED", details: cErr.substring(0, 200) });
+        }
+
+        // --- CHARGEMENT COMPLET DE L'AFFAIRE (pour renderPortal) ---
+        const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+        const dData = await dResp.json();
+        const deal = dData.data[0];
+
+        // --- DEBUG: LISTE DES MODULES ---
+        if (action === 'listModules') {
+            const mResp = await fetch(`${apiDomain}/crm/v2/settings/modules`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const mData = await mResp.json();
+            const modules = (mData.modules || []).map(m => ({ api_name: m.api_name, singular_label: m.singular_label, plural_label: m.plural_label }));
+            return res.status(200).json({ modules });
         }
 
         let visites = [];
