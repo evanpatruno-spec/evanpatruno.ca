@@ -275,7 +275,7 @@
     }
 
     @media (max-width: 768px) {
-        .portal-main-wrapper { border-radius: 0; margin: 0; padding: 10px 5px; } /* Plus d'espace sur les bords */
+        .portal-main-wrapper { border-radius: 0; margin: 0; padding: 10px 5px; }
         .summary-grid { grid-template-columns: 1fr; gap: 10px; }
         .milestone-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
         .milestone-card:last-child { grid-column: span 2; }
@@ -284,11 +284,15 @@
         .milestone-label { font-size: 0.55rem !important; }
         
         .timeline-steps { flex-direction: column; padding: 15px 10px 15px 25px; gap: 25px; }
-        .timeline-steps::before { left: 47px; width: 2px; height: 85%; top: 7%; }
-        .timeline-progress-bar { left: 47px; width: 2px; top: 7%; }
+        .timeline-steps::before { left: 44px; width: 2px; height: 85%; top: 7%; } /* Alignement parfait 25+19 */
+        .timeline-progress-bar { left: 44px; width: 2px; top: 7%; }
         .step-node { flex-direction: row; width: 100%; gap: 15px; align-items: center; }
         .node-dot { width: 38px !important; height: 38px !important; font-size: 0.8rem !important; flex-shrink: 0; }
         .step-node div:last-child { margin-top: 0 !important; text-align: left !important; font-size: 0.85rem !important; color: #fff !important; }
+        
+        /* Correction Cartes Visites Overflow */
+        #wrapVisites > div > div:first-child { flex-direction: column; gap: 10px; align-items: flex-start !important; }
+        .visit-badge { align-self: flex-start; }
         
         input[type="text"], input[type="datetime-local"], select { height: 50px !important; font-size: 0.95rem !important; }
         .login-card { padding: 30px 15px; border-radius: 0; }

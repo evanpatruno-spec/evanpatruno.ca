@@ -134,7 +134,7 @@
             return `<div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:25px; padding:25px; margin-bottom:15px;">
                 <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:15px;">
                     <div><div style="font-weight:900; color:#fff; font-size:1.1rem;">${formatVisitDate(v.Date_heure_de_visite)}</div><div style="font-size:0.85rem; color:var(--dash-accent);">📍 ${v.location || 'Lieu'}</div></div>
-                    <div style="background:rgba(255,255,255,0.1); padding:5px 12px; border-radius:8px; font-size:0.65rem; font-weight:800; color:#fff;">${v.statut || 'En attente'}</div>
+                    <div class="visit-badge" style="background:rgba(255,255,255,0.1); padding:5px 12px; border-radius:8px; font-size:0.65rem; font-weight:800; color:#fff;">${v.statut || 'En attente'}</div>
                 </div>
                 
                 ${isUnlocked || isCompleted ? `
