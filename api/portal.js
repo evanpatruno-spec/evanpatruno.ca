@@ -69,7 +69,7 @@ export default async function handler(req, res) {
             const { location, dateTime } = data;
             const newVisit = { data: [{ 
                 Name: location || "Visite à planifier",
-                Date_heure_de_visite: dateTime ? dateTime.replace('T', ' ') + ':00' : null,
+                Date_heure_de_visite: dateTime ? dateTime + ':00+00:00' : null,
                 Affaire: { id: dealId },
                 Statut: "En attente"
             }] };
