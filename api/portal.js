@@ -165,21 +165,6 @@ export default async function handler(req, res) {
 
         const getDays = (d) => d ? Math.ceil((new Date(d) - new Date().setHours(0,0,0,0)) / 86400000) : null;
 
-        return res.status(200).json({
-            id: deal.id,
-            firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
-            property: deal.Deal_Name || "Dossier",
-            city: deal.Ville || "",
-            code: code,
-            pipeline: deal.Pipeline || "Acheteur",
-            visites: visites,
-            milestones: {
-                financing: { days: getDays(deal.Date_de_financement), done: !!deal.Financement_approuv },
-                inspection: { days: getDays(deal.Date_d_inspection), done: !!deal.Inspection_satisfaisante },
-                others: { days: getDays(deal.Date_autres_conditions), done: !!deal.Autres_conditions_lev_es },
-                signature: { days: getDays(deal.Closing_Date), done: getDays(deal.Closing_Date) < 0 },
-                occupation: { days: getDays(deal.Date_d_occupation), done: getDays(deal.Date_d_occupation) < 0 }
-            },
         // --- LOGIQUE DE TIMELINE DYNAMIQUE (Basée sur le champ TYPE) ---
         const type = (deal.Type || "").toLowerCase();
         const stage = deal.Stage || "";
