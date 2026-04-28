@@ -72,6 +72,25 @@ export default async function handler(req, res) {
             return res.status(500).json({ error: "VISIT_CREATE_FAILED", details: cErr.substring(0, 200) });
         }
 
+        if (action === 'requestMLS') {
+            const { mlsNumber } = data;
+            const body = { data: [{ 
+                Name: `Demande doc MLS ${mlsNumber || ""}`,
+                Type_interaction: "Demande de document",
+                Num_ro_MLS: mlsNumber || "",
+                Affaire: { id: dealId },
+                Statut: "Nouveau"
+            }] };
+            const r = await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, { 
+                method: 'POST', 
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            });
+            if (r.ok) return res.status(200).json({ s: true });
+            const e = await r.text();
+            return res.status(500).json({ error: "MLS_FAILED", details: e.substring(0, 200) });
+        }
+
         // --- CHARGEMENT COMPLET DE L'AFFAIRE (pour renderPortal) ---
         const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
         const dData = await dResp.json();
