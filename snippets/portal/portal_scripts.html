@@ -74,16 +74,23 @@
 
     function renderMilestones(m) {
         const wrap = document.getElementById('wrapMilestones'); if (!wrap) return;
-        const config = [{l:'Financement', d:m.financing}, {l:'Inspection', d:m.inspection}, {l:'Signature', d:m.signature}, {l:'Occupation', d:m.occupation}];
+        const config = [
+            {l:'Financement', d:m.financing}, 
+            {l:'Inspection', d:m.inspection}, 
+            {l:'Autres cond.', d:m.others},
+            {l:'Signature', d:m.signature}, 
+            {l:'Occupation', d:m.occupation}
+        ];
         wrap.innerHTML = config.map(ms => {
-            const days = ms.d?.days; const done = days !== null && days < 0;
+            const days = ms.d?.days; 
+            const done = ms.d?.done || (days !== null && days < 0);
             const neonStyle = done 
                 ? 'border-color:#2ecc71; box-shadow: 0 0 20px rgba(46,204,113,0.5), inset 0 0 15px rgba(46,204,113,0.05);' 
                 : '';
             const valColor = done ? '#2ecc71' : '#fff';
             const valDisplay = days !== null && days !== undefined ? (done ? '✓' : days) : '--';
             const unit = done ? 'COMPLÉTÉ' : 'JOURS';
-            return `<div class="milestone-card" style="${neonStyle}"><div style="font-size:0.55rem; opacity:0.6; margin-bottom:5px; font-weight:800; color:${done?'#2ecc71':'rgba(255,255,255,0.4)'}">${unit}</div><div class="milestone-val" style="color:${valColor};text-shadow:${done?'0 0 20px rgba(46,204,113,0.8)':'none'}">${valDisplay}</div><div class="milestone-label">${ms.l}</div></div>`;
+            return `<div class="milestone-card" style="${neonStyle}"><div style="font-size:0.55rem; opacity:0.6; margin-bottom:5px; font-weight:800; color:${done?'#2ecc71':'rgba(255,255,255,0.4)'}">${unit}</div><div class="milestone-val" style="color:${valColor};text-shadow:${done?'0 0 20px rgba(46,204,113,0.8)':'none'}">${valDisplay}</div><div class="milestone-label" style="font-size:0.6rem;">${ms.l}</div></div>`;
         }).join('');
     }
 

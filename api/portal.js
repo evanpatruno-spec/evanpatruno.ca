@@ -173,10 +173,11 @@ export default async function handler(req, res) {
             code: code,
             visites: visites,
             milestones: {
-                financing: { days: getDays(deal.Date_de_financement) },
-                inspection: { days: getDays(deal.Date_d_inspection) },
-                signature: { days: getDays(deal.Closing_Date) },
-                occupation: { days: getDays(deal.Date_d_occupation) }
+                financing: { days: getDays(deal.Date_de_financement), done: !!deal.Financement_approuv },
+                inspection: { days: getDays(deal.Date_d_inspection), done: !!deal.Inspection_satisfaisante },
+                others: { days: getDays(deal.Date_autres_conditions), done: !!deal.Autres_conditions_lev_es },
+                signature: { days: getDays(deal.Closing_Date), done: getDays(deal.Closing_Date) < 0 },
+                occupation: { days: getDays(deal.Date_d_occupation), done: getDays(deal.Date_d_occupation) < 0 }
             },
             timeline: [
                 { label: "Préparation", status: "completed", icon: "📋" },
