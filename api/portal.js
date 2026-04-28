@@ -42,13 +42,14 @@ export default async function handler(req, res) {
                 method: 'PUT', 
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
+                    trigger: ["workflow", "approval", "blueprint"],
                     data: [{ 
                         id: visitId, 
+                        Statut: "Terminée",
                         Evaluation_visite: String(evaluation || "0"), 
                         Verdict_visite: verdict || "", 
                         Commentaire_visite: commentaire || "" 
-                    }],
-                    trigger: ["workflow", "approval", "blueprint"]
+                    }]
                 }) 
             });
             // Zoho retourne TOUJOURS 200 - il faut lire le corps JSON pour savoir si c'est un succès
