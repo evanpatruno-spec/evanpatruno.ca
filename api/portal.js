@@ -47,7 +47,10 @@ export default async function handler(req, res) {
             const upResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
                 method: 'PUT', 
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify(updateBody) 
+                body: JSON.stringify({
+                    ...updateBody,
+                    trigger: ["workflow"]
+                }) 
             });
             // Zoho retourne TOUJOURS 200 - il faut lire le corps JSON pour savoir si c'est un succès
             const upData = await upResp.json();
