@@ -110,11 +110,6 @@ export default async function handler(req, res) {
 
         // --- CHARGEMENT COMPLET DE L'AFFAIRE (pour renderPortal) ---
 
-        // --- DEBUG: INSPECTER UN ENREGISTREMENT RÉEL ---
-        if (action === 'inspectDeal') {
-            return res.status(200).json({ deal });
-        }
-
         // --- ACTIONS SUR LES VISITES ---
         let visites = [];
         const trySearch = async (module, crit) => {
@@ -185,15 +180,48 @@ export default async function handler(req, res) {
                 signature: { days: getDays(deal.Closing_Date), done: getDays(deal.Closing_Date) < 0 },
                 occupation: { days: getDays(deal.Date_d_occupation), done: getDays(deal.Date_d_occupation) < 0 }
             },
-            timeline: [
+        // --- LOGIQUE DE TIMELINE DYNAMIQUE (Acheteur vs Vendeur) ---
+        const isSeller = deal.Pipeline === 'Vendeur' || deal.Deal_Name?.toLowerCase().includes('vente') || deal.Type === 'Vente';
+        
+        let timeline = [];
+        if (isSeller) {
+            timeline = [
                 { label: "Préparation", status: "completed", icon: "📋" },
-                { label: "Mise en marché", status: (['Mise en marché', 'Visites'].includes(deal.Stage) ? 'active' : (deal.Stage.includes('Offre') || deal.Stage.includes('Vendu') ? 'completed' : 'pending')), icon: "📢" },
-                { label: "Visites", status: (deal.Stage === 'Visites' ? 'active' : (deal.Stage.includes('Offre') || deal.Stage.includes('Vendu') ? 'completed' : 'pending')), icon: "🔍" },
-                { label: "Offre", status: (deal.Stage.includes('Offre') ? 'active' : (deal.Stage.includes('Vendu') ? 'completed' : 'pending')), icon: "📄" },
-                { label: "Conditions", status: (deal.Stage === 'Offre Acceptee (Conditionnelle)' ? 'active' : (deal.Stage.includes('Vendu') ? 'completed' : 'pending')), icon: "⏳" },
-                { label: "Notaire", status: (deal.Stage === 'Chez le Notaire' ? 'active' : (deal.Stage === 'Vendu' ? 'completed' : 'pending')), icon: "🖋️" },
+                { label: "Mise en marché", status: (deal.Stage === 'Mise en marché' ? 'active' : (['Visites', 'Offre', 'Conditions', 'Notaire', 'Vendu'].some(s => deal.Stage.includes(s)) ? 'completed' : 'pending')), icon: "📢" },
+                { label: "Visites", status: (deal.Stage === 'Visites' ? 'active' : (['Offre', 'Conditions', 'Notaire', 'Vendu'].some(s => deal.Stage.includes(s)) ? 'completed' : 'pending')), icon: "🔍" },
+                { label: "Offre", status: (deal.Stage.includes('Offre') ? 'active' : (['Conditions', 'Notaire', 'Vendu'].some(s => deal.Stage.includes(s)) ? 'completed' : 'pending')), icon: "📄" },
+                { label: "Conditions", status: (deal.Stage.includes('Condition') ? 'active' : (['Notaire', 'Vendu'].some(s => deal.Stage.includes(s)) ? 'completed' : 'pending')), icon: "⏳" },
+                { label: "Notaire", status: (deal.Stage.includes('Notaire') ? 'active' : (deal.Stage === 'Vendu' ? 'completed' : 'pending')), icon: "🖋️" },
                 { label: "Vendu", status: (deal.Stage === 'Vendu' ? 'completed' : 'pending'), icon: "✨" }
-            ],
+            ];
+        } else {
+            timeline = [
+                { label: "Préparation", status: "completed", icon: "📋" },
+                { label: "Recherche", status: (deal.Stage === 'Recherche' ? 'active' : (['Visites', 'Offre', 'Conditions', 'Notaire', 'Vendu'].some(s => deal.Stage.includes(s)) ? 'completed' : 'pending')), icon: "🏠" },
+                { label: "Visites", status: (deal.Stage === 'Visites' ? 'active' : (['Offre', 'Conditions', 'Notaire', 'Vendu'].some(s => deal.Stage.includes(s)) ? 'completed' : 'pending')), icon: "🔍" },
+                { label: "Offre", status: (deal.Stage.includes('Offre') ? 'active' : (['Conditions', 'Notaire', 'Vendu'].some(s => deal.Stage.includes(s)) ? 'completed' : 'pending')), icon: "📄" },
+                { label: "Conditions", status: (deal.Stage.includes('Condition') ? 'active' : (['Notaire', 'Vendu'].some(s => deal.Stage.includes(s)) ? 'completed' : 'pending')), icon: "⏳" },
+                { label: "Notaire", status: (deal.Stage.includes('Notaire') ? 'active' : (deal.Stage === 'Vendu' ? 'completed' : 'pending')), icon: "🖋️" },
+                { label: "Vendu", status: (deal.Stage === 'Vendu' ? 'completed' : 'pending'), icon: "✨" }
+            ];
+        }
+
+        return res.status(200).json({
+            id: deal.id,
+            firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
+            property: deal.Deal_Name || "Dossier",
+            city: deal.Ville || "",
+            code: code,
+            pipeline: deal.Pipeline || (isSeller ? "Vendeur" : "Acheteur"),
+            visites: visites,
+            milestones: {
+                financing: { days: getDays(deal.Date_de_financement), done: !!deal.Financement_approuv },
+                inspection: { days: getDays(deal.Date_d_inspection), done: !!deal.Inspection_satisfaisante },
+                others: { days: getDays(deal.Date_autres_conditions), done: !!deal.Autres_conditions_lev_es },
+                signature: { days: getDays(deal.Closing_Date), done: getDays(deal.Closing_Date) < 0 },
+                occupation: { days: getDays(deal.Date_d_occupation), done: getDays(deal.Date_d_occupation) < 0 }
+            },
+            timeline: timeline,
             checklist: [
                 { name: "Financement", done: !!deal.Financement_approuv },
                 { name: "Inspection", done: !!deal.Inspection_satisfaisante },
