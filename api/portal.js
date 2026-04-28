@@ -206,17 +206,31 @@ export default async function handler(req, res) {
                 partnersList = pData.data
                     .filter(p => p.Afficher_Portail === true)
                     .sort((a, b) => (Number(a.Ordre_Affichage) || 99) - (Number(b.Ordre_Affichage) || 99))
-                    .map(p => ({
-                        category: p.Service || "Partenaire",
-                        name: p.Name || "Expert",
-                        icon: (p.Icone || "").trim() || "🤝",
-                        benefit: p.Avantage_Exclusif || "",
-                        isPromo: !!p.Badge_Promo,
-                        contactName: p.Contact_Lie?.name || "",
-                        email: p.Email || "",
-                        phone: p.Telephone || "",
-                        website: p.Site_Web || ""
-                    }));
+                    .map(p => {
+                        const category = p.Service || "Partenaire";
+                        const iconMap = {
+                            "Peintre": "🎨",
+                            "Inspecteur": "🔍",
+                            "Électric": "⚡",
+                            "Notaire": "🖋️",
+                            "Banque": "🏦",
+                            "Hypothécaire": "🏦",
+                            "Plombier": "🔧",
+                            "Nettoyage": "🧼"
+                        };
+                        const icon = (p.Icone && p.Icone !== "?" ? p.Icone : (iconMap[category] || iconMap[Object.keys(iconMap).find(k => category.includes(k))] || "🤝"));
+                        return {
+                            category: category,
+                            name: p.Name || "Expert",
+                            icon: icon,
+                            benefit: p.Avantage_Exclusif || "",
+                            isPromo: !!p.Badge_Promo,
+                            contactName: p.Contact_Lie?.name || "",
+                            email: p.Email || "",
+                            phone: p.Telephone || "",
+                            website: p.Site_Web || ""
+                        };
+                    });
             }
         } catch(e) { console.error("Error fetching partners:", e); }
 
