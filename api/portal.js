@@ -38,18 +38,17 @@ export default async function handler(req, res) {
         // --- ACTIONS LÉGÈRES (sans chargement complet de l'affaire) ---
         if (action === 'pushAvisV13') {
             const { visitId, evaluation, verdict, commentaire } = data;
-            const updateBody = { data: [{ 
-                id: visitId, 
-                Evaluation_visite: String(evaluation || "0"), 
-                Verdict_visite: verdict || "", 
-                Commentaire_visite: commentaire || "" 
-            }] };
             const upResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
                 method: 'PUT', 
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    ...updateBody,
-                    trigger: ["workflow"]
+                    data: [{ 
+                        id: visitId, 
+                        Evaluation_visite: String(evaluation || "0"), 
+                        Verdict_visite: verdict || "", 
+                        Commentaire_visite: commentaire || "" 
+                    }],
+                    trigger: ["workflow", "approval", "blueprint"]
                 }) 
             });
             // Zoho retourne TOUJOURS 200 - il faut lire le corps JSON pour savoir si c'est un succès
