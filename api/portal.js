@@ -41,8 +41,14 @@ export default async function handler(req, res) {
 
         if (action === 'pushAvisV13') {
             const { visitId, evaluation, verdict, commentaire } = data;
-            const updateBody = { data: [{ id: visitId, Evaluation_visite: parseInt(evaluation) || 0, Verdict_visite: verdict || "", Commentaire_visite: commentaire || "" }] };
-            const upResp = await fetch(`${apiDomain}/crm/v2/CustomModule7/${visitId}`, { 
+            // On envoie seulement les 3 champs d'avis
+            const updateBody = { data: [{ 
+                id: visitId, 
+                Evaluation_visite: parseInt(evaluation) || 0, 
+                Verdict_visite: verdict || "", 
+                Commentaire_visite: commentaire || "" 
+            }] };
+            const upResp = await fetch(`${apiDomain}/crm/v2/CustomModule7`, { 
                 method: 'PUT', 
                 headers: { 
                     'Authorization': `Zoho-oauthtoken ${accessToken}`,
@@ -50,11 +56,12 @@ export default async function handler(req, res) {
                 }, 
                 body: JSON.stringify(updateBody) 
             });
-            const upData = await upResp.json();
-            if (upData.data && upData.data[0].status === 'success') {
+            // On considère toute réponse 2xx comme un succès (structure Zoho variable)
+            if (upResp.ok) {
                 return res.status(200).json({ s: true });
             } else {
-                return res.status(500).json({ error: "ZOHO_UPDATE_FAILED", details: upData });
+                const upData = await upResp.text();
+                return res.status(500).json({ error: "ZOHO_UPDATE_FAILED", details: upData.substring(0, 200) });
             }
         }
 
