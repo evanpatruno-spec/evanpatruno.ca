@@ -228,12 +228,18 @@
     function renderPartners(partners) { 
         const w = document.getElementById('wrapPartners'); if (!w || !partners) return; 
         w.innerHTML = partners.map(p => `
-            <div style="background:rgba(255,255,255,0.02); padding:20px; border-radius:25px; border:1px solid var(--dash-border); position:relative; overflow:hidden;">
+            <div style="background:rgba(255,255,255,0.02); padding:20px; border-radius:25px; border:1px solid var(--dash-border); position:relative; overflow:hidden; display:flex; flex-direction:column; gap:8px;">
                 ${p.isPromo ? `<div style="position:absolute; top:12px; right:-25px; background:var(--dash-grad); color:#fff; padding:3px 30px; transform:rotate(45deg); font-size:0.55rem; font-weight:900; box-shadow:0 0 10px rgba(0,0,0,0.3);">PROMO</div>` : ''}
-                <div style="font-size:1.8rem; margin-bottom:10px;">${p.icon || '🤝'}</div>
+                <div style="font-size:1.8rem; margin-bottom:5px;">${p.icon || '🤝'}</div>
                 <div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase; letter-spacing:1px;">${p.category || 'Expert'}</div>
-                <div style="font-family:'Outfit'; font-weight:800; color:#fff; font-size:1.1rem; margin:2px 0;">${p.name || 'Partenaire'}</div>
-                <div style="font-size:0.75rem; opacity:0.6; margin-top:5px;">${p.benefit || ''}</div>
+                <div style="font-family:'Outfit'; font-weight:800; color:#fff; font-size:1.1rem;">${p.name || 'Partenaire'}</div>
+                
+                ${p.benefit ? `<div style="font-size:0.75rem; opacity:0.8; color:var(--dash-accent); font-weight:600; margin-bottom:5px;">🎁 ${p.benefit}</div>` : ''}
+
+                <div style="margin-top:auto; padding-top:10px; border-top:1px solid rgba(255,255,255,0.05); display:flex; flex-direction:column; gap:5px;">
+                    ${p.phone ? `<a href="tel:${p.phone}" style="color:#fff; text-decoration:none; font-size:0.75rem; display:flex; align-items:center; gap:8px; opacity:0.6;"><span style="font-size:0.9rem;">📞</span> ${p.phone}</a>` : ''}
+                    ${p.email ? `<a href="mailto:${p.email}" style="color:#fff; text-decoration:none; font-size:0.75rem; display:flex; align-items:center; gap:8px; opacity:0.6;"><span style="font-size:0.9rem;">✉️</span> ${p.email}</a>` : ''}
+                </div>
             </div>
         `).join(''); 
     }

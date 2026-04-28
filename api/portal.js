@@ -199,8 +199,8 @@ export default async function handler(req, res) {
         // --- CHARGEMENT DES PARTENAIRES ---
         let partnersList = [];
         try {
-            // On récupère tout et on filtre en JS (plus fiable que le moteur de recherche Zoho pour les cases à cocher)
-            const pResp = await fetch(`${apiDomain}/crm/v2/Partenaires_Portail?fields=Name,Service,Icone,Avantage_Exclusif,Badge_Promo,Afficher_Portail,Ordre_Affichage`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            // On récupère les coordonnées en plus
+            const pResp = await fetch(`${apiDomain}/crm/v2/Partenaires_Portail?fields=Name,Service,Icone,Avantage_Exclusif,Badge_Promo,Afficher_Portail,Ordre_Affichage,Email,Telephone`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const pData = await pResp.json();
             if (pData.data) {
                 partnersList = pData.data
@@ -211,7 +211,9 @@ export default async function handler(req, res) {
                         name: p.Name || "Expert",
                         icon: p.Icone || "🤝",
                         benefit: p.Avantage_Exclusif || "",
-                        isPromo: !!p.Badge_Promo
+                        isPromo: p.Badge_Promo === true, // Test strict
+                        email: p.Email || "",
+                        phone: p.Telephone || ""
                     }));
             }
         } catch(e) { console.error("Error fetching partners:", e); }
