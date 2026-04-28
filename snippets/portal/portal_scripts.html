@@ -66,7 +66,6 @@
         const safe = (fn) => { try { fn(); } catch(e) { console.warn(e); } };
         safe(() => renderMilestones(data.milestones || {}));
         safe(() => renderTimeline(data.timeline || []));
-        safe(() => renderChecklist(data.checklist || []));
         safe(() => renderVisites(data.visites || [], data.code));
         safe(() => renderTeam(data.team || []));
         safe(() => renderPartners(data.partners || []));
@@ -77,7 +76,7 @@
         const config = [
             {l:'Financement', d:m.financing}, 
             {l:'Inspection', d:m.inspection}, 
-            {l:'Autres cond.', d:m.others},
+            {l:'Conditions', d:m.others},
             {l:'Signature', d:m.signature}, 
             {l:'Occupation', d:m.occupation}
         ];
@@ -85,12 +84,16 @@
             const days = ms.d?.days; 
             const done = ms.d?.done || (days !== null && days < 0);
             const neonStyle = done 
-                ? 'border-color:#2ecc71; box-shadow: 0 0 20px rgba(46,204,113,0.5), inset 0 0 15px rgba(46,204,113,0.05);' 
+                ? 'border-color:#2ecc71; box-shadow: 0 0 25px rgba(46,204,113,0.4), inset 0 0 15px rgba(46,204,113,0.05); background:rgba(46,204,113,0.05);' 
                 : '';
             const valColor = done ? '#2ecc71' : '#fff';
             const valDisplay = days !== null && days !== undefined ? (done ? '✓' : days) : '--';
             const unit = done ? 'COMPLÉTÉ' : 'JOURS';
-            return `<div class="milestone-card" style="${neonStyle}"><div style="font-size:0.55rem; opacity:0.6; margin-bottom:5px; font-weight:800; color:${done?'#2ecc71':'rgba(255,255,255,0.4)'}">${unit}</div><div class="milestone-val" style="color:${valColor};text-shadow:${done?'0 0 20px rgba(46,204,113,0.8)':'none'}">${valDisplay}</div><div class="milestone-label" style="font-size:0.6rem;">${ms.l}</div></div>`;
+            return `<div class="milestone-card" style="${neonStyle}">
+                <div style="font-size:0.55rem; opacity:0.6; margin-bottom:8px; font-weight:800; color:${done?'#2ecc71':'rgba(255,255,255,0.4)'}">${unit}</div>
+                <div class="milestone-val" style="color:${valColor}; text-shadow:${done?'0 0 20px rgba(46,204,113,0.6)':'none'}; font-size:2.4rem;">${valDisplay}</div>
+                <div class="milestone-label" style="font-size:0.65rem; margin-top:5px; font-weight:800;">${ms.l}</div>
+            </div>`;
         }).join('');
     }
 
@@ -112,19 +115,6 @@
                 else { bar.style.width = `${pct * 0.8}%`; bar.style.height = '2px'; }
             }
         }, 300);
-    }
-
-    function renderChecklist(checklist) {
-        const wrap = document.getElementById('wrapChecklist'); if (!wrap) return;
-        wrap.innerHTML = checklist.map(c => {
-            const neon = c.done 
-                ? 'border:1px solid #2ecc71; box-shadow: 0 0 18px rgba(46,204,113,0.45), inset 0 0 12px rgba(46,204,113,0.05); background:rgba(46,204,113,0.04);' 
-                : 'border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.02);';
-            return `<div style="padding:15px 18px; border-radius:15px; ${neon} display:flex; align-items:center; gap:12px; transition:0.3s;">
-                <div style="width:22px; height:22px; border-radius:50%; flex-shrink:0; background:${c.done?'#2ecc71':'rgba(255,255,255,0.08)'}; color:#fff; font-size:0.65rem; display:flex; align-items:center; justify-content:center; box-shadow:${c.done?'0 0 10px rgba(46,204,113,0.6)':'none'}">${c.done?'✓':'!'}</div>
-                <span style="font-size:0.85rem; font-weight:${c.done?700:500}; color:${c.done?'#fff':'rgba(255,255,255,0.4)'}">${c.name || '--'}</span>
-            </div>`;
-        }).join('');
     }
 
     function renderVisites(visites, portalCode) {
