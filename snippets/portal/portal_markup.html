@@ -4,16 +4,18 @@
     <!-- CONNEXION -->
     <div class="portal-overlay" id="portalOverlay">
         <div class="login-card">
-            <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 8px;">Accès au Dossier</h2>
-            <p style="color: rgba(255,255,255,0.6); margin-bottom: 35px;">Entrez votre Code Portail unique.</p>
+            <div class="login-logo">🔐</div>
+            <div class="login-title">Mon Dossier Privé</div>
+            <p class="login-subtitle">Accédez à votre espace client sécurisé.<br>Entrez votre Code Portail unique.</p>
             <div id="loginFormContainer">
-                <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode">
-                <input type="password" maxlength="4" placeholder="4 DERNIERS CHIFFRES DU TEL." class="login-input" id="inpPortalPhone" style="margin-top: -10px;">
+                <input type="text" placeholder="Code Dossier (ex: EP-1)" class="login-input" id="inpPortalCode">
+                <input type="password" maxlength="4" placeholder="4 derniers chiffres du tél." class="login-input" id="inpPortalPhone">
                 <button type="button" class="login-btn" id="btnPortalLogin" onclick="handlePortalLogin()">
-                    <span>Ouvrir mon dossier</span>
+                    <span>Ouvrir mon dossier →</span>
                 </button>
-                <button id="btnInstallPWA" style="display:none; margin-top:20px; background:rgba(255,255,255,0.05); color:#00f2ff; border:1px solid #00f2ff50; padding:12px; border-radius:12px; font-weight:800; cursor:pointer; width:100%; font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; transition:0.3s; font-family:'Outfit',sans-serif;">📲 Installer l'App sur mon mobile</button>
+                <button id="btnInstallPWA" onclick="installPWA()">📲 Installer l'App sur mon écran</button>
             </div>
+            <div class="login-security">🔒 Connexion chiffrée & sécurisée</div>
         </div>
     </div>
 
@@ -22,11 +24,10 @@
         <header id="secCockpit" style="margin-bottom: 20px; position: relative;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
                 <div>
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap:wrap;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
                         <span style="background: var(--dash-accent); color: #000; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">Accueil</span>
                         <span id="txtCodeRef" style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 700; margin: 0 5px;">#--</span>
                         <span id="badgeStage" style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">--</span>
-                        <span id="txtLoginTime" style="color: rgba(255,255,255,0.25); font-size: 0.65rem; font-weight: 600;"></span>
                     </div>
                     <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">Chargement...</h1>
                     <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--</div>
@@ -69,7 +70,7 @@
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
-                <div id="wrapChecklist" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;"></div>
+                <div id="wrapChecklist" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;"></div>
             </div>
         </div>
 
@@ -94,16 +95,16 @@
             </div>
             <div class="section-content">
                 <!-- FORMULAIRE DEMANDE DE VISITE -->
-                <div class="visit-request-form">
-                    <h4>📅 Demander une visite</h4>
+                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:20px; margin-bottom:20px;">
+                    <h4 style="margin:0 0 15px 0; color:#fff; font-size:1rem;">📅 Demander une visite</h4>
                     <div style="display:grid; gap:10px; margin-bottom:15px;">
-                        <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse complète" class="portal-input">
-                        <input type="datetime-local" id="inpVisitDateTime" class="portal-input">
+                        <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse" style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                        <input type="datetime-local" id="inpVisitDateTime" style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
                     </div>
-                    <button onclick="requestVisit()" style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:13px; border-radius:12px; font-weight:800; cursor:pointer; font-size:0.9rem; transition:0.3s; box-shadow:0 5px 20px rgba(135,50,118,0.3);">Envoyer la demande</button>
+                    <button onclick="requestVisit()" style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:12px; border-radius:10px; font-weight:800; cursor:pointer;">Envoyer la demande</button>
                 </div>
                 
-                <div id="wrapVisites" style="display: grid; gap: 0;"></div>
+                <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
             </div>
         </div>
 
@@ -138,8 +139,8 @@
             <div class="section-content">
                 <p style="font-size:0.85rem; opacity:0.7; margin-bottom:15px;">Demandez la documentation confidentielle pour un numéro MLS.</p>
                 <div style="display:flex; gap:10px;">
-                    <input type="text" id="inpMLS" placeholder="Numéro MLS (ex: 12345678)" class="portal-input" style="flex:1;">
-                    <button onclick="requestMLSDoc()" style="background:var(--dash-grad); color:#fff; border:none; padding:0 25px; border-radius:12px; font-weight:800; cursor:pointer; white-space:nowrap;">Demander</button>
+                    <input type="text" id="inpMLS" placeholder="Numéro MLS (ex: 12345678)" style="flex:1; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:12px; color:#fff; outline:none;">
+                    <button onclick="requestMLSDoc()" style="background:var(--dash-grad); color:#fff; border:none; padding:0 25px; border-radius:12px; font-weight:800; cursor:pointer;">Demander</button>
                 </div>
             </div>
         </div>
