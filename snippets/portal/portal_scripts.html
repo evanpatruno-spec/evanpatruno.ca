@@ -127,7 +127,7 @@
                     <div style="text-align:center; font-size:0.7rem; font-weight:800; color:var(--dash-accent); text-transform:uppercase; margin-bottom:10px;">Verdict visite</div>
                     <div style="display:flex; gap:15px; justify-content:center; margin-bottom:15px;">
                         <button onclick="saveVerdict('${v.id}', 'Coup de coeur', this)" style="background:${verdict==='Coup de coeur'?'rgba(135,50,118,0.4)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">❤️</button>
-                        <button onclick="saveVerdict('${v.id}', 'À réfléchir', this)" style="background:${verdict==='À réfléchir'?'rgba(135,50,118,0.4)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">🧐</button>
+                        <button onclick="saveVerdict('${v.id}', 'A réfléchir', this)" style="background:${verdict==='A réfléchir'?'rgba(135,50,118,0.4)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">🧐</button>
                         <button onclick="saveVerdict('${v.id}', 'Pas pour moi', this)" style="background:${verdict==='Pas pour moi'?'rgba(135,50,118,0.4)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">👎</button>
                     </div>
 
@@ -169,8 +169,8 @@
                 codePortal: code, 
                 dealId: dealId, 
                 visitId: id, 
-                evaluation: localFB.rating || 5,
-                verdict: localFB.verdict || "À réfléchir", 
+                evaluation: String(localFB.rating || 5),
+                verdict: localFB.verdict || "A réfléchir", 
                 commentaire: comm
             };
             const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
