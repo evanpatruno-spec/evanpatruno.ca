@@ -64,8 +64,26 @@ export default async function handler(req, res) {
                 return res.status(500).json({ error: "ZOHO_UPDATE_FAILED", details: upData.substring(0, 200) });
             }
         }
+        if (action === 'requestVisit') {
+            const { location, dateTime } = data;
+            const newVisit = { data: [{ 
+                Name: location || "Visite à planifier",
+                Date_heure_de_visite: dateTime ? new Date(dateTime).toISOString().replace('T', ' ').substring(0, 19) : null,
+                Affaire: { id: dealId },
+                Statut: "En attente"
+            }] };
+            const createResp = await fetch(`${apiDomain}/crm/v2/CustomModule7`, { 
+                method: 'POST', 
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify(newVisit) 
+            });
+            if (createResp.ok) return res.status(200).json({ s: true });
+            else {
+                const err = await createResp.text();
+                return res.status(500).json({ error: "VISIT_CREATE_FAILED", details: err.substring(0, 200) });
+            }
+        }
 
-        // --- RÉCUPÉRATION VISITES (ULTRA-ROBUSTE) ---
         let visites = [];
         const trySearch = async (module, crit) => {
             try {

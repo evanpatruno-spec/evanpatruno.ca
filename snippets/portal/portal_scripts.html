@@ -176,8 +176,8 @@
             const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
             const result = await res.json();
             if (result.s) { btn.innerText = "Avis enregistré ! ✨"; btn.style.background = "#2ecc71"; } 
-            else { throw new Error(result.error || "Erreur API"); }
-        } catch (e) { btn.innerText = "Réessayer"; btn.disabled = false; console.error("Sync Error:", e); }
+            else { throw new Error((result.error || "Erreur API") + (result.details ? ": " + JSON.stringify(result.details).substring(0, 100) : "")); }
+        } catch (e) { btn.innerText = "Réessayer"; btn.disabled = false; alert("⚠️ Erreur avis : " + e.message); console.error("Sync Error:", e); }
     }
 
     async function requestVisit() {
