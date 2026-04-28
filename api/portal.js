@@ -199,16 +199,20 @@ export default async function handler(req, res) {
         // --- CHARGEMENT DES PARTENAIRES ---
         let partnersList = [];
         try {
-            const pResp = await fetch(`${apiDomain}/crm/v2/Partenaires_Portail/search?criteria=(Afficher_Portail:equals:true)`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            // On récupère tout et on filtre en JS (plus fiable que le moteur de recherche Zoho pour les cases à cocher)
+            const pResp = await fetch(`${apiDomain}/crm/v2/Partenaires_Portail?fields=Name,Service,Icone,Avantage_Exclusif,Badge_Promo,Afficher_Portail,Ordre_Affichage`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const pData = await pResp.json();
             if (pData.data) {
-                partnersList = pData.data.sort((a, b) => (Number(a.Ordre_Affichage) || 99) - (Number(b.Ordre_Affichage) || 99)).map(p => ({
-                    category: p.Service || "Partenaire",
-                    name: p.Name || "Expert",
-                    icon: p.Icone || "🤝",
-                    benefit: p.Avantage_Exclusif || "",
-                    isPromo: !!p.Badge_Promo
-                }));
+                partnersList = pData.data
+                    .filter(p => p.Afficher_Portail === true)
+                    .sort((a, b) => (Number(a.Ordre_Affichage) || 99) - (Number(b.Ordre_Affichage) || 99))
+                    .map(p => ({
+                        category: p.Service || "Partenaire",
+                        name: p.Name || "Expert",
+                        icon: p.Icone || "🤝",
+                        benefit: p.Avantage_Exclusif || "",
+                        isPromo: !!p.Badge_Promo
+                    }));
             }
         } catch(e) { console.error("Error fetching partners:", e); }
 
