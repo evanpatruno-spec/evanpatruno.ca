@@ -275,20 +275,29 @@
     }
 
     @media (max-width: 768px) {
-        .portal-main-wrapper { border-radius: 40px; margin: 10px 5px; }
-        .summary-grid { grid-template-columns: 1fr; }
-        .milestone-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        .milestone-card { padding: 15px 10px; min-height: 110px; }
-        .milestone-val { font-size: 1.6rem !important; }
-        .milestone-label { font-size: 0.55rem !important; line-height: 1.2; }
+        .portal-main-wrapper { border-radius: 0; margin: 0; padding: 15px; } /* Full width mobile */
+        .summary-grid { grid-template-columns: 1fr; gap: 15px; }
+        .milestone-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .milestone-card:last-child { grid-column: span 2; } /* La 5ème carte prend toute la largeur */
+        .milestone-card { padding: 20px 15px; min-height: 100px; border-radius: 20px; }
+        .milestone-val { font-size: 1.8rem !important; }
+        .milestone-label { font-size: 0.6rem !important; }
         
-        .timeline-steps { flex-direction: column; padding: 20px 40px; gap: 30px; }
-        .timeline-steps::before { left: 69px; width: 2px; height: 80%; top: 10%; }
-        .timeline-progress-bar { left: 69px; width: 2px; top: 10%; }
-        .step-node { flex-direction: row; width: 100%; gap: 20px; align-items: center; }
-        .node-dot { width: 50px !important; height: 50px !important; font-size: 1rem !important; flex-shrink: 0; }
-        .step-node div:last-child { margin-top: 0 !important; text-align: left !important; font-size: 0.8rem !important; }
+        .timeline-steps { flex-direction: column; padding: 25px 45px; gap: 35px; }
+        .timeline-steps::before { left: 67px; width: 2px; height: 82%; top: 9%; }
+        .timeline-progress-bar { left: 67px; width: 2px; top: 9%; }
+        .step-node { flex-direction: row; width: 100%; gap: 25px; align-items: center; }
+        .node-dot { width: 44px !important; height: 44px !important; font-size: 0.9rem !important; flex-shrink: 0; }
+        .step-node div:last-child { margin-top: 0 !important; text-align: left !important; font-size: 0.85rem !important; color: #fff !important; }
         
-        .login-card { padding: 40px 28px; border-radius: 30px; }
+        /* Inputs Visites Mobile */
+        input[type="text"], input[type="datetime-local"], select { 
+            height: 55px !important; 
+            font-size: 1rem !important; 
+            border-radius: 15px !important;
+            padding: 0 15px !important;
+        }
+        
+        .login-card { padding: 45px 25px; border-radius: 0; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
     }
 </style>
