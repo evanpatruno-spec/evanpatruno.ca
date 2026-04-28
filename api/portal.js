@@ -108,39 +108,9 @@ export default async function handler(req, res) {
         const dData = await dResp.json();
         const deal = dData.data[0];
 
-        // --- DEBUG: LISTE DES MODULES ---
-        if (action === 'listModules') {
-            const mResp = await fetch(`${apiDomain}/crm/v2/settings/modules`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            const mData = await mResp.json();
-            const modules = (mData.modules || []).map(m => ({ api_name: m.api_name, singular_label: m.singular_label, plural_label: m.plural_label }));
-            return res.status(200).json({ modules });
-        }
+        // --- CHARGEMENT COMPLET DE L'AFFAIRE (pour renderPortal) ---
 
-        if (action === 'listDealFields') {
-            const fResp = await fetch(`${apiDomain}/crm/v2/settings/fields?module=Deals`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            const fData = await fResp.json();
-            const fields = (fData.fields || []).map(f => ({ api_name: f.api_name, field_label: f.field_label, data_type: f.data_type }));
-            return res.status(200).json({ fields });
-        }
-
-        // --- DEBUG: INSPECTER UN ENREGISTREMENT RÉEL ---
-        if (action === 'inspectDeal') {
-            return res.status(200).json({ deal });
-        }
-        if (action === 'getRecord') {
-            const { visitId } = data;
-            if (!visitId) {
-                // Retourner la première visite trouvée
-                const vResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail?per_page=1`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-                const vData = await vResp.json();
-                return res.status(200).json({ record: vData.data ? vData.data[0] : null });
-            }
-            const rResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail/${visitId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-            const rData = await rResp.json();
-            return res.status(200).json({ record: rData.data ? rData.data[0] : null });
-        }
-
-        let visites = [];
+        // --- ACTIONS SUR LES VISITES ---
         const trySearch = async (module, crit) => {
             try {
                 const r = await fetch(`${apiDomain}/crm/v2/${module}/search?criteria=${encodeURIComponent(crit)}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
@@ -214,9 +184,9 @@ export default async function handler(req, res) {
                 { label: "Vendu", status: "pending", icon: "✨" }
             ],
             checklist: [
-                { name: "Financement", done: deal.Financement_approuv === "Oui" },
-                { name: "Inspection", done: deal.Inspection_satisfaisante === "Oui" },
-                { name: "Conditions levées", done: deal.Autres_conditions_lev_es === "Oui" }
+                { name: "Financement", done: !!deal.Financement_approuv },
+                { name: "Inspection", done: !!deal.Inspection_satisfaisante },
+                { name: "Conditions levées", done: !!deal.Autres_conditions_lev_es }
             ],
             team: team,
             partners: [
