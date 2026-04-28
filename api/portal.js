@@ -110,6 +110,11 @@ export default async function handler(req, res) {
 
         // --- CHARGEMENT COMPLET DE L'AFFAIRE (pour renderPortal) ---
 
+        // --- DEBUG: INSPECTER UN ENREGISTREMENT RÉEL ---
+        if (action === 'inspectDeal') {
+            return res.status(200).json({ deal });
+        }
+
         // --- ACTIONS SUR LES VISITES ---
         let visites = [];
         const trySearch = async (module, crit) => {
@@ -171,6 +176,7 @@ export default async function handler(req, res) {
             property: deal.Deal_Name || "Dossier",
             city: deal.Ville || "",
             code: code,
+            pipeline: deal.Pipeline || "Acheteur",
             visites: visites,
             milestones: {
                 financing: { days: getDays(deal.Date_de_financement), done: !!deal.Financement_approuv },
