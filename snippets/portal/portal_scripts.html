@@ -225,7 +225,18 @@
     }
 
     function renderTeam(team) { const w = document.getElementById('wrapTeam'); if (!w || !team) return; w.innerHTML = team.map(t => `<div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); text-align:center;"><div style="font-size:1.8rem; margin-bottom:8px;">${t.icon || '👤'}</div><div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${t.role || 'Expert'}</div><div style="font-weight:700; color:#fff;">${t.name || '--'}</div></div>`).join(''); }
-    function renderPartners(partners) { const w = document.getElementById('wrapPartners'); if (!w || !partners) return; w.innerHTML = partners.map(p => `<div style="background:rgba(255,255,255,0.02); padding:20px; border-radius:25px; border:1px solid var(--dash-border); position:relative; overflow:hidden;"><div style="position:absolute; top:12px; right:-25px; background:var(--dash-primary); color:#fff; padding:3px 30px; transform:rotate(45deg); font-size:0.55rem; font-weight:900;">PROMO</div><div style="font-size:1.5rem; margin-bottom:10px;">${p.icon || '🤝'}</div><div style="font-family:'Outfit'; font-weight:800; color:#fff;">${p.name || 'Partenaire'}</div><div style="font-size:0.75rem; opacity:0.6; margin-top:5px;">${p.benefit || 'Avantage exclusif'}</div></div>`).join(''); }
+    function renderPartners(partners) { 
+        const w = document.getElementById('wrapPartners'); if (!w || !partners) return; 
+        w.innerHTML = partners.map(p => `
+            <div style="background:rgba(255,255,255,0.02); padding:20px; border-radius:25px; border:1px solid var(--dash-border); position:relative; overflow:hidden;">
+                ${p.isPromo ? `<div style="position:absolute; top:12px; right:-25px; background:var(--dash-grad); color:#fff; padding:3px 30px; transform:rotate(45deg); font-size:0.55rem; font-weight:900; box-shadow:0 0 10px rgba(0,0,0,0.3);">PROMO</div>` : ''}
+                <div style="font-size:1.8rem; margin-bottom:10px;">${p.icon || '🤝'}</div>
+                <div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase; letter-spacing:1px;">${p.category || 'Expert'}</div>
+                <div style="font-family:'Outfit'; font-weight:800; color:#fff; font-size:1.1rem; margin:2px 0;">${p.name || 'Partenaire'}</div>
+                <div style="font-size:0.75rem; opacity:0.6; margin-top:5px;">${p.benefit || ''}</div>
+            </div>
+        `).join(''); 
+    }
     async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
     function toggleSection(id, forceOpen = false) { 
         const el = document.getElementById(id); if (!el) return;

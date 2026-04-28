@@ -219,13 +219,48 @@ export default async function handler(req, res) {
                 { name: "Conditions levées", done: !!deal.Autres_conditions_lev_es }
             ],
             team: team,
-            partners: [
-                { category: "Peinture", name: "Peinture Excellence", icon: "🎨", benefit: "10% de rabais", code: "EP-PROMO" },
-                { category: "Plomberie", name: "Plombier Pro", icon: "🚿", benefit: "Estimation gratuite", code: "EP-PROMO" },
-                { category: "Électricité", name: "Électricien Élite", icon: "⚡", benefit: "-15% main d'œuvre", code: "EP-PROMO" }
-            ],
-            concierge: { resources: [{ title: "Tout sur le CELIAPP →", url: "#" }, { title: "Régime d'Accès à la Propriété (RAP) →", url: "#" }] }
-        });
+            // --- CHARGEMENT DES PARTENAIRES ---
+            let partners = [];
+            try {
+                const pResp = await fetch(`${apiDomain}/crm/v2/Partenaires_Portail/search?criteria=(Afficher_Portail:equals:true)`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const pData = await pResp.json();
+                if (pData.data) {
+                    partners = pData.data.sort((a, b) => (Number(a.Ordre_Affichage) || 99) - (Number(b.Ordre_Affichage) || 99)).map(p => ({
+                        category: p.Service || "Partenaire",
+                        name: p.Name || "Expert",
+                        icon: p.Icone || "🤝",
+                        benefit: p.Avantage_Exclusif || "",
+                        isPromo: !!p.Badge_Promo
+                    }));
+                }
+            } catch(e) { console.error("Error fetching partners:", e); }
+
+            return res.status(200).json({
+                id: deal.id,
+                firstName: deal.Contact_Name?.name?.split(' ')[0] || "Client",
+                property: deal.Deal_Name || "Dossier",
+                city: deal.Ville || "",
+                code: code,
+                pipeline: deal.Pipeline || (isSeller ? "Vente" : "Achat"),
+                type: deal.Type || "",
+                visites: visites,
+                milestones: {
+                    financing: { days: getDays(deal.Date_de_financement), done: !!deal.Financement_approuv },
+                    inspection: { days: getDays(deal.Date_d_inspection), done: !!deal.Inspection_satisfaisante },
+                    others: { days: getDays(deal.Date_autres_conditions), done: !!deal.Autres_conditions_lev_es },
+                    signature: { days: getDays(deal.Closing_Date), done: getDays(deal.Closing_Date) < 0 },
+                    occupation: { days: getDays(deal.Date_d_occupation), done: getDays(deal.Date_d_occupation) < 0 }
+                },
+                timeline: timeline,
+                checklist: [
+                    { name: "Financement", done: !!deal.Financement_approuv },
+                    { name: "Inspection", done: !!deal.Inspection_satisfaisante },
+                    { name: "Conditions levées", done: !!deal.Autres_conditions_lev_es }
+                ],
+                team: team,
+                partners: partners,
+                concierge: { resources: [{ title: "Tout sur le CELIAPP →", url: "#" }, { title: "Régime d'Accès à la Propriété (RAP) →", url: "#" }] }
+            });
 
     } catch (err) {
         return res.status(500).json({ error: "SERVER_ERROR", details: err.message });
