@@ -156,6 +156,16 @@
         margin-bottom: 15px; 
     }
 
+    /* GRID PARTENAIRES */
+    .partner-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+        gap: 12px;
+    }
+    @media (min-width: 1024px) {
+        .partner-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
     /* QUICK MENU MOBILE */
     .portal-quick-menu { 
         display: none; position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); 
