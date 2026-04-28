@@ -111,6 +111,7 @@ export default async function handler(req, res) {
         // --- CHARGEMENT COMPLET DE L'AFFAIRE (pour renderPortal) ---
 
         // --- ACTIONS SUR LES VISITES ---
+        let visites = [];
         const trySearch = async (module, crit) => {
             try {
                 const r = await fetch(`${apiDomain}/crm/v2/${module}/search?criteria=${encodeURIComponent(crit)}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
