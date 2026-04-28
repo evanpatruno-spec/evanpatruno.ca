@@ -17,21 +17,38 @@
         const btn = document.getElementById('btnPortalLogin');
         const code = (inpCode?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
         const phone = (inpPhone?.value || localStorage.getItem('portal_phone'))?.trim();
+        
         if (!code || !phone) return;
         if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
+        
         try {
-            const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
+            const res = await fetch(API_URL, { 
+                method: 'POST', 
+                headers: { 'Content-Type': 'application/json' }, 
+                body: JSON.stringify({ codePortal: code, phoneLast4: phone }) 
+            });
             const data = await res.json();
+            
             if (!res.ok) throw new Error((data.error || "Accès refusé.") + (data.details ? ": " + data.details : ""));
+            
             localStorage.setItem('portal_code', code);
             localStorage.setItem('portal_phone', phone);
             localStorage.setItem('portal_deal_id', data.id);
+            
+            // On remplit les données
             renderPortal(data);
-            document.getElementById('portalOverlay').classList.add('hidden');
-            document.getElementById('portalDash').classList.add('visible');
+            
+            // On cache l'overlay et on affiche le dashboard
+            const overlay = document.getElementById('portalOverlay');
+            const dash = document.getElementById('portalDash');
+            if (overlay) overlay.style.display = 'none';
+            if (dash) {
+                dash.style.display = 'block';
+                setTimeout(() => dash.classList.add('visible'), 50);
+            }
         } catch (error) { 
-            const msg = error.message || "Erreur inconnue";
-            alert("⚠️ Erreur : " + msg); 
+            console.error("Login error:", error);
+            alert("⚠️ Erreur : " + (error.message || "Erreur de connexion")); 
             if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; } 
         }
     }
@@ -52,23 +69,27 @@
     function renderPortal(data) {
         if (!data) return;
         const setT = (id, v) => { const el = document.getElementById(id); if(el) el.innerText = v || "--"; };
+        
         setT('txtWelcome', `Bonjour ${data.firstName || 'Evan'}.`);
         setT('txtPropName', `${data.property || ''} - ${data.city || ''}`);
         setT('txtCodeRef', `#${data.code || ''}`);
+        
         const s = (data.timeline || []).find(x => x.status === 'active') || (data.timeline || []).find(x => x.status === 'pending');
         setT('badgeStage', s ? s.label : "Dossier Actif");
 
         const nextCondition = (data.checklist || []).find(c => !c.done);
         setT('dashNextStep', nextCondition ? nextCondition.name : "Terminé !");
+        
         const nextVisit = (data.visites || []).find(v => v.statut === 'Confirmée' || v.statut === 'Prévue');
         setT('dashNextVisit', nextVisit ? formatVisitDate(nextVisit.Date_heure_de_visite) : "Aucun planifié");
 
-        const safe = (fn) => { try { fn(); } catch(e) { console.warn(e); } };
-        safe(() => renderMilestones(data.milestones || {}));
-        safe(() => renderTimeline(data.timeline || []));
-        safe(() => renderVisites(data.visites || [], data.code));
-        safe(() => renderTeam(data.team || []));
-        safe(() => renderPartners(data.partners || []));
+        // Rendu sécurisé des sections
+        const safe = (name, fn) => { try { fn(); } catch(e) { console.warn(`Error rendering ${name}:`, e); } };
+        safe('milestones', () => renderMilestones(data.milestones || {}));
+        safe('timeline', () => renderTimeline(data.timeline || []));
+        safe('visites', () => renderVisites(data.visites || [], data.code));
+        safe('team', () => renderTeam(data.team || []));
+        safe('partners', () => renderPartners(data.partners || []));
     }
 
     function renderMilestones(m) {
