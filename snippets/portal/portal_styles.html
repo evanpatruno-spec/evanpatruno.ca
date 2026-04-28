@@ -1,12 +1,8 @@
 <style>
     /* --- PORTAL STYLES v14.40 - PREMIUM REDESIGN --- */
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
-    * { box-sizing: border-box !important; }
+    * { box-sizing: border-box; }
     :root {
-        --dash-primary: #873276;
-        --dash-primary-glow: rgba(135, 50, 118, 0.4);
-        --dash-accent: #d4af37;
-        --dash-accent-glow: rgba(212, 175, 55, 0.4);
         --dash-bg: #0f050d;
         --dash-card-bg: rgba(255, 255, 255, 0.03);
         --dash-border: rgba(135, 50, 118, 0.5);
@@ -143,6 +139,21 @@
         0% { box-shadow: 0 0 15px rgba(187, 102, 255, 0.4); border-color: rgba(187, 102, 255, 0.6); }
         50% { box-shadow: 0 0 35px rgba(187, 102, 255, 0.8); border-color: rgba(187, 102, 255, 1); }
         100% { box-shadow: 0 0 15px rgba(187, 102, 255, 0.4); border-color: rgba(187, 102, 255, 0.6); }
+    }
+
+    /* VISITS */
+    .visit-card { 
+        background: rgba(255,255,255,0.03); 
+        border: 1px solid rgba(135,50,118,0.3); 
+        border-radius: 25px; 
+        padding: 25px; 
+        margin-bottom: 15px; 
+    }
+    .visit-header { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: flex-start; 
+        margin-bottom: 15px; 
     }
 
     /* ===== LOGIN PAGE - PREMIUM REDESIGN ===== */
@@ -291,7 +302,8 @@
         .step-node div:last-child { margin-top: 0 !important; text-align: left !important; font-size: 0.85rem !important; color: #fff !important; }
         
         /* Correction Cartes Visites Overflow */
-        #wrapVisites > div > div:first-child { flex-direction: column; gap: 10px; align-items: flex-start !important; }
+        .visit-card { padding: 15px; }
+        .visit-header { flex-direction: column; gap: 10px; align-items: flex-start !important; }
         .visit-badge { align-self: flex-start; }
         
         input[type="text"], input[type="datetime-local"], select { height: 50px !important; font-size: 0.95rem !important; }
