@@ -179,7 +179,7 @@ export default async function handler(req, res) {
                 { label: "Préparation", status: "completed", icon: "📋" },
                 { label: "Mise en marché", status: (stage === 'Mise en marché' ? 'active' : (['Visites', 'Offre', 'Condition', 'Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "📢" },
                 { label: "Visites", status: (stage === 'Visites' ? 'active' : (['Offre', 'Condition', 'Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "🔍" },
-                { label: "Offre", status: (stage.includes('Offre') ? 'active' : (['Condition', 'Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "📄" },
+                { label: "Offre", status: (stage.includes('Offre') && !stage.includes('Condition') ? 'active' : (['Condition', 'Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "📄" },
                 { label: "Conditions", status: (stage.includes('Condition') ? 'active' : (['Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "⏳" },
                 { label: "Notaire", status: (stage.includes('Notaire') ? 'active' : (stage === 'Vendu' ? 'completed' : 'pending')), icon: "🖋️" },
                 { label: "Vendu", status: (stage === 'Vendu' ? 'completed' : 'pending'), icon: "✨" }
@@ -189,7 +189,7 @@ export default async function handler(req, res) {
                 { label: "Préparation", status: "completed", icon: "📋" },
                 { label: "Recherche", status: (stage === 'Recherche' ? 'active' : (['Visites', 'Offre', 'Condition', 'Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "🏠" },
                 { label: "Visites", status: (stage === 'Visites' ? 'active' : (['Offre', 'Condition', 'Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "🔍" },
-                { label: "Offre", status: (stage.includes('Offre') ? 'active' : (['Condition', 'Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "📄" },
+                { label: "Offre", status: (stage.includes('Offre') && !stage.includes('Condition') ? 'active' : (['Condition', 'Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "📄" },
                 { label: "Conditions", status: (stage.includes('Condition') ? 'active' : (['Notaire', 'Vendu'].some(s => stage.includes(s)) ? 'completed' : 'pending')), icon: "⏳" },
                 { label: "Notaire", status: (stage.includes('Notaire') ? 'active' : (stage === 'Vendu' ? 'completed' : 'pending')), icon: "🖋️" },
                 { label: "Vendu", status: (stage === 'Vendu' ? 'completed' : 'pending'), icon: "✨" }
