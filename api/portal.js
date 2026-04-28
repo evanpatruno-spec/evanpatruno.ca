@@ -116,7 +116,17 @@ export default async function handler(req, res) {
             return res.status(200).json({ modules });
         }
 
+        if (action === 'listDealFields') {
+            const fResp = await fetch(`${apiDomain}/crm/v2/settings/fields?module=Deals`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const fData = await fResp.json();
+            const fields = (fData.fields || []).map(f => ({ api_name: f.api_name, field_label: f.field_label, data_type: f.data_type }));
+            return res.status(200).json({ fields });
+        }
+
         // --- DEBUG: INSPECTER UN ENREGISTREMENT RÉEL ---
+        if (action === 'inspectDeal') {
+            return res.status(200).json({ deal });
+        }
         if (action === 'getRecord') {
             const { visitId } = data;
             if (!visitId) {
