@@ -42,8 +42,20 @@ export default async function handler(req, res) {
         if (action === 'pushAvisV13') {
             const { visitId, evaluation, verdict, commentaire } = data;
             const updateBody = { data: [{ id: visitId, Evaluation_visite: parseInt(evaluation) || 0, Verdict_visite: verdict || "", Commentaire_visite: commentaire || "" }] };
-            await fetch(`${apiDomain}/crm/v2/CustomModule7/${visitId}`, { method: 'PUT', headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` }, body: JSON.stringify(updateBody) });
-            return res.status(200).json({ s: true });
+            const upResp = await fetch(`${apiDomain}/crm/v2/CustomModule7/${visitId}`, { 
+                method: 'PUT', 
+                headers: { 
+                    'Authorization': `Zoho-oauthtoken ${accessToken}`,
+                    'Content-Type': 'application/json'
+                }, 
+                body: JSON.stringify(updateBody) 
+            });
+            const upData = await upResp.json();
+            if (upData.data && upData.data[0].status === 'success') {
+                return res.status(200).json({ s: true });
+            } else {
+                return res.status(500).json({ error: "ZOHO_UPDATE_FAILED", details: upData });
+            }
         }
 
         // --- RÉCUPÉRATION VISITES (ULTRA-ROBUSTE) ---
