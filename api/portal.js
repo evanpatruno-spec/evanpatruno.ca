@@ -85,6 +85,14 @@ export default async function handler(req, res) {
             return res.status(200).json({ modules });
         }
 
+        // --- DEBUG: LISTE DES CHAMPS DU MODULE VISITES ---
+        if (action === 'listFields') {
+            const fResp = await fetch(`${apiDomain}/crm/v2/settings/fields?module=Visites_Portail`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const fData = await fResp.json();
+            const fields = (fData.fields || []).map(f => ({ api_name: f.api_name, field_label: f.field_label, data_type: f.data_type }));
+            return res.status(200).json({ fields });
+        }
+
         let visites = [];
         const trySearch = async (module, crit) => {
             try {
