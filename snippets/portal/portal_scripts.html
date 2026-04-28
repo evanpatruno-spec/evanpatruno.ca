@@ -239,9 +239,10 @@
                     </div>
                 </div>
 
+                ${p.benefit ? `
                 <div style="font-size:0.7rem; opacity:0.8; color:#fff; border-left:2px solid var(--dash-accent); padding-left:8px; margin:2px 0; line-height:1.3;">
-                    ${p.benefit || 'Avantage réservé'}
-                </div>
+                    ${p.benefit}
+                </div>` : ''}
 
                 <div style="background:rgba(255,255,255,0.03); padding:8px 10px; border-radius:12px; font-size:0.7rem;">
                     <div style="color:#fff; font-weight:700; margin-bottom:3px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">👤 ${p.contactName || 'Contact'}</div>
