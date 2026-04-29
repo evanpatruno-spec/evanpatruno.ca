@@ -69,6 +69,17 @@ export default async function handler(req, res) {
                         fcm_options: {
                             link: url || "https://dossier.evanpatruno.ca/mon-dossier.html"
                         }
+                    },
+                    android: {
+                        priority: "high"
+                    },
+                    apns: {
+                        payload: {
+                            aps: {
+                                sound: "default",
+                                "content-available": 1
+                            }
+                        }
                     }
                 }
             })
