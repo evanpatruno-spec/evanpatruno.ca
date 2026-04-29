@@ -119,7 +119,7 @@ export default async function handler(req, res) {
             const newVisit = {
                 data: [{
                     Name: location || "Visite à planifier",
-                    Date_heure_de_visite: dateTime ? dateTime + ':00+00:00' : null,
+                    Date_heure_de_visite: dateTime || null,
                     Affaire: { id: dealId },
                     Statut: "En attente"
                 }]
@@ -170,7 +170,7 @@ export default async function handler(req, res) {
                     data: [{
                         id: visitId,
                         Statut: "En attente",
-                        Date_heure_de_visite: newDateTime ? newDateTime + ':00+00:00' : null,
+                        Date_heure_de_visite: newDateTime || null,
                         Note_interne: `REPORTÉ PAR LE CLIENT : ${newDateTime} pour ${location}`
                     }]
                 })

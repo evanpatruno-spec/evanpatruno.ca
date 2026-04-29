@@ -332,6 +332,12 @@
         } catch (e) { btn.innerText = "Réessayer"; btn.disabled = false; alert("⚠️ Erreur avis : " + e.message); console.error("Sync Error:", e); }
     }
 
+    function getZohoDateTime(dtString) {
+        if (!dtString) return null;
+        const d = new Date(dtString);
+        return d.toISOString().split('.')[0] + '+00:00';
+    }
+
     async function requestVisit() {
         const loc = document.getElementById('inpVisitLoc').value.trim(), dt = document.getElementById('inpVisitDateTime').value, d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code');
         if (!loc || !dt) { alert("Veuillez remplir l'adresse et la date."); return; }
@@ -347,7 +353,7 @@
         const btn = document.querySelector('[onclick="requestVisit()"]');
         if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
         try {
-            const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, location: loc, dateTime: dt }) });
+            const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestVisit', codePortal: c, dealId: d, location: loc, dateTime: getZohoDateTime(dt) }) });
             const result = await res.json();
             if (result.s) {
                 alert("✅ Demande de visite envoyée ! Evan vous contactera pour confirmer.");
@@ -416,7 +422,7 @@
 
             const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id');
             try {
-                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'rescheduleVisit', codePortal: c, dealId: d, visitId: id, location: loc, newDateTime: newDT }) });
+                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'rescheduleVisit', codePortal: c, dealId: d, visitId: id, location: loc, newDateTime: getZohoDateTime(newDT) }) });
                 const result = await res.json();
                 if (result.s) {
                     alert("✅ Visite reportée ! Evan a été notifié.");
