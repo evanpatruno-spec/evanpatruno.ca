@@ -181,11 +181,14 @@
     .portal-quick-menu { 
         display: none !important; 
         position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); 
-        background: rgba(20,10,25,0.8); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-        border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 10px 25px; 
-        gap: 25px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        background: rgba(20,10,25,0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 10px 20px; 
+        gap: 15px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        max-width: 95vw; overflow-x: auto; white-space: nowrap; justify-content: flex-start;
+        -ms-overflow-style: none; scrollbar-width: none;
     }
-    .quick-menu-item { font-size: 1.4rem; cursor: pointer; transition: 0.3s; opacity: 0.6; }
+    .portal-quick-menu::-webkit-scrollbar { display: none; }
+    .quick-menu-item { font-size: 1.3rem; cursor: pointer; transition: 0.3s; opacity: 0.6; flex-shrink: 0; }
     .quick-menu-item:hover { opacity: 1; transform: scale(1.2); }
 
     @media (max-width: 768px) {
@@ -410,7 +413,7 @@
         
         .portal-quick-menu { 
             display: flex; position: fixed; bottom: 20px; left: 50%; 
-            transform: translateX(-50%); width: 85%; justify-content: center;
+            transform: translateX(-50%); width: 90%; justify-content: flex-start;
         }
         
         .login-card { padding: 30px 15px; border-radius: 0; }
@@ -618,8 +621,12 @@
     <!-- QUICK MENU MOBILE -->
     <div class="portal-quick-menu">
         <div class="quick-menu-item" onclick="toggleSection('secCockpit', true)">🏠</div>
-        <div class="quick-menu-item" onclick="toggleSection('secVisites', true)">📅</div>
+        <div class="quick-menu-item" onclick="toggleSection('secSummary', true)">📊</div>
+        <div class="quick-menu-item" onclick="toggleSection('secChecklist', true)">📋</div>
+        <div class="quick-menu-item" onclick="toggleSection('secDocuments', true)">📄</div>
+        <div class="quick-menu-item" onclick="toggleSection('secVisites', true)">👁️</div>
         <div class="quick-menu-item" onclick="toggleSection('secTimeline', true)">⏳</div>
+        <div class="quick-menu-item" onclick="toggleSection('secAmbassadeur', true)">🌟</div>
         <div class="quick-menu-item" onclick="toggleSection('secTeam', true)">👥</div>
     </div>
 </div>
