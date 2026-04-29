@@ -21,7 +21,7 @@
     .portal-main-wrapper {
         font-family: 'Inter', sans-serif;
         color: #fff;
-        background: radial-gradient(ellipse at 50% 50%, var(--dash-bg) 0%, transparent 70%);
+        background: radial-gradient(closest-side at 50% 50%, var(--dash-bg) 0%, transparent 100%);
         min-height: 900px;
         position: relative;
         overflow: hidden;
@@ -30,8 +30,8 @@
     .portal-aura {
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background: radial-gradient(circle at 30% 30%, rgba(135, 50, 118, 0.15) 0%, transparent 70%),
-                    radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+        background: radial-gradient(closest-side at 30% 30%, rgba(135, 50, 118, 0.15) 0%, transparent 100%),
+                    radial-gradient(closest-side at 80% 70%, rgba(212, 175, 55, 0.08) 0%, transparent 100%);
         z-index: 0; pointer-events: none;
     }
 
@@ -194,7 +194,7 @@
     /* ===== LOGIN PAGE - PREMIUM REDESIGN ===== */
     .portal-overlay { 
         position: absolute; top: 0; left: 0; width: 100%; height: 100%; min-height: 100vh;
-        background: radial-gradient(ellipse at 50% 50%, rgba(15, 5, 13, 0.95) 0%, transparent 70%);
+        background: radial-gradient(closest-side at 50% 50%, rgba(15, 5, 13, 0.95) 0%, transparent 100%);
         backdrop-filter: blur(0px); z-index: 9999; display: flex; align-items: center; justify-content: center;
         flex-direction: column; gap: 0;
     }
@@ -203,8 +203,8 @@
         content: '';
         position: absolute; top: 0; left: 0; right: 0; bottom: 0;
         background: 
-            radial-gradient(circle at 20% 80%, rgba(212,175,55,0.06) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(135,50,118,0.12) 0%, transparent 50%);
+            radial-gradient(closest-side at 20% 80%, rgba(212,175,55,0.06) 0%, transparent 100%),
+            radial-gradient(closest-side at 80% 20%, rgba(135,50,118,0.12) 0%, transparent 100%);
         pointer-events: none;
     }
 
