@@ -22,10 +22,10 @@
         const inpCode = document.getElementById('inpPortalCode');
         const inpPhone = document.getElementById('inpPortalPhone');
         const btn = document.getElementById('btnPortalLogin');
-        
+
         const code = (inpCode?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
         const phone = (inpPhone?.value || localStorage.getItem('portal_phone'))?.trim();
-        
+
         // On détermine si c'est une connexion manuelle (clic bouton)
         const isManual = !!(inpCode?.value || inpPhone?.value);
 
@@ -40,7 +40,7 @@
             const res = await fetch(`${API_URL}?t=${Date.now()}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
             const data = await res.json();
             if (!res.ok) throw new Error((data.error || "Accès refusé."));
-            
+
             if (data.s === false) throw new Error(data.message || "Erreur Zoho");
 
             localStorage.setItem('portal_code', code);
@@ -49,16 +49,16 @@
             renderPortal(data);
             document.getElementById('portalOverlay').classList.add('hidden');
             document.getElementById('portalDash').classList.add('visible');
-        } catch (error) { 
+        } catch (error) {
             console.error("Login Error:", error);
             // On affiche l'alerte si c'est manuel OU si on force l'événement
-            if (e || isManual) alert("⚠️ Erreur : " + error.message); 
-            
+            if (e || isManual) alert("⚠️ Erreur : " + error.message);
+
             const isDashVisible = document.getElementById('portalDash').classList.contains('visible');
             if (!isDashVisible) {
                 document.getElementById('portalOverlay').classList.remove('hidden');
             }
-            if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; } 
+            if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
         }
     }
 
@@ -74,7 +74,7 @@
         if (!dt) return "À venir";
         try {
             // Zoho envoie parfois "YYYY-MM-DD HH:mm:ss" au lieu de "YYYY-MM-DDTHH:mm:ss"
-            const cleanDT = dt.replace(' ', 'T'); 
+            const cleanDT = dt.replace(' ', 'T');
             const dateObj = new Date(cleanDT);
             if (isNaN(dateObj)) return dt; // Fallback si invalide
             const datePart = dateObj.toLocaleDateString('fr-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
@@ -85,7 +85,7 @@
 
     function renderPortal(data) {
         if (!data) return;
-        const setT = (id, v) => { const el = document.getElementById(id); if(el) el.innerText = v || "--"; };
+        const setT = (id, v) => { const el = document.getElementById(id); if (el) el.innerText = v || "--"; };
         setT('txtWelcome', `Bonjour ${data.firstName || 'Evan'}.`);
         setT('txtPropName', `${data.property || ''} - ${data.city || ''}`);
         setT('txtCodeRef', `#${data.code || ''}`);
@@ -97,7 +97,7 @@
         const nextVisit = (data.visites || []).find(v => v.statut === 'Confirmée' || v.statut === 'Prévue');
         setT('dashNextVisit', nextVisit ? formatVisitDate(nextVisit.Date_heure_de_visite) : "Aucun planifié");
 
-        const safe = (fn) => { try { fn(); } catch(e) { console.warn(e); } };
+        const safe = (fn) => { try { fn(); } catch (e) { console.warn(e); } };
         safe(() => renderMilestones(data.milestones || {}));
         safe(() => renderTimeline(data.timeline || []));
         safe(() => renderVisites(data.visites || [], data.code));
@@ -109,24 +109,24 @@
     function renderMilestones(m) {
         const wrap = document.getElementById('wrapMilestones'); if (!wrap) return;
         const config = [
-            {l:'Financement', d:m.financing}, 
-            {l:'Inspection', d:m.inspection}, 
-            {l:'Conditions', d:m.others},
-            {l:'Signature', d:m.signature}, 
-            {l:'Occupation', d:m.occupation}
+            { l: 'Financement', d: m.financing },
+            { l: 'Inspection', d: m.inspection },
+            { l: 'Conditions', d: m.others },
+            { l: 'Signature', d: m.signature },
+            { l: 'Occupation', d: m.occupation }
         ];
         wrap.innerHTML = config.map(ms => {
-            const days = ms.d?.days; 
+            const days = ms.d?.days;
             const done = ms.d?.done || (days !== null && days < 0);
-            const neonStyle = done 
-                ? 'border-color:#2ecc71; box-shadow: 0 0 25px rgba(46,204,113,0.4), inset 0 0 15px rgba(46,204,113,0.05); background:rgba(46,204,113,0.05);' 
+            const neonStyle = done
+                ? 'border-color:#2ecc71; box-shadow: 0 0 25px rgba(46,204,113,0.4), inset 0 0 15px rgba(46,204,113,0.05); background:rgba(46,204,113,0.05);'
                 : '';
             const valColor = done ? '#2ecc71' : '#fff';
             const valDisplay = days !== null && days !== undefined ? (done ? '✓' : days) : '--';
             const unit = done ? 'COMPLÉTÉ' : 'JOURS';
             return `<div class="milestone-card" style="${neonStyle}">
-                <div style="font-size:0.55rem; opacity:0.6; margin-bottom:8px; font-weight:800; color:${done?'#2ecc71':'rgba(255,255,255,0.4)'}">${unit}</div>
-                <div class="milestone-val" style="color:${valColor}; text-shadow:${done?'0 0 20px rgba(46,204,113,0.6)':'none'}; font-size:2.4rem;">${valDisplay}</div>
+                <div style="font-size:0.55rem; opacity:0.6; margin-bottom:8px; font-weight:800; color:${done ? '#2ecc71' : 'rgba(255,255,255,0.4)'}">${unit}</div>
+                <div class="milestone-val" style="color:${valColor}; text-shadow:${done ? '0 0 20px rgba(46,204,113,0.6)' : 'none'}; font-size:2.4rem;">${valDisplay}</div>
                 <div class="milestone-label" style="font-size:0.65rem; margin-top:5px; font-weight:800;">${ms.l}</div>
             </div>`;
         }).join('');
@@ -153,11 +153,11 @@
     }
 
     function renderVisites(visites, portalCode) {
-        const wrap = document.getElementById('wrapVisites'); 
+        const wrap = document.getElementById('wrapVisites');
         if (!wrap) return;
-        if (!visites || visites.length === 0) { 
-            wrap.innerHTML = `<p style="text-align:center; opacity:0.5;">Aucune visite.</p>`; 
-            return; 
+        if (!visites || visites.length === 0) {
+            wrap.innerHTML = `<p style="text-align:center; opacity:0.5;">Aucune visite.</p>`;
+            return;
         }
 
         const now = Date.now();
@@ -189,7 +189,7 @@
             const verdict = v.verdict || localFB.verdict || "";
             const rating = v.evaluation || localFB.rating || 0;
             const visitTime = v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite.replace(' ', 'T')).getTime() : 0;
-            const isUnlocked = now > (visitTime + 1800000); 
+            const isUnlocked = now > (visitTime + 1800000);
             const isCompleted = ["Terminée", "Effectuée"].includes(v.statut);
             const safeLoc = (v.location || 'Lieu').split("'").join("\\'");
 
@@ -212,7 +212,7 @@
                         <div style="background:rgba(0,0,0,0.2); border-radius:15px; padding:15px; border:1px solid rgba(255,255,255,0.05);">
                             <div style="text-align:center; font-size:0.7rem; font-weight:800; color:var(--dash-accent); text-transform:uppercase; margin-bottom:5px;">Évaluation visite</div>
                             <div style="display:flex; gap:8px; justify-content:center; margin-bottom:15px;">
-                                ${[1,2,3,4,5].map(s => `
+                                ${[1, 2, 3, 4, 5].map(s => `
                                     <span onclick="saveRating('${v.id}', ${s}, this)" style="cursor:pointer; font-size:1.5rem; filter:${s <= rating ? 'none' : 'grayscale(1) opacity(0.2)'}; transition:0.3s;">⭐</span>
                                 `).join('')}
                             </div>
@@ -249,9 +249,9 @@
                     </div>
                     <div id="wrapArchivedVisits" class="collapsed" style="margin-top:15px; flex-direction:column; gap:10px;">
                         ${archivedVisites.map(v => {
-                            const arcCol = statusColors[v.statut] || 'rgba(255,255,255,0.1)';
-                            const arcTxt = statusTextColors[v.statut] || '#fff';
-                            return `
+                const arcCol = statusColors[v.statut] || 'rgba(255,255,255,0.1)';
+                const arcTxt = statusTextColors[v.statut] || '#fff';
+                return `
                                 <div style="background:rgba(255,255,255,0.02); border-radius:15px; padding:12px; border:1px solid rgba(255,255,255,0.05); display:flex; justify-content:space-between; align-items:center; opacity:0.8;">
                                     <div style="font-size:0.8rem;">
                                         <div style="font-weight:700; color:#fff;">${formatVisitDate(v.Date_heure_de_visite)}</div>
@@ -260,7 +260,7 @@
                                     <div style="font-size:0.55rem; background:${arcCol}; color:${arcTxt}; border:1px solid ${arcTxt}33; padding:4px 8px; border-radius:5px; text-transform:uppercase; font-weight:800;">${v.statut}</div>
                                 </div>
                             `;
-                        }).join('')}
+            }).join('')}
                     </div>
                 </div>
             `;
@@ -296,17 +296,17 @@
         if (!dealId || !btn) return;
         btn.innerText = "Sync..."; btn.disabled = true;
         try {
-            const payload = { 
-                codePortal: code, 
-                dealId: dealId, 
-                visitId: id, 
+            const payload = {
+                codePortal: code,
+                dealId: dealId,
+                visitId: id,
                 evaluation: String(localFB.rating || 5),
-                verdict: localFB.verdict || "A réfléchir", 
+                verdict: localFB.verdict || "A réfléchir",
                 commentaire: comm
             };
             const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
             const result = await res.json();
-            if (result.s) { btn.innerText = "Avis enregistré ! ✨"; btn.style.background = "#2ecc71"; } 
+            if (result.s) { btn.innerText = "Avis enregistré ! ✨"; btn.style.background = "#2ecc71"; }
             else { throw new Error((result.error || "Erreur API") + (result.details ? ": " + JSON.stringify(result.details).substring(0, 100) : "")); }
         } catch (e) { btn.innerText = "Réessayer"; btn.disabled = false; alert("⚠️ Erreur avis : " + e.message); console.error("Sync Error:", e); }
     }
@@ -314,7 +314,7 @@
     async function requestVisit() {
         const loc = document.getElementById('inpVisitLoc').value.trim(), dt = document.getElementById('inpVisitDateTime').value, d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code');
         if (!loc || !dt) { alert("Veuillez remplir l'adresse et la date."); return; }
-        
+
         // Validation : Minimum 2h dans le futur
         const chosen = new Date(dt).getTime();
         const minTime = Date.now() + (2 * 60 * 60 * 1000);
@@ -325,18 +325,18 @@
 
         const btn = document.querySelector('[onclick="requestVisit()"]');
         if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
-        try { 
-            const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, location: loc, dateTime: dt }) }); 
+        try {
+            const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, location: loc, dateTime: dt }) });
             const result = await res.json();
-            if (result.s) { 
-                alert("✅ Demande de visite envoyée ! Evan vous contactera pour confirmer."); 
-                document.getElementById('inpVisitLoc').value=''; 
-                document.getElementById('inpVisitDateTime').value=''; 
-                
+            if (result.s) {
+                alert("✅ Demande de visite envoyée ! Evan vous contactera pour confirmer.");
+                document.getElementById('inpVisitLoc').value = '';
+                document.getElementById('inpVisitDateTime').value = '';
+
                 // Un seul rafraîchissement après 3s pour laisser Zoho indexer le nouveau record
                 setTimeout(() => { handlePortalLogin(); }, 3000);
-            } else { 
-                alert("⚠️ Erreur : " + (result.details || result.error || "Erreur inconnue")); 
+            } else {
+                alert("⚠️ Erreur : " + (result.details || result.error || "Erreur inconnue"));
             }
         } catch (e) { alert("⚠️ Erreur de connexion : " + e.message); }
         if (btn) { btn.innerText = "Envoyer la demande"; btn.disabled = false; }
@@ -351,13 +351,13 @@
             const result = await res.json();
             if (result.s) {
                 alert("✅ Visite annulée avec succès.");
-                handlePortalLogin(); 
+                handlePortalLogin();
             } else {
                 alert("⚠️ Erreur : " + (result.error || "Inconnue") + "\n" + (result.message || ""));
                 if (btn) { btn.innerText = "🚫 Annuler"; btn.disabled = false; }
             }
-        } catch (e) { 
-            alert("⚠️ Erreur de connexion : " + e.message); 
+        } catch (e) {
+            alert("⚠️ Erreur de connexion : " + e.message);
             if (btn) { btn.innerText = "🚫 Annuler"; btn.disabled = false; }
         }
     }
@@ -381,7 +381,7 @@
         document.getElementById('btnConfirmReschedule').onclick = async () => {
             const newDT = document.getElementById('newVisitTime').value;
             if (!newDT) { alert("Veuillez sélectionner une date et une heure."); return; }
-            
+
             // Validation : Minimum 2h dans le futur
             const chosen = new Date(newDT).getTime();
             const minTime = Date.now() + (2 * 60 * 60 * 1000);
@@ -411,16 +411,16 @@
     function renderChecklist(checklist) {
         const wrap = document.getElementById('wrapChecklist'); if (!wrap) return;
         wrap.innerHTML = checklist.map(c => `
-            <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:15px; border:1px solid ${c.done?'rgba(46,204,113,0.2)':'rgba(255,255,255,0.1)'}; display:flex; align-items:center; gap:12px;">
-                <div style="width:20px; height:20px; border-radius:50%; background:${c.done?'#2ecc71':'rgba(255,255,255,0.1)'}; color:#fff; font-size:0.6rem; display:flex; align-items:center; justify-content:center;">${c.done?'✓':'!'}</div>
-                <span style="font-size:0.85rem; font-weight:600; color:${c.done?'#fff':'rgba(255,255,255,0.4)'}">${c.name || '--'}</span>
+            <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:15px; border:1px solid ${c.done ? 'rgba(46,204,113,0.2)' : 'rgba(255,255,255,0.1)'}; display:flex; align-items:center; gap:12px;">
+                <div style="width:20px; height:20px; border-radius:50%; background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.1)'}; color:#fff; font-size:0.6rem; display:flex; align-items:center; justify-content:center;">${c.done ? '✓' : '!'}</div>
+                <span style="font-size:0.85rem; font-weight:600; color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name || '--'}</span>
             </div>
         `).join('');
     }
 
     function renderTeam(team) { const w = document.getElementById('wrapTeam'); if (!w || !team) return; w.innerHTML = team.map(t => `<div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); text-align:center;"><div style="font-size:1.8rem; margin-bottom:8px;">${t.icon || '👤'}</div><div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${t.role || 'Expert'}</div><div style="font-weight:700; color:#fff;">${t.name || '--'}</div></div>`).join(''); }
-    function renderPartners(partners) { 
-        const w = document.getElementById('wrapPartners'); if (!w || !partners) return; 
+    function renderPartners(partners) {
+        const w = document.getElementById('wrapPartners'); if (!w || !partners) return;
         w.innerHTML = partners.map(p => `
             <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:20px; border:1px solid var(--dash-border); position:relative; overflow:hidden; display:flex; flex-direction:column; gap:10px;">
                 ${p.isPromo ? `<div style="position:absolute; top:8px; right:-28px; background:var(--dash-grad); color:#fff; padding:2px 30px; transform:rotate(45deg); font-size:0.5rem; font-weight:900; box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:1;">PROMO</div>` : ''}
@@ -449,7 +449,7 @@
                     </div>
                 </div>
             </div>
-        `).join(''); 
+        `).join('');
     }
     async function submitReferral() {
         const name = document.getElementById('refName').value.trim();
@@ -483,7 +483,7 @@
     }
 
     async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
-    function toggleSection(id, forceOpen = false) { 
+    function toggleSection(id, forceOpen = false) {
         const el = document.getElementById(id); if (!el) return;
         if (forceOpen) el.classList.remove('collapsed');
         else el.classList.toggle('collapsed');
@@ -491,14 +491,14 @@
             setTimeout(() => { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
         }
     }
-    
+
     // --- GESTION PWA AVANCÉE ---
     let deferredPrompt;
     const isIos = () => /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
     const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone) || window.matchMedia('(display-mode: standalone)').matches;
 
     window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         deferredPrompt = e;
         console.log("PWA: Prompt ready");
     });
@@ -517,7 +517,7 @@
     const setupInstallBtn = () => {
         const btn = document.getElementById('btnInstallPWA');
         if (!btn) return;
-        
+
         if (isInStandaloneMode()) {
             btn.style.display = 'none';
             return;
@@ -526,7 +526,7 @@
         btn.addEventListener('click', async (e) => {
             e.preventDefault();
             const code = localStorage.getItem('portal_code') || "";
-            
+
             // Si on est déjà sur le domaine Vercel (PWA)
             if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('dossier.evanpatruno.ca')) {
                 if (isIos()) {
@@ -543,7 +543,7 @@
                 }
             } else {
                 // Si on est sur Zoho, on redirige vers le domaine d'installation
-                const installUrl = `https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install&code=${code}`;
+                const installUrl = `https://evanpatruno-ca.vercel.app/r/portal?action=install&code=${code}`;
                 window.location.href = installUrl;
             }
         });
@@ -583,15 +583,15 @@
     };
 
     // Initialisation
-    if (document.readyState === 'loading') { 
-        document.addEventListener('DOMContentLoaded', () => { 
-            initPortal(); 
-            setupInstallBtn(); 
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            initPortal();
+            setupInstallBtn();
             checkAutoInstall();
-        }); 
-    } else { 
-        initPortal(); 
-        setupInstallBtn(); 
+        });
+    } else {
+        initPortal();
+        setupInstallBtn();
         checkAutoInstall();
     }
 </script>
