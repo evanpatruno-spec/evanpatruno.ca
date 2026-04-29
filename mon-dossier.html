@@ -466,7 +466,10 @@
                     <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">Chargement...</h1>
                     <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--</div>
                 </div>
-                <button onclick="handleLogout()" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">🚪 Quitter</button>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="nativeShare()" style="background: rgba(135, 50, 118, 0.2); border: 1px solid rgba(135, 50, 118, 0.4); color: #fff; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">📲 Partager</button>
+                    <button onclick="handleLogout()" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">🚪 Quitter</button>
+                </div>
             </div>
         </header>
 
@@ -589,7 +592,8 @@
                     <input type="text" id="refName" placeholder="Nom du proche" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
                     <input type="tel" id="refPhone" placeholder="Téléphone ou Email" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
                     <textarea id="refNotes" placeholder="Petit mot ou projet (Vente, Achat...)" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none; height:60px; resize:none;"></textarea>
-                    <button onclick="submitReferral()" class="portal-btn-primary btn-gold">🤝 Envoyer la référence</button>
+                    <button id="btnSubmitReferral" onclick="submitReferral()" class="btn-gold" style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer;">🎁 Envoyer la référence</button>
+                    <button onclick="nativeShare()" class="btn-gold" style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer; opacity: 0.9; background: linear-gradient(135deg, #f1c40f, #d4af37);">📲 Partager mon lien Ambassadeur</button>
                 </div>
             </div>
         </div>
@@ -1144,6 +1148,25 @@
             else if (style === 'medium') window.navigator.vibrate(25);
             else if (style === 'success') window.navigator.vibrate([15, 30, 15]);
         } catch(e) {}
+    }
+
+    async function nativeShare() {
+        hapticFeedback('medium');
+        const shareData = {
+            title: 'Evan Patruno | Courtier Immobilier',
+            text: 'Accédez à votre portail client privé ou recommandez les services de Evan Patruno.',
+            url: 'https://evanpatruno.ca/mon-dossier'
+        };
+        try {
+            if (navigator.share) {
+                await navigator.share(shareData);
+            } else {
+                await navigator.clipboard.writeText(shareData.url);
+                alert("📋 Lien de partage copié !");
+            }
+        } catch (err) {
+            console.log('Share error:', err);
+        }
     }
 
     function toggleSection(id, forceOpen = false) {
