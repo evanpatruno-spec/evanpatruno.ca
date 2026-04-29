@@ -154,9 +154,11 @@ export default async function handler(req, res) {
             const { refName, refPhone, refNotes } = data;
             const body = {
                 data: [{
-                    Name: `Référence de ${deal?.Contact_Name?.name || "Client"} : ${refName}`,
+                    Name: `Référence Ambassadeur : ${refName}`,
                     Type_interaction: "Référence Ambassadeur",
-                    Description: `NOM : ${refName}\nCONTACT : ${refPhone}\nPROJET : ${refNotes}`,
+                    Nom_reference: refName,
+                    Contact_reference: refPhone,
+                    Description_reference: refNotes,
                     Affaire: { id: dealId },
                     Statut: "Nouveau"
                 }]
