@@ -86,6 +86,21 @@
             </div>
         </div>
 
+        <!-- DEMANDE DE DOCUMENTATIONS -->
+        <div class="section-wrapper" id="secConciergeMLS" style="border-color: #00f2ff30;">
+            <div class="section-header" onclick="toggleSection('secConciergeMLS')">
+                <h3>⚡ Demande de documentations</h3>
+                <div class="section-chevron">▼</div>
+            </div>
+            <div class="section-content">
+                <p style="font-size:0.85rem; opacity:0.7; margin-bottom:15px;">Demandez la documentation confidentielle pour un numéro MLS.</p>
+                <div style="display:flex; gap:10px;">
+                    <input type="text" id="inpMLS" placeholder="Numéro MLS (ex: 12345678)" style="flex:1; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:12px; color:#fff; outline:none;">
+                    <button onclick="requestMLSDoc()" style="background:var(--dash-grad); color:#fff; border:none; padding:0 25px; border-radius:12px; font-weight:800; cursor:pointer;">Demander</button>
+                </div>
+            </div>
+        </div>
+
         <!-- VISITES -->
         <div class="section-wrapper" id="secVisites">
             <div class="section-header" onclick="toggleSection('secVisites')">
@@ -129,20 +144,6 @@
             </div>
         </div>
 
-        <!-- SMART CONCIERGE -->
-        <div class="section-wrapper collapsed" id="secConciergeMLS" style="border-color: #00f2ff30;">
-            <div class="section-header" onclick="toggleSection('secConciergeMLS')">
-                <h3>⚡ Smart Concierge (Matrix)</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <p style="font-size:0.85rem; opacity:0.7; margin-bottom:15px;">Demandez la documentation confidentielle pour un numéro MLS.</p>
-                <div style="display:flex; gap:10px;">
-                    <input type="text" id="inpMLS" placeholder="Numéro MLS (ex: 12345678)" style="flex:1; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:12px; color:#fff; outline:none;">
-                    <button onclick="requestMLSDoc()" style="background:var(--dash-grad); color:#fff; border:none; padding:0 25px; border-radius:12px; font-weight:800; cursor:pointer;">Demander</button>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- QUICK MENU MOBILE -->
     <div class="portal-quick-menu">
