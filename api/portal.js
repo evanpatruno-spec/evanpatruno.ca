@@ -141,11 +141,20 @@ export default async function handler(req, res) {
             return res.status(200).json({ s: false, error: "RESCHEDULE_FAILED", details: rData });
         }
 
+        // --- CHARGEMENT COMPLET DE L'AFFAIRE (requis pour certaines actions) ---
+        let deal = null;
+        if (action === 'submitReferral' || !['pushAvisV13', 'requestVisit', 'cancelVisit', 'rescheduleVisit', 'requestMLS'].includes(action)) {
+            const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const dData = await dResp.json();
+            deal = dData.data?.[0];
+            if (!deal && action !== 'submitReferral') return res.status(404).json({ error: "DEAL_NOT_FOUND" });
+        }
+
         if (action === 'submitReferral') {
             const { refName, refPhone, refNotes } = data;
             const body = {
                 data: [{
-                    Name: `Référence de ${deal.Contact_Name?.name || "Client"} : ${refName}`,
+                    Name: `Référence de ${deal?.Contact_Name?.name || "Client"} : ${refName}`,
                     Type_interaction: "Référence Ambassadeur",
                     Note_interne: `NOM : ${refName}\nCONTACT : ${refPhone}\nPROJET : ${refNotes}`,
                     Affaire: { id: dealId },
@@ -185,10 +194,7 @@ export default async function handler(req, res) {
             return res.status(500).json({ error: "MLS_FAILED", details: e.substring(0, 200) });
         }
 
-        // --- CHARGEMENT COMPLET DE L'AFFAIRE (pour renderPortal) ---
-        const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-        const dData = await dResp.json();
-        const deal = dData.data[0];
+        // --- RÉCUPÉRATION DES VISITES ---
 
         // --- RÉCUPÉRATION DES VISITES ---
         let visites = [];
