@@ -281,13 +281,14 @@
         const btn = document.querySelector('[onclick="requestVisit()"]');
         if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
         try { 
-            const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestVisit', codePortal: c, dealId: d, location: loc, dateTime: dt }) }); 
+            const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, location: loc, dateTime: dt }) }); 
             const result = await res.json();
             if (result.s) { 
                 alert("✅ Demande de visite envoyée ! Evan vous contactera pour confirmer."); 
                 document.getElementById('inpVisitLoc').value=''; 
                 document.getElementById('inpVisitDateTime').value=''; 
-                handlePortalLogin();
+                // Petit délai de 2s pour laisser à Zoho le temps d'indexer le nouvel enregistrement
+                setTimeout(() => { handlePortalLogin(); }, 2000);
             } else { 
                 alert("⚠️ Erreur : " + (result.details || result.error || "Erreur inconnue")); 
             }
