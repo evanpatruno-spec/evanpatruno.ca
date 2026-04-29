@@ -172,7 +172,8 @@ export default async function handler(req, res) {
                 data: [{
                     Last_Name: refName,
                     Phone: refPhone,
-                    Lead_Source: "PROGRAMME_AMBASSADEUR",
+                    Origine_du_Contact: "PROGRAMME_AMBASSADEUR",
+                    Ambassadeur: deal?.Contact_Name?.id ? { id: deal.Contact_Name.id } : null,
                     Description: `RÉFÉRENCE DE : ${deal?.Contact_Name?.name || "Client Portail"}\nPROJET : ${refNotes}`,
                     Statut_du_prospect: "Nouveau"
                 }]
