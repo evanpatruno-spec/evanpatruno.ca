@@ -10,9 +10,10 @@
             <div id="loginFormContainer">
                 <input type="text" placeholder="Code Dossier (ex: EP-1)" class="login-input" id="inpPortalCode">
                 <input type="password" maxlength="4" placeholder="4 derniers chiffres du tél." class="login-input" id="inpPortalPhone">
-                <button type="button" class="login-btn" id="btnPortalLogin" onclick="handlePortalLogin()">
+                <button type="button" class="login-btn" id="btnPortalLogin" onclick="handlePortalLogin(event)">
                     <span>Ouvrir mon dossier →</span>
                 </button>
+
                 <a href="https://evanpatruno-ca.vercel.app/r/portal" id="btnInstallPWA" style="text-decoration:none; display:block; text-align:center;">📲 Installer l'App sur mon écran</a>
             </div>
             <div class="login-security">🔒 Connexion chiffrée & sécurisée</div>

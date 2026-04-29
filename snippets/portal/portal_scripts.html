@@ -23,14 +23,17 @@
         const inpPhone = document.getElementById('inpPortalPhone');
         const btn = document.getElementById('btnPortalLogin');
         
-        // Si on a des inputs, on les utilise en priorité (connexion manuelle)
         const code = (inpCode?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
         const phone = (inpPhone?.value || localStorage.getItem('portal_phone'))?.trim();
         
-        if (!code || !phone) return;
+        // On détermine si c'est une connexion manuelle (clic bouton)
+        const isManual = !!(inpCode?.value || inpPhone?.value);
 
-        // On détermine si c'est une connexion manuelle (clic bouton) ou auto (refresh)
-        const isManual = !!(inpCode?.value && inpPhone?.value);
+        if (!code || !phone) {
+            if (e) alert("⚠️ Veuillez remplir votre Code Dossier et vos 4 chiffres de téléphone.");
+            return;
+        }
+
 
         if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
         try {
