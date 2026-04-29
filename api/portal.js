@@ -156,7 +156,7 @@ export default async function handler(req, res) {
                 data: [{
                     Name: `Référence de ${deal?.Contact_Name?.name || "Client"} : ${refName}`,
                     Type_interaction: "Référence Ambassadeur",
-                    Note_interne: `NOM : ${refName}\nCONTACT : ${refPhone}\nPROJET : ${refNotes}`,
+                    Description: `NOM : ${refName}\nCONTACT : ${refPhone}\nPROJET : ${refNotes}`,
                     Affaire: { id: dealId },
                     Statut: "Nouveau"
                 }]
