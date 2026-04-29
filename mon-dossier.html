@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Portail Client Privé | Evan Patruno</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
-        /* --- PORTAL STYLES v14.26 --- */
-        * { box-sizing: border-box !important; }
+        /* --- PORTAL STYLES v14.9 - RESTORED FROM STABLE --- */
+        * {
+            box-sizing: border-box !important;
+        }
+
         :root {
             --dash-primary: #873276;
             --dash-primary-glow: rgba(135, 50, 118, 0.4);
@@ -17,438 +23,645 @@
             --dash-card-bg: rgba(255, 255, 255, 0.04);
             --dash-border: rgba(135, 50, 118, 0.6);
             --dash-glow: 0 0 25px rgba(135, 50, 118, 0.4);
-            --dash-grad: linear-gradient(135deg, #873276, #bb66ff);
         }
-        body { margin: 0; padding: 0; background: #000; }
+
         .portal-main-wrapper {
-            font-family: 'Inter', sans-serif; color: #fff; background: var(--dash-bg);
-            min-height: 100vh; position: relative; overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            background: var(--dash-bg);
+            min-height: 900px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 60px;
             border: 1px solid rgba(135, 50, 118, 0.5);
-            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+            outline: 1px solid rgba(135, 50, 118, 0.15);
+            outline-offset: 2px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), 0 0 60px rgba(135, 50, 118, 0.22);
+            margin: 20px 0;
             isolation: isolate;
         }
-        .portal-aura { position: absolute; width: 100%; height: 100%; background: radial-gradient(circle at center, #000000 0%, var(--dash-bg) 80%); z-index: 1; pointer-events: none; }
-        .portal-container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; z-index: 5; opacity: 0; transform: translateY(30px); transition: 1.2s; display: none; }
-        .portal-container.visible { opacity: 1; transform: translateY(0); display: block; }
-        
-        .portal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 5, 13, 0.92); backdrop-filter: blur(40px); z-index: 10000; display: flex; align-items: center; justify-content: center; transition: 0.8s; }
-        .portal-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; transform: scale(1.1); }
-        
-        .section-wrapper { margin-bottom: 12px; border: 1px solid var(--dash-border); border-radius: 30px; overflow: hidden; background: rgba(0, 0, 0, 0.2); box-shadow: var(--dash-glow); }
-        .section-header { padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: rgba(255, 255, 255, 0.03); }
-        .section-header h3 { margin: 0; font-family: 'Outfit'; font-size: 1.5rem; color: #fff; }
-        .section-chevron { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.1); border-radius: 50%; transition: 0.4s; color: var(--dash-primary); }
-        .section-content { padding: 20px 25px; transition: 0.6s; max-height: 5000px; opacity: 1; overflow: hidden; }
-        .section-wrapper.collapsed .section-content { max-height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; }
-        .section-wrapper.collapsed .section-chevron { transform: rotate(-90deg); }
-        
-        .login-card { background: rgba(15, 5, 13, 0.95); padding: 50px; border-radius: 40px; border: 2px solid var(--dash-border); box-shadow: var(--dash-glow); width: 100%; max-width: 420px; text-align: center; }
-        .login-input { width: 100% !important; padding: 20px 25px !important; background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; color: #fff; font-size: 1.1rem; margin-bottom: 20px; text-align: center; outline: none; }
-        .login-btn { width: 100%; padding: 22px; background: var(--dash-grad); color: white; border: none; border-radius: 50px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5); }
-        
-        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
-        .summary-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 15px 20px; display: flex; align-items: center; gap: 15px; cursor: pointer; }
-        .summary-icon { width: 45px; height: 45px; background: rgba(135, 50, 118, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
-        
-        .timeline-steps { display: flex; justify-content: space-between; position: relative; padding: 0 40px; gap: 20px; }
-        .timeline-steps::before { content: ''; position: absolute; top: 27px; left: 10%; width: 80%; height: 2px; background: rgba(255, 255, 255, 0.08); }
-        .timeline-progress-bar { position: absolute; top: 27px; left: 10%; width: 0%; height: 2px; background: #2ecc71; box-shadow: 0 0 20px rgba(46, 204, 113, 0.8); transition: 1.8s; }
-        .step-node { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; width: 100px; flex-shrink: 0; }
-        .node-dot { width: 54px; height: 54px; background: var(--dash-bg); border: 2px solid rgba(255, 255, 255, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; transition: 0.6s; }
-        .step-node.completed .node-dot { border-color: #2ecc71; color: #2ecc71; box-shadow: 0 0 14px rgba(46, 204, 113, 0.7); }
-        .step-node.active .node-dot { border-color: var(--dash-primary); color: #fff; box-shadow: 0 0 16px var(--dash-primary-glow); animation: pulseDot 2.2s infinite; }
-        
-        .milestone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px; }
-        .milestone-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 25px; padding: 25px 15px; text-align: center; border-bottom: 4px solid rgba(255,255,255,0.1); }
-        
-        .visit-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(135,50,118,0.3); border-radius: 25px; padding: 20px; margin-bottom: 15px; }
-        .visit-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
-        .visit-badge { padding: 5px 12px; border-radius: 8px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; }
+
+        .portal-aura {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #000000 0%, var(--dash-bg) 80%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .portal-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 5;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1.2s;
+            display: none;
+        }
+
+        .portal-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+
+        .portal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 5, 13, 0.92);
+            backdrop-filter: blur(40px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portal-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: scale(1.1);
+        }
+
+        .section-wrapper {
+            margin-bottom: 12px;
+            border: 1px solid var(--dash-border);
+            border-radius: 30px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: var(--dash-glow);
+        }
+
+        .section-header {
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .section-header h3 {
+            margin: 0;
+            font-family: 'Outfit';
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .section-chevron {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: 0.4s;
+            color: var(--dash-primary);
+        }
+
+        .section-content {
+            padding: 20px 25px;
+            transition: 0.6s;
+            max-height: 2000px;
+            opacity: 1;
+            overflow: hidden;
+        }
+
+        .section-wrapper.collapsed .section-content {
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            opacity: 0;
+        }
+
+        .section-wrapper.collapsed .section-chevron {
+            transform: rotate(-90deg);
+        }
+
+        .login-card {
+            background: rgba(15, 5, 13, 0.95);
+            padding: 50px;
+            border-radius: 40px;
+            border: 2px solid var(--dash-border);
+            box-shadow: var(--dash-glow);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+
+        .login-input {
+            width: 100% !important;
+            padding: 20px 25px !important;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: center;
+            outline: none;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 22px;
+            background: linear-gradient(135deg, var(--dash-primary), #b0549c);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+        }
+
+        .summary-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(135, 50, 118, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .timeline-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding: 0 40px;
+            gap: 20px;
+        }
+
+        .timeline-steps::before {
+            content: '';
+            position: absolute;
+            top: 27px;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .timeline-progress-bar {
+            position: absolute;
+            top: 27px;
+            left: 10%;
+            width: 0%;
+            height: 2px;
+            background: #2ecc71;
+            box-shadow: 0 0 20px rgba(46, 204, 113, 0.8);
+            transition: 1.8s;
+        }
+
+        .step-node {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+            flex-shrink: 0;
+        }
+
+        .node-dot {
+            width: 54px;
+            height: 54px;
+            background: var(--dash-bg);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            transition: 0.6s;
+        }
+
+        .step-node.completed .node-dot {
+            border-color: #2ecc71;
+            color: #2ecc71;
+            box-shadow: 0 0 14px rgba(46, 204, 113, 0.7);
+        }
+
+        .step-node.active .node-dot {
+            border-color: var(--dash-primary);
+            color: #fff;
+            box-shadow: 0 0 16px var(--dash-primary-glow);
+            animation: pulseDot 2.2s infinite;
+        }
+
+        @keyframes pulseDot {
+
+            0%,
+            100% {
+                box-shadow: 0 0 16px var(--dash-primary-glow);
+            }
+
+            50% {
+                box-shadow: 0 0 24px rgba(135, 50, 118, 0.9);
+            }
+        }
+
+        .milestone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .milestone-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 25px;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        .milestone-val {
+            font-family: 'Outfit';
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #fff;
+        }
 
         @media (max-width: 768px) {
-            .timeline-steps { flex-direction: column !important; padding: 15px !important; }
-            .timeline-steps::before { top: 27px !important; left: 51px !important; width: 2px !important; height: calc(100% - 54px) !important; }
-            .timeline-progress-bar { top: 27px !important; left: 51px !important; width: 2px !important; }
-            .step-node { flex-direction: row !important; width: 100% !important; gap: 18px !important; padding: 12px 10px !important; }
+            .portal-main-wrapper {
+                border-radius: 28px;
+            }
+
+            .timeline-steps {
+                flex-direction: column !important;
+                padding: 15px !important;
+            }
+
+            .timeline-steps::before {
+                top: 27px !important;
+                left: 51px !important;
+                width: 2px !important;
+                height: calc(100% - 54px) !important;
+            }
+
+            .timeline-progress-bar {
+                top: 27px !important;
+                left: 51px !important;
+                width: 2px !important;
+            }
+
+            .step-node {
+                flex-direction: row !important;
+                width: 100% !important;
+                gap: 18px !important;
+                padding: 12px 10px !important;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<div class="portal-main-wrapper" id="portalAppContainer">
-    <div class="portal-aura"></div>
+    <div class="portal-main-wrapper" id="portalAppContainer">
+        <div class="portal-aura"></div>
 
-    <div class="portal-overlay" id="portalOverlay">
-        <div class="login-card">
-            <h2 style="font-family:'Outfit'; font-size:2.2rem; font-weight:900; color:#fff; margin-bottom:8px;">Mon Dossier Privé</h2>
-            <p style="color:rgba(255,255,255,0.6); margin-bottom:35px;">Accédez à votre espace client sécurisé.</p>
-            <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode">
-            <input type="password" maxlength="4" placeholder="4 CHIFFRES DU TEL." class="login-input" id="inpPortalPhone" style="margin-top:-10px;">
-            <button class="login-btn" onclick="handlePortalLogin()" id="btnPortalLogin">Ouvrir mon dossier</button>
-            <button id="btnInstallPWA" style="display:none; margin-top:20px; background:rgba(255,255,255,0.05); color:#00f2ff; border:1px solid #00f2ff50; padding:12px; border-radius:12px; font-weight:800; cursor:pointer; width:100%; font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; transition:0.3s; font-family:'Outfit',sans-serif;">📲 Installer l'App sur mon mobile</button>
+        <div class="portal-overlay" id="portalOverlay">
+            <div class="login-card">
+                <h2 style="font-family:'Outfit'; font-size:2.2rem; font-weight:900; color:#fff; margin-bottom:8px;">
+                    Accès au Dossier</h2>
+                <p style="color:rgba(255,255,255,0.6); margin-bottom:35px;">Entrez votre Code Portail unique.</p>
+                <input type="text" placeholder="CODE DOSSIER (ex: EP-1)" class="login-input" id="inpPortalCode">
+                <input type="password" maxlength="4" placeholder="4 CHIFFRES DU TEL." class="login-input"
+                    id="inpPortalPhone" style="margin-top:-10px;">
+                <button class="login-btn" onclick="handlePortalLogin()" id="btnPortalLogin">Ouvrir mon dossier</button>
+                <button id="btnInstallPWA"
+                    style="display:none; margin-top:20px; background:rgba(255,255,255,0.05); color:#00f2ff; border:1px solid #00f2ff50; padding:12px; border-radius:12px; font-weight:800; cursor:pointer; width:100%; font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; transition:0.3s; font-family:'Outfit',sans-serif;">📲
+                    Installer l'App sur mon mobile</button>
+            </div>
+        </div>
+
+        <div class="portal-container" id="portalDash">
+            <header id="secCockpit" style="margin-bottom:20px;">
+                <div
+                    style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px; flex-wrap:wrap; gap:15px;">
+                    <div>
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+                            <span
+                                style="background:var(--dash-accent); color:#000; padding:2px 10px; border-radius:4px; font-size:0.65rem; font-weight:900; text-transform:uppercase;">Accueil</span>
+                            <span id="txtCodeRef"
+                                style="color:rgba(255,255,255,0.4); font-size:0.7rem; font-weight:700; margin:0 5px;">#--</span>
+                            <span id="badgeStage"
+                                style="background:rgba(46,204,113,0.2); color:#2ecc71; padding:2px 10px; border-radius:4px; font-size:0.65rem; font-weight:900; text-transform:uppercase;">--</span>
+                        </div>
+                        <h1 id="txtWelcome"
+                            style="font-family:'Outfit'; font-size:2.2rem; font-weight:900; margin:0; color:#fff; line-height:1;">
+                            Chargement...</h1>
+                        <div id="txtPropName" style="font-size:0.9rem; opacity:0.5; font-weight:600; margin-top:5px;">--
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="summary-grid">
+                <div class="summary-card" onclick="toggleSection('secPrequal')">
+                    <div class="summary-icon">✅</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Prochaine Étape</div>
+                        <div class="summary-value" id="dashNextStep">Vérification...</div>
+                    </div>
+                </div>
+                <div class="summary-card" onclick="toggleSection('secVisites')">
+                    <div class="summary-icon">📅</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Rendez-vous</div>
+                        <div class="summary-value" id="dashNextVisit">Aucun planifié</div>
+                    </div>
+                </div>
+                <div class="summary-card" onclick="toggleSection('secConciergeMLS')">
+                    <div class="summary-icon">⚡</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Service Rapide</div>
+                        <div class="summary-value">Demander un document</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="milestone-grid" id="wrapMilestones"></div>
+
+            <div class="section-wrapper" id="secPrequal">
+                <div class="section-header" onclick="toggleSection('secPrequal')">
+                    <h3>Conditions à réaliser</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div id="wrapChecklist"
+                        style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:15px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-wrapper" id="secTimeline">
+                <div class="section-header" onclick="toggleSection('secTimeline')">
+                    <h3>Timeline de Transaction</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="timeline-steps" id="wrapTimeline">
+                        <div class="timeline-progress-bar" id="barProgress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISITES -->
+            <div class="section-wrapper" id="secVisites">
+                <div class="section-header" onclick="toggleSection('secVisites')">
+                    <h3>Agenda des Visites</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <!-- FORMULAIRE DEMANDE DE VISITE -->
+                    <div
+                        style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:20px; margin-bottom:20px;">
+                        <h4 style="margin:0 0 15px 0; color:#fff; font-size:1rem;">📅 Demander une visite</h4>
+                        <div style="display:grid; gap:10px; margin-bottom:15px;">
+                            <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse"
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                            <input type="datetime-local" id="inpVisitDateTime"
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                        </div>
+                        <button onclick="requestVisit()"
+                            style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:12px; border-radius:10px; font-weight:800; cursor:pointer;">Envoyer
+                            la demande</button>
+                    </div>
+                    <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
+                </div>
+            </div>
+
+            <div class="section-wrapper collapsed" id="secTeam">
+                <div class="section-header" onclick="toggleSection('secTeam')">
+                    <h3>Votre Équipe de Transaction</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div id="wrapTeam"
+                        style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:15px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-wrapper collapsed" id="secPartners">
+                <div class="section-header" onclick="toggleSection('secPartners')">
+                    <h3>Vos Partenaires Experts</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="partner-grid" id="wrapPartners"
+                        style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-wrapper collapsed" id="secConciergeMLS" style="border-color:#00f2ff30;">
+                <div class="section-header" onclick="toggleSection('secConciergeMLS')">
+                    <h3>⚡ Smart Concierge (Matrix)</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <p style="font-size:0.85rem; opacity:0.7; margin-bottom:15px;">Demandez la documentation
+                        confidentielle pour un numéro MLS.</p>
+                    <div style="display:flex; gap:10px;">
+                        <input type="text" id="inpMLS" placeholder="Numéro MLS (ex: 12345678)"
+                            style="flex:1; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:12px; color:#fff; outline:none;">
+                        <button onclick="requestMLSDoc()"
+                            style="background:var(--dash-grad); color:#fff; border:none; padding:0 25px; border-radius:12px; font-weight:800; cursor:pointer;">Demander</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="portal-container" id="portalDash">
-        <header style="margin-bottom:20px;">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px; flex-wrap:wrap; gap:15px;">
-                <div>
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
-                        <span style="background:var(--dash-accent); color:#000; padding:2px 10px; border-radius:4px; font-size:0.65rem; font-weight:900; text-transform:uppercase;">Dossier Actif</span>
-                        <span id="txtCodeRef" style="color:rgba(255,255,255,0.4); font-size:0.7rem; font-weight:700; margin:0 5px;">#--</span>
-                    </div>
-                    <h1 id="txtWelcome" style="font-family:'Outfit'; font-size:2.2rem; font-weight:900; margin:0; color:#fff; line-height:1;">Bonjour.</h1>
-                    <div id="txtPropName" style="font-size:0.9rem; opacity:0.5; font-weight:600; margin-top:5px;">--</div>
-                </div>
-                <button onclick="handleLogout()" style="background:rgba(255,255,255,0.1); border:none; color:#fff; padding:8px 15px; border-radius:8px; font-size:0.8rem; font-weight:700; cursor:pointer;">🚪 Quitter</button>
-            </div>
-        </header>
+    <script>
+        const API_URL = 'https://evanpatruno-ca.vercel.app/api/portal';
+        function initPortal() { const c = localStorage.getItem('portal_code'), p = localStorage.getItem('portal_phone'); if (c && p) handlePortalLogin(); }
 
-        <div class="summary-grid">
-            <div class="summary-card" onclick="toggleSection('secPrequal')">
-                <div class="summary-icon">✅</div>
-                <div class="summary-content">
-                    <div class="summary-label">Prochaine Étape</div>
-                    <div class="summary-value" id="dashNextStep">Vérification...</div>
-                </div>
-            </div>
-            <div class="summary-card" onclick="toggleSection('secVisites')">
-                <div class="summary-icon">📅</div>
-                <div class="summary-content">
-                    <div class="summary-label">Rendez-vous</div>
-                    <div class="summary-value" id="dashNextVisit">Aucun planifié</div>
-                </div>
-            </div>
-            <div class="summary-card" onclick="toggleSection('secConciergeMLS')">
-                <div class="summary-icon">⚡</div>
-                <div class="summary-content">
-                    <div class="summary-label">Service Rapide</div>
-                    <div class="summary-value">Demander un document</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="milestone-grid" id="wrapMilestones"></div>
-
-        <div class="section-wrapper" id="secPrequal">
-            <div class="section-header" onclick="toggleSection('secPrequal')">
-                <h3>Conditions & Délais</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content"><div id="wrapChecklist" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:15px;"></div></div>
-        </div>
-
-        <div class="section-wrapper" id="secTimeline">
-            <div class="section-header" onclick="toggleSection('secTimeline')">
-                <h3>Timeline de Transaction</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content"><div class="timeline-steps" id="wrapTimeline"><div class="timeline-progress-bar" id="barProgress"></div></div></div>
-        </div>
-
-        <div class="section-wrapper" id="secVisites">
-            <div class="section-header" onclick="toggleSection('secVisites')">
-                <h3>Agenda des Visites</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:20px; padding:20px; margin-bottom:20px;">
-                    <h4 style="margin:0 0 15px 0; color:#fff; font-size:1rem;">📅 Demander une visite</h4>
-                    <div style="display:grid; gap:10px; margin-bottom:15px;">
-                        <input type="text" id="inpVisitLoc" placeholder="Numéro MLS ou Adresse" style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                        <input type="datetime-local" id="inpVisitDateTime" style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                    </div>
-                    <button onclick="requestVisit()" style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:12px; border-radius:10px; font-weight:800; cursor:pointer;">Envoyer la demande</button>
-                </div>
-                <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
-            </div>
-        </div>
-
-        <div class="section-wrapper collapsed" id="secTeam">
-            <div class="section-header" onclick="toggleSection('secTeam')">
-                <h3>Votre Équipe de Transaction</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content"><div id="wrapTeam" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:15px;"></div></div>
-        </div>
-
-        <div class="section-wrapper collapsed" id="secPartners">
-            <div class="section-header" onclick="toggleSection('secPartners')">
-                <h3>Vos Partenaires Experts</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content"><div id="wrapPartners" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px;"></div></div>
-        </div>
-
-        <div class="section-wrapper collapsed" id="secConciergeMLS" style="border-color:#00f2ff30;">
-            <div class="section-header" onclick="toggleSection('secConciergeMLS')">
-                <h3>⚡ Smart Concierge (Matrix)</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <p style="font-size:0.85rem; opacity:0.7; margin-bottom:15px;">Demandez la documentation confidentielle pour un numéro MLS.</p>
-                <div style="display:flex; gap:10px;">
-                    <input type="text" id="inpMLS" placeholder="Numéro MLS (ex: 12345678)" style="flex:1; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:12px; color:#fff; outline:none;">
-                    <button onclick="requestMLSDoc()" style="background:var(--dash-grad); color:#fff; border:none; padding:0 25px; border-radius:12px; font-weight:800; cursor:pointer;">Demander</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    const API_URL = 'https://evanpatruno-ca.vercel.app/api/portal';
-
-    function initPortal() {
-        const code = localStorage.getItem('portal_code');
-        const phone = localStorage.getItem('portal_phone');
-        if (code && phone) handlePortalLogin();
-    }
-
-    async function handlePortalLogin(e) {
-        if (e && e.preventDefault) e.preventDefault();
-        const btn = document.getElementById('btnPortalLogin');
-        const code = (document.getElementById('inpPortalCode')?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
-        const phone = (document.getElementById('inpPortalPhone')?.value || localStorage.getItem('portal_phone'))?.trim();
-        if (!code || !phone) return;
-        if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
-        try {
-            const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
-            const data = await res.json();
-            if (!res.ok) throw new Error(data.error || "Accès refusé");
-            localStorage.setItem('portal_code', code);
-            localStorage.setItem('portal_phone', phone);
-            localStorage.setItem('portal_deal_id', data.id);
-            renderPortal(data);
-            document.getElementById('portalOverlay').classList.add('hidden');
-            document.getElementById('portalDash').classList.add('visible');
-        } catch (err) {
-            alert("⚠️ Erreur : " + err.message);
-            if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
-        }
-    }
-
-    function handleLogout() {
-        if (confirm("Voulez-vous quitter votre session ?")) {
-            localStorage.removeItem('portal_code'); localStorage.removeItem('portal_phone'); localStorage.removeItem('portal_deal_id');
-            location.reload();
-        }
-    }
-
-    function formatVisitDate(dt) {
-        if (!dt) return "À venir";
-        try {
-            const cleanDT = dt.replace(' ', 'T'); 
-            const dateObj = new Date(cleanDT);
-            if (isNaN(dateObj)) return dt;
-            return dateObj.toLocaleDateString('fr-CA', { year: 'numeric', month: '2-digit', day: '2-digit' }) + " à " + dateObj.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' });
-        } catch (e) { return dt; }
-    }
-
-    function renderPortal(data) {
-        const setT = (id, v) => { const el = document.getElementById(id); if(el) el.innerText = v || "--"; };
-        setT('txtWelcome', `Bonjour ${data.firstName || 'Evan'}.`);
-        setT('txtPropName', `${data.property || ''} - ${data.city || ''}`);
-        setT('txtCodeRef', `#${data.code || ''}`);
-        
-        const nextCondition = (data.checklist || []).find(c => !c.done);
-        setT('dashNextStep', nextCondition ? nextCondition.name : "Terminé !");
-        const nextVisit = (data.visites || []).find(v => v.statut === 'Confirmée' || v.statut === 'Prévue');
-        setT('dashNextVisit', nextVisit ? formatVisitDate(nextVisit.Date_heure_de_visite) : "Aucun planifié");
-
-        const safe = (fn) => { try { fn(); } catch(e) { console.warn(e); } };
-        safe(() => renderMilestones(data.milestones || {}));
-        safe(() => renderTimeline(data.timeline || []));
-        safe(() => renderVisites(data.visites || [], data.code));
-        safe(() => renderChecklist(data.checklist || []));
-        safe(() => renderTeam(data.team || []));
-        safe(() => renderPartners(data.partners || []));
-    }
-
-    function renderMilestones(m) {
-        const wrap = document.getElementById('wrapMilestones'); if (!wrap) return;
-        const config = [
-            {l:'Financement', d:m.financing}, {l:'Inspection', d:m.inspection}, 
-            {l:'Conditions', d:m.others}, {l:'Signature', d:m.signature}, {l:'Occupation', d:m.occupation}
-        ];
-        wrap.innerHTML = config.map(ms => {
-            const days = ms.d?.days; const done = ms.d?.done || (days !== null && days < 0);
-            return `<div class="milestone-card" style="${done?'border-color:#2ecc71;':''}">
-                <div style="font-size:0.55rem; opacity:0.5; margin-bottom:5px; font-weight:800;">${done?'TERMINÉ':'JOURS'}</div>
-                <div class="milestone-val" style="color:${done?'#2ecc71':'#fff'}">${days!==null && days!==undefined ? (done?'✓':days) : '--'}</div>
-                <div class="milestone-label">${ms.l}</div>
-            </div>`;
-        }).join('');
-    }
-
-    function renderTimeline(timeline) {
-        const wrap = document.getElementById('wrapTimeline'); if (!wrap) return;
-        wrap.querySelectorAll('.step-node:not(.timeline-progress-bar)').forEach(n => n.remove());
-        let completed = 0;
-        timeline.forEach(s => {
-            const node = document.createElement('div'); node.className = `step-node ${s.status}`;
-            node.innerHTML = `<div class="node-dot">${s.icon || '○'}</div><div style="font-size:0.8rem; font-weight:700; margin-top:12px; text-align:center;">${s.label}</div>`;
-            wrap.appendChild(node);
-            if (s.status === 'completed') completed++; if (s.status === 'active') completed += 0.5;
-        });
-        setTimeout(() => {
-            const bar = document.getElementById('barProgress');
-            const pct = timeline.length > 1 ? Math.max(0, ((completed - 1) / (timeline.length - 1)) * 100) : 0;
-            if (bar) {
-                if (window.innerWidth <= 768) { bar.style.height = `${pct * 0.8}%`; bar.style.width = '2px'; }
-                else { bar.style.width = `${pct * 0.8}%`; bar.style.height = '2px'; }
+        async function handlePortalLogin(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            const btn = document.getElementById('btnPortalLogin');
+            const c = (document.getElementById('inpPortalCode')?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
+            const p = (document.getElementById('inpPortalPhone')?.value || localStorage.getItem('portal_phone'))?.trim();
+            if (!c || !p) {
+                alert("Veuillez entrer votre Code Dossier et les 4 chiffres de votre téléphone.");
+                return;
             }
-        }, 300);
-    }
+            if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
+            try {
+                const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, phoneLast4: p }) });
+                const data = await res.json();
+                if (!res.ok) throw new Error((data.error || "Accès refusé") + (data.details ? ": " + data.details : ""));
+                localStorage.setItem('portal_code', c); localStorage.setItem('portal_phone', p); localStorage.setItem('portal_deal_id', data.id);
+                renderPortal(data);
+                document.getElementById('portalOverlay').classList.add('hidden');
+                document.getElementById('portalDash').classList.add('visible');
+            } catch (error) {
+                alert("⚠️ Erreur : " + error.message);
+                if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
+            }
+        }
 
-    function renderVisites(visites, portalCode) {
-        const wrap = document.getElementById('wrapVisites'); if (!wrap) return;
-        if (!visites || visites.length === 0) { wrap.innerHTML = `<p style="text-align:center; opacity:0.5;">Aucune visite.</p>`; return; }
-        
-        const now = Date.now();
-        const activeVisites = visites.filter(v => v.statut !== 'Annulé' && v.statut !== 'Refusée');
-        const archivedVisites = visites.filter(v => v.statut === 'Annulé' || v.statut === 'Refusée');
+        // --- GESTION PWA ---
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault(); deferredPrompt = e;
+            const b = document.getElementById('btnInstallPWA');
+            if (b) b.style.display = 'block';
+        });
+        const btnPWA = document.getElementById('btnInstallPWA');
+        if (btnPWA) {
+            btnPWA.addEventListener('click', async (e) => {
+                if (deferredPrompt) {
+                    e.preventDefault();
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') btnPWA.style.display = 'none';
+                    deferredPrompt = null;
+                }
+                // Fallback naturel vers le href si deferredPrompt est nul
+            });
+        }
 
-        let html = activeVisites.map(v => {
-            const localFB = JSON.parse(localStorage.getItem(`visit_fb_${portalCode}_${v.id}`) || "{}");
-            const verdict = v.verdict || localFB.verdict || "";
-            const rating = v.evaluation || localFB.rating || 0;
-            const visitTime = v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite.replace(' ', 'T')).getTime() : 0;
-            const isUnlocked = now > (visitTime + 1800000); 
-            const isCompleted = ["Terminée", "Effectuée"].includes(v.statut);
-            const safeLoc = (v.location || 'Lieu').split("'").join("\\'");
+        function renderPortal(data) {
+            const setT = (id, v) => { const el = document.getElementById(id); if (el) el.innerText = v || "--"; };
+            setT('txtWelcome', `Bonjour ${data.firstName || 'Evan'}.`); setT('txtPropName', `${data.property || ''} - ${data.city || ''}`); setT('txtCodeRef', `#${data.code || ''}`);
+            const activeStage = (data.timeline || []).find(s => s.status === 'active') || (data.timeline || []).find(s => s.status === 'pending');
+            setT('badgeStage', activeStage ? activeStage.label : "Dossier Actif");
 
-            const statusColors = { 'En attente': '#f1c40f', 'Prévue': '#2ecc71', 'Confirmée': '#2ecc71', 'Terminée': '#3498db', 'Effectuée': '#3498db', 'Annulé': '#e74c3c', 'Refusée': '#e74c3c' };
-            const sCol = statusColors[v.statut] || '#fff';
+            const nextCondition = (data.checklist || []).find(c => !c.done);
+            setT('dashNextStep', nextCondition ? nextCondition.name : "Terminé !");
+            const nextVisit = (data.visites || []).find(v => v.statut === 'Confirmée' || v.statut === 'Prévue');
+            setT('dashNextVisit', nextVisit ? `${nextVisit.Date_heure_de_visite?.split('T')[0] || 'Prévue'}` : "Aucun planifié");
 
-            return `
-                <div class="visit-card">
-                    <div class="visit-header">
-                        <div><div style="font-weight:900; color:#fff; font-size:1.1rem;">${formatVisitDate(v.Date_heure_de_visite)}</div><div style="font-size:0.85rem; color:var(--dash-accent);">📍 ${v.location || 'Lieu'}</div></div>
-                        <div class="visit-badge" style="background:${sCol}33; border:1px solid ${sCol}88; color:${sCol};">${v.statut || 'En attente'}</div>
+            const safe = (fn) => { try { fn(); } catch (e) { console.warn(e); } };
+            safe(() => renderMilestones(data.milestones || {})); safe(() => renderTimeline(data.timeline || [])); safe(() => renderChecklist(data.checklist || []));
+            safe(() => renderVisites(data.visites || [], data.code)); safe(() => renderTeam(data.team || [])); safe(() => renderPartners(data.partners || []));
+        }
+
+        function renderMilestones(m) {
+            const wrap = document.getElementById('wrapMilestones'); if (!wrap) return;
+            const config = [{ l: 'Financement', d: m.financing }, { l: 'Inspection', d: m.inspection }, { l: 'Signature', d: m.signature }, { l: 'Occupation', d: m.occupation }];
+            wrap.innerHTML = config.map(ms => { const days = ms.d?.days; const done = days !== null && days < 0; return `<div class="milestone-card"><div style="font-size:0.55rem; opacity:0.5; margin-bottom:5px; font-weight:800;">${done ? 'TERMINÉ' : 'JOURS'}</div><div class="milestone-val">${days !== null && days !== undefined ? (done ? '✓' : days) : '--'}</div><div class="milestone-label">${ms.l}</div></div>`; }).join('');
+        }
+
+        function renderTimeline(timeline) {
+            const wrap = document.getElementById('wrapTimeline'); if (!wrap) return;
+            wrap.querySelectorAll('.step-node:not(.timeline-progress-bar)').forEach(n => n.remove());
+            let completed = 0;
+            timeline.forEach(s => {
+                const node = document.createElement('div'); node.className = `step-node ${s.status}`;
+                node.innerHTML = `<div class="node-dot">${s.icon || '○'}</div><div style="font-size:0.8rem; font-weight:700; margin-top:12px; text-align:center;">${s.label}</div>`;
+                wrap.appendChild(node);
+                if (s.status === 'completed') completed++; if (s.status === 'active') completed += 0.5;
+            });
+            setTimeout(() => {
+                const bar = document.getElementById('barProgress');
+                const pct = timeline.length > 1 ? Math.max(0, ((completed - 1) / (timeline.length - 1)) * 100) : 0;
+                if (bar) {
+                    if (window.innerWidth <= 768) { bar.style.height = `${pct * 0.8}%`; bar.style.width = '2px'; }
+                    else { bar.style.width = `${pct * 0.8}%`; bar.style.height = '2px'; }
+                }
+            }, 300);
+        }
+
+        function renderChecklist(checklist) {
+            const wrap = document.getElementById('wrapChecklist'); if (!wrap) return;
+            wrap.innerHTML = checklist.map(c => `<div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:15px; border:1px solid ${c.done ? 'rgba(46,204,113,0.2)' : 'rgba(255,255,255,0.1)'}; display:flex; align-items:center; gap:12px;"><div style="width:20px; height:20px; border-radius:50%; background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.1)'}; color:#fff; font-size:0.6rem; display:flex; align-items:center; justify-content:center;">${c.done ? '✓' : '!'}</div><span style="font-size:0.85rem; font-weight:600; color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name || '--'}</span></div>`).join('');
+        }
+
+        function formatVisitDate(dt) {
+            if (!dt) return "À venir";
+            try {
+                const cleanDT = dt.replace(' ', 'T');
+                const dateObj = new Date(cleanDT);
+                if (isNaN(dateObj)) return dt;
+                const datePart = dateObj.toLocaleDateString('fr-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
+                const timePart = dateObj.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' });
+                return `${datePart} à ${timePart}`;
+            } catch (e) { return dt; }
+        }
+
+        function renderVisites(visites, portalCode) {
+            const wrap = document.getElementById('wrapVisites'); if (!wrap) return;
+            if (!visites || visites.length === 0) { wrap.innerHTML = `<p style="text-align:center; opacity:0.5;">Aucune visite.</p>`; return; }
+            wrap.innerHTML = visites.map(v => {
+                const localFB = JSON.parse(localStorage.getItem(`visit_fb_${portalCode}_${v.id}`) || "{}");
+                const verdict = v.verdict || localFB.verdict || "";
+                const rating = v.evaluation || localFB.rating || 0;
+                return `<div style="background:rgba(255,255,255,0.03); border:1px solid rgba(135,50,118,0.3); border-radius:25px; padding:25px; margin-bottom:15px;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:15px;">
+                    <div><div style="font-weight:900; color:#fff; font-size:1.1rem;">${formatVisitDate(v.Date_heure_de_visite)}</div><div style="font-size:0.85rem; color:var(--dash-accent);">📍 ${v.location || 'Lieu'}</div></div>
+                    <div style="background:rgba(255,255,255,0.1); padding:5px 12px; border-radius:8px; font-size:0.65rem; font-weight:800; color:#fff;">${v.statut || 'En attente'}</div>
+                </div>
+                <div style="background:rgba(0,0,0,0.2); border-radius:15px; padding:15px; border:1px solid rgba(255,255,255,0.05);">
+                    <div style="text-align:center; font-size:0.7rem; font-weight:800; color:var(--dash-accent); text-transform:uppercase; margin-bottom:5px;">Évaluation visite</div>
+                    <div style="display:flex; gap:8px; justify-content:center; margin-bottom:15px;">
+                        ${[1, 2, 3, 4, 5].map(s => `<span onclick="saveRating('${v.id}', ${s}, this)" style="cursor:pointer; font-size:1.5rem; filter:${s <= rating ? 'none' : 'grayscale(1) opacity(0.2)'}; transition:0.3s;">⭐</span>`).join('')}
                     </div>
-                    ${isUnlocked || isCompleted ? `
-                        <div style="background:rgba(0,0,0,0.2); border-radius:15px; padding:15px; border:1px solid rgba(255,255,255,0.05);">
-                            <div style="text-align:center; font-size:0.7rem; font-weight:800; color:var(--dash-accent); text-transform:uppercase; margin-bottom:15px;">Votre Avis</div>
-                            <div style="display:flex; gap:8px; justify-content:center; margin-bottom:15px;">
-                                ${[1,2,3,4,5].map(s => `<span onclick="saveRating('${v.id}', ${s}, this)" style="cursor:pointer; font-size:1.5rem; filter:${s<=rating?'none':'grayscale(1) opacity(0.2)'}; transition:0.3s;">⭐</span>`).join('')}
-                            </div>
-                            <div style="display:flex; gap:10px; justify-content:center; margin-bottom:15px;">
-                                <button onclick="saveVerdict('${v.id}', 'Coup de coeur', this)" style="background:${verdict==='Coup de coeur'?'var(--dash-primary-glow)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer;">❤️</button>
-                                <button onclick="saveVerdict('${v.id}', 'À réfléchir', this)" style="background:${verdict==='À réfléchir'?'var(--dash-primary-glow)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer;">🤔</button>
-                                <button onclick="saveVerdict('${v.id}', 'Pas intéressé', this)" style="background:${verdict==='Pas intéressé'?'var(--dash-primary-glow)':'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer;">👎</button>
-                            </div>
-                            <textarea id="comm-${v.id}" style="width:100%; height:70px; background:rgba(0,0,0,0.3); color:#fff; border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:12px; font-size:0.85rem; margin-bottom:15px; outline:none;" placeholder="Commentaire...">${v.commentaire || ""}</textarea>
-                            <button onclick="syncVisitFeedback('${v.id}')" id="btn-sync-${v.id}" style="width:100%; padding:12px; border-radius:12px; background:var(--dash-grad); color:#fff; border:none; font-weight:800; cursor:pointer;">Synchroniser l'avis ✨</button>
-                        </div>
-                    ` : `
-                        <div style="display:flex; gap:10px;">
-                            <button onclick="requestCancelVisit('${v.id}', '${safeLoc}', this)" style="flex:1; background:rgba(231,76,60,0.1); color:#e74c3c; border:1px solid #e74c3c55; padding:12px; border-radius:12px; font-weight:800; cursor:pointer;">Annuler</button>
-                            <button onclick="requestRescheduleVisit('${v.id}', '${safeLoc}')" style="flex:1; background:rgba(212,175,55,0.1); color:#d4af37; border:1px solid #d4af3755; padding:12px; border-radius:12px; font-weight:800; cursor:pointer;">Reporter</button>
-                        </div>
-                    `}
-                </div>`;
-        }).join('');
-
-        if (archivedVisites.length > 0) {
-            html += `<div style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.05); padding-top:15px;">
-                <div onclick="toggleSection('wrapArchivedVisits')" style="cursor:pointer; display:flex; justify-content:space-between; opacity:0.6; font-size:0.8rem; font-weight:800; text-transform:uppercase;"><span>📁 Archives (${archivedVisites.length})</span><span>▼</span></div>
-                <div id="wrapArchivedVisits" class="collapsed" style="margin-top:15px; display:flex; flex-direction:column; gap:10px;">
-                    ${archivedVisites.map(v => `<div style="background:rgba(255,255,255,0.02); padding:12px; border-radius:15px; display:flex; justify-content:space-between; align-items:center; opacity:0.7;"><div><div style="font-weight:700;">${formatVisitDate(v.Date_heure_de_visite)}</div><div style="font-size:0.7rem;">${v.location || ''}</div></div><div style="font-size:0.6rem; color:#e74c3c; border:1px solid #e74c3c55; padding:3px 8px; border-radius:5px;">${v.statut}</div></div>`).join('')}
+                    <div style="text-align:center; font-size:0.7rem; font-weight:800; color:var(--dash-accent); text-transform:uppercase; margin-bottom:10px;">Verdict visite</div>
+                    <div style="display:flex; gap:15px; justify-content:center; margin-bottom:15px;">
+                        <button onclick="saveVerdict('${v.id}', 'Coup de coeur', this)" style="background:${verdict === 'Coup de coeur' ? 'rgba(135,50,118,0.4)' : 'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">❤️</button>
+                        <button onclick="saveVerdict('${v.id}', 'À réfléchir', this)" style="background:${verdict === 'À réfléchir' ? 'rgba(135,50,118,0.4)' : 'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">🧐</button>
+                        <button onclick="saveVerdict('${v.id}', 'Pas pour moi', this)" style="background:${verdict === 'Pas pour moi' ? 'rgba(135,50,118,0.4)' : 'transparent'}; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px; cursor:pointer; font-size:1.4rem;">👎</button>
+                    </div>
+                    <textarea id="comm-${v.id}" oninput="updateLocalFB('${v.id}', 'comm', this.value)" style="width:100%; height:70px; background:rgba(0,0,0,0.3); color:#fff; border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:12px; font-size:0.85rem; margin-bottom:15px; outline:none;" placeholder="Commentaire visite...">${v.commentaire || localFB.comm || ""}</textarea>
+                    <button onclick="syncVisitFeedback('${v.id}')" id="btn-sync-${v.id}" style="width:100%; padding:15px; border-radius:12px; background:var(--dash-grad); color:#fff; border:none; font-weight:800; cursor:pointer;">Enregistrer mon avis ✨</button>
                 </div>
             </div>`;
+            }).join('');
         }
-        wrap.innerHTML = html;
-    }
 
-    async function requestVisit() {
-        const loc = document.getElementById('inpVisitLoc').value.trim(), dt = document.getElementById('inpVisitDateTime').value, d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code');
-        if (!loc || !dt) return alert("Remplissez tout.");
-        if (new Date(dt).getTime() < Date.now() + 7200000) return alert("Minimum 2h d'avance.");
-        try {
-            const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, location: loc, dateTime: dt }) });
-            if ((await res.json()).s) { alert("✅ Envoyé !"); setTimeout(handlePortalLogin, 3000); }
-        } catch (e) { alert("Erreur."); }
-    }
-
-    async function requestCancelVisit(id, loc, btn) {
-        if (!confirm("Annuler ?")) return;
-        btn.disabled = true;
-        try {
-            const res = await fetch(`${API_URL}?action=cancelVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ visitId: id, location: loc, codePortal: localStorage.getItem('portal_code'), dealId: localStorage.getItem('portal_deal_id') }) });
-            if ((await res.json()).s) { alert("Annulé."); handlePortalLogin(); }
-        } catch (e) { alert("Erreur."); btn.disabled = false; }
-    }
-
-    function renderChecklist(checklist) {
-        const wrap = document.getElementById('wrapChecklist'); if (!wrap) return;
-        wrap.innerHTML = checklist.map(c => `
-            <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:15px; border:1px solid ${c.done?'rgba(46,204,113,0.2)':'rgba(255,255,255,0.1)'}; display:flex; align-items:center; gap:12px;">
-                <div style="width:20px; height:20px; border-radius:50%; background:${c.done?'#2ecc71':'rgba(255,255,255,0.1)'}; color:#fff; font-size:0.6rem; display:flex; align-items:center; justify-content:center;">${c.done?'✓':'!'}</div>
-                <span style="font-size:0.85rem; font-weight:600; color:${c.done?'#fff':'rgba(255,255,255,0.4)'}">${c.name || '--'}</span>
-            </div>
-        `).join('');
-    }
-
-    function renderTeam(team) { const w = document.getElementById('wrapTeam'); if (!w || !team) return; w.innerHTML = team.map(t => `<div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); text-align:center;"><div style="font-size:1.8rem; margin-bottom:8px;">${t.icon || '👤'}</div><div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${t.role || 'Expert'}</div><div style="font-weight:700; color:#fff;">${t.name || '--'}</div></div>`).join(''); }
-    
-    function renderPartners(partners) { 
-        const w = document.getElementById('wrapPartners'); if (!w || !partners) return; 
-        w.innerHTML = partners.map(p => `
-            <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:20px; border:1px solid var(--dash-border); position:relative; overflow:hidden; display:flex; flex-direction:column; gap:10px;">
-                ${p.isPromo ? `<div style="position:absolute; top:8px; right:-28px; background:var(--dash-grad); color:#fff; padding:2px 30px; transform:rotate(45deg); font-size:0.5rem; font-weight:900; box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:1;">PROMO</div>` : ''}
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <div style="font-size:1.6rem; flex-shrink:0;">${p.icon || '🤝'}</div>
-                    <div style="min-width:0;">
-                        <div style="font-size:0.55rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${p.category || 'Expert'}</div>
-                        <div style="font-family:'Outfit'; font-weight:800; color:#fff; font-size:1rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${p.name || 'Partenaire'}</div>
-                    </div>
-                </div>
-                ${p.benefit ? `<div style="font-size:0.7rem; opacity:0.8; color:#fff; border-left:2px solid var(--dash-accent); padding-left:8px; line-height:1.3;">${p.benefit}</div>` : ''}
-                <div style="background:rgba(255,255,255,0.03); padding:8px 10px; border-radius:12px; font-size:0.7rem;">
-                    <div style="color:#fff; font-weight:700;">📞 ${p.phone || '--'}</div>
-                    <div style="display:flex; gap:10px; opacity:0.7;">
-                        <a href="mailto:${p.email}" style="color:inherit; text-decoration:none;">Email</a>
-                        ${p.website ? `<a href="${p.website}" target="_blank" style="color:inherit; text-decoration:none;">Site Web</a>` : ''}
-                    </div>
-                </div>
-            </div>
-        `).join(''); 
-    }
-
-    function requestRescheduleVisit(id, loc) {
-        const overlay = document.createElement('div');
-        overlay.classList.add('portal-overlay');
-        overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:200000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px);";
-        overlay.innerHTML = `
-            <div style="background:#1a0b16; border:1px solid rgba(255,255,255,0.1); padding:30px; border-radius:25px; width:100%; max-width:400px; text-align:center;">
-                <div style="font-size:2rem; margin-bottom:15px;">⏳</div>
-                <h3 style="color:#fff; margin-bottom:10px; font-family:'Outfit';">Reporter la visite</h3>
-                <p style="color:rgba(255,255,255,0.6); font-size:0.85rem; margin-bottom:25px;">Choisissez votre nouvel horaire pour :<br><b>${loc}</b></p>
-                <input type="datetime-local" id="newVisitTime" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:15px; border-radius:12px; color:#fff; margin-bottom:20px; outline:none;">
-                <button id="btnConfirmReschedule" style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:15px; border-radius:12px; font-weight:800; cursor:pointer; margin-bottom:10px;">CONFIRMER LE REPORT</button>
-                <button onclick="this.closest('.portal-overlay').remove()" style="width:100%; background:transparent; color:rgba(255,255,255,0.4); border:none; padding:10px; cursor:pointer; text-decoration:underline;">Annuler</button>
-            </div>
-        `;
-        document.body.appendChild(overlay);
-
-        document.getElementById('btnConfirmReschedule').onclick = async () => {
-            const ndt = document.getElementById('newVisitTime').value;
-            if (!ndt) return alert("Date requise.");
-            if (new Date(ndt).getTime() < Date.now() + 7200000) return alert("Minimum 2h d'avance.");
-            const btn = document.getElementById('btnConfirmReschedule');
-            btn.innerText = "Mise à jour..."; btn.disabled = true;
-            try {
-                const res = await fetch(`${API_URL}?action=rescheduleVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ visitId: id, location: loc, newDateTime: ndt, codePortal: localStorage.getItem('portal_code'), dealId: localStorage.getItem('portal_deal_id') }) });
-                if ((await res.json()).s) { alert("Reporté !"); handlePortalLogin(); overlay.remove(); }
-            } catch (e) { alert("Erreur."); btn.disabled = false; btn.innerText = "CONFIRMER LE REPORT"; }
-        };
-    }
-
-    async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(`${API_URL}?action=requestMLS`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
-    function toggleSection(id) { document.getElementById(id).classList.toggle('collapsed'); }
-
-    window.onload = initPortal;
-</script>
+        function updateLocalFB(id, key, val) { const c = localStorage.getItem('portal_code'); const sk = `visit_fb_${c}_${id}`; const fb = JSON.parse(localStorage.getItem(sk) || "{}"); fb[key] = val; localStorage.setItem(sk, JSON.stringify(fb)); }
+        function saveRating(id, r, el) { updateLocalFB(id, 'rating', r); el.parentElement.querySelectorAll('span').forEach((s, idx) => s.style.filter = (idx < r) ? 'none' : 'grayscale(1) opacity(0.2)'); }
+        function saveVerdict(id, v, btn) { updateLocalFB(id, 'verdict', v); btn.parentElement.querySelectorAll('button').forEach(b => b.style.background = 'transparent'); btn.style.background = 'rgba(135, 50, 118, 0.4)'; }
+        async function syncVisitFeedback(id) {
+            const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id'), b = document.getElementById(`btn-sync-${id}`);
+            const cm = document.getElementById(`comm-${id}`).value, fb = JSON.parse(localStorage.getItem(`visit_fb_${c}_${id}`) || "{}");
+            if (!d || !b) return; b.innerText = "Sync..."; b.disabled = true;
+            try { const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, visitId: id, evaluation: fb.rating || 5, verdict: fb.verdict || "À réfléchir", commentaire: cm }) }); if ((await res.json()).s) { b.innerText = "Avis enregistré ! ✨"; b.style.background = "#2ecc71"; } else throw new Error(); } catch (e) { b.innerText = "Réessayer"; b.disabled = false; }
+        }
+        async function requestVisit() {
+            const loc = document.getElementById('inpVisitLoc').value.trim(), dt = document.getElementById('inpVisitDateTime').value, d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code');
+            if (!loc || !dt) { alert("Veuillez remplir l'adresse et la date."); return; }
+            try { const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestVisit', codePortal: c, dealId: d, location: loc, dateTime: dt }) }); if (res.ok) { alert("✅ Demande de visite envoyée !"); document.getElementById('inpVisitLoc').value = ''; document.getElementById('inpVisitDateTime').value = ''; } } catch (e) { alert("Erreur."); }
+        }
+        function renderTeam(team) { const w = document.getElementById('wrapTeam'); if (!w || !team) return; w.innerHTML = team.map(t => `<div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); text-align:center;"><div style="font-size:1.8rem; margin-bottom:8px;">${t.icon || '👤'}</div><div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${t.role || 'Expert'}</div><div style="font-weight:700; color:#fff;">${t.name || '--'}</div></div>`).join(''); }
+        function renderPartners(partners) { const w = document.getElementById('wrapPartners'); if (!w || !partners) return; w.innerHTML = partners.map(p => `<div style="background:rgba(255,255,255,0.02); padding:20px; border-radius:25px; border:1px solid var(--dash-border); position:relative; overflow:hidden;"><div style="position:absolute; top:12px; right:-25px; background:var(--dash-primary); color:#fff; padding:3px 30px; transform:rotate(45deg); font-size:0.55rem; font-weight:900;">PROMO</div><div style="font-size:1.5rem; margin-bottom:10px;">${p.icon || '🤝'}</div><div style="font-family:'Outfit'; font-weight:800; color:#fff;">${p.name || 'Partenaire'}</div><div style="font-size:0.75rem; opacity:0.6; margin-top:5px;">${p.benefit || 'Avantage exclusif'}</div></div>`).join(''); }
+        async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
+        function toggleSection(id) { const el = document.getElementById(id); if (el) el.classList.toggle('collapsed'); }
+        if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initPortal); } else { initPortal(); }
+    </script>
 </body>
+
 </html>

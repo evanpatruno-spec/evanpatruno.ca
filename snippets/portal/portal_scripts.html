@@ -24,15 +24,17 @@
         const btn = document.getElementById('btnPortalLogin');
         const code = (inpCode?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
         const phone = (inpPhone?.value || localStorage.getItem('portal_phone'))?.trim();
-        if (!code || !phone) {
-            alert("Veuillez entrer votre Code Dossier et les 4 chiffres de votre téléphone.");
-            return;
-        }
+        if (!code || !phone) return;
+
         if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
         try {
             const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
             const data = await res.json();
             if (!res.ok) throw new Error((data.error || "Accès refusé.") + (data.details ? ": " + data.details : ""));
+            
+            // Sécurité : Si Zoho renvoie un succès vide ou une erreur métier
+            if (data.s === false) throw new Error(data.message || "Erreur de synchronisation Zoho");
+
             localStorage.setItem('portal_code', code);
             localStorage.setItem('portal_phone', phone);
             localStorage.setItem('portal_deal_id', data.id);
@@ -40,8 +42,11 @@
             document.getElementById('portalOverlay').classList.add('hidden');
             document.getElementById('portalDash').classList.add('visible');
         } catch (error) { 
-            const msg = error.message || "Erreur inconnue";
-            alert("⚠️ Erreur : " + msg); 
+            console.error("Login Error:", error);
+            if (e) alert("⚠️ Erreur : " + error.message); 
+            // Si c'est un rafraîchissement auto qui échoue, on affiche l'overlay
+            else document.getElementById('portalOverlay').classList.remove('hidden');
+            
             if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; } 
         }
     }
