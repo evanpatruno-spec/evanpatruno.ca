@@ -278,6 +278,7 @@
                 alert("✅ Demande de visite envoyée ! Evan vous contactera pour confirmer."); 
                 document.getElementById('inpVisitLoc').value=''; 
                 document.getElementById('inpVisitDateTime').value=''; 
+                handlePortalLogin();
             } else { 
                 alert("⚠️ Erreur : " + (result.details || result.error || "Erreur inconnue")); 
             }
