@@ -1106,7 +1106,7 @@
         const toast = document.createElement('div');
         toast.id = 'pwaToast';
         toast.style.cssText = "position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:rgba(20,8,18,0.96); color:#fff; border:1px solid rgba(135,50,118,0.6); box-shadow:0 0 30px rgba(135,50,118,0.3); padding:14px 24px; border-radius:50px; font-family:'Outfit',sans-serif; fontSize:0.85rem; fontWeight:600; zIndex:20000; textAlign:center; maxWidth:90vw;";
-        toast.innerHTML = msg;
+        toast.textContent = msg;
         document.body.appendChild(toast);
         setTimeout(() => toast.remove(), 5000);
     }
@@ -1152,17 +1152,36 @@
         if (params.get('action') === 'install' && !isInStandaloneMode()) {
             const overlay = document.createElement('div');
             overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(15,5,13,0.98);z-index:100000;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Outfit';text-align:center;padding:20px;";
-            overlay.innerHTML = `
-                <div style="font-size:4rem;margin-bottom:20px;">📲</div>
-                <h2 style="font-size:2rem;margin-bottom:10px;">Installer l'App</h2>
-                <p style="opacity:0.7;margin-bottom:40px;">Confirmez l'installation pour accéder à votre dossier en un clic depuis votre écran d'accueil.</p>
-                <button id="btnFinalInstall" style="background:var(--dash-grad);border:none;color:#fff;padding:18px 40px;font-size:1.1rem;font-weight:900;border-radius:50px;box-shadow:0 10px 30px rgba(135,50,118,0.5);cursor:pointer;">INSTALLER MAINTENANT</button>
-                <button id="btnCancelInstall" style="background:transparent;border:none;color:#fff;opacity:0.4;margin-top:25px;text-decoration:underline;cursor:pointer;">Plus tard</button>
-            `;
+            
+            const icon = document.createElement('div');
+            icon.style.cssText = "font-size:4rem;margin-bottom:20px;";
+            icon.textContent = "📲";
+            
+            const title = document.createElement('h2');
+            title.style.cssText = "font-size:2rem;margin-bottom:10px;";
+            title.textContent = "Installer l'App";
+            
+            const desc = document.createElement('p');
+            desc.style.cssText = "opacity:0.7;margin-bottom:40px;";
+            desc.textContent = "Confirmez l'installation pour accéder à votre dossier en un clic depuis votre écran d'accueil.";
+            
+            const btnFinalInstall = document.createElement('button');
+            btnFinalInstall.style.cssText = "background:linear-gradient(135deg, #873276, #b0549c);border:none;color:#fff;padding:18px 40px;font-size:1.1rem;font-weight:900;border-radius:50px;box-shadow:0 10px 30px rgba(135,50,118,0.5);cursor:pointer;";
+            btnFinalInstall.textContent = "INSTALLER MAINTENANT";
+            
+            const btnCancelInstall = document.createElement('button');
+            btnCancelInstall.style.cssText = "background:transparent;border:none;color:#fff;opacity:0.4;margin-top:25px;text-decoration:underline;cursor:pointer;";
+            btnCancelInstall.textContent = "Plus tard";
+            
+            overlay.appendChild(icon);
+            overlay.appendChild(title);
+            overlay.appendChild(desc);
+            overlay.appendChild(btnFinalInstall);
+            overlay.appendChild(btnCancelInstall);
             document.body.appendChild(overlay);
 
-            document.getElementById('btnCancelInstall').onclick = () => overlay.remove();
-            document.getElementById('btnFinalInstall').onclick = async () => {
+            btnCancelInstall.onclick = () => overlay.remove();
+            btnFinalInstall.onclick = async () => {
                 if (deferredPrompt) {
                     deferredPrompt.prompt();
                     const { outcome } = await deferredPrompt.userChoice;
@@ -1170,7 +1189,7 @@
                     deferredPrompt = null;
                 } else if (isIos()) {
                     overlay.remove();
-                    showPwaToast("🍎 Touchez <b>Partager</b> puis <b>Sur l'écran d'accueil</b>.");
+                    showPwaToast("🍎 Touchez Partager puis Sur l'écran d'accueil.");
                 } else {
                     overlay.remove();
                     showPwaToast("💡 Utilisez le menu du navigateur pour installer.");
