@@ -152,7 +152,9 @@ export default async function handler(req, res) {
 
         if (action === 'submitReferral') {
             const { refName, refPhone, refNotes } = data;
-            const body = {
+            
+            // 1. Créer l'Interaction (Historique Ambassadeur)
+            const interactionBody = {
                 data: [{
                     Name: `Référence Ambassadeur : ${refName}`,
                     Type_interaction: "Référence Ambassadeur",
@@ -164,12 +166,32 @@ export default async function handler(req, res) {
                     Statut: "Nouveau"
                 }]
             };
-            const r = await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
-                method: 'POST',
-                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify({ trigger: ["workflow", "approval", "blueprint"], data: [body.data[0]] })
-            });
-            if (r.ok) return res.status(200).json({ s: true });
+            
+            // 2. Créer le Prospect (Nouveau Lead)
+            const leadBody = {
+                data: [{
+                    Last_Name: refName,
+                    Phone: refPhone,
+                    Lead_Source: "Programme Ambassadeur",
+                    Description: `RÉFÉRENCE DE : ${deal?.Contact_Name?.name || "Client Portail"}\nPROJET : ${refNotes}`,
+                    Statut_du_prospect: "Nouveau"
+                }]
+            };
+
+            const [rInt, rLead] = await Promise.all([
+                fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
+                    method: 'POST',
+                    headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ trigger: ["workflow"], data: [interactionBody.data[0]] })
+                }),
+                fetch(`${apiDomain}/crm/v2/Leads`, {
+                    method: 'POST',
+                    headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ trigger: ["workflow"], data: [leadBody.data[0]] })
+                })
+            ]);
+
+            if (rInt.ok) return res.status(200).json({ s: true });
             return res.status(500).json({ error: "REFERRAL_FAILED" });
         }
 
