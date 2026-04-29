@@ -752,6 +752,7 @@
         safe(() => renderChecklist(data.checklist || []));
         safe(() => renderTeam(data.team || []));
         safe(() => renderPartners(data.partners || []));
+        checkUrlSection();
     }
 
     function renderMilestones(m) {
@@ -1155,6 +1156,23 @@
         if ('setAppBadge' in navigator) {
             if (count > 0) navigator.setAppBadge(count).catch(() => {});
             else navigator.clearAppBadge().catch(() => {});
+        }
+    }
+
+    function checkUrlSection() {
+        const params = new URLSearchParams(window.location.search);
+        const section = params.get('section');
+        if (section) {
+            // Petit délai pour s'assurer que le rendu est fini
+            setTimeout(() => {
+                const el = document.getElementById(section);
+                if (el) {
+                    toggleSection(section, true);
+                    // On nettoie l'URL pour ne pas ré-ouvrir à chaque refresh
+                    const newUrl = window.location.pathname;
+                    window.history.replaceState({}, document.title, newUrl);
+                }
+            }, 800);
         }
     }
 
