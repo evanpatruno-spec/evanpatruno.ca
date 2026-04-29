@@ -79,12 +79,49 @@ export default async function handler(req, res) {
             const createResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
                 method: 'POST', 
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify(newVisit) 
+                body: JSON.stringify({
+                    trigger: ["workflow", "approval", "blueprint"],
+                    data: [newVisit.data[0]]
+                }) 
             });
             const createData = await createResp.json();
             const createStatus = createData?.data?.[0]?.status;
             if (createStatus === 'success') return res.status(200).json({ s: true });
             return res.status(500).json({ error: "VISIT_CREATE_FAILED", details: JSON.stringify(createData?.data?.[0] || createData).substring(0, 300) });
+        }
+
+        if (action === 'cancelVisit') {
+            const { visitId, location } = data;
+            const r = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
+                method: 'PUT', 
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    trigger: ["workflow", "approval", "blueprint"],
+                    data: [{ id: visitId, Statut: "Annulé", Note_interne: `Client a annulé la visite pour ${location}` }]
+                }) 
+            });
+            const rData = await r.json();
+            if (rData?.data?.[0]?.status === 'success') return res.status(200).json({ s: true });
+            return res.status(200).json({ s: false, error: "CANCEL_FAILED", details: rData });
+        }
+
+        if (action === 'rescheduleVisit') {
+            const { visitId, location, newDateTime } = data;
+            const r = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
+                method: 'PUT', 
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    trigger: ["workflow", "approval", "blueprint"],
+                    data: [{ 
+                        id: visitId, 
+                        Date_heure_de_visite: newDateTime ? newDateTime + ':00+00:00' : null,
+                        Note_interne: `REPORTÉ PAR LE CLIENT : ${newDateTime} pour ${location}` 
+                    }]
+                }) 
+            });
+            const rData = await r.json();
+            if (rData?.data?.[0]?.status === 'success') return res.status(200).json({ s: true });
+            return res.status(200).json({ s: false, error: "RESCHEDULE_FAILED", details: rData });
         }
 
         if (action === 'requestMLS') {
@@ -99,7 +136,10 @@ export default async function handler(req, res) {
             const r = await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, { 
                 method: 'POST', 
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify(body)
+                body: JSON.stringify({
+                    trigger: ["workflow", "approval", "blueprint"],
+                    data: [body.data[0]]
+                })
             });
             if (r.ok) return res.status(200).json({ s: true });
             const e = await r.text();
@@ -262,6 +302,7 @@ export default async function handler(req, res) {
         });
 
     } catch (err) {
-        return res.status(500).json({ error: "SERVER_ERROR", details: err.message });
+        console.error("SERVER_ERROR:", err);
+        return res.status(200).json({ s: false, error: "SERVER_ERROR", message: err.message });
     }
 }

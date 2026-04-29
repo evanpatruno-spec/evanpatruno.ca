@@ -22,7 +22,7 @@
     <!-- DASHBOARD -->
     <div class="portal-container" id="portalDash">
         <header id="secCockpit" style="margin-bottom: 20px; position: relative;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
                 <div>
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
                         <span id="txtCodeRef" style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 700; margin: 0 5px;">#--</span>
@@ -31,6 +31,7 @@
                     <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">Chargement...</h1>
                     <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--</div>
                 </div>
+                <button onclick="handleLogout()" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">🚪 Quitter</button>
             </div>
         </header>
 

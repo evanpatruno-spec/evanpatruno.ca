@@ -197,7 +197,10 @@
         const btn = document.getElementById('btnPortalLogin');
         const c = (document.getElementById('inpPortalCode')?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
         const p = (document.getElementById('inpPortalPhone')?.value || localStorage.getItem('portal_phone'))?.trim();
-        if (!c || !p) return;
+        if (!c || !p) {
+            alert("Veuillez entrer votre Code Dossier et les 4 chiffres de votre téléphone.");
+            return;
+        }
         if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
         try {
             const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, phoneLast4: p }) });
@@ -222,12 +225,15 @@
     });
     const btnPWA = document.getElementById('btnInstallPWA');
     if (btnPWA) {
-        btnPWA.addEventListener('click', async () => {
-            if (!deferredPrompt) return;
-            deferredPrompt.prompt();
-            const { outcome } = await deferredPrompt.userChoice;
-            if (outcome === 'accepted') btnPWA.style.display = 'none';
-            deferredPrompt = null;
+        btnPWA.addEventListener('click', async (e) => {
+            if (deferredPrompt) {
+                e.preventDefault();
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') btnPWA.style.display = 'none';
+                deferredPrompt = null;
+            }
+            // Fallback naturel vers le href si deferredPrompt est nul
         });
     }
 
