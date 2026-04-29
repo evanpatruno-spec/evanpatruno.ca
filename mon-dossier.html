@@ -1167,15 +1167,11 @@
                 const el = document.getElementById(section);
                 if (el) {
                     toggleSection(section, true);
-                    // On force un scroll un peu plus tard pour être sûr
-                    setTimeout(() => {
-                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }, 500);
                     // On nettoie l'URL
                     const newUrl = window.location.pathname;
                     window.history.replaceState({}, document.title, newUrl);
                 }
-            }, 1200);
+            }, 1000);
         }
     }
 
