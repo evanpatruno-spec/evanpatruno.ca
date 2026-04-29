@@ -156,7 +156,7 @@ export default async function handler(req, res) {
             // 1. Créer l'Interaction (Historique Ambassadeur)
             const interactionBody = {
                 data: [{
-                    Name: `Référence Ambassadeur : ${refName}`,
+                    Name: `🤝 Réf. Ambassadeur : ${refName}`,
                     Type_interaction: "Référence Ambassadeur",
                     Nom_reference: refName,
                     Contact_reference: refPhone,
@@ -199,7 +199,7 @@ export default async function handler(req, res) {
             const { mlsNumber } = data;
             const body = {
                 data: [{
-                    Name: `Demande doc MLS ${mlsNumber || ""}`,
+                    Name: `📄 Doc Centris : ${mlsNumber || ""}`,
                     Type_interaction: "Demande de documentation",
                     Num_ro_MLS: mlsNumber || "",
                     Affaire: { id: dealId },
