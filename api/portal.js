@@ -175,7 +175,7 @@ export default async function handler(req, res) {
             const body = {
                 data: [{
                     Name: `Demande doc MLS ${mlsNumber || ""}`,
-                    Type_interaction: "Demande de documentations",
+                    Type_interaction: "Demande de documentation",
                     Num_ro_MLS: mlsNumber || "",
                     Affaire: { id: dealId },
                     Statut: "Nouveau"
