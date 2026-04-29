@@ -380,26 +380,72 @@
         } catch (e) { alert("Erreur."); btn.disabled = false; }
     }
 
+    function renderChecklist(checklist) {
+        const wrap = document.getElementById('wrapChecklist'); if (!wrap) return;
+        wrap.innerHTML = checklist.map(c => `
+            <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:15px; border:1px solid ${c.done?'rgba(46,204,113,0.2)':'rgba(255,255,255,0.1)'}; display:flex; align-items:center; gap:12px;">
+                <div style="width:20px; height:20px; border-radius:50%; background:${c.done?'#2ecc71':'rgba(255,255,255,0.1)'}; color:#fff; font-size:0.6rem; display:flex; align-items:center; justify-content:center;">${c.done?'✓':'!'}</div>
+                <span style="font-size:0.85rem; font-weight:600; color:${c.done?'#fff':'rgba(255,255,255,0.4)'}">${c.name || '--'}</span>
+            </div>
+        `).join('');
+    }
+
+    function renderTeam(team) { const w = document.getElementById('wrapTeam'); if (!w || !team) return; w.innerHTML = team.map(t => `<div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); text-align:center;"><div style="font-size:1.8rem; margin-bottom:8px;">${t.icon || '👤'}</div><div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${t.role || 'Expert'}</div><div style="font-weight:700; color:#fff;">${t.name || '--'}</div></div>`).join(''); }
+    
+    function renderPartners(partners) { 
+        const w = document.getElementById('wrapPartners'); if (!w || !partners) return; 
+        w.innerHTML = partners.map(p => `
+            <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:20px; border:1px solid var(--dash-border); position:relative; overflow:hidden; display:flex; flex-direction:column; gap:10px;">
+                ${p.isPromo ? `<div style="position:absolute; top:8px; right:-28px; background:var(--dash-grad); color:#fff; padding:2px 30px; transform:rotate(45deg); font-size:0.5rem; font-weight:900; box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:1;">PROMO</div>` : ''}
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <div style="font-size:1.6rem; flex-shrink:0;">${p.icon || '🤝'}</div>
+                    <div style="min-width:0;">
+                        <div style="font-size:0.55rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${p.category || 'Expert'}</div>
+                        <div style="font-family:'Outfit'; font-weight:800; color:#fff; font-size:1rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${p.name || 'Partenaire'}</div>
+                    </div>
+                </div>
+                ${p.benefit ? `<div style="font-size:0.7rem; opacity:0.8; color:#fff; border-left:2px solid var(--dash-accent); padding-left:8px; line-height:1.3;">${p.benefit}</div>` : ''}
+                <div style="background:rgba(255,255,255,0.03); padding:8px 10px; border-radius:12px; font-size:0.7rem;">
+                    <div style="color:#fff; font-weight:700;">📞 ${p.phone || '--'}</div>
+                    <div style="display:flex; gap:10px; opacity:0.7;">
+                        <a href="mailto:${p.email}" style="color:inherit; text-decoration:none;">Email</a>
+                        ${p.website ? `<a href="${p.website}" target="_blank" style="color:inherit; text-decoration:none;">Site Web</a>` : ''}
+                    </div>
+                </div>
+            </div>
+        `).join(''); 
+    }
+
     function requestRescheduleVisit(id, loc) {
-        const ndt = prompt("Nouvelle date/heure (AAAA-MM-JJ HH:MM) :");
-        if (!ndt) return;
-        const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id');
-        fetch(`${API_URL}?action=rescheduleVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ visitId: id, location: loc, newDateTime: ndt, codePortal: c, dealId: d }) })
-        .then(r => r.json()).then(res => { if(res.s) { alert("Reporté."); handlePortalLogin(); } });
+        const overlay = document.createElement('div');
+        overlay.classList.add('portal-overlay');
+        overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:200000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px);";
+        overlay.innerHTML = `
+            <div style="background:#1a0b16; border:1px solid rgba(255,255,255,0.1); padding:30px; border-radius:25px; width:100%; max-width:400px; text-align:center;">
+                <div style="font-size:2rem; margin-bottom:15px;">⏳</div>
+                <h3 style="color:#fff; margin-bottom:10px; font-family:'Outfit';">Reporter la visite</h3>
+                <p style="color:rgba(255,255,255,0.6); font-size:0.85rem; margin-bottom:25px;">Choisissez votre nouvel horaire pour :<br><b>${loc}</b></p>
+                <input type="datetime-local" id="newVisitTime" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:15px; border-radius:12px; color:#fff; margin-bottom:20px; outline:none;">
+                <button id="btnConfirmReschedule" style="width:100%; background:var(--dash-grad); color:#fff; border:none; padding:15px; border-radius:12px; font-weight:800; cursor:pointer; margin-bottom:10px;">CONFIRMER LE REPORT</button>
+                <button onclick="this.closest('.portal-overlay').remove()" style="width:100%; background:transparent; color:rgba(255,255,255,0.4); border:none; padding:10px; cursor:pointer; text-decoration:underline;">Annuler</button>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+
+        document.getElementById('btnConfirmReschedule').onclick = async () => {
+            const ndt = document.getElementById('newVisitTime').value;
+            if (!ndt) return alert("Date requise.");
+            if (new Date(ndt).getTime() < Date.now() + 7200000) return alert("Minimum 2h d'avance.");
+            const btn = document.getElementById('btnConfirmReschedule');
+            btn.innerText = "Mise à jour..."; btn.disabled = true;
+            try {
+                const res = await fetch(`${API_URL}?action=rescheduleVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ visitId: id, location: loc, newDateTime: ndt, codePortal: localStorage.getItem('portal_code'), dealId: localStorage.getItem('portal_deal_id') }) });
+                if ((await res.json()).s) { alert("Reporté !"); handlePortalLogin(); overlay.remove(); }
+            } catch (e) { alert("Erreur."); btn.disabled = false; btn.innerText = "CONFIRMER LE REPORT"; }
+        };
     }
 
-    function updateLocalFB(id, key, val) { const c = localStorage.getItem('portal_code'); const sk = `visit_fb_${c}_${id}`; const fb = JSON.parse(localStorage.getItem(sk) || "{}"); fb[key] = val; localStorage.setItem(sk, JSON.stringify(fb)); }
-    function saveRating(id, r, el) { updateLocalFB(id, 'rating', r); handlePortalLogin(); }
-    function saveVerdict(id, v, btn) { updateLocalFB(id, 'verdict', v); handlePortalLogin(); }
-    async function syncVisitFeedback(id) {
-        const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id'), cm = document.getElementById(`comm-${id}`).value, fb = JSON.parse(localStorage.getItem(`visit_fb_${c}_${id}`) || "{}");
-        try { const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, visitId: id, evaluation: fb.rating || 5, verdict: fb.verdict || "À réfléchir", commentaire: cm }) }); if ((await res.json()).s) { alert("Synchronisé !"); handlePortalLogin(); } } catch (e) { alert("Erreur."); }
-    }
-
-    function renderChecklist(checklist) { document.getElementById('wrapChecklist').innerHTML = checklist.map(c => `<div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:15px; border:1px solid ${c.done?'#2ecc7144':'#ffffff22'}; display:flex; gap:12px;"><div style="width:20px; height:20px; border-radius:50%; background:${c.done?'#2ecc71':'#333'};"></div><span>${c.name}</span></div>`).join(''); }
-    function renderTimeline(t) { /* simplifie */ }
-    function renderTeam(team) { /* simplifie */ }
-    function renderPartners(partners) { /* simplifie */ }
+    async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(`${API_URL}?action=requestMLS`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
     function toggleSection(id) { document.getElementById(id).classList.toggle('collapsed'); }
 
     window.onload = initPortal;
