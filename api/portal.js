@@ -110,6 +110,12 @@ export default async function handler(req, res) {
 
         if (action === 'requestVisit') {
             const { location, dateTime } = data;
+            
+            // 1. Récupérer l'affaire pour trouver l'ID du Contact
+            const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const dData = await dResp.json();
+            const contactId = (dData.data && dData.data[0].Contact_Name) ? dData.data[0].Contact_Name.id : null;
+
             const newVisit = {
                 data: [{
                     Name: location || "Visite à planifier",
@@ -118,6 +124,13 @@ export default async function handler(req, res) {
                     Statut: "En attente"
                 }]
             };
+
+            // Ajouter le lien vers le Contact si on l'a trouvé
+            if (contactId) {
+                newVisit.data[0].Contact_Name = { id: contactId }; 
+                newVisit.data[0].Contact = { id: contactId };      
+            }
+
             const createResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, {
                 method: 'POST',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
