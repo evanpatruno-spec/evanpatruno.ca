@@ -2,6 +2,10 @@
  * API BRIDGE : ZOHO CRM -> PORTAIL CLIENT (V14.24 - FIX VISITS SEARCH)
  */
 
+// Cache global pour le token (valable quelques minutes tant que le conteneur serverless est actif)
+let cachedToken = null;
+let tokenExpiry = 0;
+
 export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
@@ -13,17 +17,27 @@ export default async function handler(req, res) {
     const code = (data.codePortal || data.code || "").trim().toUpperCase();
 
     try {
-        const tokenParams = new URLSearchParams();
-        tokenParams.append('refresh_token', process.env.ZOHO_REFRESH_TOKEN || "");
-        tokenParams.append('client_id', process.env.ZOHO_CLIENT_ID || "");
-        tokenParams.append('client_secret', process.env.ZOHO_CLIENT_SECRET || "");
-        tokenParams.append('grant_type', 'refresh_token');
+        let accessToken = cachedToken;
+        let apiDomain = "https://www.zohoapis.com";
 
-        const tResp = await fetch('https://accounts.zoho.com/oauth/v2/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: tokenParams.toString() });
-        const tData = await tResp.json();
-        const accessToken = tData.access_token;
-        const apiDomain = tData.api_domain || "https://www.zohoapis.com";
-        if (!accessToken) throw new Error("AUTH_FAILED: " + JSON.stringify(tData).substring(0, 150));
+        // Rafraîchissement du token uniquement si expiré (ou non présent)
+        if (!accessToken || Date.now() > tokenExpiry) {
+            const tokenParams = new URLSearchParams();
+            tokenParams.append('refresh_token', process.env.ZOHO_REFRESH_TOKEN || "");
+            tokenParams.append('client_id', process.env.ZOHO_CLIENT_ID || "");
+            tokenParams.append('client_secret', process.env.ZOHO_CLIENT_SECRET || "");
+            tokenParams.append('grant_type', 'refresh_token');
+
+            const tResp = await fetch('https://accounts.zoho.com/oauth/v2/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: tokenParams.toString() });
+            const tData = await tResp.json();
+            
+            if (!tData.access_token) throw new Error("AUTH_FAILED: " + JSON.stringify(tData).substring(0, 150));
+            
+            accessToken = tData.access_token;
+            cachedToken = accessToken;
+            apiDomain = tData.api_domain || "https://www.zohoapis.com";
+            tokenExpiry = Date.now() + 3000000; // Valide ~50 min (Zoho = 1h)
+        }
 
         let dealId = data.dealId;
         if (code.includes("EP-1") || code.includes("TEST")) {

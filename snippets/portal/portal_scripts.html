@@ -319,14 +319,11 @@
             const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, location: loc, dateTime: dt }) }); 
             const result = await res.json();
             if (result.s) { 
-                // On lance le rafraîchissement en arrière-plan immédiatement
-                handlePortalLogin();
-                
                 alert("✅ Demande de visite envoyée ! Evan vous contactera pour confirmer."); 
                 document.getElementById('inpVisitLoc').value=''; 
                 document.getElementById('inpVisitDateTime').value=''; 
                 
-                // Deuxième rafraîchissement de sécurité après 3s au cas où Zoho est lent
+                // Un seul rafraîchissement après 3s pour laisser Zoho indexer le nouveau record
                 setTimeout(() => { handlePortalLogin(); }, 3000);
             } else { 
                 alert("⚠️ Erreur : " + (result.details || result.error || "Erreur inconnue")); 
