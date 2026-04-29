@@ -171,7 +171,8 @@
 
     /* QUICK MENU MOBILE */
     .portal-quick-menu { 
-        display: none; position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); 
+        display: none !important; 
+        position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); 
         background: rgba(20,10,25,0.8); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
         border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 10px 25px; 
         gap: 25px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -180,7 +181,7 @@
     .quick-menu-item:hover { opacity: 1; transform: scale(1.2); }
 
     @media (max-width: 768px) {
-        .portal-quick-menu { display: flex; }
+        #portalDash.visible ~ .portal-quick-menu { display: flex !important; }
     }
 
     /* ===== LOGIN PAGE - PREMIUM REDESIGN ===== */
