@@ -11,6 +11,6 @@
   },
   "scripts": {
     "convert-pdf": "node puppeteer_convert.js",
-    "build": "node build_portal.js"
+    "build-local": "node build_portal.js"
   }
 }
