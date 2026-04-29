@@ -357,6 +357,14 @@
             const newDT = document.getElementById('newVisitTime').value;
             if (!newDT) { alert("Veuillez sélectionner une date et une heure."); return; }
             
+            // Validation : Minimum 2h dans le futur
+            const chosen = new Date(newDT).getTime();
+            const minTime = Date.now() + (2 * 60 * 60 * 1000);
+            if (chosen < minTime) {
+                alert("⚠️ Délai trop court : Veuillez choisir un horaire au moins 2 heures dans le futur.");
+                return;
+            }
+
             const btn = document.getElementById('btnConfirmReschedule');
             btn.innerText = "Mise à jour..."; btn.disabled = true;
 
