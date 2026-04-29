@@ -113,7 +113,7 @@ export default async function handler(req, res) {
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     trigger: ["workflow", "approval", "blueprint"],
-                    data: [{ id: visitId, Statut: "Annulé", Note_interne: `Client a annulé la visite pour ${location}` }]
+                    data: [{ id: visitId, Statut: "Annulée", Note_interne: `Client a annulé la visite pour ${location}` }]
                 })
             });
             const rData = await r.json();

@@ -161,7 +161,7 @@
         }
 
         const now = Date.now();
-        const archivedStats = ['Annulé', 'Refusée', 'Terminée', 'Effectuée'];
+        const archivedStats = ['Annulée', 'Refusée', 'Terminée', 'Effectuée'];
         const activeVisites = visites.filter(v => !archivedStats.includes(v.statut));
         const archivedVisites = visites.filter(v => archivedStats.includes(v.statut));
 
@@ -180,7 +180,7 @@
                 'Confirmée': 'rgba(46, 204, 113, 0.2)',
                 'Terminée': 'rgba(52, 152, 219, 0.2)',
                 'Effectuée': 'rgba(52, 152, 219, 0.2)',
-                'Annulé': 'rgba(231, 76, 60, 0.2)',
+                'Annulée': 'rgba(231, 76, 60, 0.2)',
                 'Refusée': 'rgba(231, 76, 60, 0.2)'
             };
             const statusTextColors = {
@@ -189,7 +189,7 @@
                 'Confirmée': '#2ecc71',
                 'Terminée': '#3498db',
                 'Effectuée': '#3498db',
-                'Annulé': '#e74c3c',
+                'Annulée': '#e74c3c',
                 'Refusée': '#e74c3c'
             };
             const sCol = statusColors[v.statut] || 'rgba(255,255,255,0.1)';
