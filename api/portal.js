@@ -171,7 +171,7 @@ export default async function handler(req, res) {
                         id: visitId,
                         Statut: "En attente",
                         Date_heure_de_visite: newDateTime || null,
-                        Note_interne: `REPORTÉ PAR LE CLIENT : ${newDateTime} pour ${location}`
+                        Commentaire_visite: `REPORTÉ PAR LE CLIENT : ${newDateTime} pour ${location}`
                     }]
                 })
             });
