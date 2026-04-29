@@ -160,6 +160,7 @@ export default async function handler(req, res) {
                     Contact_reference: refPhone,
                     Description_reference: refNotes,
                     Affaire: { id: dealId },
+                    Ambassadeur: deal?.Contact_Name?.id ? { id: deal.Contact_Name.id } : null,
                     Statut: "Nouveau"
                 }]
             };
