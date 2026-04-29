@@ -133,6 +133,27 @@
             </div>
         </div>
 
+        <!-- AMBASSADEUR -->
+        <div class="section-wrapper gold-card" id="secAmbassador">
+            <div class="section-header" onclick="toggleSection('secAmbassador')">
+                <h3 class="gold-text">🏆 Programme Ambassadeur</h3>
+                <div class="section-chevron" style="color:#d4af37;">▼</div>
+            </div>
+            <div class="section-content">
+                <div style="text-align:center; margin-bottom:20px;">
+                    <p style="font-size:1rem; font-weight:700; color:#fff; margin-bottom:10px;">Votre recommandation vaut de l'or ! ✨</p>
+                    <p style="font-size:0.85rem; opacity:0.8; line-height:1.4;">Devenez ambassadeur en recommandant mes services à un proche. Profitez de privilèges exclusifs une fois la transaction conclue.</p>
+                </div>
+                
+                <div id="referralForm" style="display:grid; gap:12px; background:rgba(0,0,0,0.2); padding:15px; border-radius:15px; border:1px solid rgba(212,175,55,0.2);">
+                    <input type="text" id="refName" placeholder="Nom du proche" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                    <input type="tel" id="refPhone" placeholder="Téléphone ou Email" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                    <textarea id="refNotes" placeholder="Petit mot ou projet (Vente, Achat...)" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none; height:60px; resize:none;"></textarea>
+                    <button onclick="submitReferral()" class="portal-btn-primary btn-gold">🤝 Envoyer la référence</button>
+                </div>
+            </div>
+        </div>
+
         <!-- PARTENAIRES -->
         <div class="section-wrapper collapsed" id="secPartners">
             <div class="section-header" onclick="toggleSection('secPartners')">

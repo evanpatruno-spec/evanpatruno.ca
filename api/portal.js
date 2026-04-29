@@ -141,6 +141,26 @@ export default async function handler(req, res) {
             return res.status(200).json({ s: false, error: "RESCHEDULE_FAILED", details: rData });
         }
 
+        if (action === 'submitReferral') {
+            const { refName, refPhone, refNotes } = data;
+            const body = {
+                data: [{
+                    Name: `Référence de ${deal.Contact_Name?.name || "Client"} : ${refName}`,
+                    Type_interaction: "Référence Ambassadeur",
+                    Note_interne: `NOM : ${refName}\nCONTACT : ${refPhone}\nPROJET : ${refNotes}`,
+                    Affaire: { id: dealId },
+                    Statut: "Nouveau"
+                }]
+            };
+            const r = await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
+                method: 'POST',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify({ trigger: ["workflow", "approval", "blueprint"], data: [body.data[0]] })
+            });
+            if (r.ok) return res.status(200).json({ s: true });
+            return res.status(500).json({ error: "REFERRAL_FAILED" });
+        }
+
         if (action === 'requestMLS') {
             const { mlsNumber } = data;
             const body = {

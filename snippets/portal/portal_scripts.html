@@ -451,6 +451,37 @@
             </div>
         `).join(''); 
     }
+    async function submitReferral() {
+        const name = document.getElementById('refName').value.trim();
+        const phone = document.getElementById('refPhone').value.trim();
+        const notes = document.getElementById('refNotes').value.trim();
+        const d = localStorage.getItem('portal_dealId');
+        const c = localStorage.getItem('portal_code');
+
+        if (!name || !phone) { alert("Veuillez remplir au moins le nom et le contact."); return; }
+
+        const btn = document.querySelector('.btn-gold');
+        if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
+
+        try {
+            const res = await fetch(`${API_URL}?action=submitReferral`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ codePortal: c, dealId: d, refName: name, refPhone: phone, refNotes: notes })
+            });
+            const result = await res.json();
+            if (result.s) {
+                alert("🏆 Félicitations ! Votre référence a été envoyée avec succès. Evan vous contactera sous peu.");
+                document.getElementById('refName').value = '';
+                document.getElementById('refPhone').value = '';
+                document.getElementById('refNotes').value = '';
+            } else {
+                alert("⚠️ Erreur : " + result.error);
+            }
+        } catch (e) { alert("⚠️ Erreur de connexion : " + e.message); }
+        if (btn) { btn.innerText = "🤝 Envoyer la référence"; btn.disabled = false; }
+    }
+
     async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
     function toggleSection(id, forceOpen = false) { 
         const el = document.getElementById(id); if (!el) return;
