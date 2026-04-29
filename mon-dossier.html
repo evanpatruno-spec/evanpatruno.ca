@@ -735,8 +735,9 @@
 
         const nextCondition = (data.checklist || []).find(c => !c.done);
         setT('dashNextStep', nextCondition ? nextCondition.name : "Terminé !");
-        const nextVisit = (data.visites || []).find(v => v.statut === 'Confirmée' || v.statut === 'Prévue');
-        setT('dashNextVisit', nextVisit ? formatVisitDate(nextVisit.Date_heure_de_visite) : "Aucun planifié");
+        const upcomingVisits = (data.visites || []).filter(v => v.statut === 'Confirmée' || v.statut === 'Prévue');
+        setT('dashNextVisit', upcomingVisits.length > 0 ? formatVisitDate(upcomingVisits[0].Date_heure_de_visite) : "Aucun planifié");
+        updateAppBadge(upcomingVisits.length);
 
         const safe = (fn) => { try { fn(); } catch (e) { console.warn(e); } };
         
@@ -1148,6 +1149,13 @@
             else if (style === 'medium') window.navigator.vibrate(25);
             else if (style === 'success') window.navigator.vibrate([15, 30, 15]);
         } catch(e) {}
+    }
+
+    function updateAppBadge(count) {
+        if ('setAppBadge' in navigator) {
+            if (count > 0) navigator.setAppBadge(count).catch(() => {});
+            else navigator.clearAppBadge().catch(() => {});
+        }
     }
 
     async function nativeShare() {
