@@ -165,15 +165,6 @@
         const activeVisites = visites.filter(v => !archivedStats.includes(v.statut));
         const archivedVisites = visites.filter(v => archivedStats.includes(v.statut));
 
-        let html = activeVisites.map(v => {
-            const localFB = JSON.parse(localStorage.getItem(`visit_fb_${portalCode}_${v.id}`) || "{}");
-            const verdict = v.verdict || localFB.verdict || "";
-            const rating = v.evaluation || localFB.rating || 0;
-            const visitTime = v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite.replace(' ', 'T')).getTime() : 0;
-            const isUnlocked = now > (visitTime + 1800000); 
-            const isCompleted = ["Terminée", "Effectuée"].includes(v.statut);
-            const safeLoc = (v.location || 'Lieu').split("'").join("\\'");
-
         const statusColors = {
             'En attente': 'rgba(241, 196, 15, 0.2)',
             'Prévue': 'rgba(46, 204, 113, 0.2)',
@@ -274,6 +265,7 @@
                 </div>
             `;
         }
+
 
         wrap.innerHTML = html;
     }
