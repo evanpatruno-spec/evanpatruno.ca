@@ -280,6 +280,34 @@
         transition: 0.3s; box-shadow: 0 10px 30px rgba(135, 50, 118, 0.3);
     }
     .action-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5); }
+    
+    .portal-btn-primary {
+        background: var(--dash-grad);
+        color: #fff;
+        border: none;
+        border-radius: 14px;
+        padding: 14px 24px;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 800;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: 0 8px 20px rgba(135, 50, 118, 0.25);
+    }
+    .portal-btn-primary:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 12px 30px rgba(135, 50, 118, 0.4);
+        filter: brightness(1.1);
+    }
+    .portal-btn-primary:active { transform: translateY(-1px) scale(0.98); }
+    .portal-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
 
     /* PWA Button - always visible */
     #btnInstallPWA {
