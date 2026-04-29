@@ -22,18 +22,23 @@
         const inpCode = document.getElementById('inpPortalCode');
         const inpPhone = document.getElementById('inpPortalPhone');
         const btn = document.getElementById('btnPortalLogin');
+        
+        // Si on a des inputs, on les utilise en priorité (connexion manuelle)
         const code = (inpCode?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
         const phone = (inpPhone?.value || localStorage.getItem('portal_phone'))?.trim();
+        
         if (!code || !phone) return;
+
+        // On détermine si c'est une connexion manuelle (clic bouton) ou auto (refresh)
+        const isManual = !!(inpCode?.value && inpPhone?.value);
 
         if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
         try {
-            const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
+            const res = await fetch(`${API_URL}?t=${Date.now()}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
             const data = await res.json();
-            if (!res.ok) throw new Error((data.error || "Accès refusé.") + (data.details ? ": " + data.details : ""));
+            if (!res.ok) throw new Error((data.error || "Accès refusé."));
             
-            // Sécurité : Si Zoho renvoie un succès vide ou une erreur métier
-            if (data.s === false) throw new Error(data.message || "Erreur de synchronisation Zoho");
+            if (data.s === false) throw new Error(data.message || "Erreur Zoho");
 
             localStorage.setItem('portal_code', code);
             localStorage.setItem('portal_phone', phone);
@@ -43,14 +48,13 @@
             document.getElementById('portalDash').classList.add('visible');
         } catch (error) { 
             console.error("Login Error:", error);
-            if (e) alert("⚠️ Erreur : " + error.message); 
+            // On affiche l'alerte si c'est manuel OU si on force l'événement
+            if (e || isManual) alert("⚠️ Erreur : " + error.message); 
             
-            // On ne montre l'overlay que si on n'est pas déjà dans le dashboard
             const isDashVisible = document.getElementById('portalDash').classList.contains('visible');
-            if (!e && !isDashVisible) {
+            if (!isDashVisible) {
                 document.getElementById('portalOverlay').classList.remove('hidden');
             }
-            
             if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; } 
         }
     }

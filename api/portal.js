@@ -38,19 +38,19 @@ export default async function handler(req, res) {
         // --- ACTIONS LÉGÈRES (sans chargement complet de l'affaire) ---
         if (action === 'pushAvisV13') {
             const { visitId, evaluation, verdict, commentaire } = data;
-            const upResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
-                method: 'PUT', 
+            const upResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, {
+                method: 'PUT',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     trigger: ["workflow", "approval", "blueprint"],
-                    data: [{ 
-                        id: visitId, 
+                    data: [{
+                        id: visitId,
                         Statut: "Terminée",
-                        Evaluation_visite: String(evaluation || "0"), 
-                        Verdict_visite: verdict || "", 
-                        Commentaire_visite: commentaire || "" 
+                        Evaluation_visite: String(evaluation || "0"),
+                        Verdict_visite: verdict || "",
+                        Commentaire_visite: commentaire || ""
                     }]
-                }) 
+                })
             });
             // Zoho retourne TOUJOURS 200 - il faut lire le corps JSON pour savoir si c'est un succès
             const upData = await upResp.json();
@@ -60,8 +60,8 @@ export default async function handler(req, res) {
                 return res.status(200).json({ s: true });
             } else {
                 // Renvoyer le code d'erreur Zoho exact pour diagnostic
-                return res.status(500).json({ 
-                    error: "ZOHO_UPDATE_FAILED", 
+                return res.status(500).json({
+                    error: "ZOHO_UPDATE_FAILED",
                     zohoCode: zohoCode,
                     details: JSON.stringify(upData?.data?.[0] || upData).substring(0, 300)
                 });
@@ -70,19 +70,21 @@ export default async function handler(req, res) {
 
         if (action === 'requestVisit') {
             const { location, dateTime } = data;
-            const newVisit = { data: [{ 
-                Name: location || "Visite à planifier",
-                Date_heure_de_visite: dateTime ? dateTime + ':00+00:00' : null,
-                Affaire: { id: dealId },
-                Statut: "En attente"
-            }] };
-            const createResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
-                method: 'POST', 
+            const newVisit = {
+                data: [{
+                    Name: location || "Visite à planifier",
+                    Date_heure_de_visite: dateTime ? dateTime + ':00+00:00' : null,
+                    Affaire: { id: dealId },
+                    Statut: "En attente"
+                }]
+            };
+            const createResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, {
+                method: 'POST',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     trigger: ["workflow", "approval", "blueprint"],
                     data: [newVisit.data[0]]
-                }) 
+                })
             });
             const createData = await createResp.json();
             const createStatus = createData?.data?.[0]?.status;
@@ -92,13 +94,13 @@ export default async function handler(req, res) {
 
         if (action === 'cancelVisit') {
             const { visitId, location } = data;
-            const r = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
-                method: 'PUT', 
+            const r = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, {
+                method: 'PUT',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     trigger: ["workflow", "approval", "blueprint"],
                     data: [{ id: visitId, Statut: "Annulé", Note_interne: `Client a annulé la visite pour ${location}` }]
-                }) 
+                })
             });
             const rData = await r.json();
             if (rData?.data?.[0]?.status === 'success') return res.status(200).json({ s: true });
@@ -107,18 +109,18 @@ export default async function handler(req, res) {
 
         if (action === 'rescheduleVisit') {
             const { visitId, location, newDateTime } = data;
-            const r = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, { 
-                method: 'PUT', 
+            const r = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, {
+                method: 'PUT',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     trigger: ["workflow", "approval", "blueprint"],
-                    data: [{ 
-                        id: visitId, 
+                    data: [{
+                        id: visitId,
                         Statut: "En attente",
                         Date_heure_de_visite: newDateTime ? newDateTime + ':00+00:00' : null,
-                        Note_interne: `REPORTÉ PAR LE CLIENT : ${newDateTime} pour ${location}` 
+                        Note_interne: `REPORTÉ PAR LE CLIENT : ${newDateTime} pour ${location}`
                     }]
-                }) 
+                })
             });
             const rData = await r.json();
             if (rData?.data?.[0]?.status === 'success') return res.status(200).json({ s: true });
@@ -127,15 +129,17 @@ export default async function handler(req, res) {
 
         if (action === 'requestMLS') {
             const { mlsNumber } = data;
-            const body = { data: [{ 
-                Name: `Demande doc MLS ${mlsNumber || ""}`,
-                Type_interaction: "Demande de document",
-                Num_ro_MLS: mlsNumber || "",
-                Affaire: { id: dealId },
-                Statut: "Nouveau"
-            }] };
-            const r = await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, { 
-                method: 'POST', 
+            const body = {
+                data: [{
+                    Name: `Demande doc MLS ${mlsNumber || ""}`,
+                    Type_interaction: "Demande de document",
+                    Num_ro_MLS: mlsNumber || "",
+                    Affaire: { id: dealId },
+                    Statut: "Nouveau"
+                }]
+            };
+            const r = await fetch(`${apiDomain}/crm/v2/Interactions_Portail`, {
+                method: 'POST',
                 headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     trigger: ["workflow", "approval", "blueprint"],
@@ -152,32 +156,29 @@ export default async function handler(req, res) {
         const dData = await dResp.json();
         const deal = dData.data[0];
 
-        // --- CHARGEMENT COMPLET DE L'AFFAIRE (pour renderPortal) ---
-
-        // --- ACTIONS SUR LES VISITES ---
+        // --- RÉCUPÉRATION DES VISITES ---
         let visites = [];
-        const trySearch = async (module, crit) => {
-            try {
-                const r = await fetch(`${apiDomain}/crm/v2/${module}/search?criteria=${encodeURIComponent(crit)}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-                const d = await r.json(); return d.data || null;
-            } catch(e) { return null; }
-        };
+        let vData = null;
+        try {
+            // On récupère les records par recherche ET les plus récents du module
+            const [searchData, recentData] = await Promise.all([
+                fetch(`${apiDomain}/crm/v2/Visites_Portail/search?criteria=${encodeURIComponent(`(Affaire:equals:${dealId})`)}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } }).then(r => r.json()).catch(() => ({})),
+                fetch(`${apiDomain}/crm/v2/Visites_Portail?sort_by=Created_Time&sort_order=desc`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } }).then(r => r.json()).catch(() => ({}))
+            ]);
 
-        // Stratégie 1 & 2 & 3: Recherche directe
-        let vData = await trySearch("Visites_Portail", `(Affaire:equals:${dealId})`);
-        if (!vData) vData = await trySearch("Visites_Portail", `(Affaire:equals:'${dealId}')`);
-        if (!vData) vData = await trySearch("Visites_Portail", `(Affaire:equals:${dealId})`);
-
-        // Stratégie 4: Fallback large - On prend les 200 dernières et on filtre en JS
-        if (!vData) {
-            try {
-                const r = await fetch(`${apiDomain}/crm/v2/Visites_Portail?sort_by=Created_Time&sort_order=desc`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
-                const d = await r.json();
-                if (d.data) {
-                    vData = d.data.filter(v => v.Affaire && (v.Affaire.id === dealId || v.Affaire.name === deal.Deal_Name));
-                }
-            } catch(e) {}
-        }
+            let combined = [];
+            if (searchData.data) combined = [...searchData.data];
+            
+            // On ajoute les records récents qui appartiennent à cette affaire mais qui n'auraient pas encore été indexés
+            if (recentData.data) {
+                recentData.data.forEach(v => {
+                    if (v.Affaire && (v.Affaire.id === dealId) && !combined.find(x => x.id === v.id)) {
+                        combined.push(v);
+                    }
+                });
+            }
+            vData = combined.length > 0 ? combined : null;
+        } catch (e) { console.error("Visits Fetch Error:", e); }
 
         if (vData) {
             visites = vData.map(v => ({
@@ -196,7 +197,7 @@ export default async function handler(req, res) {
             try {
                 const r = await fetch(`${apiDomain}/crm/v2/Contacts/${f.id}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
                 const d = await r.json(); return d.data ? d.data[0] : null;
-            } catch(e) { return null; }
+            } catch (e) { return null; }
         };
 
         const [notaire, inspecteur, courtier] = await Promise.all([
@@ -204,16 +205,16 @@ export default async function handler(req, res) {
         ]);
 
         const team = [{ role: "Votre Courtier", name: deal.Owner?.name || "Evan Patruno", icon: "👨‍💼", phone: "514-567-3249", email: "info@evanpatruno.ca", contact: "tel:5145673249" }];
-        const addP = (p, role, icon) => { if(p) team.push({ role, name: p.Full_Name || p.Name, icon, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" }); };
+        const addP = (p, role, icon) => { if (p) team.push({ role, name: p.Full_Name || p.Name, icon, phone: p.Mobile || p.Phone || "À venir", email: p.Email || "À venir", contact: p.Email ? `mailto:${p.Email}` : "#" }); };
         addP(courtier, "Courtier Hypothécaire", "🏦"); addP(inspecteur, "Inspecteur", "🔍"); addP(notaire, "Notaire", "✒️");
 
-        const getDays = (d) => d ? Math.ceil((new Date(d) - new Date().setHours(0,0,0,0)) / 86400000) : null;
+        const getDays = (d) => d ? Math.ceil((new Date(d) - new Date().setHours(0, 0, 0, 0)) / 86400000) : null;
 
         // --- LOGIQUE DE TIMELINE DYNAMIQUE (Basée sur le champ TYPE) ---
         const type = (deal.Type || "").toLowerCase();
         const stage = deal.Stage || "";
         const isSeller = type.includes('vente');
-        
+
         let timeline = [];
         if (isSeller) {
             timeline = [
@@ -273,7 +274,7 @@ export default async function handler(req, res) {
                         };
                     });
             }
-        } catch(e) { console.error("Error fetching partners:", e); }
+        } catch (e) { console.error("Error fetching partners:", e); }
 
         return res.status(200).json({
             id: deal.id,
@@ -304,6 +305,6 @@ export default async function handler(req, res) {
 
     } catch (err) {
         console.error("SERVER_ERROR:", err);
-        return res.status(500).json({ error: "SERVER_ERROR", message: err.message, stack: err.stack });
+        return res.status(200).json({ s: false, error: "SERVER_ERROR", message: err.message });
     }
 }
