@@ -676,6 +676,7 @@
             localStorage.setItem('portal_phone', phone);
             localStorage.setItem('portal_deal_id', data.id);
             renderPortal(data);
+            hapticFeedback('success');
             document.getElementById('portalOverlay').classList.add('hidden');
             document.getElementById('portalDash').classList.add('visible');
         } catch (error) {
@@ -960,7 +961,11 @@
     }
 
     async function requestVisit() {
-        const loc = document.getElementById('inpVisitLoc').value.trim(), dt = document.getElementById('inpVisitDateTime').value, d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code');
+        hapticFeedback('medium');
+        const loc = document.getElementById('inpVisitLoc').value.trim();
+        const dt = document.getElementById('inpVisitDateTime').value;
+        const d = localStorage.getItem('portal_deal_id');
+        const c = localStorage.getItem('portal_code');
         if (!loc || !dt) { alert("Veuillez remplir l'adresse et la date."); return; }
 
         // Validation : Minimum 2h dans le futur
@@ -977,6 +982,7 @@
             const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestVisit', codePortal: c, dealId: d, location: loc, dateTime: getZohoDateTime(dt) }) });
             const result = await res.json();
             if (result.s) {
+                hapticFeedback('success');
                 alert("✅ Demande de visite envoyée ! Evan vous contactera pour confirmer.");
                 document.getElementById('inpVisitLoc').value = '';
                 document.getElementById('inpVisitDateTime').value = '';
@@ -1131,7 +1137,17 @@
     }
 
     async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
+    function hapticFeedback(style = 'light') {
+        if (!window.navigator || !window.navigator.vibrate) return;
+        try {
+            if (style === 'light') window.navigator.vibrate(10);
+            else if (style === 'medium') window.navigator.vibrate(25);
+            else if (style === 'success') window.navigator.vibrate([15, 30, 15]);
+        } catch(e) {}
+    }
+
     function toggleSection(id, forceOpen = false) {
+        hapticFeedback('light');
         const el = document.getElementById(id); if (!el) return;
         if (forceOpen) el.classList.remove('collapsed');
         else el.classList.toggle('collapsed');
