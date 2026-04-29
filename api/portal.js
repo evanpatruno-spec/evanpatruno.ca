@@ -157,7 +157,7 @@ export default async function handler(req, res) {
             const interactionBody = {
                 data: [{
                     Name: `🤝 Réf. Ambassadeur : ${refName}`,
-                    Type_interaction: "Référence Ambassadeur",
+                    Type_de_demande: "Référence Ambassadeur",
                     Nom_reference: refName,
                     Contact_reference: refPhone,
                     Description_reference: refNotes,
@@ -206,7 +206,7 @@ export default async function handler(req, res) {
             const body = {
                 data: [{
                     Name: `📄 Doc Centris : ${mlsNumber || ""}`,
-                    Type_interaction: "Demande de documentation",
+                    Type_de_demande: "Demande de documentation",
                     Num_ro_MLS: mlsNumber || "",
                     Affaire: { id: dealId },
                     Statut: "Nouveau"
