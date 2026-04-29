@@ -174,7 +174,7 @@ export default async function handler(req, res) {
                     Phone: refPhone,
                     Company: "[INDIVIDU]",
                     Origine_du_Contact: "PROGRAMME_AMBASSADEUR",
-                    // Ambassadeur: deal?.Contact_Name?.id ? { id: deal.Contact_Name.id } : null,
+                    Ambassadeur_prospect: deal?.Contact_Name?.id ? { id: deal.Contact_Name.id } : null,
                     Description: `AMBASSADEUR : ${deal?.Contact_Name?.name || "Client"}\n---\nPROJET : ${refNotes}`,
                     Lead_Status: "Nouveau"
                 }]
