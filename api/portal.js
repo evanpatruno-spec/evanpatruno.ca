@@ -114,6 +114,7 @@ export default async function handler(req, res) {
                     trigger: ["workflow", "approval", "blueprint"],
                     data: [{ 
                         id: visitId, 
+                        Statut: "En attente",
                         Date_heure_de_visite: newDateTime ? newDateTime + ':00+00:00' : null,
                         Note_interne: `REPORTÉ PAR LE CLIENT : ${newDateTime} pour ${location}` 
                     }]

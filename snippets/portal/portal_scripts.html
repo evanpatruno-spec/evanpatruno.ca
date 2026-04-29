@@ -145,13 +145,15 @@
         }
 
         const now = Date.now();
-        wrap.innerHTML = visites.map(v => {
+        const activeVisites = visites.filter(v => v.statut !== 'Annulé' && v.statut !== 'Refusée');
+        const archivedVisites = visites.filter(v => v.statut === 'Annulé' || v.statut === 'Refusée');
+
+        let html = activeVisites.map(v => {
             const localFB = JSON.parse(localStorage.getItem(`visit_fb_${portalCode}_${v.id}`) || "{}");
             const verdict = v.verdict || localFB.verdict || "";
             const rating = v.evaluation || localFB.rating || 0;
-            
             const visitTime = v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite.replace(' ', 'T')).getTime() : 0;
-            const isUnlocked = now > (visitTime + 1800000); // 30 min
+            const isUnlocked = now > (visitTime + 1800000); 
             const isCompleted = ["Terminée", "Effectuée"].includes(v.statut);
             const safeLoc = (v.location || 'Lieu').split("'").join("\\'");
 
@@ -198,6 +200,29 @@
                     `}
                 </div>`;
         }).join('');
+
+        if (archivedVisites.length > 0) {
+            html += `
+                <div style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.05); padding-top:20px;">
+                    <div onclick="toggleSection('wrapArchivedVisits')" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; opacity:0.6; padding:10px;">
+                        <span style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:1px;">📁 Visites annulées / refusées (${archivedVisites.length})</span>
+                        <span style="font-size:0.8rem;">▼</span>
+                    </div>
+                    <div id="wrapArchivedVisits" class="collapsed" style="margin-top:15px; display:flex; flex-direction:column; gap:10px;">
+                        ${archivedVisites.map(v => `
+                            <div style="background:rgba(255,255,255,0.02); border-radius:15px; padding:12px; border:1px solid rgba(255,255,255,0.05); display:flex; justify-content:space-between; align-items:center; opacity:0.6;">
+                                <div style="font-size:0.8rem;">
+                                    <div style="font-weight:700; color:#fff;">${formatVisitDate(v.Date_heure_de_visite)}</div>
+                                    <div style="font-size:0.7rem;">${v.location || 'Lieu'}</div>
+                                </div>
+                                <div style="font-size:0.6rem; background:rgba(0,0,0,0.3); padding:4px 8px; border-radius:5px; text-transform:uppercase;">${v.statut}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        wrap.innerHTML = html;
     }
 
     function updateLocalFB(id, key, val) {
