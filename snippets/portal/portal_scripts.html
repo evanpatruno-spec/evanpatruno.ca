@@ -158,8 +158,9 @@
         }
 
         const now = Date.now();
-        const activeVisites = visites.filter(v => v.statut !== 'Annulé' && v.statut !== 'Refusée');
-        const archivedVisites = visites.filter(v => v.statut === 'Annulé' || v.statut === 'Refusée');
+        const archivedStats = ['Annulé', 'Refusée', 'Terminée', 'Effectuée'];
+        const activeVisites = visites.filter(v => !archivedStats.includes(v.statut));
+        const archivedVisites = visites.filter(v => archivedStats.includes(v.statut));
 
         let html = activeVisites.map(v => {
             const localFB = JSON.parse(localStorage.getItem(`visit_fb_${portalCode}_${v.id}`) || "{}");
