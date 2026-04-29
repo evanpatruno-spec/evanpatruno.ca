@@ -17,6 +17,17 @@ try {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="manifest" href="/manifest.json">
     ${styles}
+    <style>
+        /* Styles spécifiques au PWA (Vercel) pour un rendu plein écran */
+        body { margin: 0; padding: 0; background: #0f050d; }
+        .portal-main-wrapper { 
+            margin: 0 !important; 
+            border-radius: 0 !important; 
+            border: none !important; 
+            box-shadow: none !important; 
+            min-height: 100vh !important; 
+        }
+    </style>
 </head>
 <body>
     ${markup}
