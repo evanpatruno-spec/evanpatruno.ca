@@ -7,7 +7,15 @@
     function initPortal() {
         const code = localStorage.getItem('portal_code');
         const phone = localStorage.getItem('portal_phone');
-        if (code && phone) handlePortalLogin();
+        if (code && phone) {
+            handlePortalLogin();
+        } else {
+            const splash = document.getElementById('loadingSplash');
+            if(splash) {
+                splash.style.opacity = '0';
+                setTimeout(() => splash.remove(), 500);
+            }
+        }
 
         // Enregistrement du Service Worker pour le PWA
         if ('serviceWorker' in navigator) {
@@ -59,6 +67,13 @@
                 document.getElementById('portalOverlay').classList.remove('hidden');
             }
             if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
+        } finally {
+            if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
+            const splash = document.getElementById('loadingSplash');
+            if(splash) {
+                splash.style.opacity = '0';
+                setTimeout(() => splash.remove(), 500);
+            }
         }
     }
 
@@ -401,7 +416,7 @@
 
             const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id');
             try {
-                const res = await fetch(`${API_URL}?action=rescheduleVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, visitId: id, location: loc, newDateTime: newDT }) });
+                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'rescheduleVisit', codePortal: c, dealId: d, visitId: id, location: loc, newDateTime: newDT }) });
                 const result = await res.json();
                 if (result.s) {
                     alert("✅ Visite reportée ! Evan a été notifié.");
