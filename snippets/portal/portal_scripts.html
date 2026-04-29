@@ -294,7 +294,7 @@
             const result = await res.json();
             if (result.s) {
                 alert("✅ Visite annulée avec succès.");
-                location.reload(); 
+                handlePortalLogin(); 
             } else {
                 alert("⚠️ Erreur : " + (result.error || "Inconnue") + "\n" + (result.message || ""));
                 if (btn) { btn.innerText = "🚫 Annuler"; btn.disabled = false; }
@@ -334,7 +334,7 @@
                 const result = await res.json();
                 if (result.s) {
                     alert("✅ Visite reportée ! Evan a été notifié.");
-                    location.reload();
+                    handlePortalLogin();
                 } else {
                     alert("⚠️ Erreur : " + (result.error || "Inconnue") + "\n" + (result.message || ""));
                 }
