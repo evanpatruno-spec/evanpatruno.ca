@@ -172,10 +172,11 @@ export default async function handler(req, res) {
                 data: [{
                     Last_Name: refName,
                     Phone: refPhone,
+                    Company: "[INDIVIDU]",
                     Origine_du_Contact: "PROGRAMME_AMBASSADEUR",
                     Ambassadeur: deal?.Contact_Name?.id ? { id: deal.Contact_Name.id } : null,
                     Description: `RÉFÉRENCE DE : ${deal?.Contact_Name?.name || "Client Portail"}\nPROJET : ${refNotes}`,
-                    Statut_du_prospect: "Nouveau"
+                    Lead_Status: "Nouveau"
                 }]
             };
 
@@ -192,8 +193,12 @@ export default async function handler(req, res) {
                 })
             ]);
 
-            if (rInt.ok) return res.status(200).json({ s: true });
-            return res.status(500).json({ error: "REFERRAL_FAILED" });
+            if (rInt.ok && rLead.ok) return res.status(200).json({ s: true });
+            
+            // Si le lead échoue, on regarde pourquoi
+            const leadErr = await rLead.json();
+            console.error("Lead Fail:", leadErr);
+            return res.status(200).json({ s: true, warning: "INTERACTION_OK_LEAD_FAIL", details: leadErr });
         }
 
         if (action === 'requestMLS') {
