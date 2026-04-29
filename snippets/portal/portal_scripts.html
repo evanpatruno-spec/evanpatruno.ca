@@ -98,6 +98,12 @@
         setT('dashNextVisit', nextVisit ? formatVisitDate(nextVisit.Date_heure_de_visite) : "Aucun planifié");
 
         const safe = (fn) => { try { fn(); } catch (e) { console.warn(e); } };
+        
+        // Push notification banner
+        if ("Notification" in window && Notification.permission === 'default') {
+            const pushB = document.getElementById('pushBanner');
+            if(pushB) pushB.style.display = 'flex';
+        }
         safe(() => renderMilestones(data.milestones || {}));
         safe(() => renderTimeline(data.timeline || []));
         safe(() => renderVisites(data.visites || [], data.code));
@@ -613,4 +619,90 @@
         setupInstallBtn();
         checkAutoInstall();
     }
+    // ==========================================
+    // NOTIFICATIONS PUSH FIREBASE
+    // ==========================================
+    async function requestNotificationPermission() {
+        console.log("--- START PUSH NOTIFICATIONS ---");
+        
+        if (!("Notification" in window)) {
+            alert("❌ Notifications non supportées par ce navigateur."); return;
+        }
+        
+        try {
+            console.log("1. Requesting Permission...");
+            const permission = await Notification.requestPermission();
+            console.log("Result: " + permission);
+            
+            if (permission !== 'granted') {
+                alert("⚠️ Permission refusée ou bloquée par le navigateur."); return;
+            }
+
+            console.log("2. Loading Firebase SDK...");
+            const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js");
+            const { getMessaging, getToken } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js");
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyCPtTKjhtrNoRdED5xp-HuSS11PW8J1D1k",
+                authDomain: "evanpatruno-pwa.firebaseapp.com",
+                projectId: "evanpatruno-pwa",
+                storageBucket: "evanpatruno-pwa.firebasestorage.app",
+                messagingSenderId: "873208257496",
+                appId: "1:873208257496:web:7cf7ff8eb863bc7029b0ad"
+            };
+
+            const app = initializeApp(firebaseConfig);
+            const messaging = getMessaging(app);
+            const VAPID_KEY = "BP01i_pScDeVgK7O4auQNpcOj_HevD5Psx2fJzHiJd8FHbW6aR2MiHZfEXQXjlsEQDeEmLjoV-4AEu5CKOywFs0";
+
+            // Nettoyage des vieux SW Firebase (optionnel mais plus sûr)
+            console.log("3. Cleanup & Register SW...");
+            const regs = await navigator.serviceWorker.getRegistrations();
+            for (let r of regs) { 
+                if (r.active && r.active.scriptURL.includes('firebase-messaging-sw.js')) {
+                    await r.unregister(); 
+                }
+            }
+
+            const reg = await navigator.serviceWorker.register('/firebase-messaging-sw.js');
+            
+            const activeReg = await Promise.race([
+                navigator.serviceWorker.ready,
+                new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout SW Ready")), 5000))
+            ]);
+            
+            console.log("4. Fetching Token...");
+            const token = await getToken(messaging, {
+                vapidKey: VAPID_KEY,
+                serviceWorkerRegistration: activeReg
+            });
+
+            if (token) {
+                console.log("5. Token retrieved: " + token.substring(0,8) + "...");
+                const code = localStorage.getItem('portal_code') || "";
+                const phone = localStorage.getItem('portal_phone') || "";
+                
+                console.log("6. Syncing with Zoho...");
+                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'update_push_token', token, codePortal: code, phone })
+                });
+                
+                const data = await res.json();
+                if (data.s) {
+                    if (typeof showPwaToast === 'function') showPwaToast("🔔 Notifications activées avec succès !");
+                    const pushB = document.getElementById('pushBanner');
+                    if (pushB) pushB.style.display = 'none';
+                } else {
+                    alert("Erreur lors de la synchronisation avec le dossier.");
+                }
+            }
+        } catch (err) {
+            console.error("Push Error: ", err);
+            alert("Erreur lors de l'activation des notifications: " + err.message);
+        }
+    }
+    window.requestNotificationPermission = requestNotificationPermission;
+
 </script>

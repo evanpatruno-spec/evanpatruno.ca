@@ -50,6 +50,32 @@ export default async function handler(req, res) {
         if (!dealId) return res.status(404).json({ error: "DOSSIER_NON_TROUVE" });
 
         // --- ACTIONS LÉGÈRES (sans chargement complet de l'affaire) ---
+        if (action === 'update_push_token') {
+            const { token } = data;
+            if (!token) return res.status(400).json({ error: "No token provided" });
+            
+            const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+            const dData = await dResp.json();
+            if (!dData.data || !dData.data[0].Contact_Name) return res.status(400).json({ error: "Contact not linked to Deal" });
+            
+            const contactId = dData.data[0].Contact_Name.id;
+            
+            const upResp = await fetch(`${apiDomain}/crm/v2/Contacts`, {
+                method: 'PUT',
+                headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    trigger: ["workflow", "approval", "blueprint"],
+                    data: [{
+                        "id": contactId,
+                        "FCM_Token": token
+                    }]
+                })
+            });
+            const upData = await upResp.json();
+            return res.status(200).json({ s: true, upData });
+        }
+
+
         if (action === 'pushAvisV13') {
             const { visitId, evaluation, verdict, commentaire } = data;
             const upResp = await fetch(`${apiDomain}/crm/v2/Visites_Portail`, {

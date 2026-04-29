@@ -36,6 +36,12 @@
             </div>
         </header>
 
+        <!-- PUSH NOTIFICATION BANNER -->
+        <div id="pushBanner" style="display:none; background: rgba(135, 50, 118, 0.2); border: 1px solid rgba(135, 50, 118, 0.5); padding: 15px; border-radius: 15px; margin-bottom: 20px; align-items: center; justify-content: space-between;">
+            <div style="font-size: 0.85rem; color: #fff;">🔔 Recevez les mises à jour en direct sur ce téléphone.</div>
+            <button onclick="requestNotificationPermission()" class="portal-btn-primary" style="padding: 10px 15px; font-size: 0.75rem;">Activer</button>
+        </div>
+
         <!-- SUMMARY DASHBOARD -->
         <div class="summary-grid">
             <div class="summary-card" onclick="toggleSection('secPrequal')">
