@@ -304,6 +304,6 @@ export default async function handler(req, res) {
 
     } catch (err) {
         console.error("SERVER_ERROR:", err);
-        return res.status(200).json({ s: false, error: "SERVER_ERROR", message: err.message });
+        return res.status(500).json({ error: "SERVER_ERROR", message: err.message, stack: err.stack });
     }
 }
