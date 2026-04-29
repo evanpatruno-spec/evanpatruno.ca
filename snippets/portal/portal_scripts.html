@@ -575,9 +575,29 @@
         const el = document.getElementById(id); if (!el) return;
         if (forceOpen) el.classList.remove('collapsed');
         else el.classList.toggle('collapsed');
+
+        updateMenuItems();
+
         if (forceOpen || !el.classList.contains('collapsed')) {
             setTimeout(() => { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
         }
+    }
+
+    function updateMenuItems() {
+        const sections = ['secCockpit', 'secPrequal', 'secTimeline', 'secConciergeMLS', 'secVisites', 'secTeam', 'secAmbassador', 'secPartners'];
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            const item = document.querySelector(`.quick-menu-item[data-section="${id}"]`);
+            if (el && item) {
+                const isVisible = !el.classList.contains('collapsed');
+                if (isVisible) item.classList.add('active');
+                else item.classList.remove('active');
+            }
+        });
+        // Si aucune section n'est ouverte (sauf cockpit), on allume le cockpit
+        const anyOpen = sections.filter(s => s !== 'secCockpit').some(s => !document.getElementById(s).classList.contains('collapsed'));
+        const cockpitItem = document.querySelector('.quick-menu-item[data-section="secCockpit"]');
+        if (!anyOpen && cockpitItem) cockpitItem.classList.add('active');
     }
 
     // --- GESTION PWA AVANCÉE ---
