@@ -36,7 +36,7 @@ jobs:
         run: npm install
           
       - name: Install Puppeteer Browser
-        run: npx puppeteer browsers install chrome
+        run: npx -y @puppeteer/browsers install chrome
           
       - name: Generate Report HTML
         env:
