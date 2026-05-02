@@ -35,15 +35,14 @@ jobs:
       - name: Install Node Dependencies
         run: npm install
           
-      - name: Install Puppeteer Browser
-        run: npx -y @puppeteer/browsers install chrome
-          
       - name: Generate Report HTML
         env:
           JSONBIN_API_KEY: ${{ secrets.JSONBIN_API_KEY }}
         run: python report_generator.py
 
       - name: Convert HTML to PDF
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
         run: node puppeteer_convert.js
 
       - name: Commit and Push Report
