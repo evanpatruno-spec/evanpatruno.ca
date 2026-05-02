@@ -1,18 +1,34 @@
 {
   "news": [
     {
-      "title": "Banque du Canada | Le taux directeur demeure à 2,25 %",
-      "link": "https://www.lapresse.ca/affaires/2026-04-29/banque-du-canada/le-taux-directeur-demeure-a-2-25.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "La mortalité augmente chez les milléniaux… sauf au Québec",
+      "link": "https://www.lapresse.ca/affaires/chroniques/2026-05-02/la-mortalite-augmente-chez-les-milleniaux-sauf-au-quebec.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Comme prévu, la Banque du Canada maintient son taux directeur à 2,25 %, en attendant de voir si la flambée du prix de l’énergie aura un effet durable sur l’accélération de l’inflation.",
+      "description": "Je m’apprêtais à écrire une chronique malheureuse sur la surmortalité chez nos jeunes adultes.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25%",
-      "link": "https://www.ledevoir.com/economie/975824/taux-directeur-banque-canada-decision-avril",
+      "title": "L’ancien propriétaire de Bestar derrière l’offre de rachat",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-01/l-ancien-proprietaire-de-bestar-derriere-l-offre-de-rachat.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Le groupe d’acheteurs qui veut relancer les activités du fabricant de meubles Bestar implique l’ancien propriétaire de l’usine de Lac-Mégantic, Mario Aubé, ainsi son fils, a confirmé ce dernier à La Presse.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le quart des exportations aux États-Unis est désormais surtaxé",
+      "link": "https://www.ledevoir.com/economie/976910/quart-exportations-etats-unis-est-desormais-surtaxe",
       "source": "Le Devoir",
-      "description": "La banque centrale fera aussi le point ce matin sur l’état de l’économie canadienne à l’heure de la guerre en Iran.",
+      "description": "Un décret du président Trump désastreux pour les exportations québécoises fait bondir le taux tarifaire effectif moyen.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’élimination des offres à l’aveugle pourrait rater sa cible, préviennent des experts",
+      "link": "https://www.ledevoir.com/economie/976562/elimination-offres-aveugle-pourrait-rater-cible-previennent-experts",
+      "source": "Le Devoir",
+      "description": "La mesure risque de ne pas freiner la hausse des prix des propriétés, mais pourrait améliorer la transparence.",
       "cities": [],
       "category": "general"
     },
@@ -25,18 +41,18 @@
       "category": "general"
     },
     {
-      "title": "QS ramène l’idée d’éliminer les offres à l’aveugle sur les propriétés - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRjRkQnVtTGRERkl2eERvVDRPa2dzTE16WFJKNVdfZzR4aTNUT2tZRGk4YzBleVBzalBqenZCM21LZDMxM25LM0lES2Q4MGhQLVp4UUsyUFRqbElxQ2U0V29GV3dRc3duTDZVYzhiZTVNTnRFMHdnQ0tyRHkxR2I3RTNSSENBV19tUDRXd1BVNFF5eHR4RlllSzRCSmFJT2M?oc=5",
+      "title": "L’IA à géométrie variable s’installe dans le marketing immobilier - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPYk1vNEpBX1N4elJBUGRjRDh4NnQ2R2h5azNfWTQyVXlHMG1KdkxZdXMwekhJelVYNkxsT1pZbHBWRmpjaEl4NHYzcHB0clI1YTBUUGlKRGs1cDExbHNhVEhia3JXQW9fM2ZjMUZqOHpuT1VIampUdEU0UXZMdWZMUl9JOWktWThxcUlheUJqV282WmNteDd1enpFSFJ6WXVWS1YwRjVTUnZybmlEVjA4T3daczluZVpjS3pfRkhBX3UweFU1ZHRJVWxJbWRSNW9TZWhBSjdmYUF3OEdr?oc=5",
       "source": "news.google.com",
-      "description": "QS ramène l’idée d’éliminer les offres à l’aveugle sur les propriétés  Le Devoir",
+      "description": "L’IA à géométrie variable s’installe dans le marketing immobilier  Les Affaires",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La maison la plus chère au Québec actuellement a une « vibe » italienne et c'est juste WOW - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMHBETVdLZ0JzbDNIWTJOZnBKMjVBOUJpX01pQVprczRIR1RvWmdtS04yMVZ0TXFUQW9JUU01RXNELXVsX3pNZ3k4QXloNDhUZW9FRV81c01ZaDlBTGpaS3VOdlFjaTZ0U3lRR3NRa2s0N0ppcmZYWGNvUWcwUEg2NlFUUXpjT3AyTHk0bQ?oc=5",
+      "title": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQblBjNDBOUjhQcndjU2tzZjg3ZXpNRUZBUWwxS2pGeTVXbThnSmxwV0R4N2c5U2c1Ylh0UHdkQlIyLU5KVGdJeDc3QnRWcFZEUHYydDJHVnFyc25VOURVT2RUbFY0UVJwRko2S0JmUWF3eWJiU24wWXNfb0N4c25Jby1aSE91eUNXdHBWclFDNnFXbXRzRnl4QzRHaWdTRVJrVEx5ODBGRTBRY0FjTmlHeUd6YXBLQTBoSk4xUkFkX3k?oc=5",
       "source": "news.google.com",
-      "description": "La maison la plus chère au Québec actuellement a une « vibe » italienne et c'est juste WOW  Narcity",
+      "description": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -51,144 +67,34 @@
       "category": "local"
     },
     {
-      "title": "Grand Montréal | Un marché locatif « à deux vitesses » - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaURNSUxoU0hLX2kxbGNWOWYtU25TRFZsSXZid09tTGFWMXpjQ3VtWjFPdFRaakJJMDExakttY2FwNWdnQ0lIM1lWbE5Fd1RyanItQ21SVTNtYzBucUQzc0hrcUgybGFqSXhBblU1S3liVmFmamFrS3VIS3JGUjFOWkRfd21FMGlUQlNpYWRDZXVzVFB2QXFuM3NPbHlmTFlmTWJ3M0FkaUljaVk0cUphanIteGU?oc=5",
+      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
       "source": "news.google.com",
-      "description": "Grand Montréal | Un marché locatif « à deux vitesses »  La Presse",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Un projet de plus de 300 logements dans le quartier Des Châtels - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQSzlVTS1TVnhnVDJQTzZoLUVmcE1UUkVid01zLU15V25NLUtzU2FrX1F2dVQ4aE5qdm1jT1JLOFB3SUNWNUZ3Z2hXYjlzQ3ZWZ3p5djhBdk5INVpBYUptR0ZtUEItZUM2bUVwVVNoc3NzUWVlY01KbFRlM3U2WVV2b01fZUVCbFYzR3NxeGF5Mk1NaUg0OG1KeVBZQlhwREh1dE9QT1Jtc0xqVkR0dTB3Uy1WcWRVM00tU0V0UUZUX19pS2lFWVBDaXNHdkt5SGNjc1NCaGc5ZVRzdEdRelQ4ZUVJZWt5alh0N0NJeGYwMVVDYjJ4cmRYSm5aaU1WQQ?oc=5",
-      "source": "news.google.com",
-      "description": "Un projet de plus de 300 logements dans le quartier Des Châtels  Le Soleil",
+      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVDFLal92Mm45VVFRVG9oN0lmdktrNVhpQ3lIaVBfOWtIVm1Ka0lGNVpxS3JsV3liYk1FcGNHRXhnVkRYbFAyc3VaVlZ5cDF0dG42Ymc1aEZIQnVnaFV5WXVFSGpxc2ZkdWFHS0FCMUZqU0Y0MzlGM0pMR05oQlE5T2xYS1FEamxGZzJqY1FUdEQ2RGZyZkU0RXRwb2ozZ28tdWlEXzVBVW5mS241SFVNUy00YVRVU21yTnIzaWFaNUt6STA?oc=5",
+      "title": "Financement fédéral du transport collectif : « ça évolue relativement bien », dit Boulay - MSN",
+      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOWDV3RTk1bklVTHRlNEJ3OFJWNkFNUXhTMTZqUWlYVi1jeWZsVlhacGM2ZFBDc09qZ0IwR28xaXVFdGJTelZHeDI4djZ6RmZWazRrOS1zWDRLT2ZqWVNzS25MZ1hqRERuTDU4YlFreG90dFhZbFdJMG52X25SbjJ5QlJPbURnbGJ6UVo0Ny0tTm1waUJ6M3N1Z0NldDliaThEMFFYYWxPT25pX09FdXg5WHFRRFhhVTlwLUhOUkRNYTU3T1FOQVIwMUpkR0JQY2sydzVPZUw2c29kQXIxVDJHWkFhMEJCVTVHZWpOOUJCTHQ1OVVWcVE?oc=5",
       "source": "news.google.com",
-      "description": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Une taxe qui ne passe pas chez les promoteurs immobiliers de Rimouski - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOSkljejd2RE1FWjhlRFBjamdhaWlZejJ0bV8yZnBUb3RPZXNrMlNFRmVaaFdKc0dfWVljMll4UHM3SUxJdnFGRk1rLW0xZFRyN1Q3ZGRQYUk3SGk5Y3VmbVNjbXVYbkN2ZXV1UjllMDNPXzlwRmhMRDkyNWs2TUhHOEc2YUllY3FmVnI0em85VDI0RHhrVlRUYnA5d2gxSnB5Rk56SjY4clo3aklRZlhwWHBzejhBQXphQnBnQlk3QWNaa2dxNEhPRThma0xQWW5jWmZlbEVWdkJ0bnFTa0YzaEYtSWY4TlVGNl9SLXNJalg4cGhkUnVMelBMdXlUQjVqdk0yZGZJbkg?oc=5",
-      "source": "news.google.com",
-      "description": "Une taxe qui ne passe pas chez les promoteurs immobiliers de Rimouski  Le Soleil",
+      "description": "Financement fédéral du transport collectif : « ça évolue relativement bien », dit Boulay  MSN",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Faut-il révéler le montant des offres d'achat sur les maisons? - 106.9 Mauricie",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNV0h5cnZ0T2hha09MeFJXeElWQzdoSGRIazFiZzhReDRfc3ZOdXFiTWdYY2ppclRVSzIwbnh0cmRINC1PQVNod0xDdUQzaDc5dkI2VWVUMHd5WXFHX0ZzS2VZZDJIcmphQk0zT3BlcG9zTzNDVnNtd1Z2NXZob2N3STN6bGRldTg3WlZybzVnMEQ1bktnVks4XzZTNVk?oc=5",
+      "title": "Trump attaque Comey en justice: «C’est le même vieux comportement d’un développeur immobilier un peu minable», dit un politologue - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNekNDWHhSYWhDMTc1WHhaYlRwR1g0cDVVcHhnVHRvSWt6RTRVRlkzTV9BZEVJdGtLMlhqaEZyVHpCem04cHUyRDBFQUhPc2l1QmFBd19QM0JFVExaWjgtd0trTk0zSjBNWnk1enQ3VVlxN29yeEtUcnZpd3FRU1gxbEQxWl9CM2pIWTZ4dk1UbjFFcWJCbWU4dWtHVkhxZTJaLTN2ZDV4YlZJdDdkTnI1b0U1Q2RkRHMxbW5jNDh6aXh1MUFlTTdZOGhaYjdnTWtwWXFvNW80TnVGZ3phRmhKbkVxRUprWkRTaTJKdjJCZ1h1eFFXSENramh3?oc=5",
       "source": "news.google.com",
-      "description": "Faut-il révéler le montant des offres d'achat sur les maisons?  106.9 Mauricie",
+      "description": "Trump attaque Comey en justice: «C’est le même vieux comportement d’un développeur immobilier un peu minable», dit un politologue  Journal de Québec",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Mesures à courte vue de Christine Fréchette pour les premiers acheteurs - Québec solidaire propose des solutions pour freiner la surchauffe immobilière - Info Mauricie",
-      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOUWtuOGNqT1Q0WUYyWnFGR2UwVGtHQXYyaVppd2xaTktkV1YxRkxfbEY1dUFrSkx1UlJ1ODZHVE5yalNhQ1o0VlNQRTVJVnhya1pUbnRWTlhCMzg3RmlKd2M4NndTVWxwdzlNUkxIWW1wUktNNGhTeDVTOWEyTlJKMXRkLVZ0cEV4TEdubHFhQVpIdTU3aVA2aWpWNHRWX1l2dGFSMmNHVldoMDgtQ3FRbjVoNW44cnNyWHFiVTF3QnhTSFN2RUd2UlRaWVpHdV9mM3ROT0h1NXY1bU5SaHdQcHhycUhlV0U5SmwxRmZieVRFQ2VkM2N0ZzNLWTRjTEtaUXV1Wg?oc=5",
+      "title": "Rita Baga vend sa maison de Saint-Bruno à 865 000 $ et voici toutes les photos - Vedette Québec",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSEU3dkJsdWgzSEdWTTluYnhHSTB1bGdmSG5YSEpnWk1ObENWTTdFMHNPdmJHZTRQWUJmeENxb2pNRUl1Nml6VmtRSVZpc0JRZ0RyRVNVU2MzY2NKektjWWFjdU1WeVNyYy11YTl6dzk0YzVwNjNaZzB4MjhfX3RSVDQ0Q0M4X2hmcG41REM2cw?oc=5",
       "source": "news.google.com",
-      "description": "Mesures à courte vue de Christine Fréchette pour les premiers acheteurs - Québec solidaire propose des solutions pour freiner la surchauffe immobilière  Info Mauricie",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada devrait maintenir son taux directeur à 2,25 % - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPeHp4VTJPSGw5dVRXdWZDRHR3dmUzTE1XaHdvdjFnWXdWWjJSOUIydXBVS3BOWU9CQW8zeEx2UkotNmNVcHZYM1E0U2EyNE9wU292MVN6Vm5PUS16NHlORTFiSEVFRjg4bUxBd3RCUVFTZ3Y1NVZfQktFUlJ1Rm9vMTVZbHBnZGR0ZGtv?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada devrait maintenir son taux directeur à 2,25 %  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada | Le taux directeur demeure à 2,25 % - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRjBReXVlUGxMMkppUjdaaTVIUllPd2hZTFNkVXU4QVVXd2gtczZVM0dfeGk2SG5VUmVaRW41R3RPMm9IRkVGbTFRUExMcFBrSFlJWU1UT0lNUmxMMXBPSXNKZjYxMUVDbHYtOE9XQldZZ2drdEtqeWpzSUptMGthYl9zazBrLTRSUzlYNVRXUWNRRVY0bU1pMjVVR3dRZw?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada | Le taux directeur demeure à 2,25 %  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintiendra probablement son taux directeur à 2,25% - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVHFkS1FFclBQWFJwSEZkTkxBNHR1Yi1sTG1scWM5REg3VkRMWXpCU3lTRUk3WlNGRnZxeGUtTmJnX293Vk5mU0p4MjFYTUxRN1NrRzFUa20xUnV0TV96LVdQY2VsSmhfQjQ5RUp4WXlGSjlQZHRwZUlNOTBhU1JkcF9oQU1YMXVnQ0VEY0FGTjd2TkxqY3FCVlJIRHJ5RWc0ZkdWN3BxMTJaSUdG?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintiendra probablement son taux directeur à 2,25%  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOOUM0dndGeXBjVVZSOHg1R3hPM2FpdUI0ZW5QVlhWUERfNnM2b2RUSkotVk5adWpaaFB2dkRyOXFQclNkemRCeWx1MnM3TXhzNDlvaDlDSDdYb285WDU2S0ozRVdzanNWakxFV0xUS0p5cE0wTFlTeEZjNkVrMXBIaThRUzlTeHpLMXZ2Zw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  Le Devoir",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Nicolas Vincent accède au poste de sous-gouverneur de la Banque du Canada - HEC Montréal",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQS3ZaaGZVaU1DZGY0aHFYQS04MWp2NEdjd3pxYUxndVZ1eTlnc2g2RnluMTlLN3pCNGY3TFJZNEZnc0EwYlFKWDliWUhBYnNQRkd5Y2xZY0x6SXRiNXV1ZDRPYmpzQWhYemZFODVfX05pN2V6bWxzV0FOODhwUmtyMGppTzVKZHhGNVZLdzM1QnVqU0UxU2pmR1N2dEdnV2Rzc0VnWA?oc=5",
-      "source": "news.google.com",
-      "description": "Nicolas Vincent accède au poste de sous-gouverneur de la Banque du Canada  HEC Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - La Voix de l'Est",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMjNQc1o3dTRwY09tTUtnaGJlT0JoYXdDbExqN3kyQXhhYW9hU2UwZnAwR3pQeE9kaERqa2hoaE5Ua2RYN0I3aWlieGJvMEVFQVFWOHpreGJicUU4NjFpVDlBaVZ0MHBRUWZqN1MzS1NiOWhFMm5kOHkwTElDSXlIV2k3N1BWYklkd0R4cnc2d0ZmbTkzT25zNzV4TkhuOWFtMVZUUHhOZEN2S2RSbElwYXhISHdZeERyYy1oaXI3MkVPdldObUxHbUp3?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  La Voix de l'Est",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient le taux directeur à 2,25% - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNTBnckNKYnVsejUyMDd5ckFwRVpVZVVkZU9HU25UWU80UktvdC1kSjhhcDB1U2dDQWluNnJUMUpWdUpJbEVuT0g3SEQ1OW5tb25GcTFITk16Ym5qNk1SYmduQmszZ05BbXVwR0czNW14elR3TnAxM2F0dkpCSDNZcDRVVGJWMEVvV3laSjFsWEtaMk54UHd1MUZLUFlkRjA?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient le taux directeur à 2,25%  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada devrait maintenir ses taux malgré le choc pétrolier - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPYTFGWFlvc1ZOelRja2xRNzF6bzRvSWZEM0JKWUZseHB1VGt3WkZaVHdHXzBsdmU4ZEpQbWc1aU0xcjh0bnRRcDBmWG4yS21hMG1fN2VZTGNoa2FzR3VlTlhPdU84VUZ6cXV0UGkxVGRaVVdMNm5aX2kyLUZyckFrWFd6bmpDMDlOb2Q4czdmVFljSjFNSlFaYkhVNVhOSFFhQzk1UHhRMFVUQmpxRlYxYmQ2NGNHUEU0emo3MENncw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada devrait maintenir ses taux malgré le choc pétrolier  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Maintien du taux directeur à 2,25 %/ - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxONVVNTXlIa0lON3dIUDl4U25NMlg4ZzB5ajRzem93ek1oZGZ5bUI4U1RmVllyd2RGaW5ta29fNXphLU16UjJjV3RvV3E0LVRFOXZpb0JqSDhja3BlNV9rcjFkOXhUTlh3eTdDQm5MTU1DX3NpVlFHSDNsbVJ3QUo4Y2pkVGRHU3hkQ3c?oc=5",
-      "source": "news.google.com",
-      "description": "Maintien du taux directeur à 2,25 %/  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada devrait maintenir le taux directeur - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxONjBjaFlQTHNkUUZCRlZxTEVLb3dzTEticFYxVy1LSjQtbk9nQWF4SG9oSWY5aFFQcndhaUZ0S3ljS0tTT044ejBIbi1NZXN5a0lKY0FvRll1RkMybzJBWGV1T2xVMVpvWVp2LUZqei1jNFNkbDJqc2NwOExfOUE2bmdZTUVCZw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada devrait maintenir le taux directeur  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le PDG de la Banque Nationale invite la Banque du Canada à la prudence - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTzhjaVJjSndSUlRsMWhHeTVCN09BU2FwVGVoM1kyTk1lUnJIR3V4TnVUUHlDMk5VYjJSb05PZXlrRmFfZThodnpTSkpOS1huMXdsdE1XeGdGV2c3TkdxWkdJcnRRc3hrcUl1Y1RqRUxoVTNLZ1pBRWVQc01aMGFXTFRVcVdQYUtfOW1Ed1Q1ZGJOSHlVbjlHcU8wZ20wVDZPM0hkZmxDeU5XMkgyUDZlTFQ1d3dmQmgwdzg3dzk2U2hFaDBrbkE?oc=5",
-      "source": "news.google.com",
-      "description": "Le PDG de la Banque Nationale invite la Banque du Canada à la prudence  La Presse",
+      "description": "Rita Baga vend sa maison de Saint-Bruno à 865 000 $ et voici toutes les photos  Vedette Québec",
       "cities": [],
       "category": "general"
     },
@@ -201,82 +107,60 @@
       "category": "general"
     },
     {
-      "title": "Banque du Canada: «une baisse serait bienvenue, mais…» - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcXhQVlQ1dnM4UTFTZGVWbFE2dGU2d1UtcXo5SC12aGlNVm1udlRyT3NMVXB3YWIzd2ZueTVBWTRoa0RPM2N6NVdfcS1Yd01lU1pwaG9MbWtxTlJuaTNJNDgzVmd4eXZqOHR1bGk3UDM1WU84SHVSd2RJVUhoYkE4YUF3MmplNFVsWnNNNUtvXzQ5ZXl2VHFzejNR?oc=5",
+      "title": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaXFSRURHeUgtbnVYVVlORF9PdEdVS2NXTTF1Z25kQ3VodWRGSUxZQ0pTVWZXd1F4UGk4TWFqcGIySEU1R0h6elU3SjNrYlkwSWowQUdpM0VyTnR0SVdCelBDNGNxUFB5encwdDVLQWZBamtGSFBFYnVHOVROekRLNFJPa2UtRVZ1a1l6a01TWTFvY25H?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada: «une baisse serait bienvenue, mais…»  Les Affaires",
+      "description": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026  nesto.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada devrait maintenir son taux directeur à 2,25 % - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOazZ1Tm8zZ25JbjdIRWdWSE5MMmlhTmVDTlhmbm9nOURaWXBtQ0w1UFUzcVg1UnVfTkx1NXZ1Y1d0OUNBN1RBaVVuU2tPenRKaUhJbEdMRmI4d0FRNkk3YVNzMFpYdUZxU2lIRnQ4NW9feUhBTUdSNVV6VmQ5RWt1SDBlaHE5WklhU3pLXzNabHZzVmEw?oc=5",
+      "title": "La Banque du Canada devrait maintenir le taux directeur - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxONjBjaFlQTHNkUUZCRlZxTEVLb3dzTEticFYxVy1LSjQtbk9nQWF4SG9oSWY5aFFQcndhaUZ0S3ljS0tTT044ejBIbi1NZXN5a0lKY0FvRll1RkMybzJBWGV1T2xVMVpvWVp2LUZqei1jNFNkbDJqc2NwOExfOUE2bmdZTUVCZw?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada devrait maintenir son taux directeur à 2,25 %  Radio-Canada",
+      "description": "La Banque du Canada devrait maintenir le taux directeur  Radio-Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "À quoi peut-on s’attendre de la réunion d’avril de la Banque du Canada? - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVURwVnhlZG9Jd0U5MUEtdnYtV2pKeVh1TFRKU0hjOHRiNUtHM3ctLTFwWHNkNmJueFF4RkpXd09BT0lIQ3hxN2N1c0RQZVU1dXZxU1dNcy1NYmNaTFdkWk56TGwzNU12RVFoSzRZZnI1QnpqeXdJUERPeFdaSlVueENaenJUN1dNRk1RX0F2NjdTX2VWd0tXdnBBQjQ5SzFLclNhQW8wWEE?oc=5",
+      "title": "La Banque du Canada est prête à bouger les taux | La Presse - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWlRSQnFfN3dFM0pIVTE0T19sbV81V2U3Mzc0c196aXhRbWdocjhKM1FTaS1faUtzRWFEakFmV252b2xYdlo3M2wwUm11X285SUxvbTJ2TjhPUjlyLVBlMU9WWFhqc1pSdl9fVjRpQkZvWHZ3R3ZHSUZ6MW9Zd0QtVXRtaVlHY3pIR0d3SjB3RG0xdXNrcVNfVVFKMkhpZHljQmNWOTFPSQ?oc=5",
       "source": "news.google.com",
-      "description": "À quoi peut-on s’attendre de la réunion d’avril de la Banque du Canada?  Les Affaires",
+      "description": "La Banque du Canada est prête à bouger les taux | La Presse  La Presse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada devrait annoncer mercredi le maintien du taux directeur à 2,25 % - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOb3I2dnBBSlpwTUhBSV9GbTFzaC1yX0FDZ0NBdG1ENjNXOG9YaUJTYUd5cFpIaW5fcFRPZWlLNEVxUlV2MlhtS2hJdEVqQUlmQl9yNVdwRUVqcnU0TEtvU3BWX1p6ZjlGcGhaM3FOOF9tUXp3ZTN3cTlIT3l4MFUxVERkNnVGMzVFWGc?oc=5",
+      "title": "Des «hausses consécutives» des taux d’intérêt pourraient être nécessaires, prévient la Banque du Canada - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUy1hT0RBbS0tWUd1U3h5M3o5NjZzZEo1MHUyMmhoNGFvYzE4blRWb2tkb1hLY2hlVUxTTmczUmE0T09ZUWhIcFVvLUl0SU9fOTcwSVVhU2pCbGFWU2UyZFNaTXUwWE5ieHNkN1VlTEVCU2FBU1lWZTN4NmxONlVHVUZ1ek9vX0hpT19rYVh0RzBJYUt2NWxuMDJyTXZzN1h0LXBfWEx3enRlUklaSV9MSkR1eE1qdEdycUZxZQ?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada devrait annoncer mercredi le maintien du taux directeur à 2,25 %  Radio-Canada",
+      "description": "Des «hausses consécutives» des taux d’intérêt pourraient être nécessaires, prévient la Banque du Canada  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Témoignage du gouverneur et de la première sous-gouverneure de la Banque du Canada devant le Parlement - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdVcySXE5Zmt2cGJua29DOFBPU3JrSzdtM211NEtZN2VSUU5VRGlDU2M0bV9RZkllX29ZSl9hVkdLYkdqdVBTRkU4UWxIMWszYzdUVFQ3UV82WTUzR3VMclVKcUV5bFY0NDA5SWxDeW9URE45M05SQlFLbExrbm1BU2VRZHBjb1FYUkk4SkxZRHZrWFVVa252VVNzc21QTC1laW1sZjYyUW9wV2NwLWtWOXJUZ3NvakMyaFpZejFB?oc=5",
+      "source": "news.google.com",
+      "description": "Témoignage du gouverneur et de la première sous-gouverneure de la Banque du Canada devant le Parlement  Banque du Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada devrait maintenir le taux directeur | RCI - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNd2RHU3YwYzI0emJTb3N1Q2F4SW5PZ1hrNUF6VU5INUZYNEZyWmd0d3JBS1NOamUwS2F6Ylk5ck5MblI3Z2ZVVG5PY2dxcEFpOEo4bDlPeVFLX0ZUTmZSY0V5RW9KOE9qNXFpaEswQmttS0tCLU8wVzBDTFRmdDVURUVhZzgzaURuQ0RjQXBCb3REX3M?oc=5",
+      "title": "La Banque du Canada maintient son taux directeur à 2,25% - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOOUM0dndGeXBjVVZSOHg1R3hPM2FpdUI0ZW5QVlhWUERfNnM2b2RUSkotVk5adWpaaFB2dkRyOXFQclNkemRCeWx1MnM3TXhzNDlvaDlDSDdYb285WDU2S0ozRVdzanNWakxFV0xUS0p5cE0wTFlTeEZjNkVrMXBIaThRUzlTeHpLMXZ2Zw?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada devrait maintenir le taux directeur | RCI  Radio-Canada",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25%  Le Devoir",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada devrait maintenir le taux directeur | RCI - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZzBZY3VfNnFMaTJuQVVWMDU4U0xUb1NETDhTSE9Kc0FQWFhMLVVwOVlRSndtOExSQV84MU9JaDJRQmN6NlJDc21QVklGT1A5TVppdE4yUHExQUxYWFdQUm1SbVVneTdkbkJ4WWRUbnEwMnhPNXljb0FQTFZDTjVTNU1TZkc2clFmTzlHX29UMA?oc=5",
+      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - La Voix de l'Est",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMjNQc1o3dTRwY09tTUtnaGJlT0JoYXdDbExqN3kyQXhhYW9hU2UwZnAwR3pQeE9kaERqa2hoaE5Ua2RYN0I3aWlieGJvMEVFQVFWOHpreGJicUU4NjFpVDlBaVZ0MHBRUWZqN1MzS1NiOWhFMm5kOHkwTElDSXlIV2k3N1BWYklkd0R4cnc2d0ZmbTkzT25zNzV4TkhuOWFtMVZUUHhOZEN2S2RSbElwYXhISHdZeERyYy1oaXI3MkVPdldObUxHbUp3?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada devrait maintenir le taux directeur | RCI  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le taux directeur baisse enfin, une première en quatre ans - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQVFdiMUMySFNIWjhtX1JZd012Z2ZSbFNPeHEyME1xbXUwWnNvZ1Byci1WcFVIZG4xN1pCRFhvV1lEbXFsWlBsVUoyQVhvWFUzYTRTSU9jc0hyVm96dkNoMzJrTTNTX0Iwc2NKeUd2eV9WclhfUnpNVkhEdGRoM2RKeHpsbGpTUQ?oc=5",
-      "source": "news.google.com",
-      "description": "Le taux directeur baisse enfin, une première en quatre ans  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’inflation pétrolière ne devrait pas forcer la main de la Banque du Canada - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQX2g3NEVXd2JFZzYzWHVJeTBzQnQwVEtiejdoSHZ0WXV5aUJHTHdhc1lUbVVGMk9WMml0UmhaTmQ1X1VPTi1lRGlJemp0b2VIeWJIQ0VTNGhMajVKQ3ZuQ2FYdENGcW1WN0tIdzNPZG9qYmtMem1TMFdWN0xjem5YZExqRGk0d0w2SGdxOHhpYnd6VnI0Smc1WHFPS081R1NNYnFoUFQ3NVhXYUhKeTE5NEJEUF9WNkx4ZTNqN3VCR1JUY2tLcmpNTnVkOWs?oc=5",
-      "source": "news.google.com",
-      "description": "L’inflation pétrolière ne devrait pas forcer la main de la Banque du Canada  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient à nouveau son taux directeur à 2¼ % - EnBeauce.Com",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVldUdjlDbGY4Mi13ZDlRU3p5bmVsbUxoZ05LaDF0em44SzFVRHJlZFpNSkZVNGZTUW5yZi16MTE0cl9VOFlwQW9KTEFJTHR5b0hrVjgxbVpnclBDQkkwdW5lWDVKX3NaZnF4MXowMElJY282bDJaNThfaEI2YVlXWFB4eUhrQUwyb2diaGUwUjM2YlRQcEc4ZGxOSGMyeHFIUjJCeFpqTUtFbVdxT1BNQXdRTFg?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient à nouveau son taux directeur à 2¼ %  EnBeauce.Com",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Can. maintient le taux directeur à 2,25 % - CPAC.ca",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPX2xGMjhFYkJaU2F2Q2p4dzJ6bm1iVG5rZWVLeTdCYmpOaUU3aTBZdFNFUWp6YVJfTHdTM3MyTGY0TW96S1dBREVudElnZUlIUk5kMWJTMlV2blU1T0dCek9NdXFpaFFwOGJ1d29OblJtU0hoa1VielNldXR6WTZqUWFPRHhrVXN2WUpkZVN1MVAxNEdNMDBVVzRrV0JlelNPM1dSYlNDMVFxOHZoengxbWlkY1FOUjV2aHhjY21HTnFXZ1JrdWZBUW5n?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Can. maintient le taux directeur à 2,25 %  CPAC.ca",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  La Voix de l'Est",
       "cities": [],
       "category": "general"
     },
@@ -289,10 +173,180 @@
       "category": "general"
     },
     {
-      "title": "TD mise sur des taux stables - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbTd2VjlOQTBIcmdIbmpaclM0SFZpTnlfQ3VUbFVkbm1yclNtNjNHazBPY3ktemY4MW04T3Z2ZzczczhFbmJBYlN2VWl5VjVlUmhYc3BCUE5YMFZWNVRacXV2blRpX0VpMExFT19PcEM5dWdfbDV1eWw4SFZWR0pCLXlRVTVmdGhNczJDMHhwMU9IYlhnenc?oc=5",
+      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - latribune.ca",
+      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNd3hJX0ZNNFpEOC13U2RicWNQWTlwM1h6X2pSZzZDMlBZUU1WVEwwYWR6N2hEcTQwaXZvVW9rUkREamg2bTE5Zzc3c2JuOTBQc0FKM3pjNmJJTm9IblNmcXVwbktoZk01dGkwX01RczRiako4OFpKWl9zRGVKU2dYYmw2SDlka2l1VjBORUxraFJFRU5NZWx3bElZTGV2TmRHNXpQT084YmZlM1Z5cXk2VlM5RVVZTVhiVGRFRFplR0JJazVTMm93a1RHVmNhMFNHcXkxcldpUEdhUWxKY2x2T1FuU2hfdDFvczRN?oc=5",
       "source": "news.google.com",
-      "description": "TD mise sur des taux stables  Canadian Mortgage Trends",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  latribune.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintiendra probablement son taux directeur à 2,25% - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPR21iQ2s1YW8tcTBKaFBXTGJoUTdXOF9FMXYwbk50RUp0c25WdGFnQUdWT3JfY1g1TUtYSDQyR3NTZ0NQOEpYY0xIRkR2Z1pPenI1cUhHcUN3VVMxbk5RMU93ZUdhLTl3cndkZGY2bDkzamdQbnpQLUthcGtSRmZRM0Fld2kzMGtIZWZkTWw2Y3I5dy1QeUh2NVFzOElZV0gyaWdUMjNuQVNzeWFkc0lUMjVn?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintiendra probablement son taux directeur à 2,25%  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada devrait maintenir son taux directeur à 2,25 % - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPeHp4VTJPSGw5dVRXdWZDRHR3dmUzTE1XaHdvdjFnWXdWWjJSOUIydXBVS3BOWU9CQW8zeEx2UkotNmNVcHZYM1E0U2EyNE9wU292MVN6Vm5PUS16NHlORTFiSEVFRjg4bUxBd3RCUVFTZ3Y1NVZfQktFUlJ1Rm9vMTVZbHBnZGR0ZGtv?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada devrait maintenir son taux directeur à 2,25 %  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada pourrait relever ses taux dans le cas d’une inflation durable - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMEFGcVRXcVdCNnd5R192dmJyeUdCRnFCMGVrcWVTLXZfRVJJdXBDdW9oUERtaERZTThvOE5uRnhjQWxCcUtfdnRTRmNJNkNPdGIzREhsb3dvTGFfdzBNakZKV0lFWXdtUGlpRE1TYlg1d05hQ1ZwNngxdFpPWlZRdU15dFJGZUVEel9JWkZwdFB0cXZFSk1mbm56RFIzWFVyYldLZFA3ZG14X1V6aWNHNHZPSS02UW5PWC1iTnRTcDVObDA?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada pourrait relever ses taux dans le cas d’une inflation durable  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada est prête à hausser ou à baisser les taux - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOWHRpNldCMTBjU29LQUttQTYweTh6QUtCQWF5bklrRHh3UVdlODBsYVBxQ0pjclVscVp0eWZ5NmZnbk5Ob2FHN094MFBVcmlYbTJMZEFQRDgtZnJlUm5FZklsVm16cWhBcFpERmNMaFY0TkNLWmc3UHBlM2Y5dnlQbEo3UUIzLTNjaHdzTTd6M3l1eW1KTFc5ak5UckVPeEhnS0FYQUxRbmdfNE5OMVlDcEh5SnJOcVN5ZVE?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada est prête à hausser ou à baisser les taux  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Chronologie: retour sur les 10 dernières décisions de la Banque du Canada - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVVlRTGlmRTZBYVNlQ21PWVRwY2hXNEhqRGpVRlFGTDZpQ0J5cWFvaTRaeWFJemRVamhmYkFxVEtaUWNhZ3VodGNoempja3dQOVVmVFN4VDF1UFpMaDlQYzY4WE1NdXpDWlg2NGVxcHNrTEJnY2NxU3A1VDZtNVRHTWMwQTVRR1ozU2FXTk1RZndYOEkyenp6eC1fM1E0bkQ0NzU2Sm9sRnBtNlp1XzNfWmFJbmo?oc=5",
+      "source": "news.google.com",
+      "description": "Chronologie: retour sur les 10 dernières décisions de la Banque du Canada  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "À quoi peut-on s’attendre de la réunion d’avril de la Banque du Canada? - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVURwVnhlZG9Jd0U5MUEtdnYtV2pKeVh1TFRKU0hjOHRiNUtHM3ctLTFwWHNkNmJueFF4RkpXd09BT0lIQ3hxN2N1c0RQZVU1dXZxU1dNcy1NYmNaTFdkWk56TGwzNU12RVFoSzRZZnI1QnpqeXdJUERPeFdaSlVueENaenJUN1dNRk1RX0F2NjdTX2VWd0tXdnBBQjQ5SzFLclNhQW8wWEE?oc=5",
+      "source": "news.google.com",
+      "description": "À quoi peut-on s’attendre de la réunion d’avril de la Banque du Canada?  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le taux directeur de la Banque du Canada reste à 2,25 % - Mon Thetford",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZ09HQ05neUZkaDhrUFFYQURETERtbzI5VEVHa19weHRfSGF2UHNOUVF4X3IyajlLaWdKZjJYOVA3Y2lVVjJCYkpOcDYySXNhQjNybWlxcS1PV0RKcE8yUUU1eG5sSkdNZmR6TGdYQm9kbWhuR3c1MzAwemthVXZ5U29rV0hneXJBTnVFbTYxSngwdw?oc=5",
+      "source": "news.google.com",
+      "description": "Le taux directeur de la Banque du Canada reste à 2,25 %  Mon Thetford",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient le taux directeur à 2,25% - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNTBnckNKYnVsejUyMDd5ckFwRVpVZVVkZU9HU25UWU80UktvdC1kSjhhcDB1U2dDQWluNnJUMUpWdUpJbEVuT0g3SEQ1OW5tb25GcTFITk16Ym5qNk1SYmduQmszZ05BbXVwR0czNW14elR3TnAxM2F0dkpCSDNZcDRVVGJWMEVvV3laSjFsWEtaMk54UHd1MUZLUFlkRjA?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient le taux directeur à 2,25%  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada: la porte reste ouverte dans les deux directions pour 2026 - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZ1ozLXZqdWVIVzZqNEJfQlIzdHZnbkFZWkVwVUtaSHphLTVtTDNhcVNzcW53SG9wSmN1OTQycUc5MTFGZ2xaM0NLMnAydzJTYzZ3TUI1aTBvenBUWjVlQThRRXRsdzlHYndiUEtkSjJiN1FKNktoTnJYZWt4YXNFNGdqR3lsTlpRUTFoTWR5WVpfUzhMTjJNeS0zbUY4cmxXYzlHUV9wTHlvV0JaaWRiYmNwMVJmQUZvTTNN?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada: la porte reste ouverte dans les deux directions pour 2026  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada: «une baisse serait bienvenue, mais…» - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcXhQVlQ1dnM4UTFTZGVWbFE2dGU2d1UtcXo5SC12aGlNVm1udlRyT3NMVXB3YWIzd2ZueTVBWTRoa0RPM2N6NVdfcS1Yd01lU1pwaG9MbWtxTlJuaTNJNDgzVmd4eXZqOHR1bGk3UDM1WU84SHVSd2RJVUhoYkE4YUF3MmplNFVsWnNNNUtvXzQ5ZXl2VHFzejNR?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada: «une baisse serait bienvenue, mais…»  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada devrait maintenir le taux directeur - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQTlhRWXVacEozS0duTXE1WUtXVU5aY0duSnVFZFgtNlhFbDR4NWs0eFhrWEdXdFhDdGZKcWRsLTV0U3kzMUtpS1daNG1YbjlWd3RjZGZGOEVtOUxHUEI5aFBhdXd0czNYUWVrUXJDMDJLSjdxLXZ6d1ZwYUhCdy1xcnFDSmVnQmpXVC1MbW1ldEZFeHNXWTF0M282R001T1RDV3JaWnNwX1BtNzdVVTdwWk43Y3g4dHNBdWQtQQ?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada devrait maintenir le taux directeur  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient son taux à 2,25 % malgré le choc pétrolier - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcGVfNURtbmhHbEhRMTdKdFVTSTdBa1VENXZ1YmxyeWF4SDhhQTNnSEhkZ1R2bmF2ZFV6QmcwSXRua2h4TkZaRzNBRFlqMElNQmpIODBHOVVGbUVOelgxZWRkczd0eFU2UnpXNGtUSnh5ZlBlVTRlRmFKMHZKbmQwNFRjcjBmMlN0aVI4TWNHRlZZbEJRdXRyY01oU2tZTkp4b1pv?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux à 2,25 % malgré le choc pétrolier  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada devrait maintenir ses taux malgré le choc pétrolier - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPYTFGWFlvc1ZOelRja2xRNzF6bzRvSWZEM0JKWUZseHB1VGt3WkZaVHdHXzBsdmU4ZEpQbWc1aU0xcjh0bnRRcDBmWG4yS21hMG1fN2VZTGNoa2FzR3VlTlhPdU84VUZ6cXV0UGkxVGRaVVdMNm5aX2kyLUZyckFrWFd6bmpDMDlOb2Q4czdmVFljSjFNSlFaYkhVNVhOSFFhQzk1UHhRMFVUQmpxRlYxYmQ2NGNHUEU0emo3MENncw?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada devrait maintenir ses taux malgré le choc pétrolier  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Maintien du taux directeur à 2,25 % - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxONVVNTXlIa0lON3dIUDl4U25NMlg4ZzB5ajRzem93ek1oZGZ5bUI4U1RmVllyd2RGaW5ta29fNXphLU16UjJjV3RvV3E0LVRFOXZpb0JqSDhja3BlNV9rcjFkOXhUTlh3eTdDQm5MTU1DX3NpVlFHSDNsbVJ3QUo4Y2pkVGRHU3hkQ3c?oc=5",
+      "source": "news.google.com",
+      "description": "Maintien du taux directeur à 2,25 %  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Tiff Macklem, l’inflation et les leçons de la COVID-19 - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNRWxUNU5yb0FlQ2hfR2xjMTQwSDJfeXNlS2Vqc1NrRE1hdW9ndjRDSEQwMk1QX2hDR25KOUFtQTIzMmpqaER6Wi1rdWNmSmtmQlhISmhrVEFCa1VZMXhTd21mci1WTU1qZ180emRyU3N3SzU3TzYyTzZ2Y1pINE9LcElB?oc=5",
+      "source": "news.google.com",
+      "description": "Tiff Macklem, l’inflation et les leçons de la COVID-19  Le Devoir",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - TVA Gatineau",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUjNrOGRTN2FPSzZVNUZKeDVySUVJVHExeXNpT1Y1dS1NZ0ZQaVotTkJGVzJXTmp1RThKa0xrRG1wS2ZyTFJobkVaazd1VDhYY3o2Tnp4c1JYYnRYUHlQQy1pRnhacEVMMk1HcjB5aWhqcHZPUkgyTUdUc1JVS0dqOHZQeUg?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  TVA Gatineau",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Can. maintient le taux directeur à 2,25 % – 29 avril 2026 - CPAC.ca",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQMl9FLW5kNFJ6Vk9WNnFWVmNvcVFERi05cVV1cUZQRGRtN1Bsak1yUG5QcGhvcXlfVW4tQjZVRS1HNkYyOUZyZVFWQzVQT0RPdElWYm4tQVNoMThUR2JZU3paX0tMLTYzbk03S1JBb3ozS1VHc2pkYkVTLWFrQWFYYmtsVVQxQnpZOU8xNUw4Zlc2d2lWVW04cEgtN0k3MmctQ3FRMkpDd0ZLNXMyMldqd2Z6dDB0OVVlNnBFSUpBR0pDeV9idHlfenRRems1YmNHeFBOMDVPWlRyUnBrWFE?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Can. maintient le taux directeur à 2,25 % – 29 avril 2026  CPAC.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient à nouveau son taux directeur à 2¼ % - EnBeauce.Com",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVldUdjlDbGY4Mi13ZDlRU3p5bmVsbUxoZ05LaDF0em44SzFVRHJlZFpNSkZVNGZTUW5yZi16MTE0cl9VOFlwQW9KTEFJTHR5b0hrVjgxbVpnclBDQkkwdW5lWDVKX3NaZnF4MXowMElJY282bDJaNThfaEI2YVlXWFB4eUhrQUwyb2diaGUwUjM2YlRQcEc4ZGxOSGMyeHFIUjJCeFpqTUtFbVdxT1BNQXdRTFg?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient à nouveau son taux directeur à 2¼ %  EnBeauce.Com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le taux directeur de 2,25% maintenu par la Banque du Canada - Courrier Laval",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQXJmZFpWWDJVbXZWY1hQTGhXUmJhNldtbkx2MDViN2VRMHBPcnU4M3QzdDRxMklGck5iZ2EyTWw2VlFNMEpVMUN2d0tfYW9rdG9jaHgyTUFBZXlHRHUxdWw4OHpJSE1kbjQ3My10RW03WXU2eFRheTNPUGpTX0Q0VUpRdFJNRnZoZGNVWA?oc=5",
+      "source": "news.google.com",
+      "description": "Le taux directeur de 2,25% maintenu par la Banque du Canada  Courrier Laval",
+      "cities": [
+        "laval"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "La Banque du Can. maintient le taux directeur à 2,25 % - CPAC.ca",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPX2xGMjhFYkJaU2F2Q2p4dzJ6bm1iVG5rZWVLeTdCYmpOaUU3aTBZdFNFUWp6YVJfTHdTM3MyTGY0TW96S1dBREVudElnZUlIUk5kMWJTMlV2blU1T0dCek9NdXFpaFFwOGJ1d29OblJtU0hoa1VielNldXR6WTZqUWFPRHhrVXN2WUpkZVN1MVAxNEdNMDBVVzRrV0JlelNPM1dSYlNDMVFxOHZoengxbWlkY1FOUjV2aHhjY21HTnFXZ1JrdWZBUW5n?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Can. maintient le taux directeur à 2,25 %  CPAC.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Statu quo pour le taux directeur - lepeuplelotbiniere.ca",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5rQzlYcHJ0bEVMd2p0RzR3T0ZRV1h3ZS16SU10LXp1VGgwdnJjRG5rT2kyd01zWER4QVpGX1NaRllZbTBtVE1Va05QNjBhRW1fX25uTTVUY0lMYXpDRTJEaldHdnZlUXppWGVXSWlHMFJMUUZJV0dzWkRCSThKOUk?oc=5",
+      "source": "news.google.com",
+      "description": "Statu quo pour le taux directeur  lepeuplelotbiniere.ca",
       "cities": [],
       "category": "general"
     },
@@ -305,10 +359,10 @@
       "category": "general"
     },
     {
-      "title": "Comment économiser 13 000 $ lors du renouvellement de votre hypothèque en 2026 - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWlh4T3g2SjB1WFRFejhCcnRVX21aUmp0Tjh6MkcyNmZ0THM1MHRSTS1tME5ydXI3SEt1Z3VZRkZORE1LYmFaSXBaZmwydXhaenBRNlZmbVJ6cHp4dUxpT0NTOVFKSXVwRGo2b2ZnWjgyaHVNckExWEpfN2ZkRFZUWTRaV201dTYwSms4OEZiOEdmanozaEd1RVRDbjFuWUhtck5ydWtkUUJ3cTQxVHlETjJONnZvZEE?oc=5",
+      "title": "Le blocus de Trump et les propos de Macklem secouent les rendements obligataires - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQTXYyWFZFMEZJVlY0b2FBTUs0RXZfSjhoeVRQNm5GY2ZzNFY5NVhLb0hKMWxTSkQxMHVPVzAyaER1R3lJUW42dlQ1amdQejBaOFgtaG5LWnlneHhUSXpVaDZVQ28yMmQ5OWZISUcteW1QTjJIV1hSN05zVkd3OXhQaGtQMVpUTEFzbGpJazIzNlh1QTVxcDU5LUVmaVZpSV9TRk5SNUtqZHdvV0gyZUJma3F1TWxLTS02Y292eS1ZaHBvS01aT2RXWEU3VzJhM1lFX0tXdnd3?oc=5",
       "source": "news.google.com",
-      "description": "Comment économiser 13 000 $ lors du renouvellement de votre hypothèque en 2026  TVA Nouvelles",
+      "description": "Le blocus de Trump et les propos de Macklem secouent les rendements obligataires  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -323,10 +377,34 @@
       "category": "local"
     },
     {
+      "title": "Le taux directeur est encore maintenu à 2,25% - Néomédia",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRVB5YU1XVXRqRnpuYWg4Z1k3VUNNcldsR3VuN3ozTTdDREFOQi1HdkxHTUF4dnFFdlppaWFaUTNLM29wRUdxREIyRXQtZ0pzUndXWDJZVEhpbXB5bXdQNnFrREo5UWh5WUNLa3YzN0JHbDFwNUpwRnJpaDZHMVY5T3lmU2ViR0Z5RHJsZXhqTEdBVkV2aWhiZXN1djd0MlZEZVVrWHNPS0Q0ZExCemItbDJ2azk?oc=5",
+      "source": "news.google.com",
+      "description": "Le taux directeur est encore maintenu à 2,25%  Néomédia",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Taux directeur : le patron de la Banque Nationale lance un avertissement à la Banque du Canada - MSN",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNcVFzczAybVB6WC1GTW1UWXBNd2NnZ3JrUms4MFQzRmVpMDloeXF6OFNrMDVubUp0Wm1Yanc5am1UdUpMaUhSTWhNTGVqTTU1bUhaUHFaV2JkWGk4NXdsWHVObHhYNnBXbzQ3UV9CU0dUSk9zRTJ1aDkxRWNLRFd1SGk5dTJBc1drRVR0T2lFODY0UlFRS1M3dFpqdjh6dDU3aUs5SG5MTG9xdkd2Sk9VcHFLX25seTVuVURfOTE4ZjNuNi1XekRsZ25pWTJEbWdsUnQtUS10WW5FYzZ4YUZJdURidTVSSE0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNNno5em1NOXZEZXh6Z3pJclJfVW1pbkt6bGxzRzhKUmJvSWFVd1QybHZmalItYmFJODgtZGJ0anlzejdpenFMb0h1M3NYVU5TNkM1OFlxZDlMa1VBY0pNRlV1MEVabUxEZ01Qa3lCbFFHMmZFenc3VWVrY3hFQVlKVEtPRGQwS1hIQk1PVjRhcjFfYmREdmVjbTVHOVRUdVR3cFh4RGl2b1NrdVNwc2xsSHJBYmZsYnAtbjNlclJUWWJFLTdreGRzdXMzRUdSZTdtbjJFYi01UTItcThzSThBS0YzTHRPTDlETU1CSzNIci1TalN6cTh3WmV2MkVnRkN1Rmkzc1FMMnlCQQ?oc=5",
       "source": "news.google.com",
       "description": "Taux directeur : le patron de la Banque Nationale lance un avertissement à la Banque du Canada  MSN",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - MSN",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPQXRyT3JXRmVQMzd1eW1lQ1daSUtWU2RuMXJ6M24zdEFKT2hoazhHM2tEVFZrX1I3Ym9YS0liaDQ1enBkZklTNU5Zdy1UcjU1clJQRlVPWnIzN044X1dvLUNtUVEwU19VWW9jTl9YUEd4ZDhWUWx0T2lGaHFZNVN2MFhudUVFQTVteWZucUpILUJPYW5WUEFHWVQ0Tm1YRWNPZXNWMHY4T1ZCc1VteDdqcXpNUnFZdC1ZWkRTVVUxSQ?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  MSN",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La banque centrale du Canada maintient son taux directeur à 2,25% - TradingView",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9nTk1FdzRETTM0eFp3Z2JPZVlkOWRVT1VsbEpTc3Awb1U1ekFmbU1sd2NXOUNaMm5PTDEtbjlnbGZMal9ac2UydnpNMmNCYzB1c1ZFVi1RcWNGaUZEbHdTRjZR?oc=5",
+      "source": "news.google.com",
+      "description": "La banque centrale du Canada maintient son taux directeur à 2,25%  TradingView",
       "cities": [],
       "category": "general"
     },
@@ -339,10 +417,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25% - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZVcyanZPZXBaZ0xIMzkwUFRKWVFrOWNWX0ROMVhWczh4T0hzaTk0eW9uOGtlMzBaaHpVV2hTNVNlUE5sTGdQd2RNLUozMkJObnNLRU9vMzk5YXZCaWRQSXBLWndNMHE3MkxhWjN0MWlFSzZxYWpYd3kxdml2emR0NGcxd1oxSnYyTFpwMGJVOENpM2NCeFRfbEw0ZmZTRGpzem1LZ2JkcnZtVFJ4X3FtVkg1WUViSjg?oc=5",
+      "title": "La Banque du Canada annonce sa décision concernant le taux directeur du 29 avril - MSN",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcXFnbFplc2RTcG1JRG9RanpDTUw0X282MG9GcHBJS0FHMjRxNjBEaHlqelZLTWxsWXAxcHZzdngxNWxXQWI0bEoxRGJycmttNXNBNDVKZG12Yk5rU3hNNWU3QjRTQWdSYmFPODhHVlUxWVA2cmlzRlB6NTlNSDF2YlR3clBRbG42a2tyV3hGSGM3d01lQUQtVkpobnE2MUMwWE5aOHpGTmNCV0c4aE5hR29vMXhFQ0xMN0FmOW9BOXhPOVlXeVAwN3dGUVlrTHo5VVZSX1p3?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25%  Zonebourse",
+      "description": "La Banque du Canada annonce sa décision concernant le taux directeur du 29 avril  MSN",
       "cities": [],
       "category": "general"
     },
@@ -355,6 +433,30 @@
       "category": "general"
     },
     {
+      "title": "La Banque du Canada confrontée à des défis de contrôle des taux à court terme selon BofA - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQZ1ZLYTU0aDBGUVRJNHRCOVFFV01Kdm9JSlBiaWZiNlQ2V3BXNmgxeXZEaVFaMlpNZFpRWXkxNEJkTDZzSFJMbDFMSjJuR3VZMC15VVRIOHBLdGN2MTN3OWJfNWdPbkJNMnpZZ1c0eDQzNzd3ai1aOVBEYzNGbUJ2UDZxOUdOTmRKWUhvT0g0U2JmNzhNS3FOc0p1anJDc1ZNZ0pueFV5ZU0wQTc4ZlptTm5ObXJ1RXRKcG8tcTA1NTBydzhSVGRrSThZa0FKcUJtQ3B3dzJsYTJ0RTNBRE50NWI1RQ?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada confrontée à des défis de contrôle des taux à court terme selon BofA  Investing.com France",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Canada : La BoC maintient ses taux inchangés - Les Echos",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMmE5SThBWHhlZXo4S2plYUNycUl5Tm5EcmUtZlJQdW1zemUwSmcyMk1hRFBwZVNqNnRJa250ZGVFV0lIY2lfMVZTUTc2VFhpT2ZCMkUxanJ1WHRUTkw0WkhNT3RVMURPV2lrcTJxZzhsSzVqTmhOM0hfSFhuLUktdV9GYlFtTllCWE1vb0ZVNm9jMDc0bVprMzRqalBwTjZ4cGp4bUtRN3Y0MEtZUm9JQ3Vrcmc?oc=5",
+      "source": "news.google.com",
+      "description": "Canada : La BoC maintient ses taux inchangés  Les Echos",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient son taux directeur à 2,25% - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZVcyanZPZXBaZ0xIMzkwUFRKWVFrOWNWX0ROMVhWczh4T0hzaTk0eW9uOGtlMzBaaHpVV2hTNVNlUE5sTGdQd2RNLUozMkJObnNLRU9vMzk5YXZCaWRQSXBLWndNMHE3MkxhWjN0MWlFSzZxYWpYd3kxdml2emR0NGcxd1oxSnYyTFpwMGJVOENpM2NCeFRfbEw0ZmZTRGpzem1LZ2JkcnZtVFJ4X3FtVkg1WUViSjg?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25%  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La Banque du Canada devrait maintenir son taux à 2,25%, le choc pétrolier étant jugé passager - Zonebourse Suisse",
       "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOYU5tSWxPbWo0dWFTV3EzaGQ0d3RIOU5QU1loVTBRVndOazFubG5Ha2dQQWE5RGtKV2NtR1BJV1hGb3Z2cnFBeXRzaFI4TlVXOUlwRS1QbHdhX3NyMkY0aE0zeW1OaXBiMHRKWDF4V0xLQ2hmb0l0UTJKSTNOcFdUZjVEWnFnZEVfQmFWczZfQk5iUXdjeHdNZXNucG16aV9aekpTX1BEQWxNQlRDQzVZaWMteGJQTllHV0h2eXY4S3g1TnpaZVRaMmtLTHBHaUp2bHJsS0lOTFU4YnJZZjZkN1BqU1hhUQ?oc=5",
       "source": "news.google.com",
@@ -363,82 +465,26 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient ses taux et prévoit des ajustements limités si ses prévisions se réalisent - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNZkhJMUl4WlJxOHJVWDMwN2tISTJzTnRIenJrOXpzZUdQc09kbFZ0NEN4TVJVNmRjdHMtUGJJQWwwdk9fMFRlc2RxY1gwVHVyZzVJUzhJWVlHWDFYZmU0RVlGbFFnTGp3UkFCQ0V6Zms5T2JCZFVWRktOSUJZcE1Uei1wMEt0VWozbklSR3Y0TWN4ZTBoSDlaQ2hKaDdzTGZtek45UE4tMzlHUjM0MnFCM0V5SzNMR1NzS3RrTG54WGFWSmlXWlZSNEViZk10MlNyUzliZjFMV2RYeTZNTG1zQVBhTmF1bkFiSHdIbWhIcVVwRkk?oc=5",
+      "title": "Scotiabank anticipe des hausses de taux de la Banque du Canada, souligne les risques inflationnistes et l'impact sur le CAD - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPUkY5MnNIUXpoc3NYc1JQWmZ0RjNqX0UybEp5M1lVOHFYLUkyLVhFXzFzdUg3YTJfdU5uQlpGdGJiNkZSZHFodDFCbS1Id29PcEMxaGY0T2poa3RvU2YyZ0ZIMUJrcFJCVmhSdVNpWlR5UU5tT2VtSWdhUVhjc3BfZ0QzQzlGOERjRFltSHRHLUFmMDk2cjBmT00xaG5pQjRkcnB4R0J2dk51S0JXWlRRc200QmpvQ1dBWmFDYk13SWdoNFBuX3ROQV82ZHlrWjZYZkEwSVFDMUtqMzZvcFlvbUJMRGRZNW5SYVZ4LVBqM090UQ?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient ses taux et prévoit des ajustements limités si ses prévisions se réalisent  Zonebourse",
+      "description": "Scotiabank anticipe des hausses de taux de la Banque du Canada, souligne les risques inflationnistes et l'impact sur le CAD  Zonebourse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "BREAKING : La Banque du Canada maintient ses taux inchangés 🇨🇦 📌 La paire USD/CAD poursuit sa hausse - XTB.com",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNRE95MEtEMVpiU2N3SFFod1lMMDVqclRHMU9HZlpGMklFNU1kRDNEWDZycDRmR0lFeHBweDh5QjFQdkR5eHk1OXU1akhDYklSSjQ5d1ptTjVhbTlRdTVJQno4S1Rad0ZEOVRXdFBTNTQzb2hZMS0wdTJwbzg1UTlzemF2THNTWnJMRUJRWnlCNEE1Ty0tWTJJczludXFhVFdmdUxnSzc1RmlPdzItUWxyb2d3bXRBdktCUlFZUGtnWnVKQ2lISkoyaGNzclY0QQ?oc=5",
+      "title": "Canada: La BoC maintient ses taux inchangés - Boursorama",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPZ3daYTluWDVRWkQ0ODdaS2RBZFdWYUQ0c1o2QTROTzJIalFUazIwalIzLWpoQ1c2YlNQaGQ5WUQxakF4em5ybDBJanJoV0VJUW1HSG5uMGhWa0FQVFBrQzc3OVRMYnEzWnhtTXdvYUdDQVVIbkZIUTd3S3pGcFBfN3hqUldCNDZxclU5bTM4d2d6bkdfTU1VcGltdjhMYUFla25mMWN6bkFqdDNYUlNiMVg5NkdkZWxTNFlmUnNIZ3o4bFNTTmlDd1FqR2h6UGVaaHRrQdIB1AFBVV95cUxPZ3daYTluWDVRWkQ0ODdaS2RBZFdWYUQ0c1o2QTROTzJIalFUazIwalIzLWpoQ1c2YlNQaGQ5WUQxakF4em5ybDBJanJoV0VJUW1HSG5uMGhWa0FQVFBrQzc3OVRMYnEzWnhtTXdvYUdDQVVIbkZIUTd3S3pGcFBfN3hqUldCNDZxclU5bTM4d2d6bkdfTU1VcGltdjhMYUFla25mMWN6bkFqdDNYUlNiMVg5NkdkZWxTNFlmUnNIZ3o4bFNTTmlDd1FqR2h6UGVaaHRrQQ?oc=5",
       "source": "news.google.com",
-      "description": "BREAKING : La Banque du Canada maintient ses taux inchangés 🇨🇦 📌 La paire USD/CAD poursuit sa hausse  XTB.com",
+      "description": "Canada: La BoC maintient ses taux inchangés  Boursorama",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Les contrats à terme sur le TSX font du surplace avant les décisions de la Fed et de la Banque du Canada - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPY0oxZWxqaEtMTkJtZGFYd2tNWHBOaXRDUERVd3ZGYm54c3JKQ3pndkczUTl1b196S2JNaFNwOFZmZzdPV0ZIcURxYXRoZE14ZGVoMGNFM3dkZjN3TmhSU1BRR2tjRzBid2ROVkZZMkVCcnR0NlNndUFzNjItTTZ6TDhJY1VBVWhTTEpIM3I2dU9VSFlnblZReDY4eURnUGRoSlA0VFVqZlliN2RQS2l0MFhSbVFENlE2aV90anAtTzlGTFRyM1R0ZHBEZmNFQm13NFQwVzdUQkIxTXEzdlRKRUtGN181VkpOek9Ma0lzaHh2UQ?oc=5",
+      "title": "Canada-La BoC maintient ses taux inchangés - Boursorama",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNb205MEhpZ3RRVDJMaU54VzJkYkx1TE5BMzB4NkRHbC1HSm9sZTRYV1VWN2FXbnNYUDhoS3o1emEyUHZWOWNfWTg2LUdVTnhYTFBkZ3E2X0RyWktGcHdIUTJzS2syOUw5YzRWUjQ2SkVQXzMzd2dtN0JaOEVhSEpRQ2hWSnE1NURGY0NVMGFpbDNHMXYyQ3RGMHQ3TkZiUThhdlVKcExuZHVZaGNjdFp1T1YwQmRfdWRvNGVFNEJGb2RhVFVITmhELUR4emI0N1NWNXVBONIB1AFBVV95cUxNb205MEhpZ3RRVDJMaU54VzJkYkx1TE5BMzB4NkRHbC1HSm9sZTRYV1VWN2FXbnNYUDhoS3o1emEyUHZWOWNfWTg2LUdVTnhYTFBkZ3E2X0RyWktGcHdIUTJzS2syOUw5YzRWUjQ2SkVQXzMzd2dtN0JaOEVhSEpRQ2hWSnE1NURGY0NVMGFpbDNHMXYyQ3RGMHQ3TkZiUThhdlVKcExuZHVZaGNjdFp1T1YwQmRfdWRvNGVFNEJGb2RhVFVITmhELUR4emI0N1NWNXVBOA?oc=5",
       "source": "news.google.com",
-      "description": "Les contrats à terme sur le TSX font du surplace avant les décisions de la Fed et de la Banque du Canada  Zonebourse Suisse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "BOURSE CANADIENNE-Le TSX recule sous le poids des valeurs minières ; la Banque du Canada et la Réserve fédéral - Boursorama",
-      "link": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOM2x5THZPN2U4aDdZNnYwdjlxVkNlZWhWQWp5SDc4Ym9GV1k4c21PMmJWSEV6bDYzZUh5S0wybGxBaFZSMDdZemMxcHpEa2ZrVUpsNHBGRDBWREE3d2hKMUlwZThSUDNNQTRkdkJ3c3hCdjRkejd3dlhubDN6QXNuU2NyWGVlekd6YWUtTU1SczR3Q0MwenlXdllpLTN5TUYyczU4X2o0Y1k1ZFFyTWp6bjBWemp6VnpXWXFDVnZHVWo0S0xnUHdHZ0k1Vmo3UTMta2NHcnVzNjR6dVF4STVuQ0kwaFdRLUhWZmpYRDJSaE5mN3V2YTJjZ0ppMjJGZkx1LWNQTFZWM1N3N2pDQXZjSm4xb05ZOFppTnV3aVFSSjZJTGcyNkhGd2g3SkZTc1pyRVdIMGJ6ZDZ4d2pnbDF6WNIBxgJBVV95cUxPbnN3YTcwdVk1ZHdSZ0JjNWdKUEg1eU1DUFBSWEpQWmNQWkJHYk5ISXphSDFKeXZ5Y2ViUDMtN3hzMnBvNm5EbVl1b2JhYW16aFVBS1JEUllJMUhHX0RhZlltVmZiaTZCRXB5T3dEMS1JZHhGV0VVbjd6RWd4ZVIyV1UwUDJSQmRhRXVqLVI5bE5NX2d1OEtiaHp5WFIya2g1am1aX0hSX0ZlOXhNQ28tU1R5T0psdUZuUnltZi1KaExobWhzMTltV1E1Vlg3aGRxNm5OT1BoWEt3U3FNcjN3eFJuYmhiejRkRE93d3cxXzZ3TDR6QVBXcWo1LUZmNFpqYXhWZEFUdUlVdlQ0R25jSHROMFB6WmxSLVhEUmZOMHRKUzBSZ3R3SUdrbzhWNVJuNll0aTdIcXFabUtFZGpNTktld193UQ?oc=5",
-      "source": "news.google.com",
-      "description": "BOURSE CANADIENNE-Le TSX recule sous le poids des valeurs minières ; la Banque du Canada et la Réserve fédéral  Boursorama",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les contrats à terme sur le TSX font du surplace avant les décisions de la Fed et de la Banque du Canada - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNYmx0aGZ0eU1VUzM1TktiMm8zTGkxd2FtcUdaSlJwVGJUQVdoeHV3TWloLTZwcFVYLUJyY3pIVzRWS2E4OWpyb3RWYWluOGU5RGI4YmRuTVo3aks3MnhXVHJZNFRaT3lvdG1QTzFpaFp3b3VqQ19OSFR6VkJxQzZsMXNVb1F1Ukd5NW9TZXFGZi1BZ2I5a3ZZUHVYNXJ1THJzWlJRMko4M2ZXSzE2dUk2eEVkS2Q5cWhtd2JHYjhHU2I1ME1XTENDNUg0LWpZQVhrLTRWTl9RcmxDRS1maWhtWWFtaTc5WUdoNDk1b1pVZDFWZWs?oc=5",
-      "source": "news.google.com",
-      "description": "Les contrats à terme sur le TSX font du surplace avant les décisions de la Fed et de la Banque du Canada  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada annonce sa décision concernant le taux directeur du 29 avril - Mon Fric",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM2h1TlBDSW9XWDFBTHRxbVpGeHNYNXFqLUZwcS1Ha1o1cF9FYnRCc1dSb1NmaDBVTzJOMm1jajF4eHJva2lDWjFaclphR1hXb3Qyd1d3ZUFiZTVleXpDanBtYUJFOTJhQkZMUTNuYlFUNzVnQXBMTzhMczBjQjdqQTc5SlV1UVF5SE9DcUk4elNqSWkzZUlFbFE3MEMzWmlVWjV4TnB2bnRFNHo4YldMZ1JMbw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada annonce sa décision concernant le taux directeur du 29 avril  Mon Fric",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada dévoilera son analyse des impacts de la guerre en Iran sur l'inflation mercredi - SSBCrack",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPODBRcEk1SmhLSmVuVzhoYlg4RW4yMzRTZTh0Rk8wVzBRcVduT0prRkdINVN4OVlSUHVqTGcwY3lKQWdGSTNSVlhKU2lyLURzUDQxYVcyU0hSUktFSXhDYzJTd3Q4SW1PUkh5aDYwUEF3Y01ZSEZIS3hXT1JuU1k1VGFlS01fNmd0SGNTVldNY09tVjJQaUJ5YXo0LU0yeWI2WTctMDVnVzItSG4wRTZuOVNGOWZvdzBmX1pRNDNhcWE1Z0k?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada dévoilera son analyse des impacts de la guerre en Iran sur l'inflation mercredi  SSBCrack",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Annonce du taux directeur par la Banque du Canada et événements importants au programme aujourd'hui - SSBCrack",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSlNlRUwwOEY3akNCVThwcnFjcW4tQ2d6ZmJPWmJvT0txdkR1RXUtUm1FaHZqWVEzMlZNOHgxWFJoTTRwSEdvMHV1dmw2T1FPR0pkbHZsTXoxSG1uZS1KbkE0aWlQZnl2a01JZ0ZKZm5xS2hTc0dwNjZYM1RzX1ZNLWpBT2NseXdtdzg3ZldJbW1iWjRXcXY3c0lxdjRYSmRqVmRjbHQ4NmJjdXpSMXR6T2wzUGZmQ2h3QUQzS19BTF83ejA?oc=5",
-      "source": "news.google.com",
-      "description": "Annonce du taux directeur par la Banque du Canada et événements importants au programme aujourd'hui  SSBCrack",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada face aux pressions inflationnistes liées à la guerre en Iran - SSBCrack",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSG5FZ25rWERYV2UyTHhYNmhsTTlKSm5iT3YwbUhwQVdNcVVVWUxUUF91Q21aOEx0aUt0SnBlLThJWXVqX3kyb1NpYkdzLXd3VjlmWWJpNC1SYUVibnozUFA1dTVHcVR1ZEo5WkM1Mm9ZSzN4RThKekRsTWFCa1BvSjByT2d1RnY3SXFFT0d4cVVxcURvZGZtSDBndkdtR19vaU9kN3VOaHNtdms?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada face aux pressions inflationnistes liées à la guerre en Iran  SSBCrack",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada maintient 2,25 % mercredi — Les Affaires - El-Balad.com",
-      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFA4bkRsWGZYOWhLaGp3aHlpalZpTHNpcHZNWWd4NXRmUk5oZnhRNnNmMV9kUXNTZ25IcW9HUTVUaEtycnJfOUJPOA?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada maintient 2,25 % mercredi — Les Affaires  El-Balad.com",
+      "description": "Canada-La BoC maintient ses taux inchangés  Boursorama",
       "cities": [],
       "category": "general"
     }
@@ -495,5 +541,5 @@
     },
     "last_quarter": "Q1 2026"
   },
-  "last_update": "2026-04-29 15:11"
+  "last_update": "2026-05-02 14:10"
 }
