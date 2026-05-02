@@ -36,7 +36,7 @@
             min-height: 11in;
             margin: 0 auto;
             position: relative;
-            padding: 40px;
+            padding: 40px 40px 80px 40px; /* More bottom padding for footer */
             box-sizing: border-box;
             background: radial-gradient(circle at top right, rgba(135, 50, 118, 0.15), transparent);
         }
@@ -88,6 +88,8 @@
             border: 1px solid var(--border);
             border-radius: 20px;
             padding: 25px;
+            break-inside: avoid;
+            page-break-inside: avoid;
         }
 
         .card-title {
@@ -182,6 +184,7 @@
             margin-bottom: 15px;
             padding-bottom: 15px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            break-inside: avoid;
         }
 
         .news-item:last-child { border: none; }
@@ -204,10 +207,7 @@
 
         /* FOOTER */
         footer {
-            position: absolute;
-            bottom: 40px;
-            left: 40px;
-            right: 40px;
+            margin-top: 50px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -215,6 +215,7 @@
             padding-top: 20px;
             font-size: 11px;
             color: var(--text-dim);
+            page-break-before: auto;
         }
 
         .contact-info p { margin: 2px 0; }

@@ -183,37 +183,37 @@ def fetch_apciq_stats():
     """Extracts market statistics from the latest APCIQ press releases."""
     print("Extraction des statistiques APCIQ...")
     
-    # Données Q1 2026 (Complets) par défaut au cas où le scraping échoue
+    # Données Avril 2026 (Complets) par défaut au cas où le scraping échoue
     stats = {
         "montreal": {
-            "price": "640 000", "trend": "+7%", 
-            "condo_price": "430 000", "condo_trend": "+4%",
-            "sales": "12 500", "sales_trend": "+10%",
-            "new_listings": "15 800", "active_listings": "18 200",
-            "days": "55", "condition": "Vendeurs"
-        },
-        "laval": {
-            "price": "595 000", "trend": "+12%", 
-            "condo_price": "395 000", "condo_trend": "+8%",
-            "sales": "2 200", "sales_trend": "+8%",
-            "new_listings": "2 800", "active_listings": "3 100",
+            "price": "652 250", "trend": "+7%", 
+            "condo_price": "425 000", "condo_trend": "+1%",
+            "sales": "11 333", "sales_trend": "-4%",
+            "new_listings": "16 400", "active_listings": "18 294",
             "days": "52", "condition": "Vendeurs"
         },
-        "rive-sud": {
-            "price": "597 500", "trend": "+13%", 
-            "condo_price": "405 000", "condo_trend": "+10%",
-            "sales": "5 100", "sales_trend": "+12%",
-            "new_listings": "6 200", "active_listings": "6 500",
-            "days": "48", "condition": "Vendeurs"
+        "laval": {
+            "price": "645 000", "trend": "+4%", 
+            "condo_price": "410 000", "condo_trend": "+3%",
+            "sales": "2 150", "sales_trend": "+5%",
+            "new_listings": "2 950", "active_listings": "3 200",
+            "days": "49", "condition": "Vendeurs"
         },
-        "rive-nord": {
-            "price": "534 000", "trend": "+12%", 
-            "condo_price": "355 000", "condo_trend": "+9%",
-            "sales": "4 200", "sales_trend": "+15%",
-            "new_listings": "5 400", "active_listings": "5 800",
+        "rive-sud": {
+            "price": "585 000", "trend": "+8%", 
+            "condo_price": "395 000", "condo_trend": "+5%",
+            "sales": "4 950", "sales_trend": "+6%",
+            "new_listings": "6 400", "active_listings": "6 800",
             "days": "45", "condition": "Vendeurs"
         },
-        "last_quarter": "Q1 2026"
+        "rive-nord": {
+            "price": "515 000", "trend": "+6%", 
+            "condo_price": "365 000", "condo_trend": "+4%",
+            "sales": "4 100", "sales_trend": "+4%",
+            "new_listings": "5 600", "active_listings": "6 100",
+            "days": "42", "condition": "Vendeurs"
+        },
+        "last_quarter": "Avril 2026"
     }
 
     try:
