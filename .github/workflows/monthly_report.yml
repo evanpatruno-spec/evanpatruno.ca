@@ -17,6 +17,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get current date
+        id: date
+        run: echo "month=$(date +'%B %Y')" >> $GITHUB_OUTPUT
         
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -49,12 +53,26 @@ jobs:
         env:
           JSONBIN_API_KEY: ${{ secrets.JSONBIN_API_KEY }}
           ZOHO_WEBHOOK_URL: ${{ secrets.ZOHO_WEBHOOK_URL }}
-        run: python newsletter_generator.py --force
+        run: python newsletter_generator.py --notify
+
+      - name: Send Approval Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "👀 APPROBATION REQUISE : Infolettre ${{ steps.date.outputs.month }}"
+          to: info@evanpatruno.ca
+          from: "Evan Automations <${{ secrets.SMTP_USERNAME }}>"
+          html_body: file://newsletter_preview.html
+          convert_markdown: true
 
       - name: Commit and Push Report
         run: |
           git config --local user.email "evan.patruno@gmail.com"
           git config --local user.name "evanpatruno-spec"
           git add rapports/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Add monthly report [skip ci]")
           git pull --rebase origin main
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Add monthly report [skip ci]" && git push)
+          git push

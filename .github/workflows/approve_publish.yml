@@ -1,0 +1,33 @@
+name: Approve and Publish Newsletter
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "CONFIRM" to publish the newsletter to Zoho'
+        required: true
+        default: 'NO'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.confirm == 'CONFIRM'
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+            python-version: '3.11'
+          
+      - name: Install Python Dependencies
+        run: |
+          pip install jinja2 requests
+          
+      - name: Trigger Zoho Publication
+        env:
+          JSONBIN_API_KEY: ${{ secrets.JSONBIN_API_KEY }}
+          ZOHO_WEBHOOK_URL: ${{ secrets.ZOHO_WEBHOOK_URL }}
+        run: python newsletter_generator.py --force
