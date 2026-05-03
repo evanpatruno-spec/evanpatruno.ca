@@ -5,6 +5,7 @@ import os
 import re
 import html
 from datetime import datetime
+from jinja2 import Environment, FileSystemLoader
 
 # CONFIGURATION
 API_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
@@ -177,7 +178,7 @@ def fetch_unified_data():
         print(f"Erreur Lecture Données : {e}")
         return {"news": [], "boc_rate": "2.25%"}
 
-def generate_newsletter_json(force_zoho=False):
+def generate_newsletter_json(force_zoho=False, notify=False):
     import random
     now = datetime.now()
     data = fetch_unified_data()
@@ -297,11 +298,60 @@ def generate_newsletter_json(force_zoho=False):
     final_data["market_status"] = market_temp
     final_data["boc_rate_val"] = rate_val
     
-    # TRIGGER ZOHO (Seulement le 1er du mois ou si forcé)
-    if now.day == 1 or force_zoho:
+    # GÉNÉRER L'APERÇU HTML POUR L'E-MAIL DE NOTIFICATION
+    if notify:
+        try:
+            env = Environment(loader=FileSystemLoader('.'))
+            template = env.get_template('newsletter_preview_template.html')
+            
+            # Préparer le contexte
+            context = {
+                "month": final_data["month"],
+                "year": final_data["year"],
+                "boc_rate": final_data["boc_rate"],
+                "market_status": final_data["market_status"],
+                "top_articles": final_data["top_articles"],
+                "pro_tip": final_data["Astuce_Pro"],
+                "report_url": final_data["Lien_Rapport"],
+                "report_label": final_data["report_label"]
+            }
+            
+            preview_html = template.render(context)
+            with open('newsletter_preview.html', 'w', encoding='utf-8') as f:
+                f.write(preview_html)
+            print("Aperçu HTML généré : newsletter_preview.html")
+            
+            send_approval_notification(final_data)
+        except Exception as e:
+            print(f"Erreur rendu aperçu HTML : {e}")
+            send_approval_notification(final_data) # On envoie quand même la notif JSON au cas où
+    elif force_zoho:
         trigger_zoho_webhook(final_data)
         
     return final_data
+
+def send_approval_notification(data):
+    """Envoie une notification d'approbation à Evan avec le contenu complet."""
+    webhook_url = os.getenv("ZOHO_WEBHOOK_URL")
+    if not webhook_url:
+        print("[Attention] ZOHO_WEBHOOK_URL non configuré. Notification annulée.")
+        return
+        
+    print("Envoi de la demande d'approbation au système de notification...")
+    # On ajoute un flag pour indiquer que c'est une demande d'approbation
+    payload = data.copy()
+    payload["status"] = "pending_approval"
+    payload["notification_type"] = "newsletter_approval"
+    payload["approval_link"] = "https://github.com/evanpatruno-spec/evanpatruno.ca/actions"
+    
+    try:
+        response = requests.post(webhook_url, json=payload, timeout=25)
+        if response.status_code == 200:
+            print("Demande d'approbation envoyée avec succès !")
+        else:
+            print(f"Erreur notification : {response.status_code}")
+    except Exception as e:
+        print(f"Erreur Webhook : {e}")
 
 def trigger_zoho_webhook(data):
     webhook_url = os.getenv("ZOHO_WEBHOOK_URL")
@@ -353,4 +403,5 @@ def update_jsonbin(data):
 if __name__ == "__main__":
     import sys
     force = "--force" in sys.argv
-    generate_newsletter_json(force_zoho=force)
+    notify = "--notify" in sys.argv
+    generate_newsletter_json(force_zoho=force, notify=notify)
