@@ -55,6 +55,9 @@ jobs:
           ZOHO_WEBHOOK_URL: ${{ secrets.ZOHO_WEBHOOK_URL }}
         run: python newsletter_generator.py --notify
 
+      - name: Debug List Files
+        run: ls -R
+
       - name: Send Approval Email
         uses: dawidd6/action-send-mail@v3
         with:
@@ -65,7 +68,7 @@ jobs:
           subject: "👀 APPROBATION REQUISE : Infolettre ${{ steps.date.outputs.month }}"
           to: info@evanpatruno.ca
           from: "Evan Automations <${{ secrets.SMTP_USERNAME }}>"
-          html_body: file://newsletter_preview.html
+          html_body: file://${{ github.workspace }}/newsletter_preview.html
           convert_markdown: true
 
       - name: Commit and Push Report
