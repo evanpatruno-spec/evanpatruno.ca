@@ -28,6 +28,7 @@ jobs:
       - name: Run All Scrapers & Generators
         env:
           JSONBIN_API_KEY: ${{ secrets.JSONBIN_API_KEY }}
+          ZOHO_WEBHOOK_URL: ${{ secrets.ZOHO_WEBHOOK_URL }}
         run: |
           python scraper.py
           python news_scraper.py
@@ -39,5 +40,6 @@ jobs:
           git config --local user.email "evan.patruno@gmail.com"
           git config --local user.name "evanpatruno-spec"
           git add .
+          git pull --rebase origin main
           git diff --quiet && git diff --staged --quiet || (git commit -m "Automated data update [skip ci]" && git push)
 

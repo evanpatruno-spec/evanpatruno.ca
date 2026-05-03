@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ep-portal-cache-v10';
+const CACHE_NAME = 'ep-portal-cache-v11';
 const ASSETS_TO_CACHE = [
   '/',
   '/mon-dossier.html',
@@ -24,12 +24,37 @@ const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage((payload) => {
   console.log('[sw.js] Received background message ', payload);
-  const notificationTitle = payload.notification.title;
+  const notificationTitle = payload.notification?.title || payload.data?.title || "Dossier Privé - Evan Patruno";
   const notificationOptions = {
-    body: payload.notification.body,
-    icon: '/pwa-icon-192.png'
+    body: payload.notification?.body || payload.data?.body || "Mise à jour de votre dossier.",
+    icon: '/pwa-icon-192.png',
+    data: {
+      url: payload.data?.url || payload.fcmOptions?.link || '/mon-dossier.html'
+    }
   };
   self.registration.showNotification(notificationTitle, notificationOptions);
+});
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const urlToOpen = event.notification.data?.url || '/mon-dossier.html';
+
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
+      // Si une fenêtre est déjà ouverte, on la focus et on navigue
+      for (let client of windowClients) {
+        if (client.url.includes('mon-dossier.html') && 'focus' in client) {
+          return client.focus().then((focusedClient) => {
+            return focusedClient.navigate(urlToOpen);
+          });
+        }
+      }
+      // Sinon on ouvre une nouvelle fenêtre
+      if (clients.openWindow) {
+        return clients.openWindow(urlToOpen);
+      }
+    })
+  );
 });
 
 // 2. STANDARD PWA LOGIC

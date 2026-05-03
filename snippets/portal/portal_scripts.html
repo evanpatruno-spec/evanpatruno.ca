@@ -221,7 +221,7 @@
             const sTxt = statusTextColors[v.statut] || '#fff';
 
             return `
-                <div class="visit-card">
+                <div class="visit-card" id="visit-${v.id}">
                     <div class="visit-header">
                         <div>
                             <div style="font-weight:900; color:#fff; font-size:1.1rem;">${formatVisitDate(v.Date_heure_de_visite)}</div>
@@ -330,9 +330,49 @@
             };
             const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
             const result = await res.json();
-            if (result.s) { btn.innerText = "Avis enregistré ! ✨"; btn.style.background = "#2ecc71"; }
+            if (result.s) { 
+                btn.innerText = "Avis enregistré ! ✨"; 
+                btn.style.background = "#2ecc71"; 
+                hapticFeedback('success');
+
+                // Délai de 3 secondes pour laisser le temps de lire
+                setTimeout(() => {
+                    const card = document.getElementById(`visit-${id}`);
+                    if (card) {
+                        card.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
+                        card.style.opacity = "0";
+                        card.style.transform = "scale(0.9) translateY(10px)";
+                        card.style.maxHeight = "0";
+                        card.style.margin = "0";
+                        card.style.padding = "0";
+                        card.style.overflow = "hidden";
+                        
+                        setTimeout(() => {
+                            handlePortalLogin(); // Rafraîchissement complet des données
+                        }, 800);
+                    } else {
+                        handlePortalLogin();
+                    }
+                }, 3000);
+            }
             else { throw new Error((result.error || "Erreur API") + (result.details ? ": " + JSON.stringify(result.details).substring(0, 100) : "")); }
-        } catch (e) { btn.innerText = "Réessayer"; btn.disabled = false; alert("⚠️ Erreur avis : " + e.message); console.error("Sync Error:", e); }
+        } catch (e) { btn.innerText = "Réessayer"; btn.disabled = false; showPwaToast("⚠️ Erreur avis : " + e.message); console.error("Sync Error:", e); }
+    }
+
+    function animateCardOut(id, callback) {
+        const card = document.getElementById(id);
+        if (card) {
+            card.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
+            card.style.opacity = "0";
+            card.style.transform = "scale(0.9) translateY(10px)";
+            card.style.maxHeight = "0";
+            card.style.margin = "0";
+            card.style.padding = "0";
+            card.style.overflow = "hidden";
+            setTimeout(callback, 800);
+        } else {
+            callback();
+        }
     }
 
     function getZohoDateTime(dtString) {
@@ -364,17 +404,19 @@
             const result = await res.json();
             if (result.s) {
                 hapticFeedback('success');
-                alert("✅ Demande de visite envoyée ! Evan vous contactera pour confirmer.");
+                btn.innerText = "Demande envoyée ! ✅";
+                btn.style.background = "#2ecc71";
+                showPwaToast("✅ Demande envoyée ! Evan vous contactera.");
                 document.getElementById('inpVisitLoc').value = '';
                 document.getElementById('inpVisitDateTime').value = '';
 
                 // Un seul rafraîchissement après 3s pour laisser Zoho indexer le nouveau record
                 setTimeout(() => { handlePortalLogin(); }, 3000);
             } else {
-                alert("⚠️ Erreur : " + (result.details || result.error || "Erreur inconnue"));
+                showPwaToast("⚠️ Erreur : " + (result.details || result.error || "Erreur inconnue"));
+                btn.innerText = "Réessayer"; btn.disabled = false;
             }
-        } catch (e) { alert("⚠️ Erreur de connexion : " + e.message); }
-        if (btn) { btn.innerText = "Envoyer la demande"; btn.disabled = false; }
+        } catch (e) { showPwaToast("⚠️ Erreur de connexion : " + e.message); btn.innerText = "Réessayer"; btn.disabled = false; }
     }
 
     async function requestCancelVisit(id, loc, btn) {
@@ -385,14 +427,18 @@
             const res = await fetch(`${API_URL}?action=cancelVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, visitId: id, location: loc }) });
             const result = await res.json();
             if (result.s) {
-                alert("✅ Visite annulée avec succès.");
-                handlePortalLogin();
+                hapticFeedback('success');
+                btn.innerText = "Annulée ! 🚫";
+                showPwaToast("✅ Visite annulée.");
+                animateCardOut(`visit-${id}`, () => {
+                    handlePortalLogin();
+                });
             } else {
-                alert("⚠️ Erreur : " + (result.error || "Inconnue") + "\n" + (result.message || ""));
+                showPwaToast("⚠️ Erreur : " + (result.error || "Inconnue"));
                 if (btn) { btn.innerText = "🚫 Annuler"; btn.disabled = false; }
             }
         } catch (e) {
-            alert("⚠️ Erreur de connexion : " + e.message);
+            showPwaToast("⚠️ Erreur de connexion : " + e.message);
             if (btn) { btn.innerText = "🚫 Annuler"; btn.disabled = false; }
         }
     }
@@ -506,18 +552,49 @@
             });
             const result = await res.json();
             if (result.s) {
-                alert("🏆 Félicitations ! Votre référence a été envoyée avec succès. Evan vous contactera sous peu.");
+                hapticFeedback('success');
+                showPwaToast("🏆 Référence envoyée ! Merci.");
+                if (btn) { btn.innerText = "Référence envoyée ! ✅"; btn.style.background = "#2ecc71"; }
                 document.getElementById('refName').value = '';
                 document.getElementById('refPhone').value = '';
                 document.getElementById('refNotes').value = '';
+                setTimeout(() => { if (btn) { btn.innerText = "🎁 Envoyer la référence"; btn.style.background = ""; btn.disabled = false; } }, 3000);
             } else {
-                alert("⚠️ Erreur : " + result.error);
+                showPwaToast("⚠️ Erreur : " + result.error);
+                if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; }
             }
-        } catch (e) { alert("⚠️ Erreur de connexion : " + e.message); }
-        if (btn) { btn.innerText = "🤝 Envoyer la référence"; btn.disabled = false; }
+        } catch (e) { showPwaToast("⚠️ Erreur de connexion : " + e.message); if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; } }
     }
 
-    async function requestMLSDoc() { const m = document.getElementById('inpMLS').value.trim(), d = localStorage.getItem('portal_deal_id'), c = localStorage.getItem('portal_code'); if (!m) return; try { await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c }) }); alert("✅ Demande envoyée !"); document.getElementById('inpMLS').value = ''; } catch (e) { alert("Erreur."); } }
+    async function requestMLSDoc() {
+        const m = document.getElementById('inpMLS').value.trim();
+        const d = localStorage.getItem('portal_deal_id');
+        const c = localStorage.getItem('portal_code');
+        const btn = document.querySelector('[onclick="requestMLSDoc()"]');
+        if (!m) return;
+        if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
+        try {
+            const res = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c })
+            });
+            const data = await res.json();
+            if (data.s) {
+                hapticFeedback('success');
+                showPwaToast("✅ Demande de documents envoyée !");
+                if (btn) { btn.innerText = "Demande envoyée ! ✅"; btn.style.background = "#2ecc71"; }
+                document.getElementById('inpMLS').value = '';
+                setTimeout(() => { if (btn) { btn.innerText = "Demander la documentation ✨"; btn.style.background = ""; btn.disabled = false; } }, 3000);
+            } else {
+                showPwaToast("⚠️ Erreur : " + (data.error || "Inconnue"));
+                if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; }
+            }
+        } catch (e) {
+            showPwaToast("⚠️ Erreur de connexion");
+            if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; }
+        }
+    }
     function hapticFeedback(style = 'light') {
         if (!window.navigator || !window.navigator.vibrate) return;
         try {
@@ -537,48 +614,87 @@
     function checkUrlSection() {
         const params = new URLSearchParams(window.location.search);
         const section = params.get('section');
-        if (section) {
-            // On attend que l'animation d'apparition du dashboard soit finie
+        const visitId = params.get('visitId');
+
+        if (section || visitId) {
+            // On attend un court instant pour que le dashboard soit prêt
             setTimeout(() => {
-                const el = document.getElementById(section);
+                const targetSection = section || 'secVisites';
+                const el = document.getElementById(targetSection);
                 if (el) {
-                    toggleSection(section, true);
-                    // On nettoie l'URL
-                    const newUrl = window.location.pathname;
-                    window.history.replaceState({}, document.title, newUrl);
+                    // Fermer toutes les autres sections
+                    document.querySelectorAll('.section-wrapper').forEach(s => s.classList.add('collapsed'));
+                    toggleSection(targetSection, true, false);
+
+                    // Si on vise une visite spécifique
+                    if (visitId) {
+                        setTimeout(() => {
+                            const vEl = document.getElementById(`visit-${visitId}`);
+                            if (vEl) vEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }, 600);
+                    }
                 }
-            }, 1000);
+            }, 500);
         }
     }
+
+    // Gestion du bouton "Retour" du navigateur
+    window.addEventListener('popstate', (event) => {
+        const params = new URLSearchParams(window.location.search);
+        const section = params.get('section');
+        
+        // Fermer toutes les sections
+        document.querySelectorAll('.section-wrapper').forEach(s => s.classList.add('collapsed'));
+        
+        if (section) {
+            const el = document.getElementById(section);
+            if (el) el.classList.remove('collapsed');
+        }
+        updateMenuItems();
+    });
 
     async function nativeShare() {
         hapticFeedback('medium');
         const shareData = {
             title: 'Evan Patruno | Courtier Immobilier',
-            text: 'Accédez à votre portail client privé ou recommandez les services de Evan Patruno.',
-            url: 'https://evanpatruno.ca/mon-dossier'
+            text: 'Voici les coordonnées de Evan Patruno. N’hésitez pas à le recommander pour vos projets immobiliers !',
+            url: 'https://evanpatruno.ca'
         };
         try {
             if (navigator.share) {
                 await navigator.share(shareData);
             } else {
                 await navigator.clipboard.writeText(shareData.url);
-                alert("📋 Lien de partage copié !");
+                showPwaToast("📋 Lien vers le site de Evan copié !");
             }
         } catch (err) {
             console.log('Share error:', err);
         }
     }
 
-    function toggleSection(id, forceOpen = false) {
+    function toggleSection(id, forceOpen = false, updateHistory = true) {
         hapticFeedback('light');
         const el = document.getElementById(id); if (!el) return;
+        
+        const wasCollapsed = el.classList.contains('collapsed');
         if (forceOpen) el.classList.remove('collapsed');
         else el.classList.toggle('collapsed');
 
+        const isNowOpen = !el.classList.contains('collapsed');
+
+        // Mise à jour de l'historique (Deep Linking)
+        if (updateHistory) {
+            if (isNowOpen) {
+                const newUrl = window.location.pathname + `?section=${id}`;
+                window.history.pushState({ section: id }, document.title, newUrl);
+            } else {
+                window.history.pushState({ section: null }, document.title, window.location.pathname);
+            }
+        }
+
         updateMenuItems();
 
-        if (forceOpen || !el.classList.contains('collapsed')) {
+        if (isNowOpen) {
             setTimeout(() => { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
         }
     }

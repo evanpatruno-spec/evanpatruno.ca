@@ -1,0 +1,68 @@
+<!-- 
+Partage Social Latéral (Sticky)
+INSTRUCTIONS:
+1. Ajouter dans le Footer.
+-->
+<style>
+    .sticky-share {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+        background: #fff;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0 8px 8px 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .share-btn {
+        display: block;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        transition: width 0.3s;
+    }
+
+    .sb-fb {
+        background: #3b5998;
+    }
+
+    .sb-li {
+        background: #0077b5;
+    }
+
+    .sb-wa {
+        background: #25D366;
+    }
+
+    /* WhatsApp */
+
+    .share-btn:hover {
+        width: 55px;
+        /* Petit effet expansion */
+        filter: brightness(1.1);
+    }
+</style>
+
+<div class="sticky-share">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=window.location.href" target="_blank" class="share-btn sb-fb"
+        title="Partager Facebook">f</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=window.location.href" target="_blank"
+        class="share-btn sb-li" title="Partager LinkedIn">in</a>
+    <a href="https://wa.me/?text=Regarde%20ca" target="_blank" class="share-btn sb-wa" title="Partager WhatsApp">W</a>
+</div>
+
+<script>
+    // Script pour mettre à jour les liens dynamiquement avec l'URL actuelle
+    document.querySelectorAll('.sticky-share a').forEach(a => {
+        let href = a.getAttribute('href');
+        a.setAttribute('href', href.replace('window.location.href', encodeURIComponent(window.location.href)));
+    });
+</script>

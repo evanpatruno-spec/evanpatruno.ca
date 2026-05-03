@@ -1,0 +1,309 @@
+<style>
+    /* FIX FOR ZOHO BANNER GAP */
+    #header-banner-section, .theme-banner-container, .zphero {
+        display: none !important;
+    }
+
+    /* GLOBAL RESET & FONTS */
+    .immob-lp {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        line-height: 1.6;
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+    }
+
+    .immob-lp * {
+        box-sizing: border-box;
+    }
+
+    .immob-lp h1, .immob-lp h2, .immob-lp h3 {
+        color: white;
+        font-weight: 800;
+        margin-top: 0;
+    }
+
+    .immob-lp-section {
+        padding: 100px 20px;
+    }
+
+    .immob-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* 1. HERO SECTION */
+    .hero-immob {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.96), rgba(135, 50, 118, 0.6)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        z-index: 1;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);
+    }
+
+    .hero-immob h1 {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        font-weight: 900;
+    }
+
+    .hero-immob p {
+        font-size: 1.35rem;
+        max-width: 850px;
+        margin: 0 auto 50px;
+        opacity: 0.95;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 22px 50px;
+        background: #fff;
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    /* 2. HUB PILLARS (Acheter/Vendre/Investir) */
+    .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 35px;
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hub-card {
+        background: rgba(43, 11, 36, 0.7);
+        backdrop-filter: blur(10px);
+        color: white;
+        padding: 55px 40px;
+        border-radius: 30px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hub-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(180deg, rgba(135, 50, 118, 0.1) 0%, transparent 100%);
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+
+    .hub-card:hover::before { opacity: 1; }
+
+    .hub-card:hover {
+        transform: translateY(-15px);
+        border-color: #873276;
+        box-shadow: 0 40px 80px rgba(135, 50, 118, 0.2);
+    }
+
+    .hub-card h3 {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        font-weight: 800;
+    }
+
+    .hub-card p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+    }
+
+    .hub-icon {
+        font-size: 4rem;
+        margin-bottom: 30px;
+        filter: drop-shadow(0 10px 20px rgba(135, 50, 118, 0.3));
+    }
+
+    .hub-link {
+        color: #873276;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        margin-top: auto;
+        transition: color 0.3s;
+    }
+
+    .hub-card:hover .hub-link {
+        color: #a94295;
+    }
+
+    /* 3. VALUE PROPOSITION SECTION */
+    .value-section {
+        background: #1e0a19;
+        padding: 120px 20px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .value-title {
+        font-size: 2.8rem;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+    .value-desc {
+        max-width: 750px;
+        margin: 0 auto 60px;
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* FIX FOR ZOHO WHITE SPACE */
+    .immob-lp {
+        margin-top: -1px;
+        padding-top: 1px;
+    }
+
+    @media (max-width: 768px) {
+        .hero-mortgage { 
+            padding: 60px 20px 80px !important; 
+            margin-top: 15px !important;
+            min-height: 350px !important;
+        }
+        .hero-immob { padding: 60px 20px 80px; margin-top: 15px !important; }
+        .hero-immob h1 { font-size: 2.4rem; }
+        .hero-immob p { font-size: 1.1rem; }
+        .hub-grid { margin-top: -80px; padding: 0 10px; }
+        .value-title { font-size: 2rem; }
+    }
+
+    /* LEGAL FOOTER */
+    .legal-footer {
+        padding: 60px 20px 40px;
+        background: #1e0a19;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .legal-text {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.6;
+    }
+</style>
+
+<div class="immob-lp">
+    <!-- HERO SECTION -->
+    <header class="hero-immob">
+        <div class="immob-container">
+            <h1>Bien au-delà d'une<br>simple transaction.</h1>
+            <p>Découvrez une approche stratégique dans le Grand Montréal, la Rive-Sud et l'Estrie, où la maîtrise du financement rencontre l'œil de l'expert pour valoriser votre projet immobilier.</p>
+            <a href="/contact" class="hero-btn">Lancer mon projet</a>
+        </div>
+    </header>
+
+    <!-- HUB NAVIGATION -->
+    <section class="immob-lp-section" style="padding-top: 0;">
+        <div class="immob-container">
+            <div class="hub-grid">
+                <!-- ACHETER -->
+                <a href="/acheter" class="hub-card">
+                    <span class="hub-icon">🗝️</span>
+                    <h3>Acheter</h3>
+                    <p>Accédez aux propriétés avant tout le monde et achetez au juste prix grâce à notre liste d'accès exclusif.</p>
+                    <span class="hub-link">En savoir plus &rarr;</span>
+                </a>
+
+                <!-- VENDRE -->
+                <a href="/vendre" class="hub-card">
+                    <span class="hub-icon">📈</span>
+                    <h3>Vendre</h3>
+                    <p>Mise en marché d'exception et stratégie marketing premium pour maximiser la valeur de votre propriété.</p>
+                    <span class="hub-link">En savoir plus &rarr;</span>
+                </a>
+
+                <!-- INVESTIR -->
+                <a href="/investir" class="hub-card">
+                    <span class="hub-icon">🏗️</span>
+                    <h3>Investir</h3>
+                    <p>Développez votre patrimoine avec des analyses de rentabilité rigoureuses et des opportunités ciblées.</p>
+                    <span class="hub-link">En savoir plus &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUE PROPOSITION -->
+    <section class="value-section">
+        <div class="immob-container">
+            <h2 class="value-title">L'avantage Evan Patruno</h2>
+            <p class="value-desc">Une double expertise Unique : Courtier Immobilier et Hypothécaire pour une transaction fluide, sécurisée et optimisée financièrement.</p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; margin-top: 60px;">
+                <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <h4 style="color: #873276; font-size: 3rem; margin-bottom: 5px;">24h</h4>
+                    <p style="color: white; font-weight: 700;">Réactivité Maximale</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <h4 style="color: #873276; font-size: 3rem; margin-bottom: 5px;">100%</h4>
+                    <p style="color: white; font-weight: 700;">Transparence Totale</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <h4 style="color: #873276; font-size: 3rem; margin-bottom: 5px;">Priorité</h4>
+                    <p style="color: white; font-weight: 700;">Accès Privilégié</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Evan Patruno | Courtier Immobilier",
+  "image": "https://evanpatruno.ca/logo.png",
+  "url": "https://evanpatruno.ca/immobilier",
+  "telephone": "+15140000000",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Saint-Jean-sur-Richelieu",
+    "addressRegion": "QC",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    "Saint-Jean-sur-Richelieu",
+    "Montréal",
+    "Rive-Sud",
+    "Estrie"
+  ],
+  "description": "Services de courtage immobilier stratégique dans le Grand Montréal, la Rive-Sud et l'Estrie. Achat, vente et conseil en investissement."
+}
+</script>

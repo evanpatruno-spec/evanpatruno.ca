@@ -1,0 +1,25 @@
+<!-- 
+Effet Parallax Simple
+INSTRUCTIONS:
+1. Ajouter dans le Footer.
+2. Cible les sections avec la classe "parallax-section".
+3. DANS ZOHO: Allez dans les paramètres d'une SECTION, ajoutez une image de fond, et dans "Avancé" ou "Classe CSS", ajoutez "parallax-section".
+   NOTE: Le parallax CSS pur nécessite que l'image soit définie en background-image.
+-->
+
+<style>
+    /* Méthode simple compatible mobile via background-attachment */
+    .parallax-section {
+        background-attachment: fixed !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+
+    /* Note: Sur iOS (iPhone), background-attachment: fixed est souvent désactivé par le navigateur pour la performance. */
+    @media only screen and (max-device-width: 1024px) {
+        .parallax-section {
+            background-attachment: scroll !important;
+        }
+    }
+</style>

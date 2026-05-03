@@ -1,0 +1,165 @@
+<!-- 
+Calculatrice Taxe de Bienvenue (Mutation) - Québec
+INSTRUCTIONS:
+1. Ajouter un Code Snippet.
+2. Coller le code.
+-->
+<style>
+    .welcome-tax-widget {
+        background: #fdfdfd;
+        padding: 20px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        max-width: 450px;
+        margin: 20px auto;
+        font-family: 'Open Sans', sans-serif;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .wt-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .wt-input-group {
+        margin-bottom: 15px;
+    }
+
+    .wt-input-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .wt-input-group input,
+    .wt-input-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .wt-btn {
+        width: 100%;
+        padding: 12px;
+        background: #2c3e50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.2s;
+    }
+
+    .wt-btn:hover {
+        background: #e53935;
+    }
+
+    .wt-result {
+        margin-top: 15px;
+        padding: 15px;
+        background: #e8f5e9;
+        border-radius: 4px;
+        text-align: center;
+        display: none;
+    }
+
+    .wt-total {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #2e7d32;
+    }
+</style>
+
+<div class="welcome-tax-widget">
+    <h3 class="wt-title">Calcul Taxe de Bienvenue</h3>
+    <div class="wt-input-group">
+        <label>Municipalité (Taux)</label>
+        <select id="wt-city">
+            <option value="mtl">Montréal (Taux standards)</option>
+            <option value="other">Autre (Québec générique)</option>
+        </select>
+    </div>
+    <div class="wt-input-group">
+        <label>Prix d'achat ($)</label>
+        <input type="number" id="wt-price" placeholder="500000">
+    </div>
+    <button class="wt-btn" onclick="calcWelcomeTax()">Calculer</button>
+    <div class="wt-result" id="wt-result-box">
+        Droits de mutation estimés :<br>
+        <span class="wt-total" id="wt-total-val">0 $</span>
+    </div>
+</div>
+
+<script>
+    function calcWelcomeTax() {
+        const price = parseFloat(document.getElementById('wt-price').value);
+        const city = document.getElementById('wt-city').value;
+
+        if (!price) return;
+
+        let tax = 0;
+
+        // Tranches Québec Base (2024 approx)
+        // 0 - 58 900 : 0.5%
+        // 58 900 - 294 600 : 1.0%
+        // > 294 600 : 1.5%
+        // Montréal a des tranches supérieures
+
+        // Fonction utilitaire de calcul par tranche
+        function getTax(amount, rate) { return amount * rate; }
+
+        // Définition des paliers (Simplifiés pour demo, à garder à jour)
+        const p1 = 58900;
+        const p2Mtl = 328700; // Exemple Mtl
+        const p2Gen = 294600; // Exemple Générique
+        const p3Mtl = 657200; // Tranche Mtl supérieure
+
+        let remaining = price;
+
+        // Tranche 1: 0.5%
+        let t1 = Math.min(remaining, p1);
+        tax += t1 * 0.005;
+        remaining -= t1;
+
+        if (remaining > 0) {
+            if (city === 'mtl') {
+                // Tranche 2 Mtl: 1.0% jusqu'à 328 700
+                let limit2 = p2Mtl - p1;
+                let t2 = Math.min(remaining, limit2);
+                tax += t2 * 0.01;
+                remaining -= t2;
+
+                if (remaining > 0) {
+                    // Tranche 3 Mtl: 1.5% jusqu'à 657 200
+                    let limit3 = p3Mtl - p2Mtl;
+                    let t3 = Math.min(remaining, limit3);
+                    tax += t3 * 0.015;
+                    remaining -= t3;
+
+                    if (remaining > 0) {
+                        // Tranche 4 Mtl: 2.0% (ou plus selon cas)
+                        tax += remaining * 0.02;
+                    }
+                }
+            } else {
+                // Générique Québec Tranche 2
+                let limit2 = p2Gen - p1;
+                let t2 = Math.min(remaining, limit2);
+                tax += t2 * 0.01;
+                remaining -= t2;
+
+                if (remaining > 0) {
+                    // Reste 1.5%
+                    tax += remaining * 0.015;
+                }
+            }
+        }
+
+        // Formatage
+        document.getElementById('wt-total-val').innerText = tax.toLocaleString('fr-CA', { style: 'currency', currency: 'CAD' });
+        document.getElementById('wt-result-box').style.display = 'block';
+    }
+</script>

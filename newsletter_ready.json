@@ -1,6 +1,14 @@
 {
-  "campaign_id": "NL-5-2026",
-  "month": "Mai",
+  "Sujet": "Infolettre - Avril 2026",
+  "Mois": "Avril",
+  "Annee": "2026",
+  "Taux_BOC": "2.25%",
+  "Contenu_Article": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel - TVA Nouvelles: Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel  TVA Nouvelles...\n\nPrévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca: Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca...\n\nLa Banque du Canada est prête à bouger les taux - La Presse: La Banque du Canada est prête à bouger les taux  La Presse...",
+  "Citation": "L'investissement dans la connaissance paye le plus gros intérêt. Investissez sur vous-même ! – Benjamin Franklin",
+  "Astuce_Pro": "Taux Fixe vs Variable : Dans un marché instable, le taux variable offre souvent plus de flexibilité pour refinancer sans pénalités majeures si les taux chutent.",
+  "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-04.pdf",
+  "campaign_id": "NL-4-2026",
+  "month": "Avril",
   "year": 2026,
   "boc_rate": "2.25%",
   "market_temp": "Marché Actif (Acheteur)",
@@ -11,9 +19,9 @@
   "linkedin_url": "https://www.linkedin.com/in/evan-patruno/",
   "top_articles": [
     {
-      "title": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel - Journal de Québec",
-      "summary": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel  Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQblBjNDBOUjhQcndjU2tzZjg3ZXpNRUZBUWwxS2pGeTVXbThnSmxwV0R4N2c5U2c1Ylh0UHdkQlIyLU5KVGdJeDc3QnRWcFZEUHYydDJHVnFyc25VOURVT2RUbFY0UVJwRko2S0JmUWF3eWJiU24wWXNfb0N4c25Jby1aSE91eUNXdHBWclFDNnFXbXRzRnl4QzRHaWdTRVJrVEx5ODBGRTBRY0FjTmlHeUd6YXBLQTBoSk4xUkFkX3k?oc=5",
+      "title": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel - TVA Nouvelles",
+      "summary": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel  TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZkVEbUdQLXlSR0xwNDFEaFlFd3c2R0hyX3lJdXc0Q3QxZG5GSW9BWEFwaWJKNl9WRzRYWjNFNlFGX0xyOGo4YUtIVWd4RUNFb0JwUjhvNFMyZzZPR09SMENxWHVxUHlHVmkzTElGa3lXMlJBTXBaR1pYcTlENXBKRWJKREhHYTg1dGlRbUl3dG43OHl1TnVDR3ZXV3h2LWsxQ3FpRjZmYzk0NkwwUFl3ZmJvclltWDQzWG04?oc=5",
       "source": "news.google.com"
     },
     {
@@ -23,16 +31,13 @@
       "source": "news.google.com"
     },
     {
-      "title": "La Banque du Canada est prête à bouger les taux | La Presse - La Presse",
-      "summary": "La Banque du Canada est prête à bouger les taux | La Presse  La Presse",
+      "title": "La Banque du Canada est prête à bouger les taux - La Presse",
+      "summary": "La Banque du Canada est prête à bouger les taux  La Presse",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWlRSQnFfN3dFM0pIVTE0T19sbV81V2U3Mzc0c196aXhRbWdocjhKM1FTaS1faUtzRWFEakFmV252b2xYdlo3M2wwUm11X285SUxvbTJ2TjhPUjlyLVBlMU9WWFhqc1pSdl9fVjRpQkZvWHZ3R3ZHSUZ6MW9Zd0QtVXRtaVlHY3pIR0d3SjB3RG0xdXNrcVNfVVFKMkhpZHljQmNWOTFPSQ?oc=5",
       "source": "news.google.com"
     }
   ],
-  "daily_quote": "Quelqu'un est assis à l'ombre aujourd'hui parce que quelqu'un a planté un arbre il y a longtemps. – Warren Buffett",
-  "pro_tip": "Assurance Hypothécaire : Comparez l'assurance de la banque avec une assurance vie individuelle. Vous pourriez économiser des milliers de dollars.",
-  "report_url": "https://dossier.evanpatruno.ca/rapports/2026-05.pdf",
-  "report_label": "Rapport de Marché - Mai 2026",
+  "report_label": "Rapport de Marché - Avril 2026",
   "expert_note": "Le marché s'équilibre. C'est le moment idéal pour réévaluer vos capacités de financement avant la prochaine vague immobilière.",
   "footer_msg": "Besoin d'une évaluation précise de votre propriété ?",
   "quick_links": [
@@ -47,9 +52,9 @@
   ],
   "articles": [
     {
-      "title": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel - Journal de Québec",
-      "summary": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel  Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQblBjNDBOUjhQcndjU2tzZjg3ZXpNRUZBUWwxS2pGeTVXbThnSmxwV0R4N2c5U2c1Ylh0UHdkQlIyLU5KVGdJeDc3QnRWcFZEUHYydDJHVnFyc25VOURVT2RUbFY0UVJwRko2S0JmUWF3eWJiU24wWXNfb0N4c25Jby1aSE91eUNXdHBWclFDNnFXbXRzRnl4QzRHaWdTRVJrVEx5ODBGRTBRY0FjTmlHeUd6YXBLQTBoSk4xUkFkX3k?oc=5",
+      "title": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel - TVA Nouvelles",
+      "summary": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel  TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZkVEbUdQLXlSR0xwNDFEaFlFd3c2R0hyX3lJdXc0Q3QxZG5GSW9BWEFwaWJKNl9WRzRYWjNFNlFGX0xyOGo4YUtIVWd4RUNFb0JwUjhvNFMyZzZPR09SMENxWHVxUHlHVmkzTElGa3lXMlJBTXBaR1pYcTlENXBKRWJKREhHYTg1dGlRbUl3dG43OHl1TnVDR3ZXV3h2LWsxQ3FpRjZmYzk0NkwwUFl3ZmJvclltWDQzWG04?oc=5",
       "source": "news.google.com"
     },
     {
@@ -59,17 +64,17 @@
       "source": "news.google.com"
     },
     {
-      "title": "La Banque du Canada est prête à bouger les taux | La Presse - La Presse",
-      "summary": "La Banque du Canada est prête à bouger les taux | La Presse  La Presse",
+      "title": "La Banque du Canada est prête à bouger les taux - La Presse",
+      "summary": "La Banque du Canada est prête à bouger les taux  La Presse",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWlRSQnFfN3dFM0pIVTE0T19sbV81V2U3Mzc0c196aXhRbWdocjhKM1FTaS1faUtzRWFEakFmV252b2xYdlo3M2wwUm11X285SUxvbTJ2TjhPUjlyLVBlMU9WWFhqc1pSdl9fVjRpQkZvWHZ3R3ZHSUZ6MW9Zd0QtVXRtaVlHY3pIR0d3SjB3RG0xdXNrcVNfVVFKMkhpZHljQmNWOTFPSQ?oc=5",
       "source": "news.google.com"
     }
   ],
   "news_list": [
     {
-      "title": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel - Journal de Québec",
-      "summary": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel  Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQblBjNDBOUjhQcndjU2tzZjg3ZXpNRUZBUWwxS2pGeTVXbThnSmxwV0R4N2c5U2c1Ylh0UHdkQlIyLU5KVGdJeDc3QnRWcFZEUHYydDJHVnFyc25VOURVT2RUbFY0UVJwRko2S0JmUWF3eWJiU24wWXNfb0N4c25Jby1aSE91eUNXdHBWclFDNnFXbXRzRnl4QzRHaWdTRVJrVEx5ODBGRTBRY0FjTmlHeUd6YXBLQTBoSk4xUkFkX3k?oc=5",
+      "title": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel - TVA Nouvelles",
+      "summary": "Influenceur immobilier: le réseau de 40 prêteurs privés de Jocelyn Grégoire paralysé par un arrêt de la Cour d’appel  TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZkVEbUdQLXlSR0xwNDFEaFlFd3c2R0hyX3lJdXc0Q3QxZG5GSW9BWEFwaWJKNl9WRzRYWjNFNlFGX0xyOGo4YUtIVWd4RUNFb0JwUjhvNFMyZzZPR09SMENxWHVxUHlHVmkzTElGa3lXMlJBTXBaR1pYcTlENXBKRWJKREhHYTg1dGlRbUl3dG43OHl1TnVDR3ZXV3h2LWsxQ3FpRjZmYzk0NkwwUFl3ZmJvclltWDQzWG04?oc=5",
       "source": "news.google.com"
     },
     {
@@ -79,8 +84,8 @@
       "source": "news.google.com"
     },
     {
-      "title": "La Banque du Canada est prête à bouger les taux | La Presse - La Presse",
-      "summary": "La Banque du Canada est prête à bouger les taux | La Presse  La Presse",
+      "title": "La Banque du Canada est prête à bouger les taux - La Presse",
+      "summary": "La Banque du Canada est prête à bouger les taux  La Presse",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWlRSQnFfN3dFM0pIVTE0T19sbV81V2U3Mzc0c196aXhRbWdocjhKM1FTaS1faUtzRWFEakFmV252b2xYdlo3M2wwUm11X285SUxvbTJ2TjhPUjlyLVBlMU9WWFhqc1pSdl9fVjRpQkZvWHZ3R3ZHSUZ6MW9Zd0QtVXRtaVlHY3pIR0d3SjB3RG0xdXNrcVNfVVFKMkhpZHljQmNWOTFPSQ?oc=5",
       "source": "news.google.com"
     }

@@ -21,5 +21,35 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "Mes Visites",
+      "short_name": "Visites",
+      "description": "Consulter mon agenda des visites",
+      "url": "/mon-dossier.html?section=secVisites",
+      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Demander Document",
+      "short_name": "Doc",
+      "description": "Demander la documentation d'une propriété",
+      "url": "/mon-dossier.html?section=secConciergeMLS",
+      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Suivre mon Dossier",
+      "short_name": "Timeline",
+      "description": "Voir l'avancement de ma transaction",
+      "url": "/mon-dossier.html?section=secTimeline",
+      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Ambassadeur",
+      "short_name": "Bonus",
+      "description": "Accéder au programme ambassadeur",
+      "url": "/mon-dossier.html?section=secAmbassador",
+      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
+    }
   ]
 }

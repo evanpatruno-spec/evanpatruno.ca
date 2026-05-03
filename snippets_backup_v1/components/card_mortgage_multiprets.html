@@ -1,0 +1,177 @@
+<!-- 
+SNIPPET: CABINET MULTI-PRÊTS (RAFFINÉ)
+THEME: NAVY & VERT LIME / PUISSANCE FINANCIÈRE 
+-->
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+    .mp-card-container {
+        font-family: 'Outfit', sans-serif;
+        background: #0c1a25; /* Navy background */
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mp-card {
+        max-width: 1000px;
+        width: 100%;
+        background: linear-gradient(135deg, rgba(12, 26, 37, 0.95), rgba(140, 198, 63, 0.1)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        border-radius: 40px;
+        overflow: hidden;
+        border: 1px solid rgba(140, 198, 63, 0.3); /* Green border */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 80px 40px;
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.9);
+        position: relative;
+    }
+
+    .mp-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.6));
+        z-index: 1;
+    }
+
+    .mp-logo-img {
+        width: 250px;
+        height: auto;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 2;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(140, 198, 63, 0.2);
+    }
+
+    .mp-content {
+        position: relative;
+        z-index: 2;
+        max-width: 750px;
+    }
+
+    .mp-brand-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        background: rgba(140, 198, 63, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(140, 198, 63, 0.4);
+        border-radius: 50px;
+        color: #8cc63f; /* Lime Green */
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    .mp-title {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 20px;
+        line-height: 1.1;
+    }
+
+    .mp-desc {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 40px;
+        line-height: 1.6;
+        font-weight: 300;
+    }
+
+    .mp-stats-row {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .mp-stat {
+        text-align: center;
+    }
+
+    .mp-stat-num {
+        display: block;
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #8cc63f;
+    }
+
+    .mp-stat-label {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    .mp-btn {
+        display: inline-block;
+        padding: 20px 50px;
+        background: #8cc63f;
+        color: #0c1a25;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 40px rgba(140, 198, 63, 0.3);
+    }
+
+    .mp-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 60px rgba(140, 198, 63, 0.5);
+        background: #a2d658;
+    }
+
+    @media (max-width: 768px) {
+        .mp-title { font-size: 2.2rem; }
+        .mp-card { padding: 60px 20px; border-radius: 30px; }
+        .mp-logo-img { width: 200px; }
+    }
+</style>
+
+<div class="mp-card-container">
+    <div class="mp-card">
+        <div class="mp-content">
+            <!-- Logo official found in Zoho files or matching the brand -->
+            <img src="https://www.multi-prets.com/portal/media/Logos/MP_Logo_Horizontal_Coul.svg" alt="Multi-Prêts Hypothèques" class="mp-logo-img">
+            
+            <div class="mp-brand-badge">Cabinet en Courtage Hypothécaire</div>
+            
+            <h2 class="mp-title">Multi-Prêts Hypothèques</h2>
+            
+            <p class="mp-desc">
+                Profitez de la plus grande force hypothécaire au Québec. Nous négocions pour vous auprès de plus de 32 institutions financières pour vous garantir les meilleures conditions du marché.
+            </p>
+
+            <div class="mp-stats-row">
+                <div class="mp-stat">
+                    <span class="mp-stat-num">32</span>
+                    <span class="mp-stat-label">Institutions</span>
+                </div>
+                <div class="mp-stat">
+                    <span class="mp-stat-num">0$</span>
+                    <span class="mp-stat-label">Frais de courtage</span>
+                </div>
+                <div class="mp-stat">
+                    <span class="mp-stat-num">100%</span>
+                    <span class="mp-stat-label">Négocié</span>
+                </div>
+            </div>
+            
+            <a href="/pre-approbation" class="mp-btn">Obtenir ma préapprobation</a>
+        </div>
+    </div>
+</div>

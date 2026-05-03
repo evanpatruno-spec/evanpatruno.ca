@@ -1,0 +1,57 @@
+<!-- 
+INSTRUCTIONS D'INSTALLATION (ZOHO SITES):
+1.  Ajoutez un élément "Code Snippet" (ou "Embed") dans le Footer de votre site (pour qu'il affecte toute la page).
+2.  Collez ce code.
+3.  Ce script va automatiquement animer les éléments au défilement.
+-->
+
+<style>
+    /* Classe pour préparer l'animation (caché et décalé) */
+    .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    /* Classe active quand l'élément est visible */
+    .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 1. Ciblez les éléments que vous voulez animer
+        // Zoho utilise souvent des classes génériques comme .zpsection, .zpcolumn, .zpelement
+        // Ajustez ces sélecteurs selon la structure exacte de votre thème Zoho
+        const targets = document.querySelectorAll('.zpsection, .zpcolumn, h2, h3, .zpelement-image');
+
+        // 2. Ajoutez la classe préparatoire à tous les cibles
+        targets.forEach(target => {
+            target.classList.add('reveal-on-scroll');
+        });
+
+        // 3. Configurez l'Intersection Observer
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // Déclenche quand 10% de l'élément est visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optionnel: arrêter d'observer une fois animé
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 4. Lancez l'observation
+        targets.forEach(target => {
+            observer.observe(target);
+        });
+    });
+</script>

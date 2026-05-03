@@ -1,0 +1,180 @@
+<!-- 
+MARKET TICKER (BARRE BOURSIÈRE IMMO)
+INSTRUCTIONS:
+1. Allez dans "Settings" > "Header Code" (ou ajoutez un snippet tout en haut de votre page).
+2. Copiez ce code.
+3. Pour modifier les stats, changez juste les valeurs dans la section "CONFIG" ci-dessous.
+-->
+
+<style>
+    /* TICKER STYLES */
+    #market-ticker {
+        background: #1e0a19;
+        /* Brand Dark */
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-bottom: 1px solid #873276;
+        position: relative;
+        z-index: 9999;
+    }
+
+    .ticker-label {
+        background: #873276;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        z-index: 10;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .ticker-wrap {
+        width: 100%;
+        overflow: hidden;
+        padding-left: 20px;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+
+    .ticker-move {
+        display: inline-block;
+        white-space: nowrap;
+        animation: ticker 30s linear infinite;
+    }
+
+    .ticker-item {
+        display: inline-block;
+        padding: 0 30px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .ticker-value {
+        color: #4ade80;
+        /* Green for positive/money */
+        font-weight: 700;
+    }
+
+    .ticker-down {
+        color: #f87171;
+        /* Red for down trends */
+    }
+
+    .ticker-neutral {
+        color: #fbbf24;
+        /* Yellow for neutral */
+    }
+
+    @keyframes ticker {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+
+    /* Pause on hover */
+    .ticker-wrap:hover .ticker-move {
+        animation-play-state: paused;
+    }
+</style>
+
+<div id="market-ticker">
+    <div class="ticker-label">
+        📡 LIVE MARKET
+    </div>
+    <div class="ticker-wrap">
+        <div class="ticker-move" id="ticker-content">
+            <!-- Content injected via JS -->
+        </div>
+    </div>
+</div>
+
+<script>
+    // --- CONFIGURATION ---
+    // On utilise le flux RSS de "Les Affaires - Immobilier" pour des news auto.
+    const RSS_URL = "https://www.lesaffaires.com/rss/secteurs-d-activite/immobilier";
+    // Service gratuit pour convertir RSS en JSON (limité à 10k requêtes/jour, suffisant pour cache)
+    const API_URL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(RSS_URL);
+
+    const STATIC_CONTENT = {
+        taux_approx: "Taux dir. Banque du Canada: 3.75% (Stabilisé)", // Valeur "sûre" qui change peu souvent
+        promo: "💬 Besoin d'une analyse de valeur ? Cliquez sur 'Outils' !"
+    };
+
+    // --- LOGIC ---
+    async function initTicker() {
+        const contentDiv = document.getElementById('ticker-content');
+
+        // 1. Date (Auto)
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        let today = new Date().toLocaleDateString('fr-CA', options);
+        today = today.charAt(0).toUpperCase() + today.slice(1);
+
+        let tickerItems = [`📅 ${today}`];
+
+        // 2. Fetch News (with Caching 1h to save API calls)
+        let newsItems = [];
+        const CACHE_KEY = 'evan_ticker_news';
+        const CACHE_TIME = 3600000; // 1 heure en ms
+
+        const cached = localStorage.getItem(CACHE_KEY);
+        const cachedTime = localStorage.getItem(CACHE_KEY + '_time');
+        const now = new Date().getTime();
+
+        if (cached && cachedTime && (now - cachedTime < CACHE_TIME)) {
+            // Use Cache
+            newsItems = JSON.parse(cached);
+            console.log("Ticker: Using Cached News");
+        } else {
+            // Fetch Fresh
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                if (data.status === 'ok') {
+                    // Take top 4 items
+                    newsItems = data.items.slice(0, 4).map(item => `📢 ${item.title}`);
+                    // Save to cache
+                    localStorage.setItem(CACHE_KEY, JSON.stringify(newsItems));
+                    localStorage.setItem(CACHE_KEY + '_time', now);
+                    console.log("Ticker: Fetched Fresh News");
+                }
+            } catch (e) {
+                console.error("Ticker Error:", e);
+                newsItems = ["📢 Le marché immobilier évolue : Contactez-moi pour les derniers chiffres."];
+            }
+        }
+
+        // 3. Combine Content
+        // Add specific manual rate if desired, otherwise rely on news
+        if (STATIC_CONTENT.taux_approx) tickerItems.push(STATIC_CONTENT.taux_approx);
+
+        tickerItems = tickerItems.concat(newsItems);
+        tickerItems.push(STATIC_CONTENT.promo);
+
+        // 4. Render
+        const separator = '<span style="color:#873276; margin:0 15px;">&bull;</span>';
+        let htmlContent = tickerItems.join(` </div><div class="ticker-item">`);
+
+        // Wrap & Duplicate for infinite flow
+        let finalHtml = `<div class="ticker-item">${htmlContent}</div>`;
+        contentDiv.innerHTML = finalHtml + finalHtml + finalHtml;
+    }
+
+    // Run
+    document.addEventListener('DOMContentLoaded', initTicker);
+    // Fallback if DOMContentLoaded already fired
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        initTicker();
+    }
+</script>

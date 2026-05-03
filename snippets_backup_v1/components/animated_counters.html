@@ -1,0 +1,87 @@
+<!-- 
+Compteurs Statistiques Animés
+INSTRUCTIONS:
+1. Ajouter un Code Snippet dans une section bande (full width).
+2. Coller le code.
+-->
+<style>
+    .stats-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 40px 0;
+        font-family: inherit;
+        text-align: center;
+    }
+
+    .stat-item {
+        flex: 1 1 200px;
+        margin: 20px;
+        color: #333;
+        /* Ajuster selon le fond de votre section */
+    }
+
+    .stat-number {
+        font-size: 3em;
+        font-weight: 800;
+        color: #e53935;
+        /* Couleur Accent */
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .stat-label {
+        font-size: 1.1em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+</style>
+
+<div class="stats-row">
+    <div class="stat-item">
+        <span class="stat-number" data-target="10">0</span>
+        <span class="stat-label">Ans d'expérience</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" data-target="150">0</span>
+        <span class="stat-label">Propriétés Vendues</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" data-target="98">0</span>
+        <span class="stat-label">% Satisfaction</span>
+    </div>
+</div>
+
+<script>
+    // Animation déclenchée quand l'élément est visible
+    document.addEventListener("DOMContentLoaded", () => {
+        const stats = document.querySelectorAll('.stat-number');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000; // ms
+                    const increment = target / (duration / 16); // 60fps
+
+                    let current = 0;
+                    const updateCount = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current) + (target > 90 && target < 100 ? "%" : "+"); // Ajout petit suffixe
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            counter.innerText = target + (target > 90 && target < 100 ? "%" : "+");
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        stats.forEach(stat => observer.observe(stat));
+    });
+</script>

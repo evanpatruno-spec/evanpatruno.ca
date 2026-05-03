@@ -211,15 +211,35 @@ def generate_newsletter_json(force_zoho=False):
         "5": "Mai", "6": "Juin", "7": "Juillet", "8": "Août",
         "9": "Septembre", "10": "Octobre", "11": "Novembre", "12": "Décembre"
     }
-    month_name = months_fr[str(now.month)]
-    year = now.year
+
+    # LOGIQUE DE DATE : Si on est le 1-10 du mois, le rapport concerne le mois précédent
+    if now.day <= 10:
+        report_month = now.month - 1
+        report_year = now.year
+        if report_month == 0:
+            report_month = 12
+            report_year -= 1
+    else:
+        report_month = now.month
+        report_year = now.year
+
+    month_name = months_fr[str(report_month)]
+    year = report_year
     
     # Lien vers le rapport PDF généré sur Vercel via le sous-domaine
-    report_filename = now.strftime('%Y-%m.pdf')
+    report_filename = f"{report_year}-{report_month:02d}.pdf"
     report_url = f"https://dossier.evanpatruno.ca/rapports/{report_filename}"
 
     newsletter_data = {
-        "campaign_id": f"NL-{now.month}-{year}",
+        "Sujet": f"Infolettre - {month_name} {year}",
+        "Mois": month_name,
+        "Annee": str(year),
+        "Taux_BOC": boc_rate,
+        "Contenu_Article": "\n\n".join([f"{a.get('title', '')}: {a.get('description', a.get('summary', ''))[:200]}..." for a in top_news]),
+        "Citation": daily_quote,
+        "Astuce_Pro": pro_tip,
+        "Lien_Rapport": report_url,
+        "campaign_id": f"NL-{report_month}-{year}",
         "month": month_name,
         "year": year,
         "boc_rate": boc_rate,
@@ -237,9 +257,6 @@ def generate_newsletter_json(force_zoho=False):
                 "source": item.get('source', 'Source inconnue')
             } for item in top_news
         ],
-        "daily_quote": daily_quote,
-        "pro_tip": pro_tip,
-        "report_url": report_url,
         "report_label": f"Rapport de Marché - {month_name} {year}",
         "expert_note": "Le marché s'équilibre. C'est le moment idéal pour réévaluer vos capacités de financement avant la prochaine vague immobilière.",
         "footer_msg": "Besoin d'une évaluation précise de votre propriété ?",
@@ -334,4 +351,6 @@ def update_jsonbin(data):
     return bin_id
 
 if __name__ == "__main__":
-    generate_newsletter_json()
+    import sys
+    force = "--force" in sys.argv
+    generate_newsletter_json(force_zoho=force)

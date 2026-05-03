@@ -23,7 +23,10 @@ def generate_evan_message(data):
     
     avg_trend = avg_trend / trends_count if trends_count > 0 else 0
     
-    current_month = datetime.now().month
+    now = datetime.now()
+    # Si on est au début du mois (1-10), on parle du mois qui vient de finir
+    report_month = now.month - 1 if now.day <= 10 else now.month
+    if report_month == 0: report_month = 12
     
     # LOGIQUE DE DÉCISION DU MESSAGE
     if "baiss" in boc_status or "diminu" in boc_status:
@@ -32,7 +35,10 @@ def generate_evan_message(data):
     if avg_trend > 8:
         return f"Le marché s'échauffe avec une hausse moyenne des prix de {avg_trend:.0f}% ce mois-ci. Si vous envisagez de vendre, les conditions sont optimales. Pour les acheteurs, la rapidité et une pré-approbation solide sont vos meilleurs atouts dans ce contexte de forte demande."
 
-    if current_month in [3, 4, 5]: # Printemps
+    if report_month == 5: # Mai spécifique
+        return "Le mois de mai est traditionnellement le pic d'activité de l'année. La sélection de propriétés est à son maximum, mais les acheteurs sont aussi plus nombreux. Pour réussir votre transaction ce mois-ci, l'analyse fine des comparables est cruciale : ne surpayez pas, mais soyez prêt à agir avec conviction."
+
+    if report_month in [3, 4]: # Printemps (Mars/Avril)
         return "Le marché printanier est officiellement là. C'est la période la plus active de l'année. Les nouvelles inscriptions augmentent, offrant plus de choix, mais la compétition reste forte. Une stratégie d'achat bien rodée est indispensable pour ne pas passer à côté de votre coup de cœur."
 
     if boc_rate > 4.5:
@@ -57,6 +63,18 @@ def main():
 
     # 2. Préparer les variables pour le template
     now = datetime.now()
+    
+    # LOGIQUE DE DATE : Si on est le 1-10 du mois, le rapport concerne le mois précédent
+    if now.day <= 10:
+        report_month = now.month - 1
+        report_year = now.year
+        if report_month == 0:
+            report_month = 12
+            report_year -= 1
+    else:
+        report_month = now.month
+        report_year = now.year
+
     months_fr = {
         1: "Janvier", 2: "Février", 3: "Mars", 4: "Avril", 5: "Mai", 6: "Juin",
         7: "Juillet", 8: "Août", 9: "Septembre", 10: "Octobre", 11: "Novembre", 12: "Décembre"
@@ -77,8 +95,8 @@ def main():
     elif rate_val > 5.0: market_temp = "Marché Calme (Acheteurs)"
 
     context = {
-        "month_name": months_fr[now.month],
-        "year": now.year,
+        "month_name": months_fr[report_month],
+        "year": report_year,
         "boc_rate": data.get('boc_rate', '4.50%'),
         "boc_status": boc_status,
         "boc_date": data.get('last_update', now.strftime('%Y-%m-%d')).split(' ')[0],
@@ -100,7 +118,7 @@ def main():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-    filename = now.strftime('%Y-%m.html')
+    filename = f"{report_year}-{report_month:02d}.html"
     filepath = os.path.join(output_dir, filename)
     
     with open(filepath, 'w', encoding='utf-8') as f:
@@ -114,12 +132,13 @@ def main():
             index_data = json.load(f)
             
     # Ajouter le nouveau rapport s'il n'existe pas
+    report_id = f"{report_year}-{report_month:02d}"
     report_entry = {
-        "id": now.strftime('%Y-%m'),
-        "title": f"Rapport de Marché - {months_fr[now.month]} {now.year}",
+        "id": report_id,
+        "title": f"Rapport de Marché - {months_fr[report_month]} {report_year}",
         "date": now.strftime('%Y-%m-%d'),
-        "pdf": f"{now.strftime('%Y-%m')}.pdf",
-        "url": f"/rapports/{now.strftime('%Y-%m')}"
+        "pdf": f"{report_id}.pdf",
+        "url": f"/rapports/{report_id}"
     }
     
     # Éviter les doublons

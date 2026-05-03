@@ -1,0 +1,80 @@
+<!-- 
+Compte à Rebours (Countdown)
+INSTRUCTIONS:
+1. Ajouter Code Snippet.
+2. Définir la "deadline" dans le script.
+-->
+
+<style>
+    .countdown-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px auto;
+        font-family: sans-serif;
+        max-width: 600px;
+    }
+
+    .time-box {
+        background: #333;
+        color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        min-width: 80px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .time-val {
+        font-size: 2em;
+        font-weight: 700;
+        display: block;
+    }
+
+    .time-label {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        color: #ccc;
+    }
+</style>
+
+<div style="text-align:center;">
+    <h3>Prochaine Porte Ouverte dans :</h3>
+    <div class="countdown-container">
+        <div class="time-box"><span class="time-val" id="cd-d">0</span><span class="time-label">Jours</span></div>
+        <div class="time-box"><span class="time-val" id="cd-h">0</span><span class="time-label">Heures</span></div>
+        <div class="time-box"><span class="time-val" id="cd-m">0</span><span class="time-label">Min</span></div>
+        <div class="time-box"><span class="time-val" id="cd-s">0</span><span class="time-label">Sec</span></div>
+    </div>
+</div>
+
+<script>
+    // DATE CIBLE : (Année, Mois-1, Jour, Heure)
+    // Ex: Prochain Samedi à 14h
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + (6 - targetDate.getDay()) % 7 + 1); // Prochain Dimanche (approx)
+    targetDate.setHours(14, 0, 0, 0);
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            document.querySelector('.countdown-container').innerHTML = "<div>L'événement est commencé !</div>";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("cd-d").innerText = days;
+        document.getElementById("cd-h").innerText = hours;
+        document.getElementById("cd-m").innerText = minutes;
+        document.getElementById("cd-s").innerText = seconds;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+</script>

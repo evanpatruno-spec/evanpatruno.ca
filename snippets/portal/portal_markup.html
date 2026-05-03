@@ -2,25 +2,32 @@
     <div class="portal-aura"></div>
 
     <!-- SPLASH SCREEN -->
-    <div id="loadingSplash" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#0a0508; z-index:999999; display:flex; align-items:center; justify-content:center; flex-direction:column; transition: opacity 0.5s ease;">
-        <img src="https://evanpatruno-ca.vercel.app/pwa-icon-192.png" alt="Evan Patruno Logo" style="width:120px; height:120px; border-radius:30px; animation: pulseLogo 2s infinite ease-in-out;">
-        <div style="margin-top:25px; color:var(--dash-primary); font-family:'Outfit'; font-size:1rem; font-weight:800; letter-spacing: 2px;">CHARGEMENT...</div>
+    <div id="loadingSplash"
+        style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#0a0508; z-index:999999; display:flex; align-items:center; justify-content:center; flex-direction:column; transition: opacity 0.5s ease;">
+        <img src="https://evanpatruno-ca.vercel.app/pwa-icon-192.png" alt="Evan Patruno Logo"
+            style="width:120px; height:120px; border-radius:30px; animation: pulseLogo 2s infinite ease-in-out;">
+        <div
+            style="margin-top:25px; color:var(--dash-primary); font-family:'Outfit'; font-size:1rem; font-weight:800; letter-spacing: 2px;">
+            CHARGEMENT...</div>
     </div>
 
     <!-- CONNEXION -->
     <div class="portal-overlay" id="portalOverlay">
         <div class="login-card">
-            <img src="https://evanpatruno-ca.vercel.app/pwa-icon-192.png" alt="Evan Patruno Logo" style="width:80px; height:80px; border-radius:20px; box-shadow: 0 0 25px rgba(135,50,118,0.8); display:block; margin: 0 auto 20px auto;">
+            <img src="https://evanpatruno-ca.vercel.app/pwa-icon-192.png" alt="Evan Patruno Logo"
+                style="width:80px; height:80px; border-radius:20px; box-shadow: 0 0 25px rgba(135,50,118,0.8); display:block; margin: 0 auto 20px auto;">
             <div class="login-title">Mon Dossier Privé</div>
             <p class="login-subtitle">Accédez à votre espace client sécurisé.<br>Entrez votre Code Portail unique.</p>
             <div id="loginFormContainer">
                 <input type="text" placeholder="Code Dossier (ex: EP-1)" class="login-input" id="inpPortalCode">
-                <input type="password" maxlength="4" placeholder="4 derniers chiffres du tél." class="login-input" id="inpPortalPhone">
+                <input type="password" maxlength="4" placeholder="4 derniers chiffres du tél." class="login-input"
+                    id="inpPortalPhone">
                 <button type="button" class="login-btn" id="btnPortalLogin" onclick="handlePortalLogin(event)">
                     <span>Ouvrir mon dossier →</span>
                 </button>
 
-                <a href="https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install" id="btnInstallPWA" style="text-decoration:none; display:block; text-align:center;">📲 Installer l'App sur mon écran</a>
+                <a href="https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install" id="btnInstallPWA"
+                    style="text-decoration:none; display:block; text-align:center;">📲 Installer l'App sur mon écran</a>
             </div>
             <div class="login-security">🔒 Connexion chiffrée & sécurisée</div>
         </div>
@@ -29,26 +36,35 @@
     <!-- DASHBOARD -->
     <div class="portal-container" id="portalDash">
         <header id="secCockpit" style="margin-bottom: 20px; position: relative;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
                 <div>
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-                        <span id="txtCodeRef" style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 700; margin: 0 5px;">#--</span>
-                        <span id="badgeStage" style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">--</span>
+                        <span id="txtCodeRef"
+                            style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 700; margin: 0 5px;">#--</span>
+                        <span id="badgeStage"
+                            style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">--</span>
                     </div>
-                    <h1 id="txtWelcome" style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">Chargement...</h1>
-                    <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--</div>
+                    <h1 id="txtWelcome"
+                        style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">
+                        Chargement...</h1>
+                    <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--
+                    </div>
                 </div>
                 <div style="display: flex; gap: 10px;">
-                    <button onclick="nativeShare()" style="background: rgba(135, 50, 118, 0.2); border: 1px solid rgba(135, 50, 118, 0.4); color: #fff; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">📲 Partager</button>
-                    <button onclick="handleLogout()" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">🚪 Quitter</button>
+                    <button onclick="handleLogout()"
+                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">🚪
+                        Quitter</button>
                 </div>
             </div>
         </header>
 
         <!-- PUSH NOTIFICATION BANNER -->
-        <div id="pushBanner" style="display:none; background: rgba(135, 50, 118, 0.2); border: 1px solid rgba(135, 50, 118, 0.5); padding: 15px; border-radius: 15px; margin-bottom: 20px; align-items: center; justify-content: space-between;">
+        <div id="pushBanner"
+            style="display:none; background: rgba(135, 50, 118, 0.2); border: 1px solid rgba(135, 50, 118, 0.5); padding: 15px; border-radius: 15px; margin-bottom: 20px; align-items: center; justify-content: space-between;">
             <div style="font-size: 0.85rem; color: #fff;">🔔 Recevez les mises à jour en direct sur ce téléphone.</div>
-            <button onclick="requestNotificationPermission()" class="portal-btn-primary" style="padding: 10px 15px; font-size: 0.75rem;">Activer</button>
+            <button onclick="requestNotificationPermission()" class="portal-btn-primary"
+                style="padding: 10px 15px; font-size: 0.75rem;">Activer</button>
         </div>
 
         <!-- SUMMARY DASHBOARD -->
@@ -108,10 +124,13 @@
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
-                <p style="font-size:0.85rem; opacity:0.7; margin-bottom:15px;">Demandez la documentation confidentielle pour un numéro CENTRIS.</p>
+                <p style="font-size:0.85rem; opacity:0.7; margin-bottom:15px;">Demandez la documentation confidentielle
+                    pour un numéro CENTRIS.</p>
                 <div style="display:grid; gap:10px;">
-                    <input type="text" id="inpMLS" placeholder="Numéro CENTRIS (ex: 12345678)" style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                    <button onclick="requestMLSDoc()" class="portal-btn-primary" style="width:100%; padding:15px;">Demander la documentation ✨</button>
+                    <input type="text" id="inpMLS" placeholder="Numéro CENTRIS (ex: 12345678)"
+                        style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                    <button onclick="requestMLSDoc()" class="portal-btn-primary"
+                        style="width:100%; padding:15px;">Demander la documentation ✨</button>
                 </div>
             </div>
         </div>
@@ -127,12 +146,15 @@
                 <div class="visit-card" style="margin-bottom:20px;">
                     <h4 style="margin:0 0 15px 0; color:#fff; font-size:1rem;">📅 Demander une visite</h4>
                     <div style="display:grid; gap:10px; margin-bottom:15px;">
-                        <input type="text" id="inpVisitLoc" placeholder="Numéro CENTRIS ou Adresse" style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                        <input type="datetime-local" id="inpVisitDateTime" style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                        <input type="text" id="inpVisitLoc" placeholder="Numéro CENTRIS ou Adresse"
+                            style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                        <input type="datetime-local" id="inpVisitDateTime"
+                            style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
                     </div>
-                    <button onclick="requestVisit()" class="portal-btn-primary" style="width:100%; padding:18px;">Envoyer la demande 🚀</button>
+                    <button onclick="requestVisit()" class="portal-btn-primary"
+                        style="width:100%; padding:18px;">Envoyer la demande 🚀</button>
                 </div>
-                
+
                 <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
             </div>
         </div>
@@ -144,7 +166,9 @@
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
-                <div id="wrapTeam" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;"></div>
+                <div id="wrapTeam"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+                </div>
             </div>
         </div>
 
@@ -156,16 +180,26 @@
             </div>
             <div class="section-content">
                 <div style="text-align:center; margin-bottom:20px;">
-                    <p style="font-size:1rem; font-weight:700; color:#fff; margin-bottom:10px;">Votre recommandation vaut de l'or ! ✨</p>
-                    <p style="font-size:0.85rem; opacity:0.8; line-height:1.4;">Devenez ambassadeur en recommandant mes services à un proche. Profitez de privilèges exclusifs une fois la transaction conclue.</p>
+                    <p style="font-size:1rem; font-weight:700; color:#fff; margin-bottom:10px;">Votre recommandation
+                        vaut de l'or ! ✨</p>
+                    <p style="font-size:0.85rem; opacity:0.8; line-height:1.4;">Devenez ambassadeur en recommandant mes
+                        services à un proche. Profitez de privilèges exclusifs une fois la transaction conclue.</p>
                 </div>
-                
-                <div id="referralForm" style="display:grid; gap:12px; background:rgba(0,0,0,0.2); padding:15px; border-radius:15px; border:1px solid rgba(212,175,55,0.2);">
-                    <input type="text" id="refName" placeholder="Nom du proche" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                    <input type="tel" id="refPhone" placeholder="Téléphone ou Email" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                    <textarea id="refNotes" placeholder="Petit mot ou projet (Vente, Achat...)" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none; height:60px; resize:none;"></textarea>
-                    <button id="btnSubmitReferral" onclick="submitReferral()" class="btn-gold" style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer;">🎁 Envoyer la référence</button>
-                    <button onclick="nativeShare()" class="btn-gold" style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer; opacity: 0.9; background: linear-gradient(135deg, #f1c40f, #d4af37);">📲 Partager mon lien Ambassadeur</button>
+
+                <div id="referralForm"
+                    style="display:grid; gap:12px; background:rgba(0,0,0,0.2); padding:15px; border-radius:15px; border:1px solid rgba(212,175,55,0.2);">
+                    <input type="text" id="refName" placeholder="Nom du proche"
+                        style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                    <input type="tel" id="refPhone" placeholder="Téléphone ou Email"
+                        style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                    <textarea id="refNotes" placeholder="Petit mot ou projet (Vente, Achat...)"
+                        style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none; height:60px; resize:none;"></textarea>
+                    <button id="btnSubmitReferral" onclick="submitReferral()" class="btn-gold"
+                        style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer;">🎁
+                        Envoyer la référence</button>
+                    <button onclick="nativeShare()" class="btn-gold"
+                        style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer; opacity: 0.9; background: linear-gradient(135deg, #f1c40f, #d4af37);">📲
+                        Partager mon lien Ambassadeur</button>
                 </div>
             </div>
         </div>
@@ -186,7 +220,8 @@
     <div class="portal-quick-menu">
         <div class="quick-menu-item active" data-section="secCockpit" onclick="toggleSection('secCockpit')">🏠</div>
         <div class="quick-menu-item" data-section="secPrequal" onclick="toggleSection('secPrequal')">📋</div>
-        <div class="quick-menu-item" data-section="secTimeline" data-section="secTimeline" onclick="toggleSection('secTimeline')">⏳</div>
+        <div class="quick-menu-item" data-section="secTimeline" data-section="secTimeline"
+            onclick="toggleSection('secTimeline')">⏳</div>
         <div class="quick-menu-item" data-section="secConciergeMLS" onclick="toggleSection('secConciergeMLS')">📄</div>
         <div class="quick-menu-item" data-section="secVisites" onclick="toggleSection('secVisites')">📅</div>
         <div class="quick-menu-item" data-section="secTeam" onclick="toggleSection('secTeam')">👥</div>

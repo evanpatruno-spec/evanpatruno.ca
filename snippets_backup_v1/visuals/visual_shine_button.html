@@ -1,0 +1,49 @@
+<!-- 
+Boutons "Brillants" (Shine Effect)
+INSTRUCTIONS:
+1. Ajouter ce snippet dans le Footer.
+2. Cible automatiquement les boutons Zoho (.zpbutton).
+-->
+
+<style>
+    .zpbutton,
+    .shine-btn {
+        position: relative;
+        overflow: hidden;
+        /* Important pour cacher le reflet qui passe */
+    }
+
+    /* Le reflet de lumière pseudo-élément */
+    .zpbutton::after,
+    .shine-btn::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        /* Départ hors cadre à gauche */
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+        transform: skewX(-25deg);
+        /* Inclinaison */
+        animation: shine 6s infinite;
+        /* Répète toutes les 6 secondes */
+    }
+
+    @keyframes shine {
+        0% {
+            left: -100%;
+        }
+
+        20% {
+            left: 200%;
+        }
+
+        /* Passe rapidement */
+        100% {
+            left: 200%;
+        }
+
+        /* Reste invisible le reste du temps */
+    }
+</style>

@@ -45,9 +45,16 @@ jobs:
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
         run: node puppeteer_convert.js
 
+      - name: Trigger Zoho Notification
+        env:
+          JSONBIN_API_KEY: ${{ secrets.JSONBIN_API_KEY }}
+          ZOHO_WEBHOOK_URL: ${{ secrets.ZOHO_WEBHOOK_URL }}
+        run: python newsletter_generator.py --force
+
       - name: Commit and Push Report
         run: |
           git config --local user.email "evan.patruno@gmail.com"
           git config --local user.name "evanpatruno-spec"
           git add rapports/
+          git pull --rebase origin main
           git diff --quiet && git diff --staged --quiet || (git commit -m "Add monthly report [skip ci]" && git push)

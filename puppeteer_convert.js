@@ -5,9 +5,20 @@ const fs = require('fs');
 async function convert() {
     console.log("Démarrage de la conversion PDF...");
     const now = new Date();
-    const month = String(now.getMonth() + 1).padStart(2, '0');
-    const year = now.getFullYear();
-    const filename = `${year}-${month}`;
+    let reportMonth = now.getMonth() + 1;
+    let reportYear = now.getFullYear();
+
+    // Logique identique à report_generator.py : Si on est le 1-10 du mois, on traite le mois précédent
+    if (now.getDate() <= 10) {
+        reportMonth -= 1;
+        if (reportMonth === 0) {
+            reportMonth = 12;
+            reportYear -= 1;
+        }
+    }
+    
+    const monthStr = String(reportMonth).padStart(2, '0');
+    const filename = `${reportYear}-${monthStr}`;
     
     const htmlPath = path.join(__dirname, 'rapports', `${filename}.html`);
     const pdfPath = path.join(__dirname, 'rapports', `${filename}.pdf`);

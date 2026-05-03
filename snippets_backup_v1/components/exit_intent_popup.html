@@ -1,0 +1,109 @@
+<!-- 
+Popup "Exit Intent" (Sortie)
+INSTRUCTIONS:
+1. Ajouter un Code Snippet dans le Footer (pour qu'il charge sur la page voulue).
+2. Ce script détecte quand la souris sort de la fenêtre vers le haut.
+-->
+<style>
+    .exit-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        /* Caché par défaut */
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .exit-modal.show {
+        display: flex;
+        opacity: 1;
+    }
+
+    .exit-content {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        transform: translateY(-20px);
+        transition: transform 0.3s;
+    }
+
+    .exit-modal.show .exit-content {
+        transform: translateY(0);
+    }
+
+    .exit-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #999;
+    }
+
+    .exit-title {
+        font-size: 1.5em;
+        color: #e53935;
+        margin-bottom: 10px;
+    }
+
+    .exit-btn {
+        background: #e53935;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 15px;
+        text-decoration: none;
+        display: inline-block;
+    }
+</style>
+
+<div class="exit-modal" id="exitPopup">
+    <div class="exit-content">
+        <span class="exit-close" onclick="closePopup()">&times;</span>
+        <h3 class="exit-title">Attendez une seconde !</h3>
+        <p>Ne partez pas sans votre <strong>Guide Gratuit de l'Acheteur</strong>.</p>
+        <p>Découvrez les pièges à éviter avant de faire votre première offre.</p>
+        <a href="/contact" class="exit-btn">Télécharger le Guide</a>
+    </div>
+</div>
+
+<script>
+    // État pour ne pas spammer (utiliser sessionStorage pour la session courante)
+    const hasSeenPopup = sessionStorage.getItem('seenExitPopup');
+
+    if (!hasSeenPopup) {
+        document.addEventListener('mouseleave', function (e) {
+            // Si la souris sort par le haut (clientY < 0 ou proche de 0)
+            if (e.clientY < 10) {
+                showPopup();
+            }
+        });
+    }
+
+    function showPopup() {
+        if (sessionStorage.getItem('seenExitPopup')) return;
+
+        document.getElementById('exitPopup').classList.add('show');
+        // Marquer comme vu pour ne pas réafficher
+        sessionStorage.setItem('seenExitPopup', 'true');
+    }
+
+    function closePopup() {
+        document.getElementById('exitPopup').classList.remove('show');
+    }
+</script>

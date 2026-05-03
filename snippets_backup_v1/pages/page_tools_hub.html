@@ -1,0 +1,1774 @@
+<!-- 
+BOÎTE À OUTILS IMMOBILIERS PRO (VERSION 2.0 - PRECISION DATA)
+THEME: DARK GLASSMORPHISM
+INSTRUCTIONS:
+1. Copiez ce code dans votre page "Outils".
+-->
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+    :root {
+        /* BRANDING DARK MODE - UNIFORMED */
+        --hub-primary: #873276;
+        /* Brand Purple */
+        --hub-accent: #1e0a19;
+        /* Brand Dark */
+        --hub-bg: transparent;
+        --hub-card-bg: rgba(15, 23, 42, 0.8);
+        --hub-border: rgba(255, 255, 255, 0.1);
+        --hub-text-main: #ffffff;
+        --hub-text-muted: #94a3b8;
+        --hub-input-bg: rgba(0, 0, 0, 0.3);
+        --hub-success: #38a169;
+        /* Subtle Emerald */
+    }
+
+    .tools-hub-container {
+        font-family: 'Outfit', sans-serif;
+        color: var(--hub-text-main);
+        background: #1e0a19;
+        margin-top: -1px;
+        padding-top: 1px;
+    }
+
+    /* HERO TOOLS */
+    .hero-tools {
+        background: linear-gradient(135deg, rgba(30, 10, 25, 0.82), rgba(135, 50, 118, 0.25)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px !important;
+        text-align: center;
+        border-radius: 50px !important;
+        position: relative;
+        margin: 20px 20px 0 !important;
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+        min-height: 450px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-tools h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+        color: #ffffff;
+    }
+
+    /* --- NAVIGATION --- */
+    /* === NAVIGATION GRILLE COCKPIT === */
+    .hub-nav-grid-wrapper {
+        margin-bottom: 35px;
+    }
+
+    .hub-nav-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .hub-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 16px 10px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        cursor: pointer;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-align: center;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        line-height: 1.2;
+    }
+
+    .hub-nav-item .nav-icon {
+        font-size: 1.6rem;
+        transition: transform 0.25s ease;
+    }
+
+    .hub-nav-item:hover {
+        background: rgba(255, 255, 255, 0.09);
+        border-color: rgba(135, 50, 118, 0.4);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hub-nav-item:hover .nav-icon {
+        transform: scale(1.2);
+    }
+
+    .hub-nav-item.active {
+        background: linear-gradient(135deg, rgba(135, 50, 118, 0.6), rgba(90, 30, 80, 0.6));
+        border-color: rgba(135, 50, 118, 0.8);
+        color: white;
+        box-shadow: 0 6px 20px rgba(135, 50, 118, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+        transform: translateY(-2px);
+    }
+
+    .hub-nav-item-new {
+        background: rgba(167, 255, 0, 0.07) !important;
+        border-color: rgba(167, 255, 0, 0.25) !important;
+        color: #a7ff00 !important;
+    }
+
+    .hub-nav-item-new.active {
+        background: linear-gradient(135deg, rgba(167, 255, 0, 0.3), rgba(120, 200, 0, 0.2)) !important;
+        border-color: rgba(167, 255, 0, 0.7) !important;
+        box-shadow: 0 6px 20px rgba(167, 255, 0, 0.25) !important;
+    }
+
+    .hub-nav-item-new .nav-icon {
+        filter: drop-shadow(0 0 6px rgba(167, 255, 0, 0.6));
+    }
+
+    @media (max-width: 600px) {
+        .hub-nav-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        .hub-nav-item {
+            padding: 12px 8px;
+            font-size: 0.72rem;
+        }
+        .hub-nav-item .nav-icon {
+            font-size: 1.3rem;
+        }
+    }
+
+    /* --- CONTENT WRAPPER --- */
+    .th-content {
+        display: none;
+        animation: fadeIn 0.4s ease-out;
+    }
+
+    .th-content.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* --- CARDS & GRID --- */
+    .calc-card {
+        background: var(--hub-card-bg);
+        padding: 40px;
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--hub-border);
+        margin: 0 auto;
+        backdrop-filter: blur(16px);
+    }
+
+    /* 2 Column Layout for precise inputs */
+    .calc-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .calc-col-title {
+        color: #ffffff;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        border-bottom: 1px solid var(--hub-border);
+        padding-bottom: 10px;
+    }
+
+    /* --- INPUTS --- */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 0.9rem;
+        color: var(--hub-text-muted);
+        margin-bottom: 8px;
+    }
+
+    .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .std-input {
+        width: 100%;
+        background: var(--hub-input-bg);
+        border: 1px solid var(--hub-border);
+        padding: 12px 15px;
+        border-radius: 8px;
+        color: white;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+
+    .std-input:focus {
+        outline: none;
+        border-color: var(--hub-primary);
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .select-input {
+        width: 100%;
+        background: var(--hub-input-bg);
+        border: 1px solid var(--hub-border);
+        padding: 12px 15px;
+        min-height: 52px;
+        border-radius: 8px;
+        color: white;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        line-height: normal;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 16px;
+    }
+
+    .select-input option {
+        background: #1e293b;
+        color: white;
+    }
+
+    /* --- RESULTS --- */
+    .result-panel {
+        background: rgba(135, 50, 118, 0.08);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 24px;
+        padding: 40px;
+        text-align: center;
+        border: 1px solid rgba(135, 50, 118, 0.2);
+        margin-top: 30px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .res-label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--hub-text-muted);
+    }
+
+    .res-value-main {
+        font-size: 3rem;
+        font-weight: 800;
+        margin: 10px 0;
+        background: linear-gradient(135deg, white, var(--hub-primary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 10px 30px rgba(217, 70, 239, 0.25);
+    }
+
+    .res-grid-small {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid var(--hub-border);
+    }
+
+    .small-stat div:first-child {
+        font-size: 0.85rem;
+        color: var(--hub-text-muted);
+    }
+
+    .small-stat div:last-child {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+        margin-top: 5px;
+    }
+
+    /* --- SLIDERS --- */
+    input[type=range] {
+        width: 100%;
+        height: 6px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--hub-primary);
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    input[type=range]::-webkit-slider-thumb:hover {
+        transform: scale(1.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero-tools {
+            padding: 40px 20px 50px;
+        }
+
+        .calc-grid-2 {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .th-tab-btn {
+            width: 100%;
+            margin: 2px 0;
+        }
+
+        .res-value-main {
+            font-size: 2.2rem;
+        }
+    }
+
+    /* Tooltip CSS */
+    .evt-tooltip {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        cursor: help;
+        border-bottom: 1px dotted rgba(255,255,255,0.4);
+    }
+
+    .evt-tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--hub-card-bg);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1px solid var(--hub-border);
+        font-size: 0.8rem;
+        white-space: normal;
+        min-width: 200px;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 100;
+        font-weight: 500;
+        backdrop-filter: blur(10px);
+        pointer-events: none;
+    }
+
+    .evt-tooltip:hover::after {
+        opacity: 1;
+        visibility: visible;
+        bottom: 130%;
+    }
+
+    .evt-tooltip-icon {
+        background: var(--hub-primary);
+        color: white;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 9px;
+        font-weight: bold;
+    }
+    .evt-badge-new {
+        background: #a7ff00;
+        color: #1e0a19;
+        font-size: 0.65rem;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-left: 5px;
+        font-weight: 900;
+        vertical-align: middle;
+    }
+</style>
+
+<div class="tools-hub-container">
+    <!-- BOC FLASH ALERT PREMIUM - By Evan Patruno -->
+    <style>
+        :root {
+            --boc-primary: #ff007f;
+            --boc-bg: #1a0b16;
+            --boc-accent: #873276;
+        }
+
+        #boc-alert-wrap {
+            display: none;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(90deg, var(--boc-bg) 0%, #2d0f28 100%);
+            border-bottom: 2px solid var(--boc-accent);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .boc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 15px;
+        }
+
+        .boc-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .boc-badge {
+            background: var(--boc-primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: boc-pulse 2s infinite;
+            white-space: nowrap;
+        }
+
+        .boc-text {
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .boc-status-label {
+            font-weight: 700;
+            color: #ffb8e6;
+        }
+
+        .boc-rate-val {
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .boc-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .boc-next-ann {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            padding-left: 20px;
+            white-space: nowrap;
+        }
+
+        .boc-next-val {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .boc-cta {
+            background: #fff;
+            color: var(--boc-bg);
+            padding: 10px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+            cursor: pointer;
+            border: none;
+        }
+
+        .boc-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+            background: #f8f8f8;
+        }
+
+        @keyframes boc-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 127, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 0, 127, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 127, 0);
+            }
+        }
+
+        /* MOBILE OPTIMIZATION */
+        @media (max-width: 768px) {
+            .boc-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 10px;
+                text-align: center;
+            }
+
+            .boc-left {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .boc-text {
+                font-size: 0.88rem;
+                line-height: 1.4;
+            }
+
+            .boc-right {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .boc-next-ann {
+                border-left: none;
+                padding-left: 0;
+                font-size: 0.8rem;
+            }
+
+            .boc-cta {
+                width: 100%;
+                padding: 14px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* MODAL SYSTEM */
+        #boc-lead-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 5, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 30000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        #boc-lead-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .boc-modal-card {
+            background: #230d20;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.7);
+            position: relative;
+            padding: 40px;
+            transform: translateY(20px);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        #boc-lead-modal.active .boc-modal-card {
+            transform: translateY(0);
+        }
+
+        .boc-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .boc-modal-close:hover {
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .boc-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .boc-input:focus {
+            border-color: var(--boc-primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .boc-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--boc-primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .boc-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 0, 127, 0.3);
+        }
+    </style>
+
+    <div id="boc-alert-wrap">
+        <div class="boc-container">
+            <div class="boc-left">
+                <div class="boc-badge">Flash Taux</div>
+                <div class="boc-text">
+                    La Banque du Canada <span id="boc-status" class="boc-status-label">a maintenu</span> son taux à
+                    <span id="boc-rate" class="boc-rate-val">--%</span>
+                </div>
+            </div>
+            <div class="boc-right">
+                <div class="boc-next-ann">
+                    Prochaine annonce : <span id="boc-next" class="boc-next-val">--</span>
+                </div>
+                <button class="boc-cta" onclick="openBocModal()">Sécuriser mon taux</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOC MODAL -->
+    <div id="boc-lead-modal">
+        <div class="boc-modal-card">
+            <div class="boc-modal-close" onclick="closeBocModal()">×</div>
+            <h2 style="color: white; margin: 0 0 10px; font-size: 1.8rem; text-align: center;">Sécurisez votre taux 🎯
+            </h2>
+            <p style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 30px;">
+                Une annonce de taux approche ou vient d'avoir lieu. Soyez rappelé en priorité par Evan pour sécuriser
+                vos conditions.
+            </p>
+
+            <iframe id="bocHiddenFrame" name="bocHiddenFrame" style="display:none;"></iframe>
+            <form id="bocForm" action='https://crm.zoho.com/crm/WebToLeadForm' method='POST' target='bocHiddenFrame'
+                onsubmit="handleBocSubmit(event)">
+                <input type="hidden" name="xnQsjsdp"
+                    value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                <input type="hidden" name="xmIwtLD"
+                    value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                <input type="hidden" name="actionType" value="TGVhZHM=">
+                <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca">
+                <input type="hidden" name="LEADCF7" value="ALERTE_TAUX_BOC">
+                <input type='hidden' name='Description' value='Demande via Flash Taux Directeur (Capture Modale)'>
+
+                <input type="text" name="First Name" placeholder="Prénom" class="boc-input" required>
+                <input type="text" name="Last Name" placeholder="Nom" class="boc-input" required>
+                <input type="email" name="Email" placeholder="Email" class="boc-input" required>
+                <input type="tel" name="Mobile" placeholder="Téléphone" class="boc-input" required>
+
+                <div style="margin: 10px 5px; display: flex; align-items: flex-start; gap: 12px; text-align: left;">
+                    <input type="checkbox" name="LEADCF109" id="newsletter_tools_boc" style="width: 16px; height: 16px; margin-top: 3px; cursor: pointer; accent-color: #873276;">
+                    <label for="newsletter_tools_boc" style="font-size: 0.8rem; color: rgba(255,255,255,0.7); cursor: pointer; line-height: 1.3;">
+                        S'abonner à l'infolettre (analyses marché & taux).
+                    </label>
+                </div>
+
+                <button type="submit" id="bocBtnSubmit" class="boc-submit">Me recontacter stratégiquement 🚀</button>
+            </form>
+
+            <div id="bocSuccess" style="display:none; text-align:center; padding:20px; animation: fadeIn 0.4s ease;">
+                <div style="font-size: 3.5rem; margin-bottom: 20px;">✅</div>
+                <h3 style="color:white; margin-bottom:10px; font-weight:800;">C'est noté !</h3>
+                <p style="color:rgba(255,255,255,0.7); font-size:1.1rem;">Merci, Evan vous rappellera en priorité pour
+                    sécuriser votre taux.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openBocModal() { document.getElementById('boc-lead-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeBocModal() { document.getElementById('boc-lead-modal').classList.remove('active'); document.body.style.overflow = ''; }
+
+        function handleBocSubmit(e) {
+            const btn = document.getElementById('bocBtnSubmit');
+            const form = document.getElementById('bocForm');
+            const success = document.getElementById('bocSuccess');
+
+            btn.innerText = "Envoi en cours...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                form.style.display = 'none';
+                success.style.display = 'block';
+                setTimeout(closeBocModal, 3000);
+            }, 1500);
+        }
+
+        (async function () {
+            const BOC_BIN_ID = "69db9753856a682189265c0b";
+            const MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C";
+            try {
+                const res = await fetch(`https://api.jsonbin.io/v3/b/${BOC_BIN_ID}/latest`, {
+                    headers: { 'X-Master-Key': MASTER_KEY }
+                });
+                const data = await res.json();
+                const record = data.record;
+
+                const now = new Date();
+                const nextAnn = new Date(record.next_date_iso + "T09:00:00");
+                const lastAnn = new Date(record.last_date_iso + "T09:00:00");
+
+                const diffNext = (nextAnn - now) / (1000 * 60 * 60 * 24);
+                const diffLast = (now - lastAnn) / (1000 * 60 * 60 * 24);
+
+                if (diffNext <= 7 || diffLast <= 7) {
+                    document.getElementById('boc-rate').textContent = record.rate + '%';
+                    document.getElementById('boc-status').textContent = record.status.toLowerCase();
+                    document.getElementById('boc-next').textContent = record.next_announcement;
+                    document.getElementById('boc-alert-wrap').style.display = 'block';
+                }
+            } catch (e) { console.warn("BOC Error:", e); }
+        })();
+    </script>
+
+    <header class="hero-tools">
+        <div style="max-width: 1100px; margin: 0 auto; width: 100%;">
+            <h1>Outils & Calculateurs</h1>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.25rem; max-width: 700px; margin: 0 auto;">
+                Analysez votre projet avec précision. Capacité d'emprunt, taxes et mensualités partout au Québec.
+            </p>
+        </div>
+    </header>
+
+    <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+
+        <!-- NAVIGATION GRILLE COCKPIT -->
+        <div class="hub-nav-grid-wrapper">
+            <div class="hub-nav-grid">
+                <a href="javascript:void(0)" class="hub-nav-item active" onclick="switchTab('affordability')">
+                    <span class="nav-icon">💰</span>
+                    Capacité d'Emprunt
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('mortgage')">
+                    <span class="nav-icon">🏠</span>
+                    Calculatrice Hypothécaire
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('closing')">
+                    <span class="nav-icon">📋</span>
+                    Frais de Clôture
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('welcome')">
+                    <span class="nav-icon">🏛️</span>
+                    Taxe Bienvenue
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('rvb')">
+                    <span class="nav-icon">⚖️</span>
+                    Louer vs Acheter
+                </a>
+                <a href="javascript:void(0)" class="hub-nav-item hub-nav-item-new" onclick="switchTab('wait-vs-buy')">
+                    <span class="nav-icon">⏳</span>
+                    Attendre vs Acheter <span class="evt-badge-new" style="display:block; margin-top:2px;">NEW</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 1. CAPACITÉ AVANCÉE -->
+        <div id="tab-affordability" class="th-content active">
+            <div class="calc-card">
+                <h2 style="text-align:center; margin-bottom:30px; font-weight:300; font-size:1.8rem; color:#ffffff;">
+                    Pouvoir
+                    d'Achat <span style="font-weight:700; color:var(--hub-primary);">Précis</span></h2>
+
+                <div class="calc-grid-2">
+                    <!-- Col 1: Revenus & Dettes & Taux -->
+                    <div>
+                        <div class="calc-col-title">Finances</div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Inclut le salaire de base, commissions stables, et primes garanties des co-emprunteurs.">Revenu Annuel Brut (Ménage) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="aff-income" value="100000" step="1000"
+                                oninput="runAff()">
+                        </div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Paiements minimums mensuels: cartes de crédit, prêts auto, marges (Normalement 3% du solde).">Dettes Mensuelles <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="aff-debts" value="500" step="50"
+                                oninput="runAff()">
+                        </div>
+                        <div class="form-group">
+                            <label>Mise de Fonds Disponible</label>
+                            <input type="number" class="std-input" id="aff-down" value="50000" step="1000"
+                                oninput="runAff()">
+                        </div>
+                        <div class="form-group">
+                            <label>Taux Hypothécaire Négocié (%)</label>
+                            <input type="number" class="std-input" id="aff-rate-neg" value="4.89" step="0.01"
+                                oninput="runAff()">
+                        </div>
+                    </div>
+
+                    <!-- Col 2: Charges Propriété -->
+                    <div>
+                        <div class="calc-col-title">Charges Propriété (Est.)</div>
+                        <div class="form-group">
+                            <label>Taxes Municip./Scolaires (Annuelles)</label>
+                            <input type="number" class="std-input" id="aff-taxes" value="4000" step="100"
+                                oninput="runAff()">
+                        </div>
+                        <div class="form-group">
+                            <label>Frais de Condo (Mensuel)</label>
+                            <input type="number" class="std-input" id="aff-condo" value="0" step="50"
+                                oninput="runAff()">
+                            <small style="color:var(--hub-text-muted); font-size:0.75rem;">(Laisser à 0 si
+                                maison)</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Chauffage (Mensuel)</label>
+                            <input type="number" class="std-input" id="aff-heat" value="150" step="25"
+                                oninput="runAff()">
+                        </div>
+                        <div class="form-group">
+                            <label style="display:flex;justify-content:space-between;">
+                                <span>Stress Test (Auto-calculé)</span>
+                                <span id="aff-stress-badge"
+                                    style="background:rgba(135,50,118,0.3);border:1px solid #873276;border-radius:6px;padding:1px 8px;font-size:0.78rem;color:#fff;">6.89
+                                    %</span>
+                            </label>
+                            <input type="number" class="std-input" id="aff-rate" value="6.89" step="0.1" readonly
+                                style="opacity:0.5;cursor:not-allowed;">
+                            <small style="color:rgba(255,255,255,0.35);font-size:0.72rem;">MAX(taux négocié + 2%, 5.25%)
+                                · OSFI 2025</small>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="result-panel">
+                    <div class="res-label">Prix d'Achat Maximum Estimé</div>
+                    <div class="res-value-main" id="aff-res-price">$0</div>
+
+                    <div class="res-grid-small">
+                        <div class="small-stat">
+                            <div>Hypothèque Max</div>
+                            <div id="aff-res-mortgage">$0</div>
+                        </div>
+                        <div class="small-stat">
+                            <div>Mise de Fonds Requise</div>
+                            <div id="aff-res-down-req">$0</div>
+                        </div>
+                    </div>
+                </div>
+                <p
+                    style="text-align:center; margin-top:15px; font-size:0.75rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
+                    <span style="opacity:0.6;">Source : Calcul basé sur les ratios GDS (39%) / TDS (44%) et simulation
+                        du "Stress Test" fédéral selon les directives d'Osafi/SCHL.</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- 2. HYPOTHÈQUE PRO -->
+        <div id="tab-mortgage" class="th-content">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+            <style>
+                .mc-slider-group {
+                    margin-bottom: 22px;
+                }
+
+                .mc-slider-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 8px;
+                }
+
+                .mc-slider-label {
+                    font-size: 0.88rem;
+                    color: var(--hub-text-muted);
+                }
+
+                .mc-slider-val {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: #fff;
+                    background: rgba(135, 50, 118, 0.2);
+                    border: 1px solid rgba(135, 50, 118, 0.4);
+                    border-radius: 8px;
+                    padding: 4px 12px;
+                    min-width: 120px;
+                    text-align: center;
+                }
+
+                .mc-result-primary {
+                    font-size: 3.5rem;
+                    font-weight: 900;
+                    background: linear-gradient(135deg, #fff, #873276);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    line-height: 1;
+                }
+
+                .mc-result-label {
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    color: rgba(255, 255, 255, 0.5);
+                    margin-top: 6px;
+                }
+
+                .mc-stats-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 15px;
+                    margin-top: 25px;
+                }
+
+                .mc-stat-box {
+                    background: rgba(255, 255, 255, 0.04);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 14px;
+                    padding: 16px;
+                    text-align: center;
+                }
+
+                .mc-stat-box .val {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 4px;
+                }
+
+                .mc-stat-box .lbl {
+                    font-size: 0.72rem;
+                    color: rgba(255, 255, 255, 0.4);
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .mc-stat-box.highlight {
+                    border-color: rgba(52, 211, 153, 0.3);
+                    background: rgba(52, 211, 153, 0.05);
+                }
+
+                .mc-stat-box.highlight .val {
+                    color: #34d399;
+                }
+
+                .mc-chart-wrap {
+                    width: 210px;
+                    height: 210px;
+                    margin: 0 auto 20px;
+                    position: relative;
+                    overflow: visible;
+                    padding: 5px;
+                    box-sizing: content-box;
+                }
+
+                .mc-chart-center {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    pointer-events: none;
+                }
+
+                .mc-chart-center-val {
+                    font-size: 1.1rem;
+                    font-weight: 800;
+                    color: #fff;
+                }
+
+                .mc-chart-center-lbl {
+                    font-size: 0.65rem;
+                    color: rgba(255, 255, 255, 0.4);
+                    text-transform: uppercase;
+                }
+
+                .mc-layout {
+                    display: grid;
+                    grid-template-columns: 1fr 260px;
+                    gap: 30px;
+                    align-items: start;
+                }
+
+                @media (max-width: 768px) {
+                    .mc-layout {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .mc-stats-grid {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+            </style>
+
+            <div class="calc-card">
+                <h2 style="text-align:center; margin-bottom:30px; font-weight:300; color:#ffffff;">Calculateur <span
+                        style="font-weight:700; color:var(--hub-primary);">Mensualités</span></h2>
+
+                <div class="mc-layout">
+                    <!-- LEFT : Sliders -->
+                    <div>
+                        <!-- Montant du prêt -->
+                        <div class="mc-slider-group">
+                            <div class="mc-slider-header">
+                                <span class="mc-slider-label">Montant du Prêt</span>
+                                <span class="mc-slider-val" id="mc-loan-display">450 000 $</span>
+                            </div>
+                            <input type="range" id="mc-loan-slider" min="50000" max="2000000" step="5000" value="450000"
+                                oninput="syncMcLoan(this.value)">
+                        </div>
+
+                        <!-- Taux d'intérêt -->
+                        <div class="mc-slider-group">
+                            <div class="mc-slider-header">
+                                <span class="mc-slider-label">Taux d'Intérêt</span>
+                                <span class="mc-slider-val" id="mc-rate-display">4.89 %</span>
+                            </div>
+                            <input type="range" id="mc-rate-slider" min="1" max="12" step="0.01" value="4.89"
+                                oninput="syncMcRate(this.value)">
+                        </div>
+
+                        <!-- Amortissement -->
+                        <div class="mc-slider-group">
+                            <div class="mc-slider-header">
+                                <span class="mc-slider-label">Amortissement</span>
+                                <span class="mc-slider-val" id="mc-amort-display">25 ans</span>
+                            </div>
+                            <input type="range" id="mc-amort-slider" min="5" max="30" step="5" value="25"
+                                oninput="syncMcAmort(this.value)">
+                        </div>
+
+                        <!-- Fréquence -->
+                        <div class="mc-slider-group">
+                            <div class="mc-slider-header">
+                                <span class="mc-slider-label">Fréquence de Paiement</span>
+                            </div>
+                            <select class="select-input" id="mc-freq" onchange="runMort()">
+                                <option value="12" selected>Mensuel</option>
+                                <option value="24">Bimensuel (x24)</option>
+                                <option value="26">Aux 2 semaines (Accéléré)</option>
+                                <option value="52">Hebdomadaire (Accéléré)</option>
+                            </select>
+                        </div>
+
+                        <!-- Résultat principal -->
+                        <div class="result-panel" style="margin-top:0; text-align:center; padding:25px 20px;">
+                            <div class="mc-result-primary" id="mc-res-pay">$0,00</div>
+                            <div class="mc-result-label" id="mc-res-label">par mois</div>
+                            <div class="mc-stats-grid">
+                                <div class="mc-stat-box">
+                                    <div class="val" id="mc-total-paid">$0</div>
+                                    <div class="lbl">Total versé</div>
+                                </div>
+                                <div class="mc-stat-box">
+                                    <div class="val" id="mc-total-interest" style="color:#f87171;">$0</div>
+                                    <div class="lbl">Total intérêts</div>
+                                </div>
+                                <div class="mc-stat-box highlight">
+                                    <div class="val" id="mc-saving-accel">—</div>
+                                    <div class="lbl">Économies (accéléré)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT : Donut Chart -->
+                    <div style="text-align:center;">
+                        <div class="mc-chart-wrap">
+                            <canvas id="mc-donut-chart"></canvas>
+                            <div class="mc-chart-center">
+                                <div class="mc-chart-center-val" id="mc-interest-pct">—%</div>
+                                <div class="mc-chart-center-lbl">Intérêts</div>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex; flex-direction:column; gap:8px; align-items:flex-start; padding:0 20px;">
+                            <div
+                                style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:rgba(255,255,255,0.6);">
+                                <span
+                                    style="width:12px;height:12px;border-radius:3px;background:#873276;flex-shrink:0;"></span>Capital
+                                remboursé
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:rgba(255,255,255,0.6);">
+                                <span
+                                    style="width:12px;height:12px;border-radius:3px;background:#f87171;flex-shrink:0;"></span>Intérêts
+                                payés
+                            </div>
+                        </div>
+                        <div
+                            style="margin-top:20px; padding:15px; background:rgba(52,211,153,0.08); border:1px solid rgba(52,211,153,0.2); border-radius:14px; font-size:0.82rem; color:rgba(255,255,255,0.7); line-height:1.5;">
+                            💡 <strong style="color:#34d399;">Astuce :</strong> En choisissant le rythme accéléré aux 2
+                            semaines (x26), vous économisez en moyenne <strong id="mc-accel-tip"
+                                style="color:#34d399;">—</strong> et remboursez <strong>~3 ans plus tôt</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <p
+                    style="text-align:center; margin-top:20px; font-size:0.72rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; opacity:0.6;">
+                    Formule standard d'amortissement hypothécaire canadien · Capitalisation semi-annuelle (SCHL)
+                </p>
+            </div>
+        </div>
+
+
+        <!-- 3. CASH DAM (CLOSING) -->
+        <div id="tab-closing" class="th-content">
+            <div class="calc-card">
+                <h2 style="text-align:center; margin-bottom:30px; font-weight:300; color:#ffffff;">Frais de <span
+                        style="font-weight:700;">Clôture</span></h2>
+
+                <div class="calc-grid-2">
+                    <div>
+                        <div class="calc-col-title">Transaction</div>
+                        <div class="form-group">
+                            <label>Prix d'Achat</label>
+                            <input type="number" class="std-input" id="cc-price" value="500000" oninput="runCC()">
+                        </div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Montant d'argent comptant que vous avez pour l'achat. Note: Le système déduira automatiquement les frais de clôture (Cash Dam) pour connaître le fond disponible réel.">Mise de Fonds <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="cc-down" value="25000" oninput="runCC()">
+                        </div>
+                        <div class="form-group">
+                            <label id="cc-ratio-label" style="color:var(--hub-success); font-weight:bold;">Ratio:
+                                5%</label>
+                            <input type="range" id="cc-slider" min="5" max="100" value="5" oninput="syncDown()">
+                            <div id="cc-error-container" style="display:none; color:#f87171; font-size:0.8rem; margin-top:8px; font-weight:600;">⚠️ Au Canada, minimum de 5% (jusqu'à 500k$) et 10% sur l'excédent.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="calc-col-title">Frais Annexes</div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Paiement de l'inspecteur en bâtiment. Souvent déboursé lors de l'offre d'achat.">Inspection en bâtiment <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="cc-insp" value="900" oninput="runCC()">
+                        </div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Honoraires du notaire, recherches d'actes et ajustements de taxes municipales/scolaires.">Notaire + Ajustements <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="cc-notary" value="2100" oninput="runCC()">
+                        </div>
+                        <div class="form-group">
+                            <label>Déménagement / Divers</label>
+                            <input type="number" class="std-input" id="cc-move" value="1500" oninput="runCC()">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-panel">
+                    <div class="res-label">Total Liquide Requis</div>
+                    <div class="res-value-main" id="cc-res-total">$0</div>
+
+                    <div class="res-grid-small" style="flex-wrap:wrap; gap:10px;">
+                        <div class="small-stat">
+                            <div class="evt-tooltip" data-tooltip="Aussi appelée Droit de mutation immobilière. (Estimation moyenne)">Taxe Bienvenue <span class="evt-tooltip-icon">?</span></div>
+                            <div id="cc-res-welcome">$0</div>
+                        </div>
+                        <div class="small-stat">
+                            <div class="evt-tooltip" data-tooltip="Taxe provinciale (9%) calculée sur la prime d'assurance SCHL. Payable chez le notaire.">Taxe SCHL (9%) <span class="evt-tooltip-icon">?</span></div>
+                            <div id="cc-res-schl">$0</div>
+                        </div>
+                    </div>
+                </div>
+                <p
+                    style="text-align:center; margin-top:15px; font-size:0.75rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
+                    <span style="opacity:0.6;">Source : Primes SCHL (2025), taxe de mutation (Loi provinciale), et
+                        barèmes moyens de la Chambre des Notaires du Québec.</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- 4. TAXE BIENVENUE -->
+        <div id="tab-welcome" class="th-content">
+            <div class="calc-card">
+                <h2 style="text-align:center; margin-bottom:30px; color:#ffffff;">Droits de Donation (Mutation)</h2>
+                <div class="form-group" style="margin:0 auto 20px auto;">
+                    <label>Municipalité</label>
+                    <select class="select-input" id="wt-city" onchange="runWT()">
+                        <option value="mtl">Montréal / Taux Supérieur (>500k @ 3%)</option>
+                        <option value="qc">Standard Provincial (2025)</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin:0 auto;">
+                    <label>Prix de la Propriété</label>
+                    <input type="number" class="std-input" id="wt-price" value="500000" oninput="runWT()">
+                </div>
+
+                <div class="result-panel">
+                    <div class="res-label">Montant à Payer</div>
+                    <div class="res-value-main" id="wt-res-total">$0</div>
+                    <div style="text-align:left; margin-top:20px; font-size:0.9rem; color:var(--hub-text-muted);"
+                        id="wt-explain">
+                        Détails ici...
+                    </div>
+                </div>
+                <p
+                    style="text-align:center; margin-top:15px; font-size:0.75rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
+                    <span style="opacity:0.6;">Source : Ville de Montréal (Tranches 2025) et Loi sur les droits de
+                        mutation immobilière (Barème provincial du Québec).</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- 5. LOUER VS ACHETER -->
+        <div id="tab-rvb" class="th-content">
+            <div class="calc-card">
+                <h2 style="text-align:center; margin-bottom:30px; font-weight:300; color:#ffffff;">Louer ou <span
+                        style="font-weight:700;">Acheter?</span></h2>
+
+                <div class="calc-grid-2">
+                    <div>
+                        <div class="calc-col-title">Actuellement</div>
+                        <div class="form-group">
+                            <label>Votre Loyer Actuel ($/mois)</label>
+                            <input type="number" class="std-input" id="rvb-rent" value="1500" oninput="runRvB()">
+                        </div>
+                        <div class="form-group">
+                            <label>Augmentation Annuelle (%)</label>
+                            <input type="number" class="std-input" id="rvb-rent-inc" value="2.5" step="0.1"
+                                oninput="runRvB()">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="calc-col-title">Paramètres Hypothèque</div>
+                        <div class="form-group">
+                            <label>Taux d'Intérêt Estimé (%)</label>
+                            <input type="number" class="std-input" id="rvb-rate" value="4.89" step="0.01"
+                                oninput="runRvB()">
+                        </div>
+                        <div class="form-group">
+                            <label>Horizon de Calcul (Années)</label>
+                            <input type="number" class="std-input" id="rvb-years" value="5" oninput="runRvB()">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-panel">
+                    <div class="res-label">Perte Sèche du Loyer (sur 5 ans)</div>
+                    <div class="res-value-main" id="rvb-res-total"
+                        style="color:#f43f5e; -webkit-text-fill-color: #f43f5e;">
+                        $0</div>
+
+                    <div class="res-grid-small">
+                        <div class="small-stat">
+                            <div>Capacité d'Achat Équivalente</div>
+                            <div id="rvb-res-power" style="color:var(--hub-success);">$0</div>
+                        </div>
+                    </div>
+                </div>
+                <p
+                    style="text-align:center; margin-top:15px; font-size:0.75rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
+                    <span style="opacity:0.6;">Source : Simulation financière basée sur l'évolution moyenne des loyers
+                        au Québec et l'amortissement du capital d'une hypothèque standard.</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- 6. ATTENDRE VS ACHETER (COÛT DE L'ATTENTE) -->
+        <div id="tab-wait-vs-buy" class="th-content">
+            <div class="calc-card">
+                <h2 style="text-align:center; margin-bottom:10px; font-weight:300; font-size:1.8rem; color:#ffffff;">
+                    Le <span style="font-weight:700; color:#a7ff00;">Vrai Coût</span> de l'Attente
+                </h2>
+                <p style="text-align:center; color:var(--hub-text-muted); margin-bottom:40px; max-width:600px; margin-inline:auto;">
+                    Calculer l'impact d'une baisse de taux vs l'augmentation du prix des maisons et la perte d'équité.
+                </p>
+
+                <div class="calc-grid-2">
+                    <!-- Inputs -->
+                    <div>
+                        <div class="calc-col-title">Paramètres Actuels</div>
+                        <div class="form-group">
+                            <label>Prix de la maison souhaitée ($)</label>
+                            <input type="number" class="std-input" id="wait-price" value="500000" step="5000" oninput="runWait()">
+                        </div>
+                        <div class="form-group">
+                            <label>Taux disponible aujourd'hui (%)</label>
+                            <input type="number" class="std-input" id="wait-rate-now" value="4.89" step="0.05" oninput="runWait()">
+                        </div>
+                        
+                        <div class="calc-col-title" style="margin-top:40px;">Prospective (Attente)</div>
+                        <div class="form-group">
+                            <label>Délai d'attente estimé (mois)</label>
+                            <input type="range" id="wait-months-slider" min="6" max="36" value="12" step="6" style="margin-bottom:10px;" oninput="syncWaitSlider()">
+                            <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:var(--hub-text-muted);">
+                                <span>6 mois</span>
+                                <span id="label-wait-months" style="color:#a7ff00; font-weight:800;">12 mois</span>
+                                <span>3 ans</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Hausse annuelle moyenne estimée des prix de l'immobilier au Québec.">Appréciation Annuelle des prix (%) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="wait-appreciation" value="5" step="0.5" oninput="runWait()">
+                        </div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Le taux que vous espérez obtenir après la baisse.">Futur taux espéré (%) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="wait-rate-future" value="4.00" step="0.05" oninput="runWait()">
+                        </div>
+                    </div>
+
+                    <!-- Comparison Result Area -->
+                    <div>
+                        <div class="calc-col-title">Comparatif</div>
+                        
+                        <div id="wait-verdict" style="padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); margin-bottom:30px;">
+                            <div style="color:var(--hub-text-muted); font-size:0.9rem; margin-bottom:5px;">Verdict sur <span id="res-wait-period">12</span> mois :</div>
+                            <div id="wait-total-impact" style="font-size:1.8rem; font-weight:800; color:#a7ff00;">-- $</div>
+                            <div id="wait-verdict-summary" style="font-size:0.85rem; line-height:1.4; margin-top:10px;">
+                                En attendant, vous économiserez sur le taux mais paierez plus cher pour la même maison.
+                            </div>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+                            <div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
+                                <div style="font-size:0.75rem; color:var(--hub-text-muted); text-transform:uppercase;">Prix Futur</div>
+                                <div id="res-wait-future-price" style="font-size:1.1rem; font-weight:700; margin-top:5px; color:white;">-- $</div>
+                                <div id="res-wait-apprec-gain" style="font-size:0.8rem; color:#f87171; margin-top:3px;">+ 0 $</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
+                                <div style="font-size:0.75rem; color:var(--hub-text-muted); text-transform:uppercase;">Paiement Futur</div>
+                                <div id="res-wait-future-pmt" style="font-size:1.1rem; font-weight:700; margin-top:5px; color:white;">-- $</div>
+                                <div id="res-wait-pmt-diff" style="font-size:0.8rem; color:#4ade80; margin-top:3px;">- 0 $ /ms</div>
+                            </div>
+                        </div>
+
+                        <div class="result-panel" style="margin-top:20px; padding:25px; border-color:rgba(167, 255, 0, 0.3);">
+                            <div class="res-label">Équité Perdue en attendant</div>
+                            <div id="res-wait-equity-lost" class="res-value-main" style="font-size:2.4rem; background:linear-gradient(135deg, #fff, #a7ff00); -webkit-text-fill-color:transparent;">0 $</div>
+                            <p style="font-size:0.8rem; color:var(--hub-text-muted); margin:0;">C'est l'augmentation de valeur que vous ne capturez pas en n'étant pas propriétaire pendant cette période.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div> <!-- Close inner wrapper -->
+</div> <!-- Close tools-hub-container -->
+
+<script>
+    // --- UTILS ---
+    function fmt(n, dec) {
+        dec = dec || 0;
+        return n.toLocaleString('fr-CA', {
+            style: 'currency',
+            currency: 'CAD',
+            maximumFractionDigits: dec,
+            minimumFractionDigits: dec
+        });
+    }
+    function getVal(id) {
+        var el = document.getElementById(id);
+        return el ? parseFloat(el.value) || 0 : 0;
+    }
+
+    // --- NAVIGATION (defined first, before anything else) ---
+    window.switchTab = function(id) {
+        var allButtons = document.querySelectorAll('.hub-nav-item');
+        var allSections = document.querySelectorAll('.th-content');
+
+        for (var i = 0; i < allButtons.length; i++) {
+            allButtons[i].classList.remove('active');
+        }
+        for (var j = 0; j < allSections.length; j++) {
+            allSections[j].classList.remove('active');
+        }
+
+        for (var k = 0; k < allButtons.length; k++) {
+            var attr = allButtons[k].getAttribute('onclick') || '';
+            if (attr.indexOf("'" + id + "'") !== -1) {
+                allButtons[k].classList.add('active');
+                break;
+            }
+        }
+
+        var target = document.getElementById('tab-' + id);
+        if (target) {
+            target.classList.add('active');
+            var offset = window.innerWidth < 768 ? 100 : 150;
+            window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        }
+
+        if (id === 'mortgage' && typeof runMort === 'function') { runMort(); }
+        if (id === 'wait-vs-buy' && typeof runWait === 'function') { runWait(); }
+        if (id === 'affordability' && typeof runAff === 'function') { runAff(); }
+        if (id === 'closing' && typeof runCC === 'function') { runCC(); }
+        if (id === 'welcome' && typeof runWT === 'function') { runWT(); }
+        if (id === 'rvb' && typeof runRvB === 'function') { runRvB(); }
+    };
+
+    // --- SHARED RATE HELPER ---
+    function getRateEff(annual) {
+        return Math.pow(1 + (annual / 100) / 2, 1 / 6) - 1;
+    }
+
+    // --- ANIMATION CACHE ---
+    var animCache = {};
+    function smartAnimate(id, value, isCurrency, dec) {
+        if (isCurrency === undefined) isCurrency = true;
+        if (dec === undefined) dec = 0;
+        var obj = document.getElementById(id);
+        if (!obj) return;
+        var currentText = obj.innerText.replace(/[^0-9,-]/g, '').replace(',', '.');
+        var startValue = parseFloat(currentText) || 0;
+        if (Math.abs(startValue - value) < 0.01) return;
+        if (animCache[id]) cancelAnimationFrame(animCache[id]);
+        var duration = 600;
+        var startTime = performance.now();
+        function update(currentTime) {
+            var elapsed = currentTime - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var easeOut = 1 - Math.pow(1 - progress, 3);
+            var current = startValue + (value - startValue) * easeOut;
+            obj.innerText = isCurrency ? fmt(current, dec) : current.toLocaleString('fr-CA', { maximumFractionDigits: dec });
+            if (progress < 1) {
+                animCache[id] = requestAnimationFrame(update);
+            }
+        }
+        animCache[id] = requestAnimationFrame(update);
+    }
+
+    // --- 1. AFFORDABILITY ---
+    function runAff() {
+        var income = getVal('aff-income');
+        var debts = getVal('aff-debts');
+        var down = getVal('aff-down');
+        var taxes = getVal('aff-taxes');
+        var condo = getVal('aff-condo');
+        var heat = getVal('aff-heat');
+        var negotiatedRate = getVal('aff-rate-neg') || 4.89;
+        var stressTestRate = Math.max(negotiatedRate + 2, 5.25);
+        document.getElementById('aff-rate').value = stressTestRate.toFixed(2);
+        document.getElementById('aff-stress-badge').innerText = stressTestRate.toFixed(2) + ' %';
+        var rate = getRateEff(stressTestRate);
+        var monthlyInc = income / 12;
+        var limitGDS = monthlyInc * 0.39;
+        var limitTDS = monthlyInc * 0.44;
+        var housingFixedCosts = heat + (taxes / 12) + (condo * 0.5);
+        var maxPayGDS = limitGDS - housingFixedCosts;
+        var maxPayTDS = limitTDS - debts - housingFixedCosts;
+        var maxPayment = Math.max(0, Math.min(maxPayGDS, maxPayTDS));
+        var n = 25 * 12;
+        var totalLoan = maxPayment * (1 - Math.pow(1 + rate, -n)) / rate;
+        if (!isFinite(totalLoan) || totalLoan < 0) {
+            document.getElementById('aff-res-price').innerText = '$0';
+            return;
+        }
+        var price = totalLoan + down;
+        var netLoan = totalLoan;
+        var ratio = down / price;
+        if (ratio < 0.20) {
+            var premium = 0.040;
+            if (ratio >= 0.15) premium = 0.028;
+            else if (ratio >= 0.10) premium = 0.031;
+            price = (totalLoan / (1 + premium)) + down;
+            netLoan = price - down;
+        }
+        smartAnimate('aff-res-price', price);
+        smartAnimate('aff-res-mortgage', netLoan);
+        smartAnimate('aff-res-down-req', down);
+    }
+
+    // --- 2. MORTGAGE ---
+    var mcDonutChart = null;
+    function syncMcLoan(val) {
+        document.getElementById('mc-loan-display').innerText = parseInt(val).toLocaleString('fr-CA') + ' $';
+        runMort();
+    }
+    function syncMcRate(val) {
+        document.getElementById('mc-rate-display').innerText = parseFloat(val).toFixed(2) + ' %';
+        runMort();
+    }
+    function syncMcAmort(val) {
+        document.getElementById('mc-amort-display').innerText = val + ' ans';
+        runMort();
+    }
+    function getMcValues() {
+        var loanSlider = document.getElementById('mc-loan-slider');
+        var rateSlider = document.getElementById('mc-rate-slider');
+        var amortSlider = document.getElementById('mc-amort-slider');
+        return {
+            P: loanSlider ? parseFloat(loanSlider.value) : 450000,
+            rate: rateSlider ? parseFloat(rateSlider.value) : 4.89,
+            years: amortSlider ? parseInt(amortSlider.value) : 25,
+            freq: parseInt(document.getElementById('mc-freq').value)
+        };
+    }
+    function runMort() {
+        var mc = getMcValues();
+        var P = mc.P, rate = mc.rate, years = mc.years, freq = mc.freq;
+        var r = getRateEff(rate);
+        var n = years * 12;
+        var pMonthly = P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        var payment = (pMonthly * 12) / freq;
+        var freqLabels = { 12: 'par mois', 24: 'bimensuel', 26: 'aux 2 semaines', 52: 'par semaine' };
+        document.getElementById('mc-res-pay').innerText = fmt(payment, 2);
+        document.getElementById('mc-res-label').innerText = freqLabels[freq] || 'par mois';
+        var totalPaid = pMonthly * n;
+        var totalInterest = totalPaid - P;
+        var interestPct = Math.round((totalInterest / totalPaid) * 100);
+        smartAnimate('mc-total-paid', totalPaid);
+        smartAnimate('mc-total-interest', totalInterest);
+        var pAccel = (pMonthly * 12) / 26;
+        var balance = P, totalPaidAccel = 0, monthsAccel = 0;
+        while (balance > 0 && monthsAccel < n * 2) {
+            var interestCharge = balance * r;
+            var principalThisMonth = pMonthly - interestCharge;
+            balance -= (principalThisMonth * 26 / 12);
+            totalPaidAccel += pAccel * 26 / 12;
+            monthsAccel++;
+        }
+        var saving = totalPaid - totalPaidAccel;
+        if (freq === 12 && saving > 0) {
+            document.getElementById('mc-saving-accel').innerText = fmt(saving);
+            document.getElementById('mc-accel-tip').innerText = fmt(saving);
+        } else {
+            document.getElementById('mc-saving-accel').innerText = freq !== 12 ? 'Actif' : '-';
+            document.getElementById('mc-accel-tip').innerText = fmt(saving > 0 ? saving : 0);
+        }
+        document.getElementById('mc-interest-pct').innerText = interestPct + '%';
+        var chartEl = document.getElementById('mc-donut-chart');
+        if (chartEl) {
+            if (mcDonutChart) {
+                mcDonutChart.data.datasets[0].data = [P, totalInterest];
+                mcDonutChart.update('active');
+            } else {
+                mcDonutChart = new Chart(chartEl, {
+                    type: 'doughnut',
+                    data: { datasets: [{ data: [P, totalInterest], backgroundColor: ['#873276', '#f87171'], borderWidth: 0, hoverOffset: 8 }] },
+                    options: {
+                        cutout: '72%', responsive: true, maintainAspectRatio: true, layout: { padding: 4 },
+                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(ctx) { return ' ' + fmt(ctx.raw); } } } },
+                        animation: { duration: 600 }
+                    }
+                });
+            }
+        }
+    }
+
+    // --- 3. CLOSING COSTS ---
+    function syncDown() {
+        var pct = document.getElementById('cc-slider').value;
+        var price = getVal('cc-price');
+        var amt = Math.round(price * (pct / 100));
+        document.getElementById('cc-down').value = amt;
+        document.getElementById('cc-ratio-label').innerText = 'Ratio: ' + pct + '%';
+        runCC();
+    }
+    function runCC() {
+        var price = getVal('cc-price');
+        var down = getVal('cc-down');
+        var minRequiredDown = 0;
+        if (price > 0) {
+            if (price <= 500000) { minRequiredDown = price * 0.05; }
+            else if (price < 1000000) { minRequiredDown = (500000 * 0.05) + ((price - 500000) * 0.10); }
+            else { minRequiredDown = price * 0.20; }
+        }
+        var ratio = (price > 0) ? (down / price) * 100 : 0;
+        if (down < minRequiredDown && price > 0) {
+            document.getElementById('cc-ratio-label').style.color = '#f43f5e';
+            document.getElementById('cc-error-container').style.display = 'block';
+            document.getElementById('cc-error-container').innerText = 'Mise de fonds minimale requise: ' + fmt(minRequiredDown);
+        } else {
+            document.getElementById('cc-ratio-label').style.color = 'var(--hub-success)';
+            document.getElementById('cc-error-container').style.display = 'none';
+        }
+        var schlRate = 0;
+        if (ratio < 4.99) schlRate = 0;
+        else if (ratio < 10) schlRate = 0.04;
+        else if (ratio < 15) schlRate = 0.031;
+        else if (ratio < 20) schlRate = 0.028;
+        var loan = price - down;
+        var schlPrem = down >= minRequiredDown ? loan * schlRate : 0;
+        var schlTax = schlPrem * 0.09;
+        var welcome = calcWT(price, true);
+        var others = getVal('cc-insp') + getVal('cc-notary') + getVal('cc-move');
+        var total = down + schlTax + welcome + others;
+        smartAnimate('cc-res-total', total);
+        smartAnimate('cc-res-welcome', welcome);
+        smartAnimate('cc-res-schl', schlTax);
+        smartAnimate('cc-res-down', down);
+    }
+
+    // --- 4. WELCOME TAX ---
+    function calcWT(price, isMtl) {
+        var tax = 0, rem = price;
+        var p1 = 61500;
+        var t1 = Math.min(rem, p1); tax += t1 * 0.005; rem -= t1;
+        if (rem > 0) {
+            if (isMtl) {
+                var mt2 = 307800, mt3 = 611500, mt4 = 1223100;
+                var t2 = Math.min(rem, mt2 - p1); tax += t2 * 0.01; rem -= t2;
+                if (rem > 0) { var t3 = Math.min(rem, mt3 - mt2); tax += t3 * 0.015; rem -= t3; }
+                if (rem > 0) { var t4 = Math.min(rem, mt4 - mt3); tax += t4 * 0.02; rem -= t4; }
+                if (rem > 0) { tax += rem * 0.03; }
+            } else {
+                var p2 = 307800;
+                var t2b = Math.min(rem, p2 - p1); tax += t2b * 0.01; rem -= t2b;
+                if (rem > 0) { tax += rem * 0.015; }
+            }
+        }
+        return tax;
+    }
+    function runWT() {
+        var price = getVal('wt-price');
+        var isMtl = document.getElementById('wt-city').value === 'mtl';
+        var tax = calcWT(price, isMtl);
+        smartAnimate('wt-res-total', tax);
+        var text = "<ul style='padding-left:20px; margin:0;'>";
+        var p1 = 61500, rem = price;
+        var t1 = Math.min(rem, p1); text += '<li>0.5% sur ' + fmt(t1) + ' = ' + fmt(t1 * 0.005) + '</li>'; rem -= t1;
+        if (rem > 0) {
+            if (isMtl) {
+                var mt2 = 307800, mt3 = 611500, mt4 = 1223100;
+                var t2 = Math.min(rem, mt2 - p1); text += '<li>1.0% (61k-307k) = ' + fmt(t2 * 0.01) + '</li>'; rem -= t2;
+                if (rem > 0) { var t3 = Math.min(rem, mt3 - mt2); text += '<li>1.5% (307k-611k) = ' + fmt(t3 * 0.015) + '</li>'; rem -= t3; }
+                if (rem > 0) { var t4 = Math.min(rem, mt4 - mt3); text += '<li>2.0% (611k-1.22M) = ' + fmt(t4 * 0.02) + '</li>'; rem -= t4; }
+                if (rem > 0) { text += '<li>3.0% (excedent) = ' + fmt(rem * 0.03) + '</li>'; }
+            } else {
+                var p2 = 307800;
+                var t2b = Math.min(rem, p2 - p1); text += '<li>1.0% (61k-307k) = ' + fmt(t2b * 0.01) + '</li>'; rem -= t2b;
+                if (rem > 0) { text += '<li>1.5% (excedent 307k) = ' + fmt(rem * 0.015) + '</li>'; }
+            }
+        }
+        text += '</ul>';
+        document.getElementById('wt-explain').innerHTML = text;
+    }
+
+    // --- 5. RENT VS BUY ---
+    function runRvB() {
+        var rent = getVal('rvb-rent');
+        var inc = getVal('rvb-rent-inc') / 100;
+        var years = getVal('rvb-years');
+        var totalRent = 0, currentRent = rent;
+        for (var i = 0; i < years; i++) {
+            totalRent += currentRent * 12;
+            currentRent *= (1 + inc);
+        }
+        var r = getRateEff(getVal('rvb-rate'));
+        var n = 25 * 12;
+        var buyingPower = rent * ((Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n)));
+        smartAnimate('rvb-res-total', totalRent);
+        smartAnimate('rvb-res-power', buyingPower);
+    }
+
+    // --- 6. WAIT VS BUY ---
+    function syncWaitSlider() {
+        var months = document.getElementById('wait-months-slider').value;
+        document.getElementById('label-wait-months').innerText = months + ' mois';
+        document.getElementById('res-wait-period').innerText = months;
+        runWait();
+    }
+    function runWait() {
+        var priceNow = getVal('wait-price');
+        var rateNow = getVal('wait-rate-now');
+        var months = getVal('wait-months-slider');
+        var appreciation = getVal('wait-appreciation') / 100;
+        var rateFuture = getVal('wait-rate-future');
+        var amort = 25;
+        if (!priceNow || !rateNow) return;
+        var rNow = getRateEff(rateNow);
+        var n = amort * 12;
+        var loanNow = priceNow * 0.95;
+        var pmtNow = (loanNow * rNow) / (1 - Math.pow(1 + rNow, -n));
+        var appreciationAmt = priceNow * (appreciation * (months / 12));
+        var priceFuture = priceNow + appreciationAmt;
+        var loanFuture = priceFuture * 0.95;
+        var rFuture = getRateEff(rateFuture);
+        var pmtFuture = (loanFuture * rFuture) / (1 - Math.pow(1 + rFuture, -n));
+        var pmtDiff = pmtFuture - pmtNow;
+        var totalImpact = appreciationAmt + (pmtDiff * 60);
+        smartAnimate('res-wait-future-price', priceFuture);
+        document.getElementById('res-wait-apprec-gain').innerText = '+ ' + fmt(appreciationAmt);
+        smartAnimate('res-wait-future-pmt', pmtFuture);
+        var pmtLabel = document.getElementById('res-wait-pmt-diff');
+        if (pmtDiff > 0) {
+            pmtLabel.innerText = '+ ' + fmt(pmtDiff) + ' / mois';
+            pmtLabel.style.color = '#f87171';
+        } else {
+            pmtLabel.innerText = fmt(Math.abs(pmtDiff)) + ' / mois de moins';
+            pmtLabel.style.color = '#4ade80';
+        }
+        smartAnimate('res-wait-equity-lost', appreciationAmt);
+        var impactEl = document.getElementById('wait-total-impact');
+        impactEl.innerText = fmt(totalImpact);
+        impactEl.style.color = totalImpact > 0 ? '#f87171' : '#4ade80';
+        var summaryEl = document.getElementById('wait-verdict-summary');
+        if (totalImpact > 0) {
+            summaryEl.innerHTML = '<strong>Attendre vous couterait environ ' + fmt(totalImpact) + ' de plus</strong> sur 5 ans, a cause de la hausse des prix, meme si les taux baissent.';
+        } else {
+            summaryEl.innerHTML = "Attendre semble avantageux ici. L'economie sur le taux compense la hausse des prix.";
+        }
+    }
+
+    // --- INIT ALL ---
+    setTimeout(function() {
+        try { runAff(); } catch(e) { console.warn('runAff:', e); }
+        try { runMort(); } catch(e) { console.warn('runMort:', e); }
+        try { runCC(); } catch(e) { console.warn('runCC:', e); }
+        try { runWT(); } catch(e) { console.warn('runWT:', e); }
+        try { runRvB(); } catch(e) { console.warn('runRvB:', e); }
+        try { runWait(); } catch(e) { console.warn('runWait:', e); }
+        console.log('Portal Script Init - Success');
+    }, 500);
+
+</script>

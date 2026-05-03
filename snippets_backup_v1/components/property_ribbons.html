@@ -1,0 +1,75 @@
+<!-- 
+Rubans Propriétés (Styling CSS)
+INSTRUCTIONS:
+1. Ajouter un Code Snippet dans l'En-tête (Head) de préférence, ou Footer.
+2. Pour utiliser: Ajoutez la classe "ribbon-sold" ou "ribbon-new" à un élément Image via l'éditeur Zoho.
+   (Note: S'il est difficile d'ajouter une classe directement à l'image dans Zoho, vous pouvez envelopper l'image dans un Div HTML et utiliser ce snippet).
+   
+Alternative Zoho: Si vous utilisez l'élément "Galerie" ou "Image", essayez d'ajouter ce code HTML directement autour de votre image dans un snippet HTML :
+   <div class="ribbon-container"> [VOTRE IMAGE] <span class="ribbon sold">VENDU</span> </div>
+-->
+
+<style>
+    /* Conteneur pour positionner */
+    .ribbon-container {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        /* Important pour couper le ruban */
+    }
+
+    /* Le Ruban de base */
+    .ribbon {
+        position: absolute;
+        top: 15px;
+        right: -25px;
+        transform: rotate(45deg);
+        width: 100px;
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+        font-size: 0.8rem;
+        padding: 5px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    /* Variantes */
+    .ribbon.sold {
+        background: #e53935;
+        /* Rouge */
+    }
+
+    .ribbon.new {
+        background: #43a047;
+        /* Vert */
+    }
+
+    .ribbon.offer {
+        background: #fb8c00;
+        /* Orange */
+    }
+
+    /* Exemple HTML pour tester */
+    .ribbon-demo {
+        width: 300px;
+        height: 200px;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #555;
+        margin: 10px;
+    }
+</style>
+
+<!-- DEMO (À supprimer si pas nécessaire) -->
+<div class="ribbon-container">
+    <div class="ribbon-demo">Photo Propriété</div>
+    <span class="ribbon sold">VENDU</span>
+</div>
+<div class="ribbon-container">
+    <div class="ribbon-demo">Photo Propriété</div>
+    <span class="ribbon new">NOUVEAU</span>
+</div>

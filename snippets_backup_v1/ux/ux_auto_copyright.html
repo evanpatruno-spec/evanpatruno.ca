@@ -1,0 +1,15 @@
+<!-- 
+Copyright Automatique
+INSTRUCTIONS:
+1. Ajouter le SPAN ci-dessous dans votre Footer à la place de l'année.
+   Exemple: © <span id="autoYear">2023</span> Evan Patruno
+2. Ajouter le script à la fin.
+-->
+
+<!-- HTML PART -->
+<span>&copy; <span id="autoYear"></span> Evan Patruno Inc.</span>
+
+<!-- SCRIPT PART -->
+<script>
+    document.getElementById('autoYear').innerText = new Date().getFullYear();
+</script>

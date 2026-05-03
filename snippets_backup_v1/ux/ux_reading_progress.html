@@ -1,0 +1,43 @@
+<!-- 
+Barre de Progression de Lecture
+INSTRUCTIONS:
+1. Ajouter dans le Footer.
+2. Une ligne rouge suit le défilement en haut de page.
+-->
+
+<style>
+    .progress-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: transparent;
+        z-index: 10001;
+        /* Au dessus de tout */
+    }
+
+    .progress-bar {
+        height: 4px;
+        background: #e53935;
+        /* Rouge Marque */
+        width: 0%;
+        transition: width 0.1s;
+        /* Fluidité */
+    }
+</style>
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    window.onscroll = function () { myFunction() };
+
+    function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>

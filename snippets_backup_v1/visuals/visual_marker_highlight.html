@@ -1,0 +1,53 @@
+<!-- 
+Surlignage Animé (Marker Highlight)
+INSTRUCTIONS:
+1. Ajouter ce code dans un Snippet (Footer).
+2. Entourez vos mots clés dans Zoho avec <span class="marker-text">MOT</span> (via l'éditeur HTML de bloc texte).
+-->
+
+<style>
+    .marker-text {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+        /* Le texte doit être au dessus */
+    }
+
+    .marker-text::before {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 0%;
+        /* Commence à 0 */
+        height: 30%;
+        /* Hauteur du trait (style surligneur bas) */
+        background-color: rgba(229, 57, 53, 0.4);
+        /* Rouge semi-transparent */
+        z-index: -1;
+        /* Derrière le texte */
+        transition: width 1s ease-in-out;
+    }
+
+    /* Classe active ajoutée par JS */
+    .marker-text.visible::before {
+        width: 100%;
+    }
+</style>
+
+<script>
+    // Observer pour déclencher l'animation quand on scrolle dessus
+    document.addEventListener("DOMContentLoaded", function () {
+        const markers = document.querySelectorAll('.marker-text');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        markers.forEach(mk => observer.observe(mk));
+    });
+</script>
