@@ -1,36 +1,10 @@
 {
   "news": [
     {
-      "title": "Les ventes chutent de 7 % en avril dans la région de Montréal",
-      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-05-06/les-ventes-chutent-de-7-en-avril-dans-la-region-de-montreal.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Nouvelle succursale de Liquidation Marie | Des gens en file dès 5 h à Granby",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-07/nouvelle-succursale-de-liquidation-marie/des-gens-en-file-des-5-h-a-granby.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Les ventes de propriétés dans la région de Montréal ont reculé de 7 % d’une année à l’autre en avril, les acheteurs continuant de faire preuve d’une « certaine prudence ».",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Honda prévoit suspendre la construction d’une usine de véhicules électriques au Canada",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-06/honda-prevoit-suspendre-la-construction-d-une-usine-de-vehicules-electriques-au-canada.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Honda Motor prévoit de suspendre définitivement le développement de son complexe consacré aux véhicules électriques au Canada, d’une valeur de 15 milliards, selon un article publié par Nikkei Asia.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Femmes en finances | Geneviève Fortier renverse les tendances",
-      "link": "https://www.lapresse.ca/affaires/portfolio/2026-05-06/femmes-en-finances/genevieve-fortier-renverse-les-tendances.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "À l’université, Geneviève Fortier ne se visualisait ni en finances ni dans les assurances. Pourtant, elle a fait mentir ses prédictions en devenant la première femme chef de la direction de Promutuel Assurance en 170 ans et en présidant le conseil d’Investissement Québec.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNNTF0c1p4T2Izc3hpWDBURTZURTVrUW1DemZNQUFUai0ybnowdGxzek5URHRSYXpRUUhBYUdvc21pcnlHY0ZzMVpsdzVsdnNQNlVDeHBac1htWVRaQ19xZnJNZXItbnV2LXVxay1ldDlFRmZuWFBQQmpWOFl3d1hqck0tNUNWM25zNkY1OFhRNEExN1BlUk13ZDFGVGVIeUpBSlEzenBNVzFYeDBTVWxDY0ZUdVVpYld3NnJPSDlsbVQtcFdYcGdseUREMTMyOXhQbXgtTS11ekx1QmlCOWdXR2xyZnRVTjZURmRzLTdnTEdYdnRIdF9TUzBLdTI0cFRz?oc=5",
-      "source": "news.google.com",
-      "description": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels  Journal de Québec",
+      "description": "À 5 h jeudi matin, Nancy Maloney était prête. Assise confortablement sur une chaise de camping, emmitouflée dans une couverture chaude, elle était la première en ligne pour l’ouverture officielle du magasin Liquidation Marie à Granby.",
       "cities": [],
       "category": "general"
     },
@@ -39,6 +13,14 @@
       "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNLTd5V3ZaWWRGN2tPRXBMVjJHQ3cxZHh0WUtuWFhFem5JajRWcUJvX1hEMFdOUmxNcU0xQTIxQTRYS29CcWE0QjRxRkQ3YTRnVklLMnprLU5NclFFX1MtT3hZckRZZWZBSEpHcHZKNHdsNm1ZM1NpVENvem13VVZTbHNzMTZseUlUZk4zSnI3X01PbHl4ZC1sYm1HQmEwWXViVG1oOFdIcmVoTHpCODhMdGZyVEdyVGJjaC1UWWVDUXVUNWRTVTFuN0ljV3Z1UVd0Q2ZCQ2ktZFBLQ2d5aUtIM3E4cUxYRGFCbmxCVDRKQ0lBcGxsRGZDdXRINEFJNmVBb0pVZTZYX2k4REhLQmRCNlpB?oc=5",
       "source": "news.google.com",
       "description": "Coup d’envoi d’un projet de 75 M$ à Laurier Québec pour construire 276 logements et des espaces commerciaux qui accueilleront un restaurant St-Hubert  QUB radio",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPUzRDSnN4ajVubmhLTmU5WkVQM3BvclNIYWsxMTBzN3BwWnByNzgxTTRldkVkYkppSnFGNFI0WHdUS2IwNWFBTDZYMHRrZzQ2aXMyMU9ZTFZNQUxzS2hyVklGY2Y2RWU1WWpabGRrNlgxNEpyNS1zeU1LREluNDVpS0E2NUdOVWhuMURndEFmM1RNb0diYzU4SmNYSkxkXzRmY2Zjc0NqNk9MUzJsU29KWnpoV3NxT0FYMHBORXRGSVNtUHZodFNBRThDV1JIN0FzSjRPVW43TFVMZ1Y5dU9lYTNOdjNfM3RhNlU3bmdfQkgyV0JITkhXQS1nQQ?oc=5",
+      "source": "news.google.com",
+      "description": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -61,6 +43,24 @@
       "category": "local"
     },
     {
+      "title": "Les ventes de logement reculent de 7 % à Montréal - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOLTZpY3V1czU5OTczYUJ2SFFjaWhyRXFSSDdla2VQMVVyNC1LN3JmdkhVZW5ubncwUVZwalNXOEdSaF9ERUpobW1GVHVJSmtxc1gzWnM1TzhLc3V6ckwzMFZHNmZ1YnV3VnlBa3NNOGNmT3ROd21rN0dPLTBEUnNwMDczY01BbkVVbDI1M0NONXluaXNSOW5ZUFlzbEY?oc=5",
+      "source": "news.google.com",
+      "description": "Les ventes de logement reculent de 7 % à Montréal  Canadian Mortgage Trends",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Courtage immobilier: un policier du SPVM écope d’une amende de 30 000$ - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNEtJeEJaajd2Qmk2TXRtMDVGMzFjWlhkWGRRU1JQTl9tTzdLNGFZbURmNnhzNjlhNk9HNGpYOFhLOUFMb3luZlVEMXVneDVIZ293N2lhUlVObU13WW5FWER1a1hwa1ctbkxYTHRER2FsNVpGUW9sRkhVOExXYjdlRFZWNFFfMWhleHo5VktrTlJFUW5nSEZVQ0Z2VFM2M3lxQnhhVzJlSzh6WFJ2RktqYg?oc=5",
+      "source": "news.google.com",
+      "description": "Courtage immobilier: un policier du SPVM écope d’une amende de 30 000$  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
       "source": "news.google.com",
@@ -69,10 +69,10 @@
       "category": "general"
     },
     {
-      "title": "CondoLegal.com - CondoLegal.com",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tME9fQmVtakxFLWEtSFMzQUJBUDhWdlJrQU9ycjRxcTV1cmNIdXZSTzE1OUpBNFpjc1dicl8wOUpSdnNMUnczRlNZYTJ2bUJwa1RUelFiSWRRODRPRVlHeTNpLU9oMV92c254OWtn?oc=5",
+      "title": "Québec se débarrasse des Tanguy à coup de maisons mobiles 4.0 - 106.9 Mauricie",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQdmdwVWRUSXRsTF9USm96X2pBdlBoWnBETFFIdER6U29KQjNWSHdVUDVZRlVMSl9XcW53bnNtcXFKUHp0OFBHa1VMZlM0LWJDcU9NLTViLXJraUMwUVEzUWtLNjBEenM3VWJSNWxMTmU0ajl5NDhwcmpyamZ0SC1WM3Bkc3ZScFg5MEg4Zi1PeGtFdVhycllzaVhUQ0s?oc=5",
       "source": "news.google.com",
-      "description": "CondoLegal.com  CondoLegal.com",
+      "description": "Québec se débarrasse des Tanguy à coup de maisons mobiles 4.0  106.9 Mauricie",
       "cities": [],
       "category": "general"
     },
@@ -87,36 +87,18 @@
       "category": "local"
     },
     {
-      "title": "Trump attaque Comey en justice: «C’est le même vieux comportement d’un développeur immobilier un peu minable», dit un politologue - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNekNDWHhSYWhDMTc1WHhaYlRwR1g0cDVVcHhnVHRvSWt6RTRVRlkzTV9BZEVJdGtLMlhqaEZyVHpCem04cHUyRDBFQUhPc2l1QmFBd19QM0JFVExaWjgtd0trTk0zSjBNWnk1enQ3VVlxN29yeEtUcnZpd3FRU1gxbEQxWl9CM2pIWTZ4dk1UbjFFcWJCbWU4dWtHVkhxZTJaLTN2ZDV4YlZJdDdkTnI1b0U1Q2RkRHMxbW5jNDh6aXh1MUFlTTdZOGhaYjdnTWtwWXFvNW80TnVGZ3phRmhKbkVxRUprWkRTaTJKdjJCZ1h1eFFXSENramh3?oc=5",
+      "title": "CondoLegal.com - CondoLegal.com",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tME9fQmVtakxFLWEtSFMzQUJBUDhWdlJrQU9ycjRxcTV1cmNIdXZSTzE1OUpBNFpjc1dicl8wOUpSdnNMUnczRlNZYTJ2bUJwa1RUelFiSWRRODRPRVlHeTNpLU9oMV92c254OWtn?oc=5",
       "source": "news.google.com",
-      "description": "Trump attaque Comey en justice: «C’est le même vieux comportement d’un développeur immobilier un peu minable», dit un politologue  Journal de Québec",
+      "description": "CondoLegal.com  CondoLegal.com",
       "cities": [],
       "category": "general"
-    },
-    {
-      "title": "ROSEFELLOW. redéfinit les standards de l’immobilier industriel avec son projet à Laval - Info de Laval",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVWlUYkZxNzE5ZnRxTm81QWE1RnVYZ0VhYUJITnBnSzAtOGhvLVh1WktyRnFoaU9tOGRvYmxoOThOYWRzcEE0dktaSGFnaDBfcnNKelhpdHVtRDJqbHFKd2lfU2lsR1dKSUNDeVNQUWUyYTFCWHVBVDZIQzVyaUxuOHdSVUxyTEg0b2VJS013VUtLb2pQUkd1dk9RdVJQZEI4ekozbklwYzhJaHJE?oc=5",
-      "source": "news.google.com",
-      "description": "ROSEFELLOW. redéfinit les standards de l’immobilier industriel avec son projet à Laval  Info de Laval",
-      "cities": [
-        "laval"
-      ],
-      "category": "local"
     },
     {
       "title": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs - TVA Nouvelles",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVFFZSGx3dkxLV1hDNGRlQUlLRmVqVkdaOV9NZUU1eHR6cC1pWUIyYVVCdTY0WXdKdjYwOHR5UC02UUV3ZEQ2SGhyQ1NBRldlajV6ZlNzM0gyR0pkMGhEQ3pZS3VZdEFrd2d6ckhBVXJHd210YXlzVmVZNDZrQlJ1YUY5LW9NNlhzTE1WalpPd1hhOTVYYTdtYm9PeDE1NnNjY19kempZZy1wY3ZOOVE?oc=5",
       "source": "news.google.com",
       "description": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Rita Baga vend sa maison de Saint-Bruno à 865 000 $ et voici toutes les photos - Vedette Québec",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSEU3dkJsdWgzSEdWTTluYnhHSTB1bGdmSG5YSEpnWk1ObENWTTdFMHNPdmJHZTRQWUJmeENxb2pNRUl1Nml6VmtRSVZpc0JRZ0RyRVNVU2MzY2NKektjWWFjdU1WeVNyYy11YTl6dzk0YzVwNjNaZzB4MjhfX3RSVDQ0Q0M4X2hmcG41REM2cw?oc=5",
-      "source": "news.google.com",
-      "description": "Rita Baga vend sa maison de Saint-Bruno à 865 000 $ et voici toutes les photos  Vedette Québec",
       "cities": [],
       "category": "general"
     },
@@ -129,18 +111,10 @@
       "category": "general"
     },
     {
-      "title": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaXFSRURHeUgtbnVYVVlORF9PdEdVS2NXTTF1Z25kQ3VodWRGSUxZQ0pTVWZXd1F4UGk4TWFqcGIySEU1R0h6elU3SjNrYlkwSWowQUdpM0VyTnR0SVdCelBDNGNxUFB5encwdDVLQWZBamtGSFBFYnVHOVROekRLNFJPa2UtRVZ1a1l6a01TWTFvY25H?oc=5",
+      "title": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQenhCbThtSndadi1KaGhwb2wtSzZjR2VlYVZlSGJTdUl4SFIyOGtkZVEwbVJHRllBTXNRUWVqZ3pmanVuajFVMDh3b0JkQ0JQSjkya3JJbXhyOFJ3dldfM2xGVnhJcFJCUHBaOTEya05SNVJJUmswel9xLUx5XzBOc3NuTWVNQnpUNHprV0ZjSUtyRVVLQzRyVklXcGg5bURLOEpVaDBaMS1KUXRfTDVIOUJTS3hTUmls?oc=5",
       "source": "news.google.com",
-      "description": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026  nesto.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada: les entreprises investissent avec prudence au Québec - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM0F3eFBtLUM5aXlmVHVjdWMxeGsxcXpSXy03WFhDUTUzVEZ3d0ZJNWtOampFU1JsMUVMbWwwel9pdHZfMzVYbm5EMi00VC1HclRCamdDSnFXaVhNcDhfcTl3dnJ3cHN3bFdaZWJfalBzRUlXczkzZ3pac1VsVEpVenZMbE02OXdPYzhQOWwwN0FsQnRRZGsyY0Q4YUNTZ0M2cTlkZnVCWXZWZTd6djV2bjVOSUk?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada: les entreprises investissent avec prudence au Québec  Les Affaires",
+      "description": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -153,18 +127,10 @@
       "category": "general"
     },
     {
-      "title": "Salaire minimum: voici le nouveau taux horaire en vigueur au Québec dès aujourd'hui - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWS1qb0ZqcGFwbWJyLWVTNk5naU56NWhvNVRRRmo1ZXR0anZKMXh5NVBHTXFlS29TZy1PZ3dqdnEtalVxOVc1Y3UtUXlmVld5UnFmZC1rZDVDb0RSdEE0NTJMbWJBbDRSVXI5SDFsWEVNY3JvMzhrbGE2R0haVTNtRHZfN1A3dGRaYjVyUUFNV1NZMkZjUXJyaXluTE12RlU4RnJZeWlB?oc=5",
+      "title": "Banque du Canada: les entreprises investissent avec prudence au Québec - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM0F3eFBtLUM5aXlmVHVjdWMxeGsxcXpSXy03WFhDUTUzVEZ3d0ZJNWtOampFU1JsMUVMbWwwel9pdHZfMzVYbm5EMi00VC1HclRCamdDSnFXaVhNcDhfcTl3dnJ3cHN3bFdaZWJfalBzRUlXczkzZ3pac1VsVEpVenZMbE02OXdPYzhQOWwwN0FsQnRRZGsyY0Q4YUNTZ0M2cTlkZnVCWXZWZTd6djV2bjVOSUk?oc=5",
       "source": "news.google.com",
-      "description": "Salaire minimum: voici le nouveau taux horaire en vigueur au Québec dès aujourd'hui  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada est prête à bouger les taux | La Presse - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWlRSQnFfN3dFM0pIVTE0T19sbV81V2U3Mzc0c196aXhRbWdocjhKM1FTaS1faUtzRWFEakFmV252b2xYdlo3M2wwUm11X285SUxvbTJ2TjhPUjlyLVBlMU9WWFhqc1pSdl9fVjRpQkZvWHZ3R3ZHSUZ6MW9Zd0QtVXRtaVlHY3pIR0d3SjB3RG0xdXNrcVNfVVFKMkhpZHljQmNWOTFPSQ?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada est prête à bouger les taux | La Presse  La Presse",
+      "description": "Banque du Canada: les entreprises investissent avec prudence au Québec  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -177,14 +143,6 @@
         "montreal"
       ],
       "category": "local"
-    },
-    {
-      "title": "La Banque du Canada devrait maintenir le taux directeur | RCI - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZzBZY3VfNnFMaTJuQVVWMDU4U0xUb1NETDhTSE9Kc0FQWFhMLVVwOVlRSndtOExSQV84MU9JaDJRQmN6NlJDc21QVklGT1A5TVppdE4yUHExQUxYWFdQUm1SbVVneTdkbkJ4WWRUbnEwMnhPNXljb0FQTFZDTjVTNU1TZkc2clFmTzlHX29UMA?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada devrait maintenir le taux directeur | RCI  Radio-Canada",
-      "cities": [],
-      "category": "general"
     },
     {
       "title": "La Banque du Canada pourrait relever ses taux dans le cas d’une inflation durable - Les Affaires",
@@ -203,14 +161,6 @@
       "category": "general"
     },
     {
-      "title": "Maintien du taux directeur à 2,25 % - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxONVVNTXlIa0lON3dIUDl4U25NMlg4ZzB5ajRzem93ek1oZGZ5bUI4U1RmVllyd2RGaW5ta29fNXphLU16UjJjV3RvV3E0LVRFOXZpb0JqSDhja3BlNV9rcjFkOXhUTlh3eTdDQm5MTU1DX3NpVlFHSDNsbVJ3QUo4Y2pkVGRHU3hkQ3c?oc=5",
-      "source": "news.google.com",
-      "description": "Maintien du taux directeur à 2,25 %  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Inflation : la Banque du Canada garde l’œil ouvert - Canadian Mortgage Trends",
       "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPYV95N2ZNdHN5Y1UwZWhPY0MwNTRaX05lN2Z5c2xfR3lfWGpMX3dQN0taSU5XazBYUklXdkJ5Z3NVMHRSZ3BBNmRlR0JONm0zeDlCWnFVSmF2SmhuaDZ2cmlGem5DM0JaMFBySjBlVXFHakw2VjNKRUNlbjE0TGo2NFhtVVZlYlNjX2t5SWV4T0FoMERHX1haUjdPWjlXOEtOV0pTN2FUZ003NV9OUWtfamZLd3U4V0I4eDM1ajBTaTcwUVFweWw1NFZqdGJJV0p5Wkxkc09wUU9uMUI5NVVpUkJudnlPZTluMDVtNkJDUXZFQno2UjdhREdLUVpvQzNwWVNGMQ?oc=5",
       "source": "news.google.com",
@@ -219,92 +169,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintiendra probablement son taux directeur à 2,25% - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPckJ1djhCYVNMaFd3dnI4SUpsYjc4alMxVGVJM1JoMklTYU5NQ3hNUVBpX0dHRDc5OEhLVHh3NDVxMndTQ3NLaVpDenl0T3BpTmMxU3RLd0M2UlcxckQ5cDZPdmRBcDFYSDh3WkY1SW8wa0ZnVVNGbUpFcXN4LVZjQkt4eE5jNWxERUtDaTRCekFKT01HenJ2dGplS3dmQi1RRHVpRVZyVEQtRVU?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintiendra probablement son taux directeur à 2,25%  QUB radio",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Tiff Macklem, l’inflation et les leçons de la COVID-19 - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNRWxUNU5yb0FlQ2hfR2xjMTQwSDJfeXNlS2Vqc1NrRE1hdW9ndjRDSEQwMk1QX2hDR25KOUFtQTIzMmpqaER6Wi1rdWNmSmtmQlhISmhrVEFCa1VZMXhTd21mci1WTU1qZ180emRyU3N3SzU3TzYyTzZ2Y1pINE9LcElB?oc=5",
-      "source": "news.google.com",
-      "description": "Tiff Macklem, l’inflation et les leçons de la COVID-19  Le Devoir",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - TVA Gatineau",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUjNrOGRTN2FPSzZVNUZKeDVySUVJVHExeXNpT1Y1dS1NZ0ZQaVotTkJGVzJXTmp1RThKa0xrRG1wS2ZyTFJobkVaazd1VDhYY3o2Tnp4c1JYYnRYUHlQQy1pRnhacEVMMk1HcjB5aWhqcHZPUkgyTUdUc1JVS0dqOHZQeUg?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  TVA Gatineau",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le taux directeur de 2,25% maintenu par la Banque du Canada - Courrier Laval",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQXJmZFpWWDJVbXZWY1hQTGhXUmJhNldtbkx2MDViN2VRMHBPcnU4M3QzdDRxMklGck5iZ2EyTWw2VlFNMEpVMUN2d0tfYW9rdG9jaHgyTUFBZXlHRHUxdWw4OHpJSE1kbjQ3My10RW03WXU2eFRheTNPUGpTX0Q0VUpRdFJNRnZoZGNVWA?oc=5",
-      "source": "news.google.com",
-      "description": "Le taux directeur de 2,25% maintenu par la Banque du Canada  Courrier Laval",
-      "cities": [
-        "laval"
-      ],
-      "category": "local"
-    },
-    {
       "title": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1 - Morningstar",
       "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNUHBpZnY0Z2g3aVNTLWU5WDMwdjRyRVpaTUFBeFgtemFqTXFTTWl3dFA3QU4wUVFua1h1cXE4YmtCUzdxVjFMcE5LeEZiQ2VqU0htc25lUkZfM1d5Nm5YYkJ0dFBvdzNKRXRKZVBDZEdxWXFCXy1CZk92Y3dKMzF6X0d5R3FyTk5YeUVuUk9xcHV5cThBT0hnOW9URWh5R0htaWhaSktwUlh5U2RJVXpBV0w3MHJHZm9LMXpjMW44X0x5RjZQb0h4UFZPdlR2UkhDUnB6V1JLbkNOVHc?oc=5",
       "source": "news.google.com",
       "description": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1  Morningstar",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient le taux directeur à 2,25% - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNTBnckNKYnVsejUyMDd5ckFwRVpVZVVkZU9HU25UWU80UktvdC1kSjhhcDB1U2dDQWluNnJUMUpWdUpJbEVuT0g3SEQ1OW5tb25GcTFITk16Ym5qNk1SYmduQmszZ05BbXVwR0czNW14elR3TnAxM2F0dkpCSDNZcDRVVGJWMEVvV3laSjFsWEtaMk54UHd1MUZLUFlkRjA?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient le taux directeur à 2,25%  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Chronologie: retour sur les 10 dernières décisions de la Banque du Canada - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVVlRTGlmRTZBYVNlQ21PWVRwY2hXNEhqRGpVRlFGTDZpQ0J5cWFvaTRaeWFJemRVamhmYkFxVEtaUWNhZ3VodGNoempja3dQOVVmVFN4VDF1UFpMaDlQYzY4WE1NdXpDWlg2NGVxcHNrTEJnY2NxU3A1VDZtNVRHTWMwQTVRR1ozU2FXTk1RZndYOEkyenp6eC1fM1E0bkQ0NzU2Sm9sRnBtNlp1XzNfWmFJbmo?oc=5",
-      "source": "news.google.com",
-      "description": "Chronologie: retour sur les 10 dernières décisions de la Banque du Canada  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada: la porte reste ouverte dans les deux directions pour 2026 - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZ1ozLXZqdWVIVzZqNEJfQlIzdHZnbkFZWkVwVUtaSHphLTVtTDNhcVNzcW53SG9wSmN1OTQycUc5MTFGZ2xaM0NLMnAydzJTYzZ3TUI1aTBvenBUWjVlQThRRXRsdzlHYndiUEtkSjJiN1FKNktoTnJYZWt4YXNFNGdqR3lsTlpRUTFoTWR5WVpfUzhMTjJNeS0zbUY4cmxXYzlHUV9wTHlvV0JaaWRiYmNwMVJmQUZvTTNN?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada: la porte reste ouverte dans les deux directions pour 2026  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25% - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbUtxRDNQcmNlbEdoUi1Ld3I1UGlBbzBsVHUxUndPYlZxSUt5UjVxZmt0eERBMFkzcVRBcTloZHZxcm05V0pXaHRpWXVXUUI3UmhJMDFnM1lpdlBoNmhxTFBMQl95dUtVZHoxNmZHOFFMQWdwYm1VQzk1dmN4aTBhTmN5Q2ZTRUQyQnFQSHFrTEJ5S3N5R0xYQg?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25%  QUB radio",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - MSN",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWmFUM3l2OVNfU2p0TmE5NG9JVFltekdXRG92a0xWSUVLcm94Wlh3em9TS0UyUTZoNGE3Sk9QRTRYS2g0T3N3LVp3RUF1aWJjWTUzMHJnVlVPREdzekRSajhoWWF0d1c4YmtTbUFwWnVuOGRJRHhXMkttREs4NlhOdVZEazJWcnhUZXgwX19XT1l4dFQ2NHBUbEFTLVNBY3JwU1o5cjZkLWtwTl9ZczVZcEU1bGdXQQ?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  MSN",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada annonce sa décision concernant le taux directeur du 29 avril - MSN",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcXFnbFplc2RTcG1JRG9RanpDTUw0X282MG9GcHBJS0FHMjRxNjBEaHlqelZLTWxsWXAxcHZzdngxNWxXQWI0bEoxRGJycmttNXNBNDVKZG12Yk5rU3hNNWU3QjRTQWdSYmFPODhHVlUxWVA2cmlzRlB6NTlNSDF2YlR3clBRbG42a2tyV3hGSGM3d01lQUQtVkpobnE2MUMwWE5aOHpGTmNCV0c4aE5hR29vMXhFQ0xMN0FmOW9BOXhPOVlXeVAwN3dGUVlrTHo5VVZSX1p3?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada annonce sa décision concernant le taux directeur du 29 avril  MSN",
       "cities": [],
       "category": "general"
     },
@@ -317,22 +185,6 @@
       "category": "general"
     },
     {
-      "title": "Scotiabank anticipe des hausses de taux de la Banque du Canada, souligne les risques inflationnistes et l'impact sur le CAD - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPUkY5MnNIUXpoc3NYc1JQWmZ0RjNqX0UybEp5M1lVOHFYLUkyLVhFXzFzdUg3YTJfdU5uQlpGdGJiNkZSZHFodDFCbS1Id29PcEMxaGY0T2poa3RvU2YyZ0ZIMUJrcFJCVmhSdVNpWlR5UU5tT2VtSWdhUVhjc3BfZ0QzQzlGOERjRFltSHRHLUFmMDk2cjBmT00xaG5pQjRkcnB4R0J2dk51S0JXWlRRc200QmpvQ1dBWmFDYk13SWdoNFBuX3ROQV82ZHlrWjZYZkEwSVFDMUtqMzZvcFlvbUJMRGRZNW5SYVZ4LVBqM090UQ?oc=5",
-      "source": "news.google.com",
-      "description": "Scotiabank anticipe des hausses de taux de la Banque du Canada, souligne les risques inflationnistes et l'impact sur le CAD  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Taux directeur : le patron de la Banque Nationale lance un avertissement à la Banque du Canada - MSN",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNcVFzczAybVB6WC1GTW1UWXBNd2NnZ3JrUms4MFQzRmVpMDloeXF6OFNrMDVubUp0Wm1Yanc5am1UdUpMaUhSTWhNTGVqTTU1bUhaUHFaV2JkWGk4NXdsWHVObHhYNnBXbzQ3UV9CU0dUSk9zRTJ1aDkxRWNLRFd1SGk5dTJBc1drRVR0T2lFODY0UlFRS1M3dFpqdjh6dDU3aUs5SG5MTG9xdkd2Sk9VcHFLX25seTVuVURfOTE4ZjNuNi1XekRsZ25pWTJEbWdsUnQtUS10WW5FYzZ4YUZJdURidTVSSE0?oc=5",
-      "source": "news.google.com",
-      "description": "Taux directeur : le patron de la Banque Nationale lance un avertissement à la Banque du Canada  MSN",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La Banque du Canada estime que la culture de la Fed perdurera sous la nouvelle présidence - Zonebourse Suisse",
       "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmpwM3BnSFlXRWdpdTU3TXp3V0RaNWxjRGVDTHV1d0UyTVBmSld3YXMwX3NzeVZ2MmE2dVkyQjhqRmpEVlp2b0hYckpzVUh0dVVfelR1QUhsUl9icGtZRUVJbjVpNnFkdF9fYkpzREl0MkZKR3FVbm5Kd0JzQWpLeFhKR2FPWS1LS0kzN3FLVXBxb2VLTzRzX0lUZnRTRUJjc2wtMHNidHpsbFRPd0FnMExnTGxvZHQwTVZwZ0xZSjZIQktteGI0QTZSOWpZdTlMcUZLb0hWSndtQ0NLY1ZVV1pZYw?oc=5",
       "source": "news.google.com",
@@ -341,10 +193,18 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada devrait rester sur la touche en attendant une meilleure visibilité sur les perspectives, selon BMO - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNN2VoVFo1ck5XN3ZYODg0aWRtTDFBSTVuc0FqdWNveWFuWUFzMVJZQ1JPekZaRlFZRERZZ3F5c2pweEs1aFJmRDI1NG5IUUZVbGo1N1VtOURORFFVRktTVGo4U2FlbC1MVUk3RUUxVGVGOERabjVaanlnNHBSNDhGQnpkWWY3TnlDNHdTdi02ZXZlcHIzWG5UUXFfX1ZRWnVTU3Z0UUJJNGhyNC1IYURjc2pCT3pyMmc5VXJMZ1RZVUU5bVkyV25QZlFuc252QU43SndMaW9Cc0hNWl9ZOGpyc2ZJSHZ4TV9LREVGWFA2VkRpX2M?oc=5",
+      "title": "La Banque du Canada envisage une réglementation des stablecoins d'ici la mi-2027 ou fin 2027 - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOeFY1U3dGVWZkMmhFclpvY0lSQS1wdzZuTU4yUzEtR2g1Mko2bXIxZTF3dlJBV0F6WWVSUGc1WWJSaHp4TXpralB5cmJDbFM2Z0R1Z3F0ZEZMSG1sZmdNYzdJa1lTQmk1VVFOTkIxd0wxQlpUcjVzTEJKWTNsNTltRWZuZlNXNnNlZXgtaDNsQ3JjQ1EwYVdRcmVKdzZwLVQtbUxHaDBaVEc0a3VoUDhOODN1bnJtUFRBMWMtelBMUHZGUUpQb0tZTzVzM09fVnVkZVljOHJFLVFDMi10a0VITTJNZ3NHcjFp?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada devrait rester sur la touche en attendant une meilleure visibilité sur les perspectives, selon BMO  Zonebourse",
+      "description": "La Banque du Canada envisage une réglementation des stablecoins d'ici la mi-2027 ou fin 2027  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOdnd1aXF5d2ZxRkktWE40STJfbzNuSmpuTG5TMklsMlNnVlRmdkp2bVFUaDJ6MWJLbkgwZmtSQ285WVUxak5Lc1dSVXNxNU5KRkY2aW9IWEFrYU94em53Uk5wWVlkdENFenBHcWtERkwtbjJoV3VKbXcwQlVtWHVHU2ZuWTYtLU1QcEZDY2E0bnFhb3dMeEF0RUFuMWVCM2tvM2pTb2YwYzBORlBLYVFzRTJPMWlERXVETVp3OVJjQnV4eDlueXdJbjd0NXJfejZMQWh3cmRXcFBoS2Rxb2d1REZNd21sV0U5N0NnLW1Pai1aNlk?oc=5",
+      "source": "news.google.com",
+      "description": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -357,18 +217,10 @@
       "category": "general"
     },
     {
-      "title": "La posture accommodante de la Banque du Canada pèse sur le huard, selon ING - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPM2p6NmZUdEtVb2F4VGVOZlk0LWZfbjFxeTZCRGU1QTdiTmlyU0VucWZjZmZoWGFSY3B6R2N2WnB5blZ2VVRaOHhsYndnVmZjZ0tXa18wSnVuUkw1Sjl0anFObEJZdExyMUxiakJWMnFtb05qS3R2UlJPRFJ3VnE1OUhKcWlJRkVCai1udXpHR0tSOEYybHRYeDVzd2tWeHpCQWZ6NUw0aDliTmwwNG5jZ0ppNlplWGNxR2lDdHVGX2RMNjFkUm1jS0xCcVRpN1c3?oc=5",
+      "title": "La Banque du Canada face à un exercice d'equilibriste delicat, selon la TD - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQdV9SOEliZFQ1WUVua0VORmx1LWVDbUlMWktBbkZVV3RKRG5hWVFuUE1ZaXBseksyU1c3RDdVQllTM3J4dTJWZ05VVjU1QW12eFpJdmI3b1M2ZmpRZHF1UVpkcVdSUGZNdGNSTjNYMGJGNXpyeVpVOU1GQjltUE9tNkUyVGhtY0FoM092WnJXYk8zb25mS1lQS2wzYS1zOWtlREdSaWF4VHNzNUlFUDZ0bEpNRHVWdkhoc3JwSlZLNVp2T2FFVjVhbkpyMnh0a2c?oc=5",
       "source": "news.google.com",
-      "description": "La posture accommodante de la Banque du Canada pèse sur le huard, selon ING  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Clôture du TSX : l'indice recule pour une cinquième séance consécutive alors que la Banque du Canada opte pour le statu quo - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQT191QnRfRUViQ3B2bm5PbUdEYkFtUkNaZ2J2NUNTOHV2YUdxbjVxbjNwQU9CX0E3XzlET1hWU3hEQ2VSVTBSMWxxSFplWDItWElBdVI0LUZuZUNMYURCYWNSMnhQbWZ0TzFSWWhBbno4bW1LM2VJMWFmaGdiNzE3RVpaVWJnQ3VxWnVCYkxyM0ExbzRtYjFqSktzcm1TU2JvT2Y1bE5WT2VYVExBd2ZoRDBBNEFLVkNPZkEwYzk2MU90QzR6anRzblJ0bVA0cFUySjNRUTJUSXp1dENpeVdIOG00WHRWVFlOTFBKUXphYWI?oc=5",
-      "source": "news.google.com",
-      "description": "Clôture du TSX : l'indice recule pour une cinquième séance consécutive alors que la Banque du Canada opte pour le statu quo  Zonebourse",
+      "description": "La Banque du Canada face à un exercice d'equilibriste delicat, selon la TD  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -433,5 +285,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-06 15:28"
+  "last_update": "2026-05-07 15:28"
 }
