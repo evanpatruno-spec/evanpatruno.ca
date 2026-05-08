@@ -1,10 +1,52 @@
 {
   "news": [
     {
-      "title": "Nouvelle succursale de Liquidation Marie | Des gens en file dès 5 h à Granby",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-07/nouvelle-succursale-de-liquidation-marie/des-gens-en-file-des-5-h-a-granby.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Québec | Le taux de chômage bondit à 6,2 % en avril",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-08/quebec/le-taux-de-chomage-bondit-a-6-2-en-avril.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "À 5 h jeudi matin, Nancy Maloney était prête. Assise confortablement sur une chaise de camping, emmitouflée dans une couverture chaude, elle était la première en ligne pour l’ouverture officielle du magasin Liquidation Marie à Granby.",
+      "description": "Le taux de chômage a augmenté à 6,9 % au Canada en avril. Le Québec a perdu 43 000 emplois et son taux de chômage a bondi à 6,2 %, le niveau le plus élevé depuis juin 2025.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Cocktails à base de spiritueux | Pas avant l’hiver en épicerie",
+      "link": "https://www.lapresse.ca/affaires/2026-05-08/cocktails-a-base-de-spiritueux/pas-avant-l-hiver-en-epicerie.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Ne vous attendez pas à siroter une margarita faite de spiritueux d’agave achetée au dépanneur du coin l’été prochain : Québec retarde l’arrivée prévue des prêts-à-boire faits avec de l’alcool distillé dans les épiceries et les dépanneurs.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Desjardins fait marche arrière pour de bon sur le solde des cartes de crédit en temps réel",
+      "link": "https://www.ledevoir.com/economie/finances-personnelles/978794/desjardins-fait-marche-arriere-bon-solde-cartes-credit-temps-reel",
+      "source": "Le Devoir",
+      "description": "Les utilisateurs d’AccèsD voient de nouveau ce solde, comme c’était le cas avant une mise à jour faite en mars.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le taux de chômage a grimpé fortement en avril au Québec,  l’économie montréalaise en berne",
+      "link": "https://www.ledevoir.com/economie/978800/taux-chomage-augmente-avril-canada-comme-quebec",
+      "source": "Le Devoir",
+      "description": "Quelque 56 000 emplois ont été perdus dans la métropole, où le taux de chômage bondit à 7,7%. Au Québec, il est à 6,2%.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Après le choc, le Canada semble prêt à s’adapter au nouvel ordre mondial",
+      "link": "https://www.ledevoir.com/economie/978284/apres-choc-canada-semble-pret-adapter-nouvel-ordre-mondial",
+      "source": "Le Devoir",
+      "description": "Les fameuses transformations en cours ne doivent toutefois pas être exagérées.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNNTF0c1p4T2Izc3hpWDBURTZURTVrUW1DemZNQUFUai0ybnowdGxzek5URHRSYXpRUUhBYUdvc21pcnlHY0ZzMVpsdzVsdnNQNlVDeHBac1htWVRaQ19xZnJNZXItbnV2LXVxay1ldDlFRmZuWFBQQmpWOFl3d1hqck0tNUNWM25zNkY1OFhRNEExN1BlUk13ZDFGVGVIeUpBSlEzenBNVzFYeDBTVWxDY0ZUdVVpYld3NnJPSDlsbVQtcFdYcGdseUREMTMyOXhQbXgtTS11ekx1QmlCOWdXR2xyZnRVTjZURmRzLTdnTEdYdnRIdF9TUzBLdTI0cFRz?oc=5",
+      "source": "news.google.com",
+      "description": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -13,14 +55,6 @@
       "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNLTd5V3ZaWWRGN2tPRXBMVjJHQ3cxZHh0WUtuWFhFem5JajRWcUJvX1hEMFdOUmxNcU0xQTIxQTRYS29CcWE0QjRxRkQ3YTRnVklLMnprLU5NclFFX1MtT3hZckRZZWZBSEpHcHZKNHdsNm1ZM1NpVENvem13VVZTbHNzMTZseUlUZk4zSnI3X01PbHl4ZC1sYm1HQmEwWXViVG1oOFdIcmVoTHpCODhMdGZyVEdyVGJjaC1UWWVDUXVUNWRTVTFuN0ljV3Z1UVd0Q2ZCQ2ktZFBLQ2d5aUtIM3E4cUxYRGFCbmxCVDRKQ0lBcGxsRGZDdXRINEFJNmVBb0pVZTZYX2k4REhLQmRCNlpB?oc=5",
       "source": "news.google.com",
       "description": "Coup d’envoi d’un projet de 75 M$ à Laurier Québec pour construire 276 logements et des espaces commerciaux qui accueilleront un restaurant St-Hubert  QUB radio",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPUzRDSnN4ajVubmhLTmU5WkVQM3BvclNIYWsxMTBzN3BwWnByNzgxTTRldkVkYkppSnFGNFI0WHdUS2IwNWFBTDZYMHRrZzQ2aXMyMU9ZTFZNQUxzS2hyVklGY2Y2RWU1WWpabGRrNlgxNEpyNS1zeU1LREluNDVpS0E2NUdOVWhuMURndEFmM1RNb0diYzU4SmNYSkxkXzRmY2Zjc0NqNk9MUzJsU29KWnpoV3NxT0FYMHBORXRGSVNtUHZodFNBRThDV1JIN0FzSjRPVW43TFVMZ1Y5dU9lYTNOdjNfM3RhNlU3bmdfQkgyV0JITkhXQS1nQQ?oc=5",
-      "source": "news.google.com",
-      "description": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -53,18 +87,10 @@
       "category": "local"
     },
     {
-      "title": "Courtage immobilier: un policier du SPVM écope d’une amende de 30 000$ - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNEtJeEJaajd2Qmk2TXRtMDVGMzFjWlhkWGRRU1JQTl9tTzdLNGFZbURmNnhzNjlhNk9HNGpYOFhLOUFMb3luZlVEMXVneDVIZ293N2lhUlVObU13WW5FWER1a1hwa1ctbkxYTHRER2FsNVpGUW9sRkhVOExXYjdlRFZWNFFfMWhleHo5VktrTlJFUW5nSEZVQ0Z2VFM2M3lxQnhhVzJlSzh6WFJ2RktqYg?oc=5",
-      "source": "news.google.com",
-      "description": "Courtage immobilier: un policier du SPVM écope d’une amende de 30 000$  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
+      "title": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)? - nesto.ca",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "news.google.com",
-      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
+      "source": "mise à jour mai 2026",
+      "description": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)?  nesto.ca",
       "cities": [],
       "category": "general"
     },
@@ -73,6 +99,30 @@
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQdmdwVWRUSXRsTF9USm96X2pBdlBoWnBETFFIdER6U29KQjNWSHdVUDVZRlVMSl9XcW53bnNtcXFKUHp0OFBHa1VMZlM0LWJDcU9NLTViLXJraUMwUVEzUWtLNjBEenM3VWJSNWxMTmU0ajl5NDhwcmpyamZ0SC1WM3Bkc3ZScFg5MEg4Zi1PeGtFdVhycllzaVhUQ0s?oc=5",
       "source": "news.google.com",
       "description": "Québec se débarrasse des Tanguy à coup de maisons mobiles 4.0  106.9 Mauricie",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Une consultation moins houleuse qu’en 2025 pour des logements sur Henri-Bourassa - Monquartier",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVU9FVEtaRnh1aTVyR2QySU0zWjlaYkpRZGJKMkhsT3JWazVtdUVUeTN4Ynh6QkNYZ3JQODdrNUJmdEwtWVRyQjZwYUZnUFZZSkJkWjhjYlpQajRoa0lKM1NjN3kwbVBqcVVNLTc3c3BfNWlSTWxpSE9lbk5zMDdwRDlqU2xQdG5GWENScGs2OG90S0J4TVdTZmFBYmNpbU9tOV9YSkpMUUc5Q013c0tXeFFB?oc=5",
+      "source": "news.google.com",
+      "description": "Une consultation moins houleuse qu’en 2025 pour des logements sur Henri-Bourassa  Monquartier",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "CondoLegal.com - CondoLegal.com",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tME9fQmVtakxFLWEtSFMzQUJBUDhWdlJrQU9ycjRxcTV1cmNIdXZSTzE1OUpBNFpjc1dicl8wOUpSdnNMUnczRlNZYTJ2bUJwa1RUelFiSWRRODRPRVlHeTNpLU9oMV92c254OWtn?oc=5",
+      "source": "news.google.com",
+      "description": "CondoLegal.com  CondoLegal.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Un chantier de 309 logements s’amorce aux abords du futur tramway - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONTdWcjBITGp0NVFQUkJUTEQzNXhFeENGV3VIYWZBUUNNdHk5bUlPcFlkWHRva181ZkUwOG51VG9PMG9Bbmk0RV9xN2c0a1Y1YkdVYlBjRjFkNFJsdkdLQlFEVnA1VFNZS0h3U0tkZ19TbDFaSjY0SjN2dEhlVC1Rel92eDJGZUJBWUpuUExBQnBKZjMzbzhOeG5nZXRZczRLUGdQenEyT3ViVkJsOWdGZmQ5dGVvYUViQ0c1NkRnb1g3VnEtUFpmQ3lfZkt3VVZPQkJON1BDQmRaY0lISnJWOHFncG5mYTBCeVE?oc=5",
+      "source": "news.google.com",
+      "description": "Un chantier de 309 logements s’amorce aux abords du futur tramway  Le Soleil",
       "cities": [],
       "category": "general"
     },
@@ -87,10 +137,10 @@
       "category": "local"
     },
     {
-      "title": "CondoLegal.com - CondoLegal.com",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tME9fQmVtakxFLWEtSFMzQUJBUDhWdlJrQU9ycjRxcTV1cmNIdXZSTzE1OUpBNFpjc1dicl8wOUpSdnNMUnczRlNZYTJ2bUJwa1RUelFiSWRRODRPRVlHeTNpLU9oMV92c254OWtn?oc=5",
+      "title": "Logement: quand le privé et le public collaborent - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPXzNkbjBETk1sTGRUempHVDZjNkFRYjAtSnFjZXBpaFhyX2w5MzBJOWl0bU1tVnhuTHAwRjdDYUZ2WjRJVk1ZSFA0QmoxT0RvcTJrSVlqdnlUUjNHSFljMjBHRWtiQUlFN05LdEthMjI4MVZBT09PcEJMSGtIdmlneGliakVUaUlpRE1lTnY2aw?oc=5",
       "source": "news.google.com",
-      "description": "CondoLegal.com  CondoLegal.com",
+      "description": "Logement: quand le privé et le public collaborent  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -111,10 +161,10 @@
       "category": "general"
     },
     {
-      "title": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQenhCbThtSndadi1KaGhwb2wtSzZjR2VlYVZlSGJTdUl4SFIyOGtkZVEwbVJHRllBTXNRUWVqZ3pmanVuajFVMDh3b0JkQ0JQSjkya3JJbXhyOFJ3dldfM2xGVnhJcFJCUHBaOTEya05SNVJJUmswel9xLUx5XzBOc3NuTWVNQnpUNHprV0ZjSUtyRVVLQzRyVklXcGg5bURLOEpVaDBaMS1KUXRfTDVIOUJTS3hTUmls?oc=5",
+      "title": "Banque du Canada: les entreprises investissent avec prudence au Québec - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM0F3eFBtLUM5aXlmVHVjdWMxeGsxcXpSXy03WFhDUTUzVEZ3d0ZJNWtOampFU1JsMUVMbWwwel9pdHZfMzVYbm5EMi00VC1HclRCamdDSnFXaVhNcDhfcTl3dnJ3cHN3bFdaZWJfalBzRUlXczkzZ3pac1VsVEpVenZMbE02OXdPYzhQOWwwN0FsQnRRZGsyY0Q4YUNTZ0M2cTlkZnVCWXZWZTd6djV2bjVOSUk?oc=5",
       "source": "news.google.com",
-      "description": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez  Les Affaires",
+      "description": "Banque du Canada: les entreprises investissent avec prudence au Québec  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -127,28 +177,10 @@
       "category": "general"
     },
     {
-      "title": "Banque du Canada: les entreprises investissent avec prudence au Québec - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM0F3eFBtLUM5aXlmVHVjdWMxeGsxcXpSXy03WFhDUTUzVEZ3d0ZJNWtOampFU1JsMUVMbWwwel9pdHZfMzVYbm5EMi00VC1HclRCamdDSnFXaVhNcDhfcTl3dnJ3cHN3bFdaZWJfalBzRUlXczkzZ3pac1VsVEpVenZMbE02OXdPYzhQOWwwN0FsQnRRZGsyY0Q4YUNTZ0M2cTlkZnVCWXZWZTd6djV2bjVOSUk?oc=5",
+      "title": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQenhCbThtSndadi1KaGhwb2wtSzZjR2VlYVZlSGJTdUl4SFIyOGtkZVEwbVJHRllBTXNRUWVqZ3pmanVuajFVMDh3b0JkQ0JQSjkya3JJbXhyOFJ3dldfM2xGVnhJcFJCUHBaOTEya05SNVJJUmswel9xLUx5XzBOc3NuTWVNQnpUNHprV0ZjSUtyRVVLQzRyVklXcGg5bURLOEpVaDBaMS1KUXRfTDVIOUJTS3hTUmls?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada: les entreprises investissent avec prudence au Québec  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Des «hausses consécutives» des taux d’intérêt pourraient être nécessaires, prévient la Banque du Canada - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUy1hT0RBbS0tWUd1U3h5M3o5NjZzZEo1MHUyMmhoNGFvYzE4blRWb2tkb1hLY2hlVUxTTmczUmE0T09ZUWhIcFVvLUl0SU9fOTcwSVVhU2pCbGFWU2UyZFNaTXUwWE5ieHNkN1VlTEVCU2FBU1lWZTN4NmxONlVHVUZ1ek9vX0hpT19rYVh0RzBJYUt2NWxuMDJyTXZzN1h0LXBfWEx3enRlUklaSV9MSkR1eE1qdEdycUZxZQ?oc=5",
-      "source": "news.google.com",
-      "description": "Des «hausses consécutives» des taux d’intérêt pourraient être nécessaires, prévient la Banque du Canada  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "La Banque du Canada pourrait relever ses taux dans le cas d’une inflation durable - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMEFGcVRXcVdCNnd5R192dmJyeUdCRnFCMGVrcWVTLXZfRVJJdXBDdW9oUERtaERZTThvOE5uRnhjQWxCcUtfdnRTRmNJNkNPdGIzREhsb3dvTGFfdzBNakZKV0lFWXdtUGlpRE1TYlg1d05hQ1ZwNngxdFpPWlZRdU15dFJGZUVEel9JWkZwdFB0cXZFSk1mbm56RFIzWFVyYldLZFA3ZG14X1V6aWNHNHZPSS02UW5PWC1iTnRTcDVObDA?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada pourrait relever ses taux dans le cas d’une inflation durable  Les Affaires",
+      "description": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -169,18 +201,26 @@
       "category": "general"
     },
     {
-      "title": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1 - Morningstar",
+      "title": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1 - Morningstar Canada",
       "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNUHBpZnY0Z2g3aVNTLWU5WDMwdjRyRVpaTUFBeFgtemFqTXFTTWl3dFA3QU4wUVFua1h1cXE4YmtCUzdxVjFMcE5LeEZiQ2VqU0htc25lUkZfM1d5Nm5YYkJ0dFBvdzNKRXRKZVBDZEdxWXFCXy1CZk92Y3dKMzF6X0d5R3FyTk5YeUVuUk9xcHV5cThBT0hnOW9URWh5R0htaWhaSktwUlh5U2RJVXpBV0w3MHJHZm9LMXpjMW44X0x5RjZQb0h4UFZPdlR2UkhDUnB6V1JLbkNOVHc?oc=5",
       "source": "news.google.com",
-      "description": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1  Morningstar",
+      "description": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1  Morningstar Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada confrontée à des défis de contrôle des taux à court terme selon BofA - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQZ1ZLYTU0aDBGUVRJNHRCOVFFV01Kdm9JSlBiaWZiNlQ2V3BXNmgxeXZEaVFaMlpNZFpRWXkxNEJkTDZzSFJMbDFMSjJuR3VZMC15VVRIOHBLdGN2MTN3OWJfNWdPbkJNMnpZZ1c0eDQzNzd3ai1aOVBEYzNGbUJ2UDZxOUdOTmRKWUhvT0g0U2JmNzhNS3FOc0p1anJDc1ZNZ0pueFV5ZU0wQTc4ZlptTm5ObXJ1RXRKcG8tcTA1NTBydzhSVGRrSThZa0FKcUJtQ3B3dzJsYTJ0RTNBRE50NWI1RQ?oc=5",
+      "title": "Les tensions géopolitiques repoussent la baisse des taux - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQajlQN3A0S0lLRzlyRE5VZ2Qxb0t2ZEpjcDNPRVlJcWxGMzFYVEwzSEZmRzRZaXhKSHVUVXJ1MWJpR3NIc2RRZUtQNVNtOGFBSW5ybUpPSmdYOUItS2dyOVhXR0pEVFFEUFM3eHVDb25qUUxDSjdBU292bWsxNExDOENJdUtXZm54SnlhZU9KcTJkOHp0VGRkQTJiaGVUYzJVamxxNE1ST1hwU1lOeDJR?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada confrontée à des défis de contrôle des taux à court terme selon BofA  Investing.com France",
+      "description": "Les tensions géopolitiques repoussent la baisse des taux  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient le taux directeur à 2,25 % pour une quatrième fois consécutive - crea.ca",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOS0dDT21nQWdrRDg1X0lRS3d6UHExRUtWdkVHTlhPSUpkVEhxeUdGWVdXYzBmdERsSFVHZHVVeDBCeFNVOHpZa0VnUmxjMWRlZjhmRm5xWDUzb0NrdzRXOHdQLVJpeHNmdmVOTXVKU0tZSEIxdDVrcnZEeEdVZ3A3ZjNieExNUGpWbDluVDMzT0o5cndBYUNYMlZ0TmNlbzdWQVE?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient le taux directeur à 2,25 % pour une quatrième fois consécutive  crea.ca",
       "cities": [],
       "category": "general"
     },
@@ -193,6 +233,14 @@
       "category": "general"
     },
     {
+      "title": "Fairstone renoue avec les RMBS par une émission de 425 M$ - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZnV0MXBtRG5FWHByRHpDOWdjdFhob2NIeWZvT0ZaWHFHOE1qWVdnLWJSUC1ZV2RRODBxQk9DWUtTSWg4Nk1YWlJGOFFXeVpJSlQtQTZqNkxqMHFBR01OeEEzT0FLOEJhVW9UTzFOZlZ5MjBMZXp5VU1ZVEdLN1hTZ08wUHJKTEtKUThkM096QmxOanRfVkhaeGJjSm1aMExYV0l2QTB0MG9MM1U?oc=5",
+      "source": "news.google.com",
+      "description": "Fairstone renoue avec les RMBS par une émission de 425 M$  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La Banque du Canada envisage une réglementation des stablecoins d'ici la mi-2027 ou fin 2027 - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOeFY1U3dGVWZkMmhFclpvY0lSQS1wdzZuTU4yUzEtR2g1Mko2bXIxZTF3dlJBV0F6WWVSUGc1WWJSaHp4TXpralB5cmJDbFM2Z0R1Z3F0ZEZMSG1sZmdNYzdJa1lTQmk1VVFOTkIxd0wxQlpUcjVzTEJKWTNsNTltRWZuZlNXNnNlZXgtaDNsQ3JjQ1EwYVdRcmVKdzZwLVQtbUxHaDBaVEc0a3VoUDhOODN1bnJtUFRBMWMtelBMUHZGUUpQb0tZTzVzM09fVnVkZVljOHJFLVFDMi10a0VITTJNZ3NHcjFp?oc=5",
       "source": "news.google.com",
@@ -201,18 +249,18 @@
       "category": "general"
     },
     {
-      "title": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOdnd1aXF5d2ZxRkktWE40STJfbzNuSmpuTG5TMklsMlNnVlRmdkp2bVFUaDJ6MWJLbkgwZmtSQ285WVUxak5Lc1dSVXNxNU5KRkY2aW9IWEFrYU94em53Uk5wWVlkdENFenBHcWtERkwtbjJoV3VKbXcwQlVtWHVHU2ZuWTYtLU1QcEZDY2E0bnFhb3dMeEF0RUFuMWVCM2tvM2pTb2YwYzBORlBLYVFzRTJPMWlERXVETVp3OVJjQnV4eDlueXdJbjd0NXJfejZMQWh3cmRXcFBoS2Rxb2d1REZNd21sV0U5N0NnLW1Pai1aNlk?oc=5",
-      "source": "news.google.com",
-      "description": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le gouverneur de la Banque du Canada, Tiff Macklem, estime qu'après la nomination de Kevin Warsh à la tête de la Fed, la culture et le comportement de l'institution s'inscriront dans la continuité - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNZThmTmhJOXptdC1vSTJ6VzJYRjRPVHpadkJLMTZweDlNb1JsQU5wai1tWUlOYjV4Z05ZWnRUYkJCeDB5MjN5bjZoT2hPNkc4N282cDd0d3l5NldMX1l0WEZpd2dnbnBTNUJsc3B4ajVoLWpzSTkxUElUaVpCd0lmM2dzWkU4WXozQXk3SDA5MGo5dFozRHU0TU9fR0loMEpwWDl3ZW5lbjdYaTlKdHlWMFo4dDBDeklaY3dkV3A3ZE83aktTWjRWMW9EM1Jad0d3T25CZEdNOWEwV1M1dnZmbXI1Z1BLU3JETjd3cjVQZTg?oc=5",
       "source": "news.google.com",
       "description": "Le gouverneur de la Banque du Canada, Tiff Macklem, estime qu'après la nomination de Kevin Warsh à la tête de la Fed, la culture et le comportement de l'institution s'inscriront dans la continuité  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOdnd1aXF5d2ZxRkktWE40STJfbzNuSmpuTG5TMklsMlNnVlRmdkp2bVFUaDJ6MWJLbkgwZmtSQ285WVUxak5Lc1dSVXNxNU5KRkY2aW9IWEFrYU94em53Uk5wWVlkdENFenBHcWtERkwtbjJoV3VKbXcwQlVtWHVHU2ZuWTYtLU1QcEZDY2E0bnFhb3dMeEF0RUFuMWVCM2tvM2pTb2YwYzBORlBLYVFzRTJPMWlERXVETVp3OVJjQnV4eDlueXdJbjd0NXJfejZMQWh3cmRXcFBoS2Rxb2d1REZNd21sV0U5N0NnLW1Pai1aNlk?oc=5",
+      "source": "news.google.com",
+      "description": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -285,5 +333,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-07 15:28"
+  "last_update": "2026-05-08 14:50"
 }
