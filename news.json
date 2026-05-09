@@ -1,44 +1,52 @@
 {
   "news": [
     {
-      "title": "Québec | Le taux de chômage bondit à 6,2 % en avril",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-05-08/quebec/le-taux-de-chomage-bondit-a-6-2-en-avril.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Nouveau centre de distribution de la SAQ | La modernité, à quel prix ?",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-09/nouveau-centre-de-distribution-de-la-saq/la-modernite-a-quel-prix.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Le taux de chômage a augmenté à 6,9 % au Canada en avril. Le Québec a perdu 43 000 emplois et son taux de chômage a bondi à 6,2 %, le niveau le plus élevé depuis juin 2025.",
+      "description": "Le coût du projet de centre automatisé de distribution de la SAQ, qui doit entrer en fonction l’an prochain, est passé de 48,5 à 300 millions en quatre ans. Tandis que le syndicat croit qu’il s’agit d’une dépense insensée qui va mener à l’effritement des succursales et du métier de conseiller, la SAQ l’estime essentiel pour gagner en efficacité. À quelques jours du passage de la société d’État devant les élus pour l’étude de ses crédits, nous faisons le point sur ce projet méconnu du grand public.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Cocktails à base de spiritueux | Pas avant l’hiver en épicerie",
-      "link": "https://www.lapresse.ca/affaires/2026-05-08/cocktails-a-base-de-spiritueux/pas-avant-l-hiver-en-epicerie.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Accès internet sous les mers | Quatre câbles (étrangers) pour tout le pays",
+      "link": "https://www.lapresse.ca/affaires/techno/2026-05-09/acces-internet-sous-les-mers/quatre-cables-etrangers-pour-tout-le-pays.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Ne vous attendez pas à siroter une margarita faite de spiritueux d’agave achetée au dépanneur du coin l’été prochain : Québec retarde l’arrivée prévue des prêts-à-boire faits avec de l’alcool distillé dans les épiceries et les dépanneurs.",
+      "description": "Ce n’était pas un enjeu il y a deux ans, mais les choses changent vite depuis le retour de Donald Trump à la Maison-Blanche : les quatre câbles optiques qui traversent les océans pour relier le Canada à l’Europe et à l’Asie appartiennent à des intérêts étrangers, essentiellement américains. La question est désormais considérée comme un risque de sécurité nationale. Comment le Canada peut-il devenir moins vulnérable face à son puissant voisin ? Un dossier d’Alain McKenna",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Desjardins fait marche arrière pour de bon sur le solde des cartes de crédit en temps réel",
-      "link": "https://www.ledevoir.com/economie/finances-personnelles/978794/desjardins-fait-marche-arriere-bon-solde-cartes-credit-temps-reel",
-      "source": "Le Devoir",
-      "description": "Les utilisateurs d’AccèsD voient de nouveau ce solde, comme c’était le cas avant une mise à jour faite en mars.",
+      "title": "Plombée par les cryptomonnaies | Perte abyssale pour la maison mère du réseau de Trump",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-08/plombee-par-les-cryptomonnaies/perte-abyssale-pour-la-maison-mere-du-reseau-de-trump.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La maison mère du réseau Truth Social, fondé par Donald Trump, a publié vendredi une perte nette de plus de 400 millions de dollars au premier trimestre, à comparer avec un chiffre d’affaires limité, de moins d’un million de dollars.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Le taux de chômage a grimpé fortement en avril au Québec,  l’économie montréalaise en berne",
+      "title": "Emploi | Une année qui s’annonce difficile au Québec",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-08/emploi/une-annee-qui-s-annonce-difficile-au-quebec.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "L’année s’annonce difficile sur le marché de l’emploi, particulièrement au Québec, où 91 000 emplois ont disparu depuis le début de l’année et où le taux de chômage est passé de 5,4 % en mars à 6,2 % en avril.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le taux de chômage a grimpé fortement en avril au Québec, l’économie montréalaise en berne",
       "link": "https://www.ledevoir.com/economie/978800/taux-chomage-augmente-avril-canada-comme-quebec",
       "source": "Le Devoir",
-      "description": "Quelque 56 000 emplois ont été perdus dans la métropole, où le taux de chômage bondit à 7,7%. Au Québec, il est à 6,2%.",
+      "description": "Quelque 43 000 emplois ont été perdus dans la province, où le taux de chômage a bondi à 6,2%.",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Après le choc, le Canada semble prêt à s’adapter au nouvel ordre mondial",
-      "link": "https://www.ledevoir.com/economie/978284/apres-choc-canada-semble-pret-adapter-nouvel-ordre-mondial",
+      "title": "Desjardins fait marche arrière pour de bon sur le solde des cartes de crédit en temps réel",
+      "link": "https://www.ledevoir.com/economie/finances-personnelles/978794/desjardins-fait-marche-arriere-bon-solde-cartes-credit-temps-reel",
       "source": "Le Devoir",
-      "description": "Les fameuses transformations en cours ne doivent toutefois pas être exagérées.",
+      "description": "Les utilisateurs d’AccèsD voient de nouveau ce solde, comme c’était le cas avant une mise à jour faite en mars.",
       "cities": [],
       "category": "general"
     },
@@ -59,22 +67,12 @@
       "category": "general"
     },
     {
-      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPR3lIWks4d3ZKaUV2R3FlSXdicWVURmJSTEtXNkctU2R1V05yYjhVNVo0ZkRrZXJ3YTlqSEhjQlZ1cDNRSWp4OWVGdmtQN0NPLXc2Z2E4VFpxTWk4eEtnaEFTSC1paDlkVE5TeTdybXh4dVlFenkwVTlxbm0ydmJBNVJMSTlDWHZXQWgzbWt3VklVczN6RTRFMG1uQnBzS0pySDNBazZyUm1oMG9yR2RjVG91WUxYNnFuMmFtaHI3MXlJMFJyb1Y2Uml2WF9XZlJUUmtBTHFxS29fN3RnZVNaMW02NjRyOTdLMml0SkJiNEdxREM5NlZxUUdRYTVLd3dudzVqSV83SlphTW85RndJVXF4c2JRb3pHdzVtTmxuN0lrd3NkamYta08tYzdaU2RMZ1E?oc=5",
+      "title": "Un chantier de 309 logements s’amorce aux abords du futur tramway - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONTdWcjBITGp0NVFQUkJUTEQzNXhFeENGV3VIYWZBUUNNdHk5bUlPcFlkWHRva181ZkUwOG51VG9PMG9Bbmk0RV9xN2c0a1Y1YkdVYlBjRjFkNFJsdkdLQlFEVnA1VFNZS0h3U0tkZ19TbDFaSjY0SjN2dEhlVC1Rel92eDJGZUJBWUpuUExBQnBKZjMzbzhOeG5nZXRZczRLUGdQenEyT3ViVkJsOWdGZmQ5dGVvYUViQ0c1NkRnb1g3VnEtUFpmQ3lfZkt3VVZPQkJON1BDQmRaY0lISnJWOHFncG5mYTBCeVE?oc=5",
       "source": "news.google.com",
-      "description": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché  Le Soleil",
+      "description": "Un chantier de 309 logements s’amorce aux abords du futur tramway  Le Soleil",
       "cities": [],
       "category": "general"
-    },
-    {
-      "title": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$ - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPd251VkNIYkVvWFF6YmpWMkZmVnBqUE43cXRGak9HTkdjNjFpZXJJRVg5WDYyLUhCZFY4a3h4cnR5Wi1kdjhRQ19IcUFHQkx2ZGw3dkpreUNtcDZGX29aUzBBNGZFb3I3N0ZlbVE2SUJyZHZYRmk2SnppYktIOU5GZTFaNGUwTDk4R0V0blZTXy15OTRZLWI0SHB0eW5HNWVXX1lRbmpCX0dvcDZTUzhfTFM1SVhSMHBnWkhF?oc=5",
-      "source": "news.google.com",
-      "description": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
     },
     {
       "title": "Les ventes de logement reculent de 7 % à Montréal - Canadian Mortgage Trends",
@@ -87,10 +85,62 @@
       "category": "local"
     },
     {
-      "title": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)? - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "mise à jour mai 2026",
-      "description": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)?  nesto.ca",
+      "title": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$ - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUEZ2TWprSHV1UGhpQ3JvNzR6WENKdHRCeTFqLUF0VUFHOHl0aWJsWnVOaHF2STRnWDZhcVBCWjRIb0U3aFJWYklLWXV2VkZYTlBTeldQUlEwSUdpU1B1dnFIXzRqQ0M3Z3Q0MzRwNENSOHRreFVRWkhwd1I2U2JzSWw4TlBoQi1ZaFRkUXlGNVBDTW5xUTVCLXYzNnJUSGpWQ0hXY2V0N1R4RDhzV1NmUFE4dw?oc=5",
+      "source": "news.google.com",
+      "description": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$  TVA Nouvelles",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "1 000 logements pour les aînés : Mission Unitaînés franchit un jalon majeur en inaugurant son 10ᵉ immeuble à Saint-Jean-sur-Richelieu - Coalition Avenir Québec",
+      "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxQbXYwMW5YWHB6RXlwYzV1WllTTDVwTW9lVVdCQ01OZ2FpWXBveGM2QUN4ZmltaHAxSkc0VVBtb3QtLXVyTVR5dnZkV2FnLURGMkpPaG9nTlRqLVppZEVuemJTaTd0aHpaejZ0YVNZcklHYVB6aU5EYXB4cjlFaktjM2FvdUYwcXlPYVFCU3RTcTdISVktNzBaZ1hjR2Fib0JWSi03azN2Sm9kbUhkTDNiVnJrWkQ5a2g0Q01EM25tdm9rYzRsX0hWZmllckVMeDBkTExvdlhraGZNdVRpSWFlVUp2QlFOZFY3NlhFZ2FkVEJ6RHhTU18yRnAxSnJGLWF3eklxUk00WjV1VUlhLTQ2Z2RWRFNsdkRSVkJqSTJR?oc=5",
+      "source": "news.google.com",
+      "description": "1 000 logements pour les aînés : Mission Unitaînés franchit un jalon majeur en inaugurant son 10ᵉ immeuble à Saint-Jean-sur-Richelieu  Coalition Avenir Québec",
+      "cities": [
+        "saint-jean"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Moins de Québécois en Floride: «Donald Trump, c’était la porte de sortie facile» – André Lauzier, courtier immobilier - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOanBWdVRUcmFpQnFFT2IzTDA0RmMyOF9COUoyNlIwMU1SdHBMSEZrY3VDak5tOEVVZDVFUzlLNkREQTRrc3p4eko4NU9BWDlOYU4zQlJfOHR1bGlNU3dnUHBVU21JWmtoY1Q4aXFsYmd3NUxKSVc3TGlUc1hZMmVaejd4T2UxVE9MdlJQS05sanVXclhOLXFSRHBVd3BiVWNQbHVWcE1zcnYwYlg3bVlvZ242N3JKV2IyWlFMSENXbHlfamlFdmJzZ1RyMXloRmN5SDM2bC1VQ3JqMDdnN2NFazBoUjlUYk1CUmd0ZG53?oc=5",
+      "source": "news.google.com",
+      "description": "Moins de Québécois en Floride: «Donald Trump, c’était la porte de sortie facile» – André Lauzier, courtier immobilier  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "RMR de Québec : une hausse de l’offre de propriétés se - GlobeNewswire",
+      "link": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxNR1hnMGxZN0pxVDQtQzJlckZ5VHJQOWZNeXlQUnN4V1ZsRkZIVGttVkdhRk5rZEEtNGJZTUhBOXBEbmhFSFRBaC1idE1XSWV3YUNGdnFJQl9TLTdDTlFQbC1iMUxXaU9IWFZjLXJTeVp6aGhMaHJHLXVIWE00SU1yU2VOOGdDa1BmLTVyeGlQcjBjRGtsUDVybDJ4dDRkSW5Bd0haTnF3dEFuXzVpNGhNanZ5NEFYZmdoMzF4dmtTTS1RSWZIRmh5MU15dDVfc2RCUmpUd0lWZ3M0VDNKbTJaY3JXLVdDeTVfanFSTzVjNTRjUDB1RzRXUF8zM2R1dkUxTnZqV3UyQ3JpRVZnN3Z2aWFzS2FCREc4MVFUanNaU1MteWFqVnhlV2hZM3lQWkc3ZmEybGxONld4TmRTbUd0Wl9R?oc=5",
+      "source": "news.google.com",
+      "description": "RMR de Québec : une hausse de l’offre de propriétés se  GlobeNewswire",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "5 maisons à vendre au Québec à moins de 100 000 $ qui sont habitables et valent le détour - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaXI2T2RueU9GNmoyYlp5bG9GSE1xcEJFWUpfMTJCLUlQNGl6R1V0MFJldXhJMkMzV3EzR01jbzFxTWpyUkowWGJNbXFvV0tKalNYNXlqSXJCMnpiaGJabGlKTXM2NDV0a0dIZXNqY3hfMDEzbjkzVkoyTmlWaTJ1bw?oc=5",
+      "source": "news.google.com",
+      "description": "5 maisons à vendre au Québec à moins de 100 000 $ qui sont habitables et valent le détour  Narcity",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Courtage immobilier: un policier du SPVM écope d’une amende de 30 000$ - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNEtJeEJaajd2Qmk2TXRtMDVGMzFjWlhkWGRRU1JQTl9tTzdLNGFZbURmNnhzNjlhNk9HNGpYOFhLOUFMb3luZlVEMXVneDVIZ293N2lhUlVObU13WW5FWER1a1hwa1ctbkxYTHRER2FsNVpGUW9sRkhVOExXYjdlRFZWNFFfMWhleHo5VktrTlJFUW5nSEZVQ0Z2VFM2M3lxQnhhVzJlSzh6WFJ2RktqYg?oc=5",
+      "source": "news.google.com",
+      "description": "Courtage immobilier: un policier du SPVM écope d’une amende de 30 000$  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Logement: quand le privé et le public collaborent - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPXzNkbjBETk1sTGRUempHVDZjNkFRYjAtSnFjZXBpaFhyX2w5MzBJOWl0bU1tVnhuTHAwRjdDYUZ2WjRJVk1ZSFA0QmoxT0RvcTJrSVlqdnlUUjNHSFljMjBHRWtiQUlFN05LdEthMjI4MVZBT09PcEJMSGtIdmlneGliakVUaUlpRE1lTnY2aw?oc=5",
+      "source": "news.google.com",
+      "description": "Logement: quand le privé et le public collaborent  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -119,32 +169,6 @@
       "category": "general"
     },
     {
-      "title": "Un chantier de 309 logements s’amorce aux abords du futur tramway - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONTdWcjBITGp0NVFQUkJUTEQzNXhFeENGV3VIYWZBUUNNdHk5bUlPcFlkWHRva181ZkUwOG51VG9PMG9Bbmk0RV9xN2c0a1Y1YkdVYlBjRjFkNFJsdkdLQlFEVnA1VFNZS0h3U0tkZ19TbDFaSjY0SjN2dEhlVC1Rel92eDJGZUJBWUpuUExBQnBKZjMzbzhOeG5nZXRZczRLUGdQenEyT3ViVkJsOWdGZmQ5dGVvYUViQ0c1NkRnb1g3VnEtUFpmQ3lfZkt3VVZPQkJON1BDQmRaY0lISnJWOHFncG5mYTBCeVE?oc=5",
-      "source": "news.google.com",
-      "description": "Un chantier de 309 logements s’amorce aux abords du futur tramway  Le Soleil",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Moins de Québécois en Floride: «Donald Trump, c’était la porte de sortie facile» – André Lauzier, courtier immobilier - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOanBWdVRUcmFpQnFFT2IzTDA0RmMyOF9COUoyNlIwMU1SdHBMSEZrY3VDak5tOEVVZDVFUzlLNkREQTRrc3p4eko4NU9BWDlOYU4zQlJfOHR1bGlNU3dnUHBVU21JWmtoY1Q4aXFsYmd3NUxKSVc3TGlUc1hZMmVaejd4T2UxVE9MdlJQS05sanVXclhOLXFSRHBVd3BiVWNQbHVWcE1zcnYwYlg3bVlvZ242N3JKV2IyWlFMSENXbHlfamlFdmJzZ1RyMXloRmN5SDM2bC1VQ3JqMDdnN2NFazBoUjlUYk1CUmd0ZG53?oc=5",
-      "source": "news.google.com",
-      "description": "Moins de Québécois en Floride: «Donald Trump, c’était la porte de sortie facile» – André Lauzier, courtier immobilier  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Logement: quand le privé et le public collaborent - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPXzNkbjBETk1sTGRUempHVDZjNkFRYjAtSnFjZXBpaFhyX2w5MzBJOWl0bU1tVnhuTHAwRjdDYUZ2WjRJVk1ZSFA0QmoxT0RvcTJrSVlqdnlUUjNHSFljMjBHRWtiQUlFN05LdEthMjI4MVZBT09PcEJMSGtIdmlneGliakVUaUlpRE1lTnY2aw?oc=5",
-      "source": "news.google.com",
-      "description": "Logement: quand le privé et le public collaborent  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs - TVA Nouvelles",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVFFZSGx3dkxLV1hDNGRlQUlLRmVqVkdaOV9NZUU1eHR6cC1pWUIyYVVCdTY0WXdKdjYwOHR5UC02UUV3ZEQ2SGhyQ1NBRldlajV6ZlNzM0gyR0pkMGhEQ3pZS3VZdEFrd2d6ckhBVXJHd210YXlzVmVZNDZrQlJ1YUY5LW9NNlhzTE1WalpPd1hhOTVYYTdtYm9PeDE1NnNjY19kempZZy1wY3ZOOVE?oc=5",
       "source": "news.google.com",
@@ -153,18 +177,30 @@
       "category": "general"
     },
     {
-      "title": "Projet de 72 logements pour les travailleurs d’Hydro-Québec - Info-web",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNamRrY2gxVUNLbHFYSE9zVFNMOHRGdW5jeTVZTS16OWktbFRDckJSUVBRUGZUQWhtN2RFRjdDR3hGN00tQXI5bHItRjY4cTFMLUJHTUhMeU5hX1NzNjlkQU85LU9QeWhSNVpTTEdaUHZuZjJrNENVdkd5MlNtQWNlWXlIdlVfUQ?oc=5",
+      "title": "Les standards de l'immobilier industriel redéfinis par ROSEFELLOW. - L'Écho de Laval",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZndFTG15OWdKUDRFQnY2MjFsMlBPckM5OUp6QjZIcjBPWnlPWTlTckFtcXhXOWl4blBERFhTcWxnYlBiWWtvOVQzTVZOV3JuaDRWOTJsQW45SWFDRU85QjF5Q05QdHA3Q0pfdGF6TGRYLUJUVGdEMWJWWHIzMklVSk1LdUxIYjVyVTdvZWx6VGd4X3J1emM1Q25ndEJpdnJrd2lyUWJZTjBvdEc0X2h0TVdWMi1XcmF1T1Rz?oc=5",
       "source": "news.google.com",
-      "description": "Projet de 72 logements pour les travailleurs d’Hydro-Québec  Info-web",
-      "cities": [],
-      "category": "general"
+      "description": "Les standards de l'immobilier industriel redéfinis par ROSEFELLOW.  L'Écho de Laval",
+      "cities": [
+        "laval"
+      ],
+      "category": "local"
     },
     {
-      "title": "Banque du Canada: les entreprises investissent avec prudence au Québec - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM0F3eFBtLUM5aXlmVHVjdWMxeGsxcXpSXy03WFhDUTUzVEZ3d0ZJNWtOampFU1JsMUVMbWwwel9pdHZfMzVYbm5EMi00VC1HclRCamdDSnFXaVhNcDhfcTl3dnJ3cHN3bFdaZWJfalBzRUlXczkzZ3pac1VsVEpVenZMbE02OXdPYzhQOWwwN0FsQnRRZGsyY0Q4YUNTZ0M2cTlkZnVCWXZWZTd6djV2bjVOSUk?oc=5",
+      "title": "Transaction de la semaine: une maison de Sillery s’envole à plus de 3M$ - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSmhIeDk5LTgzVEJmc0UtTUV6aEZGckRXWGw1eHI2MGwtRlNnSFl6LTZGMmlZejlIdzZha2ZZa0ZtbWVCbEkzYUpteUVFVDBNUnFpZHdOMXU5SEdGVFFZQWJtNERmRjlXV1pjeXRfdENXTEwyckZKZENMYnR1ZVlkb1RMUEUteWhIRHVrdUlDVFU1V0NNeHJEd1RiY1RJVjQ4SGZDYko4Zy0ycEhGTmhRcHJDdi1RWGsydDBfTkFpWXY1TXNHajZMN20tTks?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada: les entreprises investissent avec prudence au Québec  Les Affaires",
+      "description": "Transaction de la semaine: une maison de Sillery s’envole à plus de 3M$  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQenhCbThtSndadi1KaGhwb2wtSzZjR2VlYVZlSGJTdUl4SFIyOGtkZVEwbVJHRllBTXNRUWVqZ3pmanVuajFVMDh3b0JkQ0JQSjkya3JJbXhyOFJ3dldfM2xGVnhJcFJCUHBaOTEya05SNVJJUmswel9xLUx5XzBOc3NuTWVNQnpUNHprV0ZjSUtyRVVLQzRyVklXcGg5bURLOEpVaDBaMS1KUXRfTDVIOUJTS3hTUmls?oc=5",
+      "source": "news.google.com",
+      "description": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -177,18 +213,18 @@
       "category": "general"
     },
     {
-      "title": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQenhCbThtSndadi1KaGhwb2wtSzZjR2VlYVZlSGJTdUl4SFIyOGtkZVEwbVJHRllBTXNRUWVqZ3pmanVuajFVMDh3b0JkQ0JQSjkya3JJbXhyOFJ3dldfM2xGVnhJcFJCUHBaOTEya05SNVJJUmswel9xLUx5XzBOc3NuTWVNQnpUNHprV0ZjSUtyRVVLQzRyVklXcGg5bURLOEpVaDBaMS1KUXRfTDVIOUJTS3hTUmls?oc=5",
+      "title": "Banque du Canada: les entreprises investissent avec prudence au Québec - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM0F3eFBtLUM5aXlmVHVjdWMxeGsxcXpSXy03WFhDUTUzVEZ3d0ZJNWtOampFU1JsMUVMbWwwel9pdHZfMzVYbm5EMi00VC1HclRCamdDSnFXaVhNcDhfcTl3dnJ3cHN3bFdaZWJfalBzRUlXczkzZ3pac1VsVEpVenZMbE02OXdPYzhQOWwwN0FsQnRRZGsyY0Q4YUNTZ0M2cTlkZnVCWXZWZTd6djV2bjVOSUk?oc=5",
       "source": "news.google.com",
-      "description": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez  Les Affaires",
+      "description": "Banque du Canada: les entreprises investissent avec prudence au Québec  Les Affaires",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L’évolution de la place du Canada dans le commerce maritime mondial - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBzSFVKZVlHS2dPUEpzanVOS1Jtb2tXTUxoWGNIYjNoSV9BandmTkxRUGlNYTFNeVJzR3U5anFhWTVTb2hUc1NwSE1aNUtabEpRRUFUZDE2Wmp0OGF6SFdiUVpDSjhWUVE4S0JoR08tMDVUdklIaUF0aw?oc=5",
+      "title": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNaXZVZXVjcDI1alJqdk1pZEtSRG1XYlBhMzlFXzZQV3Bqb0JqcmVuelp4dmI2ZHFwd0h2TVJwanJoeGxVY29KUU9JOW5DdDAwakNwcC1oYUJmOE1LN04yRWgxTWc5VXliTVVSR25uWEFCSkRKS0hxLVFZQlNXWWRDck1fRi15UGhPT2xpeEFucnpmZGpZejFmSW5feTBrNXZsSm92WWFWYU1VVk0tUkhVVlBEZmlnaktOQWozYWZwa3hfdDk4d2VkUTBWbVdJaU0tMWZMOHFZd2F0enhJTUZMZmJ0S2F5QVE?oc=5",
       "source": "news.google.com",
-      "description": "L’évolution de la place du Canada dans le commerce maritime mondial  Banque du Canada",
+      "description": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -201,6 +237,22 @@
       "category": "general"
     },
     {
+      "title": "La faiblesse des chiffres de l’emploi tempère les attentes concernant une hausse des taux de la Banque du Canada - Morningstar Canada",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPM1l3VU9MUmVZb2FkMHE4UUp0cDFFTzhTUzlpWUZGY2ZUWnE1RVptWDUySjRJR3VtTklGR2Y1aG41akpCeEp0VlZpbm9lR1paamlMVnR6N216eU1oN3M0dGIxUHBtRnpDQWs2MHVRV2ktYzVKaTBLSW0wbm1XbGs3REpJM2trNUxSRmpIajlKLXNZbmNxMzNvQUpFOFhPd1I2M1p5N1NxclBaLWtxTXUyOEltUTl0SkwxRzNIUmd2OHZ5ZEo1TldWaU1JLXdWUWRLNVhKakVRb3I2NzBsZTFqV1V3NlRSVTJmekE?oc=5",
+      "source": "news.google.com",
+      "description": "La faiblesse des chiffres de l’emploi tempère les attentes concernant une hausse des taux de la Banque du Canada  Morningstar Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’évolution de la place du Canada dans le commerce maritime mondial - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBzSFVKZVlHS2dPUEpzanVOS1Jtb2tXTUxoWGNIYjNoSV9BandmTkxRUGlNYTFNeVJzR3U5anFhWTVTb2hUc1NwSE1aNUtabEpRRUFUZDE2Wmp0OGF6SFdiUVpDSjhWUVE4S0JoR08tMDVUdklIaUF0aw?oc=5",
+      "source": "news.google.com",
+      "description": "L’évolution de la place du Canada dans le commerce maritime mondial  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1 - Morningstar Canada",
       "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNUHBpZnY0Z2g3aVNTLWU5WDMwdjRyRVpaTUFBeFgtemFqTXFTTWl3dFA3QU4wUVFua1h1cXE4YmtCUzdxVjFMcE5LeEZiQ2VqU0htc25lUkZfM1d5Nm5YYkJ0dFBvdzNKRXRKZVBDZEdxWXFCXy1CZk92Y3dKMzF6X0d5R3FyTk5YeUVuUk9xcHV5cThBT0hnOW9URWh5R0htaWhaSktwUlh5U2RJVXpBV0w3MHJHZm9LMXpjMW44X0x5RjZQb0h4UFZPdlR2UkhDUnB6V1JLbkNOVHc?oc=5",
       "source": "news.google.com",
@@ -209,18 +261,10 @@
       "category": "general"
     },
     {
-      "title": "Les tensions géopolitiques repoussent la baisse des taux - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQajlQN3A0S0lLRzlyRE5VZ2Qxb0t2ZEpjcDNPRVlJcWxGMzFYVEwzSEZmRzRZaXhKSHVUVXJ1MWJpR3NIc2RRZUtQNVNtOGFBSW5ybUpPSmdYOUItS2dyOVhXR0pEVFFEUFM3eHVDb25qUUxDSjdBU292bWsxNExDOENJdUtXZm54SnlhZU9KcTJkOHp0VGRkQTJiaGVUYzJVamxxNE1ST1hwU1lOeDJR?oc=5",
+      "title": "Actualités CMT - Banque Nationale : taux, modalités et comparaison - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSzhoRlowdnJZdkpzTmNidmlyOFdjZ3ptSjdNV2U0T2wxVnQ0N2JTZkVHbldOQjVEUFFYbURYR2VROXBnaWJPU0o5YTdFSU9IaVpRVjZTcXpxLTA3WGNqekdrT2p2UTJXNVhldlhBckRNNnNQbExjemQ2dlRFM0xLOVFmSzBQWkNzRnlKbWxpVlBMeFdYZ0FJaElWbndpTDJzY3RPYVBoZzBFUWh6YnBTYUFScWUzeS1sdURNREYwUVo0WTdFRHBnSHNkcDRoS0lBWTF1cXhyeXJfbjlfOTM3QlZsb3FLUDRNR3cwLXZ6WUN5dw?oc=5",
       "source": "news.google.com",
-      "description": "Les tensions géopolitiques repoussent la baisse des taux  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient le taux directeur à 2,25 % pour une quatrième fois consécutive - crea.ca",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOS0dDT21nQWdrRDg1X0lRS3d6UHExRUtWdkVHTlhPSUpkVEhxeUdGWVdXYzBmdERsSFVHZHVVeDBCeFNVOHpZa0VnUmxjMWRlZjhmRm5xWDUzb0NrdzRXOHdQLVJpeHNmdmVOTXVKU0tZSEIxdDVrcnZEeEdVZ3A3ZjNieExNUGpWbDluVDMzT0o5cndBYUNYMlZ0TmNlbzdWQVE?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient le taux directeur à 2,25 % pour une quatrième fois consécutive  crea.ca",
+      "description": "Actualités CMT - Banque Nationale : taux, modalités et comparaison  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -233,10 +277,10 @@
       "category": "general"
     },
     {
-      "title": "Fairstone renoue avec les RMBS par une émission de 425 M$ - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZnV0MXBtRG5FWHByRHpDOWdjdFhob2NIeWZvT0ZaWHFHOE1qWVdnLWJSUC1ZV2RRODBxQk9DWUtTSWg4Nk1YWlJGOFFXeVpJSlQtQTZqNkxqMHFBR01OeEEzT0FLOEJhVW9UTzFOZlZ5MjBMZXp5VU1ZVEdLN1hTZ08wUHJKTEtKUThkM096QmxOanRfVkhaeGJjSm1aMExYV0l2QTB0MG9MM1U?oc=5",
+      "title": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOdnd1aXF5d2ZxRkktWE40STJfbzNuSmpuTG5TMklsMlNnVlRmdkp2bVFUaDJ6MWJLbkgwZmtSQ285WVUxak5Lc1dSVXNxNU5KRkY2aW9IWEFrYU94em53Uk5wWVlkdENFenBHcWtERkwtbjJoV3VKbXcwQlVtWHVHU2ZuWTYtLU1QcEZDY2E0bnFhb3dMeEF0RUFuMWVCM2tvM2pTb2YwYzBORlBLYVFzRTJPMWlERXVETVp3OVJjQnV4eDlueXdJbjd0NXJfejZMQWh3cmRXcFBoS2Rxb2d1REZNd21sV0U5N0NnLW1Pai1aNlk?oc=5",
       "source": "news.google.com",
-      "description": "Fairstone renoue avec les RMBS par une émission de 425 M$  Canadian Mortgage Trends",
+      "description": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -257,26 +301,10 @@
       "category": "general"
     },
     {
-      "title": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOdnd1aXF5d2ZxRkktWE40STJfbzNuSmpuTG5TMklsMlNnVlRmdkp2bVFUaDJ6MWJLbkgwZmtSQ285WVUxak5Lc1dSVXNxNU5KRkY2aW9IWEFrYU94em53Uk5wWVlkdENFenBHcWtERkwtbjJoV3VKbXcwQlVtWHVHU2ZuWTYtLU1QcEZDY2E0bnFhb3dMeEF0RUFuMWVCM2tvM2pTb2YwYzBORlBLYVFzRTJPMWlERXVETVp3OVJjQnV4eDlueXdJbjd0NXJfejZMQWh3cmRXcFBoS2Rxb2d1REZNd21sV0U5N0NnLW1Pai1aNlk?oc=5",
-      "source": "news.google.com",
-      "description": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La Banque du Canada face à un exercice d'equilibriste delicat, selon la TD - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQdV9SOEliZFQ1WUVua0VORmx1LWVDbUlMWktBbkZVV3RKRG5hWVFuUE1ZaXBseksyU1c3RDdVQllTM3J4dTJWZ05VVjU1QW12eFpJdmI3b1M2ZmpRZHF1UVpkcVdSUGZNdGNSTjNYMGJGNXpyeVpVOU1GQjltUE9tNkUyVGhtY0FoM092WnJXYk8zb25mS1lQS2wzYS1zOWtlREdSaWF4VHNzNUlFUDZ0bEpNRHVWdkhoc3JwSlZLNVp2T2FFVjVhbkpyMnh0a2c?oc=5",
       "source": "news.google.com",
       "description": "La Banque du Canada face à un exercice d'equilibriste delicat, selon la TD  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Annonce du taux directeur par la Banque du Canada et événements importants au programme aujourd'hui - SSBCrack",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSlNlRUwwOEY3akNCVThwcnFjcW4tQ2d6ZmJPWmJvT0txdkR1RXUtUm1FaHZqWVEzMlZNOHgxWFJoTTRwSEdvMHV1dmw2T1FPR0pkbHZsTXoxSG1uZS1KbkE0aWlQZnl2a01JZ0ZKZm5xS2hTc0dwNjZYM1RzX1ZNLWpBT2NseXdtdzg3ZldJbW1iWjRXcXY3c0lxdjRYSmRqVmRjbHQ4NmJjdXpSMXR6T2wzUGZmQ2h3QUQzS19BTF83ejA?oc=5",
-      "source": "news.google.com",
-      "description": "Annonce du taux directeur par la Banque du Canada et événements importants au programme aujourd'hui  SSBCrack",
       "cities": [],
       "category": "general"
     }
@@ -333,5 +361,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-08 14:50"
+  "last_update": "2026-05-09 14:17"
 }
