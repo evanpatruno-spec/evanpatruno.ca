@@ -1,6 +1,22 @@
 {
   "news": [
     {
+      "title": "Dossier de crédit inexact | Deux avocates veulent forcer Equifax et TransUnion à vous dédommager",
+      "link": "https://www.lapresse.ca/affaires/chroniques/2026-05-10/dossier-de-credit-inexact/deux-avocates-veulent-forcer-equifax-et-transunion-a-vous-dedommager.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Il existe au moins mille activités plus agréables que faire corriger son dossier de crédit. Les malchanceux qui sont passés par là peuvent en témoigner. Le processus est souvent long et pénible. Deux avocates espèrent maintenant forcer Equifax et TransUnion à verser une somme de 10 000 $ aux Canadiens qui n’ont pas réussi à faire modifier des renseignements faux ou inexacts.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les pros de la finance face au flot de conseils du web",
+      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-05-10/les-pros-de-la-finance-face-au-flot-de-conseils-du-web.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Cryptomonnaies, fonds d’investissements immobiliers, Infinite banking… Des Québécois se présentent maintenant dans les bureaux de leur conseiller financier avec une idée en tête : reproduire la stratégie d’un « finfluenceur ». Et parfois, il faut déjà réparer les pots cassés. Un dossier de Megan Foy",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Nouveau centre de distribution de la SAQ | La modernité, à quel prix ?",
       "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-09/nouveau-centre-de-distribution-de-la-saq/la-modernite-a-quel-prix.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
@@ -21,14 +37,6 @@
       "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-08/plombee-par-les-cryptomonnaies/perte-abyssale-pour-la-maison-mere-du-reseau-de-trump.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
       "description": "La maison mère du réseau Truth Social, fondé par Donald Trump, a publié vendredi une perte nette de plus de 400 millions de dollars au premier trimestre, à comparer avec un chiffre d’affaires limité, de moins d’un million de dollars.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Emploi | Une année qui s’annonce difficile au Québec",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-05-08/emploi/une-annee-qui-s-annonce-difficile-au-quebec.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’année s’annonce difficile sur le marché de l’emploi, particulièrement au Québec, où 91 000 emplois ont disparu depuis le début de l’année et où le taux de chômage est passé de 5,4 % en mars à 6,2 % en avril.",
       "cities": [],
       "category": "general"
     },
@@ -85,14 +93,6 @@
       "category": "local"
     },
     {
-      "title": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$ - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUEZ2TWprSHV1UGhpQ3JvNzR6WENKdHRCeTFqLUF0VUFHOHl0aWJsWnVOaHF2STRnWDZhcVBCWjRIb0U3aFJWYklLWXV2VkZYTlBTeldQUlEwSUdpU1B1dnFIXzRqQ0M3Z3Q0MzRwNENSOHRreFVRWkhwd1I2U2JzSWw4TlBoQi1ZaFRkUXlGNVBDTW5xUTVCLXYzNnJUSGpWQ0hXY2V0N1R4RDhzV1NmUFE4dw?oc=5",
-      "source": "news.google.com",
-      "description": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "1 000 logements pour les aînés : Mission Unitaînés franchit un jalon majeur en inaugurant son 10ᵉ immeuble à Saint-Jean-sur-Richelieu - Coalition Avenir Québec",
       "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxQbXYwMW5YWHB6RXlwYzV1WllTTDVwTW9lVVdCQ01OZ2FpWXBveGM2QUN4ZmltaHAxSkc0VVBtb3QtLXVyTVR5dnZkV2FnLURGMkpPaG9nTlRqLVppZEVuemJTaTd0aHpaejZ0YVNZcklHYVB6aU5EYXB4cjlFaktjM2FvdUYwcXlPYVFCU3RTcTdISVktNzBaZ1hjR2Fib0JWSi03azN2Sm9kbUhkTDNiVnJrWkQ5a2g0Q01EM25tdm9rYzRsX0hWZmllckVMeDBkTExvdlhraGZNdVRpSWFlVUp2QlFOZFY3NlhFZ2FkVEJ6RHhTU18yRnAxSnJGLWF3eklxUk00WjV1VUlhLTQ2Z2RWRFNsdkRSVkJqSTJR?oc=5",
       "source": "news.google.com",
@@ -103,28 +103,26 @@
       "category": "local"
     },
     {
-      "title": "Moins de Québécois en Floride: «Donald Trump, c’était la porte de sortie facile» – André Lauzier, courtier immobilier - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOanBWdVRUcmFpQnFFT2IzTDA0RmMyOF9COUoyNlIwMU1SdHBMSEZrY3VDak5tOEVVZDVFUzlLNkREQTRrc3p4eko4NU9BWDlOYU4zQlJfOHR1bGlNU3dnUHBVU21JWmtoY1Q4aXFsYmd3NUxKSVc3TGlUc1hZMmVaejd4T2UxVE9MdlJQS05sanVXclhOLXFSRHBVd3BiVWNQbHVWcE1zcnYwYlg3bVlvZ242N3JKV2IyWlFMSENXbHlfamlFdmJzZ1RyMXloRmN5SDM2bC1VQ3JqMDdnN2NFazBoUjlUYk1CUmd0ZG53?oc=5",
-      "source": "news.google.com",
-      "description": "Moins de Québécois en Floride: «Donald Trump, c’était la porte de sortie facile» – André Lauzier, courtier immobilier  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "RMR de Québec : une hausse de l’offre de propriétés se - GlobeNewswire",
-      "link": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxNR1hnMGxZN0pxVDQtQzJlckZ5VHJQOWZNeXlQUnN4V1ZsRkZIVGttVkdhRk5rZEEtNGJZTUhBOXBEbmhFSFRBaC1idE1XSWV3YUNGdnFJQl9TLTdDTlFQbC1iMUxXaU9IWFZjLXJTeVp6aGhMaHJHLXVIWE00SU1yU2VOOGdDa1BmLTVyeGlQcjBjRGtsUDVybDJ4dDRkSW5Bd0haTnF3dEFuXzVpNGhNanZ5NEFYZmdoMzF4dmtTTS1RSWZIRmh5MU15dDVfc2RCUmpUd0lWZ3M0VDNKbTJaY3JXLVdDeTVfanFSTzVjNTRjUDB1RzRXUF8zM2R1dkUxTnZqV3UyQ3JpRVZnN3Z2aWFzS2FCREc4MVFUanNaU1MteWFqVnhlV2hZM3lQWkc3ZmEybGxONld4TmRTbUd0Wl9R?oc=5",
-      "source": "news.google.com",
-      "description": "RMR de Québec : une hausse de l’offre de propriétés se  GlobeNewswire",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "5 maisons à vendre au Québec à moins de 100 000 $ qui sont habitables et valent le détour - Narcity",
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaXI2T2RueU9GNmoyYlp5bG9GSE1xcEJFWUpfMTJCLUlQNGl6R1V0MFJldXhJMkMzV3EzR01jbzFxTWpyUkowWGJNbXFvV0tKalNYNXlqSXJCMnpiaGJabGlKTXM2NDV0a0dIZXNqY3hfMDEzbjkzVkoyTmlWaTJ1bw?oc=5",
       "source": "news.google.com",
       "description": "5 maisons à vendre au Québec à moins de 100 000 $ qui sont habitables et valent le détour  Narcity",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPR3lIWks4d3ZKaUV2R3FlSXdicWVURmJSTEtXNkctU2R1V05yYjhVNVo0ZkRrZXJ3YTlqSEhjQlZ1cDNRSWp4OWVGdmtQN0NPLXc2Z2E4VFpxTWk4eEtnaEFTSC1paDlkVE5TeTdybXh4dVlFenkwVTlxbm0ydmJBNVJMSTlDWHZXQWgzbWt3VklVczN6RTRFMG1uQnBzS0pySDNBazZyUm1oMG9yR2RjVG91WUxYNnFuMmFtaHI3MXlJMFJyb1Y2Uml2WF9XZlJUUmtBTHFxS29fN3RnZVNaMW02NjRyOTdLMml0SkJiNEdxREM5NlZxUUdRYTVLd3dudzVqSV83SlphTW85RndJVXF4c2JRb3pHdzVtTmxuN0lrd3NkamYta08tYzdaU2RMZ1E?oc=5",
+      "source": "news.google.com",
+      "description": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché  Le Soleil",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$ - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdGpHMktNYVVvNDRRRVdnQ05pQzFSa3lweHROUXEwbWV5ZEoyM3VJMXdGYUx1ZFRUZTVrZUVuaHM1OS1jYllhU0xZME9FZTFuWVNxZkc4T0ozMWg5RlpnaDROaGxEekQ2VUxCSjRHbkU5TUpNdy1iZVpEMDJ0SFRWQzZXNHhuRXdqU1BKcGhlSXVxbUtINElEZ2tTb3ZtV2EyOU8zTHJXZEhoSTNTUmpYblFmUU5mTU9Y?oc=5",
+      "source": "news.google.com",
+      "description": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -137,20 +135,14 @@
       "category": "general"
     },
     {
-      "title": "Logement: quand le privé et le public collaborent - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPXzNkbjBETk1sTGRUempHVDZjNkFRYjAtSnFjZXBpaFhyX2w5MzBJOWl0bU1tVnhuTHAwRjdDYUZ2WjRJVk1ZSFA0QmoxT0RvcTJrSVlqdnlUUjNHSFljMjBHRWtiQUlFN05LdEthMjI4MVZBT09PcEJMSGtIdmlneGliakVUaUlpRE1lTnY2aw?oc=5",
+      "title": "Voici le salaire annuel à gagner pour t'acheter une maison à Montréal sans te ruiner en mai - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOU0pjTE5sSEUxS3ZpSzd2Um5nZzJIcVRsenpNS3dZQy16UG1EY3Y2WUVmbExUZEs4UjZrWm9JdnBoWUF1N2F5Vk9xS1pJejJMc2JyY0dZRUxVQm1UQjFSZWFNZEpXS1JhZzZ6RmtMemFRUzloLUdZYUxxQVk0VUpxRHFR?oc=5",
       "source": "news.google.com",
-      "description": "Logement: quand le privé et le public collaborent  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Québec se débarrasse des Tanguy à coup de maisons mobiles 4.0 - 106.9 Mauricie",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQdmdwVWRUSXRsTF9USm96X2pBdlBoWnBETFFIdER6U29KQjNWSHdVUDVZRlVMSl9XcW53bnNtcXFKUHp0OFBHa1VMZlM0LWJDcU9NLTViLXJraUMwUVEzUWtLNjBEenM3VWJSNWxMTmU0ajl5NDhwcmpyamZ0SC1WM3Bkc3ZScFg5MEg4Zi1PeGtFdVhycllzaVhUQ0s?oc=5",
-      "source": "news.google.com",
-      "description": "Québec se débarrasse des Tanguy à coup de maisons mobiles 4.0  106.9 Mauricie",
-      "cities": [],
-      "category": "general"
+      "description": "Voici le salaire annuel à gagner pour t'acheter une maison à Montréal sans te ruiner en mai  Narcity",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Une consultation moins houleuse qu’en 2025 pour des logements sur Henri-Bourassa - Monquartier",
@@ -167,6 +159,24 @@
       "description": "CondoLegal.com  CondoLegal.com",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "EMD-Batimo planifie deux projets résidentiels à Longueuil - Portail Constructo",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQmhLb1VYcHpUR3p4OTlISnV6SXFRQWliQXBaNjV5cGJ2WkE5VDFrcjFjZ0ZUWk1XM2EzWXZUQ0VZbS1wVFRWWUl5cTVGYk0xbnFkMkhYRkpKdVU4Y1N3aFN2WUFYbTRpWVN0WUZpSjNmb2Z6SjNNbmV6RFRtb0M0Q3F5Q0hhbnZfQUFMNk9EQVl5R0hTb0ZVNTJxdmpvelc3a3c?oc=5",
+      "source": "news.google.com",
+      "description": "EMD-Batimo planifie deux projets résidentiels à Longueuil  Portail Constructo",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Transaction de la semaine: une maison de Sillery s’envole à plus de 3M$ - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSmhIeDk5LTgzVEJmc0UtTUV6aEZGckRXWGw1eHI2MGwtRlNnSFl6LTZGMmlZejlIdzZha2ZZa0ZtbWVCbEkzYUpteUVFVDBNUnFpZHdOMXU5SEdGVFFZQWJtNERmRjlXV1pjeXRfdENXTEwyckZKZENMYnR1ZVlkb1RMUEUteWhIRHVrdUlDVFU1V0NNeHJEd1RiY1RJVjQ4SGZDYko4Zy0ycEhGTmhRcHJDdi1RWGsydDBfTkFpWXY1TXNHajZMN20tTks?oc=5",
+      "source": "news.google.com",
+      "description": "Transaction de la semaine: une maison de Sillery s’envole à plus de 3M$  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs - TVA Nouvelles",
@@ -187,14 +197,12 @@
       "category": "local"
     },
     {
-      "title": "Transaction de la semaine: une maison de Sillery s’envole à plus de 3M$ - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSmhIeDk5LTgzVEJmc0UtTUV6aEZGckRXWGw1eHI2MGwtRlNnSFl6LTZGMmlZejlIdzZha2ZZa0ZtbWVCbEkzYUpteUVFVDBNUnFpZHdOMXU5SEdGVFFZQWJtNERmRjlXV1pjeXRfdENXTEwyckZKZENMYnR1ZVlkb1RMUEUteWhIRHVrdUlDVFU1V0NNeHJEd1RiY1RJVjQ4SGZDYko4Zy0ycEhGTmhRcHJDdi1RWGsydDBfTkFpWXY1TXNHajZMN20tTks?oc=5",
+      "title": "Cette maison à vendre au bord de l’eau en Gaspésie est digne d’un roman et coûte 349 000 $ - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWGpDb1JfVU91UWJiVFpsQTlBUHh1ZENTYXhWbGtOb2t4QlNmRW5rVzk1TmwxT3dqQ2xjaW9qeWlYMXR0MnkxQWRzcW05Y0xnVEFQTzBpYWJrcGdQTGdDdVlMUlc0NW1Mc2NoNVFfVW9iLUpuM0VEcUU3b2tFMHJEdk9n?oc=5",
       "source": "news.google.com",
-      "description": "Transaction de la semaine: une maison de Sillery s’envole à plus de 3M$  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Cette maison à vendre au bord de l’eau en Gaspésie est digne d’un roman et coûte 349 000 $  Narcity",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Taux fixe ou variable: pourquoi la vraie question n’est pas celle que vous pensez - Les Affaires",
@@ -257,14 +265,6 @@
       "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNUHBpZnY0Z2g3aVNTLWU5WDMwdjRyRVpaTUFBeFgtemFqTXFTTWl3dFA3QU4wUVFua1h1cXE4YmtCUzdxVjFMcE5LeEZiQ2VqU0htc25lUkZfM1d5Nm5YYkJ0dFBvdzNKRXRKZVBDZEdxWXFCXy1CZk92Y3dKMzF6X0d5R3FyTk5YeUVuUk9xcHV5cThBT0hnOW9URWh5R0htaWhaSktwUlh5U2RJVXpBV0w3MHJHZm9LMXpjMW44X0x5RjZQb0h4UFZPdlR2UkhDUnB6V1JLbkNOVHc?oc=5",
       "source": "news.google.com",
       "description": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1  Morningstar Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Actualités CMT - Banque Nationale : taux, modalités et comparaison - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSzhoRlowdnJZdkpzTmNidmlyOFdjZ3ptSjdNV2U0T2wxVnQ0N2JTZkVHbldOQjVEUFFYbURYR2VROXBnaWJPU0o5YTdFSU9IaVpRVjZTcXpxLTA3WGNqekdrT2p2UTJXNVhldlhBckRNNnNQbExjemQ2dlRFM0xLOVFmSzBQWkNzRnlKbWxpVlBMeFdYZ0FJaElWbndpTDJzY3RPYVBoZzBFUWh6YnBTYUFScWUzeS1sdURNREYwUVo0WTdFRHBnSHNkcDRoS0lBWTF1cXhyeXJfbjlfOTM3QlZsb3FLUDRNR3cwLXZ6WUN5dw?oc=5",
-      "source": "news.google.com",
-      "description": "Actualités CMT - Banque Nationale : taux, modalités et comparaison  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -361,5 +361,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-09 14:17"
+  "last_update": "2026-05-10 14:20"
 }
