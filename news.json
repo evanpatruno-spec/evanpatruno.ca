@@ -1,42 +1,26 @@
 {
   "news": [
     {
-      "title": "Dossier de crédit inexact | Deux avocates veulent forcer Equifax et TransUnion à vous dédommager",
-      "link": "https://www.lapresse.ca/affaires/chroniques/2026-05-10/dossier-de-credit-inexact/deux-avocates-veulent-forcer-equifax-et-transunion-a-vous-dedommager.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Premier trimestre | Cineplex annonce une perte de 22,4 millions",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-11/premier-trimestre/cineplex-annonce-une-perte-de-22-4-millions.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Il existe au moins mille activités plus agréables que faire corriger son dossier de crédit. Les malchanceux qui sont passés par là peuvent en témoigner. Le processus est souvent long et pénible. Deux avocates espèrent maintenant forcer Equifax et TransUnion à verser une somme de 10 000 $ aux Canadiens qui n’ont pas réussi à faire modifier des renseignements faux ou inexacts.",
+      "description": "Cineplex a annoncé une perte de 22,4 millions au premier trimestre, contre une perte de 36,6 millions à la même période l’année précédente, alors que son chiffre d’affaires a augmenté de 16 %.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Les pros de la finance face au flot de conseils du web",
-      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-05-10/les-pros-de-la-finance-face-au-flot-de-conseils-du-web.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Congrès de l’Association des économistes | Les mythes et autres problèmes en habitation",
+      "link": "https://www.lapresse.ca/affaires/chroniques/2026-05-11/congres-de-l-association-des-economistes/les-mythes-et-autres-problemes-en-habitation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Cryptomonnaies, fonds d’investissements immobiliers, Infinite banking… Des Québécois se présentent maintenant dans les bureaux de leur conseiller financier avec une idée en tête : reproduire la stratégie d’un « finfluenceur ». Et parfois, il faut déjà réparer les pots cassés. Un dossier de Megan Foy",
+      "description": "Doit-on être propriétaire de sa maison pour s’enrichir ? Les pays qui comptent davantage de propriétaires sont-ils plus prospères ? Pourquoi nos entreprises de construction sont-elles si improductives ?",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Nouveau centre de distribution de la SAQ | La modernité, à quel prix ?",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-09/nouveau-centre-de-distribution-de-la-saq/la-modernite-a-quel-prix.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Le coût du projet de centre automatisé de distribution de la SAQ, qui doit entrer en fonction l’an prochain, est passé de 48,5 à 300 millions en quatre ans. Tandis que le syndicat croit qu’il s’agit d’une dépense insensée qui va mener à l’effritement des succursales et du métier de conseiller, la SAQ l’estime essentiel pour gagner en efficacité. À quelques jours du passage de la société d’État devant les élus pour l’étude de ses crédits, nous faisons le point sur ce projet méconnu du grand public.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Accès internet sous les mers | Quatre câbles (étrangers) pour tout le pays",
-      "link": "https://www.lapresse.ca/affaires/techno/2026-05-09/acces-internet-sous-les-mers/quatre-cables-etrangers-pour-tout-le-pays.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Ce n’était pas un enjeu il y a deux ans, mais les choses changent vite depuis le retour de Donald Trump à la Maison-Blanche : les quatre câbles optiques qui traversent les océans pour relier le Canada à l’Europe et à l’Asie appartiennent à des intérêts étrangers, essentiellement américains. La question est désormais considérée comme un risque de sécurité nationale. Comment le Canada peut-il devenir moins vulnérable face à son puissant voisin ? Un dossier d’Alain McKenna",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Plombée par les cryptomonnaies | Perte abyssale pour la maison mère du réseau de Trump",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-08/plombee-par-les-cryptomonnaies/perte-abyssale-pour-la-maison-mere-du-reseau-de-trump.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "La maison mère du réseau Truth Social, fondé par Donald Trump, a publié vendredi une perte nette de plus de 400 millions de dollars au premier trimestre, à comparer avec un chiffre d’affaires limité, de moins d’un million de dollars.",
+      "title": "La fermeture d’un café de la rue Wellington ravive le débat pour encadrer les loyers",
+      "link": "https://www.ledevoir.com/economie/979082/fermeture-cafe-rue-wellington-ravive-debat-encadrer-loyers",
+      "source": "Le Devoir",
+      "description": "Station W devra fermer après 13 ans d’activité sur la dynamique rue en raison d’une hausse de loyer commercial de 60%.",
       "cities": [],
       "category": "general"
     },
@@ -67,18 +51,10 @@
       "category": "general"
     },
     {
-      "title": "Coup d’envoi d’un projet de 75 M$ à Laurier Québec pour construire 276 logements et des espaces commerciaux qui accueilleront un restaurant St-Hubert - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNLTd5V3ZaWWRGN2tPRXBMVjJHQ3cxZHh0WUtuWFhFem5JajRWcUJvX1hEMFdOUmxNcU0xQTIxQTRYS29CcWE0QjRxRkQ3YTRnVklLMnprLU5NclFFX1MtT3hZckRZZWZBSEpHcHZKNHdsNm1ZM1NpVENvem13VVZTbHNzMTZseUlUZk4zSnI3X01PbHl4ZC1sYm1HQmEwWXViVG1oOFdIcmVoTHpCODhMdGZyVEdyVGJjaC1UWWVDUXVUNWRTVTFuN0ljV3Z1UVd0Q2ZCQ2ktZFBLQ2d5aUtIM3E4cUxYRGFCbmxCVDRKQ0lBcGxsRGZDdXRINEFJNmVBb0pVZTZYX2k4REhLQmRCNlpB?oc=5",
+      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPR3lIWks4d3ZKaUV2R3FlSXdicWVURmJSTEtXNkctU2R1V05yYjhVNVo0ZkRrZXJ3YTlqSEhjQlZ1cDNRSWp4OWVGdmtQN0NPLXc2Z2E4VFpxTWk4eEtnaEFTSC1paDlkVE5TeTdybXh4dVlFenkwVTlxbm0ydmJBNVJMSTlDWHZXQWgzbWt3VklVczN6RTRFMG1uQnBzS0pySDNBazZyUm1oMG9yR2RjVG91WUxYNnFuMmFtaHI3MXlJMFJyb1Y2Uml2WF9XZlJUUmtBTHFxS29fN3RnZVNaMW02NjRyOTdLMml0SkJiNEdxREM5NlZxUUdRYTVLd3dudzVqSV83SlphTW85RndJVXF4c2JRb3pHdzVtTmxuN0lrd3NkamYta08tYzdaU2RMZ1E?oc=5",
       "source": "news.google.com",
-      "description": "Coup d’envoi d’un projet de 75 M$ à Laurier Québec pour construire 276 logements et des espaces commerciaux qui accueilleront un restaurant St-Hubert  QUB radio",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un chantier de 309 logements s’amorce aux abords du futur tramway - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONTdWcjBITGp0NVFQUkJUTEQzNXhFeENGV3VIYWZBUUNNdHk5bUlPcFlkWHRva181ZkUwOG51VG9PMG9Bbmk0RV9xN2c0a1Y1YkdVYlBjRjFkNFJsdkdLQlFEVnA1VFNZS0h3U0tkZ19TbDFaSjY0SjN2dEhlVC1Rel92eDJGZUJBWUpuUExBQnBKZjMzbzhOeG5nZXRZczRLUGdQenEyT3ViVkJsOWdGZmQ5dGVvYUViQ0c1NkRnb1g3VnEtUFpmQ3lfZkt3VVZPQkJON1BDQmRaY0lISnJWOHFncG5mYTBCeVE?oc=5",
-      "source": "news.google.com",
-      "description": "Un chantier de 309 logements s’amorce aux abords du futur tramway  Le Soleil",
+      "description": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché  Le Soleil",
       "cities": [],
       "category": "general"
     },
@@ -111,18 +87,26 @@
       "category": "general"
     },
     {
-      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPR3lIWks4d3ZKaUV2R3FlSXdicWVURmJSTEtXNkctU2R1V05yYjhVNVo0ZkRrZXJ3YTlqSEhjQlZ1cDNRSWp4OWVGdmtQN0NPLXc2Z2E4VFpxTWk4eEtnaEFTSC1paDlkVE5TeTdybXh4dVlFenkwVTlxbm0ydmJBNVJMSTlDWHZXQWgzbWt3VklVczN6RTRFMG1uQnBzS0pySDNBazZyUm1oMG9yR2RjVG91WUxYNnFuMmFtaHI3MXlJMFJyb1Y2Uml2WF9XZlJUUmtBTHFxS29fN3RnZVNaMW02NjRyOTdLMml0SkJiNEdxREM5NlZxUUdRYTVLd3dudzVqSV83SlphTW85RndJVXF4c2JRb3pHdzVtTmxuN0lrd3NkamYta08tYzdaU2RMZ1E?oc=5",
+      "title": "CondoLegal.com - CondoLegal.com",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tME9fQmVtakxFLWEtSFMzQUJBUDhWdlJrQU9ycjRxcTV1cmNIdXZSTzE1OUpBNFpjc1dicl8wOUpSdnNMUnczRlNZYTJ2bUJwa1RUelFiSWRRODRPRVlHeTNpLU9oMV92c254OWtn?oc=5",
       "source": "news.google.com",
-      "description": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché  Le Soleil",
+      "description": "CondoLegal.com  CondoLegal.com",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$ - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdGpHMktNYVVvNDRRRVdnQ05pQzFSa3lweHROUXEwbWV5ZEoyM3VJMXdGYUx1ZFRUZTVrZUVuaHM1OS1jYllhU0xZME9FZTFuWVNxZkc4T0ozMWg5RlpnaDROaGxEekQ2VUxCSjRHbkU5TUpNdy1iZVpEMDJ0SFRWQzZXNHhuRXdqU1BKcGhlSXVxbUtINElEZ2tTb3ZtV2EyOU8zTHJXZEhoSTNTUmpYblFmUU5mTU9Y?oc=5",
+      "title": "EMD-Batimo planifie deux projets résidentiels à Longueuil - Portail Constructo",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQmhLb1VYcHpUR3p4OTlISnV6SXFRQWliQXBaNjV5cGJ2WkE5VDFrcjFjZ0ZUWk1XM2EzWXZUQ0VZbS1wVFRWWUl5cTVGYk0xbnFkMkhYRkpKdVU4Y1N3aFN2WUFYbTRpWVN0WUZpSjNmb2Z6SjNNbmV6RFRtb0M0Q3F5Q0hhbnZfQUFMNk9EQVl5R0hTb0ZVNTJxdmpvelc3a3c?oc=5",
       "source": "news.google.com",
-      "description": "Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$  Journal de Québec",
+      "description": "EMD-Batimo planifie deux projets résidentiels à Longueuil  Portail Constructo",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Un chantier de 309 logements s’amorce aux abords du futur tramway - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONTdWcjBITGp0NVFQUkJUTEQzNXhFeENGV3VIYWZBUUNNdHk5bUlPcFlkWHRva181ZkUwOG51VG9PMG9Bbmk0RV9xN2c0a1Y1YkdVYlBjRjFkNFJsdkdLQlFEVnA1VFNZS0h3U0tkZ19TbDFaSjY0SjN2dEhlVC1Rel92eDJGZUJBWUpuUExBQnBKZjMzbzhOeG5nZXRZczRLUGdQenEyT3ViVkJsOWdGZmQ5dGVvYUViQ0c1NkRnb1g3VnEtUFpmQ3lfZkt3VVZPQkJON1BDQmRaY0lISnJWOHFncG5mYTBCeVE?oc=5",
+      "source": "news.google.com",
+      "description": "Un chantier de 309 logements s’amorce aux abords du futur tramway  Le Soleil",
       "cities": [],
       "category": "general"
     },
@@ -145,26 +129,10 @@
       "category": "local"
     },
     {
-      "title": "Une consultation moins houleuse qu’en 2025 pour des logements sur Henri-Bourassa - Monquartier",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVU9FVEtaRnh1aTVyR2QySU0zWjlaYkpRZGJKMkhsT3JWazVtdUVUeTN4Ynh6QkNYZ3JQODdrNUJmdEwtWVRyQjZwYUZnUFZZSkJkWjhjYlpQajRoa0lKM1NjN3kwbVBqcVVNLTc3c3BfNWlSTWxpSE9lbk5zMDdwRDlqU2xQdG5GWENScGs2OG90S0J4TVdTZmFBYmNpbU9tOV9YSkpMUUc5Q013c0tXeFFB?oc=5",
+      "title": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVFFZSGx3dkxLV1hDNGRlQUlLRmVqVkdaOV9NZUU1eHR6cC1pWUIyYVVCdTY0WXdKdjYwOHR5UC02UUV3ZEQ2SGhyQ1NBRldlajV6ZlNzM0gyR0pkMGhEQ3pZS3VZdEFrd2d6ckhBVXJHd210YXlzVmVZNDZrQlJ1YUY5LW9NNlhzTE1WalpPd1hhOTVYYTdtYm9PeDE1NnNjY19kempZZy1wY3ZOOVE?oc=5",
       "source": "news.google.com",
-      "description": "Une consultation moins houleuse qu’en 2025 pour des logements sur Henri-Bourassa  Monquartier",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "CondoLegal.com - CondoLegal.com",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tME9fQmVtakxFLWEtSFMzQUJBUDhWdlJrQU9ycjRxcTV1cmNIdXZSTzE1OUpBNFpjc1dicl8wOUpSdnNMUnczRlNZYTJ2bUJwa1RUelFiSWRRODRPRVlHeTNpLU9oMV92c254OWtn?oc=5",
-      "source": "news.google.com",
-      "description": "CondoLegal.com  CondoLegal.com",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "EMD-Batimo planifie deux projets résidentiels à Longueuil - Portail Constructo",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQmhLb1VYcHpUR3p4OTlISnV6SXFRQWliQXBaNjV5cGJ2WkE5VDFrcjFjZ0ZUWk1XM2EzWXZUQ0VZbS1wVFRWWUl5cTVGYk0xbnFkMkhYRkpKdVU4Y1N3aFN2WUFYbTRpWVN0WUZpSjNmb2Z6SjNNbmV6RFRtb0M0Q3F5Q0hhbnZfQUFMNk9EQVl5R0hTb0ZVNTJxdmpvelc3a3c?oc=5",
-      "source": "news.google.com",
-      "description": "EMD-Batimo planifie deux projets résidentiels à Longueuil  Portail Constructo",
+      "description": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -179,14 +147,6 @@
       "category": "local"
     },
     {
-      "title": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVFFZSGx3dkxLV1hDNGRlQUlLRmVqVkdaOV9NZUU1eHR6cC1pWUIyYVVCdTY0WXdKdjYwOHR5UC02UUV3ZEQ2SGhyQ1NBRldlajV6ZlNzM0gyR0pkMGhEQ3pZS3VZdEFrd2d6ckhBVXJHd210YXlzVmVZNDZrQlJ1YUY5LW9NNlhzTE1WalpPd1hhOTVYYTdtYm9PeDE1NnNjY19kempZZy1wY3ZOOVE?oc=5",
-      "source": "news.google.com",
-      "description": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Les standards de l'immobilier industriel redéfinis par ROSEFELLOW. - L'Écho de Laval",
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZndFTG15OWdKUDRFQnY2MjFsMlBPckM5OUp6QjZIcjBPWnlPWTlTckFtcXhXOWl4blBERFhTcWxnYlBiWWtvOVQzTVZOV3JuaDRWOTJsQW45SWFDRU85QjF5Q05QdHA3Q0pfdGF6TGRYLUJUVGdEMWJWWHIzMklVSk1LdUxIYjVyVTdvZWx6VGd4X3J1emM1Q25ndEJpdnJrd2lyUWJZTjBvdEc0X2h0TVdWMi1XcmF1T1Rz?oc=5",
       "source": "news.google.com",
@@ -197,10 +157,10 @@
       "category": "local"
     },
     {
-      "title": "Cette maison à vendre au bord de l’eau en Gaspésie est digne d’un roman et coûte 349 000 $ - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWGpDb1JfVU91UWJiVFpsQTlBUHh1ZENTYXhWbGtOb2t4QlNmRW5rVzk1TmwxT3dqQ2xjaW9qeWlYMXR0MnkxQWRzcW05Y0xnVEFQTzBpYWJrcGdQTGdDdVlMUlc0NW1Mc2NoNVFfVW9iLUpuM0VEcUU3b2tFMHJEdk9n?oc=5",
+      "title": "Une consultation moins houleuse qu’en 2025 pour des logements sur Henri-Bourassa - Monlimoilou",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcEI5aml5Z2F4R1Z3Y0FsR05HV1BJNTRxMHhMRk16RDVUX2puQ2tPeDdlb0s3azJoWlhVdExNRTdkQUtjekZPR1RNbXFsbFNmaWp5SlVyRFY1akNvNmQzT1hVV1VkVFpDemhkVWxJaDhDTURGYWFqUEEyMEQtNjhKY05lV2d1dFNIRmp4bHFaejZVLUh0dlhiN09qSFVNMWR6Uk9DZnhFWmxsUDZXQnc?oc=5",
       "source": "news.google.com",
-      "description": "Cette maison à vendre au bord de l’eau en Gaspésie est digne d’un roman et coûte 349 000 $  Narcity",
+      "description": "Une consultation moins houleuse qu’en 2025 pour des logements sur Henri-Bourassa  Monlimoilou",
       "cities": [],
       "category": "general"
     },
@@ -229,10 +189,10 @@
       "category": "general"
     },
     {
-      "title": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNaXZVZXVjcDI1alJqdk1pZEtSRG1XYlBhMzlFXzZQV3Bqb0JqcmVuelp4dmI2ZHFwd0h2TVJwanJoeGxVY29KUU9JOW5DdDAwakNwcC1oYUJmOE1LN04yRWgxTWc5VXliTVVSR25uWEFCSkRKS0hxLVFZQlNXWWRDck1fRi15UGhPT2xpeEFucnpmZGpZejFmSW5feTBrNXZsSm92WWFWYU1VVk0tUkhVVlBEZmlnaktOQWozYWZwa3hfdDk4d2VkUTBWbVdJaU0tMWZMOHFZd2F0enhJTUZMZmJ0S2F5QVE?oc=5",
+      "title": "L’effet des contre-mesures tarifaires canadiennes sur les prix à la consommation - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB0bUMxX1FBLTVfS0pqb2lybUxwSGlyb1dCZDZBSFlnSWZGbm51X1NOckJjR2IwdFh5M3E2aGhyWVFsVTMyT2MwU3l0dHBjTVdrYURWbDRCNV8tQkNEd1JjbjNncmFBYmVUbXBiUXY3T3paTjIyWGlHZw?oc=5",
       "source": "news.google.com",
-      "description": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires  Banque du Canada",
+      "description": "L’effet des contre-mesures tarifaires canadiennes sur les prix à la consommation  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -253,6 +213,14 @@
       "category": "general"
     },
     {
+      "title": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNaXZVZXVjcDI1alJqdk1pZEtSRG1XYlBhMzlFXzZQV3Bqb0JqcmVuelp4dmI2ZHFwd0h2TVJwanJoeGxVY29KUU9JOW5DdDAwakNwcC1oYUJmOE1LN04yRWgxTWc5VXliTVVSR25uWEFCSkRKS0hxLVFZQlNXWWRDck1fRi15UGhPT2xpeEFucnpmZGpZejFmSW5feTBrNXZsSm92WWFWYU1VVk0tUkhVVlBEZmlnaktOQWozYWZwa3hfdDk4d2VkUTBWbVdJaU0tMWZMOHFZd2F0enhJTUZMZmJ0S2F5QVE?oc=5",
+      "source": "news.google.com",
+      "description": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "L’évolution de la place du Canada dans le commerce maritime mondial - Banque du Canada",
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBzSFVKZVlHS2dPUEpzanVOS1Jtb2tXTUxoWGNIYjNoSV9BandmTkxRUGlNYTFNeVJzR3U5anFhWTVTb2hUc1NwSE1aNUtabEpRRUFUZDE2Wmp0OGF6SFdiUVpDSjhWUVE4S0JoR08tMDVUdklIaUF0aw?oc=5",
       "source": "news.google.com",
@@ -261,10 +229,18 @@
       "category": "general"
     },
     {
-      "title": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1 - Morningstar Canada",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNUHBpZnY0Z2g3aVNTLWU5WDMwdjRyRVpaTUFBeFgtemFqTXFTTWl3dFA3QU4wUVFua1h1cXE4YmtCUzdxVjFMcE5LeEZiQ2VqU0htc25lUkZfM1d5Nm5YYkJ0dFBvdzNKRXRKZVBDZEdxWXFCXy1CZk92Y3dKMzF6X0d5R3FyTk5YeUVuUk9xcHV5cThBT0hnOW9URWh5R0htaWhaSktwUlh5U2RJVXpBV0w3MHJHZm9LMXpjMW44X0x5RjZQb0h4UFZPdlR2UkhDUnB6V1JLbkNOVHc?oc=5",
+      "title": "La Banque du Canada prévoit une croissance du PIB de 1,6% fin 2026 - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZ0pZeWNrWmp3a2tPZmtrcUJCZVhtV3NDTjMxbl9WRkJEdkhvUWlUTU04Zy1taFlnZURxUkZla1JPdWtiVzNfbFdLSUVhR011WU9QVFZDUThoeTZ5bGZDdWY3OFB6TmJCUlJrR0d2cU5fX2VUdXFsZ3BPNFNXcUZWQy1KZTFQX1hiSUM4bU1ESUkyMWdhMVdQcHRkX08zOHhMTkYyQUFBVjVkMGg0bmM5dngtbG5GSDRyZkJ3VQ?oc=5",
       "source": "news.google.com",
-      "description": "La semaine en bref : révision des cotes de fonds, taux d’intérêt de la Banque du Canada et résultats du T1  Morningstar Canada",
+      "description": "La Banque du Canada prévoit une croissance du PIB de 1,6% fin 2026  Investing.com France",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Actualités CMT - Banque Nationale : taux, modalités et comparaison - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSzhoRlowdnJZdkpzTmNidmlyOFdjZ3ptSjdNV2U0T2wxVnQ0N2JTZkVHbldOQjVEUFFYbURYR2VROXBnaWJPU0o5YTdFSU9IaVpRVjZTcXpxLTA3WGNqekdrT2p2UTJXNVhldlhBckRNNnNQbExjemQ2dlRFM0xLOVFmSzBQWkNzRnlKbWxpVlBMeFdYZ0FJaElWbndpTDJzY3RPYVBoZzBFUWh6YnBTYUFScWUzeS1sdURNREYwUVo0WTdFRHBnSHNkcDRoS0lBWTF1cXhyeXJfbjlfOTM3QlZsb3FLUDRNR3cwLXZ6WUN5dw?oc=5",
+      "source": "news.google.com",
+      "description": "Actualités CMT - Banque Nationale : taux, modalités et comparaison  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -277,22 +253,6 @@
       "category": "general"
     },
     {
-      "title": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOdnd1aXF5d2ZxRkktWE40STJfbzNuSmpuTG5TMklsMlNnVlRmdkp2bVFUaDJ6MWJLbkgwZmtSQ285WVUxak5Lc1dSVXNxNU5KRkY2aW9IWEFrYU94em53Uk5wWVlkdENFenBHcWtERkwtbjJoV3VKbXcwQlVtWHVHU2ZuWTYtLU1QcEZDY2E0bnFhb3dMeEF0RUFuMWVCM2tvM2pTb2YwYzBORlBLYVFzRTJPMWlERXVETVp3OVJjQnV4eDlueXdJbjd0NXJfejZMQWh3cmRXcFBoS2Rxb2d1REZNd21sV0U5N0NnLW1Pai1aNlk?oc=5",
-      "source": "news.google.com",
-      "description": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada envisage une réglementation des stablecoins d'ici la mi-2027 ou fin 2027 - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOeFY1U3dGVWZkMmhFclpvY0lSQS1wdzZuTU4yUzEtR2g1Mko2bXIxZTF3dlJBV0F6WWVSUGc1WWJSaHp4TXpralB5cmJDbFM2Z0R1Z3F0ZEZMSG1sZmdNYzdJa1lTQmk1VVFOTkIxd0wxQlpUcjVzTEJKWTNsNTltRWZuZlNXNnNlZXgtaDNsQ3JjQ1EwYVdRcmVKdzZwLVQtbUxHaDBaVEc0a3VoUDhOODN1bnJtUFRBMWMtelBMUHZGUUpQb0tZTzVzM09fVnVkZVljOHJFLVFDMi10a0VITTJNZ3NHcjFp?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada envisage une réglementation des stablecoins d'ici la mi-2027 ou fin 2027  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le gouverneur de la Banque du Canada, Tiff Macklem, estime qu'après la nomination de Kevin Warsh à la tête de la Fed, la culture et le comportement de l'institution s'inscriront dans la continuité - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNZThmTmhJOXptdC1vSTJ6VzJYRjRPVHpadkJLMTZweDlNb1JsQU5wai1tWUlOYjV4Z05ZWnRUYkJCeDB5MjN5bjZoT2hPNkc4N282cDd0d3l5NldMX1l0WEZpd2dnbnBTNUJsc3B4ajVoLWpzSTkxUElUaVpCd0lmM2dzWkU4WXozQXk3SDA5MGo5dFozRHU0TU9fR0loMEpwWDl3ZW5lbjdYaTlKdHlWMFo4dDBDeklaY3dkV3A3ZE83aktTWjRWMW9EM1Jad0d3T25CZEdNOWEwV1M1dnZmbXI1Z1BLU3JETjd3cjVQZTg?oc=5",
       "source": "news.google.com",
@@ -301,10 +261,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada face à un exercice d'equilibriste delicat, selon la TD - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQdV9SOEliZFQ1WUVua0VORmx1LWVDbUlMWktBbkZVV3RKRG5hWVFuUE1ZaXBseksyU1c3RDdVQllTM3J4dTJWZ05VVjU1QW12eFpJdmI3b1M2ZmpRZHF1UVpkcVdSUGZNdGNSTjNYMGJGNXpyeVpVOU1GQjltUE9tNkUyVGhtY0FoM092WnJXYk8zb25mS1lQS2wzYS1zOWtlREdSaWF4VHNzNUlFUDZ0bEpNRHVWdkhoc3JwSlZLNVp2T2FFVjVhbkpyMnh0a2c?oc=5",
+      "title": "Le Canada en récession prolongée ? L’alerte de la Banque du Canada pour vos finances - highcouncil.ca",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE54WXdaZjJOaGpMMXU1WUlJMkozQzkxYy14cmdJdjdkbThVeUN2ZmFCWXRUVWVEOXM1RFhjNGdaR29BT0RLUkw5SFJsZVE1TjQ0eVJ5ejJTVHlGemJIUjRr?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada face à un exercice d'equilibriste delicat, selon la TD  Zonebourse",
+      "description": "Le Canada en récession prolongée ? L’alerte de la Banque du Canada pour vos finances  highcouncil.ca",
       "cities": [],
       "category": "general"
     }
@@ -361,5 +321,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-10 14:20"
+  "last_update": "2026-05-11 15:56"
 }
