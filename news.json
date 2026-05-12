@@ -1,60 +1,76 @@
 {
   "news": [
     {
-      "title": "Premier trimestre | Cineplex annonce une perte de 22,4 millions",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-11/premier-trimestre/cineplex-annonce-une-perte-de-22-4-millions.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Nemaska Lithium | Eric Girard soutient qu’il n’était pas au courant de l’avis défavorable",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-12/nemaska-lithium/eric-girard-soutient-qu-il-n-etait-pas-au-courant-de-l-avis-defavorable.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Cineplex a annoncé une perte de 22,4 millions au premier trimestre, contre une perte de 36,6 millions à la même période l’année précédente, alors que son chiffre d’affaires a augmenté de 16 %.",
+      "description": "Le ministre des Finances, Eric Girard, a défendu, mardi, l’investissement de 1,1 milliard dans le projet de Nemaska Lithium, un projet critiqué dans le dernier rapport de la commissaire au développement durable.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Congrès de l’Association des économistes | Les mythes et autres problèmes en habitation",
-      "link": "https://www.lapresse.ca/affaires/chroniques/2026-05-11/congres-de-l-association-des-economistes/les-mythes-et-autres-problemes-en-habitation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "États-Unis | Nouveau bond de l’inflation, au plus haut depuis près de trois ans",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-12/etats-unis/nouveau-bond-de-l-inflation-au-plus-haut-depuis-pres-de-trois-ans.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Doit-on être propriétaire de sa maison pour s’enrichir ? Les pays qui comptent davantage de propriétaires sont-ils plus prospères ? Pourquoi nos entreprises de construction sont-elles si improductives ?",
+      "description": "L’inflation déraille une nouvelle fois aux États-Unis : elle a atteint en avril un plus haut niveau en près de trois ans, selon les données publiées mardi, reflétant l’envolée des prix à la pompe, mais aussi un renchérissement des courses alimentaires.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La fermeture d’un café de la rue Wellington ravive le débat pour encadrer les loyers",
-      "link": "https://www.ledevoir.com/economie/979082/fermeture-cafe-rue-wellington-ravive-debat-encadrer-loyers",
-      "source": "Le Devoir",
-      "description": "Station W devra fermer après 13 ans d’activité sur la dynamique rue en raison d’une hausse de loyer commercial de 60%.",
+      "title": "Wall Street ouvre en baisse, sur fond d’accélération de l’inflation",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-05-12/wall-street-ouvre-en-baisse-sur-fond-d-acceleration-de-l-inflation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Bourse de New York a ouvert dans le rouge mardi, fragilisée par la hausse des prix du pétrole et le repli des valeurs technologiques, sur fond de nouvelle accélération de l’inflation en avril aux États-Unis.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Le taux de chômage a grimpé fortement en avril au Québec, l’économie montréalaise en berne",
-      "link": "https://www.ledevoir.com/economie/978800/taux-chomage-augmente-avril-canada-comme-quebec",
+      "title": "Des pages jaunes aux lingettes biodégradables : Kruger investit 333 millions",
+      "link": "https://www.lapresse.ca/affaires/2026-05-12/des-pages-jaunes-aux-lingettes-biodegradables-kruger-investit-333-millions.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Kruger a annoncé un investissement de 333 millions de dollars à son usine Wayagamack pour installer une toute nouvelle machine destinée à la fabrication de lingettes où elle produisait jadis du papier pour les annuaires.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation bondit à 3,8 % aux États-Unis et atteint son plus haut niveau en près de trois ans",
+      "link": "https://www.ledevoir.com/economie/979568/inflation-bondit-etats-unis-atteint-plus-haut-niveau-pres-trois-ans",
       "source": "Le Devoir",
-      "description": "Quelque 43 000 emplois ont été perdus dans la province, où le taux de chômage a bondi à 6,2%.",
+      "description": "Les consommateurs font les frais de la hausse du prix de l’essence engendrée par la guerre au Moyen-Orient.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le p.-d.g. de Cineplex applaudit l’allongement de la période d’exclusivité en salles",
+      "link": "https://www.ledevoir.com/economie/979355/cineplex-annonce-perte-22-4-millions-premier-trimestre",
+      "source": "Le Devoir",
+      "description": "La société annonce une baisse de ses pertes au 1er trimestre, à 22,4 millions, et une hausse de son chiffre d’affaires.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier Rive-Sud de Québec — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQOXAwQ2I3Nk9ZLUgycHNIWnFxX3p0YllaZ1FZaGlkQjFkV2txUDB0MzhBTzFldmpjd2Q4RUxlOG9nM2plSkdtVUJCTUx3c0puVzF4UEMzU0hRR1A1SlVpbC1SX2ZlbnBJbTRNWV9SZmhBbXdoQ1pkaWxhb2M0Tk41M0lMT19VNXBvSjlISHREbmJVS1VYTkh2MktmT3NnWXg0ZEsxVUo5NHM2QXUyUzJYNTNtOXY4d1o1Nmc?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier Rive-Sud de Québec — Avril 2026  Journal Métro",
       "cities": [
-        "montreal"
+        "rive-sud"
       ],
       "category": "local"
     },
     {
-      "title": "Desjardins fait marche arrière pour de bon sur le solde des cartes de crédit en temps réel",
-      "link": "https://www.ledevoir.com/economie/finances-personnelles/978794/desjardins-fait-marche-arriere-bon-solde-cartes-credit-temps-reel",
-      "source": "Le Devoir",
-      "description": "Les utilisateurs d’AccèsD voient de nouveau ce solde, comme c’était le cas avant une mise à jour faite en mars.",
+      "title": "Marché immobilier de la région de Québec — Avril 2026 - metroquebec.com",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRGpBLUNvYkNvdk5TRjdWNU1WZV9sY2U3Zkxqc0xQeXFCSFBhc0FUblNfTUhIa25WSW5sWk12RjRwVmFyLXdmSnZoWUpIanhaaUVxZkprU1pxMDdmRVBZUlJob0kwcnpnLURzWm15X1o3dFA4ZjlkaE1nOXVmUTRrN2hUZk1QLU1LR3JxeTNjekNkbTdrR0JpSVdzM29XUG1HbkdVZ1JFbDVzRVdPZE83LXowYWxMdnJyc1lDWNIBwgFBVV95cUxPd1BVWW9VUTNRamFlbW9MWFFGSFpZS1dhNkFjMGxrLXNkaE9ibzJibUo3QmM3M2c0aVJtaUJzekFpZTZIVWxuVzhjdGFTLUlrTzhXMV9ISmhyS0p3Y3haby1McXQwQXNhYkhlV0hVU21QWEpxR3pSSW15V0dsN003aEowdlNUeWFlQUxTWExWOTlwLWtldXNSWS1qblI3THFKbk8zNTd0ZENZUHhPZEJ5YTBsandKQTNUSWRlWFVKNE8wZw?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de la région de Québec — Avril 2026  metroquebec.com",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNNTF0c1p4T2Izc3hpWDBURTZURTVrUW1DemZNQUFUai0ybnowdGxzek5URHRSYXpRUUhBYUdvc21pcnlHY0ZzMVpsdzVsdnNQNlVDeHBac1htWVRaQ19xZnJNZXItbnV2LXVxay1ldDlFRmZuWFBQQmpWOFl3d1hqck0tNUNWM25zNkY1OFhRNEExN1BlUk13ZDFGVGVIeUpBSlEzenBNVzFYeDBTVWxDY0ZUdVVpYld3NnJPSDlsbVQtcFdYcGdseUREMTMyOXhQbXgtTS11ekx1QmlCOWdXR2xyZnRVTjZURmRzLTdnTEdYdnRIdF9TUzBLdTI0cFRz?oc=5",
+      "title": "Un chantier de 309 logements s’amorce aux abords du futur tramway - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONTdWcjBITGp0NVFQUkJUTEQzNXhFeENGV3VIYWZBUUNNdHk5bUlPcFlkWHRva181ZkUwOG51VG9PMG9Bbmk0RV9xN2c0a1Y1YkdVYlBjRjFkNFJsdkdLQlFEVnA1VFNZS0h3U0tkZ19TbDFaSjY0SjN2dEhlVC1Rel92eDJGZUJBWUpuUExBQnBKZjMzbzhOeG5nZXRZczRLUGdQenEyT3ViVkJsOWdGZmQ5dGVvYUViQ0c1NkRnb1g3VnEtUFpmQ3lfZkt3VVZPQkJON1BDQmRaY0lISnJWOHFncG5mYTBCeVE?oc=5",
       "source": "news.google.com",
-      "description": "«On est surpris de l’ampleur»: un projet immobilier de près de 300 portes dérange dans Des Châtels  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPR3lIWks4d3ZKaUV2R3FlSXdicWVURmJSTEtXNkctU2R1V05yYjhVNVo0ZkRrZXJ3YTlqSEhjQlZ1cDNRSWp4OWVGdmtQN0NPLXc2Z2E4VFpxTWk4eEtnaEFTSC1paDlkVE5TeTdybXh4dVlFenkwVTlxbm0ydmJBNVJMSTlDWHZXQWgzbWt3VklVczN6RTRFMG1uQnBzS0pySDNBazZyUm1oMG9yR2RjVG91WUxYNnFuMmFtaHI3MXlJMFJyb1Y2Uml2WF9XZlJUUmtBTHFxS29fN3RnZVNaMW02NjRyOTdLMml0SkJiNEdxREM5NlZxUUdRYTVLd3dudzVqSV83SlphTW85RndJVXF4c2JRb3pHdzVtTmxuN0lrd3NkamYta08tYzdaU2RMZ1E?oc=5",
-      "source": "news.google.com",
-      "description": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché  Le Soleil",
+      "description": "Un chantier de 309 logements s’amorce aux abords du futur tramway  Le Soleil",
       "cities": [],
       "category": "general"
     },
@@ -69,6 +85,98 @@
       "category": "local"
     },
     {
+      "title": "Marché immobilier de l’agglomération de Québec — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOS3pkeFNEUk1ZOTJVLWFBUmNESnd2OHEtX3MzOE5Xa3VBZHN6amRLdHFlZEVxY29NbG5Cd1ZxOUZLWHp3Zk14UmdOYm9tYXBaV0dwalZIcXc3bGR4ZUtUVi1PSlc1YWd3RWZYSDV4N0lZaWRrN0QtTGNucmdWLThlNzNqS2FjWmpBWnBacm8tLVpzNnRyWXBrWm5kWUdpUVZtVDd3S191QmFZWm5USjBXT1Q1RjB4M0RTTTg5X0RmSno?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de l’agglomération de Québec — Avril 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPR3lIWks4d3ZKaUV2R3FlSXdicWVURmJSTEtXNkctU2R1V05yYjhVNVo0ZkRrZXJ3YTlqSEhjQlZ1cDNRSWp4OWVGdmtQN0NPLXc2Z2E4VFpxTWk4eEtnaEFTSC1paDlkVE5TeTdybXh4dVlFenkwVTlxbm0ydmJBNVJMSTlDWHZXQWgzbWt3VklVczN6RTRFMG1uQnBzS0pySDNBazZyUm1oMG9yR2RjVG91WUxYNnFuMmFtaHI3MXlJMFJyb1Y2Uml2WF9XZlJUUmtBTHFxS29fN3RnZVNaMW02NjRyOTdLMml0SkJiNEdxREM5NlZxUUdRYTVLd3dudzVqSV83SlphTW85RndJVXF4c2JRb3pHdzVtTmxuN0lrd3NkamYta08tYzdaU2RMZ1E?oc=5",
+      "source": "news.google.com",
+      "description": "RMR de Québec : une hausse de l’offre de propriétés se dessine, mais la pénurie continue de soutenir la pression sur le marché  Le Soleil",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier de la périphérie nord de Québec — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQLWdNM3EyTVpDaElXblJWcWRIVTJ2cG5YM3dIeDRTQzVkcVNMRGtrOXZxbHotakZDbkU5UkhSNGtxdEtRRWQ1MEVUbHZrSXVfSFhHamFQcTc4dTZkam5acFhuUU9XaE5XSmw1N2pKaVRWMF9fZmJsV193U09QNkRLa2hnakRqeHBqSWRVQlhidjU4ekRHVDFiWVpmT2dubzlXMG5kcnV3Ukl5WWxYZlgtV1JPT1piUDlGWmhpOHlYZERxXzlOSUZScnhiYw?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de la périphérie nord de Québec — Avril 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier du Québec — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONlI1SUtoQjhBajE0dGQxTE04MjdRaXJ0enpXZ25BVExzUEh1dHY4SjljdzFGWU5mTVF0MFBZdlFQMkFTX2R2Zk9YR0R5dG5YX09BQXJPVnlrYjBqbWQ4cHFta3AtbVAyRV8xUU95VHFfb1RRYzVfN2tBZExhNXdpN2lrQkVnRldFcnY3NG45aFRKdXNlVm9xMHRzZnV2UGZoMmY5aFZVWDRQYUZ0S05YYjdnWQ?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier du Québec — Avril 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier du Grand Montréal — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLUYyNjRiSUpySUo4enFpa3FDSzcwRzJjd2hBT2VJSUltclp3dm1PVWtNXzZTNXRrRVBOWmJfZzRjTVBka0F0aUVOSFZsb0Y4dVRUdXM1UFNmN0NleXI0WjF4Mm1IRkZqenBKTkNhM2tpY2psbkpITFZhVXFhclhvOTQ5TGNtMDdud1BPb1BwX0tXSFoyNFRwNGl3TjVaR3ZDeFhlWUh0N2Z3WmZSakRMXzljNjdGMHdj?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier du Grand Montréal — Avril 2026  Journal Métro",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier de la Rive-Sud de Montréal — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQNC0tQzBibkJ5MlB5MTlKOHFKYlpJN1Q1UEgzVkoweVN6TWFLQ2dXY1pPbElUdTBRejNVMjhPWFZRZEk4aWJ5V2luQnpvMlVyVDVfYnVoTTlxTUhZbTV5UVpnVEhqaHhoZVRURDhEY3VKcFpVeG1HdHVrNWgxaUl2MEV1ZnpfTHRrU2lQWUp5amFxZzRPbW16NUFMYUMtMUdqMldKcGdKU0ZveWs1TS1IMDd4SzBKdkFVZjZpT0pUZEdKWEJE?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de la Rive-Sud de Montréal — Avril 2026  Journal Métro",
+      "cities": [
+        "rive-sud",
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier de la Rive-Nord de Montréal — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbEtIWklPc25OYUcyc2J0Z0lncjBUaEozemtqaGR2Mmx6Zm1fWHd6cWh4N3dVMWxoNmIxV2g4RG5UVDRTZ0t5ZFRDTDNpTmRqb1U3bHR4Sjgta2ZEZVR2OFhSVjhVNEhBT3ZoRFB3Yjh0RGYxUVNtYk1UNzFFLW9GYm5nWTh1aF9SaUlGZXFpcVYyZHlDS1FtSXgtdnVJUmFiYldmMlR4YTllRGFXZUxwZnV6VnlBeUFjRzBXX202V3FUUTMxZlE?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de la Rive-Nord de Montréal — Avril 2026  Journal Métro",
+      "cities": [
+        "montreal",
+        "rive-nord"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier de Vaudreuil-Soulanges — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQ2FIRkc3bW5KU3ZWNG1zQnQ3Nms4ZGhpTmI4MWpiZnZRbGNfb0F2ZTgwZDVKbDlGdHB0allzT0lId3lSb0ZfbVd2ajNZcV9iTURnaURNUFNLcWJldDdEay1PZmI2bVZHS0pFeldPRWhUcHo3a1lnNF9HeG0wTnBnZU5NZGI0RUk2bTMyeHZxaHNrMlY5YTY3NTBqVHlXUkpWTDVuS0tpREVLNURSeHJKSWM4STZYV1pLLUVOZUdIT3Rzb2Y1?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de Vaudreuil-Soulanges — Avril 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier de Laval — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTkEwbVZFdTFPQmNvNThYZU5hYklEd0oxdXZGTUYwMXhBRExHSEdKVF9Ed1YwcWtqZE5LeUdyaEpaenptblVFcXZGZWlSb2Iwbk44R2EtTm01QkRXM3AzbkpPV1VrWVhoczNhYjQ5NFBqV2wtTEdoOWhjOWV2LTk2R3Q1ZzFiWGhuSXpoSVJmUjRyRGZRMTZpbnZEZERiSVdPSi1zQU5UajNOalh3?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de Laval — Avril 2026  Journal Métro",
+      "cities": [
+        "laval"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier de Saint-Jean-sur-Richelieu — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxONkZKM3pyUDc4TTFQd1k3YmpwbTM5R2pJR3J2QWt3OFgwQll6Vlhva0g0SkRFT1BzM256QVZud1o5X1hEbVJjRnV1VFdhSndjdkZYT0pJZ21LM3dJRERJTkpkWktTQUx2Nm1ZRTNHb01GZC1lMHpkZUh5TDQzaU1rVWk0bEl0M2ZkR2VtLWhBWmVmX1VpUzh0enpWajBEMHhtTHBPWUlmUEtVZUQ1Mks1Y2xmdDFjaFhDN1ZXR2xtMUVtZHJKYlE?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de Saint-Jean-sur-Richelieu — Avril 2026  Journal Métro",
+      "cities": [
+        "saint-jean"
+      ],
+      "category": "local"
+    },
+    {
       "title": "1 000 logements pour les aînés : Mission Unitaînés franchit un jalon majeur en inaugurant son 10ᵉ immeuble à Saint-Jean-sur-Richelieu - Coalition Avenir Québec",
       "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxQbXYwMW5YWHB6RXlwYzV1WllTTDVwTW9lVVdCQ01OZ2FpWXBveGM2QUN4ZmltaHAxSkc0VVBtb3QtLXVyTVR5dnZkV2FnLURGMkpPaG9nTlRqLVppZEVuemJTaTd0aHpaejZ0YVNZcklHYVB6aU5EYXB4cjlFaktjM2FvdUYwcXlPYVFCU3RTcTdISVktNzBaZ1hjR2Fib0JWSi03azN2Sm9kbUhkTDNiVnJrWkQ5a2g0Q01EM25tdm9rYzRsX0hWZmllckVMeDBkTExvdlhraGZNdVRpSWFlVUp2QlFOZFY3NlhFZ2FkVEJ6RHhTU18yRnAxSnJGLWF3eklxUk00WjV1VUlhLTQ2Z2RWRFNsdkRSVkJqSTJR?oc=5",
       "source": "news.google.com",
@@ -77,38 +185,6 @@
         "saint-jean"
       ],
       "category": "local"
-    },
-    {
-      "title": "5 maisons à vendre au Québec à moins de 100 000 $ qui sont habitables et valent le détour - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaXI2T2RueU9GNmoyYlp5bG9GSE1xcEJFWUpfMTJCLUlQNGl6R1V0MFJldXhJMkMzV3EzR01jbzFxTWpyUkowWGJNbXFvV0tKalNYNXlqSXJCMnpiaGJabGlKTXM2NDV0a0dIZXNqY3hfMDEzbjkzVkoyTmlWaTJ1bw?oc=5",
-      "source": "news.google.com",
-      "description": "5 maisons à vendre au Québec à moins de 100 000 $ qui sont habitables et valent le détour  Narcity",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "CondoLegal.com - CondoLegal.com",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tME9fQmVtakxFLWEtSFMzQUJBUDhWdlJrQU9ycjRxcTV1cmNIdXZSTzE1OUpBNFpjc1dicl8wOUpSdnNMUnczRlNZYTJ2bUJwa1RUelFiSWRRODRPRVlHeTNpLU9oMV92c254OWtn?oc=5",
-      "source": "news.google.com",
-      "description": "CondoLegal.com  CondoLegal.com",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "EMD-Batimo planifie deux projets résidentiels à Longueuil - Portail Constructo",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQmhLb1VYcHpUR3p4OTlISnV6SXFRQWliQXBaNjV5cGJ2WkE5VDFrcjFjZ0ZUWk1XM2EzWXZUQ0VZbS1wVFRWWUl5cTVGYk0xbnFkMkhYRkpKdVU4Y1N3aFN2WUFYbTRpWVN0WUZpSjNmb2Z6SjNNbmV6RFRtb0M0Q3F5Q0hhbnZfQUFMNk9EQVl5R0hTb0ZVNTJxdmpvelc3a3c?oc=5",
-      "source": "news.google.com",
-      "description": "EMD-Batimo planifie deux projets résidentiels à Longueuil  Portail Constructo",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un chantier de 309 logements s’amorce aux abords du futur tramway - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONTdWcjBITGp0NVFQUkJUTEQzNXhFeENGV3VIYWZBUUNNdHk5bUlPcFlkWHRva181ZkUwOG51VG9PMG9Bbmk0RV9xN2c0a1Y1YkdVYlBjRjFkNFJsdkdLQlFEVnA1VFNZS0h3U0tkZ19TbDFaSjY0SjN2dEhlVC1Rel92eDJGZUJBWUpuUExBQnBKZjMzbzhOeG5nZXRZczRLUGdQenEyT3ViVkJsOWdGZmQ5dGVvYUViQ0c1NkRnb1g3VnEtUFpmQ3lfZkt3VVZPQkJON1BDQmRaY0lISnJWOHFncG5mYTBCeVE?oc=5",
-      "source": "news.google.com",
-      "description": "Un chantier de 309 logements s’amorce aux abords du futur tramway  Le Soleil",
-      "cities": [],
-      "category": "general"
     },
     {
       "title": "Courtage immobilier: un policier du SPVM écope d’une amende de 30 000$ - Journal de Québec",
@@ -129,10 +205,18 @@
       "category": "local"
     },
     {
-      "title": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVFFZSGx3dkxLV1hDNGRlQUlLRmVqVkdaOV9NZUU1eHR6cC1pWUIyYVVCdTY0WXdKdjYwOHR5UC02UUV3ZEQ2SGhyQ1NBRldlajV6ZlNzM0gyR0pkMGhEQ3pZS3VZdEFrd2d6ckhBVXJHd210YXlzVmVZNDZrQlJ1YUY5LW9NNlhzTE1WalpPd1hhOTVYYTdtYm9PeDE1NnNjY19kempZZy1wY3ZOOVE?oc=5",
+      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
       "source": "news.google.com",
-      "description": "Manic-2: Hydro-Québec mise sur 72 logements pour loger ses travailleurs  TVA Nouvelles",
+      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "5 maisons à vendre au Québec à moins de 100 000 $ qui sont habitables et valent le détour - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBZUXlFRzR2dTRJamxIeEVqcFJQWUtzbVF6Sk1fb3AzcWlHZm03dXI0MlVTczVvdHJwTThFc0ZnR2tlemgyQWlvS3NValpVd0kt?oc=5",
+      "source": "news.google.com",
+      "description": "5 maisons à vendre au Québec à moins de 100 000 $ qui sont habitables et valent le détour  Narcity",
       "cities": [],
       "category": "general"
     },
@@ -143,16 +227,6 @@
       "description": "Transaction de la semaine: une maison de Sillery s’envole à plus de 3M$  Le Journal de Montréal",
       "cities": [
         "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Les standards de l'immobilier industriel redéfinis par ROSEFELLOW. - L'Écho de Laval",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZndFTG15OWdKUDRFQnY2MjFsMlBPckM5OUp6QjZIcjBPWnlPWTlTckFtcXhXOWl4blBERFhTcWxnYlBiWWtvOVQzTVZOV3JuaDRWOTJsQW45SWFDRU85QjF5Q05QdHA3Q0pfdGF6TGRYLUJUVGdEMWJWWHIzMklVSk1LdUxIYjVyVTdvZWx6VGd4X3J1emM1Q25ndEJpdnJrd2lyUWJZTjBvdEc0X2h0TVdWMi1XcmF1T1Rz?oc=5",
-      "source": "news.google.com",
-      "description": "Les standards de l'immobilier industriel redéfinis par ROSEFELLOW.  L'Écho de Laval",
-      "cities": [
-        "laval"
       ],
       "category": "local"
     },
@@ -173,18 +247,18 @@
       "category": "general"
     },
     {
-      "title": "Comment bien préparer son achat de condo au Québec en 2026 - Le Réveil",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQaFVxbjdEcmNzUWZkdG5NQk9SSlN0b1Q1eXJkdmw4amR3NnQzaEV5WXdYNVRpZE9JeFNBZlBiSnN4T0N5dm85LXBEcGY5aXlBaXNJMlZoaUFWMjdjVjFEYU55SWdQTUxnekNjUGdNbk9aNmxHSUxWZGZucVpJUUowSlVXel9xV3oycENrRjVCNnNZY0lZTzlVbDFEOGQ?oc=5",
+      "title": "BdC, logement, inflation : les données de la semaine - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTmNSVERZd0dRRWkwNWpPOUZmXzE1WWZqMm9BRnhCajI5V1VON3NwandiQzZSM2FPMHgyalNQeHRJcUN4RTJxdTNzTjRwWjRuRVlKTnRqbHZmMGlUUDFNazdwMms4X3daYldRMHJwZERVcE1RUXhKY3ZaZG5ucnlyeldzLVhMWWpNWDVZcXNkNXNNaVlScGlPMUNkUHNPUzhXX0JXUnc3WGQtRDd4OEdmQmYwMTJZbkxuWnh0RjR2eWNWUmhCN2pseWZkMGUtdw?oc=5",
       "source": "news.google.com",
-      "description": "Comment bien préparer son achat de condo au Québec en 2026  Le Réveil",
+      "description": "BdC, logement, inflation : les données de la semaine  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Banque du Canada: les entreprises investissent avec prudence au Québec - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM0F3eFBtLUM5aXlmVHVjdWMxeGsxcXpSXy03WFhDUTUzVEZ3d0ZJNWtOampFU1JsMUVMbWwwel9pdHZfMzVYbm5EMi00VC1HclRCamdDSnFXaVhNcDhfcTl3dnJ3cHN3bFdaZWJfalBzRUlXczkzZ3pac1VsVEpVenZMbE02OXdPYzhQOWwwN0FsQnRRZGsyY0Q4YUNTZ0M2cTlkZnVCWXZWZTd6djV2bjVOSUk?oc=5",
+      "title": "La vague de renouvellements a déjà atteint son sommet, mais continue d'influencer le marché hypothécaire - Lelezard",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1Nem9BNUtQb0VZM0FJY1dHTEpINGxIWUdtYVJqZ3M0VUd3UnNKRnBlY29acWM2eWFvdDNsMlpMRk1PRE5KYVJUTHdLOG5Db3l0dE5kcW9IS2ZzeUR3bFE?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada: les entreprises investissent avec prudence au Québec  Les Affaires",
+      "description": "La vague de renouvellements a déjà atteint son sommet, mais continue d'influencer le marché hypothécaire  Lelezard",
       "cities": [],
       "category": "general"
     },
@@ -197,14 +271,6 @@
       "category": "general"
     },
     {
-      "title": "Inflation : la Banque du Canada garde l’œil ouvert - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPYV95N2ZNdHN5Y1UwZWhPY0MwNTRaX05lN2Z5c2xfR3lfWGpMX3dQN0taSU5XazBYUklXdkJ5Z3NVMHRSZ3BBNmRlR0JONm0zeDlCWnFVSmF2SmhuaDZ2cmlGem5DM0JaMFBySjBlVXFHakw2VjNKRUNlbjE0TGo2NFhtVVZlYlNjX2t5SWV4T0FoMERHX1haUjdPWjlXOEtOV0pTN2FUZ003NV9OUWtfamZLd3U4V0I4eDM1ajBTaTcwUVFweWw1NFZqdGJJV0p5Wkxkc09wUU9uMUI5NVVpUkJudnlPZTluMDVtNkJDUXZFQno2UjdhREdLUVpvQzNwWVNGMQ?oc=5",
-      "source": "news.google.com",
-      "description": "Inflation : la Banque du Canada garde l’œil ouvert  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La faiblesse des chiffres de l’emploi tempère les attentes concernant une hausse des taux de la Banque du Canada - Morningstar Canada",
       "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPM1l3VU9MUmVZb2FkMHE4UUp0cDFFTzhTUzlpWUZGY2ZUWnE1RVptWDUySjRJR3VtTklGR2Y1aG41akpCeEp0VlZpbm9lR1paamlMVnR6N216eU1oN3M0dGIxUHBtRnpDQWs2MHVRV2ktYzVKaTBLSW0wbm1XbGs3REpJM2trNUxSRmpIajlKLXNZbmNxMzNvQUpFOFhPd1I2M1p5N1NxclBaLWtxTXUyOEltUTl0SkwxRzNIUmd2OHZ5ZEo1TldWaU1JLXdWUWRLNVhKakVRb3I2NzBsZTFqV1V3NlRSVTJmekE?oc=5",
       "source": "news.google.com",
@@ -213,10 +279,10 @@
       "category": "general"
     },
     {
-      "title": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNaXZVZXVjcDI1alJqdk1pZEtSRG1XYlBhMzlFXzZQV3Bqb0JqcmVuelp4dmI2ZHFwd0h2TVJwanJoeGxVY29KUU9JOW5DdDAwakNwcC1oYUJmOE1LN04yRWgxTWc5VXliTVVSR25uWEFCSkRKS0hxLVFZQlNXWWRDck1fRi15UGhPT2xpeEFucnpmZGpZejFmSW5feTBrNXZsSm92WWFWYU1VVk0tUkhVVlBEZmlnaktOQWozYWZwa3hfdDk4d2VkUTBWbVdJaU0tMWZMOHFZd2F0enhJTUZMZmJ0S2F5QVE?oc=5",
+      "title": "Les contre-tarifs canadiens ont influencé les prix, selon la Banque du Canada - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTkR5alhtaVJJSkQyR2wzSnF0bW9uc29QSkxTRHFJc2c5NUtRbTUxMnNfeDF1Nm0zTE5VZ1BsVHZhNEpBeERqZzliVlFZM25hZFR2T0I0NGVZOUgwS0Z0dGd1eG1yOFN1MXdmeDZjT2hsOEh4RF8za2lRNkN3cGJMbk5wekx0cEoySVR3b3luMWRmUXM1SHZ3bW1B?oc=5",
       "source": "news.google.com",
-      "description": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires  Banque du Canada",
+      "description": "Les contre-tarifs canadiens ont influencé les prix, selon la Banque du Canada  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -229,10 +295,18 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada prévoit une croissance du PIB de 1,6% fin 2026 - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZ0pZeWNrWmp3a2tPZmtrcUJCZVhtV3NDTjMxbl9WRkJEdkhvUWlUTU04Zy1taFlnZURxUkZla1JPdWtiVzNfbFdLSUVhR011WU9QVFZDUThoeTZ5bGZDdWY3OFB6TmJCUlJrR0d2cU5fX2VUdXFsZ3BPNFNXcUZWQy1KZTFQX1hiSUM4bU1ESUkyMWdhMVdQcHRkX08zOHhMTkYyQUFBVjVkMGg0bmM5dngtbG5GSDRyZkJ3VQ?oc=5",
+      "title": "Taux directeur au Canada : comprendre son rôle et son impact - Milesopedia",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oMTFxbU5QdENwSnlqaDY2NzhEc1hNc2gwSFBQUHp6RjdvTnVkbFBpRWpzNFc5bFdNTDU1bTh2QVFJMDJQdncwREtYbThla0QwLTk5NjRLQjg2ZC0zQWpZVDRqRDhPSjZ0RG94djJOMXY0cDZy?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada prévoit une croissance du PIB de 1,6% fin 2026  Investing.com France",
+      "description": "Taux directeur au Canada : comprendre son rôle et son impact  Milesopedia",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada: les contre-mesures tarifaires canadiennes ont influencé les prix - EnBeauce.Com",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNNzl4QkF2Y3pEeTBXNkdOUmdWalFhaHowaUl1NHRWcVRxUlI0V1lxZkxGZDIyMGdhN05IejlJWW9UOGI1bG4xd0pQdmoyWjVsaU1QeWZ4VnJPZHM2YmpjbzBELU9xeTVjclRXUWg0dnpQU3E1YXNYTGdPYVY2bmdTMHFTTkJ2U0VlTXRaSVUwc29manhCcXNfdWpEcFoxZ2VLTVBmYzA3b2xSQXhEOXVqYmFxOUJzQ2h3MmVWZTBhNFNZY2loeTBtNUlLaGRKZw?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada: les contre-mesures tarifaires canadiennes ont influencé les prix  EnBeauce.Com",
       "cities": [],
       "category": "general"
     },
@@ -245,18 +319,58 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada estime que la culture de la Fed perdurera sous la nouvelle présidence - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmpwM3BnSFlXRWdpdTU3TXp3V0RaNWxjRGVDTHV1d0UyTVBmSld3YXMwX3NzeVZ2MmE2dVkyQjhqRmpEVlp2b0hYckpzVUh0dVVfelR1QUhsUl9icGtZRUVJbjVpNnFkdF9fYkpzREl0MkZKR3FVbm5Kd0JzQWpLeFhKR2FPWS1LS0kzN3FLVXBxb2VLTzRzX0lUZnRTRUJjc2wtMHNidHpsbFRPd0FnMExnTGxvZHQwTVZwZ0xZSjZIQktteGI0QTZSOWpZdTlMcUZLb0hWSndtQ0NLY1ZVV1pZYw?oc=5",
+      "title": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNaXZVZXVjcDI1alJqdk1pZEtSRG1XYlBhMzlFXzZQV3Bqb0JqcmVuelp4dmI2ZHFwd0h2TVJwanJoeGxVY29KUU9JOW5DdDAwakNwcC1oYUJmOE1LN04yRWgxTWc5VXliTVVSR25uWEFCSkRKS0hxLVFZQlNXWWRDck1fRi15UGhPT2xpeEFucnpmZGpZejFmSW5feTBrNXZsSm92WWFWYU1VVk0tUkhVVlBEZmlnaktOQWozYWZwa3hfdDk4d2VkUTBWbVdJaU0tMWZMOHFZd2F0enhJTUZMZmJ0S2F5QVE?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada estime que la culture de la Fed perdurera sous la nouvelle présidence  Zonebourse Suisse",
+      "description": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires  Banque du Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Le gouverneur de la Banque du Canada, Tiff Macklem, estime qu'après la nomination de Kevin Warsh à la tête de la Fed, la culture et le comportement de l'institution s'inscriront dans la continuité - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNZThmTmhJOXptdC1vSTJ6VzJYRjRPVHpadkJLMTZweDlNb1JsQU5wai1tWUlOYjV4Z05ZWnRUYkJCeDB5MjN5bjZoT2hPNkc4N282cDd0d3l5NldMX1l0WEZpd2dnbnBTNUJsc3B4ajVoLWpzSTkxUElUaVpCd0lmM2dzWkU4WXozQXk3SDA5MGo5dFozRHU0TU9fR0loMEpwWDl3ZW5lbjdYaTlKdHlWMFo4dDBDeklaY3dkV3A3ZE83aktTWjRWMW9EM1Jad0d3T25CZEdNOWEwV1M1dnZmbXI1Z1BLU3JETjd3cjVQZTg?oc=5",
+      "title": "Le taux de chômage atteint 6,9% en avril, en hausse de 0,2% - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSkt4bU9KY1cxZ3gtV1dLai02SEM3VUYwZzBCYWZoanRGbWF6Q3UzRGVEWWVPX20yYnFoM2xTM0o4WEtySF9Md0Y5R0NMWVpOTk9TT3RRTXZselRfa1hYRzJEekljZVB6emZjVWxjMkI4RWU5OWJzdHhTcENORGhCWHhsQ1Z6NWhTc3ZMS3JEVDN6THUwdFZ6Y0ZvQlVmdGZm?oc=5",
       "source": "news.google.com",
-      "description": "Le gouverneur de la Banque du Canada, Tiff Macklem, estime qu'après la nomination de Kevin Warsh à la tête de la Fed, la culture et le comportement de l'institution s'inscriront dans la continuité  Zonebourse",
+      "description": "Le taux de chômage atteint 6,9% en avril, en hausse de 0,2%  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada : les contre-mesures tarifaires canadiennes ont influencé les prix - MSN",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPVDZPZGxBbHEwWmhYeUs2UzhGclV5Qkc3S0tMWU5WZ2pQY09rTGhRRXhnMTZfRWg5dGNZMElZWHdncGYwZzN5MXYtOUIzMDY5VjB4cm1paXBROFhjMml1WERlWVR1ZjNHeDJwWWs4ZW9ORldSYVF5a3lBdUhBMWNNZmNTZ1dLS3BuNjFXNnNZU1JRVHphYjNVakNqWHB6cWthbFNJY2JaN2xOQkhjVWVTRUJRTldTNE8teGNUeWM3SkJlbF8wSlVXVzJ4aDNGcXQzWjMwRFV6T0hYbG1GT0ZKU1JZOA?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada : les contre-mesures tarifaires canadiennes ont influencé les prix  MSN",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Fairstone renoue avec les RMBS par une émission de 425 M$ - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZnV0MXBtRG5FWHByRHpDOWdjdFhob2NIeWZvT0ZaWHFHOE1qWVdnLWJSUC1ZV2RRODBxQk9DWUtTSWg4Nk1YWlJGOFFXeVpJSlQtQTZqNkxqMHFBR01OeEEzT0FLOEJhVW9UTzFOZlZ5MjBMZXp5VU1ZVEdLN1hTZ08wUHJKTEtKUThkM096QmxOanRfVkhaeGJjSm1aMExYV0l2QTB0MG9MM1U?oc=5",
+      "source": "news.google.com",
+      "description": "Fairstone renoue avec les RMBS par une émission de 425 M$  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada prévoit une croissance du PIB de 1,6% fin 2026 - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZ0pZeWNrWmp3a2tPZmtrcUJCZVhtV3NDTjMxbl9WRkJEdkhvUWlUTU04Zy1taFlnZURxUkZla1JPdWtiVzNfbFdLSUVhR011WU9QVFZDUThoeTZ5bGZDdWY3OFB6TmJCUlJrR0d2cU5fX2VUdXFsZ3BPNFNXcUZWQy1KZTFQX1hiSUM4bU1ESUkyMWdhMVdQcHRkX08zOHhMTkYyQUFBVjVkMGg0bmM5dngtbG5GSDRyZkJ3VQ?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada prévoit une croissance du PIB de 1,6% fin 2026  Investing.com France",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada envisage une réglementation des stablecoins d'ici la mi-2027 ou fin 2027 - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOeFY1U3dGVWZkMmhFclpvY0lSQS1wdzZuTU4yUzEtR2g1Mko2bXIxZTF3dlJBV0F6WWVSUGc1WWJSaHp4TXpralB5cmJDbFM2Z0R1Z3F0ZEZMSG1sZmdNYzdJa1lTQmk1VVFOTkIxd0wxQlpUcjVzTEJKWTNsNTltRWZuZlNXNnNlZXgtaDNsQ3JjQ1EwYVdRcmVKdzZwLVQtbUxHaDBaVEc0a3VoUDhOODN1bnJtUFRBMWMtelBMUHZGUUpQb0tZTzVzM09fVnVkZVljOHJFLVFDMi10a0VITTJNZ3NHcjFp?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada envisage une réglementation des stablecoins d'ici la mi-2027 ou fin 2027  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOdnd1aXF5d2ZxRkktWE40STJfbzNuSmpuTG5TMklsMlNnVlRmdkp2bVFUaDJ6MWJLbkgwZmtSQ285WVUxak5Lc1dSVXNxNU5KRkY2aW9IWEFrYU94em53Uk5wWVlkdENFenBHcWtERkwtbjJoV3VKbXcwQlVtWHVHU2ZuWTYtLU1QcEZDY2E0bnFhb3dMeEF0RUFuMWVCM2tvM2pTb2YwYzBORlBLYVFzRTJPMWlERXVETVp3OVJjQnV4eDlueXdJbjd0NXJfejZMQWh3cmRXcFBoS2Rxb2d1REZNd21sV0U5N0NnLW1Pai1aNlk?oc=5",
+      "source": "news.google.com",
+      "description": "Le gouverneur de la Banque du Canada affirme devant le Sénat que les projections d'inflation resteront quasi inchangées dans le rapport de politique monétaire de juillet après intégration des mesures budgétaires du gouvernement  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -321,5 +435,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-11 15:56"
+  "last_update": "2026-05-12 15:40"
 }
