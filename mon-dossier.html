@@ -343,26 +343,23 @@
         }
 
         /* QUICK MENU */
-        .portal-quick-menu {
-            display: none;
-            position: fixed;
-            bottom: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(20, 10, 25, 0.85);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            padding: 12px 25px;
-            gap: 20px;
-            z-index: 9999;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            max-width: 95vw;
-            overflow-x: auto;
-            white-space: nowrap;
+        .portal-quick-menu { 
+            display: none; 
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(25px); 
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.12); 
+            border-radius: 50px; 
+            padding: 10px 20px; 
+            gap: 15px; 
+            z-index: 9999; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            max-width: 92vw; 
+            overflow-x: auto; 
+            white-space: nowrap; 
             justify-content: center;
-            -ms-overflow-style: none;
+            -ms-overflow-style: none; 
             scrollbar-width: none;
         }
 
@@ -375,23 +372,34 @@
         }
 
         .quick-menu-item {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             cursor: pointer;
-            opacity: 0.5;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0.4;
+            filter: grayscale(1) brightness(10); 
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             user-select: none;
             -webkit-tap-highlight-color: transparent;
+            padding: 8px;
+            position: relative;
         }
-
-        .quick-menu-item:hover {
-            opacity: 1;
-            transform: scale(1.2);
+        .quick-menu-item:hover { opacity: 0.8; transform: translateY(-5px); }
+        .quick-menu-item.active { 
+            opacity: 1; 
+            filter: none; 
+            transform: scale(1.3) translateY(-8px); 
+            filter: drop-shadow(0 0 10px var(--dash-primary));
         }
-
-        .quick-menu-item.active {
-            opacity: 1;
-            transform: scale(1.4);
-            filter: drop-shadow(0 0 8px rgba(135,50,118,0.5));
+        .quick-menu-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: var(--dash-primary);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--dash-primary);
         }
 
         /* ===== LOGIN PAGE - PREMIUM REDESIGN ===== */
