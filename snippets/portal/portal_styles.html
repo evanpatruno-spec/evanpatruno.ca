@@ -207,15 +207,23 @@
     #portalDash.visible ~ .portal-quick-menu { display: flex; }
     .portal-quick-menu::-webkit-scrollbar { display: none; }
     .quick-menu-item {
-        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
         cursor: pointer;
         opacity: 0.4;
-        filter: grayscale(1) brightness(10); /* Effet monochrome blanc pro */
+        color: #fff;
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         user-select: none;
         -webkit-tap-highlight-color: transparent;
         padding: 8px;
         position: relative;
+    }
+    .quick-menu-item svg {
+        width: 24px;
+        height: 24px;
+        stroke-width: 2;
     }
     .quick-menu-item:hover { opacity: 0.8; transform: translateY(-5px); }
     .quick-menu-item.active { 

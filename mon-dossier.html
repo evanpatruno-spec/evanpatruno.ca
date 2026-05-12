@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="manifest" href="/manifest.json">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* --- PORTAL STYLES v14.40 - PREMIUM REDESIGN --- */
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
@@ -372,15 +373,23 @@
         }
 
         .quick-menu-item {
-            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
             cursor: pointer;
             opacity: 0.4;
-            filter: grayscale(1) brightness(10); 
+            color: #fff;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             user-select: none;
             -webkit-tap-highlight-color: transparent;
             padding: 8px;
             position: relative;
+        }
+        .quick-menu-item svg {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2;
         }
         .quick-menu-item:hover { opacity: 0.8; transform: translateY(-5px); }
         .quick-menu-item.active { 
@@ -1249,17 +1258,17 @@
         </div>
         <!-- QUICK MENU MOBILE -->
         <div class="portal-quick-menu">
-            <div class="quick-menu-item active" data-section="secCockpit" onclick="toggleSection('secCockpit')">🏠</div>
-            <div class="quick-menu-item" data-section="secPrequal" onclick="toggleSection('secPrequal')">📋</div>
+            <div class="quick-menu-item active" data-section="secCockpit" onclick="toggleSection('secCockpit')"><i data-lucide="home"></i></div>
+            <div class="quick-menu-item" data-section="secPrequal" onclick="toggleSection('secPrequal')"><i data-lucide="clipboard-check"></i></div>
             <div class="quick-menu-item" data-section="secTimeline" data-section="secTimeline"
-                onclick="toggleSection('secTimeline')">⏳</div>
-            <div class="quick-menu-item" data-section="secConciergeMLS" onclick="toggleSection('secConciergeMLS')">📄
+                onclick="toggleSection('secTimeline')"><i data-lucide="clock"></i></div>
+            <div class="quick-menu-item" data-section="secConciergeMLS" onclick="toggleSection('secConciergeMLS')"><i data-lucide="file-text"></i>
             </div>
-            <div class="quick-menu-item" data-section="secVisites" onclick="toggleSection('secVisites')">📅</div>
-            <div class="quick-menu-item" data-section="secTeam" onclick="toggleSection('secTeam')">👥</div>
-            <div class="quick-menu-item" data-section="secAmbassador" onclick="toggleSection('secAmbassador')">🌟</div>
-            <div class="quick-menu-item" data-section="secLexique" onclick="toggleSection('secLexique')">📖</div>
-            <div class="quick-menu-item" data-section="secPartners" onclick="toggleSection('secPartners')">🤝</div>
+            <div class="quick-menu-item" data-section="secVisites" onclick="toggleSection('secVisites')"><i data-lucide="calendar"></i></div>
+            <div class="quick-menu-item" data-section="secTeam" onclick="toggleSection('secTeam')"><i data-lucide="users"></i></div>
+            <div class="quick-menu-item" data-section="secAmbassador" onclick="toggleSection('secAmbassador')"><i data-lucide="star"></i></div>
+            <div class="quick-menu-item" data-section="secLexique" onclick="toggleSection('secLexique')"><i data-lucide="book-open"></i></div>
+            <div class="quick-menu-item" data-section="secPartners" onclick="toggleSection('secPartners')"><i data-lucide="handshake"></i></div>
         </div>
     </div>
     <script>
@@ -1269,6 +1278,7 @@
         const API_URL = 'https://evanpatruno-ca.vercel.app/api/portal';
 
         function initPortal() {
+            lucide.createIcons(); // Initialisation des icônes
             const code = localStorage.getItem('portal_code');
             const phone = localStorage.getItem('portal_phone');
             if (code && phone) {
@@ -1392,6 +1402,7 @@
             safe(() => renderTeam(data.team || []));
             safe(() => renderPartners(data.partners || []));
             checkUrlSection();
+            lucide.createIcons();
         }
 
         function renderMilestones(m) {
