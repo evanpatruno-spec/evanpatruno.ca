@@ -1,1037 +1,1475 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Portail Client Privé | Evan Patruno</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="manifest" href="/manifest.json">
     <style>
-    /* --- PORTAL STYLES v14.40 - PREMIUM REDESIGN --- */
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
-    * { box-sizing: border-box; }
-    :root {
-        --dash-bg: #0f050d;
-        --dash-card-bg: rgba(255, 255, 255, 0.03);
-        --dash-border: rgba(135, 50, 118, 0.5);
-        --dash-glow: 0 0 30px rgba(135, 50, 118, 0.3);
-        --dash-grad: linear-gradient(135deg, #873276 0%, #b0549c 100%);
-    }
+        /* --- PORTAL STYLES v14.40 - PREMIUM REDESIGN --- */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
-    .portal-main-wrapper {
-        font-family: 'Inter', sans-serif;
-        color: #fff;
-        background: transparent;
-        min-height: 900px;
-        position: relative;
-    }
-
-    .portal-aura {
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: radial-gradient(closest-side at 30% 30%, rgba(135, 50, 118, 0.15) 0%, transparent 100%),
-                    radial-gradient(closest-side at 80% 70%, rgba(212, 175, 55, 0.08) 0%, transparent 100%);
-        z-index: 0; pointer-events: none;
-    }
-
-    .portal-container {
-        display: none !important;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 35px 25px 60px;
-        position: relative;
-        z-index: 10;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .portal-container.visible { display: block !important; opacity: 1 !important; transform: translateY(0) !important; }
-
-    /* ===== SUMMARY CARDS (TOP 3) ===== */
-    .summary-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        margin-bottom: 20px;
-    }
-    .summary-card {
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(135, 50, 118, 0.3);
-        border-radius: 20px;
-        padding: 18px 20px;
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    .summary-card:hover { border-color: var(--dash-border); background: rgba(135,50,118,0.08); transform: translateY(-3px); box-shadow: var(--dash-glow); }
-    .summary-icon { font-size: 1.6rem; flex-shrink: 0; }
-    .summary-label { font-size: 0.6rem; font-weight: 800; text-transform: uppercase; color: var(--dash-accent); letter-spacing: 1px; }
-    .summary-value { font-size: 0.9rem; font-weight: 700; color: #fff; margin-top: 3px; }
-
-    /* SECTIONS & COLLAPSE */
-    .section-wrapper {
-        margin-bottom: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 35px;
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(10px);
-        overflow: hidden;
-        transition: all 0.4s ease;
-    }
-    .section-wrapper:hover { border-color: var(--dash-border); box-shadow: var(--dash-glow); }
-
-    .section-header {
-        padding: 22px 30px;
-        display: flex; justify-content: space-between; align-items: center;
-        cursor: pointer; background: rgba(255, 255, 255, 0.02);
-    }
-    .section-header h3 { 
-        color: #fff !important; margin: 0; font-family: 'Outfit'; font-size: 1.5rem; font-weight: 700;
-        letter-spacing: -0.02em;
-    }
-    .section-chevron { 
-        color: var(--dash-primary); font-size: 0.9rem; transition: transform 0.4s ease; 
-        background: rgba(135, 50, 118, 0.15); width: 32px; height: 32px; border-radius: 50%;
-        display: flex; align-items: center; justify-content: center;
-    }
-
-    .section-content { padding: 30px; transition: all 0.4s ease; }
-    
-    /* FIX COLLAPSE */
-    .section-wrapper.collapsed .section-content { display: none; }
-    .section-wrapper.collapsed .section-chevron { transform: rotate(-90deg); }
-    #wrapArchivedVisits { display: flex; }
-    #wrapArchivedVisits.collapsed { display: none !important; }
-
-
-    /* MILESTONES */
-    .milestone-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 25px; }
-    .milestone-card { 
-        background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255,255,255,0.05); 
-        border-radius: 25px; padding: 25px 15px; text-align: center; transition: 0.3s;
-    }
-    .milestone-card:hover { transform: translateY(-5px); border-color: var(--dash-border); background: rgba(135, 50, 118, 0.05); }
-    .milestone-val { font-family: 'Outfit'; font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 5px; }
-    .milestone-label { font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: var(--dash-accent); letter-spacing: 1px; }
-    .milestone-unit { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: rgba(255,255,255,0.3); letter-spacing: 1px; margin-bottom: 8px; }
-
-    /* TIMELINE */
-    .timeline-steps { display: flex; justify-content: space-between; position: relative; padding: 30px 50px; }
-    .timeline-steps::before { content: ''; position: absolute; top: 57px; left: 10%; width: 80%; height: 3px; background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
-    .timeline-progress-bar { position: absolute; top: 57px; left: 10%; height: 3px; background: #2ecc71; box-shadow: 0 0 20px #2ecc71; transition: 1.5s cubic-bezier(0.16, 1, 0.3, 1); border-radius: 10px; }
-    .step-node { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 5; width: 120px; }
-    .node-dot { 
-        width: 60px; height: 60px; border-radius: 50%; background: #0f050d; 
-        border: 2px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; 
-        font-size: 1.2rem; transition: all 0.5s ease; 
-    }
-    .step-node.completed .node-dot { 
-        border-color: #2ecc71; 
-        color: #2ecc71; 
-        box-shadow: 0 0 15px rgba(46, 204, 113, 0.4), inset 0 0 10px rgba(46, 204, 113, 0.1); 
-        background: #0f050d;
-    }
-    .step-node.active .node-dot { 
-        border-color: #bb66ff; 
-        color: #fff; 
-        box-shadow: 0 0 30px rgba(187, 102, 255, 0.6), inset 0 0 15px rgba(187, 102, 255, 0.2); 
-        transform: scale(1.2); 
-        background: #0f050d;
-        animation: pulsePurple 2s infinite ease-in-out;
-    }
-    @keyframes pulsePurple {
-        0% { box-shadow: 0 0 15px rgba(187, 102, 255, 0.4); border-color: rgba(187, 102, 255, 0.6); }
-        50% { box-shadow: 0 0 35px rgba(187, 102, 255, 0.8); border-color: rgba(187, 102, 255, 1); }
-        100% { box-shadow: 0 0 15px rgba(187, 102, 255, 0.4); border-color: rgba(187, 102, 255, 0.6); }
-    }
-
-    /* VISITS */
-    .visit-card { 
-        background: rgba(255,255,255,0.03); 
-        border: 1px solid rgba(135,50,118,0.3); 
-        border-radius: 25px; 
-        padding: 25px; 
-        margin-bottom: 15px; 
-    }
-    .visit-header { 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: flex-start; 
-        margin-bottom: 15px; 
-    }
-
-    /* GRID PARTENAIRES */
-    .partner-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    @media (min-width: 1024px) {
-        .partner-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-
-    /* QUICK MENU */
-    .portal-quick-menu { 
-        display: none; 
-        position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); 
-        background: rgba(20,10,25,0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-        border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 12px 25px; 
-        gap: 20px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        max-width: 95vw; overflow-x: auto; white-space: nowrap; justify-content: center;
-        -ms-overflow-style: none; scrollbar-width: none;
-    }
-    #portalDash.visible ~ .portal-quick-menu { display: flex; }
-    .portal-quick-menu::-webkit-scrollbar { display: none; }
-    .quick-menu-item {
-        font-size: 1.4rem;
-        cursor: pointer;
-        opacity: 0.5;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        user-select: none;
-        -webkit-tap-highlight-color: transparent;
-    }
-    .quick-menu-item:hover { opacity: 1; transform: scale(1.2); }
-    .quick-menu-item.active { 
-        opacity: 1; 
-        transform: scale(1.4); 
-        filter: drop-shadow(0 0 10px rgba(135,50,118,0.9)) drop-shadow(0 0 5px #873276);
-    }
-
-    /* ===== LOGIN PAGE - PREMIUM REDESIGN ===== */
-    .portal-overlay { 
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%; min-height: 100vh;
-        background: transparent;
-        backdrop-filter: blur(0px); z-index: 9999; display: flex; align-items: center; justify-content: center;
-        flex-direction: column; gap: 0;
-    }
-    .portal-overlay.hidden { display: none !important; }
-    .portal-overlay::before {
-        content: '';
-        position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-        background: transparent;
-        pointer-events: none;
-    }
-
-    .login-card { 
-        background: rgba(255,255,255,0.02);
-        padding: 50px 45px;
-        border-radius: 40px; 
-        border: 1px solid rgba(135, 50, 118, 0.35);
-        text-align: center;
-        width: min(460px, 92vw);
-        box-shadow: 0 40px 100px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05);
-        position: relative;
-        z-index: 1;
-        backdrop-filter: blur(20px);
-    }
-
-    /* Logo animé */
-    .login-logo {
-        width: 70px; height: 70px;
-        background: var(--dash-grad);
-        border-radius: 50%;
-        display: flex; align-items: center; justify-content: center;
-        margin: 0 auto 28px;
-        font-size: 1.8rem;
-        box-shadow: 0 0 40px rgba(135,50,118,0.5);
-        animation: logoPulse 3s ease-in-out infinite;
-    }
-    @keyframes logoPulse {
-        0%, 100% { box-shadow: 0 0 30px rgba(135,50,118,0.4); transform: scale(1); }
-        50% { box-shadow: 0 0 60px rgba(135,50,118,0.7); transform: scale(1.05); }
-    }
-
-    .login-title {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.9rem;
-        font-weight: 900;
-        color: #fff;
-        margin-bottom: 6px;
-        letter-spacing: -0.03em;
-    }
-    .login-subtitle {
-        color: rgba(255,255,255,0.45);
-        font-size: 0.85rem;
-        margin-bottom: 35px;
-        line-height: 1.5;
-    }
-
-    .login-input {
-        width: 100%;
-        background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(135,50,118,0.3);
-        border-radius: 16px;
-        color: #fff;
-        padding: 16px 20px;
-        font-size: 0.9rem;
-        font-family: 'Inter', sans-serif;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        outline: none;
-        transition: all 0.3s;
-        display: block;
-        margin-bottom: 12px;
-    }
-    .login-input::placeholder { color: rgba(255,255,255,0.2); font-weight: 400; letter-spacing: 0.5px; text-transform: uppercase; font-size: 0.75rem; }
-    .login-input:focus { border-color: var(--dash-primary); background: rgba(135,50,118,0.08); box-shadow: 0 0 20px rgba(135,50,118,0.2); }
-
-    /* BUTTONS */
-    .login-btn { 
-        width: 100%; padding: 18px; background: var(--dash-grad); color: #fff; 
-        border: none; border-radius: 50px; font-weight: 800; cursor: pointer; 
-        text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;
-        transition: 0.3s; box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
-        margin-top: 8px; font-family: 'Outfit', sans-serif;
-    }
-    .login-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(135, 50, 118, 0.6); }
-    .action-btn { 
-        width: 100%; padding: 22px; background: var(--dash-grad); color: #fff; 
-        border: none; border-radius: 50px; font-weight: 800; cursor: pointer; 
-        text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;
-        transition: 0.3s; box-shadow: 0 10px 30px rgba(135, 50, 118, 0.3);
-    }
-    .action-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5); }
-    
-    .portal-btn-primary {
-        background: var(--dash-grad);
-        color: #fff;
-        border: none;
-        border-radius: 14px;
-        padding: 14px 24px;
-        font-family: 'Outfit', sans-serif;
-        font-weight: 800;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        box-shadow: 0 8px 20px rgba(135, 50, 118, 0.25);
-    }
-    .portal-btn-primary:hover {
-        transform: translateY(-3px) scale(1.02);
-        box-shadow: 0 12px 30px rgba(135, 50, 118, 0.4);
-        filter: brightness(1.1);
-    }
-    .portal-btn-primary:active { transform: translateY(-1px) scale(0.98); }
-    .portal-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-
-    /* GOLD AMBASSADOR SECTION */
-    .gold-card {
-        border: 2px solid rgba(212, 175, 55, 0.3) !important;
-        background: linear-gradient(135deg, rgba(20, 20, 20, 0.8) 0%, rgba(40, 35, 20, 0.8) 100%) !important;
-        box-shadow: 0 0 25px rgba(212, 175, 55, 0.15) !important;
-        animation: gold-pulse 4s infinite alternate;
-        overflow: hidden;
-        position: relative;
-    }
-    .gold-card::after {
-        content: '';
-        position: absolute;
-        top: -50%; left: -50%; width: 200%; height: 200%;
-        background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.05), transparent);
-        transform: rotate(45deg);
-        animation: gold-shimmer 6s infinite;
-        pointer-events: none;
-    }
-    @keyframes gold-pulse {
-        0% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.15); border-color: rgba(212, 175, 55, 0.3); }
-        100% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); border-color: rgba(212, 175, 55, 0.6); }
-    }
-    @keyframes gold-shimmer {
-        0% { transform: translateX(-100%) rotate(45deg); }
-        100% { transform: translateX(100%) rotate(45deg); }
-    }
-    .gold-text { color: #d4af37 !important; text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
-    .btn-gold { 
-        background: linear-gradient(135deg, #d4af37, #f1c40f) !important; 
-        color: #000 !important; 
-        font-weight: 900 !important;
-        box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4) !important;
-    }
-    .btn-gold:hover { transform: translateY(-3px) scale(1.05); filter: brightness(1.2); }
-
-
-    /* PWA Button - always visible */
-    #btnInstallPWA {
-        display: block;
-        margin-top: 16px;
-        background: transparent;
-        color: rgba(255,255,255,0.5);
-        border: 1px solid rgba(255,255,255,0.1);
-        padding: 12px;
-        border-radius: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        width: 100%;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s;
-        font-family: 'Outfit', sans-serif;
-    }
-    #btnInstallPWA:hover { border-color: #00f2ff60; color: #00f2ff; background: rgba(0,242,255,0.05); }
-
-    /* Sécurité badge */
-    .login-security {
-        margin-top: 20px;
-        font-size: 0.7rem;
-        color: rgba(255,255,255,0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-    }
-
-    @media (max-width: 768px) {
-        .portal-main-wrapper { border-radius: 0; margin: 0; padding: 10px 5px; overflow: visible; }
-        .portal-container { padding: 25px 10px; }
-        .summary-grid { grid-template-columns: 1fr; gap: 10px; }
-        .milestone-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-        .milestone-card:last-child { grid-column: span 2; }
-        .milestone-card { padding: 12px 8px; min-height: 90px; border-radius: 15px; }
-        
-        .timeline-steps { flex-direction: column; padding: 15px 10px 15px 25px; gap: 25px; }
-        .timeline-steps::before { left: 44px; width: 2px; height: 85%; top: 7%; }
-        .timeline-progress-bar { left: 44px; width: 2px; top: 7%; }
-        .step-node { flex-direction: row; width: 100%; gap: 15px; align-items: center; }
-        .node-dot { width: 38px !important; height: 38px !important; font-size: 0.8rem !important; }
-        
-        /* Harmonisation parfaite des boites */
-        .visit-card, .section-content > div[style*="background"] { 
-            padding: 15px !important; 
-            margin-left: 0 !important; 
-            margin-right: 0 !important; 
-            width: 100% !important;
-            border-radius: 15px !important;
+        * {
+            box-sizing: border-box;
         }
-        .visit-header { flex-direction: column; gap: 10px; align-items: flex-start !important; }
-        
-        .portal-quick-menu { width: 90%; justify-content: flex-start; }
-        
-        .login-card { padding: 30px 15px; border-radius: 0; }
-    }
-    @keyframes pulseLogo {
-        0% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 0 rgba(135, 50, 118, 0.4); }
-        50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 40px rgba(135, 50, 118, 0.8); }
-        100% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 0 rgba(135, 50, 118, 0.4); }
-    }
-    /* --- LEXIQUE & FAQ --- */
-    .info-bubble {
-        display: inline-flex;
-        align-items: center; justify-content: center;
-        width: 18px; height: 18px;
-        background: rgba(187, 102, 255, 0.2);
-        color: #bb66ff;
-        border-radius: 50%;
-        font-size: 0.65rem;
-        font-weight: 800;
-        cursor: pointer;
-        margin-left: 6px;
-        transition: 0.3s;
-        vertical-align: middle;
-        border: 1px solid rgba(187, 102, 255, 0.3);
-    }
-    .info-bubble:hover { background: #bb66ff; color: #fff; transform: scale(1.2); box-shadow: 0 0 15px rgba(187, 102, 255, 0.5); }
 
-    .lexique-item {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid rgba(255,255,255,0.05);
-        border-radius: 15px;
-        padding: 15px;
-        margin-bottom: 12px;
-        border-left: 3px solid var(--dash-primary);
-        transition: 0.3s;
-    }
-    .lexique-item:hover { background: rgba(135, 50, 118, 0.05); border-color: rgba(135, 50, 118, 0.2); }
-    .lexique-term { font-family: 'Outfit'; font-weight: 800; color: #bb66ff; font-size: 1rem; margin-bottom: 5px; }
-    .lexique-def { font-size: 0.8rem; opacity: 0.7; line-height: 1.5; }
-    /* LEXIQUE CATÉGORIES */
-    .lexique-tabs {
-        display: flex;
-        gap: 8px;
-        overflow-x: auto;
-        padding-bottom: 15px;
-        margin-bottom: 20px;
-        scrollbar-width: none;
-    }
-    .lexique-tabs::-webkit-scrollbar { display: none; }
-    .lexique-filter {
-        background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.1);
-        padding: 8px 15px;
-        border-radius: 50px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        white-space: nowrap;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    .lexique-filter.active {
-        background: var(--dash-grad);
-        border-color: transparent;
-        box-shadow: 0 5px 15px rgba(135, 50, 118, 0.3);
-    }
-</style>
+        :root {
+            --dash-bg: #0f050d;
+            --dash-card-bg: rgba(255, 255, 255, 0.03);
+            --dash-border: rgba(135, 50, 118, 0.5);
+            --dash-glow: 0 0 30px rgba(135, 50, 118, 0.3);
+            --dash-grad: linear-gradient(135deg, #873276 0%, #b0549c 100%);
+        }
+
+        .portal-main-wrapper {
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            background: transparent;
+            min-height: 900px;
+            position: relative;
+        }
+
+        .portal-aura {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(closest-side at 30% 30%, rgba(135, 50, 118, 0.15) 0%, transparent 100%),
+                radial-gradient(closest-side at 80% 70%, rgba(212, 175, 55, 0.08) 0%, transparent 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .portal-container {
+            display: none !important;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 35px 25px 60px;
+            position: relative;
+            z-index: 10;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .portal-container.visible {
+            display: block !important;
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* ===== SUMMARY CARDS (TOP 3) ===== */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .summary-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(135, 50, 118, 0.3);
+            border-radius: 20px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .summary-card:hover {
+            border-color: var(--dash-border);
+            background: rgba(135, 50, 118, 0.08);
+            transform: translateY(-3px);
+            box-shadow: var(--dash-glow);
+        }
+
+        .summary-icon {
+            font-size: 1.6rem;
+            flex-shrink: 0;
+        }
+
+        .summary-label {
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--dash-accent);
+            letter-spacing: 1px;
+        }
+
+        .summary-value {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 3px;
+        }
+
+        /* SECTIONS & COLLAPSE */
+        .section-wrapper {
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+        .section-wrapper:hover { 
+            border-color: rgba(135, 50, 118, 0.4); 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 20px rgba(135, 50, 118, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .section-wrapper:hover {
+            border-color: var(--dash-border);
+            box-shadow: var(--dash-glow);
+        }
+
+        .section-header {
+            padding: 20px 25px;
+            display: flex; justify-content: space-between; align-items: center;
+            cursor: pointer; 
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--dash-primary);
+        }
+        .section-header h3 { 
+            color: #fff !important; margin: 0; font-family: 'Outfit'; font-size: 1.3rem; font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+        .section-chevron { 
+            color: var(--dash-primary); font-size: 0.8rem; transition: transform 0.4s ease; 
+            background: rgba(135, 50, 118, 0.1); width: 28px; height: 28px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .section-content {
+            padding: 30px;
+            transition: all 0.4s ease;
+        }
+
+        /* FIX COLLAPSE */
+        .section-wrapper.collapsed .section-content {
+            display: none;
+        }
+
+        .section-wrapper.collapsed .section-chevron {
+            transform: rotate(-90deg);
+        }
+
+        #wrapArchivedVisits {
+            display: flex;
+        }
+
+        #wrapArchivedVisits.collapsed {
+            display: none !important;
+        }
+
+
+        /* MILESTONES */
+        .milestone-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .milestone-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            padding: 25px 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .milestone-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--dash-border);
+            background: rgba(135, 50, 118, 0.05);
+        }
+
+        .milestone-val {
+            font-family: 'Outfit';
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .milestone-label {
+            font-size: 0.65rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dash-accent);
+            letter-spacing: 1px;
+        }
+
+        .milestone-unit {
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        /* TIMELINE */
+        .timeline-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding: 30px 50px;
+        }
+
+        .timeline-steps::before {
+            content: '';
+            position: absolute;
+            top: 57px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .timeline-progress-bar {
+            position: absolute;
+            top: 57px;
+            left: 10%;
+            height: 3px;
+            background: #2ecc71;
+            box-shadow: 0 0 20px #2ecc71;
+            transition: 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 10px;
+        }
+
+        .step-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 5;
+            width: 120px;
+        }
+
+        .node-dot {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #0f050d;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.5s ease;
+        }
+
+        .step-node.completed .node-dot {
+            border-color: #2ecc71;
+            color: #2ecc71;
+            box-shadow: 0 0 15px rgba(46, 204, 113, 0.4), inset 0 0 10px rgba(46, 204, 113, 0.1);
+            background: #0f050d;
+        }
+
+        .step-node.active .node-dot {
+            border-color: #bb66ff;
+            color: #fff;
+            box-shadow: 0 0 30px rgba(187, 102, 255, 0.6), inset 0 0 15px rgba(187, 102, 255, 0.2);
+            transform: scale(1.2);
+            background: #0f050d;
+            animation: pulsePurple 2s infinite ease-in-out;
+        }
+
+        @keyframes pulsePurple {
+            0% {
+                box-shadow: 0 0 15px rgba(187, 102, 255, 0.4);
+                border-color: rgba(187, 102, 255, 0.6);
+            }
+
+            50% {
+                box-shadow: 0 0 35px rgba(187, 102, 255, 0.8);
+                border-color: rgba(187, 102, 255, 1);
+            }
+
+            100% {
+                box-shadow: 0 0 15px rgba(187, 102, 255, 0.4);
+                border-color: rgba(187, 102, 255, 0.6);
+            }
+        }
+
+        /* VISITS */
+        .visit-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(135, 50, 118, 0.3);
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 15px;
+        }
+
+        .visit-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        /* GRID PARTENAIRES */
+        .partner-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        @media (min-width: 1024px) {
+            .partner-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* QUICK MENU */
+        .portal-quick-menu {
+            display: none;
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(20, 10, 25, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 12px 25px;
+            gap: 20px;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 95vw;
+            overflow-x: auto;
+            white-space: nowrap;
+            justify-content: center;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        #portalDash.visible~.portal-quick-menu {
+            display: flex;
+        }
+
+        .portal-quick-menu::-webkit-scrollbar {
+            display: none;
+        }
+
+        .quick-menu-item {
+            font-size: 1.4rem;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .quick-menu-item:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .quick-menu-item.active {
+            opacity: 1;
+            transform: scale(1.4);
+            filter: drop-shadow(0 0 10px rgba(135, 50, 118, 0.9)) drop-shadow(0 0 5px #873276);
+        }
+
+        /* ===== LOGIN PAGE - PREMIUM REDESIGN ===== */
+        .portal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            background: transparent;
+            backdrop-filter: blur(0px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .portal-overlay.hidden {
+            display: none !important;
+        }
+
+        .portal-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+            pointer-events: none;
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 50px 45px;
+            border-radius: 40px;
+            border: 1px solid rgba(135, 50, 118, 0.35);
+            text-align: center;
+            width: min(460px, 92vw);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(20px);
+        }
+
+        /* Logo animé */
+        .login-logo {
+            width: 70px;
+            height: 70px;
+            background: var(--dash-grad);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 1.8rem;
+            box-shadow: 0 0 40px rgba(135, 50, 118, 0.5);
+            animation: logoPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes logoPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 30px rgba(135, 50, 118, 0.4);
+                transform: scale(1);
+            }
+
+            50% {
+                box-shadow: 0 0 60px rgba(135, 50, 118, 0.7);
+                transform: scale(1.05);
+            }
+        }
+
+        .login-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 6px;
+            letter-spacing: -0.03em;
+        }
+
+        .login-subtitle {
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 0.85rem;
+            margin-bottom: 35px;
+            line-height: 1.5;
+        }
+
+        .login-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(135, 50, 118, 0.3);
+            border-radius: 16px;
+            color: #fff;
+            padding: 16px 20px;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            outline: none;
+            transition: all 0.3s;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .login-input::placeholder {
+            color: rgba(255, 255, 255, 0.2);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+
+        .login-input:focus {
+            border-color: var(--dash-primary);
+            background: rgba(135, 50, 118, 0.08);
+            box-shadow: 0 0 20px rgba(135, 50, 118, 0.2);
+        }
+
+        /* BUTTONS */
+        .login-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--dash-grad);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(135, 50, 118, 0.4);
+            margin-top: 8px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(135, 50, 118, 0.6);
+        }
+
+        .action-btn {
+            width: 100%;
+            padding: 22px;
+            background: var(--dash-grad);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(135, 50, 118, 0.3);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(135, 50, 118, 0.5);
+        }
+
+        .portal-btn-primary {
+            background: var(--dash-grad);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            padding: 14px 24px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 8px 20px rgba(135, 50, 118, 0.25);
+        }
+
+        .portal-btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(135, 50, 118, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .portal-btn-primary:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+        .portal-btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* GOLD AMBASSADOR SECTION */
+        .gold-card {
+            border: 2px solid rgba(212, 175, 55, 0.3) !important;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.8) 0%, rgba(40, 35, 20, 0.8) 100%) !important;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15) !important;
+            animation: gold-pulse 4s infinite alternate;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gold-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+            transform: rotate(45deg);
+            animation: gold-shimmer 6s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes gold-pulse {
+            0% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+                border-color: rgba(212, 175, 55, 0.3);
+            }
+
+            100% {
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+                border-color: rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        @keyframes gold-shimmer {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        .gold-text {
+            color: #d4af37 !important;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37, #f1c40f) !important;
+            color: #000 !important;
+            font-weight: 900 !important;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4) !important;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px) scale(1.05);
+            filter: brightness(1.2);
+        }
+
+
+        /* PWA Button - always visible */
+        #btnInstallPWA {
+            display: block;
+            margin-top: 16px;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        #btnInstallPWA:hover {
+            border-color: #00f2ff60;
+            color: #00f2ff;
+            background: rgba(0, 242, 255, 0.05);
+        }
+
+        /* Sécurité badge */
+        .login-security {
+            margin-top: 20px;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .portal-main-wrapper {
+                border-radius: 0;
+                margin: 0;
+                padding: 10px 5px;
+                overflow: visible;
+            }
+
+            .portal-container {
+                padding: 25px 10px;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .milestone-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .milestone-card:last-child {
+                grid-column: span 2;
+            }
+
+            .milestone-card {
+                padding: 12px 8px;
+                min-height: 90px;
+                border-radius: 15px;
+            }
+
+            .timeline-steps {
+                flex-direction: column;
+                padding: 15px 10px 15px 25px;
+                gap: 25px;
+            }
+
+            .timeline-steps::before {
+                left: 44px;
+                width: 2px;
+                height: 85%;
+                top: 7%;
+            }
+
+            .timeline-progress-bar {
+                left: 44px;
+                width: 2px;
+                top: 7%;
+            }
+
+            .step-node {
+                flex-direction: row;
+                width: 100%;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .node-dot {
+                width: 38px !important;
+                height: 38px !important;
+                font-size: 0.8rem !important;
+            }
+
+            /* Harmonisation parfaite des boites */
+            .visit-card,
+            .section-content>div[style*="background"] {
+                padding: 15px !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                width: 100% !important;
+                border-radius: 15px !important;
+            }
+
+            .visit-header {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start !important;
+            }
+
+            .portal-quick-menu {
+                width: 90%;
+                justify-content: flex-start;
+            }
+
+            .login-card {
+                padding: 30px 15px;
+                border-radius: 0;
+            }
+        }
+
+        @keyframes pulseLogo {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.8;
+                box-shadow: 0 0 0 rgba(135, 50, 118, 0.4);
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+                box-shadow: 0 0 40px rgba(135, 50, 118, 0.8);
+            }
+
+            100% {
+                transform: scale(0.9);
+                opacity: 0.8;
+                box-shadow: 0 0 0 rgba(135, 50, 118, 0.4);
+            }
+        }
+
+        /* --- LEXIQUE & FAQ --- */
+        .info-bubble {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            background: rgba(187, 102, 255, 0.2);
+            color: #bb66ff;
+            border-radius: 50%;
+            font-size: 0.65rem;
+            font-weight: 800;
+            cursor: pointer;
+            margin-left: 6px;
+            transition: 0.3s;
+            vertical-align: middle;
+            border: 1px solid rgba(187, 102, 255, 0.3);
+        }
+
+        .info-bubble:hover {
+            background: #bb66ff;
+            color: #fff;
+            transform: scale(1.2);
+            box-shadow: 0 0 15px rgba(187, 102, 255, 0.5);
+        }
+
+        .lexique-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--dash-primary);
+            transition: 0.3s;
+        }
+
+        .lexique-item:hover {
+            background: rgba(135, 50, 118, 0.05);
+            border-color: rgba(135, 50, 118, 0.2);
+        }
+
+        .lexique-term {
+            font-family: 'Outfit';
+            font-weight: 800;
+            color: #bb66ff;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .lexique-def {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            line-height: 1.5;
+        }
+
+        /* LEXIQUE CATÉGORIES */
+        .lexique-tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            scrollbar-width: none;
+        }
+
+        .lexique-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .lexique-filter {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lexique-filter.active {
+            background: var(--dash-grad);
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(135, 50, 118, 0.3);
+        }
+    </style>
 
 
 
     <style>
         /* Styles spécifiques au PWA (Vercel) pour un rendu plein écran */
-        body { margin: 0; padding: 0; background: #0f050d; }
-        .portal-main-wrapper { 
-            margin: 0 !important; 
-            border-radius: 0 !important; 
-            border: none !important; 
-            box-shadow: none !important; 
-            min-height: 100vh !important; 
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f050d;
+        }
+
+        .portal-main-wrapper {
+            margin: 0 !important;
+            border-radius: 0 !important;
+            border: none !important;
+            box-shadow: none !important;
+            min-height: 100vh !important;
         }
     </style>
 </head>
+
 <body>
     <div class="portal-main-wrapper" id="portalAppContainer">
-    <div class="portal-aura"></div>
+        <div class="portal-aura"></div>
 
-    <!-- SPLASH SCREEN -->
-    <div id="loadingSplash"
-        style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#0a0508; z-index:999999; display:flex; align-items:center; justify-content:center; flex-direction:column; transition: opacity 0.5s ease;">
-        <img src="https://evanpatruno-ca.vercel.app/pwa-icon-192.png" alt="Evan Patruno Logo"
-            style="width:120px; height:120px; border-radius:30px; animation: pulseLogo 2s infinite ease-in-out;">
-        <div
-            style="margin-top:25px; color:var(--dash-primary); font-family:'Outfit'; font-size:1rem; font-weight:800; letter-spacing: 2px;">
-            CHARGEMENT...</div>
-    </div>
-
-    <!-- CONNEXION -->
-    <div class="portal-overlay" id="portalOverlay">
-        <div class="login-card">
+        <!-- SPLASH SCREEN -->
+        <div id="loadingSplash"
+            style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#0a0508; z-index:999999; display:flex; align-items:center; justify-content:center; flex-direction:column; transition: opacity 0.5s ease;">
             <img src="https://evanpatruno-ca.vercel.app/pwa-icon-192.png" alt="Evan Patruno Logo"
-                style="width:80px; height:80px; border-radius:20px; box-shadow: 0 0 25px rgba(135,50,118,0.8); display:block; margin: 0 auto 20px auto;">
-            <div class="login-title">Mon Dossier Privé</div>
-            <p class="login-subtitle">Accédez à votre espace client sécurisé.<br>Entrez votre Code Portail unique.</p>
-            <div id="loginFormContainer">
-                <input type="text" placeholder="Code Dossier (ex: EP-1)" class="login-input" id="inpPortalCode">
-                <input type="password" maxlength="4" placeholder="4 derniers chiffres du tél." class="login-input"
-                    id="inpPortalPhone">
-                <button type="button" class="login-btn" id="btnPortalLogin" onclick="handlePortalLogin(event)">
-                    <span>Ouvrir mon dossier →</span>
-                </button>
-
-                <a href="https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install" id="btnInstallPWA"
-                    style="text-decoration:none; display:block; text-align:center;">📲 Installer l'App sur mon écran</a>
-            </div>
-            <div class="login-security">🔒 Connexion chiffrée & sécurisée</div>
-        </div>
-    </div>
-
-    <!-- DASHBOARD -->
-    <div class="portal-container" id="portalDash">
-        <header id="secCockpit" style="margin-bottom: 20px; position: relative;">
+                style="width:120px; height:120px; border-radius:30px; animation: pulseLogo 2s infinite ease-in-out;">
             <div
-                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-                        <span id="txtCodeRef"
-                            style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 700; margin: 0 5px;">#--</span>
-                        <span id="badgeStage"
-                            style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">--</span>
+                style="margin-top:25px; color:var(--dash-primary); font-family:'Outfit'; font-size:1rem; font-weight:800; letter-spacing: 2px;">
+                CHARGEMENT...</div>
+        </div>
+
+        <!-- CONNEXION -->
+        <div class="portal-overlay" id="portalOverlay">
+            <div class="login-card">
+                <img src="https://evanpatruno-ca.vercel.app/pwa-icon-192.png" alt="Evan Patruno Logo"
+                    style="width:80px; height:80px; border-radius:20px; box-shadow: 0 0 25px rgba(135,50,118,0.8); display:block; margin: 0 auto 20px auto;">
+                <div class="login-title">Mon Dossier Privé</div>
+                <p class="login-subtitle">Accédez à votre espace client sécurisé.<br>Entrez votre Code Portail unique.
+                </p>
+                <div id="loginFormContainer">
+                    <input type="text" placeholder="Code Dossier (ex: EP-1)" class="login-input" id="inpPortalCode">
+                    <input type="password" maxlength="4" placeholder="4 derniers chiffres du tél." class="login-input"
+                        id="inpPortalPhone">
+                    <button type="button" class="login-btn" id="btnPortalLogin" onclick="handlePortalLogin(event)">
+                        <span>Ouvrir mon dossier →</span>
+                    </button>
+
+                    <a href="https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install" id="btnInstallPWA"
+                        style="text-decoration:none; display:block; text-align:center;">📲 Installer l'App sur mon
+                        écran</a>
+                </div>
+                <div class="login-security">🔒 Connexion chiffrée & sécurisée</div>
+            </div>
+        </div>
+
+        <!-- DASHBOARD -->
+        <div class="portal-container" id="portalDash">
+            <header id="secCockpit" style="margin-bottom: 20px; position: relative;">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                            <span id="txtCodeRef"
+                                style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 700; margin: 0 5px;">#--</span>
+                            <span id="badgeStage"
+                                style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">--</span>
+                        </div>
+                        <h1 id="txtWelcome"
+                            style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">
+                            Chargement...</h1>
+                        <div id="txtPropName"
+                            style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--
+                        </div>
                     </div>
-                    <h1 id="txtWelcome"
-                        style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; margin: 0; color: #fff; line-height: 1;">
-                        Chargement...</h1>
-                    <div id="txtPropName" style="font-size: 0.9rem; opacity: 0.5; font-weight: 600; margin-top: 5px;">--
+                    <div style="display: flex; gap: 10px;">
+                        <button onclick="handleLogout()"
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">🚪
+                            Quitter</button>
                     </div>
                 </div>
-                <div style="display: flex; gap: 10px;">
-                    <button onclick="handleLogout()"
-                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">🚪
-                        Quitter</button>
+            </header>
+
+            <!-- PUSH NOTIFICATION BANNER -->
+            <div id="pushBanner"
+                style="display:none; background: rgba(135, 50, 118, 0.2); border: 1px solid rgba(135, 50, 118, 0.5); padding: 15px; border-radius: 15px; margin-bottom: 20px; align-items: center; justify-content: space-between;">
+                <div style="font-size: 0.85rem; color: #fff;">🔔 Recevez les mises à jour en direct sur ce téléphone.
+                </div>
+                <button onclick="requestNotificationPermission()" class="portal-btn-primary"
+                    style="padding: 10px 15px; font-size: 0.75rem;">Activer</button>
+            </div>
+
+            <!-- SUMMARY DASHBOARD -->
+            <div class="summary-grid">
+                <div class="summary-card" onclick="toggleSection('secPrequal')">
+                    <div class="summary-icon">✅</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Prochaine Étape</div>
+                        <div class="summary-value" id="dashNextStep">Vérification...</div>
+                    </div>
+                </div>
+                <div class="summary-card" onclick="toggleSection('secVisites')">
+                    <div class="summary-icon">📅</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Rendez-vous</div>
+                        <div class="summary-value" id="dashNextVisit">Aucun planifié</div>
+                    </div>
+                </div>
+                <div class="summary-card" onclick="toggleSection('secConciergeMLS')">
+                    <div class="summary-icon">⚡</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Service Rapide</div>
+                        <div class="summary-value">Demander un document</div>
+                    </div>
                 </div>
             </div>
-        </header>
 
-        <!-- PUSH NOTIFICATION BANNER -->
-        <div id="pushBanner"
-            style="display:none; background: rgba(135, 50, 118, 0.2); border: 1px solid rgba(135, 50, 118, 0.5); padding: 15px; border-radius: 15px; margin-bottom: 20px; align-items: center; justify-content: space-between;">
-            <div style="font-size: 0.85rem; color: #fff;">🔔 Recevez les mises à jour en direct sur ce téléphone.</div>
-            <button onclick="requestNotificationPermission()" class="portal-btn-primary"
-                style="padding: 10px 15px; font-size: 0.75rem;">Activer</button>
-        </div>
 
-        <!-- SUMMARY DASHBOARD -->
-        <div class="summary-grid">
-            <div class="summary-card" onclick="toggleSection('secPrequal')">
-                <div class="summary-icon">✅</div>
-                <div class="summary-content">
-                    <div class="summary-label">Prochaine Étape</div>
-                    <div class="summary-value" id="dashNextStep">Vérification...</div>
+            <!-- DÉLAIS & CONDITIONS -->
+            <div class="section-wrapper collapsed" id="secPrequal">
+                <div class="section-header" onclick="toggleSection('secPrequal')">
+                    <h3>📋 Conditions &amp; Délais <span class="info-bubble"
+                            onclick="event.stopPropagation(); toggleSection('secLexique', true)">?</span></h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="milestone-grid" id="wrapMilestones"></div>
                 </div>
             </div>
-            <div class="summary-card" onclick="toggleSection('secVisites')">
-                <div class="summary-icon">📅</div>
-                <div class="summary-content">
-                    <div class="summary-label">Rendez-vous</div>
-                    <div class="summary-value" id="dashNextVisit">Aucun planifié</div>
+
+            <!-- TIMELINE -->
+            <div class="section-wrapper collapsed" id="secTimeline">
+                <div class="section-header" onclick="toggleSection('secTimeline')">
+                    <h3>⏳ Timeline de Transaction <span class="info-bubble"
+                            onclick="event.stopPropagation(); toggleSection('secLexique', true)">?</span></h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="timeline-steps" id="wrapTimeline">
+                        <div class="timeline-progress-bar" id="barProgress"></div>
+                    </div>
                 </div>
             </div>
-            <div class="summary-card" onclick="toggleSection('secConciergeMLS')">
-                <div class="summary-icon">⚡</div>
-                <div class="summary-content">
-                    <div class="summary-label">Service Rapide</div>
-                    <div class="summary-value">Demander un document</div>
+
+            <!-- DEMANDE DE DOCUMENTATIONS -->
+            <div class="section-wrapper collapsed" id="secConciergeMLS" style="border-color: #00f2ff30;">
+                <div class="section-header" onclick="toggleSection('secConciergeMLS')">
+                    <h3>⚡ Demande de documentations</h3>
+                    <div class="section-chevron">▼</div>
                 </div>
-            </div>
-        </div>
-
-
-        <!-- DÉLAIS & CONDITIONS -->
-        <div class="section-wrapper collapsed" id="secPrequal">
-            <div class="section-header" onclick="toggleSection('secPrequal')">
-                <h3>📋 Conditions &amp; Délais <span class="info-bubble" onclick="event.stopPropagation(); toggleSection('secLexique', true)">?</span></h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <div class="milestone-grid" id="wrapMilestones"></div>
-            </div>
-        </div>
-
-        <!-- TIMELINE -->
-        <div class="section-wrapper collapsed" id="secTimeline">
-            <div class="section-header" onclick="toggleSection('secTimeline')">
-                <h3>⏳ Timeline de Transaction <span class="info-bubble" onclick="event.stopPropagation(); toggleSection('secLexique', true)">?</span></h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <div class="timeline-steps" id="wrapTimeline">
-                    <div class="timeline-progress-bar" id="barProgress"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DEMANDE DE DOCUMENTATIONS -->
-        <div class="section-wrapper collapsed" id="secConciergeMLS" style="border-color: #00f2ff30;">
-            <div class="section-header" onclick="toggleSection('secConciergeMLS')">
-                <h3>⚡ Demande de documentations</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <p style="font-size:0.85rem; opacity:0.7; margin-bottom:15px;">Demandez la documentation confidentielle
-                    pour un numéro CENTRIS.</p>
-                <div style="display:grid; gap:10px;">
-                    <input type="text" id="inpMLS" placeholder="Numéro CENTRIS (ex: 12345678)"
-                        style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                    <button onclick="requestMLSDoc()" class="portal-btn-primary"
-                        style="width:100%; padding:15px;">Demander la documentation ✨</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- VISITES -->
-        <div class="section-wrapper collapsed" id="secVisites">
-            <div class="section-header" onclick="toggleSection('secVisites')">
-                <h3>Agenda des Visites</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <!-- FORMULAIRE DEMANDE DE VISITE -->
-                <div class="visit-card" style="margin-bottom:20px;">
-                    <h4 style="margin:0 0 15px 0; color:#fff; font-size:1rem;">📅 Demander une visite</h4>
-                    <div style="display:grid; gap:10px; margin-bottom:15px;">
-                        <input type="text" id="inpVisitLoc" placeholder="Numéro CENTRIS ou Adresse"
+                <div class="section-content">
+                    <p style="font-size:0.85rem; opacity:0.7; margin-bottom:15px;">Demandez la documentation
+                        confidentielle
+                        pour un numéro CENTRIS.</p>
+                    <div style="display:grid; gap:10px;">
+                        <input type="text" id="inpMLS" placeholder="Numéro CENTRIS (ex: 12345678)"
                             style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                        <input type="datetime-local" id="inpVisitDateTime"
-                            style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                        <button onclick="requestMLSDoc()" class="portal-btn-primary"
+                            style="width:100%; padding:15px;">Demander la documentation ✨</button>
                     </div>
-                    <button onclick="requestVisit()" class="portal-btn-primary"
-                        style="width:100%; padding:18px;">Envoyer la demande 🚀</button>
                 </div>
-
-                <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
             </div>
+
+            <!-- VISITES -->
+            <div class="section-wrapper collapsed" id="secVisites">
+                <div class="section-header" onclick="toggleSection('secVisites')">
+                    <h3>Agenda des Visites</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <!-- FORMULAIRE DEMANDE DE VISITE -->
+                    <div class="visit-card" style="margin-bottom:20px;">
+                        <h4 style="margin:0 0 15px 0; color:#fff; font-size:1rem;">📅 Demander une visite</h4>
+                        <div style="display:grid; gap:10px; margin-bottom:15px;">
+                            <input type="text" id="inpVisitLoc" placeholder="Numéro CENTRIS ou Adresse"
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                            <input type="datetime-local" id="inpVisitDateTime"
+                                style="width:100%; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                        </div>
+                        <button onclick="requestVisit()" class="portal-btn-primary"
+                            style="width:100%; padding:18px;">Envoyer la demande 🚀</button>
+                    </div>
+
+                    <div id="wrapVisites" style="display: grid; gap: 15px;"></div>
+                </div>
+            </div>
+
+            <!-- ÉQUIPE -->
+            <div class="section-wrapper collapsed" id="secTeam">
+                <div class="section-header" onclick="toggleSection('secTeam')">
+                    <h3>Votre Équipe de Transaction</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div id="wrapTeam"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- AMBASSADEUR -->
+            <div class="section-wrapper collapsed gold-card" id="secAmbassador">
+                <div class="section-header" onclick="toggleSection('secAmbassador')">
+                    <h3 class="gold-text">🏆 Programme Ambassadeur</h3>
+                    <div class="section-chevron" style="color:#d4af37;">▼</div>
+                </div>
+                <div class="section-content">
+                    <div style="text-align:center; margin-bottom:20px;">
+                        <p style="font-size:1rem; font-weight:700; color:#fff; margin-bottom:10px;">Votre recommandation
+                            vaut de l'or ! ✨</p>
+                        <p style="font-size:0.85rem; opacity:0.8; line-height:1.4;">Devenez ambassadeur en recommandant
+                            mes
+                            services à un proche. Profitez de privilèges exclusifs une fois la transaction conclue.</p>
+                    </div>
+
+                    <div id="referralForm"
+                        style="display:grid; gap:12px; background:rgba(0,0,0,0.2); padding:15px; border-radius:15px; border:1px solid rgba(212,175,55,0.2);">
+                        <input type="text" id="refName" placeholder="Nom du proche"
+                            style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                        <input type="tel" id="refPhone" placeholder="Téléphone ou Email"
+                            style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
+                        <textarea id="refNotes" placeholder="Petit mot ou projet (Vente, Achat...)"
+                            style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none; height:60px; resize:none;"></textarea>
+                        <button id="btnSubmitReferral" onclick="submitReferral()" class="btn-gold"
+                            style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer;">🎁
+                            Envoyer la référence</button>
+                        <button onclick="nativeShare()" class="btn-gold"
+                            style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer; opacity: 0.9; background: linear-gradient(135deg, #f1c40f, #d4af37);">📲
+                            Partager mon lien Ambassadeur</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEXIQUE & CONSEILS -->
+            <div class="section-wrapper collapsed" id="secLexique" style="border-color: #bb66ff40;">
+                <div class="section-header" onclick="toggleSection('secLexique')">
+                    <h3 style="color: #bb66ff !important;">📖 Lexique &amp; Conseils</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="lexique-tabs">
+                        <div class="lexique-filter active" onclick="filterLexique('budget', this)">💰 Budget</div>
+                        <div class="lexique-filter" onclick="filterLexique('tech', this)">🏠 Technique</div>
+                        <div class="lexique-filter" onclick="filterLexique('legal', this)">⚖️ Juridique</div>
+                        <div class="lexique-filter" onclick="filterLexique('prepa', this)">📅 Préparation</div>
+                    </div>
+
+                    <div id="lexiqueList">
+                        <!-- BUDGET -->
+                        <div class="lexique-item" data-cat="budget">
+                            <div class="lexique-term">Taxe de Bienvenue (Mutation)</div>
+                            <div class="lexique-def">Payable à la ville environ 1 à 3 mois après l'achat. Calculez entre
+                                1% et 1.5% du prix pour éviter les surprises.</div>
+                        </div>
+                        <div class="lexique-item" data-cat="budget">
+                            <div class="lexique-term">Assurance SCHL</div>
+                            <div class="lexique-def">Obligatoire si votre mise de fonds est inférieure à 20%. Elle
+                                protège le prêteur, mais vous permet d'acheter avec seulement 5%.</div>
+                        </div>
+                        <div class="lexique-item" data-cat="budget">
+                            <div class="lexique-term">Honoraires du Notaire</div>
+                            <div class="lexique-def">Prévoyez entre 1 200 $ et 1 800 $ incluant les frais
+                                d'enregistrement de l'hypothèque et de l'acte de vente.</div>
+                        </div>
+                        <div class="lexique-item" data-cat="budget">
+                            <div class="lexique-term">Ajustements au Notaire</div>
+                            <div class="lexique-def">Remboursement au vendeur des taxes (scolaires/municipales) qu'il a
+                                déjà payées d'avance pour l'année.</div>
+                        </div>
+
+                        <!-- TECHNIQUE -->
+                        <div class="lexique-item" data-cat="tech" style="display:none;">
+                            <div class="lexique-term">Certificat de Localisation</div>
+                            <div class="lexique-def">Le plan officiel de l'arpenteur. Il confirme que la maison et les
+                                structures sont bien sur votre terrain et respectent les marges.</div>
+                        </div>
+                        <div class="lexique-item" data-cat="tech" style="display:none;">
+                            <div class="lexique-term">Inspection en bâtiment</div>
+                            <div class="lexique-def">Étape cruciale pour identifier les enjeux invisibles (structure,
+                                électricité, plomberie) avant de finaliser l'achat.</div>
+                        </div>
+                        <div class="lexique-item" data-cat="tech" style="display:none;">
+                            <div class="lexique-term">Ocre Ferreuse</div>
+                            <div class="lexique-def">Une bactérie dans le sol qui peut boucher le drain français. Un
+                                test est parfois nécessaire selon le secteur.</div>
+                        </div>
+                        <div class="lexique-item" data-cat="tech" style="display:none;">
+                            <div class="lexique-term">Pyrrhotite / Pyrite</div>
+                            <div class="lexique-def">Minéraux dans le béton ou le remblai qui peuvent causer des
+                                fissures. On demande souvent un test pour les maisons d'un certain âge.</div>
+                        </div>
+
+                        <!-- JURIDIQUE -->
+                        <div class="lexique-item" data-cat="legal" style="display:none;">
+                            <div class="lexique-term">Déclaration du Vendeur</div>
+                            <div class="lexique-def">Le "pedigree" de la maison. Le vendeur y liste tout l'historique
+                                connu du bâtiment. C'est votre protection légale.</div>
+                        </div>
+                        <div class="lexique-item" data-cat="legal" style="display:none;">
+                            <div class="lexique-term">Servitude</div>
+                            <div class="lexique-def">Un droit accordé à un tiers (ex: Hydro-Québec, Bell ou un voisin)
+                                sur une partie de votre terrain.</div>
+                        </div>
+                        <div class="lexique-item" data-cat="legal" style="display:none;">
+                            <div class="lexique-term">Offre d'Achat (P.A.)</div>
+                            <div class="lexique-def">Le contrat légal de base. Une fois les conditions levées, vous êtes
+                                officiellement engagé à acheter.</div>
+                        </div>
+
+                        <!-- PREPARATION -->
+                        <div class="lexique-item" data-cat="prepa" style="display:none;">
+                            <div class="lexique-term">Assurance Habitation</div>
+                            <div class="lexique-def">Elle doit être active le jour même de la signature chez le notaire.
+                                Le prêteur exigera une preuve.</div>
+                        </div>
+                        <div class="lexique-item" data-cat="prepa" style="display:none;">
+                            <div class="lexique-term">Changement d'adresse</div>
+                            <div class="lexique-def">Utilisez le Service Québécois de Changement d'Adresse (SQCA) pour
+                                avertir 7 ministères en un seul clic !</div>
+                        </div>
+                        <div class="lexique-item" data-cat="prepa" style="display:none;">
+                            <div class="lexique-term">Hydro-Québec</div>
+                            <div class="lexique-def">N'oubliez pas de signaler votre déménagement sur leur site au moins
+                                10 jours avant pour éviter de payer pour l'ancien proprio.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTENAIRES -->
+            <div class="section-wrapper collapsed" id="secPartners">
+                <div class="section-header" onclick="toggleSection('secPartners')">
+                    <h3>Vos Partenaires Experts</h3>
+                    <div class="section-chevron">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="partner-grid" id="wrapPartners"></div>
+                </div>
+            </div>
+
         </div>
-
-        <!-- ÉQUIPE -->
-        <div class="section-wrapper collapsed" id="secTeam">
-            <div class="section-header" onclick="toggleSection('secTeam')">
-                <h3>Votre Équipe de Transaction</h3>
-                <div class="section-chevron">▼</div>
+        <!-- QUICK MENU MOBILE -->
+        <div class="portal-quick-menu">
+            <div class="quick-menu-item active" data-section="secCockpit" onclick="toggleSection('secCockpit')">🏠</div>
+            <div class="quick-menu-item" data-section="secPrequal" onclick="toggleSection('secPrequal')">📋</div>
+            <div class="quick-menu-item" data-section="secTimeline" data-section="secTimeline"
+                onclick="toggleSection('secTimeline')">⏳</div>
+            <div class="quick-menu-item" data-section="secConciergeMLS" onclick="toggleSection('secConciergeMLS')">📄
             </div>
-            <div class="section-content">
-                <div id="wrapTeam"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
-                </div>
-            </div>
+            <div class="quick-menu-item" data-section="secVisites" onclick="toggleSection('secVisites')">📅</div>
+            <div class="quick-menu-item" data-section="secTeam" onclick="toggleSection('secTeam')">👥</div>
+            <div class="quick-menu-item" data-section="secAmbassador" onclick="toggleSection('secAmbassador')">🌟</div>
+            <div class="quick-menu-item" data-section="secLexique" onclick="toggleSection('secLexique')">📖</div>
+            <div class="quick-menu-item" data-section="secPartners" onclick="toggleSection('secPartners')">🤝</div>
         </div>
-
-        <!-- AMBASSADEUR -->
-        <div class="section-wrapper collapsed gold-card" id="secAmbassador">
-            <div class="section-header" onclick="toggleSection('secAmbassador')">
-                <h3 class="gold-text">🏆 Programme Ambassadeur</h3>
-                <div class="section-chevron" style="color:#d4af37;">▼</div>
-            </div>
-            <div class="section-content">
-                <div style="text-align:center; margin-bottom:20px;">
-                    <p style="font-size:1rem; font-weight:700; color:#fff; margin-bottom:10px;">Votre recommandation
-                        vaut de l'or ! ✨</p>
-                    <p style="font-size:0.85rem; opacity:0.8; line-height:1.4;">Devenez ambassadeur en recommandant mes
-                        services à un proche. Profitez de privilèges exclusifs une fois la transaction conclue.</p>
-                </div>
-
-                <div id="referralForm"
-                    style="display:grid; gap:12px; background:rgba(0,0,0,0.2); padding:15px; border-radius:15px; border:1px solid rgba(212,175,55,0.2);">
-                    <input type="text" id="refName" placeholder="Nom du proche"
-                        style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                    <input type="tel" id="refPhone" placeholder="Téléphone ou Email"
-                        style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none;">
-                    <textarea id="refNotes" placeholder="Petit mot ou projet (Vente, Achat...)"
-                        style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:12px; border-radius:10px; color:#fff; outline:none; height:60px; resize:none;"></textarea>
-                    <button id="btnSubmitReferral" onclick="submitReferral()" class="btn-gold"
-                        style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer;">🎁
-                        Envoyer la référence</button>
-                    <button onclick="nativeShare()" class="btn-gold"
-                        style="width:100%; padding:15px; border-radius:10px; border:none; color:#000; font-weight:800; cursor:pointer; opacity: 0.9; background: linear-gradient(135deg, #f1c40f, #d4af37);">📲
-                        Partager mon lien Ambassadeur</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- LEXIQUE & CONSEILS -->
-        <div class="section-wrapper collapsed" id="secLexique" style="border-color: #bb66ff40;">
-            <div class="section-header" onclick="toggleSection('secLexique')">
-                <h3 style="color: #bb66ff !important;">📖 Lexique &amp; Conseils</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <div class="lexique-tabs">
-                    <div class="lexique-filter active" onclick="filterLexique('budget', this)">💰 Budget</div>
-                    <div class="lexique-filter" onclick="filterLexique('tech', this)">🏠 Technique</div>
-                    <div class="lexique-filter" onclick="filterLexique('legal', this)">⚖️ Juridique</div>
-                    <div class="lexique-filter" onclick="filterLexique('prepa', this)">📅 Préparation</div>
-                </div>
-
-                <div id="lexiqueList">
-                    <!-- BUDGET -->
-                    <div class="lexique-item" data-cat="budget">
-                        <div class="lexique-term">Taxe de Bienvenue (Mutation)</div>
-                        <div class="lexique-def">Payable à la ville environ 1 à 3 mois après l'achat. Calculez entre 1% et 1.5% du prix pour éviter les surprises.</div>
-                    </div>
-                    <div class="lexique-item" data-cat="budget">
-                        <div class="lexique-term">Assurance SCHL</div>
-                        <div class="lexique-def">Obligatoire si votre mise de fonds est inférieure à 20%. Elle protège le prêteur, mais vous permet d'acheter avec seulement 5%.</div>
-                    </div>
-                    <div class="lexique-item" data-cat="budget">
-                        <div class="lexique-term">Honoraires du Notaire</div>
-                        <div class="lexique-def">Prévoyez entre 1 200 $ et 1 800 $ incluant les frais d'enregistrement de l'hypothèque et de l'acte de vente.</div>
-                    </div>
-                    <div class="lexique-item" data-cat="budget">
-                        <div class="lexique-term">Ajustements au Notaire</div>
-                        <div class="lexique-def">Remboursement au vendeur des taxes (scolaires/municipales) qu'il a déjà payées d'avance pour l'année.</div>
-                    </div>
-
-                    <!-- TECHNIQUE -->
-                    <div class="lexique-item" data-cat="tech" style="display:none;">
-                        <div class="lexique-term">Certificat de Localisation</div>
-                        <div class="lexique-def">Le plan officiel de l'arpenteur. Il confirme que la maison et les structures sont bien sur votre terrain et respectent les marges.</div>
-                    </div>
-                    <div class="lexique-item" data-cat="tech" style="display:none;">
-                        <div class="lexique-term">Inspection en bâtiment</div>
-                        <div class="lexique-def">Étape cruciale pour identifier les enjeux invisibles (structure, électricité, plomberie) avant de finaliser l'achat.</div>
-                    </div>
-                    <div class="lexique-item" data-cat="tech" style="display:none;">
-                        <div class="lexique-term">Ocre Ferreuse</div>
-                        <div class="lexique-def">Une bactérie dans le sol qui peut boucher le drain français. Un test est parfois nécessaire selon le secteur.</div>
-                    </div>
-                    <div class="lexique-item" data-cat="tech" style="display:none;">
-                        <div class="lexique-term">Pyrrhotite / Pyrite</div>
-                        <div class="lexique-def">Minéraux dans le béton ou le remblai qui peuvent causer des fissures. On demande souvent un test pour les maisons d'un certain âge.</div>
-                    </div>
-
-                    <!-- JURIDIQUE -->
-                    <div class="lexique-item" data-cat="legal" style="display:none;">
-                        <div class="lexique-term">Déclaration du Vendeur</div>
-                        <div class="lexique-def">Le "pedigree" de la maison. Le vendeur y liste tout l'historique connu du bâtiment. C'est votre protection légale.</div>
-                    </div>
-                    <div class="lexique-item" data-cat="legal" style="display:none;">
-                        <div class="lexique-term">Servitude</div>
-                        <div class="lexique-def">Un droit accordé à un tiers (ex: Hydro-Québec, Bell ou un voisin) sur une partie de votre terrain.</div>
-                    </div>
-                    <div class="lexique-item" data-cat="legal" style="display:none;">
-                        <div class="lexique-term">Offre d'Achat (P.A.)</div>
-                        <div class="lexique-def">Le contrat légal de base. Une fois les conditions levées, vous êtes officiellement engagé à acheter.</div>
-                    </div>
-
-                    <!-- PREPARATION -->
-                    <div class="lexique-item" data-cat="prepa" style="display:none;">
-                        <div class="lexique-term">Assurance Habitation</div>
-                        <div class="lexique-def">Elle doit être active le jour même de la signature chez le notaire. Le prêteur exigera une preuve.</div>
-                    </div>
-                    <div class="lexique-item" data-cat="prepa" style="display:none;">
-                        <div class="lexique-term">Changement d'adresse</div>
-                        <div class="lexique-def">Utilisez le Service Québécois de Changement d'Adresse (SQCA) pour avertir 7 ministères en un seul clic !</div>
-                    </div>
-                    <div class="lexique-item" data-cat="prepa" style="display:none;">
-                        <div class="lexique-term">Hydro-Québec</div>
-                        <div class="lexique-def">N'oubliez pas de signaler votre déménagement sur leur site au moins 10 jours avant pour éviter de payer pour l'ancien proprio.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- PARTENAIRES -->
-        <div class="section-wrapper collapsed" id="secPartners">
-            <div class="section-header" onclick="toggleSection('secPartners')">
-                <h3>Vos Partenaires Experts</h3>
-                <div class="section-chevron">▼</div>
-            </div>
-            <div class="section-content">
-                <div class="partner-grid" id="wrapPartners"></div>
-            </div>
-        </div>
-
     </div>
-    <!-- QUICK MENU MOBILE -->
-    <div class="portal-quick-menu">
-        <div class="quick-menu-item active" data-section="secCockpit" onclick="toggleSection('secCockpit')">🏠</div>
-        <div class="quick-menu-item" data-section="secPrequal" onclick="toggleSection('secPrequal')">📋</div>
-        <div class="quick-menu-item" data-section="secTimeline" data-section="secTimeline"
-            onclick="toggleSection('secTimeline')">⏳</div>
-        <div class="quick-menu-item" data-section="secConciergeMLS" onclick="toggleSection('secConciergeMLS')">📄</div>
-        <div class="quick-menu-item" data-section="secVisites" onclick="toggleSection('secVisites')">📅</div>
-        <div class="quick-menu-item" data-section="secTeam" onclick="toggleSection('secTeam')">👥</div>
-        <div class="quick-menu-item" data-section="secAmbassador" onclick="toggleSection('secAmbassador')">🌟</div>
-        <div class="quick-menu-item" data-section="secLexique" onclick="toggleSection('secLexique')">📖</div>
-        <div class="quick-menu-item" data-section="secPartners" onclick="toggleSection('secPartners')">🤝</div>
-    </div>
-</div>
     <script>
-    /**
-     * PORTAL SCRIPTS v14.13 - FIX TIME DISPLAY & SYNC
-     */
-    const API_URL = 'https://evanpatruno-ca.vercel.app/api/portal';
+        /**
+         * PORTAL SCRIPTS v14.13 - FIX TIME DISPLAY & SYNC
+         */
+        const API_URL = 'https://evanpatruno-ca.vercel.app/api/portal';
 
-    function initPortal() {
-        const code = localStorage.getItem('portal_code');
-        const phone = localStorage.getItem('portal_phone');
-        if (code && phone) {
-            handlePortalLogin();
-        } else {
-            const splash = document.getElementById('loadingSplash');
-            if(splash) {
-                splash.style.opacity = '0';
-                setTimeout(() => splash.remove(), 500);
+        function initPortal() {
+            const code = localStorage.getItem('portal_code');
+            const phone = localStorage.getItem('portal_phone');
+            if (code && phone) {
+                handlePortalLogin();
+            } else {
+                const splash = document.getElementById('loadingSplash');
+                if (splash) {
+                    splash.style.opacity = '0';
+                    setTimeout(() => splash.remove(), 500);
+                }
+            }
+
+            // Enregistrement du Service Worker pour le PWA
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(() => console.log("SW: Registered"))
+                    .catch(err => console.error("SW: Error", err));
             }
         }
 
-        // Enregistrement du Service Worker pour le PWA
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then(() => console.log("SW: Registered"))
-                .catch(err => console.error("SW: Error", err));
-        }
-    }
+        async function handlePortalLogin(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            const inpCode = document.getElementById('inpPortalCode');
+            const inpPhone = document.getElementById('inpPortalPhone');
+            const btn = document.getElementById('btnPortalLogin');
 
-    async function handlePortalLogin(e) {
-        if (e && e.preventDefault) e.preventDefault();
-        const inpCode = document.getElementById('inpPortalCode');
-        const inpPhone = document.getElementById('inpPortalPhone');
-        const btn = document.getElementById('btnPortalLogin');
+            const code = (inpCode?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
+            const phone = (inpPhone?.value || localStorage.getItem('portal_phone'))?.trim();
 
-        const code = (inpCode?.value || localStorage.getItem('portal_code'))?.trim().toUpperCase();
-        const phone = (inpPhone?.value || localStorage.getItem('portal_phone'))?.trim();
+            // On détermine si c'est une connexion manuelle (clic bouton)
+            const isManual = !!(inpCode?.value || inpPhone?.value);
 
-        // On détermine si c'est une connexion manuelle (clic bouton)
-        const isManual = !!(inpCode?.value || inpPhone?.value);
-
-        if (!code || !phone) {
-            if (e) alert("⚠️ Veuillez remplir votre Code Dossier et vos 4 chiffres de téléphone.");
-            return;
-        }
-
-
-        if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
-        try {
-            const res = await fetch(`${API_URL}?t=${Date.now()}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
-            const data = await res.json();
-            if (!res.ok) throw new Error((data.error || "Accès refusé."));
-
-            if (data.s === false) throw new Error(data.message || "Erreur Zoho");
-
-            localStorage.setItem('portal_code', code);
-            localStorage.setItem('portal_phone', phone);
-            localStorage.setItem('portal_deal_id', data.id);
-            renderPortal(data);
-            hapticFeedback('success');
-            document.getElementById('portalOverlay').classList.add('hidden');
-            document.getElementById('portalDash').classList.add('visible');
-        } catch (error) {
-            console.error("Login Error:", error);
-            // On affiche l'alerte si c'est manuel OU si on force l'événement
-            if (e || isManual) alert("⚠️ Erreur : " + error.message);
-
-            const isDashVisible = document.getElementById('portalDash').classList.contains('visible');
-            if (!isDashVisible) {
-                document.getElementById('portalOverlay').classList.remove('hidden');
+            if (!code || !phone) {
+                if (e) alert("⚠️ Veuillez remplir votre Code Dossier et vos 4 chiffres de téléphone.");
+                return;
             }
-            if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
-        } finally {
-            if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
-            const splash = document.getElementById('loadingSplash');
-            if(splash) {
-                splash.style.opacity = '0';
-                setTimeout(() => splash.remove(), 500);
+
+
+            if (btn) { btn.innerText = "Vérification..."; btn.disabled = true; }
+            try {
+                const res = await fetch(`${API_URL}?t=${Date.now()}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: code, phoneLast4: phone }) });
+                const data = await res.json();
+                if (!res.ok) throw new Error((data.error || "Accès refusé."));
+
+                if (data.s === false) throw new Error(data.message || "Erreur Zoho");
+
+                localStorage.setItem('portal_code', code);
+                localStorage.setItem('portal_phone', phone);
+                localStorage.setItem('portal_deal_id', data.id);
+                renderPortal(data);
+                hapticFeedback('success');
+                document.getElementById('portalOverlay').classList.add('hidden');
+                document.getElementById('portalDash').classList.add('visible');
+            } catch (error) {
+                console.error("Login Error:", error);
+                // On affiche l'alerte si c'est manuel OU si on force l'événement
+                if (e || isManual) alert("⚠️ Erreur : " + error.message);
+
+                const isDashVisible = document.getElementById('portalDash').classList.contains('visible');
+                if (!isDashVisible) {
+                    document.getElementById('portalOverlay').classList.remove('hidden');
+                }
+                if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
+            } finally {
+                if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
+                const splash = document.getElementById('loadingSplash');
+                if (splash) {
+                    splash.style.opacity = '0';
+                    setTimeout(() => splash.remove(), 500);
+                }
             }
         }
-    }
 
-    function handleLogout() {
-        if (!confirm("Voulez-vous vous déconnecter ?")) return;
-        localStorage.removeItem('portal_code');
-        localStorage.removeItem('portal_phone');
-        localStorage.removeItem('portal_deal_id');
-        location.reload();
-    }
-
-    function formatVisitDate(dt) {
-        if (!dt) return "À venir";
-        try {
-            // Zoho envoie parfois "YYYY-MM-DD HH:mm:ss" au lieu de "YYYY-MM-DDTHH:mm:ss"
-            const cleanDT = dt.replace(' ', 'T');
-            const dateObj = new Date(cleanDT);
-            if (isNaN(dateObj)) return dt; // Fallback si invalide
-            const datePart = dateObj.toLocaleDateString('fr-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
-            const timePart = dateObj.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' });
-            return `${datePart} à ${timePart}`;
-        } catch (e) { return dt; }
-    }
-
-    function renderPortal(data) {
-        if (!data) return;
-        const setT = (id, v) => { const el = document.getElementById(id); if (el) el.innerText = v || "--"; };
-        setT('txtWelcome', `Bonjour ${data.firstName || 'Evan'}.`);
-        setT('txtPropName', `${data.property || ''} - ${data.city || ''}`);
-        setT('txtCodeRef', `#${data.code || ''}`);
-        const s = (data.timeline || []).find(x => x.status === 'active') || (data.timeline || []).find(x => x.status === 'pending');
-        setT('badgeStage', s ? s.label : "Dossier Actif");
-
-        const nextCondition = (data.checklist || []).find(c => !c.done);
-        setT('dashNextStep', nextCondition ? nextCondition.name : "Terminé !");
-        const upcomingVisits = (data.visites || []).filter(v => v.statut === 'Confirmée' || v.statut === 'Prévue');
-        setT('dashNextVisit', upcomingVisits.length > 0 ? formatVisitDate(upcomingVisits[0].Date_heure_de_visite) : "Aucun planifié");
-        updateAppBadge(upcomingVisits.length);
-
-        const safe = (fn) => { try { fn(); } catch (e) { console.warn(e); } };
-        
-        // Push notification banner
-        if ("Notification" in window && Notification.permission === 'default') {
-            const pushB = document.getElementById('pushBanner');
-            if(pushB) pushB.style.display = 'flex';
+        function handleLogout() {
+            if (!confirm("Voulez-vous vous déconnecter ?")) return;
+            localStorage.removeItem('portal_code');
+            localStorage.removeItem('portal_phone');
+            localStorage.removeItem('portal_deal_id');
+            location.reload();
         }
-        safe(() => renderMilestones(data.milestones || {}));
-        safe(() => renderTimeline(data.timeline || []));
-        safe(() => renderVisites(data.visites || [], data.code));
-        safe(() => renderChecklist(data.checklist || []));
-        safe(() => renderTeam(data.team || []));
-        safe(() => renderPartners(data.partners || []));
-        checkUrlSection();
-    }
 
-    function renderMilestones(m) {
-        const wrap = document.getElementById('wrapMilestones'); if (!wrap) return;
-        const config = [
-            { l: 'Financement', d: m.financing },
-            { l: 'Inspection', d: m.inspection },
-            { l: 'Conditions', d: m.others },
-            { l: 'Signature', d: m.signature },
-            { l: 'Occupation', d: m.occupation }
-        ];
-        wrap.innerHTML = config.map(ms => {
-            const days = ms.d?.days;
-            const done = ms.d?.done || (days !== null && days < 0);
-            const neonStyle = done
-                ? 'border-color:#2ecc71; box-shadow: 0 0 25px rgba(46,204,113,0.4), inset 0 0 15px rgba(46,204,113,0.05); background:rgba(46,204,113,0.05);'
-                : '';
-            const valColor = done ? '#2ecc71' : '#fff';
-            const valDisplay = days !== null && days !== undefined ? (done ? '✓' : days) : '--';
-            const unit = done ? 'COMPLÉTÉ' : 'JOURS';
-            return `<div class="milestone-card" style="${neonStyle}">
+        function formatVisitDate(dt) {
+            if (!dt) return "À venir";
+            try {
+                // Zoho envoie parfois "YYYY-MM-DD HH:mm:ss" au lieu de "YYYY-MM-DDTHH:mm:ss"
+                const cleanDT = dt.replace(' ', 'T');
+                const dateObj = new Date(cleanDT);
+                if (isNaN(dateObj)) return dt; // Fallback si invalide
+                const datePart = dateObj.toLocaleDateString('fr-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
+                const timePart = dateObj.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' });
+                return `${datePart} à ${timePart}`;
+            } catch (e) { return dt; }
+        }
+
+        function renderPortal(data) {
+            if (!data) return;
+            const setT = (id, v) => { const el = document.getElementById(id); if (el) el.innerText = v || "--"; };
+            setT('txtWelcome', `Bonjour ${data.firstName || 'Evan'}.`);
+            setT('txtPropName', `${data.property || ''} - ${data.city || ''}`);
+            setT('txtCodeRef', `#${data.code || ''}`);
+            const s = (data.timeline || []).find(x => x.status === 'active') || (data.timeline || []).find(x => x.status === 'pending');
+            setT('badgeStage', s ? s.label : "Dossier Actif");
+
+            const nextCondition = (data.checklist || []).find(c => !c.done);
+            setT('dashNextStep', nextCondition ? nextCondition.name : "Terminé !");
+            const upcomingVisits = (data.visites || []).filter(v => v.statut === 'Confirmée' || v.statut === 'Prévue');
+            setT('dashNextVisit', upcomingVisits.length > 0 ? formatVisitDate(upcomingVisits[0].Date_heure_de_visite) : "Aucun planifié");
+            updateAppBadge(upcomingVisits.length);
+
+            const safe = (fn) => { try { fn(); } catch (e) { console.warn(e); } };
+
+            // Push notification banner
+            if ("Notification" in window && Notification.permission === 'default') {
+                const pushB = document.getElementById('pushBanner');
+                if (pushB) pushB.style.display = 'flex';
+            }
+            safe(() => renderMilestones(data.milestones || {}));
+            safe(() => renderTimeline(data.timeline || []));
+            safe(() => renderVisites(data.visites || [], data.code));
+            safe(() => renderChecklist(data.checklist || []));
+            safe(() => renderTeam(data.team || []));
+            safe(() => renderPartners(data.partners || []));
+            checkUrlSection();
+        }
+
+        function renderMilestones(m) {
+            const wrap = document.getElementById('wrapMilestones'); if (!wrap) return;
+            const config = [
+                { l: 'Financement', d: m.financing },
+                { l: 'Inspection', d: m.inspection },
+                { l: 'Conditions', d: m.others },
+                { l: 'Signature', d: m.signature },
+                { l: 'Occupation', d: m.occupation }
+            ];
+            wrap.innerHTML = config.map(ms => {
+                const days = ms.d?.days;
+                const done = ms.d?.done || (days !== null && days < 0);
+                const neonStyle = done
+                    ? 'border-color:#2ecc71; box-shadow: 0 0 25px rgba(46,204,113,0.4), inset 0 0 15px rgba(46,204,113,0.05); background:rgba(46,204,113,0.05);'
+                    : '';
+                const valColor = done ? '#2ecc71' : '#fff';
+                const valDisplay = days !== null && days !== undefined ? (done ? '✓' : days) : '--';
+                const unit = done ? 'COMPLÉTÉ' : 'JOURS';
+                return `<div class="milestone-card" style="${neonStyle}">
                 <div style="font-size:0.55rem; opacity:0.6; margin-bottom:8px; font-weight:800; color:${done ? '#2ecc71' : 'rgba(255,255,255,0.4)'}">${unit}</div>
                 <div class="milestone-val" style="color:${valColor}; text-shadow:${done ? '0 0 20px rgba(46,204,113,0.6)' : 'none'}; font-size:2.4rem;">${valDisplay}</div>
                 <div class="milestone-label" style="font-size:0.65rem; margin-top:5px; font-weight:800;">${ms.l}</div>
             </div>`;
-        }).join('');
-    }
-
-    function renderTimeline(timeline) {
-        const wrap = document.getElementById('wrapTimeline'); if (!wrap) return;
-        wrap.querySelectorAll('.step-node:not(.timeline-progress-bar)').forEach(n => n.remove());
-        let completed = 0;
-        timeline.forEach(s => {
-            const node = document.createElement('div'); node.className = `step-node ${s.status}`;
-            node.innerHTML = `<div class="node-dot">${s.icon || '○'}</div><div style="font-size:0.8rem; font-weight:700; margin-top:12px; text-align:center;">${s.label}</div>`;
-            wrap.appendChild(node);
-            if (s.status === 'completed') completed++; if (s.status === 'active') completed += 0.5;
-        });
-        setTimeout(() => {
-            const bar = document.getElementById('barProgress');
-            const pct = timeline.length > 1 ? Math.max(0, ((completed - 1) / (timeline.length - 1)) * 100) : 0;
-            if (bar) {
-                if (window.innerWidth <= 768) { bar.style.height = `${pct * 0.8}%`; bar.style.width = '2px'; }
-                else { bar.style.width = `${pct * 0.8}%`; bar.style.height = '2px'; }
-            }
-        }, 300);
-    }
-
-    function renderVisites(visites, portalCode) {
-        const wrap = document.getElementById('wrapVisites');
-        if (!wrap) return;
-        if (!visites || visites.length === 0) {
-            wrap.innerHTML = `<p style="text-align:center; opacity:0.5;">Aucune visite.</p>`;
-            return;
+            }).join('');
         }
 
-        const now = Date.now();
-        const archivedStats = ['Annulée', 'Refusée', 'Terminée', 'Effectuée'];
-        const activeVisites = visites.filter(v => !archivedStats.includes(v.statut));
-        const archivedVisites = visites.filter(v => archivedStats.includes(v.statut));
+        function renderTimeline(timeline) {
+            const wrap = document.getElementById('wrapTimeline'); if (!wrap) return;
+            wrap.querySelectorAll('.step-node:not(.timeline-progress-bar)').forEach(n => n.remove());
+            let completed = 0;
+            timeline.forEach(s => {
+                const node = document.createElement('div'); node.className = `step-node ${s.status}`;
+                node.innerHTML = `<div class="node-dot">${s.icon || '○'}</div><div style="font-size:0.8rem; font-weight:700; margin-top:12px; text-align:center;">${s.label}</div>`;
+                wrap.appendChild(node);
+                if (s.status === 'completed') completed++; if (s.status === 'active') completed += 0.5;
+            });
+            setTimeout(() => {
+                const bar = document.getElementById('barProgress');
+                const pct = timeline.length > 1 ? Math.max(0, ((completed - 1) / (timeline.length - 1)) * 100) : 0;
+                if (bar) {
+                    if (window.innerWidth <= 768) { bar.style.height = `${pct * 0.8}%`; bar.style.width = '2px'; }
+                    else { bar.style.width = `${pct * 0.8}%`; bar.style.height = '2px'; }
+                }
+            }, 300);
+        }
 
-        const statusColors = {
-            'En attente': 'rgba(241, 196, 15, 0.2)',
-            'Prévue': 'rgba(46, 204, 113, 0.2)',
-            'Confirmée': 'rgba(46, 204, 113, 0.2)',
-            'Terminée': 'rgba(52, 152, 219, 0.2)',
-            'Effectuée': 'rgba(52, 152, 219, 0.2)',
-            'Annulée': 'rgba(231, 76, 60, 0.2)',
-            'Refusée': 'rgba(231, 76, 60, 0.2)'
-        };
-        const statusTextColors = {
-            'En attente': '#f1c40f',
-            'Prévue': '#2ecc71',
-            'Confirmée': '#2ecc71',
-            'Terminée': '#3498db',
-            'Effectuée': '#3498db',
-            'Annulée': '#e74c3c',
-            'Refusée': '#e74c3c'
-        };
+        function renderVisites(visites, portalCode) {
+            const wrap = document.getElementById('wrapVisites');
+            if (!wrap) return;
+            if (!visites || visites.length === 0) {
+                wrap.innerHTML = `<p style="text-align:center; opacity:0.5;">Aucune visite.</p>`;
+                return;
+            }
 
-        let html = activeVisites.map(v => {
-            const localFB = JSON.parse(localStorage.getItem(`visit_fb_${portalCode}_${v.id}`) || "{}");
-            const verdict = v.verdict || localFB.verdict || "";
-            const rating = v.evaluation || localFB.rating || 0;
-            const visitTime = v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite.replace(' ', 'T')).getTime() : 0;
-            const isUnlocked = now > (visitTime + 1800000);
-            const isCompleted = ["Terminée", "Effectuée"].includes(v.statut);
-            const safeLoc = (v.location || 'Lieu').split("'").join("\\'");
+            const now = Date.now();
+            const archivedStats = ['Annulée', 'Refusée', 'Terminée', 'Effectuée'];
+            const activeVisites = visites.filter(v => !archivedStats.includes(v.statut));
+            const archivedVisites = visites.filter(v => archivedStats.includes(v.statut));
 
-            const sCol = statusColors[v.statut] || 'rgba(255,255,255,0.1)';
-            const sTxt = statusTextColors[v.statut] || '#fff';
+            const statusColors = {
+                'En attente': 'rgba(241, 196, 15, 0.2)',
+                'Prévue': 'rgba(46, 204, 113, 0.2)',
+                'Confirmée': 'rgba(46, 204, 113, 0.2)',
+                'Terminée': 'rgba(52, 152, 219, 0.2)',
+                'Effectuée': 'rgba(52, 152, 219, 0.2)',
+                'Annulée': 'rgba(231, 76, 60, 0.2)',
+                'Refusée': 'rgba(231, 76, 60, 0.2)'
+            };
+            const statusTextColors = {
+                'En attente': '#f1c40f',
+                'Prévue': '#2ecc71',
+                'Confirmée': '#2ecc71',
+                'Terminée': '#3498db',
+                'Effectuée': '#3498db',
+                'Annulée': '#e74c3c',
+                'Refusée': '#e74c3c'
+            };
 
-            return `
+            let html = activeVisites.map(v => {
+                const localFB = JSON.parse(localStorage.getItem(`visit_fb_${portalCode}_${v.id}`) || "{}");
+                const verdict = v.verdict || localFB.verdict || "";
+                const rating = v.evaluation || localFB.rating || 0;
+                const visitTime = v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite.replace(' ', 'T')).getTime() : 0;
+                const isUnlocked = now > (visitTime + 1800000);
+                const isCompleted = ["Terminée", "Effectuée"].includes(v.statut);
+                const safeLoc = (v.location || 'Lieu').split("'").join("\\'");
+
+                const sCol = statusColors[v.statut] || 'rgba(255,255,255,0.1)';
+                const sTxt = statusTextColors[v.statut] || '#fff';
+
+                return `
                 <div class="visit-card" id="visit-${v.id}">
                     <div class="visit-header">
                         <div>
@@ -1073,10 +1511,10 @@
                         </div>
                     `}
                 </div>`;
-        }).join('');
+            }).join('');
 
-        if (archivedVisites.length > 0) {
-            html += `
+            if (archivedVisites.length > 0) {
+                html += `
                 <div style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.05); padding-top:20px;">
                     <div onclick="toggleSection('wrapArchivedVisits')" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; opacity:0.6; padding:10px;">
                         <span style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:1px;">📁 Visites annulées / refusées (${archivedVisites.length})</span>
@@ -1084,9 +1522,9 @@
                     </div>
                     <div id="wrapArchivedVisits" class="collapsed" style="margin-top:15px; flex-direction:column; gap:10px;">
                         ${archivedVisites.map(v => {
-                const arcCol = statusColors[v.statut] || 'rgba(255,255,255,0.1)';
-                const arcTxt = statusTextColors[v.statut] || '#fff';
-                return `
+                    const arcCol = statusColors[v.statut] || 'rgba(255,255,255,0.1)';
+                    const arcTxt = statusTextColors[v.statut] || '#fff';
+                    return `
                                 <div style="background:rgba(255,255,255,0.02); border-radius:15px; padding:12px; border:1px solid rgba(255,255,255,0.05); display:flex; justify-content:space-between; align-items:center; opacity:0.8;">
                                     <div style="font-size:0.8rem;">
                                         <div style="font-weight:700; color:#fff;">${formatVisitDate(v.Date_heure_de_visite)}</div>
@@ -1095,169 +1533,169 @@
                                     <div style="font-size:0.55rem; background:${arcCol}; color:${arcTxt}; border:1px solid ${arcTxt}33; padding:4px 8px; border-radius:5px; text-transform:uppercase; font-weight:800;">${v.statut}</div>
                                 </div>
                             `;
-            }).join('')}
+                }).join('')}
                     </div>
                 </div>
             `;
+            }
+
+
+            wrap.innerHTML = html;
         }
 
+        function updateLocalFB(id, key, val) {
+            const code = localStorage.getItem('portal_code');
+            const storageKey = `visit_fb_${code}_${id}`;
+            const fb = JSON.parse(localStorage.getItem(storageKey) || "{}");
+            fb[key] = val; localStorage.setItem(storageKey, JSON.stringify(fb));
+        }
 
-        wrap.innerHTML = html;
-    }
+        function saveRating(id, r, el) {
+            updateLocalFB(id, 'rating', r);
+            const stars = el.parentElement.querySelectorAll('span');
+            stars.forEach((s, idx) => s.style.filter = (idx < r) ? 'none' : 'grayscale(1) opacity(0.2)');
+        }
 
-    function updateLocalFB(id, key, val) {
-        const code = localStorage.getItem('portal_code');
-        const storageKey = `visit_fb_${code}_${id}`;
-        const fb = JSON.parse(localStorage.getItem(storageKey) || "{}");
-        fb[key] = val; localStorage.setItem(storageKey, JSON.stringify(fb));
-    }
+        function saveVerdict(id, v, btn) {
+            updateLocalFB(id, 'verdict', v);
+            btn.parentElement.querySelectorAll('button').forEach(b => b.style.background = 'transparent');
+            btn.style.background = 'rgba(135, 50, 118, 0.4)';
+        }
 
-    function saveRating(id, r, el) {
-        updateLocalFB(id, 'rating', r);
-        const stars = el.parentElement.querySelectorAll('span');
-        stars.forEach((s, idx) => s.style.filter = (idx < r) ? 'none' : 'grayscale(1) opacity(0.2)');
-    }
+        async function syncVisitFeedback(id) {
+            const code = localStorage.getItem('portal_code'), dealId = localStorage.getItem('portal_deal_id'), btn = document.getElementById(`btn-sync-${id}`);
+            const comm = document.getElementById(`comm-${id}`).value;
+            const localFB = JSON.parse(localStorage.getItem(`visit_fb_${code}_${id}`) || "{}");
+            if (!dealId || !btn) return;
+            btn.innerText = "Sync..."; btn.disabled = true;
+            try {
+                const payload = {
+                    codePortal: code,
+                    dealId: dealId,
+                    visitId: id,
+                    evaluation: String(localFB.rating || 5),
+                    verdict: localFB.verdict || "A réfléchir",
+                    commentaire: comm
+                };
+                const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                const result = await res.json();
+                if (result.s) {
+                    btn.innerText = "Avis enregistré ! ✨";
+                    btn.style.background = "#2ecc71";
+                    hapticFeedback('success');
 
-    function saveVerdict(id, v, btn) {
-        updateLocalFB(id, 'verdict', v);
-        btn.parentElement.querySelectorAll('button').forEach(b => b.style.background = 'transparent');
-        btn.style.background = 'rgba(135, 50, 118, 0.4)';
-    }
+                    // Délai de 3 secondes pour laisser le temps de lire
+                    setTimeout(() => {
+                        const card = document.getElementById(`visit-${id}`);
+                        if (card) {
+                            card.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
+                            card.style.opacity = "0";
+                            card.style.transform = "scale(0.9) translateY(10px)";
+                            card.style.maxHeight = "0";
+                            card.style.margin = "0";
+                            card.style.padding = "0";
+                            card.style.overflow = "hidden";
 
-    async function syncVisitFeedback(id) {
-        const code = localStorage.getItem('portal_code'), dealId = localStorage.getItem('portal_deal_id'), btn = document.getElementById(`btn-sync-${id}`);
-        const comm = document.getElementById(`comm-${id}`).value;
-        const localFB = JSON.parse(localStorage.getItem(`visit_fb_${code}_${id}`) || "{}");
-        if (!dealId || !btn) return;
-        btn.innerText = "Sync..."; btn.disabled = true;
-        try {
-            const payload = {
-                codePortal: code,
-                dealId: dealId,
-                visitId: id,
-                evaluation: String(localFB.rating || 5),
-                verdict: localFB.verdict || "A réfléchir",
-                commentaire: comm
-            };
-            const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-            const result = await res.json();
-            if (result.s) { 
-                btn.innerText = "Avis enregistré ! ✨"; 
-                btn.style.background = "#2ecc71"; 
-                hapticFeedback('success');
+                            setTimeout(() => {
+                                handlePortalLogin(); // Rafraîchissement complet des données
+                            }, 800);
+                        } else {
+                            handlePortalLogin();
+                        }
+                    }, 3000);
+                }
+                else { throw new Error((result.error || "Erreur API") + (result.details ? ": " + JSON.stringify(result.details).substring(0, 100) : "")); }
+            } catch (e) { btn.innerText = "Réessayer"; btn.disabled = false; showPwaToast("⚠️ Erreur avis : " + e.message); console.error("Sync Error:", e); }
+        }
 
-                // Délai de 3 secondes pour laisser le temps de lire
-                setTimeout(() => {
-                    const card = document.getElementById(`visit-${id}`);
-                    if (card) {
-                        card.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
-                        card.style.opacity = "0";
-                        card.style.transform = "scale(0.9) translateY(10px)";
-                        card.style.maxHeight = "0";
-                        card.style.margin = "0";
-                        card.style.padding = "0";
-                        card.style.overflow = "hidden";
-                        
-                        setTimeout(() => {
-                            handlePortalLogin(); // Rafraîchissement complet des données
-                        }, 800);
-                    } else {
+        function animateCardOut(id, callback) {
+            const card = document.getElementById(id);
+            if (card) {
+                card.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
+                card.style.opacity = "0";
+                card.style.transform = "scale(0.9) translateY(10px)";
+                card.style.maxHeight = "0";
+                card.style.margin = "0";
+                card.style.padding = "0";
+                card.style.overflow = "hidden";
+                setTimeout(callback, 800);
+            } else {
+                callback();
+            }
+        }
+
+        function getZohoDateTime(dtString) {
+            if (!dtString) return null;
+            const d = new Date(dtString);
+            return d.toISOString().split('.')[0] + '+00:00';
+        }
+
+        async function requestVisit() {
+            hapticFeedback('medium');
+            const loc = document.getElementById('inpVisitLoc').value.trim();
+            const dt = document.getElementById('inpVisitDateTime').value;
+            const d = localStorage.getItem('portal_deal_id');
+            const c = localStorage.getItem('portal_code');
+            if (!loc || !dt) { alert("Veuillez remplir l'adresse et la date."); return; }
+
+            // Validation : Minimum 2h dans le futur
+            const chosen = new Date(dt).getTime();
+            const minTime = Date.now() + (2 * 60 * 60 * 1000);
+            if (chosen < minTime) {
+                alert("⚠️ Délai trop court : Veuillez choisir un horaire au moins 2 heures dans le futur.");
+                return;
+            }
+
+            const btn = document.querySelector('[onclick="requestVisit()"]');
+            if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
+            try {
+                const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestVisit', codePortal: c, dealId: d, location: loc, dateTime: getZohoDateTime(dt) }) });
+                const result = await res.json();
+                if (result.s) {
+                    hapticFeedback('success');
+                    btn.innerText = "Demande envoyée ! ✅";
+                    btn.style.background = "#2ecc71";
+                    showPwaToast("✅ Demande envoyée ! Evan vous contactera.");
+                    document.getElementById('inpVisitLoc').value = '';
+                    document.getElementById('inpVisitDateTime').value = '';
+
+                    // Un seul rafraîchissement après 3s pour laisser Zoho indexer le nouveau record
+                    setTimeout(() => { handlePortalLogin(); }, 3000);
+                } else {
+                    showPwaToast("⚠️ Erreur : " + (result.details || result.error || "Erreur inconnue"));
+                    btn.innerText = "Réessayer"; btn.disabled = false;
+                }
+            } catch (e) { showPwaToast("⚠️ Erreur de connexion : " + e.message); btn.innerText = "Réessayer"; btn.disabled = false; }
+        }
+
+        async function requestCancelVisit(id, loc, btn) {
+            if (!confirm(`Voulez-vous vraiment annuler la visite pour : ${loc} ?`)) return;
+            if (btn) { btn.innerText = "Annulation..."; btn.disabled = true; }
+            const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id');
+            try {
+                const res = await fetch(`${API_URL}?action=cancelVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, visitId: id, location: loc }) });
+                const result = await res.json();
+                if (result.s) {
+                    hapticFeedback('success');
+                    btn.innerText = "Annulée ! 🚫";
+                    showPwaToast("✅ Visite annulée.");
+                    animateCardOut(`visit-${id}`, () => {
                         handlePortalLogin();
-                    }
-                }, 3000);
-            }
-            else { throw new Error((result.error || "Erreur API") + (result.details ? ": " + JSON.stringify(result.details).substring(0, 100) : "")); }
-        } catch (e) { btn.innerText = "Réessayer"; btn.disabled = false; showPwaToast("⚠️ Erreur avis : " + e.message); console.error("Sync Error:", e); }
-    }
-
-    function animateCardOut(id, callback) {
-        const card = document.getElementById(id);
-        if (card) {
-            card.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
-            card.style.opacity = "0";
-            card.style.transform = "scale(0.9) translateY(10px)";
-            card.style.maxHeight = "0";
-            card.style.margin = "0";
-            card.style.padding = "0";
-            card.style.overflow = "hidden";
-            setTimeout(callback, 800);
-        } else {
-            callback();
-        }
-    }
-
-    function getZohoDateTime(dtString) {
-        if (!dtString) return null;
-        const d = new Date(dtString);
-        return d.toISOString().split('.')[0] + '+00:00';
-    }
-
-    async function requestVisit() {
-        hapticFeedback('medium');
-        const loc = document.getElementById('inpVisitLoc').value.trim();
-        const dt = document.getElementById('inpVisitDateTime').value;
-        const d = localStorage.getItem('portal_deal_id');
-        const c = localStorage.getItem('portal_code');
-        if (!loc || !dt) { alert("Veuillez remplir l'adresse et la date."); return; }
-
-        // Validation : Minimum 2h dans le futur
-        const chosen = new Date(dt).getTime();
-        const minTime = Date.now() + (2 * 60 * 60 * 1000);
-        if (chosen < minTime) {
-            alert("⚠️ Délai trop court : Veuillez choisir un horaire au moins 2 heures dans le futur.");
-            return;
-        }
-
-        const btn = document.querySelector('[onclick="requestVisit()"]');
-        if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
-        try {
-            const res = await fetch(`${API_URL}?action=requestVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'requestVisit', codePortal: c, dealId: d, location: loc, dateTime: getZohoDateTime(dt) }) });
-            const result = await res.json();
-            if (result.s) {
-                hapticFeedback('success');
-                btn.innerText = "Demande envoyée ! ✅";
-                btn.style.background = "#2ecc71";
-                showPwaToast("✅ Demande envoyée ! Evan vous contactera.");
-                document.getElementById('inpVisitLoc').value = '';
-                document.getElementById('inpVisitDateTime').value = '';
-
-                // Un seul rafraîchissement après 3s pour laisser Zoho indexer le nouveau record
-                setTimeout(() => { handlePortalLogin(); }, 3000);
-            } else {
-                showPwaToast("⚠️ Erreur : " + (result.details || result.error || "Erreur inconnue"));
-                btn.innerText = "Réessayer"; btn.disabled = false;
-            }
-        } catch (e) { showPwaToast("⚠️ Erreur de connexion : " + e.message); btn.innerText = "Réessayer"; btn.disabled = false; }
-    }
-
-    async function requestCancelVisit(id, loc, btn) {
-        if (!confirm(`Voulez-vous vraiment annuler la visite pour : ${loc} ?`)) return;
-        if (btn) { btn.innerText = "Annulation..."; btn.disabled = true; }
-        const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id');
-        try {
-            const res = await fetch(`${API_URL}?action=cancelVisit`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ codePortal: c, dealId: d, visitId: id, location: loc }) });
-            const result = await res.json();
-            if (result.s) {
-                hapticFeedback('success');
-                btn.innerText = "Annulée ! 🚫";
-                showPwaToast("✅ Visite annulée.");
-                animateCardOut(`visit-${id}`, () => {
-                    handlePortalLogin();
-                });
-            } else {
-                showPwaToast("⚠️ Erreur : " + (result.error || "Inconnue"));
+                    });
+                } else {
+                    showPwaToast("⚠️ Erreur : " + (result.error || "Inconnue"));
+                    if (btn) { btn.innerText = "🚫 Annuler"; btn.disabled = false; }
+                }
+            } catch (e) {
+                showPwaToast("⚠️ Erreur de connexion : " + e.message);
                 if (btn) { btn.innerText = "🚫 Annuler"; btn.disabled = false; }
             }
-        } catch (e) {
-            showPwaToast("⚠️ Erreur de connexion : " + e.message);
-            if (btn) { btn.innerText = "🚫 Annuler"; btn.disabled = false; }
         }
-    }
 
-    function requestRescheduleVisit(id, loc) {
-        const overlay = document.createElement('div');
-        overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:200000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px);";
-        overlay.innerHTML = `
+        function requestRescheduleVisit(id, loc) {
+            const overlay = document.createElement('div');
+            overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:200000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px);";
+            overlay.innerHTML = `
             <div style="background:#1a0b16; border:1px solid rgba(255,255,255,0.1); padding:30px; border-radius:25px; width:100%; max-width:400px; text-align:center; box-shadow:0 20px 50px rgba(0,0,0,0.5);">
                 <div style="font-size:2rem; margin-bottom:15px;">⏳</div>
                 <h3 style="color:#fff; margin-bottom:10px; font-family:'Outfit';">Reporter la visite</h3>
@@ -1267,53 +1705,53 @@
                 <button id="btnCancelReschedule" style="width:100%; background:transparent; color:rgba(255,255,255,0.4); border:none; padding:10px; cursor:pointer; text-decoration:underline; font-size:0.8rem;">Annuler</button>
             </div>
         `;
-        document.body.appendChild(overlay);
+            document.body.appendChild(overlay);
 
-        document.getElementById('btnCancelReschedule').onclick = () => overlay.remove();
-        document.getElementById('btnConfirmReschedule').onclick = async () => {
-            const newDT = document.getElementById('newVisitTime').value;
-            if (!newDT) { alert("Veuillez sélectionner une date et une heure."); return; }
+            document.getElementById('btnCancelReschedule').onclick = () => overlay.remove();
+            document.getElementById('btnConfirmReschedule').onclick = async () => {
+                const newDT = document.getElementById('newVisitTime').value;
+                if (!newDT) { alert("Veuillez sélectionner une date et une heure."); return; }
 
-            // Validation : Minimum 2h dans le futur
-            const chosen = new Date(newDT).getTime();
-            const minTime = Date.now() + (2 * 60 * 60 * 1000);
-            if (chosen < minTime) {
-                alert("⚠️ Délai trop court : Veuillez choisir un horaire au moins 2 heures dans le futur.");
-                return;
-            }
-
-            const btn = document.getElementById('btnConfirmReschedule');
-            btn.innerText = "Mise à jour..."; btn.disabled = true;
-
-            const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id');
-            try {
-                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'rescheduleVisit', codePortal: c, dealId: d, visitId: id, location: loc, newDateTime: getZohoDateTime(newDT) }) });
-                const result = await res.json();
-                if (result.s) {
-                    alert("✅ Visite reportée ! Evan a été notifié.");
-                    handlePortalLogin();
-                } else {
-                    alert("⚠️ Erreur : " + (result.error || "Inconnue") + "\n" + (result.message || ""));
+                // Validation : Minimum 2h dans le futur
+                const chosen = new Date(newDT).getTime();
+                const minTime = Date.now() + (2 * 60 * 60 * 1000);
+                if (chosen < minTime) {
+                    alert("⚠️ Délai trop court : Veuillez choisir un horaire au moins 2 heures dans le futur.");
+                    return;
                 }
-            } catch (e) { alert("⚠️ Erreur de connexion : " + e.message); }
-            overlay.remove();
-        };
-    }
 
-    function renderChecklist(checklist) {
-        const wrap = document.getElementById('wrapChecklist'); if (!wrap) return;
-        wrap.innerHTML = checklist.map(c => `
+                const btn = document.getElementById('btnConfirmReschedule');
+                btn.innerText = "Mise à jour..."; btn.disabled = true;
+
+                const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id');
+                try {
+                    const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'rescheduleVisit', codePortal: c, dealId: d, visitId: id, location: loc, newDateTime: getZohoDateTime(newDT) }) });
+                    const result = await res.json();
+                    if (result.s) {
+                        alert("✅ Visite reportée ! Evan a été notifié.");
+                        handlePortalLogin();
+                    } else {
+                        alert("⚠️ Erreur : " + (result.error || "Inconnue") + "\n" + (result.message || ""));
+                    }
+                } catch (e) { alert("⚠️ Erreur de connexion : " + e.message); }
+                overlay.remove();
+            };
+        }
+
+        function renderChecklist(checklist) {
+            const wrap = document.getElementById('wrapChecklist'); if (!wrap) return;
+            wrap.innerHTML = checklist.map(c => `
             <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:15px; border:1px solid ${c.done ? 'rgba(46,204,113,0.2)' : 'rgba(255,255,255,0.1)'}; display:flex; align-items:center; gap:12px;">
                 <div style="width:20px; height:20px; border-radius:50%; background:${c.done ? '#2ecc71' : 'rgba(255,255,255,0.1)'}; color:#fff; font-size:0.6rem; display:flex; align-items:center; justify-content:center;">${c.done ? '✓' : '!'}</div>
                 <span style="font-size:0.85rem; font-weight:600; color:${c.done ? '#fff' : 'rgba(255,255,255,0.4)'}">${c.name || '--'}</span>
             </div>
         `).join('');
-    }
+        }
 
-    function renderTeam(team) { const w = document.getElementById('wrapTeam'); if (!w || !team) return; w.innerHTML = team.map(t => `<div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); text-align:center;"><div style="font-size:1.8rem; margin-bottom:8px;">${t.icon || '👤'}</div><div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${t.role || 'Expert'}</div><div style="font-weight:700; color:#fff;">${t.name || '--'}</div></div>`).join(''); }
-    function renderPartners(partners) {
-        const w = document.getElementById('wrapPartners'); if (!w || !partners) return;
-        w.innerHTML = partners.map(p => `
+        function renderTeam(team) { const w = document.getElementById('wrapTeam'); if (!w || !team) return; w.innerHTML = team.map(t => `<div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); text-align:center;"><div style="font-size:1.8rem; margin-bottom:8px;">${t.icon || '👤'}</div><div style="font-size:0.6rem; color:var(--dash-accent); font-weight:900; text-transform:uppercase;">${t.role || 'Expert'}</div><div style="font-weight:700; color:#fff;">${t.name || '--'}</div></div>`).join(''); }
+        function renderPartners(partners) {
+            const w = document.getElementById('wrapPartners'); if (!w || !partners) return;
+            w.innerHTML = partners.map(p => `
             <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:20px; border:1px solid var(--dash-border); position:relative; overflow:hidden; display:flex; flex-direction:column; gap:10px;">
                 ${p.isPromo ? `<div style="position:absolute; top:8px; right:-28px; background:var(--dash-grad); color:#fff; padding:2px 30px; transform:rotate(45deg); font-size:0.5rem; font-weight:900; box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:1;">PROMO</div>` : ''}
                 
@@ -1342,413 +1780,413 @@
                 </div>
             </div>
         `).join('');
-    }
-    async function submitReferral() {
-        const name = document.getElementById('refName').value.trim();
-        const phone = document.getElementById('refPhone').value.trim();
-        const notes = document.getElementById('refNotes').value.trim();
-        const d = localStorage.getItem('portal_deal_id');
-        const c = localStorage.getItem('portal_code');
+        }
+        async function submitReferral() {
+            const name = document.getElementById('refName').value.trim();
+            const phone = document.getElementById('refPhone').value.trim();
+            const notes = document.getElementById('refNotes').value.trim();
+            const d = localStorage.getItem('portal_deal_id');
+            const c = localStorage.getItem('portal_code');
 
-        if (!name || !phone) { alert("Veuillez remplir au moins le nom et le contact."); return; }
+            if (!name || !phone) { alert("Veuillez remplir au moins le nom et le contact."); return; }
 
-        const btn = document.querySelector('.btn-gold');
-        if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
+            const btn = document.querySelector('.btn-gold');
+            if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
 
-        try {
-            const res = await fetch(`${API_URL}?action=submitReferral`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ codePortal: c, dealId: d, refName: name, refPhone: phone, refNotes: notes })
-            });
-            const result = await res.json();
-            if (result.s) {
-                hapticFeedback('success');
-                showPwaToast("🏆 Référence envoyée ! Merci.");
-                if (btn) { btn.innerText = "Référence envoyée ! ✅"; btn.style.background = "#2ecc71"; }
-                document.getElementById('refName').value = '';
-                document.getElementById('refPhone').value = '';
-                document.getElementById('refNotes').value = '';
-                setTimeout(() => { if (btn) { btn.innerText = "🎁 Envoyer la référence"; btn.style.background = ""; btn.disabled = false; } }, 3000);
-            } else {
-                showPwaToast("⚠️ Erreur : " + result.error);
+            try {
+                const res = await fetch(`${API_URL}?action=submitReferral`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ codePortal: c, dealId: d, refName: name, refPhone: phone, refNotes: notes })
+                });
+                const result = await res.json();
+                if (result.s) {
+                    hapticFeedback('success');
+                    showPwaToast("🏆 Référence envoyée ! Merci.");
+                    if (btn) { btn.innerText = "Référence envoyée ! ✅"; btn.style.background = "#2ecc71"; }
+                    document.getElementById('refName').value = '';
+                    document.getElementById('refPhone').value = '';
+                    document.getElementById('refNotes').value = '';
+                    setTimeout(() => { if (btn) { btn.innerText = "🎁 Envoyer la référence"; btn.style.background = ""; btn.disabled = false; } }, 3000);
+                } else {
+                    showPwaToast("⚠️ Erreur : " + result.error);
+                    if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; }
+                }
+            } catch (e) { showPwaToast("⚠️ Erreur de connexion : " + e.message); if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; } }
+        }
+
+        async function requestMLSDoc() {
+            const m = document.getElementById('inpMLS').value.trim();
+            const d = localStorage.getItem('portal_deal_id');
+            const c = localStorage.getItem('portal_code');
+            const btn = document.querySelector('[onclick="requestMLSDoc()"]');
+            if (!m) return;
+            if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
+            try {
+                const res = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c })
+                });
+                const data = await res.json();
+                if (data.s) {
+                    hapticFeedback('success');
+                    showPwaToast("✅ Demande de documents envoyée !");
+                    if (btn) { btn.innerText = "Demande envoyée ! ✅"; btn.style.background = "#2ecc71"; }
+                    document.getElementById('inpMLS').value = '';
+                    setTimeout(() => { if (btn) { btn.innerText = "Demander la documentation ✨"; btn.style.background = ""; btn.disabled = false; } }, 3000);
+                } else {
+                    showPwaToast("⚠️ Erreur : " + (data.error || "Inconnue"));
+                    if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; }
+                }
+            } catch (e) {
+                showPwaToast("⚠️ Erreur de connexion");
                 if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; }
             }
-        } catch (e) { showPwaToast("⚠️ Erreur de connexion : " + e.message); if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; } }
-    }
+        }
+        function hapticFeedback(style = 'light') {
+            if (!window.navigator || !window.navigator.vibrate) return;
+            try {
+                if (style === 'light') window.navigator.vibrate(10);
+                else if (style === 'medium') window.navigator.vibrate(25);
+                else if (style === 'success') window.navigator.vibrate([15, 30, 15]);
+            } catch (e) { }
+        }
 
-    async function requestMLSDoc() {
-        const m = document.getElementById('inpMLS').value.trim();
-        const d = localStorage.getItem('portal_deal_id');
-        const c = localStorage.getItem('portal_code');
-        const btn = document.querySelector('[onclick="requestMLSDoc()"]');
-        if (!m) return;
-        if (btn) { btn.innerText = "Envoi..."; btn.disabled = true; }
-        try {
-            const res = await fetch(API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ action: 'requestMLS', mlsNumber: m, dealId: d, codePortal: c })
-            });
-            const data = await res.json();
-            if (data.s) {
-                hapticFeedback('success');
-                showPwaToast("✅ Demande de documents envoyée !");
-                if (btn) { btn.innerText = "Demande envoyée ! ✅"; btn.style.background = "#2ecc71"; }
-                document.getElementById('inpMLS').value = '';
-                setTimeout(() => { if (btn) { btn.innerText = "Demander la documentation ✨"; btn.style.background = ""; btn.disabled = false; } }, 3000);
-            } else {
-                showPwaToast("⚠️ Erreur : " + (data.error || "Inconnue"));
-                if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; }
+        function updateAppBadge(count) {
+            if ('setAppBadge' in navigator) {
+                if (count > 0) navigator.setAppBadge(count).catch(() => { });
+                else navigator.clearAppBadge().catch(() => { });
             }
-        } catch (e) {
-            showPwaToast("⚠️ Erreur de connexion");
-            if (btn) { btn.innerText = "Réessayer"; btn.disabled = false; }
         }
-    }
-    function hapticFeedback(style = 'light') {
-        if (!window.navigator || !window.navigator.vibrate) return;
-        try {
-            if (style === 'light') window.navigator.vibrate(10);
-            else if (style === 'medium') window.navigator.vibrate(25);
-            else if (style === 'success') window.navigator.vibrate([15, 30, 15]);
-        } catch(e) {}
-    }
 
-    function updateAppBadge(count) {
-        if ('setAppBadge' in navigator) {
-            if (count > 0) navigator.setAppBadge(count).catch(() => {});
-            else navigator.clearAppBadge().catch(() => {});
-        }
-    }
+        function checkUrlSection() {
+            const params = new URLSearchParams(window.location.search);
+            const section = params.get('section');
+            const visitId = params.get('visitId');
 
-    function checkUrlSection() {
-        const params = new URLSearchParams(window.location.search);
-        const section = params.get('section');
-        const visitId = params.get('visitId');
+            if (section || visitId) {
+                // On attend un court instant pour que le dashboard soit prêt
+                setTimeout(() => {
+                    const targetSection = section || 'secVisites';
+                    const el = document.getElementById(targetSection);
+                    if (el) {
+                        // Fermer toutes les autres sections
+                        document.querySelectorAll('.section-wrapper').forEach(s => s.classList.add('collapsed'));
+                        toggleSection(targetSection, true, false);
 
-        if (section || visitId) {
-            // On attend un court instant pour que le dashboard soit prêt
-            setTimeout(() => {
-                const targetSection = section || 'secVisites';
-                const el = document.getElementById(targetSection);
-                if (el) {
-                    // Fermer toutes les autres sections
-                    document.querySelectorAll('.section-wrapper').forEach(s => s.classList.add('collapsed'));
-                    toggleSection(targetSection, true, false);
-
-                    // Si on vise une visite spécifique
-                    if (visitId) {
-                        setTimeout(() => {
-                            const vEl = document.getElementById(`visit-${visitId}`);
-                            if (vEl) vEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }, 600);
+                        // Si on vise une visite spécifique
+                        if (visitId) {
+                            setTimeout(() => {
+                                const vEl = document.getElementById(`visit-${visitId}`);
+                                if (vEl) vEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }, 600);
+                        }
                     }
-                }
-            }, 500);
-        }
-    }
-
-    // Gestion du bouton "Retour" du navigateur
-    window.addEventListener('popstate', (event) => {
-        const params = new URLSearchParams(window.location.search);
-        const section = params.get('section');
-        
-        // Fermer toutes les sections
-        document.querySelectorAll('.section-wrapper').forEach(s => s.classList.add('collapsed'));
-        
-        if (section) {
-            const el = document.getElementById(section);
-            if (el) el.classList.remove('collapsed');
-        }
-        updateMenuItems();
-    });
-
-    async function nativeShare() {
-        hapticFeedback('medium');
-        const shareData = {
-            title: 'Evan Patruno | Courtier Immobilier',
-            text: 'Voici les coordonnées de Evan Patruno. N’hésitez pas à le recommander pour vos projets immobiliers !',
-            url: 'https://evanpatruno.ca'
-        };
-        try {
-            if (navigator.share) {
-                await navigator.share(shareData);
-            } else {
-                await navigator.clipboard.writeText(shareData.url);
-                showPwaToast("📋 Lien vers le site de Evan copié !");
-            }
-        } catch (err) {
-            console.log('Share error:', err);
-        }
-    }
-
-    function toggleSection(id, forceOpen = false, updateHistory = true) {
-        hapticFeedback('light');
-        const el = document.getElementById(id); if (!el) return;
-        
-        const wasCollapsed = el.classList.contains('collapsed');
-        if (forceOpen) el.classList.remove('collapsed');
-        else el.classList.toggle('collapsed');
-
-        const isNowOpen = !el.classList.contains('collapsed');
-
-        // Mise à jour de l'historique (Deep Linking)
-        if (updateHistory) {
-            if (isNowOpen) {
-                const newUrl = window.location.pathname + `?section=${id}`;
-                window.history.pushState({ section: id }, document.title, newUrl);
-            } else {
-                window.history.pushState({ section: null }, document.title, window.location.pathname);
+                }, 500);
             }
         }
 
-        updateMenuItems();
+        // Gestion du bouton "Retour" du navigateur
+        window.addEventListener('popstate', (event) => {
+            const params = new URLSearchParams(window.location.search);
+            const section = params.get('section');
 
-        if (isNowOpen) {
-            setTimeout(() => { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
-        }
-    }
+            // Fermer toutes les sections
+            document.querySelectorAll('.section-wrapper').forEach(s => s.classList.add('collapsed'));
 
-    function updateMenuItems() {
-        const sections = ['secCockpit', 'secPrequal', 'secTimeline', 'secConciergeMLS', 'secVisites', 'secTeam', 'secAmbassador', 'secLexique', 'secPartners'];
-        sections.forEach(id => {
-            const el = document.getElementById(id);
-            const item = document.querySelector(`.quick-menu-item[data-section="${id}"]`);
-            if (el && item) {
-                const isVisible = !el.classList.contains('collapsed');
-                if (isVisible) item.classList.add('active');
-                else item.classList.remove('active');
+            if (section) {
+                const el = document.getElementById(section);
+                if (el) el.classList.remove('collapsed');
             }
+            updateMenuItems();
         });
-        // Si aucune section n'est ouverte (sauf cockpit), on allume le cockpit
-        const anyOpen = sections.filter(s => s !== 'secCockpit').some(s => !document.getElementById(s).classList.contains('collapsed'));
-        const cockpitItem = document.querySelector('.quick-menu-item[data-section="secCockpit"]');
-        if (!anyOpen && cockpitItem) cockpitItem.classList.add('active');
-    }
 
-    // --- GESTION PWA AVANCÉE ---
-    let deferredPrompt;
-    const isIos = () => /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
-    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone) || window.matchMedia('(display-mode: standalone)').matches;
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        console.log("PWA: Prompt ready");
-    });
-
-    function showPwaToast(msg) {
-        const existing = document.getElementById('pwaToast');
-        if (existing) existing.remove();
-        const toast = document.createElement('div');
-        toast.id = 'pwaToast';
-        toast.style.cssText = "position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:rgba(20,8,18,0.96); color:#fff; border:1px solid rgba(135,50,118,0.6); box-shadow:0 0 30px rgba(135,50,118,0.3); padding:14px 24px; border-radius:50px; font-family:'Outfit',sans-serif; fontSize:0.85rem; fontWeight:600; zIndex:20000; textAlign:center; maxWidth:90vw;";
-        toast.textContent = msg;
-        document.body.appendChild(toast);
-        setTimeout(() => toast.remove(), 5000);
-    }
-
-    const setupInstallBtn = () => {
-        const btn = document.getElementById('btnInstallPWA');
-        if (!btn) return;
-
-        if (isInStandaloneMode()) {
-            btn.style.display = 'none';
-            return;
-        }
-
-        btn.addEventListener('click', async (e) => {
-            e.preventDefault();
-            const code = localStorage.getItem('portal_code') || "";
-
-            // Si on est déjà sur le domaine Vercel (PWA)
-            if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('dossier.evanpatruno.ca')) {
-                if (isIos()) {
-                    showPwaToast("🍎 Sur iPhone : Touchez <b>Partager</b> (en bas), puis <b>Sur l'écran d'accueil</b>.");
-                    return;
-                }
-                if (deferredPrompt) {
-                    deferredPrompt.prompt();
-                    const { outcome } = await deferredPrompt.userChoice;
-                    if (outcome === 'accepted') btn.style.display = 'none';
-                    deferredPrompt = null;
-                } else {
-                    showPwaToast("💡 Ouvrez le menu de votre navigateur et choisissez 'Installer l'application'.");
-                }
-            } else {
-                // Si on est sur Zoho, on redirige vers le domaine d'installation
-                const installUrl = `https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install&code=${code}`;
-                window.location.href = installUrl;
-            }
-        });
-    };
-
-    // Overlay d'installation automatique (si redirection depuis Zoho)
-    const checkAutoInstall = () => {
-        const params = new URLSearchParams(window.location.search);
-        if (params.get('action') === 'install' && !isInStandaloneMode()) {
-            const overlay = document.createElement('div');
-            overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(15,5,13,0.98);z-index:100000;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Outfit';text-align:center;padding:20px;";
-            
-            const icon = document.createElement('div');
-            icon.style.cssText = "font-size:4rem;margin-bottom:20px;";
-            icon.textContent = "📲";
-            
-            const title = document.createElement('h2');
-            title.style.cssText = "font-size:2rem;margin-bottom:10px;";
-            title.textContent = "Installer l'App";
-            
-            const desc = document.createElement('p');
-            desc.style.cssText = "opacity:0.7;margin-bottom:40px;";
-            desc.textContent = "Confirmez l'installation pour accéder à votre dossier en un clic depuis votre écran d'accueil.";
-            
-            const btnFinalInstall = document.createElement('button');
-            btnFinalInstall.style.cssText = "background:linear-gradient(135deg, #873276, #b0549c);border:none;color:#fff;padding:18px 40px;font-size:1.1rem;font-weight:900;border-radius:50px;box-shadow:0 10px 30px rgba(135,50,118,0.5);cursor:pointer;";
-            btnFinalInstall.textContent = "INSTALLER MAINTENANT";
-            
-            const btnCancelInstall = document.createElement('button');
-            btnCancelInstall.style.cssText = "background:transparent;border:none;color:#fff;opacity:0.4;margin-top:25px;text-decoration:underline;cursor:pointer;";
-            btnCancelInstall.textContent = "Plus tard";
-            
-            overlay.appendChild(icon);
-            overlay.appendChild(title);
-            overlay.appendChild(desc);
-            overlay.appendChild(btnFinalInstall);
-            overlay.appendChild(btnCancelInstall);
-            document.body.appendChild(overlay);
-
-            btnCancelInstall.onclick = () => overlay.remove();
-            btnFinalInstall.onclick = async () => {
-                if (deferredPrompt) {
-                    deferredPrompt.prompt();
-                    const { outcome } = await deferredPrompt.userChoice;
-                    if (outcome === 'accepted') overlay.remove();
-                    deferredPrompt = null;
-                } else if (isIos()) {
-                    overlay.remove();
-                    showPwaToast("🍎 Touchez Partager puis Sur l'écran d'accueil.");
-                } else {
-                    overlay.remove();
-                    showPwaToast("💡 Utilisez le menu du navigateur pour installer.");
-                }
+        async function nativeShare() {
+            hapticFeedback('medium');
+            const shareData = {
+                title: 'Evan Patruno | Courtier Immobilier',
+                text: 'Voici les coordonnées de Evan Patruno. N’hésitez pas à le recommander pour vos projets immobiliers !',
+                url: 'https://evanpatruno.ca'
             };
+            try {
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                } else {
+                    await navigator.clipboard.writeText(shareData.url);
+                    showPwaToast("📋 Lien vers le site de Evan copié !");
+                }
+            } catch (err) {
+                console.log('Share error:', err);
+            }
         }
-    };
 
-    // Initialisation
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
+        function toggleSection(id, forceOpen = false, updateHistory = true) {
+            hapticFeedback('light');
+            const el = document.getElementById(id); if (!el) return;
+
+            const wasCollapsed = el.classList.contains('collapsed');
+            if (forceOpen) el.classList.remove('collapsed');
+            else el.classList.toggle('collapsed');
+
+            const isNowOpen = !el.classList.contains('collapsed');
+
+            // Mise à jour de l'historique (Deep Linking)
+            if (updateHistory) {
+                if (isNowOpen) {
+                    const newUrl = window.location.pathname + `?section=${id}`;
+                    window.history.pushState({ section: id }, document.title, newUrl);
+                } else {
+                    window.history.pushState({ section: null }, document.title, window.location.pathname);
+                }
+            }
+
+            updateMenuItems();
+
+            if (isNowOpen) {
+                setTimeout(() => { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+            }
+        }
+
+        function updateMenuItems() {
+            const sections = ['secCockpit', 'secPrequal', 'secTimeline', 'secConciergeMLS', 'secVisites', 'secTeam', 'secAmbassador', 'secLexique', 'secPartners'];
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                const item = document.querySelector(`.quick-menu-item[data-section="${id}"]`);
+                if (el && item) {
+                    const isVisible = !el.classList.contains('collapsed');
+                    if (isVisible) item.classList.add('active');
+                    else item.classList.remove('active');
+                }
+            });
+            // Si aucune section n'est ouverte (sauf cockpit), on allume le cockpit
+            const anyOpen = sections.filter(s => s !== 'secCockpit').some(s => !document.getElementById(s).classList.contains('collapsed'));
+            const cockpitItem = document.querySelector('.quick-menu-item[data-section="secCockpit"]');
+            if (!anyOpen && cockpitItem) cockpitItem.classList.add('active');
+        }
+
+        // --- GESTION PWA AVANCÉE ---
+        let deferredPrompt;
+        const isIos = () => /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+        const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone) || window.matchMedia('(display-mode: standalone)').matches;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            console.log("PWA: Prompt ready");
+        });
+
+        function showPwaToast(msg) {
+            const existing = document.getElementById('pwaToast');
+            if (existing) existing.remove();
+            const toast = document.createElement('div');
+            toast.id = 'pwaToast';
+            toast.style.cssText = "position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:rgba(20,8,18,0.96); color:#fff; border:1px solid rgba(135,50,118,0.6); box-shadow:0 0 30px rgba(135,50,118,0.3); padding:14px 24px; border-radius:50px; font-family:'Outfit',sans-serif; fontSize:0.85rem; fontWeight:600; zIndex:20000; textAlign:center; maxWidth:90vw;";
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 5000);
+        }
+
+        const setupInstallBtn = () => {
+            const btn = document.getElementById('btnInstallPWA');
+            if (!btn) return;
+
+            if (isInStandaloneMode()) {
+                btn.style.display = 'none';
+                return;
+            }
+
+            btn.addEventListener('click', async (e) => {
+                e.preventDefault();
+                const code = localStorage.getItem('portal_code') || "";
+
+                // Si on est déjà sur le domaine Vercel (PWA)
+                if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('dossier.evanpatruno.ca')) {
+                    if (isIos()) {
+                        showPwaToast("🍎 Sur iPhone : Touchez <b>Partager</b> (en bas), puis <b>Sur l'écran d'accueil</b>.");
+                        return;
+                    }
+                    if (deferredPrompt) {
+                        deferredPrompt.prompt();
+                        const { outcome } = await deferredPrompt.userChoice;
+                        if (outcome === 'accepted') btn.style.display = 'none';
+                        deferredPrompt = null;
+                    } else {
+                        showPwaToast("💡 Ouvrez le menu de votre navigateur et choisissez 'Installer l'application'.");
+                    }
+                } else {
+                    // Si on est sur Zoho, on redirige vers le domaine d'installation
+                    const installUrl = `https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install&code=${code}`;
+                    window.location.href = installUrl;
+                }
+            });
+        };
+
+        // Overlay d'installation automatique (si redirection depuis Zoho)
+        const checkAutoInstall = () => {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('action') === 'install' && !isInStandaloneMode()) {
+                const overlay = document.createElement('div');
+                overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(15,5,13,0.98);z-index:100000;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Outfit';text-align:center;padding:20px;";
+
+                const icon = document.createElement('div');
+                icon.style.cssText = "font-size:4rem;margin-bottom:20px;";
+                icon.textContent = "📲";
+
+                const title = document.createElement('h2');
+                title.style.cssText = "font-size:2rem;margin-bottom:10px;";
+                title.textContent = "Installer l'App";
+
+                const desc = document.createElement('p');
+                desc.style.cssText = "opacity:0.7;margin-bottom:40px;";
+                desc.textContent = "Confirmez l'installation pour accéder à votre dossier en un clic depuis votre écran d'accueil.";
+
+                const btnFinalInstall = document.createElement('button');
+                btnFinalInstall.style.cssText = "background:linear-gradient(135deg, #873276, #b0549c);border:none;color:#fff;padding:18px 40px;font-size:1.1rem;font-weight:900;border-radius:50px;box-shadow:0 10px 30px rgba(135,50,118,0.5);cursor:pointer;";
+                btnFinalInstall.textContent = "INSTALLER MAINTENANT";
+
+                const btnCancelInstall = document.createElement('button');
+                btnCancelInstall.style.cssText = "background:transparent;border:none;color:#fff;opacity:0.4;margin-top:25px;text-decoration:underline;cursor:pointer;";
+                btnCancelInstall.textContent = "Plus tard";
+
+                overlay.appendChild(icon);
+                overlay.appendChild(title);
+                overlay.appendChild(desc);
+                overlay.appendChild(btnFinalInstall);
+                overlay.appendChild(btnCancelInstall);
+                document.body.appendChild(overlay);
+
+                btnCancelInstall.onclick = () => overlay.remove();
+                btnFinalInstall.onclick = async () => {
+                    if (deferredPrompt) {
+                        deferredPrompt.prompt();
+                        const { outcome } = await deferredPrompt.userChoice;
+                        if (outcome === 'accepted') overlay.remove();
+                        deferredPrompt = null;
+                    } else if (isIos()) {
+                        overlay.remove();
+                        showPwaToast("🍎 Touchez Partager puis Sur l'écran d'accueil.");
+                    } else {
+                        overlay.remove();
+                        showPwaToast("💡 Utilisez le menu du navigateur pour installer.");
+                    }
+                };
+            }
+        };
+
+        // Initialisation
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                initPortal();
+                setupInstallBtn();
+                checkAutoInstall();
+            });
+        } else {
             initPortal();
             setupInstallBtn();
             checkAutoInstall();
-        });
-    } else {
-        initPortal();
-        setupInstallBtn();
-        checkAutoInstall();
-    }
-    // ==========================================
-    // NOTIFICATIONS PUSH FIREBASE
-    // ==========================================
-    async function requestNotificationPermission() {
-        console.log("--- START PUSH NOTIFICATIONS ---");
-        
-        if (!("Notification" in window)) {
-            alert("❌ Notifications non supportées par ce navigateur."); return;
         }
-        
-        try {
-            console.log("1. Requesting Permission...");
-            const permission = await Notification.requestPermission();
-            console.log("Result: " + permission);
-            
-            if (permission !== 'granted') {
-                alert("⚠️ Permission refusée ou bloquée par le navigateur."); return;
+        // ==========================================
+        // NOTIFICATIONS PUSH FIREBASE
+        // ==========================================
+        async function requestNotificationPermission() {
+            console.log("--- START PUSH NOTIFICATIONS ---");
+
+            if (!("Notification" in window)) {
+                alert("❌ Notifications non supportées par ce navigateur."); return;
             }
 
-            console.log("2. Loading Firebase SDK...");
-            const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js");
-            const { getMessaging, getToken } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js");
+            try {
+                console.log("1. Requesting Permission...");
+                const permission = await Notification.requestPermission();
+                console.log("Result: " + permission);
 
-            const firebaseConfig = {
-                apiKey: "AIzaSyCPtTKjhtrNoRdED5xp-HuSS11PW8J1D1k",
-                authDomain: "evanpatruno-pwa.firebaseapp.com",
-                projectId: "evanpatruno-pwa",
-                storageBucket: "evanpatruno-pwa.firebasestorage.app",
-                messagingSenderId: "873208257496",
-                appId: "1:873208257496:web:7cf7ff8eb863bc7029b0ad"
-            };
-
-            const app = initializeApp(firebaseConfig);
-            const messaging = getMessaging(app);
-            const VAPID_KEY = "BP01i_pScDeVgK7O4auQNpcOj_HevD5Psx2fJzHiJd8FHbW6aR2MiHZfEXQXjlsEQDeEmLjoV-4AEu5CKOywFs0";
-
-            // Nettoyage des vieux SW Firebase (optionnel mais plus sûr)
-            console.log("3. Cleanup & Register SW...");
-            const regs = await navigator.serviceWorker.getRegistrations();
-            for (let r of regs) { 
-                if (r.active && r.active.scriptURL.includes('firebase-messaging-sw.js')) {
-                    await r.unregister(); 
+                if (permission !== 'granted') {
+                    alert("⚠️ Permission refusée ou bloquée par le navigateur."); return;
                 }
-            }
 
-            const reg = await navigator.serviceWorker.register('/firebase-messaging-sw.js');
-            
-            const activeReg = await Promise.race([
-                navigator.serviceWorker.ready,
-                new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout SW Ready")), 5000))
-            ]);
-            
-            console.log("4. Fetching Token...");
-            const token = await getToken(messaging, {
-                vapidKey: VAPID_KEY,
-                serviceWorkerRegistration: activeReg
-            });
+                console.log("2. Loading Firebase SDK...");
+                const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js");
+                const { getMessaging, getToken } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js");
 
-            if (token) {
-                console.log("5. Token retrieved: " + token.substring(0,8) + "...");
-                const code = localStorage.getItem('portal_code') || "";
-                const phone = localStorage.getItem('portal_phone') || "";
-                
-                console.log("6. Syncing with Zoho...");
-                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ action: 'update_push_token', token, codePortal: code, phone })
+                const firebaseConfig = {
+                    apiKey: "AIzaSyCPtTKjhtrNoRdED5xp-HuSS11PW8J1D1k",
+                    authDomain: "evanpatruno-pwa.firebaseapp.com",
+                    projectId: "evanpatruno-pwa",
+                    storageBucket: "evanpatruno-pwa.firebasestorage.app",
+                    messagingSenderId: "873208257496",
+                    appId: "1:873208257496:web:7cf7ff8eb863bc7029b0ad"
+                };
+
+                const app = initializeApp(firebaseConfig);
+                const messaging = getMessaging(app);
+                const VAPID_KEY = "BP01i_pScDeVgK7O4auQNpcOj_HevD5Psx2fJzHiJd8FHbW6aR2MiHZfEXQXjlsEQDeEmLjoV-4AEu5CKOywFs0";
+
+                // Nettoyage des vieux SW Firebase (optionnel mais plus sûr)
+                console.log("3. Cleanup & Register SW...");
+                const regs = await navigator.serviceWorker.getRegistrations();
+                for (let r of regs) {
+                    if (r.active && r.active.scriptURL.includes('firebase-messaging-sw.js')) {
+                        await r.unregister();
+                    }
+                }
+
+                const reg = await navigator.serviceWorker.register('/firebase-messaging-sw.js');
+
+                const activeReg = await Promise.race([
+                    navigator.serviceWorker.ready,
+                    new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout SW Ready")), 5000))
+                ]);
+
+                console.log("4. Fetching Token...");
+                const token = await getToken(messaging, {
+                    vapidKey: VAPID_KEY,
+                    serviceWorkerRegistration: activeReg
                 });
-                
-                const data = await res.json();
-                if (data.s) {
-                    if (typeof showPwaToast === 'function') showPwaToast("🔔 Notifications activées avec succès !");
-                    const pushB = document.getElementById('pushBanner');
-                    if (pushB) pushB.style.display = 'none';
-                } else {
-                    alert("Erreur lors de la synchronisation avec le dossier.");
-                }
-            }
-        } catch (err) {
-            console.error("Push Error: ", err);
-            alert("Erreur lors de l'activation des notifications: " + err.message);
-        }
-    }
-    window.requestNotificationPermission = requestNotificationPermission;
 
-    function filterLexique(cat, btn) {
-        hapticFeedback('light');
-        document.querySelectorAll('.lexique-filter').forEach(f => f.classList.remove('active'));
-        btn.classList.add('active');
-        
-        const items = document.querySelectorAll('.lexique-item');
-        items.forEach(item => {
-            if (item.getAttribute('data-cat') === cat) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
+                if (token) {
+                    console.log("5. Token retrieved: " + token.substring(0, 8) + "...");
+                    const code = localStorage.getItem('portal_code') || "";
+                    const phone = localStorage.getItem('portal_phone') || "";
+
+                    console.log("6. Syncing with Zoho...");
+                    const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ action: 'update_push_token', token, codePortal: code, phone })
+                    });
+
+                    const data = await res.json();
+                    if (data.s) {
+                        if (typeof showPwaToast === 'function') showPwaToast("🔔 Notifications activées avec succès !");
+                        const pushB = document.getElementById('pushBanner');
+                        if (pushB) pushB.style.display = 'none';
+                    } else {
+                        alert("Erreur lors de la synchronisation avec le dossier.");
+                    }
+                }
+            } catch (err) {
+                console.error("Push Error: ", err);
+                alert("Erreur lors de l'activation des notifications: " + err.message);
             }
-        });
-    }
-</script>
+        }
+        window.requestNotificationPermission = requestNotificationPermission;
+
+        function filterLexique(cat, btn) {
+            hapticFeedback('light');
+            document.querySelectorAll('.lexique-filter').forEach(f => f.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.lexique-item');
+            items.forEach(item => {
+                if (item.getAttribute('data-cat') === cat) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -1761,4 +2199,5 @@
         }
     </script>
 </body>
+
 </html>

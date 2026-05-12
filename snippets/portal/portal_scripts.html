@@ -11,7 +11,7 @@
             handlePortalLogin();
         } else {
             const splash = document.getElementById('loadingSplash');
-            if(splash) {
+            if (splash) {
                 splash.style.opacity = '0';
                 setTimeout(() => splash.remove(), 500);
             }
@@ -71,7 +71,7 @@
         } finally {
             if (btn) { btn.innerText = "Ouvrir mon dossier"; btn.disabled = false; }
             const splash = document.getElementById('loadingSplash');
-            if(splash) {
+            if (splash) {
                 splash.style.opacity = '0';
                 setTimeout(() => splash.remove(), 500);
             }
@@ -115,11 +115,11 @@
         updateAppBadge(upcomingVisits.length);
 
         const safe = (fn) => { try { fn(); } catch (e) { console.warn(e); } };
-        
+
         // Push notification banner
         if ("Notification" in window && Notification.permission === 'default') {
             const pushB = document.getElementById('pushBanner');
-            if(pushB) pushB.style.display = 'flex';
+            if (pushB) pushB.style.display = 'flex';
         }
         safe(() => renderMilestones(data.milestones || {}));
         safe(() => renderTimeline(data.timeline || []));
@@ -330,9 +330,9 @@
             };
             const res = await fetch(`${API_URL}?action=pushAvisV13`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
             const result = await res.json();
-            if (result.s) { 
-                btn.innerText = "Avis enregistré ! ✨"; 
-                btn.style.background = "#2ecc71"; 
+            if (result.s) {
+                btn.innerText = "Avis enregistré ! ✨";
+                btn.style.background = "#2ecc71";
                 hapticFeedback('success');
 
                 // Délai de 3 secondes pour laisser le temps de lire
@@ -346,7 +346,7 @@
                         card.style.margin = "0";
                         card.style.padding = "0";
                         card.style.overflow = "hidden";
-                        
+
                         setTimeout(() => {
                             handlePortalLogin(); // Rafraîchissement complet des données
                         }, 800);
@@ -601,13 +601,13 @@
             if (style === 'light') window.navigator.vibrate(10);
             else if (style === 'medium') window.navigator.vibrate(25);
             else if (style === 'success') window.navigator.vibrate([15, 30, 15]);
-        } catch(e) {}
+        } catch (e) { }
     }
 
     function updateAppBadge(count) {
         if ('setAppBadge' in navigator) {
-            if (count > 0) navigator.setAppBadge(count).catch(() => {});
-            else navigator.clearAppBadge().catch(() => {});
+            if (count > 0) navigator.setAppBadge(count).catch(() => { });
+            else navigator.clearAppBadge().catch(() => { });
         }
     }
 
@@ -642,10 +642,10 @@
     window.addEventListener('popstate', (event) => {
         const params = new URLSearchParams(window.location.search);
         const section = params.get('section');
-        
+
         // Fermer toutes les sections
         document.querySelectorAll('.section-wrapper').forEach(s => s.classList.add('collapsed'));
-        
+
         if (section) {
             const el = document.getElementById(section);
             if (el) el.classList.remove('collapsed');
@@ -675,7 +675,7 @@
     function toggleSection(id, forceOpen = false, updateHistory = true) {
         hapticFeedback('light');
         const el = document.getElementById(id); if (!el) return;
-        
+
         const wasCollapsed = el.classList.contains('collapsed');
         if (forceOpen) el.classList.remove('collapsed');
         else el.classList.toggle('collapsed');
@@ -779,27 +779,27 @@
         if (params.get('action') === 'install' && !isInStandaloneMode()) {
             const overlay = document.createElement('div');
             overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(15,5,13,0.98);z-index:100000;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Outfit';text-align:center;padding:20px;";
-            
+
             const icon = document.createElement('div');
             icon.style.cssText = "font-size:4rem;margin-bottom:20px;";
             icon.textContent = "📲";
-            
+
             const title = document.createElement('h2');
             title.style.cssText = "font-size:2rem;margin-bottom:10px;";
             title.textContent = "Installer l'App";
-            
+
             const desc = document.createElement('p');
             desc.style.cssText = "opacity:0.7;margin-bottom:40px;";
             desc.textContent = "Confirmez l'installation pour accéder à votre dossier en un clic depuis votre écran d'accueil.";
-            
+
             const btnFinalInstall = document.createElement('button');
             btnFinalInstall.style.cssText = "background:linear-gradient(135deg, #873276, #b0549c);border:none;color:#fff;padding:18px 40px;font-size:1.1rem;font-weight:900;border-radius:50px;box-shadow:0 10px 30px rgba(135,50,118,0.5);cursor:pointer;";
             btnFinalInstall.textContent = "INSTALLER MAINTENANT";
-            
+
             const btnCancelInstall = document.createElement('button');
             btnCancelInstall.style.cssText = "background:transparent;border:none;color:#fff;opacity:0.4;margin-top:25px;text-decoration:underline;cursor:pointer;";
             btnCancelInstall.textContent = "Plus tard";
-            
+
             overlay.appendChild(icon);
             overlay.appendChild(title);
             overlay.appendChild(desc);
@@ -842,16 +842,16 @@
     // ==========================================
     async function requestNotificationPermission() {
         console.log("--- START PUSH NOTIFICATIONS ---");
-        
+
         if (!("Notification" in window)) {
             alert("❌ Notifications non supportées par ce navigateur."); return;
         }
-        
+
         try {
             console.log("1. Requesting Permission...");
             const permission = await Notification.requestPermission();
             console.log("Result: " + permission);
-            
+
             if (permission !== 'granted') {
                 alert("⚠️ Permission refusée ou bloquée par le navigateur."); return;
             }
@@ -876,19 +876,19 @@
             // Nettoyage des vieux SW Firebase (optionnel mais plus sûr)
             console.log("3. Cleanup & Register SW...");
             const regs = await navigator.serviceWorker.getRegistrations();
-            for (let r of regs) { 
+            for (let r of regs) {
                 if (r.active && r.active.scriptURL.includes('firebase-messaging-sw.js')) {
-                    await r.unregister(); 
+                    await r.unregister();
                 }
             }
 
             const reg = await navigator.serviceWorker.register('/firebase-messaging-sw.js');
-            
+
             const activeReg = await Promise.race([
                 navigator.serviceWorker.ready,
                 new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout SW Ready")), 5000))
             ]);
-            
+
             console.log("4. Fetching Token...");
             const token = await getToken(messaging, {
                 vapidKey: VAPID_KEY,
@@ -896,17 +896,17 @@
             });
 
             if (token) {
-                console.log("5. Token retrieved: " + token.substring(0,8) + "...");
+                console.log("5. Token retrieved: " + token.substring(0, 8) + "...");
                 const code = localStorage.getItem('portal_code') || "";
                 const phone = localStorage.getItem('portal_phone') || "";
-                
+
                 console.log("6. Syncing with Zoho...");
                 const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ action: 'update_push_token', token, codePortal: code, phone })
                 });
-                
+
                 const data = await res.json();
                 if (data.s) {
                     if (typeof showPwaToast === 'function') showPwaToast("🔔 Notifications activées avec succès !");
@@ -927,7 +927,7 @@
         hapticFeedback('light');
         document.querySelectorAll('.lexique-filter').forEach(f => f.classList.remove('active'));
         btn.classList.add('active');
-        
+
         const items = document.querySelectorAll('.lexique-item');
         items.forEach(item => {
             if (item.getAttribute('data-cat') === cat) {
@@ -937,4 +937,4 @@
             }
         });
     }
-</script>
+</script>
