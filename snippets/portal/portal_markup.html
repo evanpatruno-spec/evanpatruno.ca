@@ -96,7 +96,7 @@
         <!-- DÉLAIS & CONDITIONS -->
         <div class="section-wrapper collapsed" id="secPrequal">
             <div class="section-header" onclick="toggleSection('secPrequal')">
-                <h3>📋 Conditions &amp; Délais</h3>
+                <h3>📋 Conditions &amp; Délais <span class="info-bubble" onclick="event.stopPropagation(); toggleSection('secLexique', true)">?</span></h3>
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
@@ -107,7 +107,7 @@
         <!-- TIMELINE -->
         <div class="section-wrapper collapsed" id="secTimeline">
             <div class="section-header" onclick="toggleSection('secTimeline')">
-                <h3>Timeline de Transaction</h3>
+                <h3>⏳ Timeline de Transaction <span class="info-bubble" onclick="event.stopPropagation(); toggleSection('secLexique', true)">?</span></h3>
                 <div class="section-chevron">▼</div>
             </div>
             <div class="section-content">
@@ -204,6 +204,88 @@
             </div>
         </div>
 
+        <!-- LEXIQUE & CONSEILS -->
+        <div class="section-wrapper collapsed" id="secLexique" style="border-color: #bb66ff40;">
+            <div class="section-header" onclick="toggleSection('secLexique')">
+                <h3 style="color: #bb66ff !important;">📖 Lexique &amp; Conseils</h3>
+                <div class="section-chevron">▼</div>
+            </div>
+            <div class="section-content">
+                <div class="lexique-tabs">
+                    <div class="lexique-filter active" onclick="filterLexique('budget', this)">💰 Budget</div>
+                    <div class="lexique-filter" onclick="filterLexique('tech', this)">🏠 Technique</div>
+                    <div class="lexique-filter" onclick="filterLexique('legal', this)">⚖️ Juridique</div>
+                    <div class="lexique-filter" onclick="filterLexique('prepa', this)">📅 Préparation</div>
+                </div>
+
+                <div id="lexiqueList">
+                    <!-- BUDGET -->
+                    <div class="lexique-item" data-cat="budget">
+                        <div class="lexique-term">Taxe de Bienvenue (Mutation)</div>
+                        <div class="lexique-def">Payable à la ville environ 1 à 3 mois après l'achat. Calculez entre 1% et 1.5% du prix pour éviter les surprises.</div>
+                    </div>
+                    <div class="lexique-item" data-cat="budget">
+                        <div class="lexique-term">Assurance SCHL</div>
+                        <div class="lexique-def">Obligatoire si votre mise de fonds est inférieure à 20%. Elle protège le prêteur, mais vous permet d'acheter avec seulement 5%.</div>
+                    </div>
+                    <div class="lexique-item" data-cat="budget">
+                        <div class="lexique-term">Honoraires du Notaire</div>
+                        <div class="lexique-def">Prévoyez entre 1 200 $ et 1 800 $ incluant les frais d'enregistrement de l'hypothèque et de l'acte de vente.</div>
+                    </div>
+                    <div class="lexique-item" data-cat="budget">
+                        <div class="lexique-term">Ajustements au Notaire</div>
+                        <div class="lexique-def">Remboursement au vendeur des taxes (scolaires/municipales) qu'il a déjà payées d'avance pour l'année.</div>
+                    </div>
+
+                    <!-- TECHNIQUE -->
+                    <div class="lexique-item" data-cat="tech" style="display:none;">
+                        <div class="lexique-term">Certificat de Localisation</div>
+                        <div class="lexique-def">Le plan officiel de l'arpenteur. Il confirme que la maison et les structures sont bien sur votre terrain et respectent les marges.</div>
+                    </div>
+                    <div class="lexique-item" data-cat="tech" style="display:none;">
+                        <div class="lexique-term">Inspection en bâtiment</div>
+                        <div class="lexique-def">Étape cruciale pour identifier les enjeux invisibles (structure, électricité, plomberie) avant de finaliser l'achat.</div>
+                    </div>
+                    <div class="lexique-item" data-cat="tech" style="display:none;">
+                        <div class="lexique-term">Ocre Ferreuse</div>
+                        <div class="lexique-def">Une bactérie dans le sol qui peut boucher le drain français. Un test est parfois nécessaire selon le secteur.</div>
+                    </div>
+                    <div class="lexique-item" data-cat="tech" style="display:none;">
+                        <div class="lexique-term">Pyrrhotite / Pyrite</div>
+                        <div class="lexique-def">Minéraux dans le béton ou le remblai qui peuvent causer des fissures. On demande souvent un test pour les maisons d'un certain âge.</div>
+                    </div>
+
+                    <!-- JURIDIQUE -->
+                    <div class="lexique-item" data-cat="legal" style="display:none;">
+                        <div class="lexique-term">Déclaration du Vendeur</div>
+                        <div class="lexique-def">Le "pedigree" de la maison. Le vendeur y liste tout l'historique connu du bâtiment. C'est votre protection légale.</div>
+                    </div>
+                    <div class="lexique-item" data-cat="legal" style="display:none;">
+                        <div class="lexique-term">Servitude</div>
+                        <div class="lexique-def">Un droit accordé à un tiers (ex: Hydro-Québec, Bell ou un voisin) sur une partie de votre terrain.</div>
+                    </div>
+                    <div class="lexique-item" data-cat="legal" style="display:none;">
+                        <div class="lexique-term">Offre d'Achat (P.A.)</div>
+                        <div class="lexique-def">Le contrat légal de base. Une fois les conditions levées, vous êtes officiellement engagé à acheter.</div>
+                    </div>
+
+                    <!-- PREPARATION -->
+                    <div class="lexique-item" data-cat="prepa" style="display:none;">
+                        <div class="lexique-term">Assurance Habitation</div>
+                        <div class="lexique-def">Elle doit être active le jour même de la signature chez le notaire. Le prêteur exigera une preuve.</div>
+                    </div>
+                    <div class="lexique-item" data-cat="prepa" style="display:none;">
+                        <div class="lexique-term">Changement d'adresse</div>
+                        <div class="lexique-def">Utilisez le Service Québécois de Changement d'Adresse (SQCA) pour avertir 7 ministères en un seul clic !</div>
+                    </div>
+                    <div class="lexique-item" data-cat="prepa" style="display:none;">
+                        <div class="lexique-term">Hydro-Québec</div>
+                        <div class="lexique-def">N'oubliez pas de signaler votre déménagement sur leur site au moins 10 jours avant pour éviter de payer pour l'ancien proprio.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- PARTENAIRES -->
         <div class="section-wrapper collapsed" id="secPartners">
             <div class="section-header" onclick="toggleSection('secPartners')">
@@ -226,6 +308,7 @@
         <div class="quick-menu-item" data-section="secVisites" onclick="toggleSection('secVisites')">📅</div>
         <div class="quick-menu-item" data-section="secTeam" onclick="toggleSection('secTeam')">👥</div>
         <div class="quick-menu-item" data-section="secAmbassador" onclick="toggleSection('secAmbassador')">🌟</div>
+        <div class="quick-menu-item" data-section="secLexique" onclick="toggleSection('secLexique')">📖</div>
         <div class="quick-menu-item" data-section="secPartners" onclick="toggleSection('secPartners')">🤝</div>
     </div>
 </div>

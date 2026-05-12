@@ -700,7 +700,7 @@
     }
 
     function updateMenuItems() {
-        const sections = ['secCockpit', 'secPrequal', 'secTimeline', 'secConciergeMLS', 'secVisites', 'secTeam', 'secAmbassador', 'secPartners'];
+        const sections = ['secCockpit', 'secPrequal', 'secTimeline', 'secConciergeMLS', 'secVisites', 'secTeam', 'secAmbassador', 'secLexique', 'secPartners'];
         sections.forEach(id => {
             const el = document.getElementById(id);
             const item = document.querySelector(`.quick-menu-item[data-section="${id}"]`);
@@ -923,4 +923,18 @@
     }
     window.requestNotificationPermission = requestNotificationPermission;
 
-</script>
+    function filterLexique(cat, btn) {
+        hapticFeedback('light');
+        document.querySelectorAll('.lexique-filter').forEach(f => f.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const items = document.querySelectorAll('.lexique-item');
+        items.forEach(item => {
+            if (item.getAttribute('data-cat') === cat) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
