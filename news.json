@@ -1,42 +1,26 @@
 {
   "news": [
     {
-      "title": "Canada | Les économistes s’attendent à ce que l’inflation atteigne les 3 % en avril",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-05-17/canada/les-economistes-s-attendent-a-ce-que-l-inflation-atteigne-les-3-en-avril.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Le loyer médian à Manhattan franchit le seuil des 5000 $",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-18/le-loyer-median-a-manhattan-franchit-le-seuil-des-5000.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Les économistes s’attendent à ce que l’inflation ait dépassé les 3 % en avril pour la première fois depuis 2023 alors que les consommateurs sont confrontés au choc pétrolier lié à la guerre en Iran.",
+      "description": "Le loyer mensuel médian à Manhattan, l’un des cinq grands quartiers de New York, a franchi pour la première fois le seuil des 5000 dollars en avril, tandis que le taux de vacance a atteint son plus bas niveau en six ans, d’après le groupe immobilier Corcoran.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L’investisseur avisé | Des acheteurs chez Stella-Jones",
-      "link": "https://www.lapresse.ca/affaires/2026-05-17/l-investisseur-avise/des-acheteurs-chez-stella-jones.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Chaque dimanche, nous braquons les projecteurs sur des éléments de l’actualité financière et boursière qui peuvent être utiles à l’investisseur, mais qui pourraient être passés sous le radar.",
+      "title": "Les économistes s’attendent à ce que l’inflation ait atteint les 3 % en avril",
+      "link": "https://www.ledevoir.com/economie/980828/economistes-attendent-ce-inflation-ait-atteint-3-avril",
+      "source": "Le Devoir",
+      "description": "Statistique Canada devrait publier mardi des données actualisées sur les prix",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Quand le fisc entre dans votre maison sans cogner",
-      "link": "https://www.lapresse.ca/affaires/chroniques/2026-05-17/quand-le-fisc-entre-dans-votre-maison-sans-cogner.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "C’est une histoire qui met en scène un couple comme tant d’autres. Une belle maison, des enfants, des projets. Et puis un jour, assise dans le bureau de son comptable, Marie-Christine Harvey a découvert par hasard qu’Ottawa et Québec avaient inscrit une poignée d’hypothèques légales sur sa propriété. À son insu.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Investissement factoriel | Des clés pour battre le marché ?",
-      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-05-17/investissement-factoriel/des-cles-pour-battre-le-marche.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’investissement factoriel débarque en force au Canada, avec la mise en marché de Fonds négociés en Bourse nouveaux genres. Ces FNB intègrent une multitude d’entreprises qui présentent certains « facteurs » pouvant générer des rendements supérieurs. Le vénérable Warren Buffett est un précurseur de cette approche, qui fait aujourd’hui tache d’huile. Mais attention, comme toujours, on n’a rien sans rien. Un dossier de Nicolas Bérubé",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Contrecœur subit les contrecoups du conflit en Iran",
-      "link": "https://www.lapresse.ca/affaires/chroniques/2026-05-16/contrecoeur-subit-les-contrecoups-du-conflit-en-iran.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Le gouvernement fédéral fonde beaucoup d’espoir sur le projet de port à Contrecœur, considéré comme un projet d’intérêt national. Or, le conflit en Iran a pour effet de retarder la conclusion du montage financier des partenaires privés du projet, m’a expliqué le PDG de La Caisse, Charles Emond, lors d’une entrevue.",
+      "title": "Honda subit sa première perte d’exploitation depuis 1957, plombé par l’électrique",
+      "link": "https://www.ledevoir.com/economie/980282/honda-subit-premiere-perte-exploitation-depuis-1957-plombe-electrique",
+      "source": "Le Devoir",
+      "description": "Son projet de complexe consacré aux véhicules électriques en Ontario est suspendu pour une durée indéterminée.",
       "cities": [],
       "category": "general"
     },
@@ -49,14 +33,6 @@
         "montreal"
       ],
       "category": "local"
-    },
-    {
-      "title": "Marché immobilier résidentiel: les acheteurs plus prudents - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR3FxSjJQc19GQVlvWGZsS1ZIRExIeU9LM1g4Nm8yUTFONnpjaWp0RmFJaG0zSjBJVWU0dEw3YTd0amQ5dXpRcUJHM01UeldMRHdXRUgyMUNkLVhRc3RTZ3dLU0txaU9GaEhyQU9tU09GMnpxNkJoMEttRWVGNElmVXRRdzFWMlRMc1lfWktQUU9LN2RDaWNMRm5pOFBPOUkxWVhoVDJseUd6RnZHQ0Jn?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier résidentiel: les acheteurs plus prudents  Les Affaires",
-      "cities": [],
-      "category": "general"
     },
     {
       "title": "Marché immobilier de la région de Québec — Avril 2026 - metroquebec.com",
@@ -75,10 +51,10 @@
       "category": "general"
     },
     {
-      "title": "VIDÉO | Voyez les premières images de la deuxième saison de «Notre première maison Québec» de CASA - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOLWJJbDJveG5vSnlaVHpOdTNCeXFSamFRa0pxVVdycmluVWsyVXlmcm1aNTg4QXU1Y3g4Z1Rod0lyanlacmxnSENoVENFd2xQQThiTU9XbjVzYlFxdGQ2TXJPTkF2WUlPX2pHSDBOMjFCSTZ0VFJiOG1EdWcxazVTWkY4RVhlM1ViS0o3RHo1X1k5bDRsQVBJal9hcnBVWTVlYXEzbEREd3prY3VaVzJWR0h6cEJ6T2lkWm5tWXRmbGx3TWxqRnByR1ItWQ?oc=5",
+      "title": "Pas de reprise immobilière ce printemps, mais les acheteurs reviennent - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV2VMWFRvbW9EVjVwVEJvQnNFWlpDb3ZuU0ZKUWtsTWFaVlktWllKVWFkbDF4NFJUek5jTTVOS0dRWnFadjZ5VGRFcXEyTUtWUk1NN1lhYkFSeE8teTctcERkaGRTdW0zQTA4MlUtRVRRYVpKc1hyc0ZnMnQzczl6d2hBRnZONnI1amRtMFozNGp1bXh5TkdLNVlqMk45b1Y1Z0NNUjJOOFBxQU1wcmpVZ3l4WkE?oc=5",
       "source": "news.google.com",
-      "description": "VIDÉO | Voyez les premières images de la deuxième saison de «Notre première maison Québec» de CASA  TVA Nouvelles",
+      "description": "Pas de reprise immobilière ce printemps, mais les acheteurs reviennent  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -99,20 +75,29 @@
       "category": "general"
     },
     {
-      "title": "Transaction de la semaine: une maison de Sillery s’envole à plus de 3M$ - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSmhIeDk5LTgzVEJmc0UtTUV6aEZGckRXWGw1eHI2MGwtRlNnSFl6LTZGMmlZejlIdzZha2ZZa0ZtbWVCbEkzYUpteUVFVDBNUnFpZHdOMXU5SEdGVFFZQWJtNERmRjlXV1pjeXRfdENXTEwyckZKZENMYnR1ZVlkb1RMUEUteWhIRHVrdUlDVFU1V0NNeHJEd1RiY1RJVjQ4SGZDYko4Zy0ycEhGTmhRcHJDdi1RWGsydDBfTkFpWXY1TXNHajZMN20tTks?oc=5",
+      "title": "#792 - Yvan Cournoyer | Président Chez Club D'investisseurs Immobiliers Du Québec (CIIQ). (mbR0e1zJrA) - fathomjournal.org",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBDOXlQTXNPN0U4OUVqZWNrSGhONlRqU092cGZqTFhfM29aU1VXbUZmc1pvSllNaDhuNGZEQW1UMDRVZ2c1dzRzTGtIOEtkMnNVcHJiMUEtanROUHVtd2d4V0otZTdWME1MYzlYeGMzSVU?oc=5",
+      "source": "CIIQ",
+      "description": "#792 - Yvan Cournoyer | Président Chez Club D'investisseurs Immobiliers Du Québec (CIIQ). (mbR0e1zJrA)  fathomjournal.org",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier de la Rive-Nord de Montréal — Avril 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbEtIWklPc25OYUcyc2J0Z0lncjBUaEozemtqaGR2Mmx6Zm1fWHd6cWh4N3dVMWxoNmIxV2g4RG5UVDRTZ0t5ZFRDTDNpTmRqb1U3bHR4Sjgta2ZEZVR2OFhSVjhVNEhBT3ZoRFB3Yjh0RGYxUVNtYk1UNzFFLW9GYm5nWTh1aF9SaUlGZXFpcVYyZHlDS1FtSXgtdnVJUmFiYldmMlR4YTllRGFXZUxwZnV6VnlBeUFjRzBXX202V3FUUTMxZlE?oc=5",
       "source": "news.google.com",
-      "description": "Transaction de la semaine: une maison de Sillery s’envole à plus de 3M$  Le Journal de Montréal",
+      "description": "Marché immobilier de la Rive-Nord de Montréal — Avril 2026  Journal Métro",
       "cities": [
-        "montreal"
+        "montreal",
+        "rive-nord"
       ],
       "category": "local"
     },
     {
-      "title": "#792 - Yvan Cournoyer | Président Chez Club D'investisseurs Immobiliers Du Québec (CIIQ). (mbR0e1zJrA) - Fathom Journal",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBDOXlQTXNPN0U4OUVqZWNrSGhONlRqU092cGZqTFhfM29aU1VXbUZmc1pvSllNaDhuNGZEQW1UMDRVZ2c1dzRzTGtIOEtkMnNVcHJiMUEtanROUHVtd2d4V0otZTdWME1MYzlYeGMzSVU?oc=5",
-      "source": "CIIQ",
-      "description": "#792 - Yvan Cournoyer | Président Chez Club D'investisseurs Immobiliers Du Québec (CIIQ). (mbR0e1zJrA)  Fathom Journal",
+      "title": "Les ventes résidentielles ont reculé de 4 % en avril au pays - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNcE85T09uMEYzNUE4OTVIYkdobjNpTW1CYVZ1YjVlSG54TlNxTHJZY2lFZnBRR3ZyakUzMG1HRW5IT2o3bnR4WU1rU0JaQ2gwbHpqZEprTWdsd0I2S0RXa2VxNTY3WU9HcHBMVF81eEg4SFRSeGJVRk00RWdwQ0lFZnhLTGxfZVBpNGR2aFh5WGVQWGROUURxNmJTWDJjNUJpNElISW9ub3pCVHhCbEFzUkd6SFlyQ1psQ3VuMXQ4ZDhSTnJQQ2ZIUW15TnM?oc=5",
+      "source": "news.google.com",
+      "description": "Les ventes résidentielles ont reculé de 4 % en avril au pays  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -127,26 +112,10 @@
       "category": "local"
     },
     {
-      "title": "Les ventes résidentielles ont reculé de 4 % en avril au Canada, selon l’ACI - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbmtxUFdDM3hFQ2dSSUJrbnI2YmJhT3dJZ2xjR0xTdExURUJvckdnLUctdS1KRzBFeFZLcVZEQjVuS2RqeUQxcGhwbVAxMXRVY21iSE9UTmRHeFpLYjVYSUxXbEs0V2tXbVRTTF9FS1Y0VTZ4eUpMMVhIZHcxUW93eFgwd2cwQzBOeFBJdHVJQUJMZHhh?oc=5",
+      "title": "VIDÉO | Voyez les premières images de la deuxième saison de «Notre première maison Québec» de CASA - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNHo0SWNTaFdBajJ3MkZEbS1RNzdwZVJTWTJhb01Lb1RqUldrUnFPTkdrQ3QtajY5NmxxVU5tSkotNjZJZTkxU0lsNHRGZzN0SjFfZlhBTW5NYmZ3ZnlfNWxnYTdBUWZBODhHWUtna3JoTUtCd0RoU0kxNHNTeVdrVW9BblFGUEFHcWhVa2U0R1QtWExFSTlBb0UtdXZpeElfdFo0REt0eGNwbFhNOUQ5ejNLYUpzRmJJQTJxUzlXZkM2Ukli?oc=5",
       "source": "news.google.com",
-      "description": "Les ventes résidentielles ont reculé de 4 % en avril au Canada, selon l’ACI  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un projet de 360 logements au-dessus de La Barberie - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONDVha25FSENzY2JSaUFlaUR6c3Nydk8tdENZTEZZbkNDUGkyT19QTUo3XzY0empwajZFQnVHNzNaTnJjVFVqLUo2V0tkRnZObGR6QzlENHMxSVpyazl1NXJFMFV6SVU2QjVtUTdGSjRkQXg1alhyMDI3dG1ScG1WUWViQkQwN1k0QkdNcHA2WkUyRE5LTnkwMTVvM1ZsVDdHdk8yckpQV2JLci1RZW1NLUp6dE55WnZDOXVDejZ1dUdQcG5hSXB4OEx5YmNvM0RmUzFLaw?oc=5",
-      "source": "news.google.com",
-      "description": "Un projet de 360 logements au-dessus de La Barberie  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Développement résidentiel - Ville de Bécancour",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1fbFE1V05FaEtRdXVRdVdYblpIT2hXUEF6RTVZUmNLSDhfMm43Zk1IUDNjYlRsU0FyVzI5bW1XTDU4SktRaFU3V1lTdTFlNFd2S0pqMDVZN2tJMC16WFBFLVpNTllRVFo1?oc=5",
-      "source": "news.google.com",
-      "description": "Développement résidentiel  Ville de Bécancour",
+      "description": "VIDÉO | Voyez les premières images de la deuxième saison de «Notre première maison Québec» de CASA  QUB radio",
       "cities": [],
       "category": "general"
     },
@@ -155,6 +124,14 @@
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNT1ptdnkyWUdSa0MwakZkbWRVeGxzUTJOX3JUVGZRdldsMWo3bloyeUFjTW1CeEREMXFWVWZhd3FsVGNCOFR5cllDLVctWHhlNWpuOXV5YUJHcEgzNElvbnRRZ21TSkdZQnlQR2JROFZNT0RpQTc2RGk3WDJiQjZ1X0NUbHFHQmYxYjM5eE1pQURQVHdFUFhqYkhDMTBJSkZNNFFlWG5HeHBON2lMVVVsMnhnXzVFZmkwb3Z4cTlKNA?oc=5",
       "source": "news.google.com",
       "description": "Les ventes résidentielles ont reculé de 4% en avril au Canada, selon l’ACI  Noovo Info",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Un projet de 360 logements au-dessus de La Barberie - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbFBpNjNjTVVFbE9xbmxpNy14ekFiRzlNN3YwcDRaeXVxMnc2LVg5S2o0bjM0V1M2ZGUtU3A5ZElPYkV2dHM1MWZYNGRqSzQwb2NOWVBzVUhNYlVGUTVmaXBJLWxBVEdCVHN3UjVZQUFqdG91ODhUdFJLcjVwNWItQ09jTUJVaDlUMXRkQXVTcDBsZzRQSHlzVQ?oc=5",
+      "source": "news.google.com",
+      "description": "Un projet de 360 logements au-dessus de La Barberie  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -173,14 +150,6 @@
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNTk5TXzRjNHE5Y3VxcHFqblkzY04zUUJyUExqWnU3TDlFZThpOXNEX1UxdHZhZ1lvdHkzcjBfMU05dUNxY1VuT0ktVjNWaUxIX3R0cHZTVkt5VTNYUjNNbDZFN2dpbVhvUHNIbGxzWjRqUUptbjREZGl6UHhMeG9uTk1R?oc=5",
       "source": "news.google.com",
       "description": "Le piège du plus bas taux hypothécaire  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "BdC, logement, inflation : les données de la semaine - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTmNSVERZd0dRRWkwNWpPOUZmXzE1WWZqMm9BRnhCajI5V1VON3NwandiQzZSM2FPMHgyalNQeHRJcUN4RTJxdTNzTjRwWjRuRVlKTnRqbHZmMGlUUDFNazdwMms4X3daYldRMHJwZERVcE1RUXhKY3ZaZG5ucnlyeldzLVhMWWpNWDVZcXNkNXNNaVlScGlPMUNkUHNPUzhXX0JXUnc3WGQtRDd4OEdmQmYwMTJZbkxuWnh0RjR2eWNWUmhCN2pseWZkMGUtdw?oc=5",
-      "source": "news.google.com",
-      "description": "BdC, logement, inflation : les données de la semaine  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -217,18 +186,18 @@
       "category": "general"
     },
     {
-      "title": "Le taux directeur maintenu, sur fond d’incertitude - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9XM0RHRnJROHRVQWU0MHpobGJESTVWQk5zenZ3RFhfZ2VEOVhtSlVQbHZQMFZsOUhCODFwblF3cjdmVEQ1Wmt6UlkxWUs0dTRKbTZqQU5XSnNKM1c5U3k3d0U2eUNxeFZpakZUNlV1WW9JOXg5RTNYQk01VGNudw?oc=5",
-      "source": "news.google.com",
-      "description": "Le taux directeur maintenu, sur fond d’incertitude  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Intelligence artificielle | La Banque du Canada prévoit des pertes d’emplois limitées - La Presse",
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQM0RjdGZjZFFLMkpNOWhxVHNKdWpiRGJ3Z2JObF9tVjRINnIzZjJlM0hGMy14NmRXQ2R3Wk9xc1EyQm5qQkJjZlZxYjI1ZEFFREJMUTJoRHJJejJKaFpaZ3dqb2UzQzk4MnVHdWxrV3M5bm4ySDNHTUhJUGFqOTQtR2diMEJRLVBWY1IzQ2syTzhGMlVUUWlRMUdqbDg1RjR4ZXVndy11Y05YbHRoR2RMMmUzSElCeDZlZjhoaVlyb0twX1ZkNzVmbVVCQU53R2paajlIOA?oc=5",
       "source": "news.google.com",
       "description": "Intelligence artificielle | La Banque du Canada prévoit des pertes d’emplois limitées  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Face aux tarifs, la Banque du Canada choisit la prudence - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPd05uTkp2RF96cmYxVnNiSDBWdlc3RjlPZElqYWloUWE5b1NJME9KNVBVT3NSbEFtOWZKZDNQVmtBNmF5RWhhbmt5S0hBczJHbFhtbE4xSFNqb29EbGg1LUhacEozSm9Bb011NnAtakwyYWtyNjhvalkySTNkdWw1SmNQWDdBcUtFNmtCUEoxdVNZOGNzVnd6RUhhalg0UQ?oc=5",
+      "source": "news.google.com",
+      "description": "Face aux tarifs, la Banque du Canada choisit la prudence  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -281,10 +250,10 @@
       "category": "general"
     },
     {
-      "title": "La productivité à l’ère de l’IA - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBXdkFRS0dvUnJUNnAydmE3aGlIMi1Kd3FiRWthZHVvOFJleDhlUUlOcEQ5Y3ZpMGlVSkUycV82SUtfUUFrLXUxakw1eTRKTG4zZmp3SlVWWnR5dUFBRk1WcUNVWlZEaEtjZkJtVWxCdlNiWlEwS2Rn?oc=5",
+      "title": "Les responsables de la Banque du Canada évaluent la trajectoire des taux - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZ0o5b2ZYSWJ1cjNpNVZwd3ZvVnE1Y3VENVpWUFd4RjdsbTFqOHpBU195ZE9TcjBfM0xFVlM3MDFqajk4UHNTNmJDdllTYUFma0k4VHNuTkNpcVJudk5HVHRScXRITXd3VVR6eS1vUWR0OGhXUk8wNmhndkdHWElXWW1BVV9WeXlfclFSNXlrczZpSUlMRDZPMTdoYkJOSHl3dm8zZ1VuTXdmUFFodF81MGlPMnZVVjdkSUx3d0o5OGpNM244Vi1R?oc=5",
       "source": "news.google.com",
-      "description": "La productivité à l’ère de l’IA  Banque du Canada",
+      "description": "Les responsables de la Banque du Canada évaluent la trajectoire des taux  Investing.com France",
       "cities": [],
       "category": "general"
     },
@@ -297,22 +266,6 @@
       "category": "general"
     },
     {
-      "title": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNaXZVZXVjcDI1alJqdk1pZEtSRG1XYlBhMzlFXzZQV3Bqb0JqcmVuelp4dmI2ZHFwd0h2TVJwanJoeGxVY29KUU9JOW5DdDAwakNwcC1oYUJmOE1LN04yRWgxTWc5VXliTVVSR25uWEFCSkRKS0hxLVFZQlNXWWRDck1fRi15UGhPT2xpeEFucnpmZGpZejFmSW5feTBrNXZsSm92WWFWYU1VVk0tUkhVVlBEZmlnaktOQWozYWZwa3hfdDk4d2VkUTBWbVdJaU0tMWZMOHFZd2F0enhJTUZMZmJ0S2F5QVE?oc=5",
-      "source": "news.google.com",
-      "description": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les responsables de la Banque du Canada évaluent la trajectoire des taux - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZ0o5b2ZYSWJ1cjNpNVZwd3ZvVnE1Y3VENVpWUFd4RjdsbTFqOHpBU195ZE9TcjBfM0xFVlM3MDFqajk4UHNTNmJDdllTYUFma0k4VHNuTkNpcVJudk5HVHRScXRITXd3VVR6eS1vUWR0OGhXUk8wNmhndkdHWElXWW1BVV9WeXlfclFSNXlrczZpSUlMRDZPMTdoYkJOSHl3dm8zZ1VuTXdmUFFodF81MGlPMnZVVjdkSUx3d0o5OGpNM244Vi1R?oc=5",
-      "source": "news.google.com",
-      "description": "Les responsables de la Banque du Canada évaluent la trajectoire des taux  Investing.com France",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La Banque du Canada patiente sur les taux, mais avertit que « la situation pourrait changer rapidement - Investing.com France",
       "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQRWRNNlRsOWVrN0F0WEJScXpENVpCaFVKbExVemFyMnlwNGlnZDI4MWtXbURFazYxZUJMVnExck1Rc0Z3cjFjWDJKRzV3QmVzdFo5cC1INUUwMzEzR0txbERlbXhOdHNQYllOYV9sdmR1MzA2X0d4dDlRazJRVFJCOENPT3BBeTlqcl9MeDg2dTlzTllsdGpMa3c3djJXRW5PcjQ1aGNqQTNXRi1uMzctNXRVNWZCRVl3V0pYazNmSU5JUXNtbWtHOW8yRXV0RWtYWHFncUhIekdZVFUyOVJhaXdYU0hTU3VKSEJHOEFB?oc=5",
       "source": "news.google.com",
@@ -321,18 +274,34 @@
       "category": "general"
     },
     {
-      "title": "Taux directeur : la Banque du Canada laisse la porte ouverte à de nouvelles hausses - MSN",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOOGdqNHNoOUZ5U3pUTHNEYnh2ZzlGWFlMcFBKYlB6VElnVlZuZl9nT1FNaUtKQS1TQzVoM1hJRzMwUGZSajZTQ0xQbUYza3VoRnJOM0poV2hTT19FVnYwNFl5UVVsY2QtQmh0MXpmRzlGN2xXMHNkZkpQUXNnMjVKMWRqaDdoZGtjSVR2c3lSQ0N3MGpUT1g3UTJEekJCRFhOakVTNXliNDl5RVMtNklENlZOUk42SGJ1NURfRHN5WTVrQ1JaZnhJRGhPQ2t3ZG8zUVFfWVZ3T0M?oc=5",
+      "title": "L’inflation devrait franchir un seuil critique au Canada en avril - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUGZJVDNDUklMdFhUbzBNRDFSdTBaSl9EOWI0ZkxEUnEyOVlwc0o2M3RrblZiZlJYVnk2anN0ajZ1TXpoMXdyZU9veEliODhpN3FSVjBMM2ViZ2lqREV4Yi0yLThlaEpVX3hVRkJRWG5DcU1VUzUwT245R2xmRUVnSDJuYWluYldMS3lwM1NqWUJBeW5acmtncVE2bzByT1VYWmNweUhLbjRfdXdsemc?oc=5",
       "source": "news.google.com",
-      "description": "Taux directeur : la Banque du Canada laisse la porte ouverte à de nouvelles hausses  MSN",
+      "description": "L’inflation devrait franchir un seuil critique au Canada en avril  Les Affaires",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada a jugé pouvoir faire preuve de patience sur les taux, selon les minutes - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQUTdjQXFZakVWNklfcTBybm9DY1F6NFg2VlpXd1BSVTFQcUtmWktBUDdXd3Q4bTJrbmVFU1ZRWlBER3MxUjQ4TTZWVmx2Y25zdkxORHQ0VzE4Q1cweTJsYlM3YzZLaW1tem1kMHNNN2puMDB6SktGRFZsN3pVcTRJNV8wSy03clMtWl9ud3RzWTJxaU1pbGlKbkhCMElZdmVHNG9maUtiYTV1QmZVQmYwMGRDdldSVHRyRVFqSFRxWlRFYkRZd2ZlY3V3aVpWTDFBRzRpMHp4bVJqcjU5UWpRRHRyR1BaQQ?oc=5",
+      "title": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNaXZVZXVjcDI1alJqdk1pZEtSRG1XYlBhMzlFXzZQV3Bqb0JqcmVuelp4dmI2ZHFwd0h2TVJwanJoeGxVY29KUU9JOW5DdDAwakNwcC1oYUJmOE1LN04yRWgxTWc5VXliTVVSR25uWEFCSkRKS0hxLVFZQlNXWWRDck1fRi15UGhPT2xpeEFucnpmZGpZejFmSW5feTBrNXZsSm92WWFWYU1VVk0tUkhVVlBEZmlnaktOQWozYWZwa3hfdDk4d2VkUTBWbVdJaU0tMWZMOHFZd2F0enhJTUZMZmJ0S2F5QVE?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada a jugé pouvoir faire preuve de patience sur les taux, selon les minutes  Zonebourse",
+      "description": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada a jugé pouvoir faire preuve de patience sur les taux, selon les minutes - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQN0d2NjFKbWJEYXdSVm0wcjJHNGUwbnlJMFdORnM0RlN2NExndWRVVXRUNVQ0SEtUZ1lURllqYlZidVljQXlweEJMRDhJNjl0UFNpWVpBRkwyNS0xSmlyY0xCZDlDYm5mUGQyYWowZlpLMDJ1MlBIMjZEY0pHcmRjUmdKSVp4d3NJMVUyM0pDSHg4NjJoUUh4YnRRRHFlZk15VVBaM21mSDBreHJOR1lrbFpidFZuamRId3JRQjc3SEdlYXFrSGI2Yi1NT3V6YkxCbm11OG9aTm42b2dJd3N5N1U2dHY?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada a jugé pouvoir faire preuve de patience sur les taux, selon les minutes  Zonebourse Suisse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux directeur : la Banque du Canada laisse la porte ouverte à de nouvelles hausses - MSN",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOOGdqNHNoOUZ5U3pUTHNEYnh2ZzlGWFlMcFBKYlB6VElnVlZuZl9nT1FNaUtKQS1TQzVoM1hJRzMwUGZSajZTQ0xQbUYza3VoRnJOM0poV2hTT19FVnYwNFl5UVVsY2QtQmh0MXpmRzlGN2xXMHNkZkpQUXNnMjVKMWRqaDdoZGtjSVR2c3lSQ0N3MGpUT1g3UTJEekJCRFhOakVTNXliNDl5RVMtNklENlZOUk42SGJ1NURfRHN5WTVrQ1JaZnhJRGhPQ2t3ZG8zUVFfWVZ3T0M?oc=5",
+      "source": "news.google.com",
+      "description": "Taux directeur : la Banque du Canada laisse la porte ouverte à de nouvelles hausses  MSN",
       "cities": [],
       "category": "general"
     },
@@ -397,5 +366,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-17 14:26"
+  "last_update": "2026-05-18 16:22"
 }

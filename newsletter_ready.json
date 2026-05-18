@@ -3,9 +3,9 @@
   "Mois": "Mai",
   "Annee": "2026",
   "Taux_BOC": "2.25%",
-  "Contenu_Article": "Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL - Les Affaires: Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL  Les Affaires...\n\nMarché immobilier du Grand Montréal — Avril 2026 - Journal Métro: Marché immobilier du Grand Montréal — Avril 2026  Journal Métro...\n\nPrévisions des taux hypothécaires au Canada (mise à jour mai 2026)? - nesto.ca: Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)?  nesto.ca...",
-  "Citation": "Les intérêts composés sont la 8e merveille du monde. Celui qui les comprend les gagne. – Albert Einstein",
-  "Astuce_Pro": "Copropriété : Lisez les procès-verbaux des 3 dernières années pour repérer d'éventuelles cotisations spéciales ou travaux majeurs à venir.",
+  "Contenu_Article": "Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL - Les Affaires: Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL  Les Affaires...\n\nLe loyer médian à Manhattan franchit le seuil des 5000 $: Le loyer mensuel médian à Manhattan, l’un des cinq grands quartiers de New York, a franchi pour la première fois le seuil des 5000 dollars en avril, tandis que le taux de vacance a atteint son plus ba...\n\nMarché immobilier du Grand Montréal — Avril 2026 - Journal Métro: Marché immobilier du Grand Montréal — Avril 2026  Journal Métro...",
+  "Citation": "L'immobilier ne peut pas être perdu ou volé, ni emporté. Géré avec soin, il s'agit de l'investissement le plus sûr au monde. – Franklin Roosevelt",
+  "Astuce_Pro": "Mise de Fond : Le RAP (Régime d'accession à la propriété) permet d'utiliser vos REER sans impôt pour votre premier achat. Un levier puissant.",
   "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-05.pdf",
   "campaign_id": "NL-5-2026",
   "month": "Mai",
@@ -25,16 +25,16 @@
       "source": "news.google.com"
     },
     {
+      "title": "Le loyer médian à Manhattan franchit le seuil des 5000 $",
+      "summary": "Le loyer mensuel médian à Manhattan, l’un des cinq grands quartiers de New York, a franchi pour la première fois le seuil des 5000 dollars en avril, tandis que le taux de vacance a atteint son plus bas niveau en six ans, d’après le groupe immobilier Corcoran.",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-18/le-loyer-median-a-manhattan-franchit-le-seuil-des-5000.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse"
+    },
+    {
       "title": "Marché immobilier du Grand Montréal — Avril 2026 - Journal Métro",
       "summary": "Marché immobilier du Grand Montréal — Avril 2026  Journal Métro",
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLUYyNjRiSUpySUo4enFpa3FDSzcwRzJjd2hBT2VJSUltclp3dm1PVWtNXzZTNXRrRVBOWmJfZzRjTVBka0F0aUVOSFZsb0Y4dVRUdXM1UFNmN0NleXI0WjF4Mm1IRkZqenBKTkNhM2tpY2psbkpITFZhVXFhclhvOTQ5TGNtMDdud1BPb1BwX0tXSFoyNFRwNGl3TjVaR3ZDeFhlWUh0N2Z3WmZSakRMXzljNjdGMHdj?oc=5",
       "source": "news.google.com"
-    },
-    {
-      "title": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)? - nesto.ca",
-      "summary": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)?  nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "mise à jour mai 2026"
     }
   ],
   "report_label": "Rapport de Marché - Mai 2026",
@@ -58,16 +58,16 @@
       "source": "news.google.com"
     },
     {
+      "title": "Le loyer médian à Manhattan franchit le seuil des 5000 $",
+      "summary": "Le loyer mensuel médian à Manhattan, l’un des cinq grands quartiers de New York, a franchi pour la première fois le seuil des 5000 dollars en avril, tandis que le taux de vacance a atteint son plus bas niveau en six ans, d’après le groupe immobilier Corcoran.",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-18/le-loyer-median-a-manhattan-franchit-le-seuil-des-5000.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse"
+    },
+    {
       "title": "Marché immobilier du Grand Montréal — Avril 2026 - Journal Métro",
       "summary": "Marché immobilier du Grand Montréal — Avril 2026  Journal Métro",
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLUYyNjRiSUpySUo4enFpa3FDSzcwRzJjd2hBT2VJSUltclp3dm1PVWtNXzZTNXRrRVBOWmJfZzRjTVBka0F0aUVOSFZsb0Y4dVRUdXM1UFNmN0NleXI0WjF4Mm1IRkZqenBKTkNhM2tpY2psbkpITFZhVXFhclhvOTQ5TGNtMDdud1BPb1BwX0tXSFoyNFRwNGl3TjVaR3ZDeFhlWUh0N2Z3WmZSakRMXzljNjdGMHdj?oc=5",
       "source": "news.google.com"
-    },
-    {
-      "title": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)? - nesto.ca",
-      "summary": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)?  nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "mise à jour mai 2026"
     }
   ],
   "news_list": [
@@ -78,16 +78,16 @@
       "source": "news.google.com"
     },
     {
+      "title": "Le loyer médian à Manhattan franchit le seuil des 5000 $",
+      "summary": "Le loyer mensuel médian à Manhattan, l’un des cinq grands quartiers de New York, a franchi pour la première fois le seuil des 5000 dollars en avril, tandis que le taux de vacance a atteint son plus bas niveau en six ans, d’après le groupe immobilier Corcoran.",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-18/le-loyer-median-a-manhattan-franchit-le-seuil-des-5000.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse"
+    },
+    {
       "title": "Marché immobilier du Grand Montréal — Avril 2026 - Journal Métro",
       "summary": "Marché immobilier du Grand Montréal — Avril 2026  Journal Métro",
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLUYyNjRiSUpySUo4enFpa3FDSzcwRzJjd2hBT2VJSUltclp3dm1PVWtNXzZTNXRrRVBOWmJfZzRjTVBka0F0aUVOSFZsb0Y4dVRUdXM1UFNmN0NleXI0WjF4Mm1IRkZqenBKTkNhM2tpY2psbkpITFZhVXFhclhvOTQ5TGNtMDdud1BPb1BwX0tXSFoyNFRwNGl3TjVaR3ZDeFhlWUh0N2Z3WmZSakRMXzljNjdGMHdj?oc=5",
       "source": "news.google.com"
-    },
-    {
-      "title": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)? - nesto.ca",
-      "summary": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)?  nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "mise à jour mai 2026"
     }
   ]
 }
