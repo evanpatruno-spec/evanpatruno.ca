@@ -1,42 +1,26 @@
 {
   "news": [
     {
-      "title": "Énergie | L’accord avec le Québec ne profiterait pas à Terre-Neuve-et-Labrador, selon un comité",
-      "link": "https://www.lapresse.ca/affaires/2026-05-19/energie/l-accord-avec-le-quebec-ne-profiterait-pas-a-terre-neuve-et-labrador-selon-un-comite.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Achat de thermopompes | Québec bonifie l’aide financière",
+      "link": "https://www.lapresse.ca/affaires/2026-05-20/achat-de-thermopompes/quebec-bonifie-l-aide-financiere.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Un groupe d’experts nommé par le gouvernement de Terre-Neuve-et-Labrador estime que le projet d’accord énergétique avec Hydro-Québec ne sert pas les intérêts de la province.",
+      "description": "Le gouvernement du Québec et Hydro-Québec investissent près de 350 millions afin d’améliorer l’efficacité énergétique des logements, de réduire la facture d’électricité des Québécois et de soutenir la transition énergétique dans la province.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Wall Street recule, minée par les taux obligataires",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-05-19/wall-street-recule-minee-par-les-taux-obligataires.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Wall Street ouvre en hausse, surveille le marché obligataire et Nvidia",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-05-20/wall-street-ouvre-en-hausse-surveille-le-marche-obligataire-et-nvidia.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Bourse de New York évolue dans le rouge mardi, continuant de subir la pression de l’envolée des coûts de la dette obligataire, les marchés affichant leur crainte d’une inflation persistante à cause du conflit au Moyen-Orient.",
+      "description": "La Bourse de New York a ouvert en hausse mercredi, aidée par une légère détente des taux obligataires et des prix du pétrole, avant les très attendus résultats du mastodonte de la tech Nvidia.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "États-Unis | Le coût de la dette à long terme au plus haut depuis 2007",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-05-19/etats-unis/le-cout-de-la-dette-a-long-terme-au-plus-haut-depuis-2007.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Le rendement à 30 ans des emprunts de l’État américain a touché mardi un plus haut depuis 2007 et la crise financière, poussé par les craintes inflationnistes liées au conflit au Moyen-Orient.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Canada | L’inflation s’accélère à 2,8 % en avril",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-05-19/canada/l-inflation-s-accelere-a-2-8-en-avril.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "La guerre en Iran continue d’alimenter l’inflation au Canada, qui est passée de 2,4 % en mars à 2,8 % en avril.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Travail d’équipe | Le désengagement silencieux des gestionnaires",
-      "link": "https://www.lapresse.ca/affaires/2026-05-19/travail-d-equipe/le-desengagement-silencieux-des-gestionnaires.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "On dirait que c’est tenu pour acquis dans nos modèles mentaux : les gestionnaires, évidemment engagés et volontaires, tentent de générer tant bien que mal l’engagement de leur propre équipe. Mais a-t-on considéré qu’ils pourraient eux-mêmes être démotivés ? Et que, le cas échéant, il est possible que la chaîne débarque !",
+      "title": "Terre-Neuve-et-Labrador veut renégocier l’entente sur Churchill Falls avec Québec",
+      "link": "https://www.ledevoir.com/economie/981185/churchill-falls-accord-quebec-ne-profiterait-pas-terre-neuve-labrador",
+      "source": "Le Devoir",
+      "description": "Un rapport d’experts juge que le projet d’entente n’est pas dans l’intérêt supérieur de la province.",
       "cities": [],
       "category": "general"
     },
@@ -44,7 +28,7 @@
       "title": "L’inflation a accéléré en avril, atteignant son niveau d’il y a deux ans",
       "link": "https://www.ledevoir.com/economie/981188/inflation-est-acceleree-2-8-avril-selon-statistique-canada",
       "source": "Le Devoir",
-      "description": "Elle a été de 2,8% au Canada et de 3,0% au Québec, une hausse principalement attribuable aux prix de l’essence.",
+      "description": "Elle a été de 2,8% au Canada et de 3,0% au Québec, une hausse principalement attribuable au prix de l’essence.",
       "cities": [],
       "category": "general"
     },
@@ -65,12 +49,22 @@
       "category": "general"
     },
     {
-      "title": "Courtage immobilier: elle enfreint sa suspension pour essayer d’empocher 75 000$ - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcHFhMHBRZWtUdWpSM3k1WVJkRXFsUWRscEdUdFVYZ3g4TXJacmxPc2ZtVmtVYWlsZU5maDRfeWpOeEw3TGhxbGY5UkJtczdJQlpYSldMYlZNNnFYQXpEajFwUmVpdzlKVVJVMTVTMTZUNDRRb29zYXI5WHozejV5T2dwZXpzZ1l2d2llUFFZSDhzeTFQRGMzS3U3d2lPTERqdHVmZ08xY0FCMTBDMWxjMUhNbVU4ZGN6VGRqUDR3?oc=5",
+      "title": "Pas de reprise immobilière ce printemps, mais les acheteurs reviennent - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV2VMWFRvbW9EVjVwVEJvQnNFWlpDb3ZuU0ZKUWtsTWFaVlktWllKVWFkbDF4NFJUek5jTTVOS0dRWnFadjZ5VGRFcXEyTUtWUk1NN1lhYkFSeE8teTctcERkaGRTdW0zQTA4MlUtRVRRYVpKc1hyc0ZnMnQzczl6d2hBRnZONnI1amRtMFozNGp1bXh5TkdLNVlqMk45b1Y1Z0NNUjJOOFBxQU1wcmpVZ3l4WkE?oc=5",
       "source": "news.google.com",
-      "description": "Courtage immobilier: elle enfreint sa suspension pour essayer d’empocher 75 000$  Journal de Québec",
+      "description": "Pas de reprise immobilière ce printemps, mais les acheteurs reviennent  Les Affaires",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "Courtage immobilier: elle enfreint sa suspension pour essayer d’empocher 75 000$ - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVkM0ODlkcFpndjYzYUlZNnhQMmp0UE54ejYxRUNLb0dJMU92Ym9admNlMkEwWFl0QWd4Z0plY1hTVkZpNFlEb1dSUFh1YTRUT1RNM3VPU05vbkxvY2F3RGZjdGZFSWZQOHZ3SXVFTW5UTnN3MFlkZVlud1pPX2tSV19UUjVLX0FfM3d1UkVtLWlRX1Ntd2dJcUxLZ3ZTNHJMb3gtTXFSYjhpRHdscFh6Z0RFUUVTQmZTQ2NqUzZuZm4?oc=5",
+      "source": "news.google.com",
+      "description": "Courtage immobilier: elle enfreint sa suspension pour essayer d’empocher 75 000$  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Le Strelitz vise 360 logements et 15 étages sur l’édifice de la Barberie - Monsaintroch",
@@ -89,26 +83,26 @@
       "category": "general"
     },
     {
-      "title": "VIDÉO | Voyez les premières images de la deuxième saison de «Notre première maison Québec» de CASA - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOLWJJbDJveG5vSnlaVHpOdTNCeXFSamFRa0pxVVdycmluVWsyVXlmcm1aNTg4QXU1Y3g4Z1Rod0lyanlacmxnSENoVENFd2xQQThiTU9XbjVzYlFxdGQ2TXJPTkF2WUlPX2pHSDBOMjFCSTZ0VFJiOG1EdWcxazVTWkY4RVhlM1ViS0o3RHo1X1k5bDRsQVBJal9hcnBVWTVlYXEzbEREd3prY3VaVzJWR0h6cEJ6T2lkWm5tWXRmbGx3TWxqRnByR1ItWQ?oc=5",
+      "title": "VIDÉO | Voyez les premières images de la deuxième saison de «Notre première maison Québec» de CASA - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNHo0SWNTaFdBajJ3MkZEbS1RNzdwZVJTWTJhb01Lb1RqUldrUnFPTkdrQ3QtajY5NmxxVU5tSkotNjZJZTkxU0lsNHRGZzN0SjFfZlhBTW5NYmZ3ZnlfNWxnYTdBUWZBODhHWUtna3JoTUtCd0RoU0kxNHNTeVdrVW9BblFGUEFHcWhVa2U0R1QtWExFSTlBb0UtdXZpeElfdFo0REt0eGNwbFhNOUQ5ejNLYUpzRmJJQTJxUzlXZkM2Ukli?oc=5",
       "source": "news.google.com",
-      "description": "VIDÉO | Voyez les premières images de la deuxième saison de «Notre première maison Québec» de CASA  TVA Nouvelles",
+      "description": "VIDÉO | Voyez les premières images de la deuxième saison de «Notre première maison Québec» de CASA  QUB radio",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Les ventes résidentielles ont reculé de 4 % en avril au pays - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNcE85T09uMEYzNUE4OTVIYkdobjNpTW1CYVZ1YjVlSG54TlNxTHJZY2lFZnBRR3ZyakUzMG1HRW5IT2o3bnR4WU1rU0JaQ2gwbHpqZEprTWdsd0I2S0RXa2VxNTY3WU9HcHBMVF81eEg4SFRSeGJVRk00RWdwQ0lFZnhLTGxfZVBpNGR2aFh5WGVQWGROUURxNmJTWDJjNUJpNElISW9ub3pCVHhCbEFzUkd6SFlyQ1psQ3VuMXQ4ZDhSTnJQQ2ZIUW15TnM?oc=5",
+      "title": "Les ventes résidentielles ont reculé de 4 % en avril au Canada, selon l’ACI - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbmtxUFdDM3hFQ2dSSUJrbnI2YmJhT3dJZ2xjR0xTdExURUJvckdnLUctdS1KRzBFeFZLcVZEQjVuS2RqeUQxcGhwbVAxMXRVY21iSE9UTmRHeFpLYjVYSUxXbEs0V2tXbVRTTF9FS1Y0VTZ4eUpMMVhIZHcxUW93eFgwd2cwQzBOeFBJdHVJQUJMZHhh?oc=5",
       "source": "news.google.com",
-      "description": "Les ventes résidentielles ont reculé de 4 % en avril au pays  Radio-Canada",
+      "description": "Les ventes résidentielles ont reculé de 4 % en avril au Canada, selon l’ACI  Radio-Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Fin de la brève : Baisse des ventes et rééquilibrage du marché immobilier en avril à Calgary. Brève suivante - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcXBRejk1RG0xSzlOaElsNVRGV3lYRlpTZTNKSDhablYwdHlJN1lKRzR3UFZTel85ejFUS2N4NGV0NXdna1NDTDNrTjJkdXZkVUpXNVIwSWJVcEE1dHZYc2ZFRVNNSnZvTkNHTE1obFBmNDYwMllSY0RVZzA1LUFSVGxYdWNLaFlEOTJ6QmhTaEgyVkJaTlY0T1JvYXp0dHNnWXNVOENkaE1lV0hGYUZiSW9LOTE?oc=5",
+      "title": "Un projet de 360 logements au-dessus de La Barberie - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONDVha25FSENzY2JSaUFlaUR6c3Nydk8tdENZTEZZbkNDUGkyT19QTUo3XzY0empwajZFQnVHNzNaTnJjVFVqLUo2V0tkRnZObGR6QzlENHMxSVpyazl1NXJFMFV6SVU2QjVtUTdGSjRkQXg1alhyMDI3dG1ScG1WUWViQkQwN1k0QkdNcHA2WkUyRE5LTnkwMTVvM1ZsVDdHdk8yckpQV2JLci1RZW1NLUp6dE55WnZDOXVDejZ1dUdQcG5hSXB4OEx5YmNvM0RmUzFLaw?oc=5",
       "source": "news.google.com",
-      "description": "Fin de la brève : Baisse des ventes et rééquilibrage du marché immobilier en avril à Calgary. Brève suivante  Radio-Canada",
+      "description": "Un projet de 360 logements au-dessus de La Barberie  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -121,18 +115,10 @@
       "category": "general"
     },
     {
-      "title": "Un projet de 360 logements au-dessus de La Barberie - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbFBpNjNjTVVFbE9xbmxpNy14ekFiRzlNN3YwcDRaeXVxMnc2LVg5S2o0bjM0V1M2ZGUtU3A5ZElPYkV2dHM1MWZYNGRqSzQwb2NOWVBzVUhNYlVGUTVmaXBJLWxBVEdCVHN3UjVZQUFqdG91ODhUdFJLcjVwNWItQ09jTUJVaDlUMXRkQXVTcDBsZzRQSHlzVQ?oc=5",
+      "title": "Opposition à un projet immobilier: une pétition circule à Val-Bélair - FM93",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTUw4RTR5VEFDTlNJWm1IbndJZ1BWU1ZTci1mOHBKa09CZGUwc1ZuYjVsSzAxNHJBRkJLU1RIRy1aUzkxMnUzWWZicEtueHY4NV9uSG9HNlpmbW51ZERkTTZkeUgxQU9VaGcwRDBteFhEV05zSy0tUWI1YTlKY1hvbHVTUnhrODhFa1AwZWFBS3RHN0lvbWdGYTMzYURYcjZQUnI0?oc=5",
       "source": "news.google.com",
-      "description": "Un projet de 360 logements au-dessus de La Barberie  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOVExqZklFLUwzRFBwTVpoWGdkTzlpTzVLcnJNb2Z5bzNsRXdtODRHRFBBRXNpNXI3bnNCdlVZQUlWU0kzcmZmQWZnOTNfUUlMcmsxbndSMnAxS2prZF9xbWhkdlpEQ2JBRW55c3Q1X1N3REF2UEFrZ2c3Q1lZNXZaODRCUHFadWxQU3dQT2xjZXl1NE5GSzN3YS1rM21pTWlfeEM5NVdJdHJiNWp4R1lHSTFKY1U3MTJDMjZqWVpCQk9lSWFlaTJkbzhDZi0xZ3VxdkxubFU3SjQ?oc=5",
-      "source": "news.google.com",
-      "description": "Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL  Les Affaires",
+      "description": "Opposition à un projet immobilier: une pétition circule à Val-Bélair  FM93",
       "cities": [],
       "category": "general"
     },
@@ -155,18 +141,26 @@
       "category": "local"
     },
     {
-      "title": "Le piège du plus bas taux hypothécaire - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNTk5TXzRjNHE5Y3VxcHFqblkzY04zUUJyUExqWnU3TDlFZThpOXNEX1UxdHZhZ1lvdHkzcjBfMU05dUNxY1VuT0ktVjNWaUxIX3R0cHZTVkt5VTNYUjNNbDZFN2dpbVhvUHNIbGxzWjRqUUptbjREZGl6UHhMeG9uTk1R?oc=5",
+      "title": "Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOVExqZklFLUwzRFBwTVpoWGdkTzlpTzVLcnJNb2Z5bzNsRXdtODRHRFBBRXNpNXI3bnNCdlVZQUlWU0kzcmZmQWZnOTNfUUlMcmsxbndSMnAxS2prZF9xbWhkdlpEQ2JBRW55c3Q1X1N3REF2UEFrZ2c3Q1lZNXZaODRCUHFadWxQU3dQT2xjZXl1NE5GSzN3YS1rM21pTWlfeEM5NVdJdHJiNWp4R1lHSTFKY1U3MTJDMjZqWVpCQk9lSWFlaTJkbzhDZi0xZ3VxdkxubFU3SjQ?oc=5",
       "source": "news.google.com",
-      "description": "Le piège du plus bas taux hypothécaire  Les Affaires",
+      "description": "Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL  Les Affaires",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Achat d’une première maison: aider votre enfant pourrait saboter son avenir financier... et le vôtre aussi - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZnIxTUFCb0JTR3RkY3hSUDFsODh0NDRSWldLcnlVUEFjcFgxcUhBeFprRzR0Qzc0cHNwSjNubFh2OVFBX19EM1Ywbmp4NDRqa0NrZkxwdVQ0N2oxdDhqM1RVeFNMUU5ORUZ5ZmFTd2tYM3F2aTNfTjdueWlCdjFITkJLM1FickZNdFZVamE4alhhNEQzZDNab19FU0FZOHVoTTU1RHJqeUFraUE1ZXZlS1FQVzZ2Qlk4YXdrcU5YWl9XbkRTem03S1NOSV95SnptUHd1blFrUlY4WnZy?oc=5",
+      "title": "Desjardins anticipe une inflation dans les 3 % à cause de l’Iran - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNHBfYnpneGt4VnlqR3BMLXRPcTI5Wl9Ha1p0cGYtWHdLM3UwbndMMEkzRnVrTlZ1MktEdFVpcjk4c3hscUhuV0VJd1ZzQ2NmZGdvRExsT0QwVVV0dzF3RW9IVlVtWHQxWE5nQkhPU1RyRTNjOFFaU0NWOXJQazlOdFMyYW5NNEN1Qm81LXpxcERzSFZhMVRaWTBZbExQS0ZuSmphcmhJaWlMY1R4emg5VFlEVFBoREtySXVlR2NHV1lrbTVPMVhiSw?oc=5",
       "source": "news.google.com",
-      "description": "Achat d’une première maison: aider votre enfant pourrait saboter son avenir financier... et le vôtre aussi  Journal de Québec",
+      "description": "Desjardins anticipe une inflation dans les 3 % à cause de l’Iran  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Achat d’une première maison: aider votre enfant pourrait saboter son avenir financier... et le vôtre aussi - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOTnpFdk5yMG1kU0pGMFhPQUl4NG92U1VPSzhUV01NSXRMT2Z0ZGR4UTJZeENzVzRqOU8xZ1JrV3hDdzRQZGlYTTVibHNNUDZhSGVJSlVqclZEUFBodzNHeXpuMWhjME1TN0VIY0NFeVdmS0NDMEdUX0pfV3pEQVg4WDFtTVdFQjZiNlNmNGM4blBQVFdGdkNGV0E0VFVMOU9HM0k1cVBoeFZXU01TaUljaXFBUjUyaFpheWxXYWhLVFRjVEV5V1o1bW9LRjNBdE54RG5wSTZ4NA?oc=5",
+      "source": "news.google.com",
+      "description": "Achat d’une première maison: aider votre enfant pourrait saboter son avenir financier... et le vôtre aussi  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -187,14 +181,6 @@
       "category": "general"
     },
     {
-      "title": "L’effet des contre-mesures tarifaires canadiennes sur les prix à la consommation - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB0bUMxX1FBLTVfS0pqb2lybUxwSGlyb1dCZDZBSFlnSWZGbm51X1NOckJjR2IwdFh5M3E2aGhyWVFsVTMyT2MwU3l0dHBjTVdrYURWbDRCNV8tQkNEd1JjbjNncmFBYmVUbXBiUXY3T3paTjIyWGlHZw?oc=5",
-      "source": "news.google.com",
-      "description": "L’effet des contre-mesures tarifaires canadiennes sur les prix à la consommation  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Face aux tarifs, la Banque du Canada choisit la prudence - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPd05uTkp2RF96cmYxVnNiSDBWdlc3RjlPZElqYWloUWE5b1NJME9KNVBVT3NSbEFtOWZKZDNQVmtBNmF5RWhhbmt5S0hBczJHbFhtbE4xSFNqb29EbGg1LUhacEozSm9Bb011NnAtakwyYWtyNjhvalkySTNkdWw1SmNQWDdBcUtFNmtCUEoxdVNZOGNzVnd6RUhhalg0UQ?oc=5",
       "source": "news.google.com",
@@ -203,18 +189,18 @@
       "category": "general"
     },
     {
-      "title": "Taux d’intérêt : la BdC navigue à vue - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPSnF2N2VEbnJiaVV6VU5Idk5rU3FSbUtJN0Fqa3FFM3ZSUXQwb1dvY1VLMzBFaHZlQkxOVmpkMXJjRDFaWGU4ZmVUMzZJRzJZVjd4YmJSd3dPb1pxRUxzUnhBelFfUjlpUVJ4RDVQRUF3T01PZUNFZi1IYThKeWlQYjlRc0xXU2ZMVEhxazFRaVdQaXI2TFZKZU9ERGpjd3BjeVROWnA4bDAwS1UwWHJYV3ZDdVF0RkJPRkhkQkxmMkY5LXBUaFdkR1hfN2dxMFBlSUthSENQcXFwWHBkcUs5N2R5LXV5REp3cnBrRUhYQUROTmstendiMURiMmFHNy1hMHpvVzZ4WElwdzQxaHdV?oc=5",
+      "title": "6 analystes donnent leurs prévisions sur la prochaine décision de la Banque du Canada - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxORmxwYkdzbWRpLXVORlJZUVZWSTJBN0ZVUlpCVFBrc0NyMnN2bzBra1pIWXcwQWN3b3NZWF94dFFycGhZSzRlOXgtMkJMTWJZWGdOd2N4Z2JIZUN3SWJwYTdhUE80MlBTVVI3OHMxdFV0R0RzX01yQlpYZlRpdmhZSXpVRmt3X015OUk0NGRPd1pUbXlNQlRXMlJsVkZ4U0I4ZG1yaElkdV8yVlhPeEdYWHFJejNwYTBLUS1aN2N0MS03ajZNYXI3VFdR?oc=5",
       "source": "news.google.com",
-      "description": "Taux d’intérêt : la BdC navigue à vue  Canadian Mortgage Trends",
+      "description": "6 analystes donnent leurs prévisions sur la prochaine décision de la Banque du Canada  Les Affaires",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L’intelligence artificielle à nos portes : l’avenir de la productivité au Canada - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNWJHNmtqZG0wNUc2RWdBQ25QYmhBSS16d2g3dTZpUDNTdW5IVGo0TEtOalJNNkhQODNTZUhNNW1PblZ0eEYxN0xVcTFSOXp2MDZULWpzRzZ3R1dsZ284cjEzMWx2TTFwN2ZnUm5Xa1lvSDlIX3FGTFFPVl8xYjBPUXFuQ1g1LWloTmV2cjVhMVBndzBFdmVGZGJxZ1J3Ti1QY2c?oc=5",
+      "title": "Taux d’intérêt : la BdC navigue à vue - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPSnF2N2VEbnJiaVV6VU5Idk5rU3FSbUtJN0Fqa3FFM3ZSUXQwb1dvY1VLMzBFaHZlQkxOVmpkMXJjRDFaWGU4ZmVUMzZJRzJZVjd4YmJSd3dPb1pxRUxzUnhBelFfUjlpUVJ4RDVQRUF3T01PZUNFZi1IYThKeWlQYjlRc0xXU2ZMVEhxazFRaVdQaXI2TFZKZU9ERGpjd3BjeVROWnA4bDAwS1UwWHJYV3ZDdVF0RkJPRkhkQkxmMkY5LXBUaFdkR1hfN2dxMFBlSUthSENQcXFwWHBkcUs5N2R5LXV5REp3cnBrRUhYQUROTmstendiMURiMmFHNy1hMHpvVzZ4WElwdzQxaHdV?oc=5",
       "source": "news.google.com",
-      "description": "L’intelligence artificielle à nos portes : l’avenir de la productivité au Canada  Banque du Canada",
+      "description": "Taux d’intérêt : la BdC navigue à vue  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -235,66 +221,74 @@
       "category": "general"
     },
     {
-      "title": "Les responsables de la Banque du Canada évaluent la trajectoire des taux - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZ0o5b2ZYSWJ1cjNpNVZwd3ZvVnE1Y3VENVpWUFd4RjdsbTFqOHpBU195ZE9TcjBfM0xFVlM3MDFqajk4UHNTNmJDdllTYUFma0k4VHNuTkNpcVJudk5HVHRScXRITXd3VVR6eS1vUWR0OGhXUk8wNmhndkdHWElXWW1BVV9WeXlfclFSNXlrczZpSUlMRDZPMTdoYkJOSHl3dm8zZ1VuTXdmUFFodF81MGlPMnZVVjdkSUx3d0o5OGpNM244Vi1R?oc=5",
+      "title": "Les dilemmes de la Fed et de la Banque du Canada - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWkRxTTVNNDZNeU53WDR6LXdSMnU4djlxVDc5dXUtZUN5MnFXM3VjVHVfMXRURlhSdEstb3FkM1MwbTRLbHhpOHFrT2ExbEdhdlNpdEw4cjFTRE1VQm5nZGZrUjBhNEVWRF9JZmRpSlVhNUw2WUxKQ0ptOW00cXI5ejFYS25MV3FZU3hzWlRkSTFPZnZxSUVhVw?oc=5",
       "source": "news.google.com",
-      "description": "Les responsables de la Banque du Canada évaluent la trajectoire des taux  Investing.com France",
+      "description": "Les dilemmes de la Fed et de la Banque du Canada  Les Affaires",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L’évolution de la place du Canada dans le commerce maritime mondial - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBzSFVKZVlHS2dPUEpzanVOS1Jtb2tXTUxoWGNIYjNoSV9BandmTkxRUGlNYTFNeVJzR3U5anFhWTVTb2hUc1NwSE1aNUtabEpRRUFUZDE2Wmp0OGF6SFdiUVpDSjhWUVE4S0JoR08tMDVUdklIaUF0aw?oc=5",
+      "title": "L’essence pousse l’inflation à 2,8 %, mais les pressions sous-jacentes s’atténuent - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORXZ0WWl0MTFBd3pjc1ZpQWxzcjNiNDFlZjZtY3JDT3pxdmRUeklsT1RBc3E0YXI0WHlLcS1mZkRyV1BReThZTHpCeURZTkY0U0lyUnFLbkVKN2VhOTY4cTB6ck1ONVBrUnZ2MHM2UFl5QmZFUElZMmdyQWFpZ3o1ZEtfbVYwM2dUZ3pSRkZfNHVUbjV4NTEyWm5BaEk5RGVSZTF3SC1pRFdrbEhrem53djZWSUR2UGo5aDY5eW1IYUJhUEFKWDlvazRnZnBGM0Mw?oc=5",
       "source": "news.google.com",
-      "description": "L’évolution de la place du Canada dans le commerce maritime mondial  Banque du Canada",
+      "description": "L’essence pousse l’inflation à 2,8 %, mais les pressions sous-jacentes s’atténuent  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada a jugé pouvoir faire preuve de patience sur les taux, selon les minutes - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQN0d2NjFKbWJEYXdSVm0wcjJHNGUwbnlJMFdORnM0RlN2NExndWRVVXRUNVQ0SEtUZ1lURllqYlZidVljQXlweEJMRDhJNjl0UFNpWVpBRkwyNS0xSmlyY0xCZDlDYm5mUGQyYWowZlpLMDJ1MlBIMjZEY0pHcmRjUmdKSVp4d3NJMVUyM0pDSHg4NjJoUUh4YnRRRHFlZk15VVBaM21mSDBreHJOR1lrbFpidFZuamRId3JRQjc3SEdlYXFrSGI2Yi1NT3V6YkxCbm11OG9aTm42b2dJd3N5N1U2dHY?oc=5",
+      "title": "Le dollar canadien pourrait sous-performer au sein du G10 alors que la Banque du Canada temporise face à une inflation plus faible que prévu, selon la SocGen - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOMk5rbUNhTUFTUnhCeXdGT2RqTXh5Zm1zVmsxc1NQSmJQRjFqWEhGV3R6blNGM2s0YU5FejU0NHlqOWtUaXVWVGNlRXd0cFpQenRJV25Vb3BPclhlczk4SmM4c1dWWXpxNkF0Z3RFdWdmQVI2SGw3UVRTVTBmcElvZmVZS2t4bHZ5bWNUUnFEVXpRclN3MFNWVlRZTmF6NXdPU1Q1VzZPVWh1V21XQUhITjZ6UmxCU21WX0xscUl0THZ5UGtXZlRWaXhYUHo3S2NvcWRpeDBkdTlZOU1YU1lDa2N4WkJhZlYwYTRqZS1peXFLQQ?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada a jugé pouvoir faire preuve de patience sur les taux, selon les minutes  Zonebourse Suisse",
+      "description": "Le dollar canadien pourrait sous-performer au sein du G10 alors que la Banque du Canada temporise face à une inflation plus faible que prévu, selon la SocGen  Zonebourse Suisse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L’inflation devrait franchir un seuil critique au Canada en avril - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUGZJVDNDUklMdFhUbzBNRDFSdTBaSl9EOWI0ZkxEUnEyOVlwc0o2M3RrblZiZlJYVnk2anN0ajZ1TXpoMXdyZU9veEliODhpN3FSVjBMM2ViZ2lqREV4Yi0yLThlaEpVX3hVRkJRWG5DcU1VUzUwT245R2xmRUVnSDJuYWluYldMS3lwM1NqWUJBeW5acmtncVE2bzByT1VYWmNweUhLbjRfdXdsemc?oc=5",
+      "title": "La hausse des prix du pétrole accélère l’inflation à 2,8 % | RCI - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16b2JuSW5NUElJNFppeEJiX0Q4SThBMTVVSnF6OVcxOHNrYlZkUVNQWmZRLUVfaG5hMlRqOWh4bWZpS2lGQ1ZyaGN4b0JONWNWYUtuOE5oSF9Mc3dSREdrZUZPREpwZHhvcVBNUmplLTAzZ2NqeWlZcmtncF9qLXc?oc=5",
       "source": "news.google.com",
-      "description": "L’inflation devrait franchir un seuil critique au Canada en avril  Les Affaires",
+      "description": "La hausse des prix du pétrole accélère l’inflation à 2,8 % | RCI  Radio-Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Taux directeur : la Banque du Canada laisse la porte ouverte à de nouvelles hausses - MSN",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOOGdqNHNoOUZ5U3pUTHNEYnh2ZzlGWFlMcFBKYlB6VElnVlZuZl9nT1FNaUtKQS1TQzVoM1hJRzMwUGZSajZTQ0xQbUYza3VoRnJOM0poV2hTT19FVnYwNFl5UVVsY2QtQmh0MXpmRzlGN2xXMHNkZkpQUXNnMjVKMWRqaDdoZGtjSVR2c3lSQ0N3MGpUT1g3UTJEekJCRFhOakVTNXliNDl5RVMtNklENlZOUk42SGJ1NURfRHN5WTVrQ1JaZnhJRGhPQ2t3ZG8zUVFfWVZ3T0M?oc=5",
+      "title": "Canada | Les économistes s’attendent à ce que l’inflation atteigne les 3 % en avril - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbWZmNnVEaVdZQmZ4dkpDbFg2Q0ZnVHdFZEJ5ZGgyb3RrM3VXS0Zpc3JhZEk5QWlUNUFTaWI4c0R3aE9ncmt0M1R0ZjV1eEhMQWFnUmtUNUNhN2NtNENMRGV2LTdJc19NeDNNSnFjSkNXLTh6RWNVRG8xTW5HajBBR0pnZFhJQ1RLcmp0UE9adkpPcVh6X3UtYTJ5MUpQU1dlb0dyaHRUdGN3a09DN19TVEVWdTlzb2FIZld1a3VabWNFd3JvWHlYNWc0VFNuWWlIVmc?oc=5",
       "source": "news.google.com",
-      "description": "Taux directeur : la Banque du Canada laisse la porte ouverte à de nouvelles hausses  MSN",
+      "description": "Canada | Les économistes s’attendent à ce que l’inflation atteigne les 3 % en avril  La Presse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Desjardins anticipe une inflation dans les 3 % à cause de l’Iran - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNHBfYnpneGt4VnlqR3BMLXRPcTI5Wl9Ha1p0cGYtWHdLM3UwbndMMEkzRnVrTlZ1MktEdFVpcjk4c3hscUhuV0VJd1ZzQ2NmZGdvRExsT0QwVVV0dzF3RW9IVlVtWHQxWE5nQkhPU1RyRTNjOFFaU0NWOXJQazlOdFMyYW5NNEN1Qm81LXpxcERzSFZhMVRaWTBZbExQS0ZuSmphcmhJaWlMY1R4emg5VFlEVFBoREtySXVlR2NHV1lrbTVPMVhiSw?oc=5",
+      "title": "L'inflation repart à la hausse en avril, mais la Banque du Canada peut se permettre d'attendre, selon la Banque Nationale - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNaFVmRHBHV09TTUxUdVg2cVZfUFFPWU5QRDRNWVh0MHVpTHNyMlkweS1yWjI2ZkNsN0dHOFlUZlkwUGZBcGZLWEV4cmdlSmlHYzB1Qlh2TFhZUXZXX1Z3aHV5YVpwYzVIdGhqWHE0VmJ2eEpoM1c0eDFzS1k1T0ptVjNZTVJFNjJOdzZaR2V0ZHpwU1NOdHo0OHE4NHRNd3FzZnVfMERUMEhjZmlZVnd3UHdMQmpoejNuMHRQeXlmYXZBZkhYc0t0LWpIRDg3ZlJTY1o2WUt0QkxhTzd6aGRQUnd4Wm02eF9LcTdfWU1KMmM?oc=5",
       "source": "news.google.com",
-      "description": "Desjardins anticipe une inflation dans les 3 % à cause de l’Iran  Canadian Mortgage Trends",
+      "description": "L'inflation repart à la hausse en avril, mais la Banque du Canada peut se permettre d'attendre, selon la Banque Nationale  Zonebourse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNaXZVZXVjcDI1alJqdk1pZEtSRG1XYlBhMzlFXzZQV3Bqb0JqcmVuelp4dmI2ZHFwd0h2TVJwanJoeGxVY29KUU9JOW5DdDAwakNwcC1oYUJmOE1LN04yRWgxTWc5VXliTVVSR25uWEFCSkRKS0hxLVFZQlNXWWRDck1fRi15UGhPT2xpeEFucnpmZGpZejFmSW5feTBrNXZsSm92WWFWYU1VVk0tUkhVVlBEZmlnaktOQWozYWZwa3hfdDk4d2VkUTBWbVdJaU0tMWZMOHFZd2F0enhJTUZMZmJ0S2F5QVE?oc=5",
+      "title": "Inflation: 3 statistiques clés du rapport sur l’IPC d’avril à retenir - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWUtiaHpfRjUyWEg3WUNjSTNzZmVxcFYyaUJLbllQUmJJSG1iT0lBdzUwTVZvc3Q3ZWZXc1ZEREJ0bFBfXzcwMEF1UDNNdW55LUtDajhWbjl1ZjY2bndlTnBfSHNGUHJxTmZ3RV9McEY3SFFBZHo3dk9DbnV5OVBCc0dsSUV5TTNIZUN3MVoxYWFGU1NqdEhpQ1R2TnpGTHBlU0gwMTNneEVyblhuaG1qaQ?oc=5",
       "source": "news.google.com",
-      "description": "Discours : Ottawa Economics Association et l’Association canadienne de science économique des affaires  Banque du Canada",
+      "description": "Inflation: 3 statistiques clés du rapport sur l’IPC d’avril à retenir  Les Affaires",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L'IA ne remplace pas les travailleurs à grande échelle pour l'instant, selon la Banque du Canada - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOOHNxeVpZUDFHOHp6NEdzRDZSc3JwRFgtVUNSY1Fkd2pIeE8yNzJ0OHlIRnhYQ3BKbVB3bGZTR2RZTURoQzJSNHRWSkxHQmw3TDE1X2xwVU9MZWpLNnJ2ZDYyMmk5R3VPVG9lLXN4Wl9zT0VKV1VXb0xiaHRtTUpyQU9Tc0MxUXZESnVoNjBabHRqaDNySGM1VmlfQ3RSTnFNN0JzQWY0S3lPRklLOXdGb243MUZObGctMEpFSXFiZk1Gc1FfSDd3UjNIYm9xVDJ1NUcycjF0QkpKaTlGeUdwT01QQU5iVUl1T3d2dA?oc=5",
+      "title": "Canada: l'inflation poursuit son accélération en avril - Boursorama",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOcldKUTVocHJOdEYzWllfa2l4WnNsV04yLWswNkZDWGlhMUs1cGlJR1BNaTBRNlo1dmpwdGUxMDVocU1vWklMR3BQU21hanVUV0djRlVSanVINjVTTncxMUVKOVh1Umk1OHM1VUpQNEJBSXRleFZ5N1JscmliMGlUVGM4b3Job1F1d0l4WjlFTXdhbHROdVdnelpRMHhMdlhCX0lsNGk0Vk90NGRDRVhTMzY3d3RLTHRmZUswd1BrMWZodTV3Z0dkSlVpTUtvZ0JtQmpTUTFUUC1JVWQ2LXpsb3NLb9IB4wFBVV95cUxOcldKUTVocHJOdEYzWllfa2l4WnNsV04yLWswNkZDWGlhMUs1cGlJR1BNaTBRNlo1dmpwdGUxMDVocU1vWklMR3BQU21hanVUV0djRlVSanVINjVTTncxMUVKOVh1Umk1OHM1VUpQNEJBSXRleFZ5N1JscmliMGlUVGM4b3Job1F1d0l4WjlFTXdhbHROdVdnelpRMHhMdlhCX0lsNGk0Vk90NGRDRVhTMzY3d3RLTHRmZUswd1BrMWZodTV3Z0dkSlVpTUtvZ0JtQmpTUTFUUC1JVWQ2LXpsb3NLbw?oc=5",
       "source": "news.google.com",
-      "description": "L'IA ne remplace pas les travailleurs à grande échelle pour l'instant, selon la Banque du Canada  Zonebourse",
+      "description": "Canada: l'inflation poursuit son accélération en avril  Boursorama",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux directeur : la Banque du Canada laisse la porte ouverte à de nouvelles hausses - Mon Fric",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUEd6ampNZGl6WnZUOEk0SnVaa0RQVm9hTTZrM0tzdEVRQ1pfd2p1NjVDVnhNSmtvREhHZ1RLcExIaXJfNFA4QVYwbDJlcGpPSUY4VVZtY0MxUUZKc2IxNk5BaWNFQ1ZYa1FiNHdfdnRjN2gyMHFTWFkySUdfQkFxdlpjUGJwRVBTU0E5aWNkRi0xS0pjR0wzMDhJY0hpN3RNNjVZaHZzZEVTQ3M4Rjg5QmNUTTA?oc=5",
+      "source": "news.google.com",
+      "description": "Taux directeur : la Banque du Canada laisse la porte ouverte à de nouvelles hausses  Mon Fric",
       "cities": [],
       "category": "general"
     }
@@ -351,5 +345,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-19 16:18"
+  "last_update": "2026-05-20 16:23"
 }
