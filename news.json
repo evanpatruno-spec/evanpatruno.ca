@@ -1,18 +1,26 @@
 {
   "news": [
     {
-      "title": "Exercice 2026 | Investissements RPC a enregistré un rendement de 7,8 %",
-      "link": "https://www.lapresse.ca/affaires/2026-05-21/exercice-2026/investissements-rpc-a-enregistre-un-rendement-de-7-8.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Nouveau président de la Fed | Kevin Warsh doit prêter serment en présence de Donald Trump",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-22/nouveau-president-de-la-fed/kevin-warsh-doit-preter-serment-en-presence-de-donald-trump.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "L’Office d’investissement du régime de pensions du Canada (Investissements RPC) annonce jeudi un rendement de 7,8 % pour son exercice 2026.",
+      "description": "Le nouveau président de la Réserve fédérale américaine (Fed), Kevin Warsh, doit prêter serment vendredi à la Maison-Blanche, un geste rare alors que le nouveau banquier central devra prouver son indépendance à l’égard de Donald Trump dans un contexte économique qui se tend.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Technologie médicale | Fondaction investit dans le fabricant d’orthèses Turtlebrace",
-      "link": "https://www.lapresse.ca/affaires/2026-05-21/technologie-medicale/fondaction-investit-dans-le-fabricant-d-ortheses-turtlebrace.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Deuxième trimestre | Les banques devraient afficher une « croissance solide », selon des analystes",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-22/deuxieme-trimestre/les-banques-devraient-afficher-une-croissance-solide-selon-des-analystes.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "L’entreprise québécoise Turtlebrace, qui conçoit et fabrique des orthèses de soins orthopédiques pour l’usage sur mesure en cliniques spécialisées, obtient un investissement financier de Fondaction, qui gère un actif de 4,2 milliards de placements dans des centaines d’entreprises québécoises et dans les marchés financiers.",
+      "description": "Alors que les banques canadiennes s’apprêtent à publier leurs résultats du deuxième trimestre, les analystes s’attendent à des hausses d’une année sur l’autre malgré un environnement opérationnel « difficile » et un ralentissement de la croissance des prêts.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Un groupe citoyen compte sur la Charte pour bloquer le financement public d’un projet de GNL",
+      "link": "https://www.ledevoir.com/economie/982001/groupe-citoyen-compte-charte-bloquer-financement-public-projet-gnl",
+      "source": "Le Devoir",
+      "description": "Les avocats du groupe ont envoyé une lettre juridique à des ministres fédéraux et à des sociétés d’État.",
       "cities": [],
       "category": "general"
     },
@@ -41,14 +49,6 @@
       "category": "general"
     },
     {
-      "title": "L’immobilier industriel plafonne - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQOVhxd19XWTF4WFZ4a2RZMExDZXBPc0ZZLWlWaW5Xa0RzZUp5WFZHX0s1cDBVRThheHlqbVJjSzIxb25rWk1YYlhaQnB1VzlWY0xTTVhONVNOX2dvbUxKQk0yc0JNdk8tNm8wVnVKM011Rk05NGlEcTljWkdvR2NUUEdwWlFXd2VBd1hDeVgyOWdQcThJbXk2Zk1JLXVFUmRKZFZZYkJnNF9HZHpoXy03akhwYjFxQzBXQjltQWpMaWJNWmFWVnhDQlZLZERVTjdGWXY1R3NaRQ?oc=5",
-      "source": "news.google.com",
-      "description": "L’immobilier industriel plafonne  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le boom immobilier de Lac-Etchemin - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNFpQNC1pZk5rSXg4dTVHWnV6c0RGVXZ2d2Z3UXVBbUNHTU95VGlRRGZLXzMtTGdRRExyLW9KOGFINC1XWUVkbmNQcTlaUUtLQWo0M3Y5UmM1bVhqZ1JUa1kzYkU3MnJ3ZXVFVllBeEM1MHl2Vk1Qc2Vock1NT3loUnBuaG1lQVdVTTBGbGNLVHZ0UER0VU5TaEtWRHlieDBvcDVfYkg5WTA1elRZLXlwaFV1SmFsZnAtejR1eFpTbENCQ0REdHRzZlJXUzJTczQ?oc=5",
       "source": "news.google.com",
@@ -65,22 +65,6 @@
       "category": "general"
     },
     {
-      "title": "« Si on veut taire la crise du logement, il faudra s'attaquer à l'offre » - 106.9 Mauricie",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWXJuSU5WMlRWaU5zR010dkFTMmhYT0w3V3pkRkZzYThMLUptWHIyQlJwZGtjQ2RXU25veEs2ek9xc1pQLVB3STc1dTEyMUxjdkt6V0k1cXM0d1FMeGJwMUtrUHlubDFaOG12bmxRUE9iTmYzQWFIV3REcS1ZM3oxYXlwMGZ4UEx4QjZsLWp4andQOEhuazZFNHFQWC12aUUzb0ZkN3BB?oc=5",
-      "source": "news.google.com",
-      "description": "« Si on veut taire la crise du logement, il faudra s'attaquer à l'offre »  106.9 Mauricie",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "#792 - Yvan Cournoyer | Président Chez Club D'investisseurs Immobiliers Du Québec (CIIQ). (mbR0e1zJrA) - fathomjournal.org",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBDOXlQTXNPN0U4OUVqZWNrSGhONlRqU092cGZqTFhfM29aU1VXbUZmc1pvSllNaDhuNGZEQW1UMDRVZ2c1dzRzTGtIOEtkMnNVcHJiMUEtanROUHVtd2d4V0otZTdWME1MYzlYeGMzSVU?oc=5",
-      "source": "CIIQ",
-      "description": "#792 - Yvan Cournoyer | Président Chez Club D'investisseurs Immobiliers Du Québec (CIIQ). (mbR0e1zJrA)  fathomjournal.org",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Immobilier: les commerces physiques reviennent à la mode - Les Affaires",
       "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOVHNtMWJMQnZ4MVRlMjZwTldCTXo5ckRtQnZVX0Z2QVhwb1dpVzRjRHAtam50MUV2WUJqXy12Y3dxTWJfMXk4Q0tOOEQ2Q2paZi1SVWJKdTJ0Vk9Fb0pVck5NS3VjNnk4Z0xldjFpeGg3dnlQU3BTbi1XZkVHWjlLeFlSbnJrQ3pObXZRaUQ2UWNtTjhjU0NpeDVTNXprcnpndXU1dHhiZlhmWXkzN04xR0JaTTJDeEJjUDA0UTVNLU9KelJVZjRBdDJib2pldDJORHhGX2xZd2NXWGU0aGh1enlqMlNXcU1hV2cxT2VxdHcybU1MeVg0?oc=5",
       "source": "news.google.com",
@@ -89,18 +73,18 @@
       "category": "general"
     },
     {
-      "title": "Immobilier: quand les tours changent de vocation - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPWU9UMi1VaTNxR2NNMHNCVTNkY3IzMFotT25CWi1jT3pFZVNNZDRvMUljSGp0UGNSekNJVUFCMVBuNHppOEVVcFFCR0QwRW9ncUo1cmhrY3JHU2RZdTB3M0F0RjJKbUFHWWVLT1JVU0pSYWpSQk9vOTVPWGdGU3VlWEZoaVZ5LW9rcU9HUXJPSVNHMlE5blJLMnd4NzNsM0FWMWdlVURtWlpmeW5DUjkxNlBVMDgtdnd2SnUtZHFRZEE1NmdIejJ0TGs2VGRsbFpJWDZiakFHdHFlcHk0b2w4RmdfcjdIS1FMUEZYeg?oc=5",
+      "title": "« Si on veut taire la crise du logement, il faudra s'attaquer à l'offre » - 106.9 Mauricie",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWXJuSU5WMlRWaU5zR010dkFTMmhYT0w3V3pkRkZzYThMLUptWHIyQlJwZGtjQ2RXU25veEs2ek9xc1pQLVB3STc1dTEyMUxjdkt6V0k1cXM0d1FMeGJwMUtrUHlubDFaOG12bmxRUE9iTmYzQWFIV3REcS1ZM3oxYXlwMGZ4UEx4QjZsLWp4andQOEhuazZFNHFQWC12aUUzb0ZkN3BB?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier: quand les tours changent de vocation  Les Affaires",
+      "description": "« Si on veut taire la crise du logement, il faudra s'attaquer à l'offre »  106.9 Mauricie",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Développement immobilier: trouver du financement, un vrai casse-tête - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQQUxtNUVMY2twVFVFM2tfRUl5akprWDJIVDE3dnVLajJhYkk5N0FobFpUWkkyaGVhT0VtRTZ0Qm1aNGZybjdNV29TRk56cnBWM1Q3UmsxUlRFUmhiRVYwWTNZNnBHc3p0SEwxRGtmaXRDSnN3N1RTVVhOcDBZY1UtXzRJOGV5TU1FMVhCaXNaNnQwR1MweDRDaVZDWFMyTjRibmhOUlZKYjhoSjZIdFVZWWNJUldqU0VaWWtTSmlRVU9rLXJJTVZZckNRYVdUX3lBaFpVaVNGeEdLYzBMMVl6TlE5OUZVYzZVZGVpcFo2VGxqaW9oRjFHVnlQczQ3ZzJqaWFFQnRB?oc=5",
+      "title": "Immobilier: quand les tours changent de vocation - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPWU9UMi1VaTNxR2NNMHNCVTNkY3IzMFotT25CWi1jT3pFZVNNZDRvMUljSGp0UGNSekNJVUFCMVBuNHppOEVVcFFCR0QwRW9ncUo1cmhrY3JHU2RZdTB3M0F0RjJKbUFHWWVLT1JVU0pSYWpSQk9vOTVPWGdGU3VlWEZoaVZ5LW9rcU9HUXJPSVNHMlE5blJLMnd4NzNsM0FWMWdlVURtWlpmeW5DUjkxNlBVMDgtdnd2SnUtZHFRZEE1NmdIejJ0TGs2VGRsbFpJWDZiakFHdHFlcHk0b2w4RmdfcjdIS1FMUEZYeg?oc=5",
       "source": "news.google.com",
-      "description": "Développement immobilier: trouver du financement, un vrai casse-tête  Les Affaires",
+      "description": "Immobilier: quand les tours changent de vocation  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -131,22 +115,6 @@
       "category": "local"
     },
     {
-      "title": "Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOVExqZklFLUwzRFBwTVpoWGdkTzlpTzVLcnJNb2Z5bzNsRXdtODRHRFBBRXNpNXI3bnNCdlVZQUlWU0kzcmZmQWZnOTNfUUlMcmsxbndSMnAxS2prZF9xbWhkdlpEQ2JBRW55c3Q1X1N3REF2UEFrZ2c3Q1lZNXZaODRCUHFadWxQU3dQT2xjZXl1NE5GSzN3YS1rM21pTWlfeEM5NVdJdHJiNWp4R1lHSTFKY1U3MTJDMjZqWVpCQk9lSWFlaTJkbzhDZi0xZ3VxdkxubFU3SjQ?oc=5",
-      "source": "news.google.com",
-      "description": "Prêts hypothécaires: le volume des renouvellements devrait diminuer en 2026, selon la SCHL  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Desjardins anticipe une inflation dans les 3 % à cause de l’Iran - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNHBfYnpneGt4VnlqR3BMLXRPcTI5Wl9Ha1p0cGYtWHdLM3UwbndMMEkzRnVrTlZ1MktEdFVpcjk4c3hscUhuV0VJd1ZzQ2NmZGdvRExsT0QwVVV0dzF3RW9IVlVtWHQxWE5nQkhPU1RyRTNjOFFaU0NWOXJQazlOdFMyYW5NNEN1Qm81LXpxcERzSFZhMVRaWTBZbExQS0ZuSmphcmhJaWlMY1R4emg5VFlEVFBoREtySXVlR2NHV1lrbTVPMVhiSw?oc=5",
-      "source": "news.google.com",
-      "description": "Desjardins anticipe une inflation dans les 3 % à cause de l’Iran  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Pas de reprise immobilière ce printemps, mais les acheteurs reviennent - Les Affaires",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV2VMWFRvbW9EVjVwVEJvQnNFWlpDb3ZuU0ZKUWtsTWFaVlktWllKVWFkbDF4NFJUek5jTTVOS0dRWnFadjZ5VGRFcXEyTUtWUk1NN1lhYkFSeE8teTctcERkaGRTdW0zQTA4MlUtRVRRYVpKc1hyc0ZnMnQzczl6d2hBRnZONnI1amRtMFozNGp1bXh5TkdLNVlqMk45b1Y1Z0NNUjJOOFBxQU1wcmpVZ3l4WkE?oc=5",
       "source": "news.google.com",
@@ -171,6 +139,22 @@
       "category": "general"
     },
     {
+      "title": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO) - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0gzVjVnblNmMlRRX0xhZXh6SXpmVFItTjRUWjBYWU9hVE9fcXRNTS1vRFlYNXhGa1pkY0FKNXEwOW5JVFJXczRBNjd3bEpEZ3hiV3JGYl9tWHBIejR1TzJ3T2JFZGhiQTBjbzFaYnVVSm9kWHI2bXVENWtWZ2tsQTZjMi1renZZUjJ4UlgtcURHdV9pVWJKbHRmOG5JZDczcmU4REZNVUVENWJwdXBYclNDMHFjXzlfSmM4UHhad0ZUdkhf?oc=5",
+      "source": "CIRANO",
+      "description": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO)  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada est sur la bonne voie - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOT3FjTHhQMlpoQXR5VVJzV1JNSlB2X0gwLVBCWnUxX19hODNkMTVqMGNTanFCcmNtQVVXLTJSQ1JMVkttNDdEdXJCZmhKTHAwbmZ4NEQzNVZlT3Z4VGdNbGQ3TUtZT0ZWbmJ4ZW00U2pMVER4ck10NWl0Rk5VZzN6UVdqUnlyUQ?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada est sur la bonne voie  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La hausse des prix du pétrole accélère l’inflation à 2,8 % au Canada - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KQmZnNFlSaER0bWc3SUVRdTQtNUxrd0N1U1FDVkg5b0p3eGNhYnRsRTlxMjU0OTFyalZjdUxKSlBGQWU0bkp1X2N6X05GOGtxemxYZ3FKMFdVOFFtWGJVb3pvQmx1YklwTWJxSzROaEpLeGViX0E?oc=5",
       "source": "news.google.com",
@@ -187,10 +171,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada est sur la bonne voie - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOT3FjTHhQMlpoQXR5VVJzV1JNSlB2X0gwLVBCWnUxX19hODNkMTVqMGNTanFCcmNtQVVXLTJSQ1JMVkttNDdEdXJCZmhKTHAwbmZ4NEQzNVZlT3Z4VGdNbGQ3TUtZT0ZWbmJ4ZW00U2pMVER4ck10NWl0Rk5VZzN6UVdqUnlyUQ?oc=5",
+      "title": "Banque Du Canada publie le résumé de son quatrième maintien - شبكة تواصل الإخبارية",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBvb1FwUTQwNHlxZV9uOVM2eExPY2FOdmd1bnQ5MnFLMS1IT244eTJXd3FaSmdLcXJzLWdhVFVjYWEtRmtqakUxX3QzNUU0RDZfeDU0?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada est sur la bonne voie  Les Affaires",
+      "description": "Banque Du Canada publie le résumé de son quatrième maintien  شبكة تواصل الإخبارية",
       "cities": [],
       "category": "general"
     },
@@ -203,18 +187,18 @@
       "category": "general"
     },
     {
-      "title": "Les économistes s’attendent à ce que l’inflation ait atteint les 3 % en avril - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWndoWEtPU2dkSEdfbWJCZHlMWi1udjJZeFhnLXBQZDRYNHc4SGktN1pNS0VNZjF5enFkR2l6X1Q4SnhhLVFtWWszSUZfSDMwNGlfclo0QjVldnBNZjV5cmVvZ3dBUF9tWFFGeWFId3FjdldGdWVLUDZ6bWZaNE5hT05RRGJKRWszX3A1TnRrM0JCYUcwSnpOa21RNA?oc=5",
+      "title": "Les dilemmes de la Fed et de la Banque du Canada - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWkRxTTVNNDZNeU53WDR6LXdSMnU4djlxVDc5dXUtZUN5MnFXM3VjVHVfMXRURlhSdEstb3FkM1MwbTRLbHhpOHFrT2ExbEdhdlNpdEw4cjFTRE1VQm5nZGZrUjBhNEVWRF9JZmRpSlVhNUw2WUxKQ0ptOW00cXI5ejFYS25MV3FZU3hzWlRkSTFPZnZxSUVhVw?oc=5",
       "source": "news.google.com",
-      "description": "Les économistes s’attendent à ce que l’inflation ait atteint les 3 % en avril  Le Devoir",
+      "description": "Les dilemmes de la Fed et de la Banque du Canada  Les Affaires",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Banque Du Canada publie le résumé de son quatrième maintien - شبكة تواصل الإخبارية",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBvb1FwUTQwNHlxZV9uOVM2eExPY2FOdmd1bnQ5MnFLMS1IT244eTJXd3FaSmdLcXJzLWdhVFVjYWEtRmtqakUxX3QzNUU0RDZfeDU0?oc=5",
+      "title": "Les économistes s’attendent à ce que l’inflation ait atteint les 3 % en avril - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWndoWEtPU2dkSEdfbWJCZHlMWi1udjJZeFhnLXBQZDRYNHc4SGktN1pNS0VNZjF5enFkR2l6X1Q4SnhhLVFtWWszSUZfSDMwNGlfclo0QjVldnBNZjV5cmVvZ3dBUF9tWFFGeWFId3FjdldGdWVLUDZ6bWZaNE5hT05RRGJKRWszX3A1TnRrM0JCYUcwSnpOa21RNA?oc=5",
       "source": "news.google.com",
-      "description": "Banque Du Canada publie le résumé de son quatrième maintien  شبكة تواصل الإخبارية",
+      "description": "Les économistes s’attendent à ce que l’inflation ait atteint les 3 % en avril  Le Devoir",
       "cities": [],
       "category": "general"
     },
@@ -227,10 +211,10 @@
       "category": "general"
     },
     {
-      "title": "Canada: l'inflation poursuit son accélération en avril - Boursorama",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOcldKUTVocHJOdEYzWllfa2l4WnNsV04yLWswNkZDWGlhMUs1cGlJR1BNaTBRNlo1dmpwdGUxMDVocU1vWklMR3BQU21hanVUV0djRlVSanVINjVTTncxMUVKOVh1Umk1OHM1VUpQNEJBSXRleFZ5N1JscmliMGlUVGM4b3Job1F1d0l4WjlFTXdhbHROdVdnelpRMHhMdlhCX0lsNGk0Vk90NGRDRVhTMzY3d3RLTHRmZUswd1BrMWZodTV3Z0dkSlVpTUtvZ0JtQmpTUTFUUC1JVWQ2LXpsb3NLb9IB4wFBVV95cUxOcldKUTVocHJOdEYzWllfa2l4WnNsV04yLWswNkZDWGlhMUs1cGlJR1BNaTBRNlo1dmpwdGUxMDVocU1vWklMR3BQU21hanVUV0djRlVSanVINjVTTncxMUVKOVh1Umk1OHM1VUpQNEJBSXRleFZ5N1JscmliMGlUVGM4b3Job1F1d0l4WjlFTXdhbHROdVdnelpRMHhMdlhCX0lsNGk0Vk90NGRDRVhTMzY3d3RLTHRmZUswd1BrMWZodTV3Z0dkSlVpTUtvZ0JtQmpTUTFUUC1JVWQ2LXpsb3NLbw?oc=5",
+      "title": "Canada: l'inflation poursuit son accélération en avril - TradingView",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5TbDE0aEVYMHZUak5UTWVzTlRLNEJoMk94RzFRQWMzeTdwdy1WSUdLS1B5bDJLQXd4WC13M1VXR3ZZSUIxU1VBU0VPNzFhZWNiUFAtRTJ5VWd2djNKLXZoNTl3?oc=5",
       "source": "news.google.com",
-      "description": "Canada: l'inflation poursuit son accélération en avril  Boursorama",
+      "description": "Canada: l'inflation poursuit son accélération en avril  TradingView",
       "cities": [],
       "category": "general"
     },
@@ -243,14 +227,6 @@
       "category": "general"
     },
     {
-      "title": "Inflation: 3 statistiques clés du rapport sur l’IPC d’avril à retenir - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWUtiaHpfRjUyWEg3WUNjSTNzZmVxcFYyaUJLbllQUmJJSG1iT0lBdzUwTVZvc3Q3ZWZXc1ZEREJ0bFBfXzcwMEF1UDNNdW55LUtDajhWbjl1ZjY2bndlTnBfSHNGUHJxTmZ3RV9McEY3SFFBZHo3dk9DbnV5OVBCc0dsSUV5TTNIZUN3MVoxYWFGU1NqdEhpQ1R2TnpGTHBlU0gwMTNneEVyblhuaG1qaQ?oc=5",
-      "source": "news.google.com",
-      "description": "Inflation: 3 statistiques clés du rapport sur l’IPC d’avril à retenir  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Nomura prévoit un statu quo de la Banque du Canada cette année face à l'apaisement des pressions inflationnistes sous-jacentes - Zonebourse Suisse",
       "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZDFNWnFMbmpLWlFjN3IxQmJkVmlMUzdzQ0ZvMENBaWtqWkdqTHF3T19VcktTMVRYQUNldy1IQXBkcElTUDItSk5aMVJ3R09oN3FyYUdWSmVKLXZuV09rckhqMExscWFBeXBhM3pOQ3owaGtHWVYta3dEY0dlVkpFdFlqc0hWcHdaYUhtcmNMX29VVzE5NEV2QU5BaVR0eXhvQ1NrRjNyRURZZ1hlX2RVaV9xNEZMZDExX2x0S19PaUF0REloLTZqbnRxVUVJdXB5M0FGdUlkVFVFQk9UeUJIdC12T0VrSnZtWHJfaEthRDhGUQ?oc=5",
       "source": "news.google.com",
@@ -259,26 +235,10 @@
       "category": "general"
     },
     {
-      "title": "UBS table sur un statu quo de la Banque du Canada cette année, malgré les anticipations de hausse des marchés - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPV09IUGpZNXJSTV9qZTk0blVNZWJUSFlzTG5jNVo0aUJFU3pBTzliaHM3NU5Zd0MzbGh6RElva2ZQTHFZTEZ2ME1IekFnSDItTFJyaG56UHZKd2hmQjUwTnBQS2tZVmY4dGZZN3k5Wmdmc2NMVklrS0ZTaXBSZkFRQVFkcWkwaEVGVFpPY1B6Q2JFYTlGQVVDSjBmMXlqMlBZVm54V24zRDh6a0tHbEtoN1F1VG1Ja1cwWE9KVGN2eXAxU2d6aUdBVWxzcXpmaEcyVFpLVEczQU5QeWRDdXJ6MkRPbUlFZFhVUmF4TVk0dUl6UQ?oc=5",
+      "title": "Inflation: 3 statistiques clés du rapport sur l’IPC d’avril à retenir - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWUtiaHpfRjUyWEg3WUNjSTNzZmVxcFYyaUJLbllQUmJJSG1iT0lBdzUwTVZvc3Q3ZWZXc1ZEREJ0bFBfXzcwMEF1UDNNdW55LUtDajhWbjl1ZjY2bndlTnBfSHNGUHJxTmZ3RV9McEY3SFFBZHo3dk9DbnV5OVBCc0dsSUV5TTNIZUN3MVoxYWFGU1NqdEhpQ1R2TnpGTHBlU0gwMTNneEVyblhuaG1qaQ?oc=5",
       "source": "news.google.com",
-      "description": "UBS table sur un statu quo de la Banque du Canada cette année, malgré les anticipations de hausse des marchés  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "BOURSE CANADIENNE-Le TSX recule alors que les craintes liées à l'inflation prennent le pas sur l'apaisement de - Boursorama",
-      "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQS2pBUlJmejJwOHpLdmRMMWdJVEhHenpJLVRZdkdtbXZrR19BMHV5VlludVc0RUtVRWVTam1XU25jT0ZEekhaNHlPRnRteEQyeGlFc3BJVC02Qkh0VHBjandPT2RINUowZGszSWxiRlIzNjdiTzlRVGFRWWdBckRCbVB4NE1MRTBwbk1OVnNYTk05N2pJYkRBbzR5eUdaOUJnUEVNNWIwYzZlV3VqZ2ZlaGZZN01lWGRaTEpGVm1FOFBpNXUtcDNSTDZLQzJNUFJLOWMyN21FQVQ1RTVIc05vT1lxRV9TZndhbFRIYTF0UHVLR0VGajBCbFJyLXVKc3RKSWpMYWFYN3ZEalVGOUt6bDl2VHRYY0pHamVmM21rMDBGM2N5RllDd1RGR2ZGX2lsTFZFQ1pSRFpSTVBF0gG8AkFVX3lxTFBLakFSUmZ6MnA4ekt2ZEwxZ0lUSEd6ekktVFl2R21tdmtHX0EwdXlWWW51VzRFS1VFZVNqbVdTbmNPRkR6SFo0eU9GdG14RDJ4aUVzcElULTZCSHRUcGNqd09PZEg1SjBkazNJbGJGUjM2N2JPOVFUYVFZZ0FyREJtUHg0TUxFMHBuTU5Wc1hOTTk3akliREFvNHl5R1o5QmdQRU01YjBjNmVXdWpnZmVoZlk3TWVYZFpMSkZWbUU4UGk1dS1wM1JMNktDMk1QUks5YzI3bUVBVDVFNUhzTm9PWXFFX1Nmd2FsVEhhMXRQdUtHRUZqMEJsUnItdUpzdEpJakxhYVg3dkRqVUY5S3psOXZUdFhjSkdqZWYzbWswMEYzY3lGWUN3VEZHZkZfaWxMVkVDWlJEWlJNUEU?oc=5",
-      "source": "news.google.com",
-      "description": "BOURSE CANADIENNE-Le TSX recule alors que les craintes liées à l'inflation prennent le pas sur l'apaisement de  Boursorama",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Au Canada, la dette hypothécaire atteint des niveaux records en raison de l'augmentation des arriérés de paiement. - elcentronews.net",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSDFWZEZ2WjFUT0lGeW1tN2M2bXlOdnoxZUg2aDY4U0tzVGJTT19wLTNULUZpTWVPb0laR2x6U3MtTGFURjIwREVBSkNPOFU3aUxOUm9ETFlpMHhzdktBdHpTMXhJYnF2LTNmci1vRTg5bGVVazRVQlNrRkdpRDQ2b0JKT3h5dHdRM0pwcXB3Y2ozYWdPTWdrSXZfM0JvMjNiZGNYT3RiLXNlaExRcnpvakp3?oc=5",
-      "source": "news.google.com",
-      "description": "Au Canada, la dette hypothécaire atteint des niveaux records en raison de l'augmentation des arriérés de paiement.  elcentronews.net",
+      "description": "Inflation: 3 statistiques clés du rapport sur l’IPC d’avril à retenir  Les Affaires",
       "cities": [],
       "category": "general"
     }
@@ -335,5 +295,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-21 16:15"
+  "last_update": "2026-05-22 15:48"
 }
