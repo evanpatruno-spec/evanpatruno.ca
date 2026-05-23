@@ -252,28 +252,6 @@
     "isSold": false
   },
   {
-    "mls": "28392043",
-    "url": "https://www.himalayacorp.com/fr/proprietes/vendre-.html?NoMLS=28392043",
-    "city": "Gracefield",
-    "price": "1 450 000 $ + TPS/TVQ",
-    "image": "https://immo.vrtx.co/Pic450/28392043.jpg",
-    "description": "À 150 km d'Ottawa, sur une presqu'île du lac Giles dans la municipalité de Northfield (Gracefield), se trouve la pourvoirie Mijocama. Situé au coeur d'un paysage enchanteur, entre les lacs 31 Milles et Pémichangan, réputés pour leurs vues spectaculaires et leurs populations abondantes de Touladi (truite grise). Forte de plusieurs décennies d'existence, cette pourvoirie, qui a bâti sa renommée autour de la chasse et de la pêche, s'étend sur ses propres terres. Le terrain peut être subdivisé pour construction de résidence permanante.",
-    "photos": [
-      "https://immo.vrtx.co/PicFull/28392043-2.jpg",
-      "https://immo.vrtx.co/PicFull/28392043-3.jpg",
-      "https://immo.vrtx.co/PicFull/28392043-4.jpg",
-      "https://immo.vrtx.co/PicFull/28392043-5.jpg",
-      "https://immo.vrtx.co/PicFull/28392043-6.jpg",
-      "https://immo.vrtx.co/PicFull/28392043-7.jpg",
-      "https://immo.vrtx.co/PicFull/28392043-8.jpg",
-      "https://immo.vrtx.co/PicFull/28392043-9.jpg",
-      "https://immo.vrtx.co/PicFull/28392043.jpg"
-    ],
-    "specs": {},
-    "brokers": "Roger Rhéaume, Geniev Mondoux, Mike Ainajian, Éric Barelier, Karine Beliveau-White, Lucie Bourbeau, Sylvie Castonguay, Marie-Cristelle Comeau, Joseph Jacob, Francine Leblanc, Sylvain Lessard, Lyna Lyna Brassard, Olivier Meunier, Taline Ovayan, Evan Patruno, Chanel Payette, Michel Potvin, Nagatharsini Rajartnam, Hemkesh Nivan Ramgolam, Nathan Thérien, Yun Zhang, Pengbo Zhao",
-    "isSold": false
-  },
-  {
     "mls": "20409312",
     "url": "https://www.himalayacorp.com/fr/proprietes/vendre-.html?NoMLS=20409312",
     "city": "Territoires Autres / Other Territories",
@@ -429,6 +407,26 @@
     ],
     "specs": {},
     "brokers": "Roger Rhéaume, Geniev Mondoux, Mike Ainajian, Éric Barelier, Karine Beliveau-White, Lucie Bourbeau, Sylvie Castonguay, Marie-Cristelle Comeau, Joseph Jacob, Francine Leblanc, Sylvain Lessard, Lyna Lyna Brassard, Olivier Meunier, Taline Ovayan, Evan Patruno, Chanel Payette, Michel Potvin, Nagatharsini Rajartnam, Hemkesh Nivan Ramgolam, Nathan Thérien, Yun Zhang, Pengbo Zhao",
+    "isSold": false
+  },
+  {
+    "mls": "HIM100368",
+    "url": "https://www.himalayacorp.com/fr/proprietes/vendre-.html?NoMLS=HIM100368",
+    "city": "République Dominicaine",
+    "price": "890 000 US",
+    "image": "DATA/CMSIMAGE/4509.jpg",
+    "description": "Le prix de vente inclus le fond de commerce ,le point de vente avec location a 1200$ mensuel , un laboratoire de 330 m²  , un appartement loft de 350 m² avec piscine sur le toit et un véhicule . \r\nEmplacement privilégié dans un quartier dynamique et touristique de Las Terrenas.\r\nClientèle fidèle et en constante expansion, comprenant des habitants locaux et des touristes.\r\nÉquipement complet et moderne pour la production de délices frais chaque jour.\r\nLarge gamme de produits incluant pains artisanaux, pâtisseries fines, viennoiseries exquises et bien plus encore.\r\nPersonnel qualifié et passionné, prêt à transmettre son savoir-faire. \r\n\t\t\t\t\t\t\t\r\n\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\tCette opportunité est parfaite pour les boulangers-pâtissiers expérimentés cherchant à s'établir dans un cadre enchanteur.\r\nCe commerce a une très bonne réputation et travaille avec les hôtels et restaurants du village.",
+    "photos": [
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4509.jpg",
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4510.jpg",
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4511.jpg",
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4512.jpg",
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4513.jpg",
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4514.jpg",
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4515.jpg"
+    ],
+    "specs": {},
+    "brokers": "Roger Rhéaume",
     "isSold": false
   },
   {
@@ -744,26 +742,6 @@
     ],
     "specs": {},
     "brokers": "Sylvie Castonguay",
-    "isSold": false
-  },
-  {
-    "mls": "HIM100368",
-    "url": "https://www.himalayacorp.com/fr/proprietes/vendre-.html?NoMLS=HIM100368",
-    "city": "République Dominicaine",
-    "price": "890 000 US",
-    "image": "DATA/CMSIMAGE/4509.jpg",
-    "description": "Le prix de vente inclus le fond de commerce ,le point de vente avec location a 1200$ mensuel , un laboratoire de 330 m²  , un appartement loft de 350 m² avec piscine sur le toit et un véhicule . \r\nEmplacement privilégié dans un quartier dynamique et touristique de Las Terrenas.\r\nClientèle fidèle et en constante expansion, comprenant des habitants locaux et des touristes.\r\nÉquipement complet et moderne pour la production de délices frais chaque jour.\r\nLarge gamme de produits incluant pains artisanaux, pâtisseries fines, viennoiseries exquises et bien plus encore.\r\nPersonnel qualifié et passionné, prêt à transmettre son savoir-faire. \r\n\t\t\t\t\t\t\t\r\n\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\tCette opportunité est parfaite pour les boulangers-pâtissiers expérimentés cherchant à s'établir dans un cadre enchanteur.\r\nCe commerce a une très bonne réputation et travaille avec les hôtels et restaurants du village.",
-    "photos": [
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4509.jpg",
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4510.jpg",
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4511.jpg",
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4512.jpg",
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4513.jpg",
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4514.jpg",
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4515.jpg"
-    ],
-    "specs": {},
-    "brokers": "Roger Rhéaume",
     "isSold": false
   },
   {
@@ -1108,6 +1086,28 @@
     ],
     "specs": {},
     "brokers": "Nathan Thérien, Roger Rhéaume",
+    "isSold": false
+  },
+  {
+    "mls": "15722971",
+    "url": "https://www.himalayacorp.com/fr/proprietes/vendre-.html?NoMLS=15722971",
+    "city": "Gracefield",
+    "price": "1 450 000 $ + TPS/TVQ",
+    "image": "https://immo.vrtx.co/Pic450/15722971.jpg",
+    "description": "À 150 km d'Ottawa, sur une presqu'île du lac Giles dans la municipalité de Northfield (Gracefield), se trouve la pourvoirie Mijocama. Situé au coeur d'un paysage enchanteur, entre les lacs 31 Milles et Pémichangan, réputés pour leurs vues spectaculaires et leurs populations abondantes de Touladi (truite grise). Forte de plusieurs décennies d'existence, cette pourvoirie, qui a bâti sa renommée autour de la chasse et de la pêche, s'étend sur ses propres terres. Le terrain peut être subdivisé pour construction de résidence permanante.",
+    "photos": [
+      "https://immo.vrtx.co/PicFull/15722971-2.jpg",
+      "https://immo.vrtx.co/PicFull/15722971-3.jpg",
+      "https://immo.vrtx.co/PicFull/15722971-4.jpg",
+      "https://immo.vrtx.co/PicFull/15722971-5.jpg",
+      "https://immo.vrtx.co/PicFull/15722971-6.jpg",
+      "https://immo.vrtx.co/PicFull/15722971-7.jpg",
+      "https://immo.vrtx.co/PicFull/15722971-8.jpg",
+      "https://immo.vrtx.co/PicFull/15722971-9.jpg",
+      "https://immo.vrtx.co/PicFull/15722971.jpg"
+    ],
+    "specs": {},
+    "brokers": "Roger Rhéaume",
     "isSold": false
   }
 ]
