@@ -1,10 +1,42 @@
 {
   "news": [
     {
-      "title": "La hausse des taux obligataires se répercute sur le marché hypothécaire",
-      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-05-23/la-hausse-des-taux-obligataires-se-repercute-sur-le-marche-hypothecaire.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Planète économique | Le fonds sans fonds",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-25/planete-economique/le-fonds-sans-fonds.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Depuis la fin de l’hiver, les taux hypothécaires fixes sont discrètement repartis à la hausse. Pour comprendre pourquoi, il faut regarder du côté du marché des obligations… et de l’Iran.",
+      "description": "Ils sont gros, puissants et discrets. C’est en grande partie grâce à eux que les marchés boursiers continuent d’accumuler les records alors que les perspectives économiques mondiales s’assombrissent dangereusement. Ces réservoirs énormes de capitaux très actifs, ce sont les fonds souverains.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "General Dynamics, à Salaberry-de-Valleyfield | L’expansion financée à 100 % par l’armée américaine",
+      "link": "https://www.lapresse.ca/affaires/2026-05-25/general-dynamics-a-salaberry-de-valleyfield/l-expansion-financee-a-100-par-l-armee-americaine.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Pour les Américains et payé par leur armée. L’investissement d’environ 700 millions prévu par le géant de la défense General Dynamics pour tripler sa capacité de production à Salaberry-de-Valleyfield – ce qui devrait créer quelque 150 emplois – sera entièrement financé par la U.S. Army.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Expansion de General Dynamics à Salaberry-de-Valleyfield | Quatre questions au maire",
+      "link": "https://www.lapresse.ca/affaires/2026-05-25/expansion-de-general-dynamics-a-salaberry-de-valleyfield/quatre-questions-au-maire.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Avant même son expansion, General Dynamics Produits de défense et systèmes tactiques-Canada (GD-OTS) était devenu le plus important employeur privé de Salaberry-de-Valleyfield. Pour cette municipalité d’environ 48 000 personnes, c’est un investissement qu’on ne voit pas tous les jours. Quatre questions à son maire, Miguel Lemieux.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’Inde envoie cette semaine une délégation commerciale au Canada",
+      "link": "https://www.lapresse.ca/affaires/2026-05-24/l-inde-envoie-cette-semaine-une-delegation-commerciale-au-canada.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Une délégation indienne, que le gouvernement canadien présente comme la plus importante jamais constituée, arrivera cette semaine pour discuter de commerce et d’investissement.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Mission de deux jours | Carney à New York pour stimuler les investissements",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-24/mission-de-deux-jours/carney-a-new-york-pour-stimuler-les-investissements.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Le premier ministre Mark Carney poursuit ses voyages internationaux pour stimuler les investissements au Canada, avec une mission à New York prévue cette semaine.",
       "cities": [],
       "category": "general"
     },
@@ -13,14 +45,6 @@
       "link": "https://www.ledevoir.com/economie/982001/groupe-citoyen-compte-charte-bloquer-financement-public-projet-gnl",
       "source": "Le Devoir",
       "description": "Les avocats du groupe ont envoyé une lettre juridique à des ministres fédéraux et à des sociétés d’État.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Des millions pour inciter les propriétaires d’immeubles locatifs à acheter des thermopompes",
-      "link": "https://www.ledevoir.com/economie/981536/quebec-annonce-subvention-350-millions-achat-installation-thermopompes",
-      "source": "Le Devoir",
-      "description": "L’aide financière de Québec de 350 millions vise à aider les locataires, mais sera versée aux propriétaires.",
       "cities": [],
       "category": "general"
     },
@@ -67,6 +91,14 @@
       "category": "general"
     },
     {
+      "title": "L’accès à la propriété passera-t-il par les maisons préfabriquées au Québec? - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOREFHZllzVGgxbjRNQldkVk9YWjFTeUw0SG1GdG1UNzdOWkZoclNLWG45b0JBdmRpd09wNmpod2pESEN4YkRDZ2pLRE4wTzZJbUtFZU8ybU5DaVR4UkZzYUZBRklVV1dJb184WmhfSzhTUklSNEExZEZLSzdDb1hyUmN3M2xvOXJCTUJYZjN1WVY2TVhLOHllWVhn?oc=5",
+      "source": "news.google.com",
+      "description": "L’accès à la propriété passera-t-il par les maisons préfabriquées au Québec?  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Marché immobilier de l'Ontario | Prix des maisons en 2026 - nesto.ca",
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUkppQVVrcGxQVHl2cUpvMkVHcnYxdUE4ZVl3ZGotRHpXT09mVjlsRmV3ZTRxTks3Unl2U3pDUDRJZmhrMHlhUFoxbEdlRllrbDROcm05TjVLUHVISTVaNWdyQV9aNlhDeDJzQ29NaTJ6ZXYtU0RUa2pyZUxpeGswR0REUQ?oc=5",
       "source": "news.google.com",
@@ -83,10 +115,18 @@
       "category": "general"
     },
     {
-      "title": "Québec : 35 000 logements locatifs neufs en 2025, le record qui change la donne immobilière - Patrimoine Magazine",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPcVIzV3lwZHdDV0NKZkV4OVhWeTI3WnlMaEdpNzMxWEJZVy1sNnhUUW56TGVBWnFVNUxueUJrZkQwRHBodVNoNUxlOTBhcVMyN3NsVmlja0ZzZjlwam5XbHBfT3ktT280cEJpZDJMSnhBaVJOcTRoRzB0dW1ZQm9IZXJKTE1nUFkzTkxqcWJCLThEUjZqTTBVVkJqMGNvajdxX19YZVVxaER6TXFaemRIV1ZsYU5LdTdtRVBzUU9TRUpmY1BZVTJXMV85OGlPQUhVRmtRNHBVaw?oc=5",
+      "title": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNRlllSmZza3NoaXNpLThQay16VXN2UjR0UURKNkQ5SlZ1VTVUNEsyU09YeU9wQU9WQ290ZGY1QUlZUWgwb2YxNUZjaVZzb2dwZnFwREJrcFVDaDdORUg5UnB2T3VsdEpseldvYzAyNVI3aWl6ZHQyUG55YkRSNjNjeGdaUlBlMXlHalg5eGtMVVNTX0wyaTNPQ01uaDJHdlRwMmNvaFZmc2NOaHFYM29XMU5FOGJsTXJ1ZVpfSHZuSm1ZN2xKYm9id1V0U3BHaUlDN0JNa1FB?oc=5",
+      "source": "encore",
+      "description": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Maïka Desnoyers se remémore la pire maison de l'histoire de Vendre ou rénover au Québec - Monde de Stars",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR2ppdlVDV1dPNnhWd3BhNDM2dTdKY3BneGhIWEd3TjhYRjQyYUtDVENLdW50Q2tGa3VpX2l6aXduYWpINy16ekM1ajNTc1RBQjBOMFE4S0ZRemxHcTRnVTJ4UzJqQjEwZmVVcU1la1NwMmRFREtvUWdfZWp0cWRYczE2cDJYUl9xSXBaSXBKOHdsejU0bXZhMjBrRDZtMHFibnNvTUlZV0wzMENDeEtLY1NZbUxpeFdhRXhtTEh2NEl6MFU?oc=5",
       "source": "news.google.com",
-      "description": "Québec : 35 000 logements locatifs neufs en 2025, le record qui change la donne immobilière  Patrimoine Magazine",
+      "description": "Maïka Desnoyers se remémore la pire maison de l'histoire de Vendre ou rénover au Québec  Monde de Stars",
       "cities": [],
       "category": "general"
     },
@@ -99,18 +139,18 @@
       "category": "general"
     },
     {
-      "title": "Rapport financier trimestriel - Premier trimestre de 2026 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQWZkMnNnX1VvM2VkTUxtdEFiM20ta0J0OXBETEU5aEZhcHdXOXhzNlh4eDhGV0cyS0tVWXZzQV9QcVVDMDlaTVI0LWhab21Wc1pJUXY3WGxZMGtGU0JVUUVmT09uOHRQcV9WTGFZNkF4elNaaHFScGVPRkVyXy1sYWtPdEhwRXh0NVlLMzluV0RvRXo0N2RpZzZn?oc=5",
+      "title": "La Banque du Canada doit faire ce qui est le mieux pour le pays - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQLWZRM1hmTllBUWhwQWd0eUd3b1IwYm1lRmdIdlotOV8xQVFKa1ZwR1Z0Yk9pb0I1X0gtamt2NFdlSGw2RFkyWTVwSm55VDU2TlRXMWNtRDlzNWJNaTNnX3NTQjBVa0RVU2p5bWR3OVdZaXdGTGtsaDNjd3BneTI4MUV4NlI3dXpma0NVZEFkUFdQX3pacTdkNTZsNUNKa0MwbkFHeENVeHQ?oc=5",
       "source": "news.google.com",
-      "description": "Rapport financier trimestriel - Premier trimestre de 2026  Banque du Canada",
+      "description": "La Banque du Canada doit faire ce qui est le mieux pour le pays  conseiller.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Face aux tarifs, la Banque du Canada choisit la prudence - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPd05uTkp2RF96cmYxVnNiSDBWdlc3RjlPZElqYWloUWE5b1NJME9KNVBVT3NSbEFtOWZKZDNQVmtBNmF5RWhhbmt5S0hBczJHbFhtbE4xSFNqb29EbGg1LUhacEozSm9Bb011NnAtakwyYWtyNjhvalkySTNkdWw1SmNQWDdBcUtFNmtCUEoxdVNZOGNzVnd6RUhhalg0UQ?oc=5",
-      "source": "news.google.com",
-      "description": "Face aux tarifs, la Banque du Canada choisit la prudence  Radio-Canada",
+      "title": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO) - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0gzVjVnblNmMlRRX0xhZXh6SXpmVFItTjRUWjBYWU9hVE9fcXRNTS1vRFlYNXhGa1pkY0FKNXEwOW5JVFJXczRBNjd3bEpEZ3hiV3JGYl9tWHBIejR1TzJ3T2JFZGhiQTBjbzFaYnVVSm9kWHI2bXVENWtWZ2tsQTZjMi1renZZUjJ4UlgtcURHdV9pVWJKbHRmOG5JZDczcmU4REZNVUVENWJwdXBYclNDMHFjXzlfSmM4UHhad0ZUdkhf?oc=5",
+      "source": "CIRANO",
+      "description": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO)  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -123,10 +163,10 @@
       "category": "general"
     },
     {
-      "title": "Nouvelle baisse du taux directeur - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNOTdTajNuSW93cXJYbElzUmtEeU1VV051dGQ0VWtseDc0cGdURFpjTzRRN0RaRzRFXzVtZlg4SUx4d1pkQnZPb0tMZnBDUURHY2ZQd3RqLWtxTzNPYzJOeDZCQTlXVnNRSW5wUlQ2b0lHaVY2QklNREY0OXFMNk9ZSXlOWQ?oc=5",
+      "title": "La hausse des prix du pétrole accélère l’inflation à 2,8 % au Canada - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KQmZnNFlSaER0bWc3SUVRdTQtNUxrd0N1U1FDVkg5b0p3eGNhYnRsRTlxMjU0OTFyalZjdUxKSlBGQWU0bkp1X2N6X05GOGtxemxYZ3FKMFdVOFFtWGJVb3pvQmx1YklwTWJxSzROaEpLeGViX0E?oc=5",
       "source": "news.google.com",
-      "description": "Nouvelle baisse du taux directeur  conseiller.ca",
+      "description": "La hausse des prix du pétrole accélère l’inflation à 2,8 % au Canada  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -147,18 +187,10 @@
       "category": "general"
     },
     {
-      "title": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO) - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0gzVjVnblNmMlRRX0xhZXh6SXpmVFItTjRUWjBYWU9hVE9fcXRNTS1vRFlYNXhGa1pkY0FKNXEwOW5JVFJXczRBNjd3bEpEZ3hiV3JGYl9tWHBIejR1TzJ3T2JFZGhiQTBjbzFaYnVVSm9kWHI2bXVENWtWZ2tsQTZjMi1renZZUjJ4UlgtcURHdV9pVWJKbHRmOG5JZDczcmU4REZNVUVENWJwdXBYclNDMHFjXzlfSmM4UHhad0ZUdkhf?oc=5",
-      "source": "CIRANO",
-      "description": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO)  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La hausse des prix du pétrole accélère l’inflation à 2,8 % au Canada - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KQmZnNFlSaER0bWc3SUVRdTQtNUxrd0N1U1FDVkg5b0p3eGNhYnRsRTlxMjU0OTFyalZjdUxKSlBGQWU0bkp1X2N6X05GOGtxemxYZ3FKMFdVOFFtWGJVb3pvQmx1YklwTWJxSzROaEpLeGViX0E?oc=5",
+      "title": "La Banque du Canada aura sa monnaie numérique - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeEw5Ui1zbHk2QmR5NDBEeFowZ2JFaEh6VXVyZ05oQkJyRVZLNjJRZzhhRlRDQjlfcl9DTXJiLTZqNFQ3bEdhUXNaY19RYlRaSmJpRkZmX1lYT1Fjc3g1ZkhtaHpDS2VYVWpoRTdUUnJhbXVuc3FMUGlXY1J3bFVXR3JBVzJISDFobzhGUmVwWHc?oc=5",
       "source": "news.google.com",
-      "description": "La hausse des prix du pétrole accélère l’inflation à 2,8 % au Canada  Radio-Canada",
+      "description": "La Banque du Canada aura sa monnaie numérique  conseiller.ca",
       "cities": [],
       "category": "general"
     },
@@ -171,26 +203,34 @@
       "category": "general"
     },
     {
-      "title": "Le dollar canadien pourrait sous-performer au sein du G10 alors que la Banque du Canada temporise face à une inflation plus faible que prévu, selon la SocGen - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOMk5rbUNhTUFTUnhCeXdGT2RqTXh5Zm1zVmsxc1NQSmJQRjFqWEhGV3R6blNGM2s0YU5FejU0NHlqOWtUaXVWVGNlRXd0cFpQenRJV25Vb3BPclhlczk4SmM4c1dWWXpxNkF0Z3RFdWdmQVI2SGw3UVRTVTBmcElvZmVZS2t4bHZ5bWNUUnFEVXpRclN3MFNWVlRZTmF6NXdPU1Q1VzZPVWh1V21XQUhITjZ6UmxCU21WX0xscUl0THZ5UGtXZlRWaXhYUHo3S2NvcWRpeDBkdTlZOU1YU1lDa2N4WkJhZlYwYTRqZS1peXFLQQ?oc=5",
+      "title": "La hausse des taux obligataires se répercute sur le marché hypothécaire - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOX3RnN0tZT0hPdGd1QUUtRXd3Skl0T003UEdHSGJjSEx3Tm9MSnhLZi1tVlBtVUhWVUR2TkFCdmp3bktKZ2lianZycUdCaTR2Z1N3enFBVnFXNDN3X3NfSzlQbnMxbkJQbjc3MC1QanZPNTFhQzZtM29oNnN5Nlp1ZzljZG00eWZNWGI0SnplTVZsR0kzc28yOG94VDNVQnlvZ2ZOTmQ2bFMzSWdjUzZEdEY3dzBMUTNzWFZlaXhaaE0zMjNfR29ZR3pkdXAxM0VhUEJn?oc=5",
       "source": "news.google.com",
-      "description": "Le dollar canadien pourrait sous-performer au sein du G10 alors que la Banque du Canada temporise face à une inflation plus faible que prévu, selon la SocGen  Zonebourse Suisse",
+      "description": "La hausse des taux obligataires se répercute sur le marché hypothécaire  La Presse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Canada: l'inflation poursuit son accélération en avril - TradingView",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5TbDE0aEVYMHZUak5UTWVzTlRLNEJoMk94RzFRQWMzeTdwdy1WSUdLS1B5bDJLQXd4WC13M1VXR3ZZSUIxU1VBU0VPNzFhZWNiUFAtRTJ5VWd2djNKLXZoNTl3?oc=5",
+      "title": "La dynamique de désinflation donne de la marge de manœuvre à la Banque du Canada, selon la TD - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQMkxVZ3JlTmxuQ290U1hhYUdQY0tjbEJtTmhkN1BHaU9FNzhnNWp1LU12bGFDRjRjdDB0T0lXMzhxcVlLc044OXhjc3poR1NwS05iaGxKMGVPSnJlbUdTYkFZUUhRWDVxTWFSSEFsZjZEQUpSRndvdllpdGtUQWNWN0p3QThfYTZxWGZwbHFKM0NvR0NRN053RUFIcU5QX0UwamplQWRYaUc2Z01mclVvWFR1YXlIN3I3bVFubnFvT1I4QkM4ZDVRdDd2T0poUTU5WHNCMmctRldHTlA5UEpMRnFDQWZHTGhG?oc=5",
       "source": "news.google.com",
-      "description": "Canada: l'inflation poursuit son accélération en avril  TradingView",
+      "description": "La dynamique de désinflation donne de la marge de manœuvre à la Banque du Canada, selon la TD  Zonebourse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Une nouvelle hausse pour le taux directeur - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPMmxxTVdXdnVIbnMzYi1oeWp2eDlacmprTDVWOFZpeUZkRkpkQjZpdENGTFp6OXQ2RUVMTV82NTNfc0FaWmhuajRfV19panV0RFdsbkt5WHZwV01rNWFUYnhxUk9VQXFaS0NnTHVpeHVKLTFXN0dTbmNCSDVvYUt5cHc2b09icXpKOUJMWg?oc=5",
+      "title": "Nouvelle baisse du taux directeur - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNOTdTajNuSW93cXJYbElzUmtEeU1VV051dGQ0VWtseDc0cGdURFpjTzRRN0RaRzRFXzVtZlg4SUx4d1pkQnZPb0tMZnBDUURHY2ZQd3RqLWtxTzNPYzJOeDZCQTlXVnNRSW5wUlQ2b0lHaVY2QklNREY0OXFMNk9ZSXlOWQ?oc=5",
       "source": "news.google.com",
-      "description": "Une nouvelle hausse pour le taux directeur  conseiller.ca",
+      "description": "Nouvelle baisse du taux directeur  conseiller.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le retour sournois de l’inflation? - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XQVhyZHR1NEd3MTkyQTVQbFlsSWt2YWpiMkxVUy1TTU9JVHpPbGhMWTNKUE1IM2Y3YmFkSUxiRU5KTVgyckFHSl9LUHVVZGJYY3J6QVRFWTh6cVN3RTNXSW9ERGstcm1RajNBYjhGYTg1MUZqRHpOMkM1cFZZSnc?oc=5",
+      "source": "news.google.com",
+      "description": "Le retour sournois de l’inflation?  conseiller.ca",
       "cities": [],
       "category": "general"
     },
@@ -203,18 +243,18 @@
       "category": "general"
     },
     {
-      "title": "Nomura prévoit un statu quo de la Banque du Canada cette année face à l'apaisement des pressions inflationnistes sous-jacentes - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZDFNWnFMbmpLWlFjN3IxQmJkVmlMUzdzQ0ZvMENBaWtqWkdqTHF3T19VcktTMVRYQUNldy1IQXBkcElTUDItSk5aMVJ3R09oN3FyYUdWSmVKLXZuV09rckhqMExscWFBeXBhM3pOQ3owaGtHWVYta3dEY0dlVkpFdFlqc0hWcHdaYUhtcmNMX29VVzE5NEV2QU5BaVR0eXhvQ1NrRjNyRURZZ1hlX2RVaV9xNEZMZDExX2x0S19PaUF0REloLTZqbnRxVUVJdXB5M0FGdUlkVFVFQk9UeUJIdC12T0VrSnZtWHJfaEthRDhGUQ?oc=5",
+      "title": "Canada: l'inflation poursuit son accélération en avril - TradingView",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5TbDE0aEVYMHZUak5UTWVzTlRLNEJoMk94RzFRQWMzeTdwdy1WSUdLS1B5bDJLQXd4WC13M1VXR3ZZSUIxU1VBU0VPNzFhZWNiUFAtRTJ5VWd2djNKLXZoNTl3?oc=5",
       "source": "news.google.com",
-      "description": "Nomura prévoit un statu quo de la Banque du Canada cette année face à l'apaisement des pressions inflationnistes sous-jacentes  Zonebourse Suisse",
+      "description": "Canada: l'inflation poursuit son accélération en avril  TradingView",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Inflation: 3 statistiques clés du rapport sur l’IPC d’avril à retenir - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWUtiaHpfRjUyWEg3WUNjSTNzZmVxcFYyaUJLbllQUmJJSG1iT0lBdzUwTVZvc3Q3ZWZXc1ZEREJ0bFBfXzcwMEF1UDNNdW55LUtDajhWbjl1ZjY2bndlTnBfSHNGUHJxTmZ3RV9McEY3SFFBZHo3dk9DbnV5OVBCc0dsSUV5TTNIZUN3MVoxYWFGU1NqdEhpQ1R2TnpGTHBlU0gwMTNneEVyblhuaG1qaQ?oc=5",
+      "title": "Nomura prévoit un statu quo de la Banque du Canada cette année face à l'apaisement des pressions inflationnistes sous-jacentes - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZDFNWnFMbmpLWlFjN3IxQmJkVmlMUzdzQ0ZvMENBaWtqWkdqTHF3T19VcktTMVRYQUNldy1IQXBkcElTUDItSk5aMVJ3R09oN3FyYUdWSmVKLXZuV09rckhqMExscWFBeXBhM3pOQ3owaGtHWVYta3dEY0dlVkpFdFlqc0hWcHdaYUhtcmNMX29VVzE5NEV2QU5BaVR0eXhvQ1NrRjNyRURZZ1hlX2RVaV9xNEZMZDExX2x0S19PaUF0REloLTZqbnRxVUVJdXB5M0FGdUlkVFVFQk9UeUJIdC12T0VrSnZtWHJfaEthRDhGUQ?oc=5",
       "source": "news.google.com",
-      "description": "Inflation: 3 statistiques clés du rapport sur l’IPC d’avril à retenir  Les Affaires",
+      "description": "Nomura prévoit un statu quo de la Banque du Canada cette année face à l'apaisement des pressions inflationnistes sous-jacentes  Zonebourse Suisse",
       "cities": [],
       "category": "general"
     }
@@ -271,5 +311,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-24 14:24"
+  "last_update": "2026-05-25 15:50"
 }
