@@ -1,50 +1,34 @@
 {
   "news": [
     {
-      "title": "Planète économique | Le fonds sans fonds",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-05-25/planete-economique/le-fonds-sans-fonds.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Action collective | Les frais pour remboursement hypothécaire anticipé seront scrutés par la cour",
+      "link": "https://www.lapresse.ca/affaires/2026-05-26/action-collective/les-frais-pour-remboursement-hypothecaire-anticipe-seront-scrutes-par-la-cour.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Ils sont gros, puissants et discrets. C’est en grande partie grâce à eux que les marchés boursiers continuent d’accumuler les records alors que les perspectives économiques mondiales s’assombrissent dangereusement. Ces réservoirs énormes de capitaux très actifs, ce sont les fonds souverains.",
+      "description": "Une action collective concernant les frais de remboursement hypothécaire anticipé vient d’être autorisée par la cour d’appel, après plusieurs années de démarches judiciaires. Au cœur de l’affaire : des cas où les frais excèdent un montant équivalant à trois mois d’intérêt et sont calculés selon une méthode jugée « abusive ».",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "General Dynamics, à Salaberry-de-Valleyfield | L’expansion financée à 100 % par l’armée américaine",
-      "link": "https://www.lapresse.ca/affaires/2026-05-25/general-dynamics-a-salaberry-de-valleyfield/l-expansion-financee-a-100-par-l-armee-americaine.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Marché du travail en évolution | Il faut revoir la formation des jeunes, croit un économiste de la Banque du Canada",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-26/marche-du-travail-en-evolution/il-faut-revoir-la-formation-des-jeunes-croit-un-economiste-de-la-banque-du-canada.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Pour les Américains et payé par leur armée. L’investissement d’environ 700 millions prévu par le géant de la défense General Dynamics pour tripler sa capacité de production à Salaberry-de-Valleyfield – ce qui devrait créer quelque 150 emplois – sera entièrement financé par la U.S. Army.",
+      "description": "Un haut responsable de la Banque du Canada estime qu’il faut repenser nos approches en matière d’éducation et de formation, car les jeunes sont confrontés à un marché du travail en évolution.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Expansion de General Dynamics à Salaberry-de-Valleyfield | Quatre questions au maire",
-      "link": "https://www.lapresse.ca/affaires/2026-05-25/expansion-de-general-dynamics-a-salaberry-de-valleyfield/quatre-questions-au-maire.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Selon BDC Capital | Les entreprises d’ici doivent être mieux soutenues dans leur croissance",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-26/selon-bdc-capital/les-entreprises-d-ici-doivent-etre-mieux-soutenues-dans-leur-croissance.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Avant même son expansion, General Dynamics Produits de défense et systèmes tactiques-Canada (GD-OTS) était devenu le plus important employeur privé de Salaberry-de-Valleyfield. Pour cette municipalité d’environ 48 000 personnes, c’est un investissement qu’on ne voit pas tous les jours. Quatre questions à son maire, Miguel Lemieux.",
+      "description": "À l’heure des tremblements géopolitiques et des enjeux de souveraineté économique, les entreprises canadiennes doivent être mieux soutenues en termes d’investissements en capital de risque quand elles amorcent leur commercialisation ou leur croissance, affirme le plus récent rapport de BDC Capital, publié ce mardi.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L’Inde envoie cette semaine une délégation commerciale au Canada",
-      "link": "https://www.lapresse.ca/affaires/2026-05-24/l-inde-envoie-cette-semaine-une-delegation-commerciale-au-canada.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Une délégation indienne, que le gouvernement canadien présente comme la plus importante jamais constituée, arrivera cette semaine pour discuter de commerce et d’investissement.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Mission de deux jours | Carney à New York pour stimuler les investissements",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-05-24/mission-de-deux-jours/carney-a-new-york-pour-stimuler-les-investissements.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Le premier ministre Mark Carney poursuit ses voyages internationaux pour stimuler les investissements au Canada, avec une mission à New York prévue cette semaine.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un groupe citoyen compte sur la Charte pour bloquer le financement public d’un projet de GNL",
-      "link": "https://www.ledevoir.com/economie/982001/groupe-citoyen-compte-charte-bloquer-financement-public-projet-gnl",
+      "title": "Face au chômage, un économiste de la Banque du Canada suggère de revoir la formation des jeunes",
+      "link": "https://www.ledevoir.com/economie/982901/face-chomage-economiste-banque-canada-suggere-revoir-formation-jeunes",
       "source": "Le Devoir",
-      "description": "Les avocats du groupe ont envoyé une lettre juridique à des ministres fédéraux et à des sociétés d’État.",
+      "description": "Les jeunes constituent près du quart des chômeurs de longue durée – une proportion qui a plus que doublé depuis 2022.",
       "cities": [],
       "category": "general"
     },
@@ -57,10 +41,26 @@
       "category": "general"
     },
     {
-      "title": "Courtage immobilier: elle enfreint sa suspension pour essayer d’empocher 75 000$ - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcHFhMHBRZWtUdWpSM3k1WVJkRXFsUWRscEdUdFVYZ3g4TXJacmxPc2ZtVmtVYWlsZU5maDRfeWpOeEw3TGhxbGY5UkJtczdJQlpYSldMYlZNNnFYQXpEajFwUmVpdzlKVVJVMTVTMTZUNDRRb29zYXI5WHozejV5T2dwZXpzZ1l2d2llUFFZSDhzeTFQRGMzS3U3d2lPTERqdHVmZ08xY0FCMTBDMWxjMUhNbVU4ZGN6VGRqUDR3?oc=5",
+      "title": "L’accès à la propriété passera-t-il par les maisons préfabriquées au Québec? - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOREFHZllzVGgxbjRNQldkVk9YWjFTeUw0SG1GdG1UNzdOWkZoclNLWG45b0JBdmRpd09wNmpod2pESEN4YkRDZ2pLRE4wTzZJbUtFZU8ybU5DaVR4UkZzYUZBRklVV1dJb184WmhfSzhTUklSNEExZEZLSzdDb1hyUmN3M2xvOXJCTUJYZjN1WVY2TVhLOHllWVhn?oc=5",
       "source": "news.google.com",
-      "description": "Courtage immobilier: elle enfreint sa suspension pour essayer d’empocher 75 000$  Journal de Québec",
+      "description": "L’accès à la propriété passera-t-il par les maisons préfabriquées au Québec?  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Toujours en faillite, Stéphan Huot est derrière trois projets immobiliers dans Lotbinière - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWGxERkpRX1liUzFEZFRqV0lsSDE4VDV0RDFOdGtwN05xYndlLW8taElIREc3M3FyQ2htbFdydG1mSnhiREg3TnJnWGczaWVXM0ZfWXc5SXBvQWIyNmVNekFVYVFWRkVST2Z1TEdUSjVZQ3BTRkVUdWdLenppcGZNRjdWUENKeEVIWDBBQ2NuTWhpT3hnQTJUNVY5ODR5R2ZRbDZCZ3ktcmlGeXpnSEJqSkZ4NDZURm9qaVY2Qk1DNTJMMjVGTlZTM1ZzWQ?oc=5",
+      "source": "news.google.com",
+      "description": "Toujours en faillite, Stéphan Huot est derrière trois projets immobiliers dans Lotbinière  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNRlllSmZza3NoaXNpLThQay16VXN2UjR0UURKNkQ5SlZ1VTVUNEsyU09YeU9wQU9WQ290ZGY1QUlZUWgwb2YxNUZjaVZzb2dwZnFwREJrcFVDaDdORUg5UnB2T3VsdEpseldvYzAyNVI3aWl6ZHQyUG55YkRSNjNjeGdaUlBlMXlHalg5eGtMVVNTX0wyaTNPQ01uaDJHdlRwMmNvaFZmc2NOaHFYM29XMU5FOGJsTXJ1ZVpfSHZuSm1ZN2xKYm9id1V0U3BHaUlDN0JNa1FB?oc=5",
+      "source": "encore",
+      "description": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -75,10 +75,10 @@
       "category": "local"
     },
     {
-      "title": "« Si on veut taire la crise du logement, il faudra s'attaquer à l'offre » - 106.9 Mauricie",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWXJuSU5WMlRWaU5zR010dkFTMmhYT0w3V3pkRkZzYThMLUptWHIyQlJwZGtjQ2RXU25veEs2ek9xc1pQLVB3STc1dTEyMUxjdkt6V0k1cXM0d1FMeGJwMUtrUHlubDFaOG12bmxRUE9iTmYzQWFIV3REcS1ZM3oxYXlwMGZ4UEx4QjZsLWp4andQOEhuazZFNHFQWC12aUUzb0ZkN3BB?oc=5",
+      "title": "«C’est mentalement frustrant»: un parcours du combattant pour acheter leur première maison unifamiliale - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNN1dEdVFpSkU3MnN6dmdUTHRHWnpzOWxPY2Rmd0NfWHowd2V5OWFNX25WQjVrdTZ3YUNHOVhyOGVYVjFfUVh2YlhBbk9VaGt6cEx4c1c4YjJJb3EtYnNOU0p5cFVyZ1lXTkZ2NFRZdkhlbGprQ3VUdEJDMFBjM3RJSXhqX2x0SXpSZlM2ZHJ1VE9wWWszeUZWaVk1OWRqLWp1c0dJUk1hOXV2dEV4UjhfTWlWY0puR3ROWHR6SmxOY19Td3VDc1ZlbkpGQTRGMGpfS1Iw?oc=5",
       "source": "news.google.com",
-      "description": "« Si on veut taire la crise du logement, il faudra s'attaquer à l'offre »  106.9 Mauricie",
+      "description": "«C’est mentalement frustrant»: un parcours du combattant pour acheter leur première maison unifamiliale  QUB radio",
       "cities": [],
       "category": "general"
     },
@@ -91,18 +91,18 @@
       "category": "general"
     },
     {
-      "title": "L’accès à la propriété passera-t-il par les maisons préfabriquées au Québec? - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOREFHZllzVGgxbjRNQldkVk9YWjFTeUw0SG1GdG1UNzdOWkZoclNLWG45b0JBdmRpd09wNmpod2pESEN4YkRDZ2pLRE4wTzZJbUtFZU8ybU5DaVR4UkZzYUZBRklVV1dJb184WmhfSzhTUklSNEExZEZLSzdDb1hyUmN3M2xvOXJCTUJYZjN1WVY2TVhLOHllWVhn?oc=5",
-      "source": "news.google.com",
-      "description": "L’accès à la propriété passera-t-il par les maisons préfabriquées au Québec?  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Marché immobilier de l'Ontario | Prix des maisons en 2026 - nesto.ca",
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUkppQVVrcGxQVHl2cUpvMkVHcnYxdUE4ZVl3ZGotRHpXT09mVjlsRmV3ZTRxTks3Unl2U3pDUDRJZmhrMHlhUFoxbEdlRllrbDROcm05TjVLUHVISTVaNWdyQV9aNlhDeDJzQ29NaTJ6ZXYtU0RUa2pyZUxpeGswR0REUQ?oc=5",
       "source": "news.google.com",
       "description": "Marché immobilier de l'Ontario | Prix des maisons en 2026  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "De nouvelles normes de construction feront grimper le coût des logements - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdHE5VExzNm5ndzNhSWQxNi05LWFRamZLZnFYQTJ4WFl2NktfQkppQ1UtbXRpRTJ4Q0lYUURJU2VEb3IwSmpOMnY2MGkyYkxPY18zbHlVYVpoeDdnVWJIQ2xDZ2NxajlGemxQVVJzaFJ0SW8zOWlOYzRURV9ZQ1VKa1M0R3MwUkpmVVNRejhKX0EtSkNtTS1SMzhwNFdMaXBCaDJtbGQzMGxrRmk0MXo5dGVlOWRTMEFnd0VLRmJlQ0FZdw?oc=5",
+      "source": "news.google.com",
+      "description": "De nouvelles normes de construction feront grimper le coût des logements  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -115,10 +115,26 @@
       "category": "general"
     },
     {
-      "title": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNRlllSmZza3NoaXNpLThQay16VXN2UjR0UURKNkQ5SlZ1VTVUNEsyU09YeU9wQU9WQ290ZGY1QUlZUWgwb2YxNUZjaVZzb2dwZnFwREJrcFVDaDdORUg5UnB2T3VsdEpseldvYzAyNVI3aWl6ZHQyUG55YkRSNjNjeGdaUlBlMXlHalg5eGtMVVNTX0wyaTNPQ01uaDJHdlRwMmNvaFZmc2NOaHFYM29XMU5FOGJsTXJ1ZVpfSHZuSm1ZN2xKYm9id1V0U3BHaUlDN0JNa1FB?oc=5",
-      "source": "encore",
-      "description": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher  La Presse",
+      "title": "Webinaire gratuit : comment optimiser sa recherche de logement au Québec? - Immigrer.com",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWpQcER2dlRsbVFQek1wLWM0WFQ0eTY0elB4NGwyV3A3ZGFIRS04MGMyQzVoM1RGVXpxU3VIaUlIS29lS04tN1lZdmxDQWMycXFzYkljdnNqbGc5aXJROFVtNEtyZ0hYZ29jYm1ZSjlQZTJRYXhyZE9yOWJGcm1pOUpHdmZwRTNFX01sNFFnTmZWM3BrVHBkSXN2MHc?oc=5",
+      "source": "news.google.com",
+      "description": "Webinaire gratuit : comment optimiser sa recherche de logement au Québec?  Immigrer.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les travaux sont lancés pour une nouvelle Maison Martin-Matte à Saint-Rémi - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPaWw1QjlwRDhqb1cwdXRNWi1IOVRqZnM0N2JYalQ1ZEx5bzYtUmYxQVF5d2lyRGtUX0JVWXN1eXUzdWU0a01UX0xlWGM5aVBIU2F0REFha2U2WFp6SXUyVmpmaWxXRzJrdzVCY0I3SFhEMlBhRzN2SDFHRUpkajB3M1NjdEZ5WldWTzQ0?oc=5",
+      "source": "news.google.com",
+      "description": "Les travaux sont lancés pour une nouvelle Maison Martin-Matte à Saint-Rémi  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Combien faut-il gagner pour acheter une première propriété? - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOUU5dnNuemlLdDVGMWp6eExSOXlnQjRUMUFid1dDS2dncUJnbHBXWFZFaXpUa3Y2c2VFNGdTS1R1bnVpXzV0ZTBGYTlYdWN0RjJIeXoweUw3Vm9UUEpUdVUzWmxaSnNVSnBZOHFUU0Ewdy1IS0tWbE9RWHJIbVRVMUk4ZW1JMmhyYXc5Sm1HSjNTMV8yOTZuVHdR?oc=5",
+      "source": "news.google.com",
+      "description": "Combien faut-il gagner pour acheter une première propriété?  QUB radio",
       "cities": [],
       "category": "general"
     },
@@ -131,6 +147,14 @@
       "category": "general"
     },
     {
+      "title": "Combien faut-il gagner pour acheter une première propriété? - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeEpZLXZmYTNCbzZxdUpiTzBBWUhUYW9nS0Z5NFF5QzNOc0VpNEw3dFg0ZjN0VElCeGFQNVpiRDBTTldDbk0talBudWZRamNybExnMjEySUc1SGpCRTgzZ0ExckxHNFc2TFBMZUxZRzdOb3dKRHhjb3B1TjFxY0NPT2Y0U1Q1WUxnX0JrRV9lamktc0ZENUxmVEs2alZLdw?oc=5",
+      "source": "news.google.com",
+      "description": "Combien faut-il gagner pour acheter une première propriété?  TVA Nouvelles",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "6 analystes donnent leurs prévisions sur la prochaine décision de la Banque du Canada - Les Affaires",
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxORmxwYkdzbWRpLXVORlJZUVZWSTJBN0ZVUlpCVFBrc0NyMnN2bzBra1pIWXcwQWN3b3NZWF94dFFycGhZSzRlOXgtMkJMTWJZWGdOd2N4Z2JIZUN3SWJwYTdhUE80MlBTVVI3OHMxdFV0R0RzX01yQlpYZlRpdmhZSXpVRmt3X015OUk0NGRPd1pUbXlNQlRXMlJsVkZ4U0I4ZG1yaElkdV8yVlhPeEdYWHFJejNwYTBLUS1aN2N0MS03ajZNYXI3VFdR?oc=5",
       "source": "news.google.com",
@@ -139,18 +163,18 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada doit faire ce qui est le mieux pour le pays - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQLWZRM1hmTllBUWhwQWd0eUd3b1IwYm1lRmdIdlotOV8xQVFKa1ZwR1Z0Yk9pb0I1X0gtamt2NFdlSGw2RFkyWTVwSm55VDU2TlRXMWNtRDlzNWJNaTNnX3NTQjBVa0RVU2p5bWR3OVdZaXdGTGtsaDNjd3BneTI4MUV4NlI3dXpma0NVZEFkUFdQX3pacTdkNTZsNUNKa0MwbkFHeENVeHQ?oc=5",
+      "title": "Diagnostiquer les changements sur le marché du travail - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRGdrV0UxXzBhU2xrMVl0aEwxeGRlbk1Tb0RHeHUzRlAwZGNWRnY4XzBQaDZvRjJQYlJ3dW96b3k2dzV0Uk5tUWJpeWo5R3FGNXhqalp0ZFJiYVJISWVpc0I0NFVfcnNndldtek00ZnhWODJLeklDbXNGNHZuYlpza0xTVmxmQQ?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada doit faire ce qui est le mieux pour le pays  conseiller.ca",
+      "description": "Diagnostiquer les changements sur le marché du travail  Banque du Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO) - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0gzVjVnblNmMlRRX0xhZXh6SXpmVFItTjRUWjBYWU9hVE9fcXRNTS1vRFlYNXhGa1pkY0FKNXEwOW5JVFJXczRBNjd3bEpEZ3hiV3JGYl9tWHBIejR1TzJ3T2JFZGhiQTBjbzFaYnVVSm9kWHI2bXVENWtWZ2tsQTZjMi1renZZUjJ4UlgtcURHdV9pVWJKbHRmOG5JZDczcmU4REZNVUVENWJwdXBYclNDMHFjXzlfSmM4UHhad0ZUdkhf?oc=5",
-      "source": "CIRANO",
-      "description": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO)  Banque du Canada",
+      "title": "Un économiste de la Banque du Canada croit qu'il faut revoir la formation des jeunes - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSEEyVGktbzJkYXpNTVBaTThxSzlDUzNIald4OEs0dkcwXy12ZGpNUlhzTFgwclBIRGpjWHlCdzNyY1hsVVBaWTRLNmwtek41OS1xbjdkZGpibVlDUGgyQjc5a2puV2o1MlRIQTRmWEhrcGFiX3VjLVRSYmNxXzQxcFVxZ1BGQmI1c2R1STBBWGhpWklCNm01dXk4QkpGaUNuTWZkay1rbUNZZmlMWEo0Q0xkQlBRWVFRX09jTDQ1Smp3SWFXMENoQmdOdHM0dmM?oc=5",
+      "source": "news.google.com",
+      "description": "Un économiste de la Banque du Canada croit qu'il faut revoir la formation des jeunes  Noovo Info",
       "cities": [],
       "category": "general"
     },
@@ -163,34 +187,26 @@
       "category": "general"
     },
     {
-      "title": "La hausse des prix du pétrole accélère l’inflation à 2,8 % au Canada - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KQmZnNFlSaER0bWc3SUVRdTQtNUxrd0N1U1FDVkg5b0p3eGNhYnRsRTlxMjU0OTFyalZjdUxKSlBGQWU0bkp1X2N6X05GOGtxemxYZ3FKMFdVOFFtWGJVb3pvQmx1YklwTWJxSzROaEpLeGViX0E?oc=5",
+      "title": "Marché du travail en évolution | Il faut revoir la formation des jeunes, croit un économiste de la Banque du Canada - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQN2Fhd1ZUX2dlSmZXdEgwd0pMMUVIekQ2ek5ZR3l2bm5nc0Z4dEE4WnJ3MkZIZXNlM0o0UEpWcDFBam1aR2NJYnRlRzYySEdCeUNsZzRTZVFhZ0JIcXR5YVczV0xqZ2hqS0xqYVVHZGR1SlZ0bktqMHhiM2VOQ0d2anh1cG0xaWVDcXotT01ENFFLcURVX2tVNi1WZVRrcUxlV2k5SXowd1BsS1BjcUpueXN0d2lVTHBZRGF4UGxRWU5KYzEwY1pSUjVBa1FTb2VxeW00THpfOUxuUzR4X054ZUx2Y2ZoMVNxY1lYNTAtTUQwWkhqdFlBRm14aGJaZw?oc=5",
       "source": "news.google.com",
-      "description": "La hausse des prix du pétrole accélère l’inflation à 2,8 % au Canada  Radio-Canada",
+      "description": "Marché du travail en évolution | Il faut revoir la formation des jeunes, croit un économiste de la Banque du Canada  La Presse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Canada | L’inflation s’accélère à 2,8 % en avril - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNR3ZhNVlEeEV6ZmVMOEtYTFk5bFB4ZDZHUF9zbGE2UEZhTDQyaGRfQkppWllqLTN6cW4tOFVWeXNldDRxX1ZfSU81N2p1NUdkYy1CUlFidy1UTUppYkRMZ18yRW9BXzd3TE1PRUpzWVl1SE9Oa1h4MkkwSEdaWnE0VnRxdk1WWXdueHJ2RTBCemhmTWJzX2UwM25FOGE2QUFMaXR3?oc=5",
+      "title": "La Banque du Canada freine les mesures d’urgence - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPYmQtaEJGX2drU1RscTBDR3dybFlNTmJqd25aelhHSHYxMkNiNEZad2VhWlV0SUpfdDhVSURoLWZrSUFZLVZaek9LbzVWUGVCUUUxdE1lRzRHWndIMUU3Z1ZoVmZwTm5LaFRlaWxadUdyUF9hczJEMWJqQ2E3WU1GREJtSlB6cjcwdWpfYjREYkRyMUE?oc=5",
       "source": "news.google.com",
-      "description": "Canada | L’inflation s’accélère à 2,8 % en avril  La Presse",
+      "description": "La Banque du Canada freine les mesures d’urgence  conseiller.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Banque Du Canada publie le résumé de son quatrième maintien - شبكة تواصل الإخبارية",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBvb1FwUTQwNHlxZV9uOVM2eExPY2FOdmd1bnQ5MnFLMS1IT244eTJXd3FaSmdLcXJzLWdhVFVjYWEtRmtqakUxX3QzNUU0RDZfeDU0?oc=5",
-      "source": "news.google.com",
-      "description": "Banque Du Canada publie le résumé de son quatrième maintien  شبكة تواصل الإخبارية",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada aura sa monnaie numérique - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeEw5Ui1zbHk2QmR5NDBEeFowZ2JFaEh6VXVyZ05oQkJyRVZLNjJRZzhhRlRDQjlfcl9DTXJiLTZqNFQ3bEdhUXNaY19RYlRaSmJpRkZmX1lYT1Fjc3g1ZkhtaHpDS2VYVWpoRTdUUnJhbXVuc3FMUGlXY1J3bFVXR3JBVzJISDFobzhGUmVwWHc?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada aura sa monnaie numérique  conseiller.ca",
+      "title": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO) - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0gzVjVnblNmMlRRX0xhZXh6SXpmVFItTjRUWjBYWU9hVE9fcXRNTS1vRFlYNXhGa1pkY0FKNXEwOW5JVFJXczRBNjd3bEpEZ3hiV3JGYl9tWHBIejR1TzJ3T2JFZGhiQTBjbzFaYnVVSm9kWHI2bXVENWtWZ2tsQTZjMi1renZZUjJ4UlgtcURHdV9pVWJKbHRmOG5JZDczcmU4REZNVUVENWJwdXBYclNDMHFjXzlfSmM4UHhad0ZUdkhf?oc=5",
+      "source": "CIRANO",
+      "description": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO)  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -211,18 +227,18 @@
       "category": "general"
     },
     {
-      "title": "La dynamique de désinflation donne de la marge de manœuvre à la Banque du Canada, selon la TD - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQMkxVZ3JlTmxuQ290U1hhYUdQY0tjbEJtTmhkN1BHaU9FNzhnNWp1LU12bGFDRjRjdDB0T0lXMzhxcVlLc044OXhjc3poR1NwS05iaGxKMGVPSnJlbUdTYkFZUUhRWDVxTWFSSEFsZjZEQUpSRndvdllpdGtUQWNWN0p3QThfYTZxWGZwbHFKM0NvR0NRN053RUFIcU5QX0UwamplQWRYaUc2Z01mclVvWFR1YXlIN3I3bVFubnFvT1I4QkM4ZDVRdDd2T0poUTU5WHNCMmctRldHTlA5UEpMRnFDQWZHTGhG?oc=5",
+      "title": "La Banque du Canada avertit que les mutations du marché du travail pourraient limiter l’efficacité des baisses de taux - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPX2pUc3JWNkZCMXNOVENOT3c2MUUxS0JlVGlZb2l4amJLMGFjZVZicS1LdlJfaDhrVFFkVUpJQTBBcmZjZVlKSnh4WnVMYkJkSDZoODdfZXlNMEEtbzUtRXZuckppXzBKSGVYSnNqaG1WR1I2a1ZyMWN5RWNyN0xHYXFmYnlWejgxVTJLYXBqUG8zR0VORWFQV1Q0LW03QWtDMXFucUg4WnZzTXBTcTh2YW5OWlo0VF9ULU9VNW9EX19NbWhiUE5XUTU5czh1NFpXR3NKYTViaER0a0xhVDdPOEpieFVOZS1rd0hmUmQzSS1lT2NtVE52MG9BQ1F3RFNuMWdF?oc=5",
       "source": "news.google.com",
-      "description": "La dynamique de désinflation donne de la marge de manœuvre à la Banque du Canada, selon la TD  Zonebourse",
+      "description": "La Banque du Canada avertit que les mutations du marché du travail pourraient limiter l’efficacité des baisses de taux  Investing.com France",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Nouvelle baisse du taux directeur - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNOTdTajNuSW93cXJYbElzUmtEeU1VV051dGQ0VWtseDc0cGdURFpjTzRRN0RaRzRFXzVtZlg4SUx4d1pkQnZPb0tMZnBDUURHY2ZQd3RqLWtxTzNPYzJOeDZCQTlXVnNRSW5wUlQ2b0lHaVY2QklNREY0OXFMNk9ZSXlOWQ?oc=5",
+      "title": "La complexité du marché du travail complique la tâche de la Banque du Canada, selon un responsable - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPUVJNTE1MbVZOZzZnbEdJeWw0b0gwcFlqU08ycnhBUzVyeVJaa1dubDBBcmZYSkxxbEZXeG5tQWNGMS1sSzJOaHM1NU9NUDNxaVlQak9SRzlZMks4Ym81Tk13T2hncWoyUE16SzBnTl90dXF6UXJXN2Q5RWF4SXNqSG5oYlcwbWdVaW01LVZwdEw3OEtzbWxYNWR6cm56VjBocDdvLVRfNVd1MTFFLW9lM2l4b2h6aG5kOXVNQVZoZEZSYi1XMjB1MkFJRy1IcWNhN2V1Zm1mZmNjbU9YbGpPX1RjX2VRaXduamJJNmRZRQ?oc=5",
       "source": "news.google.com",
-      "description": "Nouvelle baisse du taux directeur  conseiller.ca",
+      "description": "La complexité du marché du travail complique la tâche de la Banque du Canada, selon un responsable  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -235,18 +251,26 @@
       "category": "general"
     },
     {
-      "title": "L'inflation repart à la hausse en avril, mais la Banque du Canada peut se permettre d'attendre, selon la Banque Nationale - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNaFVmRHBHV09TTUxUdVg2cVZfUFFPWU5QRDRNWVh0MHVpTHNyMlkweS1yWjI2ZkNsN0dHOFlUZlkwUGZBcGZLWEV4cmdlSmlHYzB1Qlh2TFhZUXZXX1Z3aHV5YVpwYzVIdGhqWHE0VmJ2eEpoM1c0eDFzS1k1T0ptVjNZTVJFNjJOdzZaR2V0ZHpwU1NOdHo0OHE4NHRNd3FzZnVfMERUMEhjZmlZVnd3UHdMQmpoejNuMHRQeXlmYXZBZkhYc0t0LWpIRDg3ZlJTY1o2WUt0QkxhTzd6aGRQUnd4Wm02eF9LcTdfWU1KMmM?oc=5",
+      "title": "La dynamique de désinflation donne de la marge de manœuvre à la Banque du Canada, selon la TD - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQMkxVZ3JlTmxuQ290U1hhYUdQY0tjbEJtTmhkN1BHaU9FNzhnNWp1LU12bGFDRjRjdDB0T0lXMzhxcVlLc044OXhjc3poR1NwS05iaGxKMGVPSnJlbUdTYkFZUUhRWDVxTWFSSEFsZjZEQUpSRndvdllpdGtUQWNWN0p3QThfYTZxWGZwbHFKM0NvR0NRN053RUFIcU5QX0UwamplQWRYaUc2Z01mclVvWFR1YXlIN3I3bVFubnFvT1I4QkM4ZDVRdDd2T0poUTU5WHNCMmctRldHTlA5UEpMRnFDQWZHTGhG?oc=5",
       "source": "news.google.com",
-      "description": "L'inflation repart à la hausse en avril, mais la Banque du Canada peut se permettre d'attendre, selon la Banque Nationale  Zonebourse",
+      "description": "La dynamique de désinflation donne de la marge de manœuvre à la Banque du Canada, selon la TD  Zonebourse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Canada: l'inflation poursuit son accélération en avril - TradingView",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5TbDE0aEVYMHZUak5UTWVzTlRLNEJoMk94RzFRQWMzeTdwdy1WSUdLS1B5bDJLQXd4WC13M1VXR3ZZSUIxU1VBU0VPNzFhZWNiUFAtRTJ5VWd2djNKLXZoNTl3?oc=5",
+      "title": "Le dollar canadien pourrait sous-performer au sein du G10 alors que la Banque du Canada temporise face à une inflation plus faible que prévu, selon la SocGen - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOMk5rbUNhTUFTUnhCeXdGT2RqTXh5Zm1zVmsxc1NQSmJQRjFqWEhGV3R6blNGM2s0YU5FejU0NHlqOWtUaXVWVGNlRXd0cFpQenRJV25Vb3BPclhlczk4SmM4c1dWWXpxNkF0Z3RFdWdmQVI2SGw3UVRTVTBmcElvZmVZS2t4bHZ5bWNUUnFEVXpRclN3MFNWVlRZTmF6NXdPU1Q1VzZPVWh1V21XQUhITjZ6UmxCU21WX0xscUl0THZ5UGtXZlRWaXhYUHo3S2NvcWRpeDBkdTlZOU1YU1lDa2N4WkJhZlYwYTRqZS1peXFLQQ?oc=5",
       "source": "news.google.com",
-      "description": "Canada: l'inflation poursuit son accélération en avril  TradingView",
+      "description": "Le dollar canadien pourrait sous-performer au sein du G10 alors que la Banque du Canada temporise face à une inflation plus faible que prévu, selon la SocGen  Zonebourse Suisse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L'inflation repart à la hausse en avril, mais la Banque du Canada peut se permettre d'attendre, selon la Banque Nationale - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNaFVmRHBHV09TTUxUdVg2cVZfUFFPWU5QRDRNWVh0MHVpTHNyMlkweS1yWjI2ZkNsN0dHOFlUZlkwUGZBcGZLWEV4cmdlSmlHYzB1Qlh2TFhZUXZXX1Z3aHV5YVpwYzVIdGhqWHE0VmJ2eEpoM1c0eDFzS1k1T0ptVjNZTVJFNjJOdzZaR2V0ZHpwU1NOdHo0OHE4NHRNd3FzZnVfMERUMEhjZmlZVnd3UHdMQmpoejNuMHRQeXlmYXZBZkhYc0t0LWpIRDg3ZlJTY1o2WUt0QkxhTzd6aGRQUnd4Wm02eF9LcTdfWU1KMmM?oc=5",
+      "source": "news.google.com",
+      "description": "L'inflation repart à la hausse en avril, mais la Banque du Canada peut se permettre d'attendre, selon la Banque Nationale  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -311,5 +335,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-25 15:50"
+  "last_update": "2026-05-26 16:40"
 }
