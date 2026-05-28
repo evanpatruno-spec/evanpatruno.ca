@@ -1,6 +1,72 @@
 {
   "news": [
     {
+      "title": "La Bourse de Toronto avançait en fin de matinée, Wall Street en ordre dispersé",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-05-28/la-bourse-de-toronto-avancait-en-fin-de-matinee-wall-street-en-ordre-disperse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Bourse de Toronto avançait jeudi, en fin de matinée, soutenue par la vigueur des secteurs des technologies et des métaux de base, pendant que les grands indices américains étaient en ordre dispersé.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada estime que le secteur financier fait preuve de résilience",
+      "link": "https://www.lapresse.ca/affaires/2026-05-28/la-banque-du-canada-estime-que-le-secteur-financier-fait-preuve-de-resilience.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Banque du Canada estime que le système financier a fait preuve de résilience après une année mouvementée, mais les responsables de la banque centrale mettent en garde contre l’aggravation des risques sur la scène internationale.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "États-Unis | La croissance revue à la baisse au premier trimestre, à 1,6 % en rythme annuel",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-28/etats-unis/la-croissance-revue-a-la-baisse-au-premier-trimestre-a-1-6-en-rythme-annuel.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "L’économie américaine a progressé durant le premier trimestre, mais moins qu’initialement annoncé, du fait d’une consommation plus faible des ménages et des investissements plus bas qu’attendu, d’après les données publiées jeudi par le département du Commerce.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "États-Unis | L’inflation s’accélère encore en avril",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-05-28/etats-unis/l-inflation-s-accelere-encore-en-avril.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La hausse des prix aux États-Unis mesurée par l’indice PCE a atteint en avril son rythme le plus élevé en près de trois ans, tirée par l’envolée du coût de l’essence, selon des données publiées jeudi.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "New York | Mamdani dévoile son plan pour le logement",
+      "link": "https://www.lapresse.ca/affaires/2026-05-28/new-york/mamdani-devoile-son-plan-pour-le-logement.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Le maire de New York, Zohran Mamdani, a dévoilé mardi un vaste plan pour le logement, s’engageant à construire 200 000 logements abordables et à stabiliser le plus grand système de logements sociaux du pays.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Un secteur financier résilient, mais pas à l’abri d’une cascade de chocs",
+      "link": "https://www.ledevoir.com/economie/983600/secteur-financier-resilient-mais-pas-abri-cascade-chocs",
+      "source": "Le Devoir",
+      "description": "La Banque du Canada se fait généralement  rassurante quant à la solidité des assises financières du pays.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Bon nombre de logements sociaux sont en piètre état à Montréal",
+      "link": "https://www.ledevoir.com/economie/983549/bon-nombre-logements-sociaux-sont-pietre-etat-montreal",
+      "source": "Le Devoir",
+      "description": "Les défenseurs des droits des locataires craignent que les budgets ne soient pas suffisants pour répondre au problème.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "L’inflation s’est encore accélérée aux États-Unis en avril, l’épargne des ménages fond",
+      "link": "https://www.ledevoir.com/economie/983534/inflation-est-encore-acceleree-etats-unis-avril-epargne-menages-fond",
+      "source": "Le Devoir",
+      "description": "L’envolée du prix de l’essence à cause de la guerre au Moyen-Orient est en cause, ce mois-ci encore.",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "L’inflation continue d’influencer les plans de vacances des Québécois",
       "link": "https://www.ledevoir.com/economie/consommation/983078/inflation-continue-influencer-plans-vacances-quebecois",
       "source": "Le Devoir",
@@ -13,14 +79,6 @@
       "link": "https://www.ledevoir.com/economie/982901/face-chomage-economiste-banque-canada-suggere-revoir-formation-jeunes",
       "source": "Le Devoir",
       "description": "Les jeunes de 15 à 24 ans comptent à eux seuls pour près du tiers des nouveaux chômeurs, y compris de longue durée.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Perspectives du marché immobilier au Québec 2026 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNT3ZCTzhIM3psWTJydENyVGo3ZVVrcUFPcFRrdmxXaW1Sb1JTUnF2RG81dkV1UW05dkZIT1dGVmM2SDEyNHM1X2pVMmdGTHdmWWJXajlYaV9SMy1nX0htQnVxSVJvVExhTjZFMXpaYk11ZG1lcWh2dFU0bVZ2WDk4cHJWVEpJUQ?oc=5",
-      "source": "news.google.com",
-      "description": "Perspectives du marché immobilier au Québec 2026  nesto.ca",
       "cities": [],
       "category": "general"
     },
@@ -41,28 +99,26 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier à Montréal | Prix des maisons en 2026 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQeHdPZ294T3ZJUnRPNzBGQ2NBd3NzcHN3cnlUc1hoNzY4eHo2T1RjMHc3NHh6SXB5RXRWdm9aVjZJYVhwR1ZMVVYtNTI2cUZLajBLaGl5dnBaQkh1ejJJUGV6TDlKdnBYc0xHblJIdVN6d0cxenZ6T2lia3lKYWwtWllzSko?oc=5",
+      "title": "Toujours endetté de 375 millions dollars | Stéphan Huot de retour en immobilier: «Il a encore un train de vie luxueux - FM93",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObzA4OEZYSVFORTVlakRNczV5SDdhYjRGblVHblRwZ1Bva3NYelUxZll1TkNmbDZCSWtxV0diVkt2WkJkNDlxMnlvZ1JWcE5OdXNOS2RvZ0hDWnptcmtBc0NVQVZTR2JTX2Nhd29rQmp5OE0wZ19qZGhSLTJxRHIyS2c0WEtmYXlOV3BYTnFYU2tqSlBoSU9yalFiOElzVGdaN3pFVzFyeGdVZw?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier à Montréal | Prix des maisons en 2026  nesto.ca",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Toujours endetté de 375 millions dollars | Stéphan Huot de retour en immobilier: «Il a encore un train de vie luxueux  FM93",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Sondage: faut-il prioriser l’amour ou l’accès à la propriété ? - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZDUwLWlYem92MXUtWk1wSmF5VFlaQTBadUhZUGlrWEZYUklyM3V0RFkwU0NjdUpGRTctdWE4R1pjRF9aQVdxYVBNS0FzUXV2d2V1bzlaVzVfNzBPaGE0emZxb2FrZm5FSVoxN0NOOVJLdEF3cDBTRk01QVhoWmk5ZVJZemxSM0Z3X1B0NXdnNG95bkREd2EydkcxWGFYZw?oc=5",
+      "source": "news.google.com",
+      "description": "Sondage: faut-il prioriser l’amour ou l’accès à la propriété ?  TVA Nouvelles",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Les logements «abordables intermédiaires» de la CAQ sous le feu de l’opposition - Le Devoir",
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdzdhRlBfczYxVDhLMlprSjJPU1gzOFFhX09VYl9KcExGRnJKLU9XUm5KbVN3cm9sa2I0Rk5neFdWbGVtbFBXZXhXejJSUEt5VktPaVpVUnVvMDRPOVJvSkdYQXhNWWdoRG83aG1IOE9HbXUxOWIwMkNMZnJWNVFESDFrRVVYSHlQSHVDRXladXdoMkhqT1puV3UzdjhsUFE2T2ttZ0VhOTJ4OHRP?oc=5",
       "source": "news.google.com",
       "description": "Les logements «abordables intermédiaires» de la CAQ sous le feu de l’opposition  Le Devoir",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Toujours endetté de 375 millions dollars | Stéphan Huot de retour en immobilier: «Il a encore un train de vie luxueux - FM93",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObzA4OEZYSVFORTVlakRNczV5SDdhYjRGblVHblRwZ1Bva3NYelUxZll1TkNmbDZCSWtxV0diVkt2WkJkNDlxMnlvZ1JWcE5OdXNOS2RvZ0hDWnptcmtBc0NVQVZTR2JTX2Nhd29rQmp5OE0wZ19qZGhSLTJxRHIyS2c0WEtmYXlOV3BYTnFYU2tqSlBoSU9yalFiOElzVGdaN3pFVzFyeGdVZw?oc=5",
-      "source": "news.google.com",
-      "description": "Toujours endetté de 375 millions dollars | Stéphan Huot de retour en immobilier: «Il a encore un train de vie luxueux  FM93",
       "cities": [],
       "category": "general"
     },
@@ -75,18 +131,18 @@
       "category": "general"
     },
     {
-      "title": "Toujours en faillite, Stéphan Huot est derrière trois projets immobiliers dans Lotbinière - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWGxERkpRX1liUzFEZFRqV0lsSDE4VDV0RDFOdGtwN05xYndlLW8taElIREc3M3FyQ2htbFdydG1mSnhiREg3TnJnWGczaWVXM0ZfWXc5SXBvQWIyNmVNekFVYVFWRkVST2Z1TEdUSjVZQ3BTRkVUdWdLenppcGZNRjdWUENKeEVIWDBBQ2NuTWhpT3hnQTJUNVY5ODR5R2ZRbDZCZ3ktcmlGeXpnSEJqSkZ4NDZURm9qaVY2Qk1DNTJMMjVGTlZTM1ZzWQ?oc=5",
+      "title": "Webinaire gratuit : comment optimiser sa recherche de logement au Québec? - Immigrer.com",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWpQcER2dlRsbVFQek1wLWM0WFQ0eTY0elB4NGwyV3A3ZGFIRS04MGMyQzVoM1RGVXpxU3VIaUlIS29lS04tN1lZdmxDQWMycXFzYkljdnNqbGc5aXJROFVtNEtyZ0hYZ29jYm1ZSjlQZTJRYXhyZE9yOWJGcm1pOUpHdmZwRTNFX01sNFFnTmZWM3BrVHBkSXN2MHc?oc=5",
       "source": "news.google.com",
-      "description": "Toujours en faillite, Stéphan Huot est derrière trois projets immobiliers dans Lotbinière  Journal de Québec",
+      "description": "Webinaire gratuit : comment optimiser sa recherche de logement au Québec?  Immigrer.com",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Marché immobilier canadien | Prix des maisons en 2026 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNMUtIbk9BVUxOVDg5UzZ5akZDN3hXQ1lIc3JBc3J3VWxMcnppcWFoMFA5VjdBNEFlZWVhdDFNTm1DNjNkdDlFdTlNOFFNdGxDZ0VqeU85ODMwbFZ1OGxMbWphUkdqOUVRRnJFdjNJdjV1alJfX1l1RGpzLVVXa0cxTmNJQkI?oc=5",
+      "title": "Le passage à trois jours au bureau irrite les employés d’Investissement Québec - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQaTVkWFBLUlBQSEtobUxnbm1fbW51ZkthbFdHeEdGTTlxaDNsLXRoX3dhTThLRXBER0RxZHQtZ2V6d3pmenJ1ZlZNTU51LTFZXzJPRkFkQmJVYWpWY3BRcU1oOEo0cnE0WkJ6RkJQYTFOZEpxY2VCaDhIcUgxMFZlMy05SEpVQTVGNkxlVVFqbXNDUGVxaVJTbEVrTkI4b3NsVmp4cFEzb1BtSlhLS3I4cGlmLXIxR1FaQVRNWGRFUTZXY3JGdXVFR3hqNlFIV0lJWGZzV194c19aeTFPZmo3SGdkUUthd2RDS1hkTDlMa2p4enIxX1U1Q1dB?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier canadien | Prix des maisons en 2026  nesto.ca",
+      "description": "Le passage à trois jours au bureau irrite les employés d’Investissement Québec  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -99,10 +155,10 @@
       "category": "general"
     },
     {
-      "title": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)? - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "mise à jour mai 2026",
-      "description": "Prévisions des taux hypothécaires au Canada (mise à jour mai 2026)?  nesto.ca",
+      "title": "Combien faut-il gagner pour acheter une première propriété? - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeEpZLXZmYTNCbzZxdUpiTzBBWUhUYW9nS0Z5NFF5QzNOc0VpNEw3dFg0ZjN0VElCeGFQNVpiRDBTTldDbk0talBudWZRamNybExnMjEySUc1SGpCRTgzZ0ExckxHNFc2TFBMZUxZRzdOb3dKRHhjb3B1TjFxY0NPT2Y0U1Q1WUxnX0JrRV9lamktc0ZENUxmVEs2alZLdw?oc=5",
+      "source": "news.google.com",
+      "description": "Combien faut-il gagner pour acheter une première propriété?  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -115,22 +171,6 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier de l'Ontario | Prix des maisons en 2026 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUkppQVVrcGxQVHl2cUpvMkVHcnYxdUE4ZVl3ZGotRHpXT09mVjlsRmV3ZTRxTks3Unl2U3pDUDRJZmhrMHlhUFoxbEdlRllrbDROcm05TjVLUHVISTVaNWdyQV9aNlhDeDJzQ29NaTJ6ZXYtU0RUa2pyZUxpeGswR0REUQ?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier de l'Ontario | Prix des maisons en 2026  nesto.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Webinaire gratuit : comment optimiser sa recherche de logement au Québec? - Immigrer.com",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWpQcER2dlRsbVFQek1wLWM0WFQ0eTY0elB4NGwyV3A3ZGFIRS04MGMyQzVoM1RGVXpxU3VIaUlIS29lS04tN1lZdmxDQWMycXFzYkljdnNqbGc5aXJROFVtNEtyZ0hYZ29jYm1ZSjlQZTJRYXhyZE9yOWJGcm1pOUpHdmZwRTNFX01sNFFnTmZWM3BrVHBkSXN2MHc?oc=5",
-      "source": "news.google.com",
-      "description": "Webinaire gratuit : comment optimiser sa recherche de logement au Québec?  Immigrer.com",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Une Maison Martin-Matte en construction à Saint-Rémi - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPaWw1QjlwRDhqb1cwdXRNWi1IOVRqZnM0N2JYalQ1ZEx5bzYtUmYxQVF5d2lyRGtUX0JVWXN1eXUzdWU0a01UX0xlWGM5aVBIU2F0REFha2U2WFp6SXUyVmpmaWxXRzJrdzVCY0I3SFhEMlBhRzN2SDFHRUpkajB3M1NjdEZ5WldWTzQ0?oc=5",
       "source": "news.google.com",
@@ -139,26 +179,20 @@
       "category": "general"
     },
     {
-      "title": "Combien faut-il gagner pour acheter une première propriété? - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeEpZLXZmYTNCbzZxdUpiTzBBWUhUYW9nS0Z5NFF5QzNOc0VpNEw3dFg0ZjN0VElCeGFQNVpiRDBTTldDbk0talBudWZRamNybExnMjEySUc1SGpCRTgzZ0ExckxHNFc2TFBMZUxZRzdOb3dKRHhjb3B1TjFxY0NPT2Y0U1Q1WUxnX0JrRV9lamktc0ZENUxmVEs2alZLdw?oc=5",
+      "title": "Transaction de la semaine: une ancienne maison de Bronfman vendue à 30% de moins que sa valeur - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPODhObnptd2V5VVVRRUFBejRmbWVoTU1nZzVLeUJCc0I5RTlVRUdVVWwtUUQyQnJfeDRYQlhvN3dKTkNjTDE2dG5mdWVVUXd6RVpfYk9Xejk0Rkh3MERNenRJek81ZlVQY0R2YmNmblNBMW50c0lQT21nbEs0bE1lVXphVDZFblJ3T2tIWktyNUFZZlE1bDJkZnBuQWFIRTFWclpkbGlySlpobGYzUVlRUjlyd0MzRC1EMmZmQ080TExDUkNkZDlDWl9XWTZtWnRB?oc=5",
       "source": "news.google.com",
-      "description": "Combien faut-il gagner pour acheter une première propriété?  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
+      "description": "Transaction de la semaine: une ancienne maison de Bronfman vendue à 30% de moins que sa valeur  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Maïka Desnoyers se remémore la pire maison de l'histoire de Vendre ou rénover au Québec - Monde de Stars",
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR2ppdlVDV1dPNnhWd3BhNDM2dTdKY3BneGhIWEd3TjhYRjQyYUtDVENLdW50Q2tGa3VpX2l6aXduYWpINy16ekM1ajNTc1RBQjBOMFE4S0ZRemxHcTRnVTJ4UzJqQjEwZmVVcU1la1NwMmRFREtvUWdfZWp0cWRYczE2cDJYUl9xSXBaSXBKOHdsejU0bXZhMjBrRDZtMHFibnNvTUlZV0wzMENDeEtLY1NZbUxpeFdhRXhtTEh2NEl6MFU?oc=5",
       "source": "news.google.com",
       "description": "Maïka Desnoyers se remémore la pire maison de l'histoire de Vendre ou rénover au Québec  Monde de Stars",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada est sur la bonne voie - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOT3FjTHhQMlpoQXR5VVJzV1JNSlB2X0gwLVBCWnUxX19hODNkMTVqMGNTanFCcmNtQVVXLTJSQ1JMVkttNDdEdXJCZmhKTHAwbmZ4NEQzNVZlT3Z4VGdNbGQ3TUtZT0ZWbmJ4ZW00U2pMVER4ck10NWl0Rk5VZzN6UVdqUnlyUQ?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada est sur la bonne voie  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -171,42 +205,18 @@
       "category": "general"
     },
     {
-      "title": "Un économiste de la Banque du Canada croit qu'il faut revoir la formation des jeunes - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSEEyVGktbzJkYXpNTVBaTThxSzlDUzNIald4OEs0dkcwXy12ZGpNUlhzTFgwclBIRGpjWHlCdzNyY1hsVVBaWTRLNmwtek41OS1xbjdkZGpibVlDUGgyQjc5a2puV2o1MlRIQTRmWEhrcGFiX3VjLVRSYmNxXzQxcFVxZ1BGQmI1c2R1STBBWGhpWklCNm01dXk4QkpGaUNuTWZkay1rbUNZZmlMWEo0Q0xkQlBRWVFRX09jTDQ1Smp3SWFXMENoQmdOdHM0dmM?oc=5",
+      "title": "La Banque du Canada a haussé son taux directeur - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQUlSY3V2TXd4VlNCU2VLa1o3NTk5N3F1aVByaW5nWXc3cklnWllSU0R6RFY3TXByNTgtYVREY2hpMlRMclpYZ2NpWjZUZ3BtU1gwRkFxMWxEU0dCU0RmUXBZdXlxUFdoMGVxSmhqQjBNVDRmVElhbVViV2xEdmV1azZmdUF0LU1FdHJWU1luSlJBNHc?oc=5",
       "source": "news.google.com",
-      "description": "Un économiste de la Banque du Canada croit qu'il faut revoir la formation des jeunes  Noovo Info",
+      "description": "La Banque du Canada a haussé son taux directeur  conseiller.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Face au chômage, un économiste de la Banque du Canada suggère de revoir la formation des jeunes - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTl9vazF4WWZKbGs5R2FnengyRnZ4Z1BjNUp6Rnh5RjV6cDhHbEhHdkl5bjRKQU1lZ2hfRTFyY2x5VUZBMTU0NG5UTFBNaG1zWmQ5TS1wZnpqMnBaUFB1SHFBYjZrTWFHa09hOVoxbndCSFBoNjFtd1JMcTQwUFJ6TFJkWkl5b3NfV2NYa3VUeXNlbWU1TG9fNHN6N19CeUxxTmxva1U5S0VRMzhDdXdz?oc=5",
+      "title": "La Banque du Canada estime que le secteur financier fait preuve de résilience - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQU3k3TllmY19reHB2VHpTWHI1QTgzUmV0X2FvdWd4Y010RDZFdDRNM1NFVGdJV1hXb0gtU1VPaGJJbTk0dnhRTV9hM2RTbGxCeU5XY0wySlhyc2ZXY3FzbFdzOUlCUC1kYjU2TzhURnNzdmp6V3YyZU5RTkIxYXJRNTQyZXAyNDlSa1dnSTNxb1lETW14OFF2SVIyTjRmcHdVTmY3d0ZfZmZWSTZ0WjA4dEg2eTVIQkpad2tkd1gtTWQ5ME1jMHVZ?oc=5",
       "source": "news.google.com",
-      "description": "Face au chômage, un économiste de la Banque du Canada suggère de revoir la formation des jeunes  Le Devoir",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché du travail en évolution | Il faut revoir la formation des jeunes, croit un économiste de la Banque du Canada - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQN2Fhd1ZUX2dlSmZXdEgwd0pMMUVIekQ2ek5ZR3l2bm5nc0Z4dEE4WnJ3MkZIZXNlM0o0UEpWcDFBam1aR2NJYnRlRzYySEdCeUNsZzRTZVFhZ0JIcXR5YVczV0xqZ2hqS0xqYVVHZGR1SlZ0bktqMHhiM2VOQ0d2anh1cG0xaWVDcXotT01ENFFLcURVX2tVNi1WZVRrcUxlV2k5SXowd1BsS1BjcUpueXN0d2lVTHBZRGF4UGxRWU5KYzEwY1pSUjVBa1FTb2VxeW00THpfOUxuUzR4X054ZUx2Y2ZoMVNxY1lYNTAtTUQwWkhqdFlBRm14aGJaZw?oc=5",
-      "source": "news.google.com",
-      "description": "Marché du travail en évolution | Il faut revoir la formation des jeunes, croit un économiste de la Banque du Canada  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada freine les mesures d’urgence - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPYmQtaEJGX2drU1RscTBDR3dybFlNTmJqd25aelhHSHYxMkNiNEZad2VhWlV0SUpfdDhVSURoLWZrSUFZLVZaek9LbzVWUGVCUUUxdE1lRzRHWndIMUU3Z1ZoVmZwTm5LaFRlaWxadUdyUF9hczJEMWJqQ2E3WU1GREJtSlB6cjcwdWpfYjREYkRyMUE?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada freine les mesures d’urgence  conseiller.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Rapport financier trimestriel - Premier trimestre de 2026 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQWZkMnNnX1VvM2VkTUxtdEFiM20ta0J0OXBETEU5aEZhcHdXOXhzNlh4eDhGV0cyS0tVWXZzQV9QcVVDMDlaTVI0LWhab21Wc1pJUXY3WGxZMGtGU0JVUUVmT09uOHRQcV9WTGFZNkF4elNaaHFScGVPRkVyXy1sYWtPdEhwRXh0NVlLMzluV0RvRXo0N2RpZzZn?oc=5",
-      "source": "news.google.com",
-      "description": "Rapport financier trimestriel - Premier trimestre de 2026  Banque du Canada",
+      "description": "La Banque du Canada estime que le secteur financier fait preuve de résilience  Noovo Info",
       "cities": [],
       "category": "general"
     },
@@ -219,10 +229,42 @@
       "category": "general"
     },
     {
-      "title": "Diagnostiquer les changements sur le marché du travail - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRGdrV0UxXzBhU2xrMVl0aEwxeGRlbk1Tb0RHeHUzRlAwZGNWRnY4XzBQaDZvRjJQYlJ3dW96b3k2dzV0Uk5tUWJpeWo5R3FGNXhqalp0ZFJiYVJISWVpc0I0NFVfcnNndldtek00ZnhWODJLeklDbXNGNHZuYlpza0xTVmxmQQ?oc=5",
+      "title": "La Banque du Canada estime que le secteur financier fait preuve de résilience - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVWtUdFM5WmRLLWhqU1hCa2E0RWVDLWVRRlYtY0ZCYmJaRUVxb3piQlVaWllKZGhsLUhMZ3lXenRMaTNSdFN4d0d2OFdCbEEzekJPUVA0ajhadlhWSGJ1M3pUd0tCNmxXQlptczZ0SnZDVFZ0UWZ0VHhNY2VLLWpNUXRYNks3YWlBbUxUMnFnSDNjekdGaEx1YjZYRWdQT0hEMHJMbzR1QnZJZnYzdDFIMlEwc09reG5zQzBxWmdNYlhJemc?oc=5",
       "source": "news.google.com",
-      "description": "Diagnostiquer les changements sur le marché du travail  Banque du Canada",
+      "description": "La Banque du Canada estime que le secteur financier fait preuve de résilience  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Face au chômage, un économiste de la Banque du Canada suggère de revoir la formation des jeunes - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTl9vazF4WWZKbGs5R2FnengyRnZ4Z1BjNUp6Rnh5RjV6cDhHbEhHdkl5bjRKQU1lZ2hfRTFyY2x5VUZBMTU0NG5UTFBNaG1zWmQ5TS1wZnpqMnBaUFB1SHFBYjZrTWFHa09hOVoxbndCSFBoNjFtd1JMcTQwUFJ6TFJkWkl5b3NfV2NYa3VUeXNlbWU1TG9fNHN6N19CeUxxTmxva1U5S0VRMzhDdXdz?oc=5",
+      "source": "news.google.com",
+      "description": "Face au chômage, un économiste de la Banque du Canada suggère de revoir la formation des jeunes  Le Devoir",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada : rapport sur la stabilité financière - CPAC.ca",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQTEh2SjNRSUxXNkMtWVFYSG50UjdiU3NuVF9aQ2tPWkpzTk9ldEtWRW5ZWVdsZjlFVVlsOFFLc19uYlU4NXc3SUNiM0FpdzR6T3piRHh1SWpUMlVOQU1EdndyZUQ0R0RPZXFocjQ4X3BmN1J2VWY3bTN5MVoxNXM0VVF3TU1kUUwtZkFXdllqQUdzX0Rpa2FwLTk3WFJTYVpRbzY5WXpPbWN3aWxsTEQzb283bDVtUm5SZ2JGeHdUWGxUd09Sc2d6b2pNVlM?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada : rapport sur la stabilité financière  CPAC.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Rapport financier trimestriel - Premier trimestre de 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQWZkMnNnX1VvM2VkTUxtdEFiM20ta0J0OXBETEU5aEZhcHdXOXhzNlh4eDhGV0cyS0tVWXZzQV9QcVVDMDlaTVI0LWhab21Wc1pJUXY3WGxZMGtGU0JVUUVmT09uOHRQcV9WTGFZNkF4elNaaHFScGVPRkVyXy1sYWtPdEhwRXh0NVlLMzluV0RvRXo0N2RpZzZn?oc=5",
+      "source": "news.google.com",
+      "description": "Rapport financier trimestriel - Premier trimestre de 2026  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Un économiste de la Banque du Canada croit qu'il faut revoir la formation des jeunes - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSEEyVGktbzJkYXpNTVBaTThxSzlDUzNIald4OEs0dkcwXy12ZGpNUlhzTFgwclBIRGpjWHlCdzNyY1hsVVBaWTRLNmwtek41OS1xbjdkZGpibVlDUGgyQjc5a2puV2o1MlRIQTRmWEhrcGFiX3VjLVRSYmNxXzQxcFVxZ1BGQmI1c2R1STBBWGhpWklCNm01dXk4QkpGaUNuTWZkay1rbUNZZmlMWEo0Q0xkQlBRWVFRX09jTDQ1Smp3SWFXMENoQmdOdHM0dmM?oc=5",
+      "source": "news.google.com",
+      "description": "Un économiste de la Banque du Canada croit qu'il faut revoir la formation des jeunes  Noovo Info",
       "cities": [],
       "category": "general"
     },
@@ -235,10 +277,34 @@
       "category": "general"
     },
     {
-      "title": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO) - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0gzVjVnblNmMlRRX0xhZXh6SXpmVFItTjRUWjBYWU9hVE9fcXRNTS1vRFlYNXhGa1pkY0FKNXEwOW5JVFJXczRBNjd3bEpEZ3hiV3JGYl9tWHBIejR1TzJ3T2JFZGhiQTBjbzFaYnVVSm9kWHI2bXVENWtWZ2tsQTZjMi1renZZUjJ4UlgtcURHdV9pVWJKbHRmOG5JZDczcmU4REZNVUVENWJwdXBYclNDMHFjXzlfSmM4UHhad0ZUdkhf?oc=5",
-      "source": "CIRANO",
-      "description": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO)  Banque du Canada",
+      "title": "Marché du travail en évolution | Il faut revoir la formation des jeunes, croit un économiste de la Banque du Canada - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQN2Fhd1ZUX2dlSmZXdEgwd0pMMUVIekQ2ek5ZR3l2bm5nc0Z4dEE4WnJ3MkZIZXNlM0o0UEpWcDFBam1aR2NJYnRlRzYySEdCeUNsZzRTZVFhZ0JIcXR5YVczV0xqZ2hqS0xqYVVHZGR1SlZ0bktqMHhiM2VOQ0d2anh1cG0xaWVDcXotT01ENFFLcURVX2tVNi1WZVRrcUxlV2k5SXowd1BsS1BjcUpueXN0d2lVTHBZRGF4UGxRWU5KYzEwY1pSUjVBa1FTb2VxeW00THpfOUxuUzR4X054ZUx2Y2ZoMVNxY1lYNTAtTUQwWkhqdFlBRm14aGJaZw?oc=5",
+      "source": "news.google.com",
+      "description": "Marché du travail en évolution | Il faut revoir la formation des jeunes, croit un économiste de la Banque du Canada  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Première sous-gouv. de la Banque du Canada : Rapp. sur la stabilité financière - CPAC.ca",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPWEpTaVgySENnWkNFTG50ZlN1TVlSZWZaQWN4UWxXM0VSWlZEemhBUUFHdmJFS2tiaU1KNzlEUnJHaHBjSFlPMmVHWjZaZ2g3ZEkwSVVZcld0U2JWQURucm9IQUZ1OTEtbWdqZWY1NHBrRlZIWHh1TTZFcGVTQU5nWlFsMXlra0hseHJxenV1ZzBTaHFzb1FmaDRQRWI3Mm5oWjJjc013ZW9fQ1gzajRxd1BJZUxXeEJZaDl1dlQ3R004Y3FtWHlvMTVPcFNLZ0Y4cFRMckJPR1NFRmVBNWZWYWdBSS1mWXg2S3c?oc=5",
+      "source": "news.google.com",
+      "description": "Première sous-gouv. de la Banque du Canada : Rapp. sur la stabilité financière  CPAC.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Points saillants de l’enquête sur le système financier – 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWjRYMFM5NDd5ZTFTS1RJcEpKbjBQX0d2cHNmcFhtcTlWOFJDTmlEM2VQMlNfLWt0VzJCWU5nZm1xNU9scmo0dHVSUGs5Q2RhMDVBZmRQNlJJQUlWcWZ5N3hXTl9jX1c3d3NHUlZ2SG42WUEtOFV3MnBhcGR1VklmTkZOV2FlTDB1TzdhX0piTVVlQ0FUYmlYRTdQb3pBdw?oc=5",
+      "source": "news.google.com",
+      "description": "Points saillants de l’enquête sur le système financier – 2026  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Diagnostiquer les changements sur le marché du travail - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRGdrV0UxXzBhU2xrMVl0aEwxeGRlbk1Tb0RHeHUzRlAwZGNWRnY4XzBQaDZvRjJQYlJ3dW96b3k2dzV0Uk5tUWJpeWo5R3FGNXhqalp0ZFJiYVJISWVpc0I0NFVfcnNndldtek00ZnhWODJLeklDbXNGNHZuYlpza0xTVmxmQQ?oc=5",
+      "source": "news.google.com",
+      "description": "Diagnostiquer les changements sur le marché du travail  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -251,10 +317,10 @@
       "category": "general"
     },
     {
-      "title": "Le retour sournois de l’inflation? - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XQVhyZHR1NEd3MTkyQTVQbFlsSWt2YWpiMkxVUy1TTU9JVHpPbGhMWTNKUE1IM2Y3YmFkSUxiRU5KTVgyckFHSl9LUHVVZGJYY3J6QVRFWTh6cVN3RTNXSW9ERGstcm1RajNBYjhGYTg1MUZqRHpOMkM1cFZZSnc?oc=5",
-      "source": "news.google.com",
-      "description": "Le retour sournois de l’inflation?  conseiller.ca",
+      "title": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO) - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0gzVjVnblNmMlRRX0xhZXh6SXpmVFItTjRUWjBYWU9hVE9fcXRNTS1vRFlYNXhGa1pkY0FKNXEwOW5JVFJXczRBNjd3bEpEZ3hiV3JGYl9tWHBIejR1TzJ3T2JFZGhiQTBjbzFaYnVVSm9kWHI2bXVENWtWZ2tsQTZjMi1renZZUjJ4UlgtcURHdV9pVWJKbHRmOG5JZDczcmU4REZNVUVENWJwdXBYclNDMHFjXzlfSmM4UHhad0ZUdkhf?oc=5",
+      "source": "CIRANO",
+      "description": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO)  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -275,10 +341,26 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada continue de percevoir les changements structurels comme un frein à sa capacité de relance, selon Desjardins - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPSGJNc1dJUXkzN3E2ODVXc0dtdk1ncDdYaXJkcml5cDZWSFB0MmdHS3lqcng2dDFibDU1ckFDdHhoYWtZam1ERjdpdXo4dEsxZ1hrWmIzd2VlRTN3bmF0MHFPenRFMkpldG5wMVgzRmVvbDFtYTc0UGliWVNYUnBBNDNDSVhEenkzWkZPc2dkRG51RkV1c1NjcVRDbjdKNkdLd1YxODd1ZEE3bWctVHhYLWRvdm9EVGNCQWtuRnYzSjZnem5RS1BqeXg4dnAtMDlDTTAybDlUYWVPQkQ4VHVWYXptQUxBa0pTemJrQzJ3ZE1PYUk?oc=5",
+      "title": "TEXTE INTEGRAL-La Banque du Canada affirme que le système financier a bien fonctionné - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxON2NlZmVuZ1NKc3BOdml4RV9VNDcwZnc0THRWU3F5ZU1OYXNodjYtTFhEMkpaUTI0SjA0anZ4QnpEaG9LN3BabjQ1Yzg4cUJndFFhVlJ3TE13MmcyYnVMSlRPeFRWVHBKNHEyTEZTLXh5bk9wUk1PRjhMdTQ5a1VZSnBTVDVaN28tUWU4bzltcXZ1ZmNQbWtjbWo3UExoZkZwdWw5emxETXhPZkR4Sk5Kb2owX1BYTkRPY0puT0R0cHZZU0dOSTV0MzdrTmZYN3ROdDRLQk5oY1hXQTNLT25z?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada continue de percevoir les changements structurels comme un frein à sa capacité de relance, selon Desjardins  Zonebourse",
+      "description": "TEXTE INTEGRAL-La Banque du Canada affirme que le système financier a bien fonctionné  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Donald Trump Change Notre économie, Dit Tiff Macklem De La Banque Du Canada | Zone économie Daniil Medvedev (te9uhUPGt1) - Mshale",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MV2NsYkkzaUdoRXVoalB4U0RNSVNNSmMxU3RGN0R2eE01UDhKeURMWFJ1aGdpVDZuUnlNSFk3NW5JNjUtWGFrT3JRcHRBalhkd01YY2R4dUMzQnM?oc=5",
+      "source": "te9uhUPGt1",
+      "description": "Donald Trump Change Notre économie, Dit Tiff Macklem De La Banque Du Canada | Zone économie Daniil Medvedev (te9uhUPGt1)  Mshale",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Résultats de la Banque Royale du Canada : les marchés de capitaux en test - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOOTNfcUQ5Uk1JX2xRdFFkTUVvUWR3T3NTYVBncVNoc2E4bE9wcHhzcjFMYnZEZGd0X0RTLVhpU1JLa3FHTzU4YURIRHFUaUdYLWxhVUZfUlVTbmZXWTlEOEdDa0FKbGVKWDVoeGExNnk0ejhyOVFGVXVqNWFTRVkzS1J5MGtfX2lsVmx5U29xb0FVWnhiTDJscEUxaVFqaXNqeDZLYjRrY2dsSlBEbXlFNURiejQ4b0ZIR1NhUy1kcDY2QQ?oc=5",
+      "source": "news.google.com",
+      "description": "Résultats de la Banque Royale du Canada : les marchés de capitaux en test  Investing.com France",
       "cities": [],
       "category": "general"
     },
@@ -343,5 +425,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-27 16:36"
+  "last_update": "2026-05-28 16:53"
 }
