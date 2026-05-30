@@ -1,6 +1,32 @@
 {
   "news": [
     {
+      "title": "Intelligence artificielle | Le secret du succès d’Anthropic",
+      "link": "https://www.lapresse.ca/affaires/techno/2026-05-30/intelligence-artificielle/le-secret-du-succes-d-anthropic.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Tasse-toi, OpenAI ! Anthropic s’en vient. En fait, Anthropic est déjà là. Avec une valorisation ajustée à 965 milliards US, à la suite d’une ronde de financement de 65 milliards US, l’entreprise qui a mis au monde Claude prend désormais la tête de la révolution par l’IA du monde des affaires.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Vente d’un immeuble résidentiel | La Banque Royale poursuivie dans une affaire d’évitement fiscal",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-05-30/vente-d-un-immeuble-residentiel/la-banque-royale-poursuivie-dans-une-affaire-d-evitement-fiscal.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Banque Royale et l’un de ses partenaires d’affaires font l’objet d’une poursuite de 72 millions de dollars intentée par des membres d’une famille de Montréalais dans une affaire d’évitement fiscal ayant mal tourné.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "L’IA et les espoirs de détente au Moyen-Orient soutiennent Wall Street",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-05-29/l-ia-et-les-espoirs-de-detente-au-moyen-orient-soutiennent-wall-street.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Bourse de New York a clôturé sur une note positive vendredi, aidée par l’intérêt toujours croissant autour des valeurs liées à l’intelligence artificielle (IA) et par les espoirs d’accord entre Washington et Téhéran.",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Le secteur financier du Canada est résilient, mais n’est pas à l’abri de chocs en cascade",
       "link": "https://www.ledevoir.com/economie/983600/secteur-financier-resilient-mais-pas-abri-cascade-chocs",
       "source": "Le Devoir",
@@ -9,20 +35,10 @@
       "category": "general"
     },
     {
-      "title": "Bon nombre de logements sociaux sont en piètre état à Montréal",
-      "link": "https://www.ledevoir.com/economie/983549/bon-nombre-logements-sociaux-sont-pietre-etat-montreal",
-      "source": "Le Devoir",
-      "description": "Les défenseurs des droits des locataires craignent que les budgets ne soient pas suffisants pour répondre au problème.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "L’inflation s’est encore accélérée aux États-Unis en avril, l’épargne des ménages fond",
-      "link": "https://www.ledevoir.com/economie/983534/inflation-est-encore-acceleree-etats-unis-avril-epargne-menages-fond",
-      "source": "Le Devoir",
-      "description": "L’envolée du prix de l’essence à cause de la guerre au Moyen-Orient est en cause, ce mois-ci encore.",
+      "title": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNRlllSmZza3NoaXNpLThQay16VXN2UjR0UURKNkQ5SlZ1VTVUNEsyU09YeU9wQU9WQ290ZGY1QUlZUWgwb2YxNUZjaVZzb2dwZnFwREJrcFVDaDdORUg5UnB2T3VsdEpseldvYzAyNVI3aWl6ZHQyUG55YkRSNjNjeGdaUlBlMXlHalg5eGtMVVNTX0wyaTNPQ01uaDJHdlRwMmNvaFZmc2NOaHFYM29XMU5FOGJsTXJ1ZVpfSHZuSm1ZN2xKYm9id1V0U3BHaUlDN0JNa1FB?oc=5",
+      "source": "encore",
+      "description": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -31,14 +47,6 @@
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOREFHZllzVGgxbjRNQldkVk9YWjFTeUw0SG1GdG1UNzdOWkZoclNLWG45b0JBdmRpd09wNmpod2pESEN4YkRDZ2pLRE4wTzZJbUtFZU8ybU5DaVR4UkZzYUZBRklVV1dJb184WmhfSzhTUklSNEExZEZLSzdDb1hyUmN3M2xvOXJCTUJYZjN1WVY2TVhLOHllWVhn?oc=5",
       "source": "news.google.com",
       "description": "L’accès à la propriété passera-t-il par les maisons préfabriquées au Québec?  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNRlllSmZza3NoaXNpLThQay16VXN2UjR0UURKNkQ5SlZ1VTVUNEsyU09YeU9wQU9WQ290ZGY1QUlZUWgwb2YxNUZjaVZzb2dwZnFwREJrcFVDaDdORUg5UnB2T3VsdEpseldvYzAyNVI3aWl6ZHQyUG55YkRSNjNjeGdaUlBlMXlHalg5eGtMVVNTX0wyaTNPQ01uaDJHdlRwMmNvaFZmc2NOaHFYM29XMU5FOGJsTXJ1ZVpfSHZuSm1ZN2xKYm9id1V0U3BHaUlDN0JNa1FB?oc=5",
-      "source": "encore",
-      "description": "Nouveau Code de construction du Québec | Vos logements coûteront (encore) plus cher  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -85,6 +93,26 @@
       "category": "general"
     },
     {
+      "title": "Une maison vandalisée et entièrement dépouillée de son cuivre dans le grand Montréal - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQeTB4Z2p2MXJSWWZqcWVxXy02eWs4TmU4SnpyaFZwMkF6VVFydU5SNUFmbXMtdTRFWHZJOGZfczZLTU16RVZ5RGtJMUV2WmYxNTJpQlhBYTFzUmFhVHVPRFRGY0xjdWNOQ2RZdzRaRXBLaWNrWV85RklHTmNjRkhhTlJBdVBuNTVoS3hPSzZuRWN1QkZQYm1MWG4xd2xkMTZRM3ktX2JSNjVUWHYyeGhFX3I4ZEdEWHdvNl9JLWQzSGE?oc=5",
+      "source": "news.google.com",
+      "description": "Une maison vandalisée et entièrement dépouillée de son cuivre dans le grand Montréal  TVA Nouvelles",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Un important promoteur immobilier est placé sous haute surveillance - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSjdKcWRvVVdqSGEtWDhWbXJmOUxuYnZINmhlQ1d6eTZYZVBEbmVFRGxpbjFEVVNXTW15dUdBeE5Za2wzNjZPYWQyVU1ldnQ4UW1rNThmNHRUcHFIMmt1VFNmS1dONzc5RmZPbzhiMTBUUHA0cVZrUjh0cGNCVi0wQUI0d0dzQk16TFI4WFBvb2d0WjN4OWdrQVZLSFBWa0ktS0RzWE9B?oc=5",
+      "source": "news.google.com",
+      "description": "Un important promoteur immobilier est placé sous haute surveillance  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
       "title": "Webinaire gratuit : comment optimiser sa recherche de logement au Québec? - Immigrer.com",
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMWpQcER2dlRsbVFQek1wLWM0WFQ0eTY0elB4NGwyV3A3ZGFIRS04MGMyQzVoM1RGVXpxU3VIaUlIS29lS04tN1lZdmxDQWMycXFzYkljdnNqbGc5aXJROFVtNEtyZ0hYZ29jYm1ZSjlQZTJRYXhyZE9yOWJGcm1pOUpHdmZwRTNFX01sNFFnTmZWM3BrVHBkSXN2MHc?oc=5",
       "source": "news.google.com",
@@ -101,10 +129,10 @@
       "category": "general"
     },
     {
-      "title": "Combien faut-il gagner pour acheter une première propriété? - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeEpZLXZmYTNCbzZxdUpiTzBBWUhUYW9nS0Z5NFF5QzNOc0VpNEw3dFg0ZjN0VElCeGFQNVpiRDBTTldDbk0talBudWZRamNybExnMjEySUc1SGpCRTgzZ0ExckxHNFc2TFBMZUxZRzdOb3dKRHhjb3B1TjFxY0NPT2Y0U1Q1WUxnX0JrRV9lamktc0ZENUxmVEs2alZLdw?oc=5",
+      "title": "Le Sneaky Dee’s menacé par un projet immobilier - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQ0pTaXY3OW5aT2hZVlYxOTRPUDZDSFcyUU42b3VEakVzODBLYUNqaFMtS05qaW92QmsybjVzSkN3eGFLWkwxSzQ0R1JxMklhOWhVWFR2bnZQVVV5SXItckdXaklOQWt5V0Rmd21CNUh1SmRwQVZyLTBNbFFzWTlEVVNoMlVFNF84Ym9Qeklzdnd4QVIxQUYwbQ?oc=5",
       "source": "news.google.com",
-      "description": "Combien faut-il gagner pour acheter une première propriété?  TVA Nouvelles",
+      "description": "Le Sneaky Dee’s menacé par un projet immobilier  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -133,20 +161,10 @@
       "category": "general"
     },
     {
-      "title": "Transaction de la semaine: une ancienne maison de Bronfman vendue à 30% de moins que sa valeur - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPODhObnptd2V5VVVRRUFBejRmbWVoTU1nZzVLeUJCc0I5RTlVRUdVVWwtUUQyQnJfeDRYQlhvN3dKTkNjTDE2dG5mdWVVUXd6RVpfYk9Xejk0Rkh3MERNenRJek81ZlVQY0R2YmNmblNBMW50c0lQT21nbEs0bE1lVXphVDZFblJ3T2tIWktyNUFZZlE1bDJkZnBuQWFIRTFWclpkbGlySlpobGYzUVlRUjlyd0MzRC1EMmZmQ080TExDUkNkZDlDWl9XWTZtWnRB?oc=5",
+      "title": "Combien faut-il gagner pour acheter une première propriété? - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeEpZLXZmYTNCbzZxdUpiTzBBWUhUYW9nS0Z5NFF5QzNOc0VpNEw3dFg0ZjN0VElCeGFQNVpiRDBTTldDbk0talBudWZRamNybExnMjEySUc1SGpCRTgzZ0ExckxHNFc2TFBMZUxZRzdOb3dKRHhjb3B1TjFxY0NPT2Y0U1Q1WUxnX0JrRV9lamktc0ZENUxmVEs2alZLdw?oc=5",
       "source": "news.google.com",
-      "description": "Transaction de la semaine: une ancienne maison de Bronfman vendue à 30% de moins que sa valeur  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Maïka Desnoyers se remémore la pire maison de l'histoire de Vendre ou rénover au Québec - Monde de Stars",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR2ppdlVDV1dPNnhWd3BhNDM2dTdKY3BneGhIWEd3TjhYRjQyYUtDVENLdW50Q2tGa3VpX2l6aXduYWpINy16ekM1ajNTc1RBQjBOMFE4S0ZRemxHcTRnVTJ4UzJqQjEwZmVVcU1la1NwMmRFREtvUWdfZWp0cWRYczE2cDJYUl9xSXBaSXBKOHdsejU0bXZhMjBrRDZtMHFibnNvTUlZV0wzMENDeEtLY1NZbUxpeFdhRXhtTEh2NEl6MFU?oc=5",
-      "source": "news.google.com",
-      "description": "Maïka Desnoyers se remémore la pire maison de l'histoire de Vendre ou rénover au Québec  Monde de Stars",
+      "description": "Combien faut-il gagner pour acheter une première propriété?  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -159,10 +177,10 @@
       "category": "general"
     },
     {
-      "title": "Investissements dans les infrastructures scolaires: Québec Solidaire demande une enquête de la VG - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQRktoV3E5bTUwa2xsZEFQeVYxQk1pN2xTdW1Wd0xXbzlSUHZZVGYyWTF5TnhpNm1aZGJsN2dCVXkyYnBaeEhOZFJCbWZ0bHlva3BHNF9tYnNRNWhDM3JzVlZZN1ZPYmdRQzAwbWpSanpsX29YRHRHaU82allMU2FqQXhkWGJPS1BjbHk5bC1FQjU2clNDZ0hUZzVFVmdlUTVvMXRPQ1ppZ2FkQXd2MExyUzNycUxVY2tCS3ZCVGRJeXpKR1FianQ5RGc5d205OGZZVmZGQw?oc=5",
+      "title": "Témoignage de la première sous-gouverneure de la Banque du Canada devant le Parlement - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRDRoNUNqam5wSXpUMGtTSE4tVjJIY252SEVSODNjdm9EbzdUU2t2MlV2Z0VVNVpzLVZaTm5ET2xod1RhaDJoQXhpTWtielVOVFhZbzBqWlFtRDVqcUxMMVVFNFhWNDNZY29TUlFGSHFoTF9DU0NxaVdFQ1Z0djByVC13blhOU0EzelRmczNqbmlrY2Nxa2pMREV4ellfdGs3c2VfS3RQNDBxekdYOVFZ?oc=5",
       "source": "news.google.com",
-      "description": "Investissements dans les infrastructures scolaires: Québec Solidaire demande une enquête de la VG  Noovo Info",
+      "description": "Témoignage de la première sous-gouverneure de la Banque du Canada devant le Parlement  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -175,10 +193,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada se joint au projet Agorá de la BRI pour tester des améliorations dans les paiements transfrontaliers de gros - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOc21pdjdia0ZkNkF6SU1YTkdCaTg4SXBEenR1d0FZNGFZUlVkc3ZnajNSYmFIalVZcUVNUzRISkN0TGpTa2p1eXhMOEJXTDVyRkE1UEtVX2JYZkk0d3VzVEZQX2Q5MUg3U0g4c2tNajRERzd3MW14b0dZVUNqSW5Ia29uVFg3dWVxQVFDQXZ0bC1rWmItUU9lMnF4eFRSM2JrQ0xLdGpGc25aRDNEdm52OFYxZ25LNHNnWExSVkt3SnhwZzZRVjQ4?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada se joint au projet Agorá de la BRI pour tester des améliorations dans les paiements transfrontaliers de gros  Banque du Canada",
+      "title": "La Banque du Canada abaisse (comme prévu) son taux directeur - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRldYV2RWT1VSNmh0bU5vMzlwMUxCc3Bfa09BWU5GMGhKQXRyekQ1ZmN2cUxMdjNGdXRaLTZPd2E5THBvOEZqemQ0V1RpTzFOQjNzU1kxaFFGSzNPU0Y5QmRfVnpRX2lJQS1lWnNXaHpNdnVWdkRqVVFPSEVIVFRZOFV3Vl9wU28?oc=5",
+      "source": "comme prévu",
+      "description": "La Banque du Canada abaisse (comme prévu) son taux directeur  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -199,14 +217,6 @@
       "category": "general"
     },
     {
-      "title": "Banque du Canada : rapport sur la stabilité financière - CPAC.ca",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQTEh2SjNRSUxXNkMtWVFYSG50UjdiU3NuVF9aQ2tPWkpzTk9ldEtWRW5ZWVdsZjlFVVlsOFFLc19uYlU4NXc3SUNiM0FpdzR6T3piRHh1SWpUMlVOQU1EdndyZUQ0R0RPZXFocjQ4X3BmN1J2VWY3bTN5MVoxNXM0VVF3TU1kUUwtZkFXdllqQUdzX0Rpa2FwLTk3WFJTYVpRbzY5WXpPbWN3aWxsTEQzb283bDVtUm5SZ2JGeHdUWGxUd09Sc2d6b2pNVlM?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada : rapport sur la stabilité financière  CPAC.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Un économiste de la Banque du Canada croit qu'il faut revoir la formation des jeunes - Noovo Info",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSEEyVGktbzJkYXpNTVBaTThxSzlDUzNIald4OEs0dkcwXy12ZGpNUlhzTFgwclBIRGpjWHlCdzNyY1hsVVBaWTRLNmwtek41OS1xbjdkZGpibVlDUGgyQjc5a2puV2o1MlRIQTRmWEhrcGFiX3VjLVRSYmNxXzQxcFVxZ1BGQmI1c2R1STBBWGhpWklCNm01dXk4QkpGaUNuTWZkay1rbUNZZmlMWEo0Q0xkQlBRWVFRX09jTDQ1Smp3SWFXMENoQmdOdHM0dmM?oc=5",
       "source": "news.google.com",
@@ -215,18 +225,26 @@
       "category": "general"
     },
     {
-      "title": "Marché du travail canadien : entre fluctuations et transformations - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdWsyRHR3RVdEcEJIYzUtNnlHNW1MU1BfdGVoLXlKcG1VWGkzSHlCOGNRMzRqSENWUzNhOUtHMkxQS2o1cmYyUWc1cWJMVFZ0V2labkR2T05VTE83aUlLMk56SlBkVXZVVnNoZmVRU2FDdFNGVkJ6UzZQVWJmUHlkTWdySjlSNnRrQ0JtZXRLdkxJMFRmT1Q3dWRaT1RZZ0hFak5VTmxn?oc=5",
+      "title": "La Banque du Canada reste sur ses positions - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObGpFYUpFSXdqa3ZJRnFKS25Hai14UW1sR1dMSHVGMkRWOXJMYUlvM1EzUzR4Z09xVmw5Q3N5dlZOamp2SnNza2x3OVZkYzFnQURUQUZJX3o4ckw1U2RGNGdoZ3R1V3FVSTdxNWFFc2JwTmxibm90bENSNjdscng3OUNPemRSZmcxWDJlTjZUdw?oc=5",
       "source": "news.google.com",
-      "description": "Marché du travail canadien : entre fluctuations et transformations  Banque du Canada",
+      "description": "La Banque du Canada reste sur ses positions  conseiller.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Un économiste de la Banque du Canada croit qu’il faut revoir la formation des jeunes - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPN1lZRHRndGxGTUN2dEV3WWVrZE9zRktSdzJnS2w0alV2WEVBeEhiSVhEMnlkR0dZQm94ZDUzdF9IU0x0dlVNMllOQVpHTGxmcEZkWDN4TnpUdXdJZFhyMm9YTGx1dFh3WTRfdURyRnQ3d1dLVF9GSlpPYXFXUklDOXlnYzNRUHdlT0NzbDlEeXctREZEeHluXzV0elRJbFFIV1haTUoyaUgxejJteUN4RmROY0d2SUozdVVyakoyRUQtSlZwV25F?oc=5",
+      "title": "Banque du Canada : rapport sur la stabilité financière - CPAC.ca",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQTEh2SjNRSUxXNkMtWVFYSG50UjdiU3NuVF9aQ2tPWkpzTk9ldEtWRW5ZWVdsZjlFVVlsOFFLc19uYlU4NXc3SUNiM0FpdzR6T3piRHh1SWpUMlVOQU1EdndyZUQ0R0RPZXFocjQ4X3BmN1J2VWY3bTN5MVoxNXM0VVF3TU1kUUwtZkFXdllqQUdzX0Rpa2FwLTk3WFJTYVpRbzY5WXpPbWN3aWxsTEQzb283bDVtUm5SZ2JGeHdUWGxUd09Sc2d6b2pNVlM?oc=5",
       "source": "news.google.com",
-      "description": "Un économiste de la Banque du Canada croit qu’il faut revoir la formation des jeunes  Les Affaires",
+      "description": "Banque du Canada : rapport sur la stabilité financière  CPAC.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada se joint au projet Agorá de la BRI pour tester des améliorations dans les paiements transfrontaliers de gros - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOc21pdjdia0ZkNkF6SU1YTkdCaTg4SXBEenR1d0FZNGFZUlVkc3ZnajNSYmFIalVZcUVNUzRISkN0TGpTa2p1eXhMOEJXTDVyRkE1UEtVX2JYZkk0d3VzVEZQX2Q5MUg3U0g4c2tNajRERzd3MW14b0dZVUNqSW5Ia29uVFg3dWVxQVFDQXZ0bC1rWmItUU9lMnF4eFRSM2JrQ0xLdGpGc25aRDNEdm52OFYxZ25LNHNnWExSVkt3SnhwZzZRVjQ4?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada se joint au projet Agorá de la BRI pour tester des améliorations dans les paiements transfrontaliers de gros  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -247,18 +265,26 @@
       "category": "general"
     },
     {
-      "title": "Points saillants de l’enquête sur le système financier – 2026 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWjRYMFM5NDd5ZTFTS1RJcEpKbjBQX0d2cHNmcFhtcTlWOFJDTmlEM2VQMlNfLWt0VzJCWU5nZm1xNU9scmo0dHVSUGs5Q2RhMDVBZmRQNlJJQUlWcWZ5N3hXTl9jX1c3d3NHUlZ2SG42WUEtOFV3MnBhcGR1VklmTkZOV2FlTDB1TzdhX0piTVVlQ0FUYmlYRTdQb3pBdw?oc=5",
+      "title": "Conférence de presse : Rapport sur la stabilité financière – 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOLWUyLWpMNHMzOFhRVWtBcFNMUlFTcVVjY0JtbDJadklqd0NwdENraUdfRlZVVnhoLWwzU0YwWjk4RllZNlRYdmI2MFVjWU5yMzRsYUJXdWFnUUlKQll6eW4wQkVjV2p4Rlhsa3ZNTmtHYW1vdmI2NzR1U1AxSWM3RVlYUHlsYkxyYlhIMmFhUzM3dXZoNTNrdncxQ3h0dnNGUk5GSzFR?oc=5",
       "source": "news.google.com",
-      "description": "Points saillants de l’enquête sur le système financier – 2026  Banque du Canada",
+      "description": "Conférence de presse : Rapport sur la stabilité financière – 2026  Banque du Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La hausse des taux obligataires se répercute sur le marché hypothécaire - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOX3RnN0tZT0hPdGd1QUUtRXd3Skl0T003UEdHSGJjSEx3Tm9MSnhLZi1tVlBtVUhWVUR2TkFCdmp3bktKZ2lianZycUdCaTR2Z1N3enFBVnFXNDN3X3NfSzlQbnMxbkJQbjc3MC1QanZPNTFhQzZtM29oNnN5Nlp1ZzljZG00eWZNWGI0SnplTVZsR0kzc28yOG94VDNVQnlvZ2ZOTmQ2bFMzSWdjUzZEdEY3dzBMUTNzWFZlaXhaaE0zMjNfR29ZR3pkdXAxM0VhUEJn?oc=5",
+      "title": "Marché du travail canadien : entre fluctuations et transformations - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdWsyRHR3RVdEcEJIYzUtNnlHNW1MU1BfdGVoLXlKcG1VWGkzSHlCOGNRMzRqSENWUzNhOUtHMkxQS2o1cmYyUWc1cWJMVFZ0V2labkR2T05VTE83aUlLMk56SlBkVXZVVnNoZmVRU2FDdFNGVkJ6UzZQVWJmUHlkTWdySjlSNnRrQ0JtZXRLdkxJMFRmT1Q3dWRaT1RZZ0hFak5VTmxn?oc=5",
       "source": "news.google.com",
-      "description": "La hausse des taux obligataires se répercute sur le marché hypothécaire  La Presse",
+      "description": "Marché du travail canadien : entre fluctuations et transformations  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Points saillants de l’enquête sur le système financier – 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWjRYMFM5NDd5ZTFTS1RJcEpKbjBQX0d2cHNmcFhtcTlWOFJDTmlEM2VQMlNfLWt0VzJCWU5nZm1xNU9scmo0dHVSUGs5Q2RhMDVBZmRQNlJJQUlWcWZ5N3hXTl9jX1c3d3NHUlZ2SG42WUEtOFV3MnBhcGR1VklmTkZOV2FlTDB1TzdhX0piTVVlQ0FUYmlYRTdQb3pBdw?oc=5",
+      "source": "news.google.com",
+      "description": "Points saillants de l’enquête sur le système financier – 2026  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -279,10 +305,26 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada adjugera 3 milliards de dollars canadiens de bons de gestion de trésorerie non fongibles à 4 jours le 1er juin, selon l'appel d'offres final - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNT1llcmJUTGZRbl90U0oxbFNSaWVvT1BSSUhkcHZJNjVvXzJFMDRBTVBCRGp6aEk1RHJBeVVaWXRld1psemdxSG55QmwyWnVpamQyZ3U1YmtzRnljUmgwQnZBRVpPSGZoVjYxdlR1QkV5TkZiR0Z5Tkg5N3RSLXdhdS1BS1lNbklTeEQ5eXAxa1FhdHRCMXJJMWpLMGp3aWV5dC0tNUlGVWFVUTZoU3htdDZKanE5MWFuS21WeGVQWWRubU1vcUJ4Q3RGNTFfbVZBSFB0eDIwNy02Zk9jc0JSRG5ZWjU0UHVPeEVFajBnLUFDM3M?oc=5",
+      "title": "La Banque du Canada juge les marchés plus exposés à une correction brutale - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxObzRCOGJjb0dIbTI3NE9YNWhQeTM2ZWZSbGI2TDdrbUxiYkxvaDl5TGFqMmpRNG0zUlZhRFFJRWFrM1BxODh5aE5LX3lIbFRuYzNtZ0ZqZFMtQm83YnItMXU2NTNIVHF4c3ZkU3lLSlRTeGtjaTNWazZIRDAyZ25ZQzRYdlZZX2JhcXg1OVFfUUtMOVUzdUV0R1NacVkyVU5VZFJ1ZnEwaEctMTU5cEVKYVhicHFSOVJsQmE5LUdYZmh6djg?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada adjugera 3 milliards de dollars canadiens de bons de gestion de trésorerie non fongibles à 4 jours le 1er juin, selon l'appel d'offres final  Zonebourse",
+      "description": "La Banque du Canada juge les marchés plus exposés à une correction brutale  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le Canada en récession technique, la première depuis 2020 - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNV21rNWx1WVJUN003SExLMnM0ZGI4MFBzSS0wdEVwdFZjN01IR1RqeXVBZ2FTaGpvYVR1Ui1TdXVQc2xjYXRpeUVmN0pFWUE3aFEtb0RHYXJJN3hRbkl4VGUzOERCUnVMNE5wZ0Z0UXVkUUJ0YldwZHo0R0w0X0JnWmVjblJTeWxCT2psc2tSR1M4cGpGZmdUQXM4TjJjRXNOTVZj?oc=5",
+      "source": "news.google.com",
+      "description": "Le Canada en récession technique, la première depuis 2020  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Rapport sur la stabilité financière 2026 de la Banque du Canada : de nouvelles vulnérabilités 'gérables' dans un système financier résilient - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNZGNqamdNR0sxLU45OWZRY2NnZGI3WFNBNVpsWjlmeVFzTXpkLTJZUEhlWnpONG8yamttMzRjUEFWcGRzOGEwb0VtUE10ck5VeXR5TnQwc2J6SmFkdHZ1MDQxdkxSQUpyTkg3Zmk4RmtsQzlra2xUVERwZXRrOVpsWENnSTdqWDlTNVhmckJBM0hmMEpBbHFmUHpFc2poSThjVGplWXVlc0dPRk9FZHZrM1hiYTJJV0ZwTlRGRHFyWGV4aEpocmZmRFRVam1vbTExNWloUFpJdVR3dFZjWGFHUFNrUlliNHI4Uk5oRWNrTQ?oc=5",
+      "source": "news.google.com",
+      "description": "Rapport sur la stabilité financière 2026 de la Banque du Canada : de nouvelles vulnérabilités 'gérables' dans un système financier résilient  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -331,14 +373,6 @@
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MV2NsYkkzaUdoRXVoalB4U0RNSVNNSmMxU3RGN0R2eE01UDhKeURMWFJ1aGdpVDZuUnlNSFk3NW5JNjUtWGFrT3JRcHRBalhkd01YY2R4dUMzQnM?oc=5",
       "source": "te9uhUPGt1",
       "description": "Donald Trump Change Notre économie, Dit Tiff Macklem De La Banque Du Canada | Zone économie Daniil Medvedev (te9uhUPGt1)  Mshale",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada traite l'intelligence artificielle comme une variable macroéconomique clé, selon Rosenberg Research - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQTTMxbU1Ldm02QWxlRXhNTnV6R0I3YmY0QUdpVTZCdGh0Mjg3a1ptQ3FTMC1EaUZVc2lwbDJudTFVckNEUVgtbTNsdlpKUU5mQXpnUzZFUHFaNnJueGl2VkQxWkZ2TmVBM01tWHN0ajVQZHFHYVhkdWlpMjl5N0ZNYTNfRTZpMEVpMVRXUXdReHZBTzZCWUd3cmFkTm1iWTVaUjlCNUdyenpsbUFJcEEwdzdvWkdoNmhIVXdNWmFWa2c2a0lnekVnUGRZV2k4ZTgxODFBLWdZR3l2TXZRb2RMWGFVZ0k2TUhKVnRXMG1vLXFOUQ?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada traite l'intelligence artificielle comme une variable macroéconomique clé, selon Rosenberg Research  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -403,5 +437,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-05-29 16:41"
+  "last_update": "2026-05-30 14:28"
 }
