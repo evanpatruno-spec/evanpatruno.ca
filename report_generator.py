@@ -46,7 +46,7 @@ def generate_evan_message(data):
 
     return "Le marché immobilier actuel demande de la précision. Entre les variations de taux et l'ajustement des prix, chaque projet est unique. Que vous soyez en phase de réflexion ou prêt à passer à l'action, je suis là pour décoder ces chiffres avec vous et transformer ces données en stratégie gagnante."
 
-def main():
+def main(target_year=None, target_month=None):
     print("Démarrage de la génération du rapport...")
     
     # 1. Charger les données
@@ -64,16 +64,20 @@ def main():
     # 2. Préparer les variables pour le template
     now = datetime.now()
     
-    # LOGIQUE DE DATE : Si on est le 1-10 du mois, le rapport concerne le mois précédent
-    if now.day <= 10:
-        report_month = now.month - 1
-        report_year = now.year
-        if report_month == 0:
-            report_month = 12
-            report_year -= 1
+    if target_year and target_month:
+        report_year = target_year
+        report_month = target_month
     else:
-        report_month = now.month
-        report_year = now.year
+        # LOGIQUE DE DATE : Si on est le 1-10 du mois, le rapport concerne le mois précédent
+        if now.day <= 10:
+            report_month = now.month - 1
+            report_year = now.year
+            if report_month == 0:
+                report_month = 12
+                report_year -= 1
+        else:
+            report_month = now.month
+            report_year = now.year
 
     months_fr = {
         1: "Janvier", 2: "Février", 3: "Mars", 4: "Avril", 5: "Mai", 6: "Juin",
@@ -154,4 +158,8 @@ def main():
     print(f"Succès: HTML du rapport généré dans {filepath}")
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) == 3:
+        main(int(sys.argv[1]), int(sys.argv[2]))
+    else:
+        main()

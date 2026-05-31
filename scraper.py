@@ -134,6 +134,8 @@ def extract_properties(html):
             img_url = img_match.group(1)
             if img_url.startswith('/'):
                 img_url = "https://www.himalayacorp.com" + img_url
+            elif not img_url.startswith('http'):
+                img_url = "https://www.himalayacorp.com/" + img_url.lstrip('/')
             prop['image'] = img_url
         else:
             prop['image'] = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=400"
@@ -246,6 +248,8 @@ def main():
         
         if any(name in brokers_text for name in MATCH_NAMES):
             p.update(details)
+            if p.get('photos') and len(p['photos']) > 0:
+                p['image'] = p['photos'][0]
             p['url'] = current_url # Ensure we keep the functional URL
             final_team_list.append(p)
             print(f"  [EQUIPE] {p['city']} - {p['mls']} ({p['price']})")

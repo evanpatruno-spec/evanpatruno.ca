@@ -555,7 +555,10 @@
 
                 let filtered = allProperties.map(p => {
                     const isSold = p.isSold || false;
-                    const isRent = (p.price || "").toLowerCase().includes('/mois') || (p.price || "").toLowerCase().includes('louer');
+                    const isRent = (p.price || "").toLowerCase().includes('/mois') || 
+                                   (p.price || "").toLowerCase().includes('louer') || 
+                                   (p.price || "").toLowerCase().includes('/pc') || 
+                                   (p.price || "").toLowerCase().includes('/an');
                     let category = "residentiel";
                     const d = (p.description || "").toLowerCase();
                     if (d.includes('commercial') || d.includes('local')) category = "commercial";
@@ -574,8 +577,7 @@
                     card.className = `prop-card ${p.isSold ? 'is-sold' : ''}`;
                     card.innerHTML = `
                         <div class="prop-image-wrap">
-                            ${p.isSold ? '<div class="badge badge-sold">VENDU</div>' : ''}
-                            <div class="badge ${p.isRent ? 'badge-rent' : 'badge-sale'}">${p.isRent ? 'À LOUER' : 'À VENDRE'}</div>
+                            ${p.isSold ? '<div class="badge badge-sold">VENDU</div>' : `<div class="badge ${p.isRent ? 'badge-rent' : 'badge-sale'}">${p.isRent ? 'À LOUER' : 'À VENDRE'}</div>`}
                             <img src="${p.image}" alt="${p.city}" onerror="this.src='${FALLBACK_IMG}'" loading="lazy">
                         </div>
                         <div class="prop-content">

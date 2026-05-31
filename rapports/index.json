@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": "2026-05",
+    "title": "Rapport de Marché - Mai 2026",
+    "date": "2026-05-31",
+    "pdf": "2026-05.pdf",
+    "url": "/rapports/2026-05"
+  },
+  {
+    "id": "2026-04",
+    "title": "Rapport de Marché - Avril 2026",
+    "date": "2026-05-31",
+    "pdf": "2026-04.pdf",
+    "url": "/rapports/2026-04"
+  },
+  {
+    "id": "2026-03",
+    "title": "Rapport de Marché - Mars 2026",
+    "date": "2026-05-31",
+    "pdf": "2026-03.pdf",
+    "url": "/rapports/2026-03"
+  },
+  {
+    "id": "2026-02",
+    "title": "Rapport de Marché - Février 2026",
+    "date": "2026-05-31",
+    "pdf": "2026-02.pdf",
+    "url": "/rapports/2026-02"
+  },
+  {
+    "id": "2026-01",
+    "title": "Rapport de Marché - Janvier 2026",
+    "date": "2026-05-31",
+    "pdf": "2026-01.pdf",
+    "url": "/rapports/2026-01"
+  }
+]

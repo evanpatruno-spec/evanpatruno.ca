@@ -4,16 +4,23 @@ const fs = require('fs');
 
 async function convert() {
     console.log("Démarrage de la conversion PDF...");
-    const now = new Date();
-    let reportMonth = now.getMonth() + 1;
-    let reportYear = now.getFullYear();
+    const args = process.argv.slice(2);
+    let reportMonth, reportYear;
+    if (args.length === 2) {
+        reportYear = parseInt(args[0], 10);
+        reportMonth = parseInt(args[1], 10);
+    } else {
+        const now = new Date();
+        reportMonth = now.getMonth() + 1;
+        reportYear = now.getFullYear();
 
-    // Logique identique à report_generator.py : Si on est le 1-10 du mois, on traite le mois précédent
-    if (now.getDate() <= 10) {
-        reportMonth -= 1;
-        if (reportMonth === 0) {
-            reportMonth = 12;
-            reportYear -= 1;
+        // Logique identique à report_generator.py : Si on est le 1-10 du mois, on traite le mois précédent
+        if (now.getDate() <= 10) {
+            reportMonth -= 1;
+            if (reportMonth === 0) {
+                reportMonth = 12;
+                reportYear -= 1;
+            }
         }
     }
     

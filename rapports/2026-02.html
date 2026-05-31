@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Rapport de Marché Immobilier - {{ month_name }} {{ year }}</title>
+    <title>Rapport de Marché Immobilier - Février 2026</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -386,7 +386,7 @@
                 </div>
                 <div class="report-meta">
                     <h1>Rapport de Marché</h1>
-                    <p>{{ month_name }} {{ year }} | Synthèse Mensuelle</p>
+                    <p>Février 2026 | Synthèse Mensuelle</p>
                 </div>
             </header>
 
@@ -397,7 +397,7 @@
                 </div>
                 <div class="expert-message">
                     <h3>L'analyse de votre courtier</h3>
-                    <p>{{ message_evan }}</p>
+                    <p>Le mois de mai est traditionnellement le pic d'activité de l'année. La sélection de propriétés est à son maximum, mais les acheteurs sont aussi plus nombreux. Pour réussir votre transaction ce mois-ci, l'analyse fine des comparables est cruciale : ne surpayez pas, mais soyez prêt à agir avec conviction.</p>
                 </div>
             </div>
 
@@ -406,10 +406,10 @@
                 <!-- BANQUE DU CANADA -->
                 <div class="card boc-card">
                     <div class="section-title">📉 Taux Directeur BoC</div>
-                    <div class="rate-value">{{ boc_rate }}</div>
-                    <div class="rate-badge">{{ boc_status }} — {{ boc_date }}</div>
+                    <div class="rate-value">2.25%</div>
+                    <div class="rate-badge">Maintenu — 2026-05-12</div>
                     <p style="font-size: 11px; color: var(--text-dim); margin: 12px 0 0;">
-                        Prochaine annonce : {{ boc_next }}
+                        Prochaine annonce : Voir calendrier économique
                     </p>
                 </div>
 
@@ -417,9 +417,9 @@
                 <div class="card thermo-card">
                     <div class="section-title">🌡️ Climat du Marché</div>
                     <div class="thermo-wrap">
-                        <span class="thermo-label">{{ market_temp }}</span>
+                        <span class="thermo-label">Marché Actif (Vendeurs)</span>
                         <div class="thermo-bar-bg">
-                            <div class="thermo-bar-fill" style="width: {{ temp_width }}%;"></div>
+                            <div class="thermo-bar-fill" style="width: 37.5%;"></div>
                         </div>
                     </div>
                     <p style="font-size: 11px; color: var(--text-dim); margin: 0;">
@@ -432,13 +432,31 @@
             <div class="card news-card">
                 <div class="section-title">📰 À retenir ce mois-ci</div>
                 <div class="news-grid">
-                    {% for article in news[:4] %}
+                    
                     <div class="news-card-item">
-                        <span class="news-source-tag">{{ article.source }}</span>
-                        <div class="news-title">{{ article.title[:85] }}...</div>
-                        <div class="news-desc">{{ article.description[:110] }}...</div>
+                        <span class="news-source-tag">La Presse</span>
+                        <div class="news-title">Nemaska Lithium | Eric Girard soutient qu’il n’était pas au courant de l’avis défavor...</div>
+                        <div class="news-desc">Le ministre des Finances, Eric Girard, a défendu, mardi, l’investissement de 1,1 milliard dans le projet de Ne...</div>
                     </div>
-                    {% endfor %}
+                    
+                    <div class="news-card-item">
+                        <span class="news-source-tag">La Presse</span>
+                        <div class="news-title">États-Unis | Nouveau bond de l’inflation, au plus haut depuis près de trois ans...</div>
+                        <div class="news-desc">L’inflation déraille une nouvelle fois aux États-Unis : elle a atteint en avril un plus haut niveau en près de...</div>
+                    </div>
+                    
+                    <div class="news-card-item">
+                        <span class="news-source-tag">La Presse</span>
+                        <div class="news-title">Wall Street ouvre en baisse, sur fond d’accélération de l’inflation...</div>
+                        <div class="news-desc">La Bourse de New York a ouvert dans le rouge mardi, fragilisée par la hausse des prix du pétrole et le repli d...</div>
+                    </div>
+                    
+                    <div class="news-card-item">
+                        <span class="news-source-tag">La Presse</span>
+                        <div class="news-title">Des pages jaunes aux lingettes biodégradables : Kruger investit 333 millions...</div>
+                        <div class="news-desc">Kruger a annoncé un investissement de 333 millions de dollars à son usine Wayagamack pour installer une toute ...</div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -481,18 +499,53 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for region, s in market_stats.items() %}
-                        {% if region != 'last_quarter' %}
+                        
+                        
                         <tr>
-                            <td style="font-weight: 600; text-transform: capitalize;">{{ region.replace('-', ' ') }}</td>
-                            <td style="font-weight: 600;">{{ s.price }} $</td>
-                            <td class="{{ 'trend-up' if '+' in s.trend else 'trend-down' }}">{{ s.trend }}</td>
-                            <td>{{ s.active_listings }}</td>
-                            <td>{{ s.days }} jours</td>
-                            <td style="font-weight: 700; color: var(--accent-gold);">{{ s.condition }}</td>
+                            <td style="font-weight: 600; text-transform: capitalize;">montreal</td>
+                            <td style="font-weight: 600;">652 250 $</td>
+                            <td class="trend-up">+7%</td>
+                            <td>18 294</td>
+                            <td>52 jours</td>
+                            <td style="font-weight: 700; color: var(--accent-gold);">Vendeurs</td>
                         </tr>
-                        {% endif %}
-                        {% endfor %}
+                        
+                        
+                        
+                        <tr>
+                            <td style="font-weight: 600; text-transform: capitalize;">laval</td>
+                            <td style="font-weight: 600;">645 000 $</td>
+                            <td class="trend-up">+4%</td>
+                            <td>3 200</td>
+                            <td>49 jours</td>
+                            <td style="font-weight: 700; color: var(--accent-gold);">Vendeurs</td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td style="font-weight: 600; text-transform: capitalize;">rive sud</td>
+                            <td style="font-weight: 600;">585 000 $</td>
+                            <td class="trend-up">+8%</td>
+                            <td>6 800</td>
+                            <td>45 jours</td>
+                            <td style="font-weight: 700; color: var(--accent-gold);">Vendeurs</td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td style="font-weight: 600; text-transform: capitalize;">rive nord</td>
+                            <td style="font-weight: 600;">515 000 $</td>
+                            <td class="trend-up">+6%</td>
+                            <td>6 100</td>
+                            <td>42 jours</td>
+                            <td style="font-weight: 700; color: var(--accent-gold);">Vendeurs</td>
+                        </tr>
+                        
+                        
+                        
+                        
                     </tbody>
                 </table>
             </div>
@@ -512,18 +565,53 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for region, s in market_stats.items() %}
-                        {% if region != 'last_quarter' %}
+                        
+                        
                         <tr>
-                            <td style="font-weight: 600; text-transform: capitalize;">{{ region.replace('-', ' ') }}</td>
-                            <td style="font-weight: 600;">{{ s.condo_price }} $</td>
-                            <td class="{{ 'trend-up' if '+' in s.condo_trend else 'trend-down' }}">{{ s.condo_trend }}</td>
-                            <td>{{ s.new_listings }}</td>
-                            <td>{{ s.sales }}</td>
-                            <td style="font-weight: 700; color: var(--accent-gold);">{{ s.condition }}</td>
+                            <td style="font-weight: 600; text-transform: capitalize;">montreal</td>
+                            <td style="font-weight: 600;">425 000 $</td>
+                            <td class="trend-up">+1%</td>
+                            <td>16 400</td>
+                            <td>11 333</td>
+                            <td style="font-weight: 700; color: var(--accent-gold);">Vendeurs</td>
                         </tr>
-                        {% endif %}
-                        {% endfor %}
+                        
+                        
+                        
+                        <tr>
+                            <td style="font-weight: 600; text-transform: capitalize;">laval</td>
+                            <td style="font-weight: 600;">410 000 $</td>
+                            <td class="trend-up">+3%</td>
+                            <td>2 950</td>
+                            <td>2 150</td>
+                            <td style="font-weight: 700; color: var(--accent-gold);">Vendeurs</td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td style="font-weight: 600; text-transform: capitalize;">rive sud</td>
+                            <td style="font-weight: 600;">395 000 $</td>
+                            <td class="trend-up">+5%</td>
+                            <td>6 400</td>
+                            <td>4 950</td>
+                            <td style="font-weight: 700; color: var(--accent-gold);">Vendeurs</td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td style="font-weight: 600; text-transform: capitalize;">rive nord</td>
+                            <td style="font-weight: 600;">365 000 $</td>
+                            <td class="trend-up">+4%</td>
+                            <td>5 600</td>
+                            <td>4 100</td>
+                            <td style="font-weight: 700; color: var(--accent-gold);">Vendeurs</td>
+                        </tr>
+                        
+                        
+                        
+                        
                     </tbody>
                 </table>
             </div>
