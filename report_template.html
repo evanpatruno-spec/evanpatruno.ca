@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Rapport de Marché Immobilier - {{ month_name }} {{ year }}</title>
@@ -186,7 +187,7 @@
             font-weight: 900;
             margin: 2px 0;
             color: #fff;
-            text-shadow: 0 0 15px rgba(255,255,255,0.1);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
         }
 
         .rate-badge {
@@ -299,8 +300,15 @@
             border-bottom: none;
         }
 
-        .trend-up { color: #2ecc71; font-weight: 600; }
-        .trend-down { color: #e74c3c; font-weight: 600; }
+        .trend-up {
+            color: #2ecc71;
+            font-weight: 600;
+        }
+
+        .trend-down {
+            color: #e74c3c;
+            font-weight: 600;
+        }
 
         /* STRATEGIC COUNSELS */
         .advice-container {
@@ -374,6 +382,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- PAGE 1: VUE D'ENSEMBLE & TAUX -->
@@ -381,7 +390,8 @@
         <div>
             <header>
                 <div class="logo-wrap">
-                    <img src="https://dossier.evanpatruno.ca/logo.png" alt="Evan Patruno Logo" class="logo-img" onerror="this.style.display='none'">
+                    <img src="https://dossier.evanpatruno.ca/logo.png" alt="Evan Patruno Logo" class="logo-img"
+                        onerror="this.style.display='none'">
                     <span class="logo-text">EVAN PATRUNO</span>
                 </div>
                 <div class="report-meta">
@@ -419,7 +429,10 @@
                     <div class="thermo-wrap">
                         <span class="thermo-label">{{ market_temp }}</span>
                         <div class="thermo-bar-bg">
-                            <div class="thermo-bar-fill" style="width: {{ temp_width }}%;"></div>
+                            <div class="thermo-bar-fill" id="thermo-fill"></div>
+                            <script>
+                                document.getElementById('thermo-fill').style.width = "{{ temp_width }}%";
+                            </script>
                         </div>
                     </div>
                     <p style="font-size: 11px; color: var(--text-dim); margin: 0;">
@@ -457,7 +470,8 @@
         <div>
             <header>
                 <div class="logo-wrap">
-                    <img src="https://dossier.evanpatruno.ca/logo.png" alt="Evan Patruno Logo" class="logo-img" onerror="this.style.display='none'">
+                    <img src="https://dossier.evanpatruno.ca/logo.png" alt="Evan Patruno Logo" class="logo-img"
+                        onerror="this.style.display='none'">
                     <span class="logo-text">EVAN PATRUNO</span>
                 </div>
                 <div class="report-meta">
@@ -484,7 +498,8 @@
                         {% for region, s in market_stats.items() %}
                         {% if region != 'last_quarter' %}
                         <tr>
-                            <td style="font-weight: 600; text-transform: capitalize;">{{ region.replace('-', ' ') }}</td>
+                            <td style="font-weight: 600; text-transform: capitalize;">{{ region.replace('-', ' ') }}
+                            </td>
                             <td style="font-weight: 600;">{{ s.price }} $</td>
                             <td class="{{ 'trend-up' if '+' in s.trend else 'trend-down' }}">{{ s.trend }}</td>
                             <td>{{ s.active_listings }}</td>
@@ -515,9 +530,11 @@
                         {% for region, s in market_stats.items() %}
                         {% if region != 'last_quarter' %}
                         <tr>
-                            <td style="font-weight: 600; text-transform: capitalize;">{{ region.replace('-', ' ') }}</td>
+                            <td style="font-weight: 600; text-transform: capitalize;">{{ region.replace('-', ' ') }}
+                            </td>
                             <td style="font-weight: 600;">{{ s.condo_price }} $</td>
-                            <td class="{{ 'trend-up' if '+' in s.condo_trend else 'trend-down' }}">{{ s.condo_trend }}</td>
+                            <td class="{{ 'trend-up' if '+' in s.condo_trend else 'trend-down' }}">{{ s.condo_trend }}
+                            </td>
                             <td>{{ s.new_listings }}</td>
                             <td>{{ s.sales }}</td>
                             <td style="font-weight: 700; color: var(--accent-gold);">{{ s.condition }}</td>
@@ -535,7 +552,9 @@
                 <div class="advice-card">
                     <div class="advice-card-title">🔑 Pour les Acheteurs</div>
                     <p class="advice-card-text">
-                        La baisse progressive du taux directeur commence à stimuler la demande. C'est le moment d'obtenir une préqualification hypothécaire robuste pour négocier avec fermeté avant le retour d'une forte concurrence. Profitez de la stabilisation actuelle des prix.
+                        La baisse progressive du taux directeur commence à stimuler la demande. C'est le moment
+                        d'obtenir une préqualification hypothécaire robuste pour négocier avec fermeté avant le retour
+                        d'une forte concurrence. Profitez de la stabilisation actuelle des prix.
                     </p>
                 </div>
 
@@ -543,24 +562,34 @@
                 <div class="advice-card">
                     <div class="advice-card-title">🏷️ Pour les Vendeurs</div>
                     <p class="advice-card-text">
-                        Le marché reste à l'avantage des vendeurs dans la majorité des secteurs en raison d'un inventaire historiquement bas. Pour maximiser votre valeur de transaction, misez sur une mise en marché visuelle d'exception et une stratégie de prix cohérente dès le départ.
+                        Le marché reste à l'avantage des vendeurs dans la majorité des secteurs en raison d'un
+                        inventaire historiquement bas. Pour maximiser votre valeur de transaction, misez sur une mise en
+                        marché visuelle d'exception et une stratégie de prix cohérente dès le départ.
                     </p>
                 </div>
             </div>
             <!-- DISCLAIMER -->
-            <div style="margin-top: 15px; padding: 10px 15px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 12px; font-size: 8px; line-height: 1.35; color: rgba(255,255,255,0.35); text-align: justify; break-inside: avoid; page-break-inside: avoid;">
-                <strong>Sources & Avertissement Légal :</strong> Les statistiques présentées dans ce rapport sont compilées à partir des données fournies par la Banque du Canada, Centris et l'Association professionnelle des courtiers immobiliers du Québec (APCIQ). Ces informations sont transmises à titre indicatif et informatif seulement pour soutenir votre réflexion. Elles ne constituent pas des conseils financiers, juridiques ou d'investissement et n'engagent aucune responsabilité quant aux décisions prises sur leur base.
+            <div
+                style="margin-top: 15px; padding: 10px 15px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); border-radius: 12px; font-size: 8px; line-height: 1.35; color: rgba(255,255,255,0.35); text-align: justify; break-inside: avoid; page-break-inside: avoid;">
+                <strong>Sources & Avertissement Légal :</strong> Les statistiques présentées dans ce rapport sont
+                compilées à partir des données fournies par la Banque du Canada, Centris et l'Association
+                professionnelle des courtiers immobiliers du Québec (APCIQ). Ces informations sont transmises à titre
+                indicatif et informatif seulement pour soutenir votre réflexion. Elles ne constituent pas des conseils
+                financiers, juridiques ou d'investissement et n'engagent aucune responsabilité quant aux décisions
+                prises sur leur base.
             </div>
 
-        <footer>
-            <div class="footer-left">
-                <p>Besoin d'un plan sur mesure pour votre projet ? Parlons-en.</p>
-                <p>info@evanpatruno.ca | 514-567-3249</p>
-            </div>
-            <a href="https://calendar.app.google/a37T5exmNpFfBZ6SA" class="footer-cta">Réserver un appel conseil gratuit</a>
-            <span class="page-num">Page 2 / 2</span>
-        </footer>
-    </div>
+            <footer>
+                <div class="footer-left">
+                    <p>Besoin d'un plan sur mesure pour votre projet ? Parlons-en.</p>
+                    <p>info@evanpatruno.ca | 514-567-3249</p>
+                </div>
+                <a href="https://calendar.app.google/a37T5exmNpFfBZ6SA" class="footer-cta">Réserver un appel conseil
+                    gratuit</a>
+                <span class="page-num">Page 2 / 2</span>
+            </footer>
+        </div>
 
 </body>
+
 </html>

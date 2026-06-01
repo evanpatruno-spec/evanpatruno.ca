@@ -9,7 +9,7 @@ from jinja2 import Environment, FileSystemLoader
 
 # CONFIGURATION
 API_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
-NEWS_BIN_ID = "661adbced0ea881f4082269a"
+NEWS_BIN_ID = "69e6d40c856a6821895644dc"
 BOC_BIN_ID = "69e2a081856a682189465e17"
 BIN_ID_FILE = "newsletter_bin_id.txt"
 HARDCODED_NEWSLETTER_BIN_ID = "" # Sera créé au premier lancement
