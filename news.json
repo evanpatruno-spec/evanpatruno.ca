@@ -87,10 +87,26 @@
       "category": "local"
     },
     {
-      "title": "Wall Street commence le mois de juin en baisse",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-06-01/wall-street-commence-le-mois-de-juin-en-baisse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "La Bourse de Toronto et les marchés américains avancent",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-06-02/la-bourse-de-toronto-et-les-marches-americains-avancent.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Bourse de New York évolue à la marge lundi, optant pour la prudence après un mois de mai très dynamique et face à des tensions persistantes au Moyen-Orient qui font grimper de concert prix du pétrole et taux obligataires.",
+      "description": "La Bourse de Toronto gagnait plus de 300 points mardi, en fin de matinée, soutenue par la vigueur du secteur des métaux de base, pendant que les grands indices américains grimpaient également.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Restauration | 2,5 millions pour démêler la complexité administrative des restaurants",
+      "link": "https://www.lapresse.ca/affaires/pme/2026-06-02/restauration/2-5-millions-pour-demeler-la-complexite-administrative-des-restaurants.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Si le dessin animé Ratatouille de Disney avait une suite, sans doute que son héros Linguini serait confronté à l’intelligence artificielle. Et probablement qu’à la fin, il l’aurait domptée et qu’elle ferait pour lui les tâches à l’extérieur de la cuisine qui lui volent son précieux temps de création culinaire. L’application québécoise Pivot veut être cette IA, et vient de lever 2,5 millions pour convaincre les restos canadiens de l’adopter.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Faillite et deuxième chance | Encans : aller chercher le plus possible pour les actifs",
+      "link": "https://www.lapresse.ca/affaires/portfolio/2026-06-02/faillite-et-deuxieme-chance/encans-aller-chercher-le-plus-possible-pour-les-actifs.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Lors d’une faillite commerciale, une bonne partie de la rémunération du syndic autorisé en insolvabilité est financée par la vente des actifs. Si, pour des biens immobiliers, on passe généralement au Québec par des appels d’offres, l’équipement et la machinerie lourde se retrouvent souvent chez des encanteurs. Coup d’œil sur une réalité méconnue.",
       "cities": [],
       "category": "general"
     },
@@ -103,36 +119,10 @@
       "category": "general"
     },
     {
-      "title": "Crise du logement | La Ville de Montréal refuse un projet de 70 logements hors marché - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPREZ3LVI1UkJOZm1vc1lOUU4xa0RhMUFYeEpiRl91NDdwUFNwbEVuYk91NFpZV1JhTTUtdnhVTnk4a2hsbVVLV0RBOXVWN0VSM3l2ZU1IM2p1eFZ0TUF3UGN5NG9nMW9PeXd4VlhabjI5dlljYmwxTHVaTzNDTFFlRWk5NjI1cWc3RWwtQ09xTm9FYnk0d1o4UDN3UjVHVExZd2ZyclFSbnNmR19XWWpXRmZOM3BSOVRCNU5uQ1RhNzZTYzJJVGtCWWVRWUhCMDF3eURxS05LNk5LbHhtQi1YWF9vMA?oc=5",
-      "source": "news.google.com",
-      "description": "Crise du logement | La Ville de Montréal refuse un projet de 70 logements hors marché  La Presse",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Toujours en faillite, Stéphan Huot est derrière trois projets immobiliers dans Lotbinière - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWGxERkpRX1liUzFEZFRqV0lsSDE4VDV0RDFOdGtwN05xYndlLW8taElIREc3M3FyQ2htbFdydG1mSnhiREg3TnJnWGczaWVXM0ZfWXc5SXBvQWIyNmVNekFVYVFWRkVST2Z1TEdUSjVZQ3BTRkVUdWdLenppcGZNRjdWUENKeEVIWDBBQ2NuTWhpT3hnQTJUNVY5ODR5R2ZRbDZCZ3ktcmlGeXpnSEJqSkZ4NDZURm9qaVY2Qk1DNTJMMjVGTlZTM1ZzWQ?oc=5",
-      "source": "news.google.com",
-      "description": "Toujours en faillite, Stéphan Huot est derrière trois projets immobiliers dans Lotbinière  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le passage à trois jours au bureau irrite les employés d’Investissement Québec - Les Affaires",
       "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQaTVkWFBLUlBQSEtobUxnbm1fbW51ZkthbFdHeEdGTTlxaDNsLXRoX3dhTThLRXBER0RxZHQtZ2V6d3pmenJ1ZlZNTU51LTFZXzJPRkFkQmJVYWpWY3BRcU1oOEo0cnE0WkJ6RkJQYTFOZEpxY2VCaDhIcUgxMFZlMy05SEpVQTVGNkxlVVFqbXNDUGVxaVJTbEVrTkI4b3NsVmp4cFEzb1BtSlhLS3I4cGlmLXIxR1FaQVRNWGRFUTZXY3JGdXVFR3hqNlFIV0lJWGZzV194c19aeTFPZmo3SGdkUUthd2RDS1hkTDlMa2p4enIxX1U1Q1dB?oc=5",
       "source": "news.google.com",
       "description": "Le passage à trois jours au bureau irrite les employés d’Investissement Québec  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Toujours endetté de 375 millions dollars | Stéphan Huot de retour en immobilier: «Il a encore un train de vie luxueux - FM93",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObzA4OEZYSVFORTVlakRNczV5SDdhYjRGblVHblRwZ1Bva3NYelUxZll1TkNmbDZCSWtxV0diVkt2WkJkNDlxMnlvZ1JWcE5OdXNOS2RvZ0hDWnptcmtBc0NVQVZTR2JTX2Nhd29rQmp5OE0wZ19qZGhSLTJxRHIyS2c0WEtmYXlOV3BYTnFYU2tqSlBoSU9yalFiOElzVGdaN3pFVzFyeGdVZw?oc=5",
-      "source": "news.google.com",
-      "description": "Toujours endetté de 375 millions dollars | Stéphan Huot de retour en immobilier: «Il a encore un train de vie luxueux  FM93",
       "cities": [],
       "category": "general"
     },
@@ -155,6 +145,14 @@
       "category": "local"
     },
     {
+      "title": "Les logements «abordables intermédiaires» de la CAQ sous le feu de l’opposition - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdzdhRlBfczYxVDhLMlprSjJPU1gzOFFhX09VYl9KcExGRnJKLU9XUm5KbVN3cm9sa2I0Rk5neFdWbGVtbFBXZXhXejJSUEt5VktPaVpVUnVvMDRPOVJvSkdYQXhNWWdoRG83aG1IOE9HbXUxOWIwMkNMZnJWNVFESDFrRVVYSHlQSHVDRXladXdoMkhqT1puV3UzdjhsUFE2T2ttZ0VhOTJ4OHRP?oc=5",
+      "source": "news.google.com",
+      "description": "Les logements «abordables intermédiaires» de la CAQ sous le feu de l’opposition  Le Devoir",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Voici combien tu dois vraiment gagner pour acheter une maison à Montréal en ce moment - Narcity",
       "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxON1lSdG1QX3dqeDNNWlNBamNLRXdCVFRsWDNhTjBBYzFkMUtEa2h4YU9RTUlvZEFZZUFvc2NuNE84NTV0N1I3WWxKU0NKYi10eWxULW9pZi1aSE9fVlA2cFpzMjVjZGt6ZmtqRXdoMXJidmxXX0hFZE9oaHZNZFJneW5jSVBlVms?oc=5",
       "source": "news.google.com",
@@ -165,18 +163,10 @@
       "category": "local"
     },
     {
-      "title": "«C’est mentalement frustrant»: un parcours du combattant pour acheter leur première maison unifamiliale - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNMkJWM0hxSE9UTXp2Yk1kc21nblRjM2VLNjljUUtXUFhRNVNhc1hIUzFad3lKSnFBd0tPMnBzU1dNTjJiX0pBd2RlenFkeWZvd0t2TXV1clNFTUpLLXlWR0lGekxacllkWVdsdVZOMk9WRjBjVFlGUUlrMDZaNjBmMHRUM2hKc1ZaVHpnZEx2YUN2SGZwOGlOVmV4RUNiVmNOalZMb0dSNVl4OFcydE05ZkprRlhXUS13WkFqVnRGV1Z0NVByUWQ3MFhycWtzZkNGa0gw?oc=5",
+      "title": "Toujours endetté de 375 millions dollars | Stéphan Huot de retour en immobilier: «Il a encore un train de vie luxueux - FM93",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObzA4OEZYSVFORTVlakRNczV5SDdhYjRGblVHblRwZ1Bva3NYelUxZll1TkNmbDZCSWtxV0diVkt2WkJkNDlxMnlvZ1JWcE5OdXNOS2RvZ0hDWnptcmtBc0NVQVZTR2JTX2Nhd29rQmp5OE0wZ19qZGhSLTJxRHIyS2c0WEtmYXlOV3BYTnFYU2tqSlBoSU9yalFiOElzVGdaN3pFVzFyeGdVZw?oc=5",
       "source": "news.google.com",
-      "description": "«C’est mentalement frustrant»: un parcours du combattant pour acheter leur première maison unifamiliale  QUB radio",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les logements «abordables intermédiaires» de la CAQ sous le feu de l’opposition - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdzdhRlBfczYxVDhLMlprSjJPU1gzOFFhX09VYl9KcExGRnJKLU9XUm5KbVN3cm9sa2I0Rk5neFdWbGVtbFBXZXhXejJSUEt5VktPaVpVUnVvMDRPOVJvSkdYQXhNWWdoRG83aG1IOE9HbXUxOWIwMkNMZnJWNVFESDFrRVVYSHlQSHVDRXladXdoMkhqT1puV3UzdjhsUFE2T2ttZ0VhOTJ4OHRP?oc=5",
-      "source": "news.google.com",
-      "description": "Les logements «abordables intermédiaires» de la CAQ sous le feu de l’opposition  Le Devoir",
+      "description": "Toujours endetté de 375 millions dollars | Stéphan Huot de retour en immobilier: «Il a encore un train de vie luxueux  FM93",
       "cities": [],
       "category": "general"
     },
@@ -189,6 +179,14 @@
         "montreal"
       ],
       "category": "local"
+    },
+    {
+      "title": "Des logements abordables dans le «beau quartier» de Duberger - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQZlE5elpWSEVKSGoxMnZpNUhqQ3JRcFljNEc3LTJIa3pGRExIakpjMzhUV0l0RFNOTURLeWpteDhFTzgzMkRWNVNOeWZvaklnQmI2V0dpZEhsb3dPNEJDcWlaTmJxQnoxcWVna0FLYjlfUk1IbC1Wcl9mR3RndDRsTnZlR3pmMHJnTXBEZkctNE5NZVBwR1VLbjBEbXZnd3dRaTNOclROUGtGQTNYRTV0XzYtNjBaNG82dVJfdlJlVUtLQVcwbVNBY2xaSE5uOGRDc2pyQXY0QmtTRzU0RDBBZWEyNUI1XzlmOHRTMUNkZzJ1dw?oc=5",
+      "source": "news.google.com",
+      "description": "Des logements abordables dans le «beau quartier» de Duberger  Le Soleil",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Crise du logement à Uashat mak Mani-utenam - Radio-Canada",
@@ -207,18 +205,10 @@
       "category": "general"
     },
     {
-      "title": "De nouvelles normes de construction feront grimper le coût des logements - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdHE5VExzNm5ndzNhSWQxNi05LWFRamZLZnFYQTJ4WFl2NktfQkppQ1UtbXRpRTJ4Q0lYUURJU2VEb3IwSmpOMnY2MGkyYkxPY18zbHlVYVpoeDdnVWJIQ2xDZ2NxajlGemxQVVJzaFJ0SW8zOWlOYzRURV9ZQ1VKa1M0R3MwUkpmVVNRejhKX0EtSkNtTS1SMzhwNFdMaXBCaDJtbGQzMGxrRmk0MXo5dGVlOWRTMEFnd0VLRmJlQ0FZdw?oc=5",
+      "title": "Investissements RPC veut investir dans des hôtels coréens - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMWpIVm1OMGlYblEwdE1zM250MDEzYVRtcjQzb000Yi1MMjlLNWJ5SUJIeGNvcTVNVDNUTGdWNUZGd251Qzg4VXdQdUxDZmNiQ2h0XzZzYkppcTNiMjV4SkJkd0xHcW93RGNOX3JMY1Yza25mQndpV0V6X2pHZF80UTZXTXBZLS11X1JKY3VQb1NpMTBoalYxbmdaeTljZWtubmZZVUJMYw?oc=5",
       "source": "news.google.com",
-      "description": "De nouvelles normes de construction feront grimper le coût des logements  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Combien faut-il gagner pour acheter une première propriété? - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeEpZLXZmYTNCbzZxdUpiTzBBWUhUYW9nS0Z5NFF5QzNOc0VpNEw3dFg0ZjN0VElCeGFQNVpiRDBTTldDbk0talBudWZRamNybExnMjEySUc1SGpCRTgzZ0ExckxHNFc2TFBMZUxZRzdOb3dKRHhjb3B1TjFxY0NPT2Y0U1Q1WUxnX0JrRV9lamktc0ZENUxmVEs2alZLdw?oc=5",
-      "source": "news.google.com",
-      "description": "Combien faut-il gagner pour acheter une première propriété?  TVA Nouvelles",
+      "description": "Investissements RPC veut investir dans des hôtels coréens  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -231,14 +221,12 @@
       "category": "general"
     },
     {
-      "title": "Combien faut-il gagner pour acheter une première propriété? - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZEpmSUJsdDRsNEVrU1E3bEhlN0xabmtMY3VpMjhHWENzMUhZOEVRZ2J3UFAtYTZxQVpoVW9vWXB6ME5xdW9YMkhsZVhmZG45cV93OTJDN2ZrRTVMREkxVXN3VWUtaHRuNGI2YmFIbkFFazBXMUkyNFI4SENWWkVXcHYteW0tei1QWF9haFMxQ052ZWlKMFhvX25EWFFDTjJhNVFvZ1J3?oc=5",
+      "title": "Taux Rendement de l'Obligation Canada 30 ans - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5ZTFVEVXJfVTluSlFVNTFTVzRPc1RRbVVRcVVGeGZuVWJQamZLdFlxaGJ0LWNnOWN0NXNyeGpQMXNsckJsZmN4bVZSVzh4djZtYjZ4Qk52MTJjZU1OTE5VWTl5ekFNWS1EYTlpWUJ1RQ?oc=5",
       "source": "news.google.com",
-      "description": "Combien faut-il gagner pour acheter une première propriété?  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Taux Rendement de l'Obligation Canada 30 ans  Investing.com France",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "La Banque du Canada estime que le secteur financier fait preuve de résilience - La Presse",
@@ -257,58 +245,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada estime que le secteur financier fait preuve de résilience - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRlFyU2lUaVloN185ZkoxdGR0X1AwYVFxalEyczg2dC1NeTgzTjQ2aEwyZk85Mlhla2VVMnRqT2lIeGljQjQxT1NKSUNBdTVlc1pLYmdGdDhxN29Qd3h3SF9tQ2hLVzQ2YmlwQUtONU9MS0JxS0NsWEFqN1lLOXk1SG5kbUtjTnY1R0hoeWRxc3hLUWh0dUhJcFVzQUhINENXWEhLaE1UcGV6d1ZVRzRKWFZHWnI1RGtCc0FtVzJoaw?oc=5",
+      "title": "Faut-il craindre une nouvelle hausse des taux d’intérêt ? - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNeGZWbmZ3T2Y5ZzIxMkNhZFd3X1NfNHVRQXJRUTVIcVB0R014cnJjbGVyTXRvWXlmT0xTUEtlUlNXVFlWTWlURGIzSE4xd2txOVJEc095NWFVVldlNmtaTmVhUVNEanpLY2F1VkVvX3k2SEdMeWw1U25YTlpGTE53S2hQVVhtNWU5OWhTaVdRSW00d3lxNDdOVzhWSXE1dDh3enVRdnVNRk9WVnpD?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada estime que le secteur financier fait preuve de résilience  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un économiste de la Banque du Canada croit qu'il faut revoir la formation des jeunes - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSEEyVGktbzJkYXpNTVBaTThxSzlDUzNIald4OEs0dkcwXy12ZGpNUlhzTFgwclBIRGpjWHlCdzNyY1hsVVBaWTRLNmwtek41OS1xbjdkZGpibVlDUGgyQjc5a2puV2o1MlRIQTRmWEhrcGFiX3VjLVRSYmNxXzQxcFVxZ1BGQmI1c2R1STBBWGhpWklCNm01dXk4QkpGaUNuTWZkay1rbUNZZmlMWEo0Q0xkQlBRWVFRX09jTDQ1Smp3SWFXMENoQmdOdHM0dmM?oc=5",
-      "source": "news.google.com",
-      "description": "Un économiste de la Banque du Canada croit qu'il faut revoir la formation des jeunes  Noovo Info",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada : rapport sur la stabilité financière - CPAC.ca",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQTEh2SjNRSUxXNkMtWVFYSG50UjdiU3NuVF9aQ2tPWkpzTk9ldEtWRW5ZWVdsZjlFVVlsOFFLc19uYlU4NXc3SUNiM0FpdzR6T3piRHh1SWpUMlVOQU1EdndyZUQ0R0RPZXFocjQ4X3BmN1J2VWY3bTN5MVoxNXM0VVF3TU1kUUwtZkFXdllqQUdzX0Rpa2FwLTk3WFJTYVpRbzY5WXpPbWN3aWxsTEQzb283bDVtUm5SZ2JGeHdUWGxUd09Sc2d6b2pNVlM?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada : rapport sur la stabilité financière  CPAC.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada juge le système financier résilient - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNk4yX3ZSeDVxTHJCc3RvemNqczYzakZvbWtVa2wzaUswUy1HMVQzT3BhWjM2VTZKY3hfZ2hhaEZLS01rY0tsZzZyWG1vdzF6YjJMUUtzTGptV1JRczdTRUQ4QWd6aV85VUtYY05tWXlHandKZ3NEQkptSnlEZi1Kel9ndzd1cThuUGdSdHZrUGM0NjZaMWRsX0hfYTdWdw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada juge le système financier résilient  conseiller.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Conférence de presse : Rapport sur la stabilité financière – 2026 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOLWUyLWpMNHMzOFhRVWtBcFNMUlFTcVVjY0JtbDJadklqd0NwdENraUdfRlZVVnhoLWwzU0YwWjk4RllZNlRYdmI2MFVjWU5yMzRsYUJXdWFnUUlKQll6eW4wQkVjV2p4Rlhsa3ZNTmtHYW1vdmI2NzR1U1AxSWM3RVlYUHlsYkxyYlhIMmFhUzM3dXZoNTNrdncxQ3h0dnNGUk5GSzFR?oc=5",
-      "source": "news.google.com",
-      "description": "Conférence de presse : Rapport sur la stabilité financière – 2026  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Face au chômage, un économiste de la Banque du Canada suggère de revoir la formation des jeunes - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTl9vazF4WWZKbGs5R2FnengyRnZ4Z1BjNUp6Rnh5RjV6cDhHbEhHdkl5bjRKQU1lZ2hfRTFyY2x5VUZBMTU0NG5UTFBNaG1zWmQ5TS1wZnpqMnBaUFB1SHFBYjZrTWFHa09hOVoxbndCSFBoNjFtd1JMcTQwUFJ6TFJkWkl5b3NfV2NYa3VUeXNlbWU1TG9fNHN6N19CeUxxTmxva1U5S0VRMzhDdXdz?oc=5",
-      "source": "news.google.com",
-      "description": "Face au chômage, un économiste de la Banque du Canada suggère de revoir la formation des jeunes  Le Devoir",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un économiste de la Banque du Canada croit qu’il faut revoir la formation des jeunes - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPN1lZRHRndGxGTUN2dEV3WWVrZE9zRktSdzJnS2w0alV2WEVBeEhiSVhEMnlkR0dZQm94ZDUzdF9IU0x0dlVNMllOQVpHTGxmcEZkWDN4TnpUdXdJZFhyMm9YTGx1dFh3WTRfdURyRnQ3d1dLVF9GSlpPYXFXUklDOXlnYzNRUHdlT0NzbDlEeXctREZEeHluXzV0elRJbFFIV1haTUoyaUgxejJteUN4RmROY0d2SUozdVVyakoyRUQtSlZwV25F?oc=5",
-      "source": "news.google.com",
-      "description": "Un économiste de la Banque du Canada croit qu’il faut revoir la formation des jeunes  Les Affaires",
+      "description": "Faut-il craindre une nouvelle hausse des taux d’intérêt ?  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -321,50 +261,42 @@
       "category": "general"
     },
     {
+      "title": "Un économiste de la Banque du Canada croit qu’il faut revoir la formation des jeunes - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPN1lZRHRndGxGTUN2dEV3WWVrZE9zRktSdzJnS2w0alV2WEVBeEhiSVhEMnlkR0dZQm94ZDUzdF9IU0x0dlVNMllOQVpHTGxmcEZkWDN4TnpUdXdJZFhyMm9YTGx1dFh3WTRfdURyRnQ3d1dLVF9GSlpPYXFXUklDOXlnYzNRUHdlT0NzbDlEeXctREZEeHluXzV0elRJbFFIV1haTUoyaUgxejJteUN4RmROY0d2SUozdVVyakoyRUQtSlZwV25F?oc=5",
+      "source": "news.google.com",
+      "description": "Un économiste de la Banque du Canada croit qu’il faut revoir la formation des jeunes  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Récession ou pas ? La Banque du Canada nuance - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM2Y3ckFxVVhOa1BaSkxPRmZrd2Y3MzRyRzRFcUhPOEhZTmMwdDBSUW5Ec2hWbXJrWUNlRUJkWXNVTjZueFVjcWJoVzdKcFJ3Z0UzZnB1WW5KZXFEc1RqZ1dOU2tNaWxKYWQ0NVNnLTFjVUYyUzlaSEdIZ3czZ25yMHQ5OFJuSmJycEFlbXhod3dYUjdhLUJlcUFxQVBBU3QtdGF5T0RZQUlvZF9jVUtBYmhHaWU4eTV4bngycnVuelFNdw?oc=5",
+      "source": "news.google.com",
+      "description": "Récession ou pas ? La Banque du Canada nuance  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Conférence de presse : Rapport sur la stabilité financière – 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOLWUyLWpMNHMzOFhRVWtBcFNMUlFTcVVjY0JtbDJadklqd0NwdENraUdfRlZVVnhoLWwzU0YwWjk4RllZNlRYdmI2MFVjWU5yMzRsYUJXdWFnUUlKQll6eW4wQkVjV2p4Rlhsa3ZNTmtHYW1vdmI2NzR1U1AxSWM3RVlYUHlsYkxyYlhIMmFhUzM3dXZoNTNrdncxQ3h0dnNGUk5GSzFR?oc=5",
+      "source": "news.google.com",
+      "description": "Conférence de presse : Rapport sur la stabilité financière – 2026  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada : rapport sur la stabilité financière - CPAC.ca",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQTEh2SjNRSUxXNkMtWVFYSG50UjdiU3NuVF9aQ2tPWkpzTk9ldEtWRW5ZWVdsZjlFVVlsOFFLc19uYlU4NXc3SUNiM0FpdzR6T3piRHh1SWpUMlVOQU1EdndyZUQ0R0RPZXFocjQ4X3BmN1J2VWY3bTN5MVoxNXM0VVF3TU1kUUwtZkFXdllqQUdzX0Rpa2FwLTk3WFJTYVpRbzY5WXpPbWN3aWxsTEQzb283bDVtUm5SZ2JGeHdUWGxUd09Sc2d6b2pNVlM?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada : rapport sur la stabilité financière  CPAC.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La Banque du Canada reste sur ses positions - conseiller.ca",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObGpFYUpFSXdqa3ZJRnFKS25Hai14UW1sR1dMSHVGMkRWOXJMYUlvM1EzUzR4Z09xVmw5Q3N5dlZOamp2SnNza2x3OVZkYzFnQURUQUZJX3o4ckw1U2RGNGdoZ3R1V3FVSTdxNWFFc2JwTmxibm90bENSNjdscng3OUNPemRSZmcxWDJlTjZUdw?oc=5",
       "source": "news.google.com",
       "description": "La Banque du Canada reste sur ses positions  conseiller.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché du travail en évolution | Il faut revoir la formation des jeunes, croit un économiste de la Banque du Canada - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQN2Fhd1ZUX2dlSmZXdEgwd0pMMUVIekQ2ek5ZR3l2bm5nc0Z4dEE4WnJ3MkZIZXNlM0o0UEpWcDFBam1aR2NJYnRlRzYySEdCeUNsZzRTZVFhZ0JIcXR5YVczV0xqZ2hqS0xqYVVHZGR1SlZ0bktqMHhiM2VOQ0d2anh1cG0xaWVDcXotT01ENFFLcURVX2tVNi1WZVRrcUxlV2k5SXowd1BsS1BjcUpueXN0d2lVTHBZRGF4UGxRWU5KYzEwY1pSUjVBa1FTb2VxeW00THpfOUxuUzR4X054ZUx2Y2ZoMVNxY1lYNTAtTUQwWkhqdFlBRm14aGJaZw?oc=5",
-      "source": "news.google.com",
-      "description": "Marché du travail en évolution | Il faut revoir la formation des jeunes, croit un économiste de la Banque du Canada  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché du travail canadien : entre fluctuations et transformations - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdWsyRHR3RVdEcEJIYzUtNnlHNW1MU1BfdGVoLXlKcG1VWGkzSHlCOGNRMzRqSENWUzNhOUtHMkxQS2o1cmYyUWc1cWJMVFZ0V2labkR2T05VTE83aUlLMk56SlBkVXZVVnNoZmVRU2FDdFNGVkJ6UzZQVWJmUHlkTWdySjlSNnRrQ0JtZXRLdkxJMFRmT1Q3dWRaT1RZZ0hFak5VTmxn?oc=5",
-      "source": "news.google.com",
-      "description": "Marché du travail canadien : entre fluctuations et transformations  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada a un nouveau gouverneur - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOanRnYUVXN3Z2RHI2YzlWLTJlYjF6VjJQYnhSQXBzR1l1TzJHRUlXRjFMOE1nd0U0S3VQa0VkU2pPMTQ0ZktWdTJJSml3LTF2YmxfcmVybGN5X2s4Wk5WY0FBRFFaSl9BcldCbG8wTGE4TEJteC0zeTFfbm83WWVRQWFWVnF4VTRXekczM0Jn?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada a un nouveau gouverneur  conseiller.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO) - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0gzVjVnblNmMlRRX0xhZXh6SXpmVFItTjRUWjBYWU9hVE9fcXRNTS1vRFlYNXhGa1pkY0FKNXEwOW5JVFJXczRBNjd3bEpEZ3hiV3JGYl9tWHBIejR1TzJ3T2JFZGhiQTBjbzFaYnVVSm9kWHI2bXVENWtWZ2tsQTZjMi1renZZUjJ4UlgtcURHdV9pVWJKbHRmOG5JZDczcmU4REZNVUVENWJwdXBYclNDMHFjXzlfSmM4UHhad0ZUdkhf?oc=5",
-      "source": "CIRANO",
-      "description": "Discours : Centre interuniversitaire de recherche en analyse des organisations (CIRANO)  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un marché des pensions résilient est important pour la stabilité financière - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQZThNSjY5MENvZGJTUlFZd1JBWHhNbnU3TUhHeFJ6SEI3ZmM0MTJ0ak1HaFJNOHV5NkFPcW9kbGs4Wmw3VVloODVxM21XYVZIcTJzcWFwZ05OLVNvOFdObFZpNEp2ZV9TelJ1bnR3dkRUNTZ1U09adHlSWnZWR3J2RzFTQmYycWdqY3Y4VmRiNld2dm5GMlJuRDZNQlhPaWx2MGxFcjBsR3lmV3pMQkdtUnlId0VKRWJkZURWeFRfejVSN0tTTlhNcDNzNHluS1dNempLX1pCMHNKNEF4dlViTnR2UzhWQXg4WXMxU09TMENqMFJQVWVnT19qRUhROE1jTllQRWkyWC1FN2dTREg5bGd6eG1sTlVTaUhOdDFzN1k?oc=5",
-      "source": "news.google.com",
-      "description": "Un marché des pensions résilient est important pour la stabilité financière  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -377,10 +309,18 @@
       "category": "general"
     },
     {
-      "title": "La contraction du PIB ne justifie pas une baisse des taux d’intérêt, selon des analystes - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTzh0RWltdG1TQ2Etc294el9nSTU0SFI3ZjBMV0tKSG1iTmZmSWI1ZmxRMWpEclJ4WjNnQndpLV9veVc2YnV5TDc2TG00ZG43bTd1dURab1RoVU8wQ0FzVVZIWmFNNWlqazZRZzFybGl2VnFpTFZtdUVyWFNVQWhKTUFwMEtZTVJLYnk4V2NYTENXMEEwTEx6QnRnTndTWWFmMXMtQU1hb28tZThaRk9JeF9WNlUzaUtFdGlPODBTOFdqSWJwSlc4cjZ6NA?oc=5",
+      "title": "Un marché des pensions résilient est important pour la stabilité financière - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQZThNSjY5MENvZGJTUlFZd1JBWHhNbnU3TUhHeFJ6SEI3ZmM0MTJ0ak1HaFJNOHV5NkFPcW9kbGs4Wmw3VVloODVxM21XYVZIcTJzcWFwZ05OLVNvOFdObFZpNEp2ZV9TelJ1bnR3dkRUNTZ1U09adHlSWnZWR3J2RzFTQmYycWdqY3Y4VmRiNld2dm5GMlJuRDZNQlhPaWx2MGxFcjBsR3lmV3pMQkdtUnlId0VKRWJkZURWeFRfejVSN0tTTlhNcDNzNHluS1dNempLX1pCMHNKNEF4dlViTnR2UzhWQXg4WXMxU09TMENqMFJQVWVnT19qRUhROE1jTllQRWkyWC1FN2dTREg5bGd6eG1sTlVTaUhOdDFzN1k?oc=5",
       "source": "news.google.com",
-      "description": "La contraction du PIB ne justifie pas une baisse des taux d’intérêt, selon des analystes  Les Affaires",
+      "description": "Un marché des pensions résilient est important pour la stabilité financière  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada a un nouveau gouverneur - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOanRnYUVXN3Z2RHI2YzlWLTJlYjF6VjJQYnhSQXBzR1l1TzJHRUlXRjFMOE1nd0U0S3VQa0VkU2pPMTQ0ZktWdTJJSml3LTF2YmxfcmVybGN5X2s4Wk5WY0FBRFFaSl9BcldCbG8wTGE4TEJteC0zeTFfbm83WWVRQWFWVnF4VTRXekczM0Jn?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada a un nouveau gouverneur  conseiller.ca",
       "cities": [],
       "category": "general"
     },
@@ -409,10 +349,26 @@
       "category": "general"
     },
     {
+      "title": "Dollar canadien » Récession au Canada, Taux et Pétrole Brut - Forex Quebec",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE01SFdxRi13RktiS21PQ3ZLOEtxaGxtLWFkWG92c2JVdkR6b1JMQVZmTHBWNjNhaHVwSjc4SWRrcENfQmdVV3VJLUFCOUdZNThUQ3M2UUgtNDlnS0lyRDZicmMzbFgwY2RmZXNFNWRBanVua3VaaGoxMFkwS1o?oc=5",
+      "source": "news.google.com",
+      "description": "Dollar canadien » Récession au Canada, Taux et Pétrole Brut  Forex Quebec",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La Banque du Canada juge le système financier solide, malgré l'accentuation des vulnérabilités - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPelFfbVV0VXp1a3l0MGxQSVctblJGMTlvcGRob0pWTWNZZ2lrMjF5M2hfZ25VRGJfdDRGUDlSZ1g4VnNOTEJ0YjJFd3UxYUVYQ1ltX0hmc3RJc2IyRURtakg1bF9WTGMzcHM0MEJJZC0tU2ZFQU9JUHVYWXUxNlZtaGw3YkVoR0J1QTdaTHg0dTBJamp2UmNjNTQ3b1hkbDlsM3BWWkdDOEJoY3ZyRWF3WHZkS0V1RHppR00yTWJNRk84TEZrMHBIX3RqUXFXeWpFaUF1OG9JaTFyNUg2YXV2dXB4NGNLTjdISVE?oc=5",
       "source": "news.google.com",
       "description": "La Banque du Canada juge le système financier solide, malgré l'accentuation des vulnérabilités  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada met en garde contre une interprétation hâtive de l'indicateur de récession technique - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQSG1ZQTlzOGpGdzNxQTdXNUtocFpTcENORWlkcUNzd2k0UjR4R1hHeFJ1eDRVUGEtNjQ1a3BBcF9NYTZ4akpDZG9ySWVfTHg3Z3MzbkptVUcyVm93ZFZ2N1VUWGsxLUJOQlRYM2VnajJYYUladk95SDdkcTJmWkRFUU9XREdLVlVTN2hJV3VZQU9FcFJlN3ZSMWRZMHZDYWtOOUFrUkdDU2l0ZTFTSDBiTnQyd1FEVXV5Vk5KZy1OenJKNF9HTC1KaXBTd3EtM1Npbml4MUxsTS1CZlk1aEhGS0VMWkRKTlA2RVc5VW4wZ0c0bUU?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada met en garde contre une interprétation hâtive de l'indicateur de récession technique  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -425,18 +381,10 @@
       "category": "general"
     },
     {
-      "title": "Implications des faibles données du PIB au T1 pour la Banque du Canada, selon la Scotiabank - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNbWlsVEt1Uk1kSG8za3Y1Rl82TkZzdDNFbENubXlGLWdEeElzZlNvZzc1Zm9RTTJZM3hSSW9pLUlGbXF6VnZvS0tXU1R3U2M5VHVqeG5zT0s4ZS1VbTlnZTZZYVBHUlNCYVZtcWdYTHUwZVc3a1A1TElpOTZhbzlWVDBOUm54QUNXUEdmNGV6cVRMeV9OZzNydUFqSEZwYlJXampKZm1zSjJYUy1oU2xtVUlmVDRPSDdpWjhtcGdiLW1UbFU4dDREbHVueWhCcjdPRW9VeFVvTWFqVHlmTlNoSEFsUFQ?oc=5",
+      "title": "La Banque du Canada met en garde contre une trop grande importance accordée aux données de contraction du PIB - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNS0V4TDFMTjFnTGRoUUhuODA3UFhwUGJOOHQ0Zi1ZaUxVUmFUQWJPRjNFOG8xZkpBTGRRcDVMZTBsOXlpVHF6cTFXUzRMYmRsXzF4UjJkN1c2UHlBcEM5UnEtMzZYV3doNXhQaFlsR2drZDNNQWpydzBSMmZSbFozYzhCcGhiVS1ITUZiY0h0WWFaVGtsTEg4M3pzVTZBTFVHcmpGejM3OFNaTEdIZGEycXFnUUJQcy1zcmhQb2JHOXJpdUQyX09NNFAzNXU5TVV6TXhVbnhKR2VPeFVueU1lNGpiaE5zMGtBRWpqdDhKaWt1WkFkVUkwRA?oc=5",
       "source": "news.google.com",
-      "description": "Implications des faibles données du PIB au T1 pour la Banque du Canada, selon la Scotiabank  Zonebourse Suisse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La complexité du marché du travail complique la tâche de la Banque du Canada, selon un dirigeant - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPUVJNTE1MbVZOZzZnbEdJeWw0b0gwcFlqU08ycnhBUzVyeVJaa1dubDBBcmZYSkxxbEZXeG5tQWNGMS1sSzJOaHM1NU9NUDNxaVlQak9SRzlZMks4Ym81Tk13T2hncWoyUE16SzBnTl90dXF6UXJXN2Q5RWF4SXNqSG5oYlcwbWdVaW01LVZwdEw3OEtzbWxYNWR6cm56VjBocDdvLVRfNVd1MTFFLW9lM2l4b2h6aG5kOXVNQVZoZEZSYi1XMjB1MkFJRy1IcWNhN2V1Zm1mZmNjbU9YbGpPX1RjX2VRaXduamJJNmRZRQ?oc=5",
-      "source": "news.google.com",
-      "description": "La complexité du marché du travail complique la tâche de la Banque du Canada, selon un dirigeant  Zonebourse",
+      "description": "La Banque du Canada met en garde contre une trop grande importance accordée aux données de contraction du PIB  Investing.com France",
       "cities": [],
       "category": "general"
     }
@@ -493,5 +441,5 @@
     },
     "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-06-01 18:36"
+  "last_update": "2026-06-02 17:20"
 }
