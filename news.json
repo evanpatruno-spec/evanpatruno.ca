@@ -1,28 +1,130 @@
 {
   "news": [
     {
-      "title": "L’investisseur avisé | Trois vendeurs chez Bombardier",
-      "link": "https://www.lapresse.ca/affaires/2026-06-07/l-investisseur-avise/trois-vendeurs-chez-bombardier.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Trois dirigeants de Bombardier, dont le PDG, viennent de vendre des blocs d’actions du constructeur montréalais de jets d’affaires.",
+      "title": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés",
+      "link": "https://apciq.ca/rmr-de-quebec-les-ventes-a-un-sommet-en-mai-grace-a-la-remontee-de-loffre-de-proprietes/",
+      "source": "APCIQ",
+      "description": "Québec, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue",
+      "link": "https://apciq.ca/rmr-de-montreal-la-baisse-graduelle-des-ventes-se-poursuit-et-la-pression-sur-les-prix-sattenue/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue est apparu en premier sur APCIQ - Site web.",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Une carte de crédit pour mon ado ?",
-      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-06-07/une-carte-de-credit-pour-mon-ado.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Donner une carte de crédit à son enfant ou à son adolescent, est-ce une bonne idée ? Si cela peut faciliter la vie des parents et permettre aux enfants de faire des apprentissages, cette étape financière ne devrait pas être la première, préviennent des experts. Un dossier de Nicolas Bérubé",
+      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché",
+      "link": "https://apciq.ca/stats-quebec-avril-26/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché est apparu en premier sur APCIQ - Site web.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Environnement | L’impact des nouveaux discours politiques sur l’investissement responsable",
-      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-06-07/environnement/l-impact-des-nouveaux-discours-politiques-sur-l-investissement-responsable.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
+      "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est apparu en premier sur APCIQ - Site web.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026",
+      "link": "https://apciq.ca/ventes-residentielles-stabilisation-des-ventes-mais-prix-toujours-sous-pression-au-1er-trimestre-de-2026/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026 est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville",
+      "link": "https://apciq.ca/des-marches-toujours-sous-pression-au-debut-de-2026-dans-les-rmr-de-sherbrooke-trois-rivieres-et-drummondville/",
+      "source": "APCIQ",
+      "description": "Le 15 avril 2026 — La Chambre immobilière Estrie — Mauricie — Centre-du-Québec (CIEMCQ) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent aujourd’hui les statistiques immobilières du premier trimestre de 2026 pour les régions métropolitaines de recensement (RMR) de Sherbrooke, Trois-Rivières et Drummondville. Les données sont tirées de la base provinciale Centris des courtiers immobiliers.\nL’article Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Gatineau : un recul des ventes dans un marché qui se rééquilibre progressivement",
+      "link": "https://apciq.ca/rmr-de-gatineau-un-recul-des-ventes-dans-un-marche-qui-se-reequilibre-progressivement/",
+      "source": "APCIQ",
+      "description": "Gatineau, le 15 avril 2026 — La Chambre immobilière de l’Outaouais (CIO) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent les statistiques immobilières du premier trimestre de 2026 pour la région métropolitaine de recensement (RMR) de Gatineau, établies à partir de la base de données Centris des courtiers immobiliers.\nL’article RMR de Gatineau : un recul des ventes dans un marché qui se rééquilibre progressivement est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Mars 2026 : Montréal en léger regain, Québec maintient son élan",
+      "link": "https://apciq.ca/mars-2026-montreal-en-leger-regain-quebec-maintient-son-elan/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 2 avril 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de mars 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Mars 2026 : Montréal en léger regain, Québec maintient son élan est apparu en premier sur APCIQ - Site web.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Copropriété : toujours l’option la plus abordable, malgré la montée des coûts",
+      "link": "https://apciq.ca/copropriete-toujours-loption-la-plus-abordable-malgre-la-montee-des-couts/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 25 mars 2026 — La copropriété continue de gagner du terrain au Québec et demeure, dans bien des cas, la porte d’entrée la plus accessible à la propriété. Une nouvelle étude de l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) confirme son abordabilité plus avantageuse, mais révèle qu’elle se complexifie sous l’effet combiné […]\nL’article Copropriété : toujours l’option la plus abordable, malgré la montée des coûts est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Budget du Québec 2026-2027 : l’APCIQ appelle à des mesures structurantes pour favoriser un accès responsable à la propriété",
+      "link": "https://apciq.ca/budget-du-quebec-2026-2027-lapciq-appelle-a-des-mesures-structurantes-pour-favoriser-un-acces-responsable-a-la-propriete/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 18 mars 2026 — À la suite du dépôt d’un budget décevant pour le secteur de l’habitation, l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) souhaite rappeler l’importance de mettre en place des mesures structurantes pour améliorer l’accès à la propriété et assurer un fonctionnement sain et transparent du marché immobilier.\nL’article Budget du Québec 2026-2027 : l’APCIQ appelle à des mesures structurantes pour favoriser un accès responsable à la propriété est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Planète économique | Face aux tensions, la Chine érige une forteresse économique",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-06-08/planete-economique/face-aux-tensions-la-chine-erige-une-forteresse-economique.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "L’environnement est un enjeu qui a perdu de son importance dans le discours des politiciens américains et canadiens au cours des dernières années. Quelle répercussion cela a-t-il sur l’investissement responsable ?",
+      "description": "La Chine érige un mur pour empêcher les capitaux, la technologie et les entreprises de quitter le pays.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux directeur  | Les économistes s’attendent à un cinquième statu quo de la Banque du Canada",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-06-08/taux-directeur/les-economistes-s-attendent-a-un-cinquieme-statu-quo-de-la-banque-du-canada.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Les économistes s’attendent à ce que la Banque du Canada maintienne son taux directeur inchangé pour la cinquième fois consécutive lors de sa réunion de mercredi, mais ses déclarations pourraient donner des indications sur la manière dont elle gère les incertitudes géopolitiques actuelles.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Univers PME | Investir malgré l’incertitude",
+      "link": "https://www.lapresse.ca/affaires/pme/2026-06-08/univers-pme/investir-malgre-l-incertitude.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Droits de douane ou non, l’entreprise familiale Julien entend bien continuer de produire ses éviers de cuisine haut de gamme à Québec pendant au moins 80 ans de plus. D’où son investissement récent de 3,5 millions pour ajouter 120 000 pieds carrés à ses installations.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Quartier Molson | La hauteur des tours frappe un plafond",
+      "link": "https://www.lapresse.ca/affaires/2026-06-08/quartier-molson/la-hauteur-des-tours-frappe-un-plafond.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Ville de Montréal et le promoteur derrière un des plus importants projets immobiliers de la métropole semblent être tombés sur un os. L’autorisation d’une portion des 1000 logements supplémentaires souhaités dans le futur Quartier Molson accuse deux mois de retard en raison d’une potentielle contestation citoyenne qui pourrait la faire dérailler.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Courtage immobilier | Critiquer les taux de commission ? Pas question !",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-06-08/courtage-immobilier/critiquer-les-taux-de-commission-pas-question.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "D’anciens courtiers immobiliers remettent en question leur taux de commission élevé et subissent les représailles d’anciens collègues et dirigeants d’agences immobilières. Rémi Chapadeau à Gatineau et Antoine Routhier, fondateur de la plateforme Ubee, osent défricher le terrain contre vents et marées pour que les consommateurs soient gagnants, affirment-ils.",
       "cities": [],
       "category": "general"
     },
@@ -49,16 +151,6 @@
       "description": "L’économie québécoise a ajouté 13 000 emplois en mai, après avoir perdu 91 000 postes nets de janvier à avril.",
       "cities": [],
       "category": "general"
-    },
-    {
-      "title": "Les ventes immobilières dans la région de Montréal ont reculé de près de 7% en mai",
-      "link": "https://www.ledevoir.com/economie/985580/ventes-immobilieres-region-montreal-ont-recule-pres-7-mai",
-      "source": "Le Devoir",
-      "description": "L’association immobilière provinciale indique que les prix médians ont continué de grimper.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
     },
     {
       "title": "Le marché immobilier toujours vigoureux à Québec, mais en baisse à Montréal - Radio-Canada",
@@ -91,6 +183,14 @@
       "category": "local"
     },
     {
+      "title": "Courtage immobilier : Une industrie « incapable » de se remettre en question, selon un ex-courtier - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZS1vWkVVWG9iSGVBYVNIZFRtY2RxeGF2Nm8xSUFGeHN0eV9FRG1VOE9kVWhzUDR6VWNJWDZsdTNYZUhtTDRMaThwdzk5TjRTQVZDei04NGxUdUIwTDlTMC1SWS1GY3pTbXh2Zzc1N3VQUGlfa2RMaVJ6amxVSk9fX2pkbVFRT25fVmFDMmJveHBWaVAxUnM3UFljMm5mMElTeWRmMS1xRjhybndLLWtUejJTMFFBRWh4TFZ3NmtYSUV6eXpZSlZycTBpbHNzSUllWm5n?oc=5",
+      "source": "news.google.com",
+      "description": "Courtage immobilier : Une industrie « incapable » de se remettre en question, selon un ex-courtier  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés - Le Soleil",
       "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQWXM4ZGFSZGl0WmJEVlFFR3hDc0tZanJobjNZNEozR0gzZHc5Y2RfLWpGU2VOakRtR2FsQnp0X3lzSThDUktCMkkwQUUxR2dnM1BFLTc4QndVZGZUNmtqVmdxWjl2SmtGRDhaWGRxcUZHSGRuRHlVdVc3c2lBZ3dfR21fVnpraFE1eGpLZTFlMXp6TWxYTDBPVHRuVktjY0JERXFDc2hvYndSekZDS2ZGMnFuRE1GTmFlSDJUaXV1Z082ODRQZWx1YTQ4Uy1OcGVjQTZySFRPSWJKWGp0U2REYnE1SXZxeFFnQ3dsd1NaRWpsMGhJSU9zWmJxWmhoZ0FHQzlF?oc=5",
       "source": "news.google.com",
@@ -109,26 +209,10 @@
       "category": "local"
     },
     {
-      "title": "Exode vers le Canada | Pour fuir Trump, combien d'Américains achèteront une maison au Québec? - 95.7 KYK",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNjg4a0FONVJmbEM5RFdnUzl0dHdkN1pOcDJhLU1nTjFteUtRaHN3RHBYd2otUjZDLUU2UWpGZXdKeFZrVWN3SjB6eG5TaVd1SlZnU3lWUUNCOUtaVWNFNUdUbElJZ1R1OGtqREhMWGpDc1JqV1VISTAtb01wODBZLVlJUjJ3MGFCOVpTTUlpQ1d6enc3NFA2VHZNanlGYS1XZmU3ckJZbGI?oc=5",
-      "source": "news.google.com",
-      "description": "Exode vers le Canada | Pour fuir Trump, combien d'Américains achèteront une maison au Québec?  95.7 KYK",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Achat d'une 1re maison au Québec : Voici pourquoi les experts disent de ne pas attendre - Narcity",
       "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1YTUVodUlKZ2w2MTBnSWNUNkZWSVVJUjhtdmFxbmhnRXZRdXpDWmhLRnVTWGg1akNfMm55SXZhMHYtUEtfUHlzWVRrTjY2bENCVEpZLUhnc3hXYnpldnZSWWlZSXZLRmhobXNIekVtM21ueVB4U1pKSzVTMU01UQ?oc=5",
       "source": "news.google.com",
       "description": "Achat d'une 1re maison au Québec : Voici pourquoi les experts disent de ne pas attendre  Narcity",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Immobilier: les Américains se tournent vers le Canada - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPenFKUzFJRXJZU2IxaVlhdk5OVHFWYkdRWjlSVVF6NWI4cHAxajMzbl9mSlVLVUVVU1l0T0NDbGNPdFdWN0dkclpqMU9wVWZGeERTZ1hpUGRrRDlwNXVyTW50bFZVMGRheTQtdnpXS2NqbXpXZlBRN1oxTmhLM2RvTWx5dWpiYXJuNEx0bzRUUjdtZ3V0bDRWZkhCTTc?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier: les Américains se tournent vers le Canada  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -143,18 +227,50 @@
       "category": "local"
     },
     {
-      "title": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés - GlobeNewswire",
-      "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxOVEx1YkJOTHdIcDdwLXFLWWVWYjFKcXFKZDE5bTZzU3h5TUIzOGFlazlnVW1WOTRZdjJYUDhELTl0NFFvejA4N09ua2MzM0tmdEhBenBaWTJ3LUQ3OXBmNTdRT2JPemdUbzczdEZxX01wTU0tSkhHcTF0czBOcDczajF6ZE10R0JaYU9aSVdnakNjODJkRE9fQUZQOWJKaS1CTGlUU1JYNjE3UjVBSnZ3YzJNUFdxU3lxVXFkWEdfWU55eDFjSEdmTjBUMHJYVWY2TXJWMkF2eHR4Zzg2MXU5Qnk0VG9iS0V1ZHBScjJDZzVGWmsyN0ZxeU9YZDhzdUZXSHY0V1ladk95aFFrYmtJTzE1SW4tSmQ2RXh2aS1BZ2o?oc=5",
-      "source": "news.google.com",
-      "description": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés  GlobeNewswire",
+      "title": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles) - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQWFRhOGxrR0JxbG1PdVdvbUp3XzN2a0tiUUFZbFFtZ0FBN3JaZmdGaE5QVGl1ZDE2d1RsdWI5Z0ZpVjNHd3FjOEFTNy1mS3hqcUJBNWpuUndjTzJuRUNCYkt0eTZwdU9XZUVhWmtWcm5EcUhXd2s0N1Q3bWhvdU8xR2lad09vaGRZODlCTURPaTBTTDdGWU51MnNsaGx0ZjN5N0NEajlwcEhxUlRIQ3JXZE1aZFhvY0tpeFRLekZSYi1fTVhGSThCSWo2VVB0MkRjdEhTUURvdmpSMGItZ3diRg?oc=5",
+      "source": "3 articles",
+      "description": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles)  La Presse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
+      "title": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles) - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNNXplZ3ZacEpfclpEeE1PdTZZdHJWampoYnR4WllJdHF6ZEZPakM5NFY1ankxZ3J6Vjc1TkhNNGtBYUpwNG04dGFMcHdjTmFTOG9aX1dRVU84LWdvOGFrbHROZ3hhUVVFM3Rnc0Y3Y1ZiNmJlS0JMRGNhV2xhMDRleXdpWDZ4cTViUWpVeFczaGpZeUF1UHFpNlcyYXQ2THBkcHo0d241WEc5QzRMQ1hIMEdFb2xhNE9PZGxKY2JqdEF5eURqakpDRmRVYWdiWWVRbGQwTW1iTHBmb3hoOURCTWkxWHJVT1pVN0g3X1FORGdsVTdOSDZB?oc=5",
+      "source": "3 articles",
+      "description": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles)  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Immobilier: les Américains se tournent vers le Canada - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPenFKUzFJRXJZU2IxaVlhdk5OVHFWYkdRWjlSVVF6NWI4cHAxajMzbl9mSlVLVUVVU1l0T0NDbGNPdFdWN0dkclpqMU9wVWZGeERTZ1hpUGRrRDlwNXVyTW50bFZVMGRheTQtdnpXS2NqbXpXZlBRN1oxTmhLM2RvTWx5dWpiYXJuNEx0bzRUUjdtZ3V0bDRWZkhCTTc?oc=5",
       "source": "news.google.com",
-      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
+      "description": "Immobilier: les Américains se tournent vers le Canada  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Immobilier: «Le secteur du courtage agit comme un cartel», estime un économiste - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQaVZkYk1pc0M2VUFBY0dMT2NCcC1QVm91MWtPbEFuSFlwMENqZTJzUDhnV1diSTk3LXhQeUhERkF6M0dWb195T2VsUjNBbFIxQXV1M0RSTm9uQTFiNkRzRGFNX05ORF9rdkJjOGQ3Z3BnUjM0VDZIZzlydWNfM2hpSzV1Y2xzMG5KQWFOeXlvVXBFR0tFek9RWUp1dkVzVWxYbmxWOGlrWFVxSVVpNmxUc1hwU1Y2NDVTWHc?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier: «Le secteur du courtage agit comme un cartel», estime un économiste  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Actualité et tensions géopolitiques | Les Américains zieutent les maisons canadiennes - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxON3VSVk5UazItbGp4a2lWRTZMa2ZXczFfN0JEUmIxWC1EMVlmRGliZWw0VmxZVVB6Tl9SOTJQMkJzZ2ppa1BhcGFCVTYxZS1XTnZaWGV4THZUWk9LRXNFTTVhcFlKMXBvYlFpMDM3bkZOLVF4ZnhJWkxJdEtRaWVPQ3hoSW8yMWV0b1NKRFBzNVlNNVF4bE9mb3ZEelEza3FtZ1Q4d2NoY1BJQjJ5YjJBd3UtbGI3ZlIyYTNqNDI1WEsteHZrR0pCeDlnQmJKdklkLVF1aE1uTi1LdVMyZGUtY3Jqbw?oc=5",
+      "source": "news.google.com",
+      "description": "Actualité et tensions géopolitiques | Les Américains zieutent les maisons canadiennes  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles) - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxOa1plenBiMjRxbzVUSjJlWHRqNmZlelNXTE9MWE4wUXFpU1Y0QzNZWWZNanQ2U0pVLV9zREVycTNKdVdGQk9fWHdLQmdhNXIwY051NUh1X1ZEbXlJTkFMNTZsUWN1c2Vpd3owUFVTa1Z0STRKemNMXzh5VU1vQmViWDFmLW5hQ0s4UlpaaHB1UDlwcS1TYzVJcEN2SmVHcF9NZmI3WkpRcmRaQ002NUlHQ1dIamxTRXVNLS0wSzhLZ2xwUmlMTlU2LWl2Z3pjLVZwak5haWoxZy02YXhBZFdpRFkyNUNZRl9lSzFXXzhCSi1yb1otZ3F6Zkp2RXFqamltTE85b1FzbVpIRjVkc0Jvd2VONHJhRTYza1Q3eUdzSjRiNE1OR2xGcmR6ZlZZQUxMa0pkZTlXUE1qVTA?oc=5",
+      "source": "3 articles",
+      "description": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles)  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -167,6 +283,14 @@
       "category": "general"
     },
     {
+      "title": "Maisons plus chères, acheteurs conciliants - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZ2VhZGJKelVNNmhQN1A3LUlveXRleE9aRHhQNDh5MlRvZERCNVlTQWd3QmlHMFpxRktfR3kyaWoweHVrLVZ3MmRaVFNmUk0zbXlOTkVpOW9iZGFsRDZjNkdkbFdzQVhBM0dDRFhIcHQtLVA1UkVIelNoZ1UwN0NCMGJoQURoTmxaN0wzSE1Wc2dSNUVzb3Zz?oc=5",
+      "source": "news.google.com",
+      "description": "Maisons plus chères, acheteurs conciliants  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Coup de balai pour le parc immobilier de Trois-Rivières - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUGZGNFpEUS1Mdmh2QXMzbUhpOWpyaVZDS1FxR0lONE1oNFZtRjhWSVBNbFdjSVJfUFBSUkVzZUk2UndDVmRsSDk3ME5JM3lyVXZNTTNlcUxESnRDcEtOb3AyQ3I4aEtuYnoxT2hVdnlQQzNFTnRJYTNDRGxjUFNFSHp5ZE1DZ0JEWGxPcmdyRzE?oc=5",
       "source": "news.google.com",
@@ -175,10 +299,10 @@
       "category": "general"
     },
     {
-      "title": "Actualité et tensions géopolitiques | Les Américains zieutent les maisons canadiennes - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxON3VSVk5UazItbGp4a2lWRTZMa2ZXczFfN0JEUmIxWC1EMVlmRGliZWw0VmxZVVB6Tl9SOTJQMkJzZ2ppa1BhcGFCVTYxZS1XTnZaWGV4THZUWk9LRXNFTTVhcFlKMXBvYlFpMDM3bkZOLVF4ZnhJWkxJdEtRaWVPQ3hoSW8yMWV0b1NKRFBzNVlNNVF4bE9mb3ZEelEza3FtZ1Q4d2NoY1BJQjJ5YjJBd3UtbGI3ZlIyYTNqNDI1WEsteHZrR0pCeDlnQmJKdklkLVF1aE1uTi1LdVMyZGUtY3Jqbw?oc=5",
+      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
       "source": "news.google.com",
-      "description": "Actualité et tensions géopolitiques | Les Américains zieutent les maisons canadiennes  La Presse",
+      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
       "cities": [],
       "category": "general"
     },
@@ -201,10 +325,10 @@
       "category": "general"
     },
     {
-      "title": "Crise du logement à Uashat mak Mani-utenam - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOWWxlWFFfNVZPSmc3Qk9tQ0YwZ2hKaDhPN3RNVUJfNW52a2x3eVhlWFNQTHVEUGFYYTExSXFIS1d4N1VONUdHYVFtdjBNNXRXYjVmR25Nd3FPWjJMSUZCanlibHRqVV9abkhtUTZkajMtUWJBcUZzdHZUTy1fSHNMSF95MnpWVjhmLV9obG9PSnpvWnNJN0RtS0N6b1Z1OTQ5MDY1Q1oyR2VxaVRtSmFDMmRFVno0d2R2WFBqdW5ZZnliUQ?oc=5",
+      "title": "La maison la moins chère au Québec est seulement 27 000 $ et parfaite avec un peu d’amour - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1icXhFN2tkYmpnb0Zwcm5pbEpoNjFqeEh4LWU0bmRPZmxGMVhZaFV2MzdZOXZNTzZZdDFDOGtPdl9kOS1ScGloOWJTSFNsVGRHcWN1VE52b1FEd1dZcUU2R2Y2TkpVQ2dJ?oc=5",
       "source": "news.google.com",
-      "description": "Crise du logement à Uashat mak Mani-utenam  Radio-Canada",
+      "description": "La maison la moins chère au Québec est seulement 27 000 $ et parfaite avec un peu d’amour  Narcity",
       "cities": [],
       "category": "general"
     },
@@ -217,18 +341,18 @@
       "category": "general"
     },
     {
-      "title": "[PHOTOS] Une luxueuse maison de plus de 5 M$ à vendre au Lac-Saint-Joseph - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaG1GM1JyWk9mbTUyWlR6ejlseU1Hcloxc084ZlBERFBZaFJBWW5OTWUyVjNnV21md1JzVE1OMENsR0hYcnlvLTRLMnhtNndubTc0R1VLSW42eHhXZG9GR21XWHBQVzBVUjlIbU1ISWdBbWZ1U2sxM25xU01uc3ZTc3d0dVdLODN0VEJWR0pzcy1SMUZJVC1OMm5zQ09mZlo4UG1rU3pIUVA?oc=5",
+      "title": "Ce qu’on suit ce lundi | Gouverneure générale, logements abordables, Hydro-Québec - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPNDU5RzB6ejdITjJiOWk1WFBOOGZiS3g5N0V5NnJoLUtmN1BNbWRKRUVjMXhyNGJaSWV6UTZ6SlRHcjYtMVU3b1J0SThsNlc2bGVXR01wNjBsQUU2cG1vZFdsNkoxZklXRHNoUGpaTDdGVjVOVDdNYWtXaWFieFAwVGdFbTJEaWV3TWxvUldjNjdOcDA1TDhzWWtaY0ZfNnlEZ1FGSk90Mkt1Y3piNEhXRGZ4UEZmNU1MUGF5OWpweHRuRUM1Smc?oc=5",
       "source": "news.google.com",
-      "description": "[PHOTOS] Une luxueuse maison de plus de 5 M$ à vendre au Lac-Saint-Joseph  QUB radio",
+      "description": "Ce qu’on suit ce lundi | Gouverneure générale, logements abordables, Hydro-Québec  La Presse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Céline Dion (58 ans) : à quoi ressemblait sa petite et très modeste maison d’enfance au Québec où elle a grandi avec ses 13 frères et sœurs - grazia.fr",
-      "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPR1dVSWNNOGFKdndySGh3dFZycVFvYTlpQ0JucUVWTDdBaHg5cUFZeFJWb3dETDNLRTBmbkpfVUljT2xJY1pQOXM0WmlYNThsWjlKVVA1N2RTeVBheWlMYlpQd1BEWG5SaFNvMWxXN2RRcVRYWDlNRGpwRmdRbHo1MkFqdFJGMTd5aUV3bU9Kajl1a1Y3V0JyYW5UWjVNSEgyY3NEcWo0eHpuMzVnNHYxMlpVSmE2bkRNOEpWOHJnVldvbDNxWks5d0JDRkg1SmJwSlVTN0x5eFFXMVBhTEdlNmE5djZCS0NpYjdfUGNuVVRGQ3ptcnFNVkdTT1ZCbF9xVEJIZHBDS18?oc=5",
-      "source": "58 ans",
-      "description": "Céline Dion (58 ans) : à quoi ressemblait sa petite et très modeste maison d’enfance au Québec où elle a grandi avec ses 13 frères et sœurs  grazia.fr",
+      "title": "[PHOTOS] Une luxueuse maison de plus de 5 M$ à vendre au Lac-Saint-Joseph - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaG1GM1JyWk9mbTUyWlR6ejlseU1Hcloxc084ZlBERFBZaFJBWW5OTWUyVjNnV21md1JzVE1OMENsR0hYcnlvLTRLMnhtNndubTc0R1VLSW42eHhXZG9GR21XWHBQVzBVUjlIbU1ISWdBbWZ1U2sxM25xU01uc3ZTc3d0dVdLODN0VEJWR0pzcy1SMUZJVC1OMm5zQ09mZlo4UG1rU3pIUVA?oc=5",
+      "source": "news.google.com",
+      "description": "[PHOTOS] Une luxueuse maison de plus de 5 M$ à vendre au Lac-Saint-Joseph  QUB radio",
       "cities": [],
       "category": "general"
     },
@@ -241,14 +365,6 @@
         "laval"
       ],
       "category": "local"
-    },
-    {
-      "title": "Le secret du marché hypothécaire canadien - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOQTVVWGk4OWI1WmQzWTBTZ1RTaHBWZ0pWTjM3djdvcG0tX1EtdjhyblJrZ0RzRWd5ejBKTF91VWMybFJKdGVPZ0xzVlA0ZHUtV0tOVVc4dXg1bV9XLS1BRm0xNU91OXVRbFpWa0ZPaXBlNHMtREhhZlp5SXBZS0UwM3F3NHlheGp2MVlhMnlfeC16STZwbVRtVnNn?oc=5",
-      "source": "news.google.com",
-      "description": "Le secret du marché hypothécaire canadien  Les Affaires",
-      "cities": [],
-      "category": "general"
     },
     {
       "title": "Annonce de la Banque du Canada concernant le taux directeur - Banque du Canada",
@@ -267,18 +383,18 @@
       "category": "general"
     },
     {
-      "title": "Faut-il craindre une nouvelle hausse des taux d’intérêt ? - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNeGZWbmZ3T2Y5ZzIxMkNhZFd3X1NfNHVRQXJRUTVIcVB0R014cnJjbGVyTXRvWXlmT0xTUEtlUlNXVFlWTWlURGIzSE4xd2txOVJEc095NWFVVldlNmtaTmVhUVNEanpLY2F1VkVvX3k2SEdMeWw1U25YTlpGTE53S2hQVVhtNWU5OWhTaVdRSW00d3lxNDdOVzhWSXE1dDh3enVRdnVNRk9WVnpD?oc=5",
+      "title": "Taux directeur | Les économistes s’attendent à un cinquième statu quo de la Banque du Canada - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQaWR0Z0o1TXgwVmM0dXBSTmxhaG9LeVZScDdDUVNMd0ZuUWpTbXFncEgxNGswc0FWMWh0RnNxWlVQT3JqOXRTSVFCYmFwSW1wYnh4bXRCck05Y2QxdEM4YXZXeE1oc0hmbkc3ajYtaW04YVM3WHJ3blZIVElBZGJkNEFkaGpvVnpqc0FVNnJra19jdHpPRkN4eEJFZUZ1cUI4SVJndnNlMmt0blF1aVU4d2s3YUVYeVczV1ZIYm9BZEktTFhaSE1ES09GV1hjLVFldWF4d3p6X1JIRS1ibWlzZQ?oc=5",
       "source": "news.google.com",
-      "description": "Faut-il craindre une nouvelle hausse des taux d’intérêt ?  Finance et Investissement",
+      "description": "Taux directeur | Les économistes s’attendent à un cinquième statu quo de la Banque du Canada  La Presse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada juge le système financier résilient - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNk4yX3ZSeDVxTHJCc3RvemNqczYzakZvbWtVa2wzaUswUy1HMVQzT3BhWjM2VTZKY3hfZ2hhaEZLS01rY0tsZzZyWG1vdzF6YjJMUUtzTGptV1JRczdTRUQ4QWd6aV85VUtYY05tWXlHandKZ3NEQkptSnlEZi1Kel9ndzd1cThuUGdSdHZrUGM0NjZaMWRsX0hfYTdWdw?oc=5",
+      "title": "Faut-il craindre une nouvelle hausse des taux d’intérêt ? - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNeGZWbmZ3T2Y5ZzIxMkNhZFd3X1NfNHVRQXJRUTVIcVB0R014cnJjbGVyTXRvWXlmT0xTUEtlUlNXVFlWTWlURGIzSE4xd2txOVJEc095NWFVVldlNmtaTmVhUVNEanpLY2F1VkVvX3k2SEdMeWw1U25YTlpGTE53S2hQVVhtNWU5OWhTaVdRSW00d3lxNDdOVzhWSXE1dDh3enVRdnVNRk9WVnpD?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada juge le système financier résilient  conseiller.ca",
+      "description": "Faut-il craindre une nouvelle hausse des taux d’intérêt ?  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -315,10 +431,42 @@
       "category": "general"
     },
     {
-      "title": "Implications des faibles données du PIB au T1 pour la Banque du Canada, selon la Scotiabank - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOY01iQ1dfcHlKd2N1MUNjNU1rZE9fS1kxVThOcXNLWm42Qko2b1Fpc1BlY29ZSFhDWXE2bnQ5a21mWHBNVlhyZEx3WGdtRnZRRExzQk40ZGpCdUlrSXRhOHNyRWdEMnVaWmtOeGJ4c2NLcVM0YWZwbC13OEJ2R3RYTGxrWkVGZFI5MkItdzg3TkJ6aWNGa2JFVUc1RjN4dU1sdDdjM3VHV2N1TVlmeEdQay0tYUlXWllLRFZkRW9hb2JUcVR3ejk5cmFYZkpZQVZaZEIySHBMeTg0T3F2a1JrTDRGb1NYZw?oc=5",
+      "title": "Création d’emploi record : les obligations plongent - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPR2tiWXREbThmOUFJUGVYX3pheEFZWTlCMnNWSXVtbUVuSWJ2cjctc2xvUzE0VllxV2ZybjlVd2dVam5jSF9qbXlxTWs3NWxWODBpdEVfejB4cUdfTlJHWU9Da2RCaWRCSGtBVzNQVXBQMXhZLTA0cEM1OGx1NFppWXRMdlBiLUVRNHdKNVlLSVdtVnFjZk1SbjVIT2Z5eXR0QTVaSmFKcFhpNmpHTWk3TUMtMG84S2VCX0Z6TXZqcGpodUdHQjVpX0pveDFZWFU4Yi1r?oc=5",
       "source": "news.google.com",
-      "description": "Implications des faibles données du PIB au T1 pour la Banque du Canada, selon la Scotiabank  Zonebourse",
+      "description": "Création d’emploi record : les obligations plongent  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada met en garde contre une trop grande importance accordée aux données de contraction du PIB - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNS0V4TDFMTjFnTGRoUUhuODA3UFhwUGJOOHQ0Zi1ZaUxVUmFUQWJPRjNFOG8xZkpBTGRRcDVMZTBsOXlpVHF6cTFXUzRMYmRsXzF4UjJkN1c2UHlBcEM5UnEtMzZYV3doNXhQaFlsR2drZDNNQWpydzBSMmZSbFozYzhCcGhiVS1ITUZiY0h0WWFaVGtsTEg4M3pzVTZBTFVHcmpGejM3OFNaTEdIZGEycXFnUUJQcy1zcmhQb2JHOXJpdUQyX09NNFAzNXU5TVV6TXhVbnhKR2VPeFVueU1lNGpiaE5zMGtBRWpqdDhKaWt1WkFkVUkwRA?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada met en garde contre une trop grande importance accordée aux données de contraction du PIB  Investing.com France",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux Directeur : la Banque du Canada devrait rester prudente mercredi - mogazmasr.com",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9vVGNTRUVybkFfVDc3QWZaZlJZOGltMGFpVDVtTm95VkVVdlh1VTNESWFMOGw3b2NSN010YzRrT1NSZDEtMG95OXNMWQ?oc=5",
+      "source": "news.google.com",
+      "description": "Taux Directeur : la Banque du Canada devrait rester prudente mercredi  mogazmasr.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient son taux directeur à 2,25 pour cent - HarianBasis.co",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9Mek5rSnVjU1NxMTlwV2hpQlR4Mm1fWkFoem55aE1UbWF5bllQWUgtbTFBVmNWcjlyclh6QmpIZWlSWXkxSFQxSzBjcXhlTmIyMFpHd2tTaUxPQURtbVlkSTVQOFlQcEV1eUNBVUo5RWYxS2MtcEE0?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25 pour cent  HarianBasis.co",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada devrait maintenir son taux directeur inchangé pour la cinquième fois consécutive, selon des économistes. - SSBCrack",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPLXlhWTlFbDY3a2RZczdDT0tjSlNvMXZEazN3S2tpM0lod1FnblZiQkN3NjJERGZiaEwxdGkwN2M1TThGcHVzRjE5bEQxeEVkU1pIRUFOT1dYVmpfeVJXUGRCS2FrRzIyS2pGR1d2OXJhbTVfUDljTFVDSVhQUkU2MzdabUZJZzU4OUtoVGFJUGZGQmd3dWQ1NUdrMmdhRVFTYllVb0JYXzBkY2NIQy1lZ1JWck5CeFVMWUVibjctS1BmOWpNejgzcXZiVkVkUG01anJhOVV4RnU5TFNvc2JCREdMYw?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada devrait maintenir son taux directeur inchangé pour la cinquième fois consécutive, selon des économistes.  SSBCrack",
       "cities": [],
       "category": "general"
     }
@@ -373,7 +521,7 @@
       "days": "42",
       "condition": "Vendeurs"
     },
-    "last_quarter": "Avril 2026"
+    "last_quarter": "mai 2026"
   },
-  "last_update": "2026-06-07 14:51"
+  "last_update": "2026-06-08 16:48"
 }
