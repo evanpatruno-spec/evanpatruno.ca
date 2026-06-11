@@ -87,47 +87,39 @@
       "category": "general"
     },
     {
-      "title": "La Bourse de Toronto et les marchés américains en baisse",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-06-10/la-bourse-de-toronto-et-les-marches-americains-en-baisse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "La Bourse de Toronto et les marchés américains avançaient en fin de matinée",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-06-11/la-bourse-de-toronto-et-les-marches-americains-avancaient-en-fin-de-matinee.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Bourse de Toronto reculait de près de 100 points mercredi, en fin de matinée, plombée par les pertes des secteurs des métaux de base et des technologies, malgré les gains du secteur de l’énergie, alors que le prix du pétrole progressait.",
+      "description": "La Bourse de Toronto gagnait plus de 300 points jeudi, en fin de matinée, soutenue par la vigueur des secteurs de l’énergie et des métaux de base, pendant que les grands indices américains reprenaient du terrain également.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Courtiers immobiliers | « C’est notre client qui décide ce qu’il veut visiter »",
-      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-06-10/courtiers-immobiliers/c-est-notre-client-qui-decide-ce-qu-il-veut-visiter.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) reconnaît que bon nombre de ses membres connaissent mal la Loi sur la concurrence. Malgré cela et la mauvaise presse que reçoit la profession, la population continue d’avoir recours à leurs services plus que jamais. Dans la foulée de la sortie, lundi dans nos pages, d’ex-courtiers qui jugent que les taux de commission sont trop élevés, La Presse s’est entretenue avec Marc Lacasse, co-porte-parole de l’APCIQ et courtier immobilier.",
+      "title": "La Banque centrale européenne ouvre la marche et relève ses taux à cause du Moyen-Orient",
+      "link": "https://www.ledevoir.com/economie/987110/banque-centrale-europeenne-ouvre-marche-releve-taux-cause-moyen-orient",
+      "source": "Le Devoir",
+      "description": "Les gardiens de l’euro ont été amenés à réagir à la hausse de l’inflation, à 3,2% en mai.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient son taux à 2,25 %",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-06-10/la-banque-du-canada-maintient-son-taux-a-2-25.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’inflation s’accélère et l’économie ralentit. Face à ces signaux contradictoires, la Banque du Canada a décidé de maintenir son taux directeur inchangé à 2,25 % pour une cinquième fois consécutive.",
+      "title": "Votre taux hypothécaire pourrait augmenter même si le taux directeur reste inchangé: pourquoi?",
+      "link": "https://www.ledevoir.com/economie/finances-personnelles/986978/votre-taux-hypothecaire-pourrait-augmenter-meme-si-taux-directeur-reste-inchange-pourquoi",
+      "source": "Le Devoir",
+      "description": "L’incertitude au Moyen-Orient n’est pas étrangère à la hausse des taux hypothécaires.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "États-Unis | L’inflation atteint son plus haut niveau en près de trois ans",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-06-10/etats-unis/l-inflation-atteint-son-plus-haut-niveau-en-pres-de-trois-ans.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’inflation a une nouvelle fois bondi le mois dernier aux États-Unis, à 4,2 % sur un an, après 3,8 % en avril, atteignant en mai un nouveau plus haut niveau en près de trois ans, selon des données officielles publiées mercredi.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient le statu quo de son taux directeur",
+      "title": "Le taux directeur de la Banque du Canada reste stable",
       "link": "https://www.ledevoir.com/economie/986735/statu-quo-attendu-banque-canada",
       "source": "Le Devoir",
-      "description": "Le taux directeur de la banque centrale canadienne reste à 2,25% pour une cinquième fois consécutive.",
+      "description": "Le taux directeur demeure à 2,25% pour une cinquième fois d’affilée.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Quelles seront les conséquences de l’entrée de SpaceX en Bourse sur vos investissements ?",
+      "title": "Quelles seront les conséquences de l’entrée de SpaceX en Bourse sur vos investissements?",
       "link": "https://www.ledevoir.com/economie/finances-personnelles/986630/quel-sera-impact-entree-spacex-bourse-investissements",
       "source": "Le Devoir",
       "description": "«Le Devoir» décortique la question avec un expert.",
@@ -135,20 +127,18 @@
       "category": "general"
     },
     {
-      "title": "Le marché immobilier toujours vigoureux à Québec, mais en baisse à Montréal - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSkFqazJZTXFWTlI5eUJXZzgzZWVOcl8zend5dUdjekNOR3VKZlZPc3Z6endYZHd5OU1xa2RQRFlkc2Fmbi1CdnpBeURYN3hSemdZblNoNTRjR0x5WVlETnlPMjZ4dm1kZF9BanZUVDFJcDFOTE92UXhIQ183MVFJaU5LMWFYRVRkZUk0S2E4WFEzWGU3eEp3?oc=5",
-      "source": "news.google.com",
-      "description": "Le marché immobilier toujours vigoureux à Québec, mais en baisse à Montréal  Radio-Canada",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
       "title": "Courtage immobilier: une industrie «incapable» de se remettre en question, selon un ex-courtier - Journal de Québec",
       "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZS1vWkVVWG9iSGVBYVNIZFRtY2RxeGF2Nm8xSUFGeHN0eV9FRG1VOE9kVWhzUDR6VWNJWDZsdTNYZUhtTDRMaThwdzk5TjRTQVZDei04NGxUdUIwTDlTMC1SWS1GY3pTbXh2Zzc1N3VQUGlfa2RMaVJ6amxVSk9fX2pkbVFRT25fVmFDMmJveHBWaVAxUnM3UFljMm5mMElTeWRmMS1xRjhybndLLWtUejJTMFFBRWh4TFZ3NmtYSUV6eXpZSlZycTBpbHNzSUllWm5n?oc=5",
       "source": "news.google.com",
       "description": "Courtage immobilier: une industrie «incapable» de se remettre en question, selon un ex-courtier  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles) - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNNXplZ3ZacEpfclpEeE1PdTZZdHJWampoYnR4WllJdHF6ZEZPakM5NFY1ankxZ3J6Vjc1TkhNNGtBYUpwNG04dGFMcHdjTmFTOG9aX1dRVU84LWdvOGFrbHROZ3hhUVVFM3Rnc0Y3Y1ZiNmJlS0JMRGNhV2xhMDRleXdpWDZ4cTViUWpVeFczaGpZeUF1UHFpNlcyYXQ2THBkcHo0d241WEc5QzRMQ1hIMEdFb2xhNE9PZGxKY2JqdEF5eURqakpDRmRVYWdiWWVRbGQwTW1iTHBmb3hoOURCTWkxWHJVT1pVN0g3X1FORGdsVTdOSDZB?oc=5",
+      "source": "3 articles",
+      "description": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles)  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -161,24 +151,6 @@
         "montreal"
       ],
       "category": "local"
-    },
-    {
-      "title": "Immobilier résidentiel : Montréal ralentit, Québec bat des records - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNOTBfSTEtMnpjVkNORUZSalplakFYUVdzb0R0NkFxSjN2UEdJZXRRd0lwaXVfTm9Td0tlbGpyS2pocGRydktfczMzajRGVVNUV1pOYWNwTEFNT21IRERuQzdqdkhPM2s1TFk1b3lGWTM0OFAyZE1DSXZyalE1UFVWNzEzdlBILWVuSTd6SExUWW9sT040d2FXWTRlbTctR2NyUGc?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier résidentiel : Montréal ralentit, Québec bat des records  QUB radio",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQWXM4ZGFSZGl0WmJEVlFFR3hDc0tZanJobjNZNEozR0gzZHc5Y2RfLWpGU2VOakRtR2FsQnp0X3lzSThDUktCMkkwQUUxR2dnM1BFLTc4QndVZGZUNmtqVmdxWjl2SmtGRDhaWGRxcUZHSGRuRHlVdVc3c2lBZ3dfR21fVnpraFE1eGpLZTFlMXp6TWxYTDBPVHRuVktjY0JERXFDc2hvYndSekZDS2ZGMnFuRE1GTmFlSDJUaXV1Z082ODRQZWx1YTQ4Uy1OcGVjQTZySFRPSWJKWGp0U2REYnE1SXZxeFFnQ3dsd1NaRWpsMGhJSU9zWmJxWmhoZ0FHQzlF?oc=5",
-      "source": "news.google.com",
-      "description": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés  Le Soleil",
-      "cities": [],
-      "category": "general"
     },
     {
       "title": "210 nouveaux logements abordables verront le jour dans Ville-Marie - Le Devoir",
@@ -199,6 +171,22 @@
       "category": "local"
     },
     {
+      "title": "Les maisons à Québec coûtent plus cher : Voici le salaire à atteindre pour y arriver en juin - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAtdXFRZ1BORE5lYTBSazEzQnRhMDVna2lqSjZrRk55SU90RE1OS01faHc0cE1JQ19pT0M2YVczRV9ReGhoYnVtXy1NTnJ0NTQtTjZqZ2xobTE0TUdCelhva3JlOWpKR0JvU2s4R0g4N2VaNzZraUNYcWRQSXgwUQ?oc=5",
+      "source": "news.google.com",
+      "description": "Les maisons à Québec coûtent plus cher : Voici le salaire à atteindre pour y arriver en juin  Narcity",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Maisons plus chères, acheteurs conciliants - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZ2VhZGJKelVNNmhQN1A3LUlveXRleE9aRHhQNDh5MlRvZERCNVlTQWd3QmlHMFpxRktfR3kyaWoweHVrLVZ3MmRaVFNmUk0zbXlOTkVpOW9iZGFsRDZjNkdkbFdzQVhBM0dDRFhIcHQtLVA1UkVIelNoZ1UwN0NCMGJoQURoTmxaN0wzSE1Wc2dSNUVzb3Zz?oc=5",
+      "source": "news.google.com",
+      "description": "Maisons plus chères, acheteurs conciliants  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Les ventes immobilières reculent de 7 % à Montréal - Canadian Mortgage Trends",
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOOVY2LXMtdGJyNVBpNXlFRGtnWTRmYU0xa1BSLTFMR1ZKQWJGR0ZYSzJhUkJaLTNVXzZjdGhDZ2tJb2U3aHQwN3ZNOFA2NFg5bXpNQ1lJUmExWjhCbGJZZVJVUHhmMmt6bU4xRUt1b1p0WmdxWEJHSTdQS1VheXBscnZTT1dHRzktQUo5Z1IwZnh0RGVERTJVV3lVVWlkUTdvbWt0UUdJV0hRZzN6VUd3QnV5bWJQZUlIVTVwUl9Ld01vNHZzMmR5LW93?oc=5",
       "source": "news.google.com",
@@ -209,16 +197,48 @@
       "category": "local"
     },
     {
-      "title": "L’industrie du courtage immobilier a de «sérieuses questions» à se poser, selon un ex-courtier - La Voix de l'Est",
-      "link": "https://news.google.com/rss/articles/CBMihANBVV95cUxPU25IRzlsV1pXOHVJaUNXSjlITmlucHh2cE9ya25JUnNpRkRSM0V6M0wzMlhkTzN0NkxMa28wZGNhQkRxVW9fYTFBaTkyd29YOTJJREhFUUlvbHRKQmVHRVNWZjh1ZzRXd25DOF9QSGgtc1htQXNVTjFPY2VkWmdIY0NzYm1YVkhBNHppR1R3cDNDeWRUbGJEMGpYcjRtTUNPUEpfWFFjSTBBc3o0ejN3TnJRY29hYXMtMzhUTW85TzVtVUJCNjZWR1E3VkloT1ZTN1ZYblJIYkxGZTB3bWxwS1NPT2k2OFEyaEsyQUQ3SWtkMnVxdGVTazhRaVhobFN1ODJmMGpfNTVpbWRoV2l2aU1ScDlLNExKSk4zWHJNdU8xMGdHSlR5T3J6ZXJVZHhzQ3YtQTctaEpzZnRfdWNyRTdHTlVPQkJacWMwU2RNYzlvQzBWb0cwMjI5RmtqMkt1aXFXcHljOFZfS2d5QjdXb0E5NENXaExmUERXMlBMV2lIOEJL?oc=5",
+      "title": "L’industrie du courtage immobilier a de «sérieuses questions» à se poser, selon un ex-courtier - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPeWRjV1hqMU5oQjdFWVNXVWpRaUVfWi03aXplSHhuMmdOUTRkSmtUQzFDS1R4RGZ0ZmRHRVEzMFJkaW5aOGFTMVR4TUpsSzdNMmVZUWNhUV9FUUtQRUhDN1BQX2QwQlhjMGFBLXFxWmJfelNYRDdJYnpQQkVPa21ZUmJMMWZwaFQ0aVJaX3BESTlFaF8tMUdya0c3ZTFpSGtMMGJrQzJ6N19MZUhoVWZzeUp0c0w5bmJLRUs2QkhZeEFZQlNlcGJMTkVLVEd1bjNSbUd0bkxmVW45NF81T1J2endWMnhDU293Zl8tdjBqVUtYVWp2QS1rOVRETTNhNFBqVi1LZlpSdHk?oc=5",
       "source": "news.google.com",
-      "description": "L’industrie du courtage immobilier a de «sérieuses questions» à se poser, selon un ex-courtier  La Voix de l'Est",
+      "description": "L’industrie du courtage immobilier a de «sérieuses questions» à se poser, selon un ex-courtier  Le Soleil",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Immobilier: «Le secteur du courtage agit comme un cartel», estime un économiste - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORmxyQ3RrelhyYzJfV090UDN4MmNZMk9WbVBFWEZmellnN1RaSk1nc0tmVmFpYVIxRVNsRkZNYXlYUkU0bzZaaXRJVXFHOFFxZDZfTXFpcFdMTGRINXZQMzVQa1VSYk94RE51bHlFZ3JLZ1ZwaTNBMXRhS1U1dlM2TUg2VGtsRnFzbFM1VERpa0RIMUw3TGMxRW5BTkN1RVc4YWcxRmFNbXVxV2t4N0l3R3p3?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier: «Le secteur du courtage agit comme un cartel», estime un économiste  QUB radio",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Des Américains s’achètent des chalets au Québec pour être prêts «si le bordel prend aux États-Unis» - TVA Sports",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQjdqTkhsVEZSQlRMRTd5NkVaRk1vWmQ5VEJoNzNFQmVnVWJQZUxYSmlQTGNreWN4NUhndnp5c1NWYlBlT0NKWXU1VWRzWmxBd1AzTTR1S0xFQllvYzhqRkpKcktVcEFDbUVIR0NKUW8xU1g0aTJtcS1jQ0t6bjJqV0hLN05iRHdTZFkzTEdoWU9sN19uZ1JzNGpORE1wdzRTNS1fbnNWZTNSTXBDSWdNUmFUTlZiWWJ0Tm5JVTV3Z3FFdm5HbFFTNVVmSVgydGlrQ3l5OC13?oc=5",
+      "source": "news.google.com",
+      "description": "Des Américains s’achètent des chalets au Québec pour être prêts «si le bordel prend aux États-Unis»  TVA Sports",
       "cities": [],
       "category": "general"
     },
     {
       "title": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles) - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNNXplZ3ZacEpfclpEeE1PdTZZdHJWampoYnR4WllJdHF6ZEZPakM5NFY1ankxZ3J6Vjc1TkhNNGtBYUpwNG04dGFMcHdjTmFTOG9aX1dRVU84LWdvOGFrbHROZ3hhUVVFM3Rnc0Y3Y1ZiNmJlS0JMRGNhV2xhMDRleXdpWDZ4cTViUWpVeFczaGpZeUF1UHFpNlcyYXQ2THBkcHo0d241WEc5QzRMQ1hIMEdFb2xhNE9PZGxKY2JqdEF5eURqakpDRmRVYWdiWWVRbGQwTW1iTHBmb3hoOURCTWkxWHJVT1pVN0g3X1FORGdsVTdOSDZB?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQWFRhOGxrR0JxbG1PdVdvbUp3XzN2a0tiUUFZbFFtZ0FBN3JaZmdGaE5QVGl1ZDE2d1RsdWI5Z0ZpVjNHd3FjOEFTNy1mS3hqcUJBNWpuUndjTzJuRUNCYkt0eTZwdU9XZUVhWmtWcm5EcUhXd2s0N1Q3bWhvdU8xR2lad09vaGRZODlCTURPaTBTTDdGWU51MnNsaGx0ZjN5N0NEajlwcEhxUlRIQ3JXZE1aZFhvY0tpeFRLekZSYi1fTVhGSThCSWo2VVB0MkRjdEhTUURvdmpSMGItZ3diRg?oc=5",
+      "source": "3 articles",
+      "description": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles)  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La pression augmente sur l’immobilier américain - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNb2JsNmozVjhzZE5LZzhnR0w0cFlBeGtrQzBlMFB1UmY3dnhVeVpMZUtEeUgxYXAyMXpaSHJfbU1HdUpDZnBSdmtmOE5RdXVyZGRMLTROcm9PdGFCZ0xfTURJMC14aEVPOW8tNUVsVGxLb01sM0pmbzBSWFR1RTZXSTBXdmRaLTZrYWhtYnpSSjc4R1Foa1E?oc=5",
+      "source": "news.google.com",
+      "description": "La pression augmente sur l’immobilier américain  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles) - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxOa1plenBiMjRxbzVUSjJlWHRqNmZlelNXTE9MWE4wUXFpU1Y0QzNZWWZNanQ2U0pVLV9zREVycTNKdVdGQk9fWHdLQmdhNXIwY051NUh1X1ZEbXlJTkFMNTZsUWN1c2Vpd3owUFVTa1Z0STRKemNMXzh5VU1vQmViWDFmLW5hQ0s4UlpaaHB1UDlwcS1TYzVJcEN2SmVHcF9NZmI3WkpRcmRaQ002NUlHQ1dIamxTRXVNLS0wSzhLZ2xwUmlMTlU2LWl2Z3pjLVZwak5haWoxZy02YXhBZFdpRFkyNUNZRl9lSzFXXzhCSi1yb1otZ3F6Zkp2RXFqamltTE85b1FzbVpIRjVkc0Jvd2VONHJhRTYza1Q3eUdzSjRiNE1OR2xGcmR6ZlZZQUxMa0pkZTlXUE1qVTA?oc=5",
       "source": "3 articles",
       "description": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles)  La Presse",
       "cities": [],
@@ -233,74 +253,10 @@
       "category": "general"
     },
     {
-      "title": "Maisons plus chères, acheteurs conciliants - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZ2VhZGJKelVNNmhQN1A3LUlveXRleE9aRHhQNDh5MlRvZERCNVlTQWd3QmlHMFpxRktfR3kyaWoweHVrLVZ3MmRaVFNmUk0zbXlOTkVpOW9iZGFsRDZjNkdkbFdzQVhBM0dDRFhIcHQtLVA1UkVIelNoZ1UwN0NCMGJoQURoTmxaN0wzSE1Wc2dSNUVzb3Zz?oc=5",
-      "source": "news.google.com",
-      "description": "Maisons plus chères, acheteurs conciliants  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles) - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQWFRhOGxrR0JxbG1PdVdvbUp3XzN2a0tiUUFZbFFtZ0FBN3JaZmdGaE5QVGl1ZDE2d1RsdWI5Z0ZpVjNHd3FjOEFTNy1mS3hqcUJBNWpuUndjTzJuRUNCYkt0eTZwdU9XZUVhWmtWcm5EcUhXd2s0N1Q3bWhvdU8xR2lad09vaGRZODlCTURPaTBTTDdGWU51MnNsaGx0ZjN5N0NEajlwcEhxUlRIQ3JXZE1aZFhvY0tpeFRLekZSYi1fTVhGSThCSWo2VVB0MkRjdEhTUURvdmpSMGItZ3diRg?oc=5",
-      "source": "3 articles",
-      "description": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles)  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Immobilier: «Le secteur du courtage agit comme un cartel», estime un économiste - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQaVZkYk1pc0M2VUFBY0dMT2NCcC1QVm91MWtPbEFuSFlwMENqZTJzUDhnV1diSTk3LXhQeUhERkF6M0dWb195T2VsUjNBbFIxQXV1M0RSTm9uQTFiNkRzRGFNX05ORF9rdkJjOGQ3Z3BnUjM0VDZIZzlydWNfM2hpSzV1Y2xzMG5KQWFOeXlvVXBFR0tFek9RWUp1dkVzVWxYbmxWOGlrWFVxSVVpNmxUc1hwU1Y2NDVTWHc?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier: «Le secteur du courtage agit comme un cartel», estime un économiste  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles) - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxOa1plenBiMjRxbzVUSjJlWHRqNmZlelNXTE9MWE4wUXFpU1Y0QzNZWWZNanQ2U0pVLV9zREVycTNKdVdGQk9fWHdLQmdhNXIwY051NUh1X1ZEbXlJTkFMNTZsUWN1c2Vpd3owUFVTa1Z0STRKemNMXzh5VU1vQmViWDFmLW5hQ0s4UlpaaHB1UDlwcS1TYzVJcEN2SmVHcF9NZmI3WkpRcmRaQ002NUlHQ1dIamxTRXVNLS0wSzhLZ2xwUmlMTlU2LWl2Z3pjLVZwak5haWoxZy02YXhBZFdpRFkyNUNZRl9lSzFXXzhCSi1yb1otZ3F6Zkp2RXFqamltTE85b1FzbVpIRjVkc0Jvd2VONHJhRTYza1Q3eUdzSjRiNE1OR2xGcmR6ZlZZQUxMa0pkZTlXUE1qVTA?oc=5",
-      "source": "3 articles",
-      "description": "Dossier | Courtage immobilier | Critiquer les taux de commission ? Pas question ! (3 articles)  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Actualité et tensions géopolitiques | Les Américains zieutent les maisons canadiennes - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxON3VSVk5UazItbGp4a2lWRTZMa2ZXczFfN0JEUmIxWC1EMVlmRGliZWw0VmxZVVB6Tl9SOTJQMkJzZ2ppa1BhcGFCVTYxZS1XTnZaWGV4THZUWk9LRXNFTTVhcFlKMXBvYlFpMDM3bkZOLVF4ZnhJWkxJdEtRaWVPQ3hoSW8yMWV0b1NKRFBzNVlNNVF4bE9mb3ZEelEza3FtZ1Q4d2NoY1BJQjJ5YjJBd3UtbGI3ZlIyYTNqNDI1WEsteHZrR0pCeDlnQmJKdklkLVF1aE1uTi1LdVMyZGUtY3Jqbw?oc=5",
-      "source": "news.google.com",
-      "description": "Actualité et tensions géopolitiques | Les Américains zieutent les maisons canadiennes  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Construction résidentielle | Quand la superficie des appartements devient une obsession pour les promoteurs - La Presse",
       "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQX0FwRmdDeDNLSE9ocEt1YktSV255U2dBd1Z6dURDN3VjSU1TYXZ2R0dDN0FuMlktYlFETFRoSHlINVRIRVc1a0ZYN0p1N1VQeXp3VTZ5UUg5akZQN01uT3VlSnFBaVhnYmUwOGxSVVE1bnQ0NjB6NzFydkhZdFBLV05yVHh6dmhHbjNyeW5weHBVMzdCV2ZlSFRrQWZsVzdDaDhnZWJncm9ZZC1seDVrUGZtd0tuM0VURWpmZnl0VUIzUzByVWxJanBrR3RSUnRSS0pqS184ZlE0Y0F5TThMTlZLOV9YUFk4UWZ1NEhRWEN5bEh4Nm5XRk9fY2tSenJK?oc=5",
       "source": "news.google.com",
       "description": "Construction résidentielle | Quand la superficie des appartements devient une obsession pour les promoteurs  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La pression augmente sur l’immobilier américain - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNb2JsNmozVjhzZE5LZzhnR0w0cFlBeGtrQzBlMFB1UmY3dnhVeVpMZUtEeUgxYXAyMXpaSHJfbU1HdUpDZnBSdmtmOE5RdXVyZGRMLTROcm9PdGFCZ0xfTURJMC14aEVPOW8tNUVsVGxLb01sM0pmbzBSWFR1RTZXSTBXdmRaLTZrYWhtYnpSSjc4R1Foa1E?oc=5",
-      "source": "news.google.com",
-      "description": "La pression augmente sur l’immobilier américain  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les maisons à Québec coûtent plus cher : Voici le salaire à atteindre pour y arriver en juin - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAtdXFRZ1BORE5lYTBSazEzQnRhMDVna2lqSjZrRk55SU90RE1OS01faHc0cE1JQ19pT0M2YVczRV9ReGhoYnVtXy1NTnJ0NTQtTjZqZ2xobTE0TUdCelhva3JlOWpKR0JvU2s4R0g4N2VaNzZraUNYcWRQSXgwUQ?oc=5",
-      "source": "news.google.com",
-      "description": "Les maisons à Québec coûtent plus cher : Voici le salaire à atteindre pour y arriver en juin  Narcity",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Coup de balai pour le parc immobilier de Trois-Rivières - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUGZGNFpEUS1Mdmh2QXMzbUhpOWpyaVZDS1FxR0lONE1oNFZtRjhWSVBNbFdjSVJfUFBSUkVzZUk2UndDVmRsSDk3ME5JM3lyVXZNTTNlcUxESnRDcEtOb3AyQ3I4aEtuYnoxT2hVdnlQQzNFTnRJYTNDRGxjUFNFSHp5ZE1DZ0JEWGxPcmdyRzE?oc=5",
-      "source": "news.google.com",
-      "description": "Coup de balai pour le parc immobilier de Trois-Rivières  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -313,34 +269,10 @@
       "category": "general"
     },
     {
-      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "news.google.com",
-      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Commissions abusives et manque de transparence | Immobilier: le grand ras-le-bol - FM93",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9wWFBDWGgwWlFlaTVWZm0xaTFwUHdXNXFVUHF6aldrejZoRVVIeXYzaVFZMzFUNVFWblBsTVN5WFB0MWlQaVdIR2JJY0JFbkp5bTZLT2ExUHZMX0xGcUJnLWpiY0Y3YnEzN19HdXlacFkzdi1UYk0w?oc=5",
-      "source": "news.google.com",
-      "description": "Commissions abusives et manque de transparence | Immobilier: le grand ras-le-bol  FM93",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La maison la moins chère au Québec est seulement 27 000 $ et parfaite avec un peu d’amour - Narcity",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1icXhFN2tkYmpnb0Zwcm5pbEpoNjFqeEh4LWU0bmRPZmxGMVhZaFV2MzdZOXZNTzZZdDFDOGtPdl9kOS1ScGloOWJTSFNsVGRHcWN1VE52b1FEd1dZcUU2R2Y2TkpVQ2dJ?oc=5",
       "source": "news.google.com",
       "description": "La maison la moins chère au Québec est seulement 27 000 $ et parfaite avec un peu d’amour  Narcity",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Voici où tu peux acheter une maison avec seulement 19 000 $ de mise de fonds au Québec - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9rUWJRejBLaFRoN2NKTmZ1VFRILTFrQXE2SzhtbU1UeUl2bmJTWVp0LTkwTVdlTzlmWml1Q1ctMWVpbExRam93YkJrYU9GWnJSZzZYNG5BMEhOYTNPQlhSWi1MdElxdjhPOUZ5S25RR2EwMW8zWWpRUS1n?oc=5",
-      "source": "news.google.com",
-      "description": "Voici où tu peux acheter une maison avec seulement 19 000 $ de mise de fonds au Québec  Narcity",
       "cities": [],
       "category": "general"
     },
@@ -361,16 +293,6 @@
       "category": "general"
     },
     {
-      "title": "Plus de logements, moins d’accès: le paradoxe immobilier montréalais - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORGRvOGt4amc1WFU3eXFnWFoxRjMtWWhUX0V6VjN4TDdrcTZEX1hPYmhVdHh0YjgzalpVQ2c1OTJQNDFmZzRoTHBUZFFUNHJOQjFWOHdMbUp1SWZqZWNFazcxMVdzSkFXc1lBd0kweVp1b0pZTzRfZG54WmpYUDgzOHJMMEFXamJiTEVCekRodmI0YUVTVHRnTGJXZVZGRl9qOG5Ta3MwVFNuNkp2d2Ew?oc=5",
-      "source": "news.google.com",
-      "description": "Plus de logements, moins d’accès: le paradoxe immobilier montréalais  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
       "title": "Crise du logement: la ministre de l’Habitation incite les ménages dans le besoin à demander de l’aide - TVA Nouvelles",
       "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNLWVJLVpkUFI4TU9sQ3dVUGpEaC1xM3ZYNU55ZWxCVUNkaTFPZ2U5NzBnWkhtSzN3R1lJMDdiSHpnRW83dks0X3h5akZORi13R0ZQYXZjUXFYRmdZVUZmT3VCWlNwR1JpejJLb3Q4M0c5bnVJUUxtZER4ZjlxQjBCVVZrQjJsREp3cVd5aFJxNkhZUW03amdjOWpWRUg5aGY0QW9acnY3Vm9STHZsVkNWdkk0RkRfU2ZIUDFDVkVCbFNkOVpZWkxlcXZVSUFLTlNrLUZ3?oc=5",
       "source": "news.google.com",
@@ -387,18 +309,10 @@
       "category": "general"
     },
     {
-      "title": "Coup de balai pour le parc immobilier de Trois-Rivières - MSN",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNbHliOUhnWjl6R0dySTdvM0ZZWE12MnZtei1DMndaUXY0dEVOc3IwNzZqdW1ZaEsxcVNDOC1URXd5T2FqYWxlaURMUldKNXRNVlIzVEliUkd5WjVSTGFNOEZVXzZGaC15NXV3dDBQbUxsUmN6NVpUNlU4ek0wOW14bXlyNXFjc1N0UnktcFAwRXYyVlh2amQzOGNIOFc0TnpLR1ZsSHdfM0FqV1djZDd6UkVvT05zandwdld1azREVmg?oc=5",
+      "title": "La question à vous poser avant de renouveler votre hypothèque - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQU3kwV1A5YkFsZnhCVVpUY21hZ1piSS1Ib01Ua2xYR0FTbjFzTTZNbUZCZnhwemdoVXhWTDBkeGh0MXVWRTVNOHJDWUFGNXlONGRMZ3poQk1rcE9GVFprSzdkN0pCblNPaXFDNXJ3dmdydHNlTXZKY0JOUVgwQXhnSXV2N25CeHZvc3FRdFJCdGpOZGlIN2VfSHlXckdOQ0h2VEUwTFlfVDNwQUNpSXkyb2ppX3A?oc=5",
       "source": "news.google.com",
-      "description": "Coup de balai pour le parc immobilier de Trois-Rivières  MSN",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Céline Dion (58 ans) : à quoi ressemblait sa petite et très modeste maison d’enfance au Québec où elle a grandi avec ses 13 frères et sœurs - grazia.fr",
-      "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPR1dVSWNNOGFKdndySGh3dFZycVFvYTlpQ0JucUVWTDdBaHg5cUFZeFJWb3dETDNLRTBmbkpfVUljT2xJY1pQOXM0WmlYNThsWjlKVVA1N2RTeVBheWlMYlpQd1BEWG5SaFNvMWxXN2RRcVRYWDlNRGpwRmdRbHo1MkFqdFJGMTd5aUV3bU9Kajl1a1Y3V0JyYW5UWjVNSEgyY3NEcWo0eHpuMzVnNHYxMlpVSmE2bkRNOEpWOHJnVldvbDNxWks5d0JDRkg1SmJwSlVTN0x5eFFXMVBhTEdlNmE5djZCS0NpYjdfUGNuVVRGQ3ptcnFNVkdTT1ZCbF9xVEJIZHBDS18?oc=5",
-      "source": "58 ans",
-      "description": "Céline Dion (58 ans) : à quoi ressemblait sa petite et très modeste maison d’enfance au Québec où elle a grandi avec ses 13 frères et sœurs  grazia.fr",
+      "description": "La question à vous poser avant de renouveler votre hypothèque  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -407,6 +321,22 @@
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOUU5dnNuemlLdDVGMWp6eExSOXlnQjRUMUFid1dDS2dncUJnbHBXWFZFaXpUa3Y2c2VFNGdTS1R1bnVpXzV0ZTBGYTlYdWN0RjJIeXoweUw3Vm9UUEpUdVUzWmxaSnNVSnBZOHFUU0Ewdy1IS0tWbE9RWHJIbVRVMUk4ZW1JMmhyYXc5Sm1HSjNTMV8yOTZuVHdR?oc=5",
       "source": "news.google.com",
       "description": "Combien faut-il gagner pour acheter une première propriété?  QUB radio",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Investissement Québec | La règle d’or respectée de justesse - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY3FIbEtTR1BaS25JbXJJU19kN0lUTFNFbHYyQ180UmJBaDdmQld4VVFBX1ZBQmxVQW82cGdybmYzeF9ZNDF3YWI1alVSRGFIQVBCUkR2bS1XVm1lSHpBckRXUWRnTV8xT043S3RDMUpSSVBtaThVckdlaTM1Rl9Zb2dfY0ZoOEVhcWlqcm9BbDgySFFxMnJKLXlpMllxOXpfcGJMSXFndXB2WXFMZXZ2Z0x6TmhPYktH?oc=5",
+      "source": "news.google.com",
+      "description": "Investissement Québec | La règle d’or respectée de justesse  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le coût du logement redéfinit les choix financiers des Québécois - Loisirs, voyages et épargne : 4 Québécois sur 10 ont dû faire des compromis financiers, mais l'aspiration à la propriété demeure bien présente - Lelezard",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAwa0FGLVJFemUzUEs2MHBjeUVEcHdLVjFfWnhyT0VXMFJqbzJoamh2TzNBYnBnOFpwSFk0ZlNuVU9mSXE4b3VuZmtlTDd3cXVoUlllQVNFYlNGaVJQcVE?oc=5",
+      "source": "news.google.com",
+      "description": "Le coût du logement redéfinit les choix financiers des Québécois - Loisirs, voyages et épargne : 4 Québécois sur 10 ont dû faire des compromis financiers, mais l'aspiration à la propriété demeure bien présente  Lelezard",
       "cities": [],
       "category": "general"
     },
@@ -427,10 +357,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient le statu quo de son taux directeur - Le Devoir",
+      "title": "Le taux directeur de la Banque du Canada reste stable - Le Devoir",
       "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE13MG5SVW5KMjJZdkhUOS1SUGxBQkZtaFdfSEo0V1hLM1g0WlowSUtOTlRrOFFjcE55VWR3UHpzUlRldXppOThFLUxlcS1CNG94Zm5CYnFLcHRqZ0Y0YU1yMVhUeWR1U01ZMzZVTHVuZy1wN3ZCaWhwYXFwRnc?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient le statu quo de son taux directeur  Le Devoir",
+      "description": "Le taux directeur de la Banque du Canada reste stable  Le Devoir",
       "cities": [],
       "category": "general"
     },
@@ -451,36 +381,30 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada devrait geler ses taux mercredi - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVnhKblA5NjU0X3FLMkg0dW1SLVFYcTlGTGtUczIyS1hZWWxvc3RSdEFINkVQRldsd250RG4tWWJNWUwwcUNrdjhLczE1UE1nclU2aUZ4TnZ6TEZuU21HQVRGSnNJYzEtZTdGUjZBNVZ4ZW5EN01iSnJhYnRLTFZzOHdUTlV4ZXRxNXBJSkJUNWNEU08t?oc=5",
+      "title": "La Banque du Canada maintient son taux directeur à 2,25% pour la cinquième fois de suite - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUjUxUHVUWUhxODc5Yk1sS041QkUzZXF6Yi12TGUtVk9Rc2FORTBCTDZ0VTQtSGNpTERMN2d1UngzcXN0WUFVNEhtS1FMYl9kRUswTFhtU0tnaXJuZTRxSXRrMTVKNkJpeHZZVkVoNlNCLWJWdVNyZklmcjBxT3lzc3g1V0ZGM3djNTBGT2VNS2F5VjlneWZmSXpiVl90ZUFxYUVoMmRHdXZva2JQbzdhZmdRbmdBXzlmMGRJMEV6WnlZazg?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada devrait geler ses taux mercredi  TVA Nouvelles",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25% pour la cinquième fois de suite  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - La Voix de l'Est",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNQmxDNWZCdk1YbUozaDFzZ21PT2tWQmp5dmc5R1dtUkwtM1lCencyUzlGeVVSZ21UMmpLM04wR1N0MzFuMWJSU29kLWZIWWJ2X3BnY2lWWHRtR0wtU1g0bkJXVzg1S2VHZTVRNUNHVk1DYkx3cFgtcUJ4Nl8xTVBYaVZBX05qbFhNMkVYejRUMkprWUNIbEZOZzFxb1BNQ0Iwd0hRMkd1V2FLaDlZc1BKNk1aMmpNX3BTUWZ4WXJ5Zm9scHFHOFlFVjV3?oc=5",
+      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - latribune.ca",
+      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNLW10eWRCeS14VFBpSmgxRU1TVC1sbUwzTTE1aWtwcTg0RENZREFsUHJSLXZ6RDQ3RVA0ZjhlZXFPSjU4blJRTlh5eG5qb3lxbU44UXUyVEl0MnJsNzR4bzZGOTBzNGphUm55QzJ6SGtJQW5uY0hLS2czTC02YlNDbzZqVm9LRlM2dDIyN3c5Xzd1bU5BcW90SjhyVTg5TmctRjNadXJaLXlTbHI5bHVuTnNZQ1lITXVBbGZJYVpQUjRxWG5DdUhfeWV3ZWFIZ2ZfM19WRE1JLVU2cXlNVXJFWDBOODc3X01GbFZN?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  La Voix de l'Est",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  latribune.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintiendra vraisemblablement son taux - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNUWRPcUxDRXNKN0R3RE5DSWd0eWlEYlRIOEJKcWFoUU9wUENWQ3F0X0FKZ2Nzb2pjcFROZVdrTUctRllxbmw2X3pUcENkdnR5Ym9XNVhyMWFHdlJEQ2Q5YmtWTkdMSmtQbm83aDBSbkVpNU5hT2lWMXFVd3VBbUpYLWlFM0ZCVGRkbmtVYlVIcnF3Z29jSTFIbC15eGZfYUtJVmo1NGVRdThPZEktOFNJN2REOFhDaWFNZ2s2aUc2ckNWM1R3Mm1vTHYwQmhJZ0YzaTlwZHhOaWlvdFRXUGZIZF9pSWxMbUw0THExeUZtS3lWOEhILVJXY1dB?oc=5",
+      "title": "La Banque du Canada devrait geler ses taux mercredi - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOM0x3N1o4eHJlZjdWQ3RIeTZKRGthQ3ZaS01PeHJocEw3MXM1aEd2NUNadV9nVnFvVkF1dFNxcVdoMWxISFAwZUg3MW9RQ2JDclpGUWxMWldqX0FJRTdYMnhvbk1jUzFEUk53ZlNCa1M5Yl9HUjVJUkJVNlh0YnhDY1FuaFh6dUs4cXRSYllKYzM2ZnhPRmNpSHpYNWg?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintiendra vraisemblablement son taux  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25% pour la cinquième fois de suite - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQZTg2Q0NmM3RsTUxmZWEzQ1d5eHRtbXpIQ0hXR01ueHJuMzIxZmlpZXdiMjdnUDhWcXNkT01seHBOZUtjaEUwRk1KNUlkMDRmNnZGSHBfRV9OZERocUNtN3BvZzZVU1JmV1FIOHNfTWNEM0c2NnFQNzk2SHdnUzZXVGhyUFNualByc2NvY2ZiZzJzc0lsTUlWVzNlcnVaMHFaTHRhN3J2UGFKNUN4eFNpRm1TZUZkUGFpWnNjRVBFQUcyMmtfTnlRaQ?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25% pour la cinquième fois de suite  Journal de Québec",
-      "cities": [],
-      "category": "general"
+      "description": "La Banque du Canada devrait geler ses taux mercredi  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "La Banque du Canada maintient à nouveau son taux directeur à 2¼ % - EnBeauce.Com",
@@ -495,6 +419,78 @@
       "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQaWR0Z0o1TXgwVmM0dXBSTmxhaG9LeVZScDdDUVNMd0ZuUWpTbXFncEgxNGswc0FWMWh0RnNxWlVQT3JqOXRTSVFCYmFwSW1wYnh4bXRCck05Y2QxdEM4YXZXeE1oc0hmbkc3ajYtaW04YVM3WHJ3blZIVElBZGJkNEFkaGpvVnpqc0FVNnJra19jdHpPRkN4eEJFZUZ1cUI4SVJndnNlMmt0blF1aVU4d2s3YUVYeVczV1ZIYm9BZEktTFhaSE1ES09GV1hjLVFldWF4d3p6X1JIRS1ibWlzZQ?oc=5",
       "source": "news.google.com",
       "description": "Taux directeur | Les économistes s’attendent à un cinquième statu quo de la Banque du Canada  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada: voici ce qui pourrait déclencher une hausse des taux - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNHhVZ1ZndE41ZW5JWWNzM0tkZkdaZVVUbHpqQ1Fwek1xSjNjdV9KWXVnWHAwZlhMUUpNdFhCR0YwZjVOOXNBaUF5SG1PRGJjZUQxbkxOQ0p1UkxJNC1UQkFaNm1raHY1R3JjNUdRZldGYzhEZ1pzZ0V6cElMNmNCY2hkd0NMcE1IWXBSR3hMY095NGxLUDcwcFZNWHlZbUtaellHc1dsbjI1a2Y1UXJNN1JyeVo?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada: voici ce qui pourrait déclencher une hausse des taux  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Conférence de presse : Annonce concernant le taux directeur – Juin 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTkxwTVFZN2x1RHY1aENyODZDclRPay1KaVZwZ1BoMVM3TzM0aWQ1WDZxOXExQ2YtV1hTLU9rZGJUVC15aGJ4UEkzRHd6bjFteGtKX1BaSHNlSkZZcFcwdGF6S2lLczh6X3dDd2pVY0RwMXZXeGxvQ3hkTERCdlk3eGZrNzdTdWVwQ1RJbkVTMnk2SFJnUl9TNA?oc=5",
+      "source": "news.google.com",
+      "description": "Conférence de presse : Annonce concernant le taux directeur – Juin 2026  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada pourrait-elle bientôt hausser son taux directeur? - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMkRqRms1ZjJ2NXVnV1VVMXMxQWROSkgxLVRqYTBuR1hxQUNBVmk4TWxMaFRWZXFQVDBQVWMwcEp4Tk1CYUg5VVo1ZldKU0FydjFoSU5zekFlSmZXcmJNTVZBQ3N3LVVSYkkyS2VySEFVVjY5aW5yNmNRaEl1RzRoWlVMaWJBUGJ5M1VEc1NtZXptNGk2TmdyMHNXenRTWHdlX3ZwQnNtak5Ya3RhM3VKUFVwQQ?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada pourrait-elle bientôt hausser son taux directeur?  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada | Les économistes s’attendent à un maintien du taux directeur - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQV0hDSGg3eHlBVUVOa1FWX0w4S2g0ZkdZbUExckJqTW5VcVc5bXlRbEN3Nm94R3BQajFuUzNwWjVpM1BmUFNBNS10T0xOUTMyR0ZiSGVWVlp2aUVYOVpySUIwbUhMQWRyR2Zib214OG1oN0dObWlXeUJ1OWlzMklOVGNaM3JSazg0cW9xUEdiOHdBaXhWUXF6UnNrNWJQOGU0WFU2c2xkd2QySTQ0QllYOWdHOUVZUVVKVm4xRWJLZEdGSERSR19FcG1DbWFJUQ?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada | Les économistes s’attendent à un maintien du taux directeur  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Chronologie: retour sur les 10 dernières décisions de la Banque du Canada - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVVlRTGlmRTZBYVNlQ21PWVRwY2hXNEhqRGpVRlFGTDZpQ0J5cWFvaTRaeWFJemRVamhmYkFxVEtaUWNhZ3VodGNoempja3dQOVVmVFN4VDF1UFpMaDlQYzY4WE1NdXpDWlg2NGVxcHNrTEJnY2NxU3A1VDZtNVRHTWMwQTVRR1ozU2FXTk1RZndYOEkyenp6eC1fM1E0bkQ0NzU2Sm9sRnBtNlp1XzNfWmFJbmo?oc=5",
+      "source": "news.google.com",
+      "description": "Chronologie: retour sur les 10 dernières décisions de la Banque du Canada  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les deux options sont envisagées, selon le gouverneur de la Banque du Canada - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPVzl6QUlwM0VvMzRJWEJoWk1PbzdsYUJFNVVUX05BV0NqQ0Rvb2ZJYmpRUGlNYmlOb1AyU19CNF9ESldwT29KVkpZYkhBUE5DVnM5SFJlbV9IdG9sREdiRGg1SzRTbjNaTFZmZ01sTU1VYmNiT3NOajYwZDRDdmh2VFJrNmlYNGczYU14MVBCZUtPbEZaQjhzdGlQNV9vc0hlSjVCTl81QXpTR2oxNVlGSzZMSlRMa2QzR2hrOG55NklOVE5ESjNxZlNjOC1FUGhRb3ZPeFRNMTFSdnQ3enNKZ2M5aGRUdWVqLTA1NUhWLXdfUDYzQ3NhcHkzV2pnOXpE?oc=5",
+      "source": "news.google.com",
+      "description": "Les deux options sont envisagées, selon le gouverneur de la Banque du Canada  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada: 5 économistes se prononcent sur les futures décisions monétaires - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOFRSSG9kVUc5U1FFYmRmSnp5UHZaOW5VdFFvQURIRTUxRkJYSlpxeHJOY0RjM2RfQ2hnRWtpb2ZzMXNEUnBaeF94MDVFV0k0Zl83M2ltaWY1T2ZDU2pMRGYtSmFSYTcwU0VPYzlrM01wb0VWcS10NGFxSFQtakVMQ2ZRQnNWcTJsOE1oUHFTdkk1ajg2ZnItVHN5U0s1dXdTc201cTBaVlFTUFlHOVZsczNQUVMweFVfYVdXTWU2d3JFdGxR?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada: 5 économistes se prononcent sur les futures décisions monétaires  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada: Tiff Macklem a un peu d’espace pour respirer - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUGFhdFhrSWo3eGh0cVliWm90VEszTDA4RjV6R1Blc1BhWW9VVTQ3X3VLRkNSX2hTZm1Wd21GOWthYlVYYmd3eWs1STlhTDdXUjJCc3ZlOWVKeVdwOGNrMFVZak5pWGMtMi1pQ1hDVDhCblNPRFlBcl8zYTJfSzVxQnJtc2hXQ016QUM4dFUyaXR5cmM4QnNuNGYzMUREaERrMFZPZlpxSnA?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada: Tiff Macklem a un peu d’espace pour respirer  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada: aucune hausse justifiée, mais une baisse possible - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNXzJmMXpqZl9ZM3NCdE5YT002ZWF3Wm1Ob0ZBZjdaVHc3RGhHOFF6em1JNUotaGxaR2Q1Unk2X2lDTC1STmp5Rm9Yc0s1Y0tfRlJvc0dmNVcxU1JGRjVlaERRLXgwLUJ5MkFkS1JkelVmTnVvbXN5RHlqOVBjMzloVkxZTTFxdDRlbXhRZGhMemFxcVBCcDlmQ2psWktQOHZ5Uk9iMTZR?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada: aucune hausse justifiée, mais une baisse possible  Les Affaires",
       "cities": [],
       "category": "general"
     }
@@ -551,5 +547,5 @@
     },
     "last_quarter": "mai 2026"
   },
-  "last_update": "2026-06-10 16:34"
+  "last_update": "2026-06-11 16:52"
 }

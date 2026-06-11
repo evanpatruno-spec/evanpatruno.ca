@@ -1,14 +1,14 @@
 {
-  "Sujet": "Infolettre - Mai 2026",
-  "Mois": "Mai",
+  "Sujet": "Infolettre - Juin 2026",
+  "Mois": "Juin",
   "Annee": "2026",
   "Taux_BOC": "2.25%",
   "Contenu_Article": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue: L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immob...\n\nRMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution: L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immob...\n\nVentes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026: L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la pro...",
   "Citation": "Le succès ne s'offre qu'à ceux qui osent essayer. – Charlie Chaplin",
-  "Astuce_Pro": "Inspection Préachat : Ne négligez jamais l'état de la fondation. Une fissure mineure peut cacher un problème structurel coûteux. Soyez vigilant !",
-  "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-05.pdf",
-  "campaign_id": "NL-5-2026",
-  "month": "Mai",
+  "Astuce_Pro": "Capacité d'Achat : Le stress test est votre meilleur ami. Calculez votre budget avec un taux majoré de 2% pour assurer votre sécurité financière à long terme.",
+  "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-06.pdf",
+  "campaign_id": "NL-6-2026",
+  "month": "Juin",
   "year": 2026,
   "boc_rate": "2.25%",
   "market_temp": "Marché Actif (Acheteur)",
@@ -37,7 +37,7 @@
       "source": "APCIQ"
     }
   ],
-  "report_label": "Rapport de Marché - Mai 2026",
+  "report_label": "Rapport de Marché - Juin 2026",
   "expert_note": "Le marché s'équilibre. C'est le moment idéal pour réévaluer vos capacités de financement avant la prochaine vague immobilière.",
   "footer_msg": "Besoin d'une évaluation précise de votre propriété ?",
   "quick_links": [
