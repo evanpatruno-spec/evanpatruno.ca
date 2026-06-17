@@ -3,9 +3,9 @@
   "Mois": "Juin",
   "Annee": "2026",
   "Taux_BOC": "2.25%",
-  "Contenu_Article": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue: L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immob...\n\nLa Banque du Canada s’apprête à annoncer sa décision concernant les taux d’intérêt - L'Écho de Laval: La Banque du Canada s’apprête à annoncer sa décision concernant les taux d’intérêt  L'Écho de Laval...\n\nRMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution: L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immob...",
-  "Citation": "Le succès ne s'offre qu'à ceux qui osent essayer. – Charlie Chaplin",
-  "Astuce_Pro": "Multi-Logements : Le ratio de couverture de la dette est la clé. Assurez-vous que les revenus couvrent au moins 1.2x les dépenses et l'hypothèque.",
+  "Contenu_Article": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue: L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immob...\n\nRMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution: L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immob...\n\nVentes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026: L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la pro...",
+  "Citation": "Achetez des terres. Ils n'en fabriquent plus. – Mark Twain",
+  "Astuce_Pro": "Copropriété : Lisez les procès-verbaux des 3 dernières années pour repérer d'éventuelles cotisations spéciales ou travaux majeurs à venir.",
   "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-06.pdf",
   "campaign_id": "NL-6-2026",
   "month": "Juin",
@@ -25,15 +25,15 @@
       "source": "APCIQ"
     },
     {
-      "title": "La Banque du Canada s’apprête à annoncer sa décision concernant les taux d’intérêt - L'Écho de Laval",
-      "summary": "La Banque du Canada s’apprête à annoncer sa décision concernant les taux d’intérêt  L'Écho de Laval",
-      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOYi1YTnA0bEhQNEN6U1V3ZkNlN2Vobk5FM19kbXpHS21KdkN1eDB6aFNvN0cxWk9zTlpoeEppQTdkVGlNTFkwemNwR09hc0pod1FYdktQbkVnU1BGY2tnYWszdFhoQXZ1c2c4RTQ1Ymk3Rmt5QjR5Vl84VTJBajk4UmljYXdsNUdQSm1CbFQ5Q2lJMTctMXMzSkQwX3p6VzNQcV9TVkRFcDJaYlJMM1Q1YzFIT3RLdlJTOGV5ODg4LWhzWnJIclJGZFN5bFFKNGNjcTNGcnNwZ3pSc1Y4U3RCUzJVcU9mWWxP?oc=5",
-      "source": "news.google.com"
-    },
-    {
       "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
       "summary": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est",
       "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
+      "source": "APCIQ"
+    },
+    {
+      "title": "Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026",
+      "summary": "L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026 est apparu en premier sur APCIQ - Site web.",
+      "link": "https://apciq.ca/ventes-residentielles-stabilisation-des-ventes-mais-prix-toujours-sous-pression-au-1er-trimestre-de-2026/",
       "source": "APCIQ"
     }
   ],
@@ -58,15 +58,15 @@
       "source": "APCIQ"
     },
     {
-      "title": "La Banque du Canada s’apprête à annoncer sa décision concernant les taux d’intérêt - L'Écho de Laval",
-      "summary": "La Banque du Canada s’apprête à annoncer sa décision concernant les taux d’intérêt  L'Écho de Laval",
-      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOYi1YTnA0bEhQNEN6U1V3ZkNlN2Vobk5FM19kbXpHS21KdkN1eDB6aFNvN0cxWk9zTlpoeEppQTdkVGlNTFkwemNwR09hc0pod1FYdktQbkVnU1BGY2tnYWszdFhoQXZ1c2c4RTQ1Ymk3Rmt5QjR5Vl84VTJBajk4UmljYXdsNUdQSm1CbFQ5Q2lJMTctMXMzSkQwX3p6VzNQcV9TVkRFcDJaYlJMM1Q1YzFIT3RLdlJTOGV5ODg4LWhzWnJIclJGZFN5bFFKNGNjcTNGcnNwZ3pSc1Y4U3RCUzJVcU9mWWxP?oc=5",
-      "source": "news.google.com"
-    },
-    {
       "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
       "summary": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est",
       "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
+      "source": "APCIQ"
+    },
+    {
+      "title": "Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026",
+      "summary": "L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026 est apparu en premier sur APCIQ - Site web.",
+      "link": "https://apciq.ca/ventes-residentielles-stabilisation-des-ventes-mais-prix-toujours-sous-pression-au-1er-trimestre-de-2026/",
       "source": "APCIQ"
     }
   ],
@@ -78,15 +78,15 @@
       "source": "APCIQ"
     },
     {
-      "title": "La Banque du Canada s’apprête à annoncer sa décision concernant les taux d’intérêt - L'Écho de Laval",
-      "summary": "La Banque du Canada s’apprête à annoncer sa décision concernant les taux d’intérêt  L'Écho de Laval",
-      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOYi1YTnA0bEhQNEN6U1V3ZkNlN2Vobk5FM19kbXpHS21KdkN1eDB6aFNvN0cxWk9zTlpoeEppQTdkVGlNTFkwemNwR09hc0pod1FYdktQbkVnU1BGY2tnYWszdFhoQXZ1c2c4RTQ1Ymk3Rmt5QjR5Vl84VTJBajk4UmljYXdsNUdQSm1CbFQ5Q2lJMTctMXMzSkQwX3p6VzNQcV9TVkRFcDJaYlJMM1Q1YzFIT3RLdlJTOGV5ODg4LWhzWnJIclJGZFN5bFFKNGNjcTNGcnNwZ3pSc1Y4U3RCUzJVcU9mWWxP?oc=5",
-      "source": "news.google.com"
-    },
-    {
       "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
       "summary": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est",
       "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
+      "source": "APCIQ"
+    },
+    {
+      "title": "Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026",
+      "summary": "L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026 est apparu en premier sur APCIQ - Site web.",
+      "link": "https://apciq.ca/ventes-residentielles-stabilisation-des-ventes-mais-prix-toujours-sous-pression-au-1er-trimestre-de-2026/",
       "source": "APCIQ"
     }
   ]
