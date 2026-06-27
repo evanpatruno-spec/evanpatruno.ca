@@ -1,25 +1,5 @@
 [
   {
-    "mls": "20648102",
-    "url": "https://www.himalayacorp.com/fr/proprietes/vendre-.html?NoMLS=20648102",
-    "city": "Saint-Jean-sur-Richelieu",
-    "price": "495 000 $ + TPS/TVQ",
-    "image": "https://immo.vrtx.co/PicFull/20648102-2.jpg",
-    "description": "Voici une opportunité exceptionnelle d'acquérir un fonds de  commerce établi et rentable dans le domaine des sports  motorisés. Ce commerce opère en tant que revendeur autorisé  Honda et Vespa, offrant une gamme complète de motos, VTT,  scooters et véhicules récréatifs, ainsi que des services de  réparation et d'entretien mécanique. \nDétails du commerce : - Revendeur autorisé Honda et Vespa - Atelier de mécanique entièrement équipé pour motos, VTT,  côte-à-côtes, etc. - Salle d'exposition spacieuse et bien aménagée - Clientèle fidèle et récurrente - Bail commercial avantageux avec possibilité de  renouvellement - Mobilier et équipements inclus dans la vente (inventaire  de marchandises exclu, évalué séparément) \n Atouts : - Marque reconnue et recherchée - Activité diversifiée : vente, service, pièces - Emplacement de choix avec excellente visibilité - Potentiel de croissance (ajout de marques, services,  commerce en ligne) - Possibilité d'accompagnement pour la transition",
-    "photos": [
-      "https://immo.vrtx.co/PicFull/20648102-2.jpg",
-      "https://immo.vrtx.co/PicFull/20648102-3.jpg",
-      "https://immo.vrtx.co/PicFull/20648102-4.jpg",
-      "https://immo.vrtx.co/PicFull/20648102-5.jpg",
-      "https://immo.vrtx.co/PicFull/20648102-6.jpg",
-      "https://immo.vrtx.co/PicFull/20648102-7.jpg",
-      "https://immo.vrtx.co/PicFull/20648102.jpg"
-    ],
-    "specs": {},
-    "brokers": "Evan Patruno, Roger Rhéaume",
-    "isSold": false
-  },
-  {
     "mls": "16230981",
     "url": "https://www.himalayacorp.com/fr/proprietes/vendre-.html?NoMLS=16230981",
     "city": "La Tuque",
@@ -319,6 +299,22 @@
       "https://www.himalayacorp.com/DATA/CMSIMAGE/4521.jpg",
       "https://www.himalayacorp.com/DATA/CMSIMAGE/4523.jpg",
       "https://www.himalayacorp.com/DATA/CMSIMAGE/4522.jpg"
+    ],
+    "specs": {},
+    "brokers": "Roger Rhéaume",
+    "isSold": false
+  },
+  {
+    "mls": "HIM100370",
+    "url": "https://www.himalayacorp.com/fr/proprietes/vendre-.html?NoMLS=HIM100370",
+    "city": "République Dominicaine",
+    "price": "1 000 000 US",
+    "image": "https://www.himalayacorp.com/DATA/CMSIMAGE/4524.jpg",
+    "description": "Elle est composée de 4 bungalows de 90m² chacun et positionnés autour d 'une belle piscine.\r\nLa résidence comprend aussi un parking privé et une buanderie pour le service de la clientèle.\r\nChaque bungalow est équipé de sa  propre cuisine, avec climatisation dans les chambres et peuvent recevoir entre 6 ou 7 couchages.\r\nChaque bungalow a sa terrasse privée",
+    "photos": [
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4524.jpg",
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4525.jpg",
+      "https://www.himalayacorp.com/DATA/CMSIMAGE/4526.jpg"
     ],
     "specs": {},
     "brokers": "Roger Rhéaume",
@@ -729,22 +725,6 @@
     ],
     "specs": {},
     "brokers": "Sylvie Castonguay",
-    "isSold": false
-  },
-  {
-    "mls": "HIM100370",
-    "url": "https://www.himalayacorp.com/fr/proprietes/vendre-.html?NoMLS=HIM100370",
-    "city": "République Dominicaine",
-    "price": "1 000 000 US",
-    "image": "https://www.himalayacorp.com/DATA/CMSIMAGE/4524.jpg",
-    "description": "Elle est composée de 4 bungalows de 90m² chacun et positionnés autour d 'une belle piscine.\r\nLa résidence comprend aussi un parking privé et une buanderie pour le service de la clientèle.\r\nChaque bungalow est équipé de sa  propre cuisine, avec climatisation dans les chambres et peuvent recevoir entre 6 ou 7 couchages.\r\nChaque bungalow a sa terrasse privée",
-    "photos": [
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4524.jpg",
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4525.jpg",
-      "https://www.himalayacorp.com/DATA/CMSIMAGE/4526.jpg"
-    ],
-    "specs": {},
-    "brokers": "Roger Rhéaume",
     "isSold": false
   },
   {
