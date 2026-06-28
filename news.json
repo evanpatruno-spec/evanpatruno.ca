@@ -1,88 +1,10 @@
 {
   "news": [
     {
-      "title": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés",
-      "link": "https://apciq.ca/rmr-de-quebec-les-ventes-a-un-sommet-en-mai-grace-a-la-remontee-de-loffre-de-proprietes/",
-      "source": "APCIQ",
-      "description": "Québec, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue",
-      "link": "https://apciq.ca/rmr-de-montreal-la-baisse-graduelle-des-ventes-se-poursuit-et-la-pression-sur-les-prix-sattenue/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché",
-      "link": "https://apciq.ca/stats-quebec-avril-26/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
-      "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026",
-      "link": "https://apciq.ca/ventes-residentielles-stabilisation-des-ventes-mais-prix-toujours-sous-pression-au-1er-trimestre-de-2026/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026 est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville",
-      "link": "https://apciq.ca/des-marches-toujours-sous-pression-au-debut-de-2026-dans-les-rmr-de-sherbrooke-trois-rivieres-et-drummondville/",
-      "source": "APCIQ",
-      "description": "Le 15 avril 2026 — La Chambre immobilière Estrie — Mauricie — Centre-du-Québec (CIEMCQ) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent aujourd’hui les statistiques immobilières du premier trimestre de 2026 pour les régions métropolitaines de recensement (RMR) de Sherbrooke, Trois-Rivières et Drummondville. Les données sont tirées de la base provinciale Centris des courtiers immobiliers.\nL’article Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Gatineau : un recul des ventes dans un marché qui se rééquilibre progressivement",
-      "link": "https://apciq.ca/rmr-de-gatineau-un-recul-des-ventes-dans-un-marche-qui-se-reequilibre-progressivement/",
-      "source": "APCIQ",
-      "description": "Gatineau, le 15 avril 2026 — La Chambre immobilière de l’Outaouais (CIO) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent les statistiques immobilières du premier trimestre de 2026 pour la région métropolitaine de recensement (RMR) de Gatineau, établies à partir de la base de données Centris des courtiers immobiliers.\nL’article RMR de Gatineau : un recul des ventes dans un marché qui se rééquilibre progressivement est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Mars 2026 : Montréal en léger regain, Québec maintient son élan",
-      "link": "https://apciq.ca/mars-2026-montreal-en-leger-regain-quebec-maintient-son-elan/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 2 avril 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de mars 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Mars 2026 : Montréal en léger regain, Québec maintient son élan est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Copropriété : toujours l’option la plus abordable, malgré la montée des coûts",
-      "link": "https://apciq.ca/copropriete-toujours-loption-la-plus-abordable-malgre-la-montee-des-couts/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 25 mars 2026 — La copropriété continue de gagner du terrain au Québec et demeure, dans bien des cas, la porte d’entrée la plus accessible à la propriété. Une nouvelle étude de l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) confirme son abordabilité plus avantageuse, mais révèle qu’elle se complexifie sous l’effet combiné […]\nL’article Copropriété : toujours l’option la plus abordable, malgré la montée des coûts est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Budget du Québec 2026-2027 : l’APCIQ appelle à des mesures structurantes pour favoriser un accès responsable à la propriété",
-      "link": "https://apciq.ca/budget-du-quebec-2026-2027-lapciq-appelle-a-des-mesures-structurantes-pour-favoriser-un-acces-responsable-a-la-propriete/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 18 mars 2026 — À la suite du dépôt d’un budget décevant pour le secteur de l’habitation, l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) souhaite rappeler l’importance de mettre en place des mesures structurantes pour améliorer l’accès à la propriété et assurer un fonctionnement sain et transparent du marché immobilier.\nL’article Budget du Québec 2026-2027 : l’APCIQ appelle à des mesures structurantes pour favoriser un accès responsable à la propriété est apparu en premier sur APCIQ - Site web.",
+      "title": "Assurance hypothécaire ou assurance vie | Quoi choisir pour protéger votre prêt ?",
+      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-06-28/assurance-hypothecaire-ou-assurance-vie/quoi-choisir-pour-proteger-votre-pret.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Vous venez d’acheter une propriété, et on vous propose d’assurer votre prêt ? Pas si vite : une assurance personnelle peut souvent proposer de meilleurs avantages, préviennent des spécialistes. Voici les variables à considérer pour chacune des protections.",
       "cities": [],
       "category": "general"
     },
@@ -95,20 +17,20 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier de la région de Québec — Mai 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcTdSMzM2NE5NS0s0TVZTS2RfUXpLZ2VFYVpnU0xKSlNRVXMwdk5kVTctVWx0ZmYzaFFvZ3hIRVpONTlmMDF3ekVIaGhyY1N6V292cE9UMG03bTN6UkdYNEUtUUlVRG1WUWhNZ0hSX2M1bmM1X2lGS3pXTl9BZUxCMTFYMG1seE84dl84WTdvUWprY1l0Ml9Yc2hDbWxJY0hjM1VrOTdKdm52UmZ5dEEwbHZmdC1JZ1FjX3c?oc=5",
+      "title": "Marché immobilier de la région de Québec — Mai 2026 - metroquebec.com",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaGwyVlhlc0V3eUYzWEJRS0NyV3lEZTZ2UXJBWGcwZ2pOVzMwNXVhbEhwTUdheFlUN2xxZjhERlFxMUdIXy1PWnpKVDd2LVJqRnpndFBlMU1mTjRSTWR5QWtOQzE0emQ5X2JqNWt3OVc1cjBtUW9jR2t3Z0xxM25aV21ZZ3VPLTBtc0tpb2R4czVUT3lKMTAta2FUeEEzckZJV1NiYVNhOG16RkJURkRNX3Fn0gG3AUFVX3lxTFBiYVZWWVJnM2VXMVNxOFJyVnBSV3pmbUk3ZWh0N3NLOXdQR1J1aFVyMFZpZVFkbjQ0UTVVOG1URVFSUjZ1U2owVDltWmYzMFRXelg1NDZRTGlQd1BEM1NGdFRrV09MZlVlM1dHRmlmdFN4WG40ajVYdlFaSV9TU2lBUzJDbVBJbDg4Rnc0NTMyYlp3U1g2Y0dXN3l5cmVkSmNfN3hoWDJiLTNxYmJjX21uX2FqWDAwZw?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier de la région de Québec — Mai 2026  Journal Métro",
+      "description": "Marché immobilier de la région de Québec — Mai 2026  metroquebec.com",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Immobilier : l’incertitude s’installe chez les acheteurs québécois - Le Lac-St-Jean",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnNSaG00U2pGN0RZNTdDZUdELTg2bnRlMGNObFFUQkdHdUgwUjV6U3dpbzk2RlFGR0h5ZmVza290T25sVTRJbkhDV1RwQi1Fa2hBRHdOMklEYXF2MWtaMjVXRnlENTlIU293dVVQN25DQ2ZmMWdKS0ZtemJONVFXQlN3RTUtby0tVEpaRkZtakJ6MkQzLXZUcExFNTYwc1BHQi0wUjFtLXBRUQ?oc=5",
+      "title": "Marché immobilier du Grand Montréal — Mai 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNDYwQkM2MTFaUTFrdmxITjFxX3VXNjF5NHFvNHF6M3EwMUk4cEZ4dVE5NUhWemdyM0tERHdueVNhakEwb1JlTVhqQnpqQzJDdEE5MExYdzRwblNCZHZGeWtzNjd2VV9idUhBR2ZHU2d0d1c0Mi1LUVlGUGotMVptdTJLek5uSnNKMUdvVkJsWTd2Nk9zUnRYZjdlejlvV01JM0NDMDVhbVR4OUY4TkdTUTlZRVBBZw?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier : l’incertitude s’installe chez les acheteurs québécois  Le Lac-St-Jean",
+      "description": "Marché immobilier du Grand Montréal — Mai 2026  Journal Métro",
       "cities": [
-        "saint-jean"
+        "montreal"
       ],
       "category": "local"
     },
@@ -129,38 +51,12 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier de la périphérie nord de Québec — Mai 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNbXFiNTZMRDA2Rm1Kd3IwVkxzVGxsVnBBYThnbkVPUkQ3ejB1UTRDRlhRQzNCbGlwODZ6UkZLSFhRU25BT2xnYkZGV01Bd3dGa2kyVVFTMEtDUzItenpJZ2RvYjdyNDlQTUMwQlVfMWhFRXNZQUdWLWxHMzg0Uy1xSW5RN095bmJSZWJJTW5XSXhvc1ZUU3pmNlBqak1pUFVueV9WRGdXVlhzZFRSblpnVVdHeUFKN1lfdWw5ZWVha2VtaEFMYWRUWExvQUlIQQ?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier de la périphérie nord de Québec — Mai 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier de l’agglomération de Québec — Mai 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxONnhYUVB4YmhwYTNkM1JxZXByV3hMVmo0ZUU0YWpzdERnT3o1NGNvZEt4T1ZUVDIwOEh6NmxnSWxVSTE2a205akN5YmNvbzhHNG1qWDhOWE5BZV90VVdISkdWZ0RTUVdWaS1sZ2o4N2NueGdhdGtDVlFPdk5BanlJaW5hZnNsQWJBRzlGa2lSNXBEQW5nQmpmdVYzQzhwWmhDVEJkLVhfMExCM1l5Znh4NVVXLWxqMHNZSTlzRm9DRm56ZDZwZGtuSQ?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier de l’agglomération de Québec — Mai 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Un arbre de 150 ans menacé par un projet immobilier - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVUUwUV9heDVTNFBJNExWZW4zNnBLd281ckhKdWxVREhUY0hiYjkxZ2pKWGhDbkhRRXRHS2xIMzhrUi1ma21TVFlGRDFULUNVOGtWb2xqS1cwczYwZFI5d3Utb2NSY1lBWUZncF9kRlZCMkJZNWNzNHIwTnhHT0pZTWFHaVRaRk9CdF9paEFOYzJFNWlWV2p4UWNRcw?oc=5",
       "source": "news.google.com",
       "description": "Un arbre de 150 ans menacé par un projet immobilier  Radio-Canada",
       "cities": [],
       "category": "general"
-    },
-    {
-      "title": "Marché immobilier du Grand Montréal — Mai 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNDYwQkM2MTFaUTFrdmxITjFxX3VXNjF5NHFvNHF6M3EwMUk4cEZ4dVE5NUhWemdyM0tERHdueVNhakEwb1JlTVhqQnpqQzJDdEE5MExYdzRwblNCZHZGeWtzNjd2VV9idUhBR2ZHU2d0d1c0Mi1LUVlGUGotMVptdTJLek5uSnNKMUdvVkJsWTd2Nk9zUnRYZjdlejlvV01JM0NDMDVhbVR4OUY4TkdTUTlZRVBBZw?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier du Grand Montréal — Mai 2026  Journal Métro",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
     },
     {
       "title": "Céline Dion (58 ans) : à quoi ressemblait sa petite et très modeste maison d’enfance au Québec où elle a grandi avec ses 13 frères et sœurs - grazia.fr",
@@ -171,18 +67,18 @@
       "category": "general"
     },
     {
-      "title": "Première pelletée de terre pour le projet Coulée Grou : 200 logements abordables de plus à Pointe-aux-Trembles - Newswire Canada",
-      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQMnBVaXo0N0VLU1NRNHN4bmZqemdwM0ZXaEs3SlV6ZU15X2JVX2ZRM0NlcGJFS0JQczJob2lFelJlX05LLU9fWDlFYzhyZXJrdVFLUjQ2cEhrNEVOWUNXb0N5c05aa1JFaE55UFptMjNCWHlocDVwNjFoWDJYdGpYbEZKTENtc1BmRVVWbnEyMTNQbnVFeGNoZmtxaWRfWFp5MDRfeERSTktoVGxZOHpsNHlQZm91RENJakFZV0JrZXpILVk2RDlVYVl5bXJ1WGZkSjNIc0QzUHRWYm8xWHJrQUhhTnJ5NUpaVW1TMllqTE5YR3VlNTU0?oc=5",
+      "title": "Taux d’inflation et IPC au Canada aujourd’hui - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5peWFzRGVzYlFod05vbXc1N3FTN0NCNTk0T3l6YzBRT1JqcFhkQW1vY1ZnYjRGUDBrbDdDMnZnam1veVFRQ2xWcUx5X2phTGgzVklZVEIyaWVuZV93NFRTRklZWlRFRkgwTDcyNExLV2pOcDh1bXZN?oc=5",
       "source": "news.google.com",
-      "description": "Première pelletée de terre pour le projet Coulée Grou : 200 logements abordables de plus à Pointe-aux-Trembles  Newswire Canada",
+      "description": "Taux d’inflation et IPC au Canada aujourd’hui  nesto.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada ne constate pour l’instant aucun signe d’inflation généralisée - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbFN3ZkNXUXdvOXFMeko2bTYyeHRZenF6QnYwamkwQ3R0bjl4a0RQeWNWakdEbDYtSm16NFpyV0lyZTNwZXBwSjJEWURaRlNkRldVSVBBdTRkVmRHT29PM0pzWlRPdzMxVXBCZklsQ1ZoajFLTjZ4M2N1Qld1REVoNFJJcEtiT081bERR?oc=5",
+      "title": "La Banque du Canada publie un rapport sur les consultations relatives au cadre de conduite de la politique monétaire - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZFdxdmt3NUR1NkRtOE5pajlobFVCS1U3MjhkRzl4cVJhdERfNUd5ekpBNVZTTEw3VE9UUVlaM3RBQmhXQ2Y2YlA1RWM3ODlEX2VGZHNSRlJuNHNyWFVTZmZsR3d5RmJ4dmZ2NnN3Y2JHY2VlUVlObElyVUtSQnNUbXNXMnVGdGpWcFRYWV95R2c3dkxEOG1EMGFrRGFxY2QxczZwMmRjNl9ndjJJZmJ0UXgwbk5JdUNUaG81d1JnblJtazNO?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada ne constate pour l’instant aucun signe d’inflation généralisée  Radio-Canada",
+      "description": "La Banque du Canada publie un rapport sur les consultations relatives au cadre de conduite de la politique monétaire  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -195,10 +91,10 @@
       "category": "general"
     },
     {
-      "title": "Discours : Chambre de commerce France-Canada et Paris Europlace - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPVF9uVTI0Z05CQVBpQnRBOGVKMHpCcnB1U1E4clk5cTZPQnAzMEZ2NWUwZUI5V1NjeG9jQ2NFQ3JsbXJKLWtIYWxjMk9MUGNOZkRjLTNTTmc5Z2U4cTM0NjJ5amg1YlZNT0k1SmRKSGcycHUza0JIZXRjSkQzVlU5VzM5QTNleWVydGxHLS0xbjZIb1hzM1ZuY0pISU5tV0FiUlNUQURTbzk5dDFq?oc=5",
+      "title": "La Banque du Canada ne constate pour l’instant aucun signe d’inflation généralisée - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbFN3ZkNXUXdvOXFMeko2bTYyeHRZenF6QnYwamkwQ3R0bjl4a0RQeWNWakdEbDYtSm16NFpyV0lyZTNwZXBwSjJEWURaRlNkRldVSVBBdTRkVmRHT29PM0pzWlRPdzMxVXBCZklsQ1ZoajFLTjZ4M2N1Qld1REVoNFJJcEtiT081bERR?oc=5",
       "source": "news.google.com",
-      "description": "Discours : Chambre de commerce France-Canada et Paris Europlace  Banque du Canada",
+      "description": "La Banque du Canada ne constate pour l’instant aucun signe d’inflation généralisée  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -207,14 +103,6 @@
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNVkRwYWlHX2NsV1UtSWxiRWRReWQ0YnhKWHJ5dzhFLWpnUmppbUVodlNIeFdnaEZTYU91TVpPRjV2Mi1tdFNieFhlZVhHVkVsY1hveGRjWVBoejVpeGlZb0VhUXo0T3RkZ3NBUG9mUDFQR1BnSFoxcmk0ODlGemp5TFRHVUxXcnRNMEZ6eTVzTFBNOVhsTW0zWnp1NGs5Vk1veWNGb2xSRnM3dnY3UDVwbGQwc3JiWjQ?oc=5",
       "source": "news.google.com",
       "description": "Le taux d’inflation ne change pas la donne pour les taux de la Banque du Canada  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Inflation : la Banque du Canada sommée de jouer franc jeu - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYWlkSnlJWDZ2Rk5NNG1LbnpjOTN3YkFzTjhzTjZmS21vSVhHUEVXUVc5UEtvWVlSeXl0QVVVb0U4bFpjakNuNkt5eTNxMGRXbVBocktWa1Rtd1VxdEtmbWJ5Y2hSYm03OWVvb1V4cHFxa2lUVnc2ZTN1aTQ5Y2FtVzZsU1BRTVI0UTJSSVZDcHNfNExyRGpCeUJ3YnctSmtNeXdGbEJrZTRVWHo4V25rUmZB?oc=5",
-      "source": "news.google.com",
-      "description": "Inflation : la Banque du Canada sommée de jouer franc jeu  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -251,18 +139,18 @@
       "category": "general"
     },
     {
-      "title": "La hausse des prix de l'essence propulse l'inflation canadienne à son plus haut niveau depuis deux ans - Morningstar",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPUzhRUVRXUWdHUFBFQXI5eUFMRjNaOGNOTzJ2eUxsdDJMTlJqSnYza1NXUXlSTm11VHRSTEY3cHJhMmk0aUJXM29kaDVYTG01dnN0QlRZSlNOVWZxY2ZLZWQ4ZzVIQlZGSzNLOG12R3ZUUUtRZmZ0dmM5VkItMWxlcXJhNGxPc3FCaFdJYUs1UzE5TFM1RXdzV3J6d3pQOU03bHVCWUZad3ZRWTNUNFlXZDNMc0RBdGFKMndhRVdmcVJEcTNERVduX1RPaHNONHI5elRHWEh3SkdNbXgw?oc=5",
-      "source": "news.google.com",
-      "description": "La hausse des prix de l'essence propulse l'inflation canadienne à son plus haut niveau depuis deux ans  Morningstar",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Premier trimestre | La Banque du Canada n’était pas inquiète de la faiblesse économique - La Presse",
       "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPeUVlV09ra3NYRmo0ZjdBdWZpV2I5d053VmdwM1IzcVJ3WHFBeWJIV2h4Ykw2cjAtYTg0RWFTa0IzdGpsX1hQMnpNRkxlMDNpNUFoOF8xZkxsWHRfQmNuMThsbkF1NnE4NXE3NUhjaXZLSENDTGM2NWE0bGRmY21tV3VPTnY4V3hxYXBPcmwxWHVmWWVNVEloclc5ZHEyRnR4TXJMMWRia2ZRUTRCMjkxM090Q25uYzBQRm81Zm9JVGVYWkJHbnNxSHNabko0Y19ldkhhWkVmRHVHUQ?oc=5",
       "source": "news.google.com",
       "description": "Premier trimestre | La Banque du Canada n’était pas inquiète de la faiblesse économique  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La hausse des prix de l'essence propulse l'inflation canadienne à son plus haut niveau depuis deux ans - Morningstar",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPUzhRUVRXUWdHUFBFQXI5eUFMRjNaOGNOTzJ2eUxsdDJMTlJqSnYza1NXUXlSTm11VHRSTEY3cHJhMmk0aUJXM29kaDVYTG01dnN0QlRZSlNOVWZxY2ZLZWQ4ZzVIQlZGSzNLOG12R3ZUUUtRZmZ0dmM5VkItMWxlcXJhNGxPc3FCaFdJYUs1UzE5TFM1RXdzV3J6d3pQOU03bHVCWUZad3ZRWTNUNFlXZDNMc0RBdGFKMndhRVdmcVJEcTNERVduX1RPaHNONHI5elRHWEh3SkdNbXgw?oc=5",
+      "source": "news.google.com",
+      "description": "La hausse des prix de l'essence propulse l'inflation canadienne à son plus haut niveau depuis deux ans  Morningstar",
       "cities": [],
       "category": "general"
     },
@@ -275,10 +163,10 @@
       "category": "general"
     },
     {
-      "title": "Le gouverneur de la Banque du Canada met en garde contre les déséquilibres mondiaux - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZ2p5M2ZJb3pNSWNWRjVOLU9BTmxQbHlKOUk1NVBwUi1aRW1jaDVhRTJlaUJSaXRyOUo5bWUyREtvaDZxVTdvMFlBbzloOFhqY1NFNnFuNkd5VXctMlFubjVPUXFzcnFaeWtSdmIyT1NENnptd2FFV2tGaUN1SVVuaEhqTlI4a3V4dUJnRFRwOXdhZUJKVVVndGV0UVVQM2lEdVgyUXU5cllWM1FxYnZfN1k0Z1gxSzYtVndnbEM2MEVEZFd3YzZB?oc=5",
+      "title": "Discours : Chambre de commerce France-Canada et Paris Europlace - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPVF9uVTI0Z05CQVBpQnRBOGVKMHpCcnB1U1E4clk5cTZPQnAzMEZ2NWUwZUI5V1NjeG9jQ2NFQ3JsbXJKLWtIYWxjMk9MUGNOZkRjLTNTTmc5Z2U4cTM0NjJ5amg1YlZNT0k1SmRKSGcycHUza0JIZXRjSkQzVlU5VzM5QTNleWVydGxHLS0xbjZIb1hzM1ZuY0pISU5tV0FiUlNUQURTbzk5dDFq?oc=5",
       "source": "news.google.com",
-      "description": "Le gouverneur de la Banque du Canada met en garde contre les déséquilibres mondiaux  Les Affaires",
+      "description": "Discours : Chambre de commerce France-Canada et Paris Europlace  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -287,6 +175,14 @@
       "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNa3I1VGZCcHdlNVVRTEdBMUJjSEppQWJpZjJ0TXRXVXd4NUJ4TVRKdHBJLWtZcjZsWS1HZjlpejlaVzd3eXEzSTMwTmxETWVpelVScEp1NlBEWU4tSURpMzlFZGNUZDcxYjBEYTFzV2dDSmJnMXB6V1o5bnVHUlg2TkpsXzN5SVppR0FfemhhNGhnMFZSTGRKcHpBcV9wVGpiM2xFUW81RW5SSUppUWJGY2xVcDdFT3lVZ3JRMTJMcW1KOUlOcjI2SzJvMG9LRGV0LXB5RmY2OFUtekdoLU9qbDNBcEcxNHM?oc=5",
       "source": "news.google.com",
       "description": "Macklem prévient : assouplir les règles de fonds propres ne suffira pas à stimuler le crédit  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le gouverneur de la Banque du Canada met en garde contre les déséquilibres mondiaux - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZ2p5M2ZJb3pNSWNWRjVOLU9BTmxQbHlKOUk1NVBwUi1aRW1jaDVhRTJlaUJSaXRyOUo5bWUyREtvaDZxVTdvMFlBbzloOFhqY1NFNnFuNkd5VXctMlFubjVPUXFzcnFaeWtSdmIyT1NENnptd2FFV2tGaUN1SVVuaEhqTlI4a3V4dUJnRFRwOXdhZUJKVVVndGV0UVVQM2lEdVgyUXU5cllWM1FxYnZfN1k0Z1gxSzYtVndnbEM2MEVEZFd3YzZB?oc=5",
+      "source": "news.google.com",
+      "description": "Le gouverneur de la Banque du Canada met en garde contre les déséquilibres mondiaux  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -303,14 +199,6 @@
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdExyLWZ2SUtFdDRIRGh0Vm5pM2JLVW9hU1IxNUxzNFU1MkRpa0QxYnZRdXk3VU0yaVR0QWQwdTdTVWgwT0RrX1M2S0JwbHVQSXRNUUZBTEVpQWhLdkxLc1J2bVhVVVZKdGp6cEdZSTR2MFhTbVV6b1lwNnd0eGNYdEl3WXlXY3BXempTWjM3aFY2cGNvOXkwZ2F6ZUNGZndCZFdhR1lGTFN3b2JNeVJ4d05hc01XMTVDYm5Hdjg1N0JKOHZyeU4wTU1zd01TZw?oc=5",
       "source": "news.google.com",
       "description": "La Banque du Canada rejette l’idée d’une récession malgré une croissance faible  Investing.com France",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada devrait maintenir ses taux inchangés jusqu'en 2026 avant une hausse en 2027, selon Deloitte Canada - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNZVloSmZQTV91MERfYTRLQzdPblRGTjNiZF9URXZZbXM4RENZbG4xSFpTZnFBOUlUN0p0QVFVWi1jYjhJVHJ2ck5NbTZzdFl2Y0cxNkhsVm9EMUVYQTh1UmxzSENqZ1pBNTVWcDQxbTZ1MXVDX2dOTTZlWUdHcXZDeVdKUXhnenF6ZlJhbWpzMlJFZm50dE82eEJSNm9XNHllT1dlNnNSSW1CRzdmY1V5ZU1ybzFid1hXblVPbTZHVWJrMVZUaWd0T0RpNGhxMThTRnh3QnN0MVc0dnNORFA0TDlxa08xckFVSDRSQldnLW1lUQ?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada devrait maintenir ses taux inchangés jusqu'en 2026 avant une hausse en 2027, selon Deloitte Canada  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -339,6 +227,14 @@
       "category": "general"
     },
     {
+      "title": "Les consultations de la Banque du Canada confirment l'objectif d'inflation de 2 % mais soulignent les inquiétudes liées au coût de la vie - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNVGVKT0FUNVpBbVJSSkN0N1o3djB4Z2ZoUW1nNHBUQlVSX0x5Zmp4R1gxZjRHOHhxZDNrblJVMUVEemtJLURXa1hyMFRiNmY1eUN2cngzcEVSYUNwWXZzai1UYVdsRWxoNi1DV3FoZWZIRUdReG1lVW1uY2pIbmtPbUxNT1VNbnVoSzkxQ3A3MVh3RFpGdmZmV2lFR2JTS2dxeS1jV29zd21NUE9jZE1yaEtzN05nTDVjZUdZREFHZ3FoS0pfYmJmdk96RmlrNXFEQ2lJWTI2TlhsdjFzTzZxVmpmSUhUdlNDak13anhHbVo?oc=5",
+      "source": "news.google.com",
+      "description": "Les consultations de la Banque du Canada confirment l'objectif d'inflation de 2 % mais soulignent les inquiétudes liées au coût de la vie  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "CANADA CHANGE DETTE FX - Le dollar canadien prolonge son récent recul, les minutes de la Banque du Canada offrant peu de soutien - Zonebourse Suisse",
       "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPVVhPWDJWQkNRX3Vpd2UxYWNWZWhWaXVlandVNWRmTnNoSU9uenJTZWV3UWxkcDB3R0NlTVlDRGVpZ1FDeWs1T1Y1c245cnowZkxnTnVLMW1XaV9CVmV6SFRkQTRpM0xQS3dWU1VNaEFldDhBOUF1eXZHZVg0cXplQ1AtWXVUbFo2ZnVRUjd1TlJnUzlsV0lPVXNWZW55czMyXzVYUkR6c3gzOHQ5bkNzWXVHUnJ6UnVnbENnUTdXS0RHVWdIN0hDSDlIbUQ1U2xKQW5iNWM1M0JlOEx6dkpveHR3dVlDUWFIa1VoM3FR?oc=5",
       "source": "news.google.com",
@@ -347,10 +243,18 @@
       "category": "general"
     },
     {
-      "title": "Les consultations de la Banque du Canada confirment l'objectif d'inflation de 2 % mais soulignent les inquiétudes liées au coût de la vie - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNVGVKT0FUNVpBbVJSSkN0N1o3djB4Z2ZoUW1nNHBUQlVSX0x5Zmp4R1gxZjRHOHhxZDNrblJVMUVEemtJLURXa1hyMFRiNmY1eUN2cngzcEVSYUNwWXZzai1UYVdsRWxoNi1DV3FoZWZIRUdReG1lVW1uY2pIbmtPbUxNT1VNbnVoSzkxQ3A3MVh3RFpGdmZmV2lFR2JTS2dxeS1jV29zd21NUE9jZE1yaEtzN05nTDVjZUdZREFHZ3FoS0pfYmJmdk96RmlrNXFEQ2lJWTI2TlhsdjFzTzZxVmpmSUhUdlNDak13anhHbVo?oc=5",
+      "title": "La Banque du Canada met en garde contre les déséquilibres mondiaux croissants - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQUjJkclZ3Y3Z2a0hFT3djR0lLbENWX1JFSGMtX0dGbkRkeGl4dVhyMlpwTmdMYXB1OE1kOGZSQUlhaXVacXZSemxScnplb0tralV3SThPVER1N3dBal8tWUFvQmRuTlJpeUtUT25YNk9kTVVpelJ4cE5jUFdoaWFmV19abmpqWUF0VUtuTzk0ZndSNXhwUGpXU3dicGZpQ2xNeE9ibjlzbUhGSDQ0SE0wMHFDTXdEMTZMNk5uTGFqNTFPX09YMENoSXRobTU3UQ?oc=5",
       "source": "news.google.com",
-      "description": "Les consultations de la Banque du Canada confirment l'objectif d'inflation de 2 % mais soulignent les inquiétudes liées au coût de la vie  Zonebourse",
+      "description": "La Banque du Canada met en garde contre les déséquilibres mondiaux croissants  Investing.com France",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le dollar canadien s'affaiblit face à l'élargissement des écarts de rendement, la Banque du Canada devrait opter pour le statu quo, selon la Société Générale - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZUxMN1FBSVZsYjFEZWhQcGJlVl9TdVJYbTFETW1lc2ZPZEhlTmthWkNqOGFZUkpVeG1TQlM0RVhUaFlHSGlZQVlBWkRIN3N1QXJYbXItRlhsaTEzVDR2TGNmNmpadE5waUNUV1paeVhYZmRjSUNDWDRQSW5mNTBfR1d6SE5GM1JUdk5iRnAxWEZYeEdvM2ZZY253VGpILTZVaGNTdEJoRUxzSFM5aVRHR3dfamIzOEg3MnBBbVhUWnczbm4xenoxelBwMmVXME9VcXNWT3ZmVl9vNXBhLXJ2aXJPRF9xal9qbmgtTjd3MnJMZw?oc=5",
+      "source": "news.google.com",
+      "description": "Le dollar canadien s'affaiblit face à l'élargissement des écarts de rendement, la Banque du Canada devrait opter pour le statu quo, selon la Société Générale  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -413,7 +317,7 @@
       "days": "42",
       "condition": "Vendeurs"
     },
-    "last_quarter": "mai 2026"
+    "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-06-27 14:27"
+  "last_update": "2026-06-28 14:47"
 }
