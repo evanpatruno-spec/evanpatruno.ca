@@ -87,26 +87,18 @@
       "category": "general"
     },
     {
-      "title": "États-Unis | La Fed inquiète du niveau de l’inflation",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-07-01/etats-unis/la-fed-inquiete-du-niveau-de-l-inflation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Wall Street ouvre dans le vert, portée par l’emploi",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-07-02/wall-street-ouvre-dans-le-vert-portee-par-l-emploi.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Les prix sont « trop élevés » aux États-Unis, a déclaré mercredi le nouveau président de la Réserve fédérale américaine (Fed) Kevin Warsh, répétant l’engagement de l’institution à ramener l’inflation dans les clous.",
+      "description": "La Bourse de New York évolue en hausse jeudi, les chiffres décevants de l’emploi aux États-Unis étant reçus positivement par la place américaine, qui y voit une raison pour la Réserve fédérale (Fed) d’être plus prudente avant de relever ses taux.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Comparateur de prix Pricerunner | Google condamné à verser 2,75 milliards à Klarna",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-01/comparateur-de-prix-pricerunner/google-condamne-a-verser-2-75-milliards-a-klarna.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Investissement Québec | Des primes exceptionnelles... pour un rendement qui ne l’est pas",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-02/investissement-quebec/des-primes-exceptionnelles-pour-un-rendement-qui-ne-l-est-pas.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Un tribunal suédois a condamné mercredi Google à verser 1,7 milliard d’euros (2,75 milliards $) de dommages et intérêts au comparateur de prix Pricerunner, détenu par le groupe suédois de services financiers Klarna, le géant américain ayant favorisé illégalement son propre service de recherche de prix.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Chine | Contrôle accru des investissements à l’étranger au nom de la « sécurité nationale »",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-07-01/chine/controle-accru-des-investissements-a-l-etranger-au-nom-de-la-securite-nationale.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Pékin renforce à partir de mercredi son contrôle des investissements à l’étranger avec l’entrée en vigueur de réglementations censées garantir la « sécurité nationale » dans des secteurs jugés sensibles, sur fond de rivalité technologique avec les États-Unis.",
+      "description": "Les primes repartent à la hausse chez Investissement Québec (IQ) pour atteindre un nouveau sommet, a appris La Presse. C’est plus de 15 millions qui seront distribués au sein du bras financier de l’État québécois, qui respecte de justesse la règle d’or qui encadre sa performance.",
       "cities": [],
       "category": "general"
     },
@@ -119,22 +111,30 @@
       "category": "general"
     },
     {
+      "title": "Immobilier résidentiel : Montréal ralentit, Québec bat des records - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZEg0SWRFOXU0R3JZMjdzNFZreVdSam9KUGY4YTFMbDh0eVZ3dndlcFZkNE5Gcmh1dGRIdkhGSEl4LWxOdDNiaTVIVjBGY3o2UUZYaEVILUJLbXFabnVBMFA3d0UyZ09fSnpUVlRJcnd0LUVqZG9ZZkZiaHdnYU5PckxPTGJwNmxhWVZnWjRpRTVHdWhFLUtfX2hVNWNjcGxyV3c?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier résidentiel : Montréal ralentit, Québec bat des records  QUB radio",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Séparation et immobilier: le «joyeux problème» du boom des prix - Le Quotidien",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQNDB6UjBaRFBPWWRnRXA4MVhOdDVqZHhaejB6bDZBcHA1QnA5b3pVM1NlSVowODd1WDhoU0lJWkN5WVczNDVPcDU3Nkl3TzRfRFlFbi1KUjd3YUdNcDVlbU04azlyLTAyTTZMRndJekZ0T2xjRUZmbUN5MkgydGw0UzdPYXprUDFfV25wYWp2UVk5OXdCLTgwLWJJSUpfOUpjR0c3QS1SbV9FRl9VclY0NWxidHc5cmkzbnZyMEluc2xwVXl3OWxLeHJGUnRYQlVPVmNoTWMwek4zWFZmeGRqZzJwSUNVOTBN?oc=5",
+      "source": "news.google.com",
+      "description": "Séparation et immobilier: le «joyeux problème» du boom des prix  Le Quotidien",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Au moins 3000 logements seraient vacants à Québec - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbUxVTlFxSVQ0a2JhaklKV1FJaFM2RlltdUFjaWpKLU5RaGp6YUZ5Rk9RcURnWFJiLTdyN2RTNzhkYjVCX0xJbjNveURxVXFubFE5c21nbFdnWVhiRlVjckx1V2FYd3QtQWYySXo5cFRSZHZxejRRdW0wLVZudUwtZWhHVTdXdVp1?oc=5",
       "source": "news.google.com",
       "description": "Au moins 3000 logements seraient vacants à Québec  Radio-Canada",
       "cities": [],
       "category": "general"
-    },
-    {
-      "title": "Guy Hoquet l’Immobilier ouvre sa première agence au Québec, à Montréal - L'Express Franchise",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNM1BrZTZwa1ZkYzF4YXh4Yk5YUTBQTGxSbTRkc2hmbm94bFhiSlc0M1RBdEVaNEZZS1pwb1F2UFhRZDRnbFJ5VHFlM0RheWpZUXM2a0hNSmpWal9CY2ZsaVhOQWtfWUlkMDlGWWt2S3VQalNxN0duZWlFRmk5OTgtaXNCV0htUlA5c1FOaW9iWnhWMzF3WWc?oc=5",
-      "source": "news.google.com",
-      "description": "Guy Hoquet l’Immobilier ouvre sa première agence au Québec, à Montréal  L'Express Franchise",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
     },
     {
       "title": "Un plan fiscal contre la surchauffe immobilière | Crise du logement: Québec solidaire veut taxer les spéculateurs - 98.5 Montréal",
@@ -147,10 +147,18 @@
       "category": "local"
     },
     {
-      "title": "Pour ne pas payer une amende de 10 000$ : Ce courtier a essayé de « jouer à la cachette » - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZjh6Y1EzNlN4alhWajRpbWRVQndJZTk0MTdjNTR6LUdBdXpyQ2JoeVRpRjBlaUd3U25IS2dzZldiQXVJekxFTHFnMkkwSC1QTE40RmkzU21OVDRYQnNLOXBOZ0FuSXkwSWV5NzFWVG10SUJYY3RnVTU4MVZ4SzVvbHVNUWxHOFlXenM4MkN2YzU5OHVhYTJwOFl6bVJWUDR4STVUNElDNEY0TG5Jc1JMY3NBZnQ3eTRQZEpYa3YzcmdRNEFXemc?oc=5",
+      "title": "Et si le privé devenait le moteur du logement communautaire? - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNeF91YmdsQTJmX1M2VFhDWWlqako0c25QQVBZYklQampsd1liQU9ZYzdZZXZHSzJyb1ZvOUVMeU1PV0t5NHNCc0huTUJ2di1acmtlbGpwR2o0ZlFZSUNsNmw5cmdUUzlIampmcUJ4TGdsa00xQ0ZnaGRvMl9Xak1fM0FJNlU2SHVmeUlKdHRHcFJhR19YM0tDNlAwUnBrdlBFRHlzS2ZsdVlLQzhJUkJVZkZn?oc=5",
       "source": "news.google.com",
-      "description": "Pour ne pas payer une amende de 10 000$ : Ce courtier a essayé de « jouer à la cachette »  Journal de Québec",
+      "description": "Et si le privé devenait le moteur du logement communautaire?  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les gouvernements du Québec et du Canada ont soutenu la construction de quatre immeubles de logements adaptés et abordables à Matane - Mon Matane",
+      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxORE40MmNGWE1scEkwVGRMaFZKbW1lUlRyNFAxelRlT2pBa094WTFHbHg3NU5MVHRoWEtfUnR1VEYwejRoc3Etc3hPSkMxNXF3RFlHQ0JlcHNjTjMwUHZaRW1oeHc2ZmptcG4zXzVsVERab3VVaDdqcWJuVVR1c29CbUtmMjlDbXJRU1dtWkRfSXd2Z3NMUGxhVGZaZUJ0ZTl6ZHpOd0h2Z0o1cjVyZk1mVXdMX0d4MFd6Z1BiLTg3Y1BOYlVUTWU0aVBsM243Z1Jqa1lZTnpQc29GS0p2SnFMd24zTW5RWXFmbmdIRERuU1FGWVh4WXpjNWZB?oc=5",
+      "source": "news.google.com",
+      "description": "Les gouvernements du Québec et du Canada ont soutenu la construction de quatre immeubles de logements adaptés et abordables à Matane  Mon Matane",
       "cities": [],
       "category": "general"
     },
@@ -171,10 +179,20 @@
       "category": "general"
     },
     {
-      "title": "Les gouvernements du Québec et du Canada ont soutenu la construction de quatre immeubles de logements adaptés et abordables à Matane - Mon Matane",
-      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxORE40MmNGWE1scEkwVGRMaFZKbW1lUlRyNFAxelRlT2pBa094WTFHbHg3NU5MVHRoWEtfUnR1VEYwejRoc3Etc3hPSkMxNXF3RFlHQ0JlcHNjTjMwUHZaRW1oeHc2ZmptcG4zXzVsVERab3VVaDdqcWJuVVR1c29CbUtmMjlDbXJRU1dtWkRfSXd2Z3NMUGxhVGZaZUJ0ZTl6ZHpOd0h2Z0o1cjVyZk1mVXdMX0d4MFd6Z1BiLTg3Y1BOYlVUTWU0aVBsM243Z1Jqa1lZTnpQc29GS0p2SnFMd24zTW5RWXFmbmdIRERuU1FGWVh4WXpjNWZB?oc=5",
+      "title": "Proposition de Québec solidaire | Taxer 100% du gain en capital sur les propriétés secondaires: une bonne idée? - 98.5 Montréal",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcHpvOHhYdzFYaUlEMWYxcEhvblpGTXRtYVV6THRtSTctdEZsUnZLNFVadU12UVZmdzNBV0UwVUd2MjVWaEFidDJJY1pGb1lUU3otRE53Z3MtdGZRcTZSRzdkR1NLX3pkNXQxa2VCYnkzZjdEMkdJS0Vfa0xWdXVEaHBaTXVpdUg1enJqT19wMmczOXJrWmZrM3V2VFI0QnNBM2RLcUozRGxPUXdZ?oc=5",
       "source": "news.google.com",
-      "description": "Les gouvernements du Québec et du Canada ont soutenu la construction de quatre immeubles de logements adaptés et abordables à Matane  Mon Matane",
+      "description": "Proposition de Québec solidaire | Taxer 100% du gain en capital sur les propriétés secondaires: une bonne idée?  98.5 Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Investissement Québec prête 10 M$ au Groupe ADF - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcW84SGJMZVJvMzIybHlpSFl5WFNmM1p2MEo5aHhabnZwUTc0NFNUSklsamw1X0lNWmhhaHE4V3UzeWxVdXEzVmJHRFJPelJibWNrZHhFbVVqWnRWbU96b255clUwLTVMV0RGVEtLbUppWHU2OGpyRDVnck50OGhxWi1XckVPZkNGaUhqckp3?oc=5",
+      "source": "news.google.com",
+      "description": "Investissement Québec prête 10 M$ au Groupe ADF  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -189,18 +207,16 @@
       "category": "local"
     },
     {
-      "title": "Comment défendre sa maison contre les inondations - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQQ3VRRzFHYXpCOWZlbjZwVlRMNnRMVkVlYTRXcFhqazJpT1lZNmd5OVBqWFdDckhXVHlUa2w0VGJXdVFpUEp2NlcyM0o4RmFvYzVXcmJFVEpPdHdRdFBYZ2EwT2FWRzktZnJBcXBDbThQUnN6VEFxSGJzNTBpb2lWUnpYNDg0RVA2NTh3T3ZIQV9Odkt6b1NUYmx3?oc=5",
+      "title": "Gel des loyers au Québec?: «Les politiques actuelles n'ont fait qu'empirer la situation», dit cet expert - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE56eDMweVVjOGJnR3pzQWpKMFJXSVUtRGowS3F2aHoxaHNPTXlYWWphaDNRTmJXQ0VUV2U0dXlKdVN3Qml3QTN3Rk5NbjB4dmViWndBU085YzZ4NkpPT3ZUTGlaNXlHb1p6eFE2SEgyRGxzRUphOU43RXRWYzF4QQ?oc=5",
       "source": "news.google.com",
-      "description": "Comment défendre sa maison contre les inondations  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Gel des loyers au Québec?: «Les politiques actuelles n'ont fait qu'empirer la situation», dit cet expert  QUB radio",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Est-ce que le marché immobilier change pour les locataires? - MSN",
-      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQOHVtdkNXZHhIaWRRTnF3YVkxNENfdkFwd3MtdDJyOUhCc29EZ1Z2cWpPU0dMUk1BMGdIakRKMGE3UnIyU3JVbDdxUmhBLWRIMWp0MHpwMFJIbG40WDFDZklnY1RKb3Jmbk5VRnZ0VFdnZ1JhRG1GNnRiTE9pUnJBYlVJYmVJNUJNanBVaEZnSGJoWWtDUFRieWVsX212ZXQ2X0o1c2NZdmY5cEd1WmdGYkwzclZPSTVjRU8tbDlKUDZ4YTdSQWxYLVNqY3RGb1dCTHZGVGVEbEJpTlRrbVVEMUJDRWdIMFRKVXBiWkdJcDFXSFBiYmNmeE40OA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZUUySTBORGlGT1g5Y0pjYVhvTUZOdDAyemxXcW5neWZuX2pHeVlUaF9JeWh6cUJrOTcxc0Z3RzBXMzNQLVhQVXluQzFsSjkyLUxPM3g3OVNyeWFfd1NMRUlWdmplVzZfNlYwNXU1RkNVZWU0dVhzSjJOcnlLZUlfR1l1bGNhUS1kUW81UVgwUEQ0SFNRbXBnNWlHT3ZuQU1TekhJVDBuN3VKZ3BoS3J0c3hOVEY5dWxVZ215T1hBc2pEUUYtUEdMZlliTy1TcWQwR240WE5qeERiMjlL?oc=5",
       "source": "news.google.com",
       "description": "Est-ce que le marché immobilier change pour les locataires?  MSN",
       "cities": [],
@@ -247,26 +263,18 @@
       "category": "general"
     },
     {
+      "title": "Décision sur les taux d'intérêt de la Banque du Canada - Ce qui est probable mercredi - Morningstar",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOY0cwdHNFdHU3dkZNOXFNOU9HTTduR2RLYkt6V1BRU0wwZXlVMUxSeEx6QVY5YjRLdzJtLVZTWW5FR0FsWE55NkJyU18xV3JTUVNRVHRROE1YTGhVX0dEQkwyNENkNTBmOW5lMEQ1V2kwb05IUzBsYWJBOUdSOWplbklYcUJXcno5NC0yVXpCOWI0ckZOYjFPejRnYk1kYkE2b1p6RURZN2tKTE9LS1cyOUNmcTZTRFBkSW02V25wUnlpcHFYNDBN?oc=5",
+      "source": "news.google.com",
+      "description": "Décision sur les taux d'intérêt de la Banque du Canada - Ce qui est probable mercredi  Morningstar",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Inflation : la Banque du Canada sommée de jouer franc jeu - Canadian Mortgage Trends",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYWlkSnlJWDZ2Rk5NNG1LbnpjOTN3YkFzTjhzTjZmS21vSVhHUEVXUVc5UEtvWVlSeXl0QVVVb0U4bFpjakNuNkt5eTNxMGRXbVBocktWa1Rtd1VxdEtmbWJ5Y2hSYm03OWVvb1V4cHFxa2lUVnc2ZTN1aTQ5Y2FtVzZsU1BRTVI0UTJSSVZDcHNfNExyRGpCeUJ3YnctSmtNeXdGbEJrZTRVWHo4V25rUmZB?oc=5",
       "source": "news.google.com",
       "description": "Inflation : la Banque du Canada sommée de jouer franc jeu  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Conflit historique à la Banque du Canada - 104.7 Outaouais",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOd1c0Wk9CbHpDMmF2R2NicTRqcy10Y3dheTFQR1QxTXhZOWxfQmVEbmtDQUg2dVZZQ1ZRaTFPRERCVjVSdzVZaE80ei01NWkwMXctTms1ZmVtQWpSaWpOalJMMjRzdzNvZHB0Slc3WFA1bW5aQkthc2ZmVEdTMGU3MQ?oc=5",
-      "source": "news.google.com",
-      "description": "Conflit historique à la Banque du Canada  104.7 Outaouais",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Premier trimestre | La Banque du Canada n’était pas inquiète de la faiblesse économique - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPeUVlV09ra3NYRmo0ZjdBdWZpV2I5d053VmdwM1IzcVJ3WHFBeWJIV2h4Ykw2cjAtYTg0RWFTa0IzdGpsX1hQMnpNRkxlMDNpNUFoOF8xZkxsWHRfQmNuMThsbkF1NnE4NXE3NUhjaXZLSENDTGM2NWE0bGRmY21tV3VPTnY4V3hxYXBPcmwxWHVmWWVNVEloclc5ZHEyRnR4TXJMMWRia2ZRUTRCMjkxM090Q25uYzBQRm81Zm9JVGVYWkJHbnNxSHNabko0Y19ldkhhWkVmRHVHUQ?oc=5",
-      "source": "news.google.com",
-      "description": "Premier trimestre | La Banque du Canada n’était pas inquiète de la faiblesse économique  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -279,6 +287,22 @@
       "category": "general"
     },
     {
+      "title": "Les consultations de la Banque du Canada confirment l'objectif d'inflation de 2 % mais soulignent les inquiétudes liées au coût de la vie - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPd3ZyWmJTZl9NTXhYRkNfd040cVFMUk5iZU5PSVdBR0pXN3hlVWlYdTdfc1ZkS1AyWkU1eTVBM0tUc1NoY05PM2pqZUc4VDFJR1pIWTVXRWV3cTY0RzdLbkdNbjlFT0N1dUFRY0stMElLSXB1UGFpV1hrMHRzZFpxNy13VnRHc1ppSzVBZm5XZTFlOTYwaS1fQjQ1ZWdCcGlVd2k1aFJUc01SYWZ5MTlUNFN5b3pHLUxtV2tHZnlOU0dhTVBzaFpQbktoN192OEJMRXA1R0UwVlktNGtxeFU3aWlEdlpCWjRINzdCRTA5cw?oc=5",
+      "source": "news.google.com",
+      "description": "Les consultations de la Banque du Canada confirment l'objectif d'inflation de 2 % mais soulignent les inquiétudes liées au coût de la vie  Zonebourse Suisse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Inflation : à Sintra, les banquiers centraux de la planète restent inflexibles malgré la baisse des prix du pétrole - Les Echos",
+      "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPOUdWSWxJQjBhQ1dac09MNlJfX1h1UjFDQ0h2QzNPN0RDQWRDUGNRNVdEbDFtOGo3b0NvVWpieGhoYU5CQ3NjSTdDY0Fia1gwU19yYUZYTUwzWXNOLXZWS3JqWnNfa1VUeE1IOERhZjNXb2RuaTExem1SVVBCSzI2ck1HYUx1d2RQNUxFTmdFcmdBcXFxNGV3eGdpa0dHSlpVOTRobEstWXllTzR5RzQ5OGRCTlRZSUxROWpSYkkzV3gwR2RPMTUwTzc2TGJuNlpfUG53dWFNM29sVGZXbEFkdlBPaHVpbWJ3a2ZNbXZuZXZ4OV9wdUdPNGlIQXJoZEJQR0hjd21xb3ZlYXc?oc=5",
+      "source": "news.google.com",
+      "description": "Inflation : à Sintra, les banquiers centraux de la planète restent inflexibles malgré la baisse des prix du pétrole  Les Echos",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La Banque du Canada devrait maintenir ses taux inchangés jusqu'en 2026 avant une hausse en 2027, selon Deloitte Canada - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNZVloSmZQTV91MERfYTRLQzdPblRGTjNiZF9URXZZbXM4RENZbG4xSFpTZnFBOUlUN0p0QVFVWi1jYjhJVHJ2ck5NbTZzdFl2Y0cxNkhsVm9EMUVYQTh1UmxzSENqZ1pBNTVWcDQxbTZ1MXVDX2dOTTZlWUdHcXZDeVdKUXhnenF6ZlJhbWpzMlJFZm50dE82eEJSNm9XNHllT1dlNnNSSW1CRzdmY1V5ZU1ybzFid1hXblVPbTZHVWJrMVZUaWd0T0RpNGhxMThTRnh3QnN0MVc0dnNORFA0TDlxa08xckFVSDRSQldnLW1lUQ?oc=5",
       "source": "news.google.com",
@@ -287,18 +311,10 @@
       "category": "general"
     },
     {
-      "title": "L’économie canadienne devrait rebondir au deuxième trimestre - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNS2pFc1FyZUZHRTIyU25NQnNTYXVybkNFUWplVjVDTm1aTHdBNWpiRFBQVWJId01UYy1zRzdqakJMTVJjRjh2cjR6YlY3UDZQRllhSUFDMFk1YzVKcE5sNDY3OG1GS1FobWo5RGJhM2ZZVkRDSjkyd2Q3N1RGMnBkY1oxaVBDMWZZUlMzYXAyR2p6ZFhYY2Q4cXl5S1lKU3pjSkw1SG5meHFzX3haMnFr?oc=5",
-      "source": "news.google.com",
-      "description": "L’économie canadienne devrait rebondir au deuxième trimestre  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les consultations de la Banque du Canada confirment l'objectif d'inflation de 2 % mais soulignent les inquiétudes liées au coût de la vie - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNVGVKT0FUNVpBbVJSSkN0N1o3djB4Z2ZoUW1nNHBUQlVSX0x5Zmp4R1gxZjRHOHhxZDNrblJVMUVEemtJLURXa1hyMFRiNmY1eUN2cngzcEVSYUNwWXZzai1UYVdsRWxoNi1DV3FoZWZIRUdReG1lVW1uY2pIbmtPbUxNT1VNbnVoSzkxQ3A3MVh3RFpGdmZmV2lFR2JTS2dxeS1jV29zd21NUE9jZE1yaEtzN05nTDVjZUdZREFHZ3FoS0pfYmJmdk96RmlrNXFEQ2lJWTI2TlhsdjFzTzZxVmpmSUhUdlNDak13anhHbVo?oc=5",
-      "source": "news.google.com",
-      "description": "Les consultations de la Banque du Canada confirment l'objectif d'inflation de 2 % mais soulignent les inquiétudes liées au coût de la vie  Zonebourse",
+      "title": "Kevin Warsh (Fed) réaffirme à Sintra qu'il ne donnera aucune indication prospective sur les taux - Boursorama",
+      "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNWjJONEsxclBTYzFPanVsMTFGSV93RW5DVlFjTHhtb1Z6VjRsY1dBSzlVSnR0YTJKS09vNlVYaG1td2xMaU82R29LQjBfQTZycmNpUUstRXgwWEY0b05oblA3eGRCX3hONVo1dHcwbFdkMF9Yb1QyU1FuZzg1RnY5ME9vYXBPN3FWTm05ZTdSSmpUbXBPaWRQSHdGeVpNVUpGcC1TSmdaS3F5eFZWcWVrRngzNlpyRlhIci0ycktJUC1FS21yU0E0MnpRNG8wSTlhX0FaMmhHZEpUdGMwWjROTlZtUzVuU3UzS0Y1SWlZd1NvdnppQ281ZVA3SUFFVFNtZjJxdXFnS0JWR0Fta2lpTC0zRDk0Wm9BR2fSAZoCQVVfeXFMTVoyTjRLMXJQU2MxT2p1bDExRklfd0VuQ1ZRY0x4bW9WelY0bGNXQUs5VUp0dGEySktPbzZVWGhtbXdsTGlPNkdvS0IwX0E2cnJjaVFLLUV4MFhGNG9OaG5QN3hkQl94TjVaNXR3MGxXZDBfWG9UMlNRbmc4NUZ2OTBPb2FwTzdxVk5tOWU3UkpqVG1wT2lkUEh3RnlaTVVKRnAtU0pnWktxeXhWVnFla0Z4MzZackZYSHItMnJLSVAtRUttclNBNDJ6UTRvMEk5YV9BWjJoR2RKVHRjMFo0Tk5WbVM1blN1M0tGNUlpWXdTb3Z6aUNvNWVQN0lBRVRTbWYycXVxZ0tCVkdBbWtpaUwtM0Q5NFpvQUdn?oc=5",
+      "source": "Fed",
+      "description": "Kevin Warsh (Fed) réaffirme à Sintra qu'il ne donnera aucune indication prospective sur les taux  Boursorama",
       "cities": [],
       "category": "general"
     }
@@ -355,5 +371,5 @@
     },
     "last_quarter": "mai 2026"
   },
-  "last_update": "2026-07-01 15:40"
+  "last_update": "2026-07-02 15:13"
 }
