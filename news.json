@@ -89,10 +89,36 @@
       "category": "general"
     },
     {
+      "title": "Prix des hôtels | Comment en sommes-nous arrivés là ?",
+      "link": "https://www.lapresse.ca/affaires/2026-07-04/prix-des-hotels/comment-en-sommes-nous-arrives-la.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "En l’espace de quelques années, le prix des hôtels a bondi de plus de 35 %, une hausse plus importante que l’inflation. Mais les hôteliers ne s’en mettent pas plein les poches pour autant, soulignent des experts. D’autant que la construction d’hôtels a considérablement ralenti dans le Grand Montréal. Qu’est-ce qui explique le phénomène ? Un dossier de Vincent Larin.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Une dizaine de pays prêts à rejoindre la Banque de la défense",
+      "link": "https://www.ledevoir.com/economie/992402/dizaine-pays-prets-rejoindre-banque-defense",
+      "source": "Le Devoir",
+      "description": "Le Canada est le seul pays non européen à figurer dans la liste des pays fondateurs de la future institution.",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Immobilier: Québec solidaire veut s’en prendre aux «spéculateurs» en taxant à 100% les gains en capital - TVA Nouvelles",
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONVFBU1BFQjJlS3Q2NFVJWkdMOHZtam1CREtreUE5QkRYVEx4MGlURXZRV3lqNVNfU0ZlVFhvbVhScTB6N3hOcHNLdGZVS0h4UTJtcHRiZExmanY3TmFnbklxZ0lTbEp1b0hGMmJLX0VIbkctNGxyWV9MdFdCVzFXWXh3cy1fd0xYQktnWndDX0p5ZDZiMjRqenE1aE56TFRtX1AxM050LUtFTEFqM0drUXoySnVBNFNGNlhjRlZyb21sYzJ5c20yUjR1TWJGZmJELUdsMg?oc=5",
       "source": "news.google.com",
       "description": "Immobilier: Québec solidaire veut s’en prendre aux «spéculateurs» en taxant à 100% les gains en capital  TVA Nouvelles",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Sainte-Foy: deux églises seront transformées en 700 logements - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaWNzcDVwdDMxNXlkM3liS193RG01MWRXYUVuYnFVaVRlOEIwWTZoUDZXSkduSVAzUVRkQUJZd2t1WnJMakVKMEt5Zm53ZXdlaklTcmt6bXc3VEJsN3l4dlBKc2VaN3pyb1BOVUtjZXFkbDVnbklVNkJsNTBldjVsdlZPV1M4QXpXV1kxTUZjbGFlUUJXWS1aZDVvc1hJWm1xNVdnZXNR?oc=5",
+      "source": "news.google.com",
+      "description": "Sainte-Foy: deux églises seront transformées en 700 logements  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -115,6 +141,14 @@
       "category": "general"
     },
     {
+      "title": "Séparation et immobilier: le «joyeux problème» du boom des prix - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNLUtVNmpkTi0xUkdYV0NMcEY2ZW1YdHo3X1o4RDBSN0xieEdDX2NxM1RLdUhoWXh4TU9ZSTRhSjZrcHRBNURIZ3lsU2FUM3JZbTBzRkExcDNpTW9OZGFjcWFCZmRaX3lXMklhVWFwVFZLVk5taVZmVFZXYVgzQXNGU0h6aTRSeGlYUGtnVWQtV0hBX3VyVmxjRDA1eWVBZ3pDU09TQmNVSXY1MjB5eGpFMHFFVWY0N1hPdlZHUWdzY0xnTW9hT0JKVXZWM3p3SnpadEh4dmliZ2hvMmxLaWt2M0xlUlQ?oc=5",
+      "source": "news.google.com",
+      "description": "Séparation et immobilier: le «joyeux problème» du boom des prix  Le Soleil",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Québec lance un projet pour des maisons à moins de 350 000 $ - Journal De Levis",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB3Z2lzTXBlTUdiQU92bTF2bG1wYUpSSXRMTDM3a19qMkxCNC1GbXo4Tk52Z25BMkk2ZHlBMmxRRFE5dGI5V3B0bkkwRTFuZ3BHU3FuTmRJZ2hXMlJSOHFwMDBuZUJyRWowT1Q5WDNQWQ?oc=5",
       "source": "news.google.com",
@@ -133,10 +167,10 @@
       "category": "local"
     },
     {
-      "title": "Sainte-Foy: deux églises seront transformées en 700 logements - Le Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaWNzcDVwdDMxNXlkM3liS193RG01MWRXYUVuYnFVaVRlOEIwWTZoUDZXSkduSVAzUVRkQUJZd2t1WnJMakVKMEt5Zm53ZXdlaklTcmt6bXc3VEJsN3l4dlBKc2VaN3pyb1BOVUtjZXFkbDVnbklVNkJsNTBldjVsdlZPV1M4QXpXV1kxTUZjbGFlUUJXWS1aZDVvc1hJWm1xNVdnZXNR?oc=5",
+      "title": "Crise du logement: la situation se détériore à travers le Québec - latribune.ca",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxORUpFSEQxeFh0RUFqTTlTNVhIVEZlYTc3WWdBenY0eEVYVFFFYWxQdFluTFJMU1h5Z193c3hES2NnQzJIZVAyanMxdXZBYmswcG9MMkNBU0djZml4TW5ZemhpRHNQSnJ0d3JmM3I4QnZ3VndOYnJ6NjA0MTNqc2FCVTQzU1UyV0ZwOF9SaXB0NklKR1pvT1d1ckJPZHR1VHNHazZydXBFbVMtbHM2OFVxUW5WSnNfVjNmR0lHUnR2b0dBZzhZNi1BUWlhS3NXRnBxeHI5VjEzMURvSDlQTnEwZGNfSWNtT3JuT0E?oc=5",
       "source": "news.google.com",
-      "description": "Sainte-Foy: deux églises seront transformées en 700 logements  Le Journal de Québec",
+      "description": "Crise du logement: la situation se détériore à travers le Québec  latribune.ca",
       "cities": [],
       "category": "general"
     },
@@ -167,14 +201,6 @@
       "category": "general"
     },
     {
-      "title": "Crise du logement: la situation se détériore à travers le Québec - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOMy13cnJkWl9wLWkwZEhTVE5tZ1JzWWlMdFI2UWVRaGhXYzljcjRKejBNNVJVNm1RQXhoZzhuOHgyRnFuT2hDekFiZEE1emJjZU04THRremNPMkx3Z2FaN1E2WnVla0pzVlpXQ05WVkpCSDVGYlNId3VQcEF0YTJwbHMtaEhJS1JiVk40R3Y5bkQtcC1YeEZqcVB3MzQtVmNxQnFOQjUzRWtDOVEyQXljNnVUalJFLWNwRVlRWnNrZUFxcmhGSExrX1FNd1IxN0JrOTU2cDlybEtVZE1QTVZCVXBKSG53ZGNRNEE?oc=5",
-      "source": "news.google.com",
-      "description": "Crise du logement: la situation se détériore à travers le Québec  Le Soleil",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Au moins 3000 logements seraient vacants à Québec - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbUxVTlFxSVQ0a2JhaklKV1FJaFM2RlltdUFjaWpKLU5RaGp6YUZ5Rk9RcURnWFJiLTdyN2RTNzhkYjVCX0xJbjNveURxVXFubFE5c21nbFdnWVhiRlVjckx1V2FYd3QtQWYySXo5cFRSZHZxejRRdW0wLVZudUwtZWhHVTdXdVp1?oc=5",
       "source": "news.google.com",
@@ -191,14 +217,6 @@
       "category": "general"
     },
     {
-      "title": "Le Québec compterait près de 100 000 logements vacants - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWXVhX01DT1J6bFFkWkV0Yk5DN0RwQ1F6QjU2QUh1Z1M3M0dUaVJKZ0g0NldOU1pkZ3ozX040Q3RsdzFoNjQ4bjlHUkhodEFPaHJVT2FsWHlQaFZyOTNSbDVMNlRoRldrbTZRSFV4MlRoVFluaHNSak1SZlcxMFlfdjJTdTFvZTJVQ0VVVw?oc=5",
-      "source": "news.google.com",
-      "description": "Le Québec compterait près de 100 000 logements vacants  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "\"Logement : quand « libre » n’est pas forcément synonyme d’« abordable »\" - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQ2R5NFNSdmEyWFJ3dHcwYnpvR1Zia3hSVjJZRWNEQnQzdmdpTktSZlpBZFlSclRYRWJMS2trTFl2cnBFTm9wb2lJdTR6XzRNYVc0Q1pEVU5YRWg4NUJycXNQczBfRl9OMjFiZDQyYk1sODFiR0o3UnVZOXJ4bktnd1ljak1vcGQ0QlJHbkRvU2tlOV9mcTFkVUk1YU5jd3pTSl9TV0MzaDllZ1ZPclJ3ZTV2X3R5MGxTWFJnTnlOVmxsUQ?oc=5",
       "source": "news.google.com",
@@ -207,10 +225,18 @@
       "category": "general"
     },
     {
-      "title": "Affrontements en Albanie lors d'une manifestation contre un projet immobilier lié à la famille Trump - Le Journal de Québec",
+      "title": "Le Québec compterait près de 100 000 logements vacants - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWXVhX01DT1J6bFFkWkV0Yk5DN0RwQ1F6QjU2QUh1Z1M3M0dUaVJKZ0g0NldOU1pkZ3ozX040Q3RsdzFoNjQ4bjlHUkhodEFPaHJVT2FsWHlQaFZyOTNSbDVMNlRoRldrbTZRSFV4MlRoVFluaHNSak1SZlcxMFlfdjJTdTFvZTJVQ0VVVw?oc=5",
+      "source": "news.google.com",
+      "description": "Le Québec compterait près de 100 000 logements vacants  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Affrontements en Albanie lors d'une manifestation contre un projet immobilier lié à la famille Trump - Journal de Québec",
       "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPNUo5RXpxaFB5Vmp6d1lnUFFlSGpyY0NfcGxXLTN1YWY1NTc2SGxpUE9BbEN6dnltcUotS253WmFpVko5eW5qaGp1QVhVVml4TThuNDc3TDJZRHFIZDdLRlVHRDFsZVNlZHFMaXBsSWItSWxpNHU2S1V4Ykg0RUpxUWpheE93TGUxYnIwYVRudmJlYS03dVZsM1RGOU9rdDFCVkFfM01uSXhIUVRjYW4zV3BjZUtIS1lueGEwRUp3VkpOQlM3SWQ2NU0yNXNZWUxJM05zNGZoNG1tdw?oc=5",
       "source": "news.google.com",
-      "description": "Affrontements en Albanie lors d'une manifestation contre un projet immobilier lié à la famille Trump  Le Journal de Québec",
+      "description": "Affrontements en Albanie lors d'une manifestation contre un projet immobilier lié à la famille Trump  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -223,26 +249,18 @@
       "category": "general"
     },
     {
-      "title": "PATRIMOINE IMMOBILIER La MRC de La Jacques-Cartier adopte son inventaire - Réseau d'Information Municipale",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUkpPTHZWYUxsSzdFZEhfd0p6UzhDQVBza1NUZG9EejVqbWQ4UjM4bUhXUzBPSC1BeFdnWjFucFZTVGxKMm1OZmZhVll2dE9qSVFob1FTZDVZVUZnU2J5OXJ0eEktSV9tbDM2bUc1ODNDNHpUT3k5cE91Ujg5UGxkTFFWcDJzRDk5aWg1TDEzX25tVEtua1JBNVdTTGROa2RpM1p4MzA4a1piMGUyZE14R2U3WWpyWl80ZlhnMy1rTQ?oc=5",
+      "title": "Québec veut construire des maisons à moins de 350 000$ - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQRVRYS05PZmxJTkx5S0s3ckFlY0ctQ19lSk0yQ2VQMXN3Ym5tRGdNeTVLUEpDVktONFg5bTNubGVCQUlvVlk4ek9Ld0dfRndRTG8zVzZkYmFsN21HeldiYThGZ0thaU9ab1ZfU1hyU0ZZZ0NxTmlONjMwalB3U0xwR2tIejkyZlVDZ054bGstUjhvUS1Eb1IxcWZ1a1BPYTBmM2pMYzBxSkUxZ0hLZmQwNnA5TGJGckpqUlExYWlWME5GZjV6UDc4TTVuZU1oN180R2xvX0FR?oc=5",
       "source": "news.google.com",
-      "description": "PATRIMOINE IMMOBILIER La MRC de La Jacques-Cartier adopte son inventaire  Réseau d'Information Municipale",
+      "description": "Québec veut construire des maisons à moins de 350 000$  Journal Métro",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Investissement Québec: des bonis moyens de plus de 12 000$ par employé - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYVg4NzA4V3pLVWxTN2sxYXlPczBaTWZkeVl1UVJvTjh5cEJ2NlAyQXVLRC1JUDhpRWF3c2hIdG5lZ21jMkFwOVdSdm41ampSamZVY2dLNGcwR2diS25qTUtkOVZpR0pGVGFaQVNHSDZWVG9lZEFGYnhRS3BLZUVVV3hFLV9xUk1yV1hBbEpKRXpvUTZnaEVHM01wNHhKLW8tVXNicEpSRzJNWjVl?oc=5",
+      "title": "Thermopompes résidentielles : investissement de 350 M$ | - cmatv.ca",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdzhVS1M1QkxNb082TXdIV2ZiVmVCN3djMUsyZjFyT08zZnZLWjRqektzQV9HT2JHR2g1SkFwcmN5LVNVWVR2U29WTXVrLTlFdzFiWUFIb3J6czJtSU0tbnNickZmMFVMWDFSSk1NcHVwMUlVd2ZrQnJnaU5xX1Mwc3BfYndraUE?oc=5",
       "source": "news.google.com",
-      "description": "Investissement Québec: des bonis moyens de plus de 12 000$ par employé  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les gouvernements du Québec et du Canada ont soutenu la construction de quatre immeubles de logements adaptés et abordables à Matane - Mon Matane",
-      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxORE40MmNGWE1scEkwVGRMaFZKbW1lUlRyNFAxelRlT2pBa094WTFHbHg3NU5MVHRoWEtfUnR1VEYwejRoc3Etc3hPSkMxNXF3RFlHQ0JlcHNjTjMwUHZaRW1oeHc2ZmptcG4zXzVsVERab3VVaDdqcWJuVVR1c29CbUtmMjlDbXJRU1dtWkRfSXd2Z3NMUGxhVGZaZUJ0ZTl6ZHpOd0h2Z0o1cjVyZk1mVXdMX0d4MFd6Z1BiLTg3Y1BOYlVUTWU0aVBsM243Z1Jqa1lZTnpQc29GS0p2SnFMd24zTW5RWXFmbmdIRERuU1FGWVh4WXpjNWZB?oc=5",
-      "source": "news.google.com",
-      "description": "Les gouvernements du Québec et du Canada ont soutenu la construction de quatre immeubles de logements adaptés et abordables à Matane  Mon Matane",
+      "description": "Thermopompes résidentielles : investissement de 350 M$ |  cmatv.ca",
       "cities": [],
       "category": "general"
     },
@@ -257,26 +275,10 @@
       "category": "local"
     },
     {
-      "title": "Gel des loyers au Québec?: «Les politiques actuelles n'ont fait qu'empirer la situation», dit cet expert - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE56eDMweVVjOGJnR3pzQWpKMFJXSVUtRGowS3F2aHoxaHNPTXlYWWphaDNRTmJXQ0VUV2U0dXlKdVN3Qml3QTN3Rk5NbjB4dmViWndBU085YzZ4NkpPT3ZUTGlaNXlHb1p6eFE2SEgyRGxzRUphOU43RXRWYzF4QQ?oc=5",
-      "source": "news.google.com",
-      "description": "Gel des loyers au Québec?: «Les politiques actuelles n'ont fait qu'empirer la situation», dit cet expert  QUB radio",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Guy Hoquet l’Immobilier booste son développement en mettant un pied au Québec - Observatoire de la franchise",
       "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNLXBHMlZiWVVQZXNyLWp2endtdzFwX3pfa0h2WThQNnFfeHNJUDFFUFJoWkNDNU5YbTJNOE5JMUctbWNnLTRwR1lJcGtFTzZ2YlJpY2c2MnlVRXM0WUJIRTMxb3FiaUdMUGh5dHJsdXNLdDFFWVVoRUNUT2dDWFN5YV95dkZBVkZSWEpWNkt1VFRLVVh3SHVFd25fVzg0UXZBcS1uaFJOQllwLTB6RURJdlVVci1peG9Pam03S2Qwc0JaNHM3VktBT1JaVW50SmhYUEpvYXl4cjkxbzNzQ2wxanJwQlg5eC1sUXFWUUd1THdTVVRySTVOX0N4a0hZTU5pV21Gcy1n?oc=5",
       "source": "news.google.com",
       "description": "Guy Hoquet l’Immobilier booste son développement en mettant un pied au Québec  Observatoire de la franchise",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Gérald Fillion : le Québec mise sur les quartiers de maisons préfabriquées pour soutenir l’accès à la propriété - Traders Union",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWW4xeHZrSHZ3czZpVkpvaU9BY1NQUndsU1ViSGRfcmdMa3RXTWE0SFVMWEdMY2FiWktGdEkzMWlIYjhYUFYyc0ZoUnEwdERrMkZhcmtfVWVicXhTYkFEM2xuYWJTM1g5LTUtWTdaY0ZwUVJQWUk4NmdRMW93bUgwRDJuajR5UHFpUnRGZ1VrbVc?oc=5",
-      "source": "news.google.com",
-      "description": "Gérald Fillion : le Québec mise sur les quartiers de maisons préfabriquées pour soutenir l’accès à la propriété  Traders Union",
       "cities": [],
       "category": "general"
     },
@@ -289,26 +291,10 @@
       "category": "general"
     },
     {
-      "title": "Prix du pétrole : évaluer les risques grâce aux marchés des options - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE53NUJTUnRNWGxGTnptT0Z3Q1ZVNW1IUlRfcWJ5TDdKNktnbUNHWDUtZDZMUnB1R0JMSnhHM19GcEtMV2FiNm9YbjFqZkJsTWU3Tl9fcTVsbUxTNkZaV0pBWHhvN3FKMkxyNDl1VWJGS2VXVnlmT3BPbQ?oc=5",
-      "source": "news.google.com",
-      "description": "Prix du pétrole : évaluer les risques grâce aux marchés des options  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La Banque du Canada maintient ses taux - Morningstar",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPcTBYeVR4emxtd1hkSXNUQjJkRVdZUGVRWTl5T3V3UmFoX3N2bThjeGFZTml0bFJSX2tBZ2hZcTVBTy1DN3ZpeFc1dndrWUw1RG8wcTNIRjZubjN6MzZjVWVhYVhXU1lMZVRpektUSjFnUHBlNDdESXdZcS16bmdmLUo0dktzMlE2TTY4?oc=5",
       "source": "news.google.com",
       "description": "La Banque du Canada maintient ses taux  Morningstar",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Inflation : la Banque du Canada sommée de jouer franc jeu - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYWlkSnlJWDZ2Rk5NNG1LbnpjOTN3YkFzTjhzTjZmS21vSVhHUEVXUVc5UEtvWVlSeXl0QVVVb0U4bFpjakNuNkt5eTNxMGRXbVBocktWa1Rtd1VxdEtmbWJ5Y2hSYm03OWVvb1V4cHFxa2lUVnc2ZTN1aTQ5Y2FtVzZsU1BRTVI0UTJSSVZDcHNfNExyRGpCeUJ3YnctSmtNeXdGbEJrZTRVWHo4V25rUmZB?oc=5",
-      "source": "news.google.com",
-      "description": "Inflation : la Banque du Canada sommée de jouer franc jeu  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -337,6 +323,14 @@
       "category": "general"
     },
     {
+      "title": "Soyons La Solutions ! À Ne Pas Manquer Le 21 Octobre Bank Of Canada - Banque Du Canada (PezC92E0nA) - Mshale",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5WWJlU2FCSmVKX1VVWVJac2h2WEFna2UtbTQ1MDRlbEtRWDVRN21HbDlOODlZRVhuYW9Ndzc4VldZX3ZvU1hna0s1MGItWnhiUGZMdUJWWW1MTDg?oc=5",
+      "source": "PezC92E0nA",
+      "description": "Soyons La Solutions ! À Ne Pas Manquer Le 21 Octobre Bank Of Canada - Banque Du Canada (PezC92E0nA)  Mshale",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La dette gouvernementale doit élargir sa base d’investisseurs - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOOTFKaWZPZVAyTjNtaktRaGJ3TjRJbnpfUVZCUUhVa2xXcG5WOF9ranlaUEozM2lsQ3JUanNkak5vcGkzblJTVnZvYVRHWTNuZUlYUE1SelZFdktJbTR3ZDg1VDJlaV95cXVjVFA1VEdWaGFOakYxOFhpS0xSaUFhY2NoWmZUVTF6UDVtRDJ3TEpralJYdE1uUXU4UTJtWVJGbVZ1dDJmUGVDb19KQ3N3?oc=5",
       "source": "news.google.com",
@@ -357,14 +351,6 @@
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNM0JpaE5ER3NHRDJQeUhMR1l0bDNtcl9NcWlZYnl1YWlzZUd4UGM2RjdwblBSRURaeTE1RXllM05WVXpsNzB2M3gzNDBORVl2dHg0bVlENzRSY2xQeU1pUmZsYXdsRGN1WW5XLXFJMm5yeW5HYlNhVEE1NEI4SFB2Mm9CTnMyalM0Yk4tQjZ4MUpzVkpacEUw?oc=5",
       "source": "news.google.com",
       "description": "La Banque du Canada laisse ses taux inchangés  Morningstar",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Kevin Warsh (Fed) réaffirme à Sintra qu'il ne donnera aucune indication prospective sur les taux - Boursorama",
-      "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNWjJONEsxclBTYzFPanVsMTFGSV93RW5DVlFjTHhtb1Z6VjRsY1dBSzlVSnR0YTJKS09vNlVYaG1td2xMaU82R29LQjBfQTZycmNpUUstRXgwWEY0b05oblA3eGRCX3hONVo1dHcwbFdkMF9Yb1QyU1FuZzg1RnY5ME9vYXBPN3FWTm05ZTdSSmpUbXBPaWRQSHdGeVpNVUpGcC1TSmdaS3F5eFZWcWVrRngzNlpyRlhIci0ycktJUC1FS21yU0E0MnpRNG8wSTlhX0FaMmhHZEpUdGMwWjROTlZtUzVuU3UzS0Y1SWlZd1NvdnppQ281ZVA3SUFFVFNtZjJxdXFnS0JWR0Fta2lpTC0zRDk0Wm9BR2fSAZoCQVVfeXFMTVoyTjRLMXJQU2MxT2p1bDExRklfd0VuQ1ZRY0x4bW9WelY0bGNXQUs5VUp0dGEySktPbzZVWGhtbXdsTGlPNkdvS0IwX0E2cnJjaVFLLUV4MFhGNG9OaG5QN3hkQl94TjVaNXR3MGxXZDBfWG9UMlNRbmc4NUZ2OTBPb2FwTzdxVk5tOWU3UkpqVG1wT2lkUEh3RnlaTVVKRnAtU0pnWktxeXhWVnFla0Z4MzZackZYSHItMnJLSVAtRUttclNBNDJ6UTRvMEk5YV9BWjJoR2RKVHRjMFo0Tk5WbVM1blN1M0tGNUlpWXdTb3Z6aUNvNWVQN0lBRVRTbWYycXVxZ0tCVkdBbWtpaUwtM0Q5NFpvQUdn?oc=5",
-      "source": "Fed",
-      "description": "Kevin Warsh (Fed) réaffirme à Sintra qu'il ne donnera aucune indication prospective sur les taux  Boursorama",
       "cities": [],
       "category": "general"
     },
@@ -429,5 +415,5 @@
     },
     "last_quarter": "juin 2026"
   },
-  "last_update": "2026-07-03 15:08"
+  "last_update": "2026-07-04 14:27"
 }
