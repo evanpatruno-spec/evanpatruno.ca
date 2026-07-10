@@ -3,9 +3,9 @@
   "Mois": "Juin",
   "Annee": "2026",
   "Taux_BOC": "2.25%",
-  "Contenu_Article": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue: L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immob...\n\nMarché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur: L’Île-des-Sœurs, le 3 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de juin 2026. Les plus récentes statistiques...\n\nRMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution: L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immob...",
-  "Citation": "L'investissement dans la connaissance paye le plus gros intérêt. Investissez sur vous-même ! – Benjamin Franklin",
-  "Astuce_Pro": "La menace d’un conflit social majeur plane chez Volkswagen : Les salariés du géant de l’automobile Volkswagen se sont mobilisés jeudi contre les plans d’économies « brutaux » dénoncés par IG Metall, tandis que la direction prépare une restructuration susceptible de devenir la plus importante de l’histoire de l’industrie allemande.",
+  "Contenu_Article": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue: L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immob...\n\nPrêts hypothécaires | Le choc annoncé n’a pas eu lieu: À mesure que le contexte économique se détériore au Canada, le nombre de propriétaires qui accusent du retard dans leurs versements hypothécaires augmente, mais il reste bas par rapport à la moyenne h...\n\nMarché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur: L’Île-des-Sœurs, le 3 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de juin 2026. Les plus récentes statistiques...",
+  "Citation": "L'immobilier ne peut pas être perdu ou volé, ni emporté. Géré avec soin, il s'agit de l'investissement le plus sûr au monde. – Franklin Roosevelt",
+  "Astuce_Pro": "Négociation : Le prix n'est pas tout. Les conditions de clôture ou l'inclusion de certains électroménagers peuvent peser lourd dans la balance.",
   "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-06.pdf",
   "campaign_id": "NL-6-2026",
   "month": "Juin",
@@ -25,15 +25,15 @@
       "source": "APCIQ"
     },
     {
+      "title": "Prêts hypothécaires | Le choc annoncé n’a pas eu lieu",
+      "summary": "À mesure que le contexte économique se détériore au Canada, le nombre de propriétaires qui accusent du retard dans leurs versements hypothécaires augmente, mais il reste bas par rapport à la moyenne historique.",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-07-09/prets-hypothecaires/le-choc-annonce-n-a-pas-eu-lieu.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse"
+    },
+    {
       "title": "Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur",
       "summary": "L’Île-des-Sœurs, le 3 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de juin 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Marché immobilier : La RMR de Montréal poursu",
       "link": "https://apciq.ca/marche-immobilier-la-rmr-de-montreal-poursuit-son-ralentissement-graduel-alors-que-quebec-maintient-sa-vigueur/",
-      "source": "APCIQ"
-    },
-    {
-      "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
-      "summary": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est",
-      "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
       "source": "APCIQ"
     }
   ],
@@ -58,15 +58,15 @@
       "source": "APCIQ"
     },
     {
+      "title": "Prêts hypothécaires | Le choc annoncé n’a pas eu lieu",
+      "summary": "À mesure que le contexte économique se détériore au Canada, le nombre de propriétaires qui accusent du retard dans leurs versements hypothécaires augmente, mais il reste bas par rapport à la moyenne historique.",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-07-09/prets-hypothecaires/le-choc-annonce-n-a-pas-eu-lieu.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse"
+    },
+    {
       "title": "Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur",
       "summary": "L’Île-des-Sœurs, le 3 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de juin 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Marché immobilier : La RMR de Montréal poursu",
       "link": "https://apciq.ca/marche-immobilier-la-rmr-de-montreal-poursuit-son-ralentissement-graduel-alors-que-quebec-maintient-sa-vigueur/",
-      "source": "APCIQ"
-    },
-    {
-      "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
-      "summary": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est",
-      "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
       "source": "APCIQ"
     }
   ],
@@ -78,15 +78,15 @@
       "source": "APCIQ"
     },
     {
+      "title": "Prêts hypothécaires | Le choc annoncé n’a pas eu lieu",
+      "summary": "À mesure que le contexte économique se détériore au Canada, le nombre de propriétaires qui accusent du retard dans leurs versements hypothécaires augmente, mais il reste bas par rapport à la moyenne historique.",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-07-09/prets-hypothecaires/le-choc-annonce-n-a-pas-eu-lieu.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse"
+    },
+    {
       "title": "Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur",
       "summary": "L’Île-des-Sœurs, le 3 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de juin 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Marché immobilier : La RMR de Montréal poursu",
       "link": "https://apciq.ca/marche-immobilier-la-rmr-de-montreal-poursuit-son-ralentissement-graduel-alors-que-quebec-maintient-sa-vigueur/",
-      "source": "APCIQ"
-    },
-    {
-      "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
-      "summary": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est",
-      "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
       "source": "APCIQ"
     }
   ]
