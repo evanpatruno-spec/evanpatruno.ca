@@ -89,20 +89,30 @@
       "category": "general"
     },
     {
-      "title": "Train de vie | Vendre une propriété pour mieux respirer à la retraite",
-      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-07-12/train-de-vie/vendre-une-propriete-pour-mieux-respirer-a-la-retraite.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "L’OPEP revoit à la baisse la croissance de la demande de pétrole en 2026",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-07-13/l-opep-revoit-a-la-baisse-la-croissance-de-la-demande-de-petrole-en-2026.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Les régimes de retraite donnent une grande sécurité. Mais les rentes ne fournissent qu’un pourcentage du salaire et il est réduit si la retraite est prise de façon anticipée. Les personnes retraitées qui souhaitent avoir un revenu semblable à celui de leur vie active ont avantage à faire d’autres investissements. En immobilier, par exemple, pour encaisser des revenus de location ou pour pouvoir vendre une propriété au besoin.",
+      "description": "L’OPEP, l’alliance de pays exportateurs de pétrole, a de nouveau révisé à la baisse sa prévision de croissance de la demande mondiale de pétrole pour 2026, sur fond d’incertitudes liées à la guerre au Moyen-Orient.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Le portefeuille fictif de La Presse | Surpasser les turbulences à court terme",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-07-12/le-portefeuille-fictif-de-la-presse/surpasser-les-turbulences-a-court-terme.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Achat du Château Montebello | Débouté, le groupe Andlauer écorche Québec",
+      "link": "https://www.lapresse.ca/affaires/2026-07-13/achat-du-chateau-montebello/deboute-le-groupe-andlauer-ecorche-quebec.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Après un deuxième trimestre fructueux en Bourse malgré les fortes turbulences géopolitiques et pétrolières, comment se profilent les perspectives d’investissement pour les prochains mois ? C’est le moment du tour d’horizon trimestriel avec les experts du Portefeuille fictif de La Presse. Un dossier de Martin Vallières",
+      "description": "Débouté dans sa tentative d’acquérir le Château Montebello, le groupe mené par le propriétaire des Sénateurs d’Ottawa Michael Andlauer reproche au gouvernement Fréchette d’être resté sur les lignes de côté et affirme que l’emblématique hôtel demeurerait détenu par des intérêts hors Québec.",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "Univers PME | Seconde Édition voit grand",
+      "link": "https://www.lapresse.ca/affaires/2026-07-13/univers-pme/seconde-edition-voit-grand.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Avec un nouvel atelier boutique, un site web tout frais et deux robots prêts à accueillir les clients, la jeune entreprise montréalaise Seconde Édition est sur la rampe de lancement. Vous cherchez des lunettes uniques, écoresponsables, qui allient un look rétro et moderne ? Rendez-vous dans l’ancienne usine Cadbury de la rue de Bordeaux à Montréal.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Meta fait appel d’un verdict qui l’a jugée responsable de créer de la dépendance",
@@ -121,12 +131,22 @@
       "category": "general"
     },
     {
-      "title": "Vendre sa maison soi-même : 6 conseils d'un coach immobilier de la région de la Capitale-Nationale - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOSmRnbWU1NzZCLWp4WmZZWVRKcTRGbV9rZWZyV0IzazJxaUNmblNtQlBERW9IMG9ZajVya2hpUWpSei15eTBZVGdDMVFDVmY4ZERjS1IxZnpldVdweDVWMVJfVXpoYTJUaEpxMTYwRmJhQ0ttRUk5MDRpZDNtdl9YUmwtbmN4MEFqVXRWdkFOdEc2clJOay1wNXh6OWd0Y1NWaE9EN09zLVFrS3haa3dQNzVybEFqUjlhWnV6eVB1TkJKNE94Y3pzWEtyRVE2OWROVk5lcWlB?oc=5",
+      "title": "Marché immobilier du Québec — Juin 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObWJWMDllR1NIQWF0cnVmbUc1cUFzSVJUb3N0Wl95T1ZhNGRUaVpPRDk4QzlISHQ0OUgwbzQ3S1dZcnFYcmpKY0s0NHpzQ0U5dGFPMzNlaVZXMTVNLVhBVGxSZ1otVjdkMER2ZFl3dkJsRVBzb3V3MVkzeWtfWWJvRUZKSUpEZHlwcGMzUHBpQUt4ZnF5YXEzWVdjWWVCQ3o5Z09vQlZvb211d3NuRFozamRB?oc=5",
       "source": "news.google.com",
-      "description": "Vendre sa maison soi-même : 6 conseils d'un coach immobilier de la région de la Capitale-Nationale  Journal de Québec",
+      "description": "Marché immobilier du Québec — Juin 2026  Journal Métro",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "Immobilier : prix, délais, négociation — le vrai portrait du marché québécois - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPYVlwZmtSQV8wQi0tbEZHcFBSejhfX1FRZHpza0FPcFBqbW9Ecmx3NlIwZlVuVDNKbnpNR1ltVTJkeDFQZ3FWYjlzamVVcHhGNXJZWWtYckoyM0wxTDZDQmFpdFVHNjBNUkFvVlVCWHdkb0VtWGZNeFJjaVVIc3hhWTNvelpzbEsyQ2JTX3JoTjE0V05rTlhscDYxejBJdWpQZ1VRV0lVN0FDNkZpYnkyN3RsUjUyTnM0Y2c?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier : prix, délais, négociation — le vrai portrait du marché québécois  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Accès à la propriété : moins de nouveaux acheteurs au Québec - Radio-Canada",
@@ -147,12 +167,14 @@
       "category": "local"
     },
     {
-      "title": "Meilleur taux hypothécaire au Canada | Comparer les taux hypothécaires - Ratehub.ca",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
+      "title": "Marché immobilier du Grand Montréal — Juin 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX3MwR3BZSW1NREl1cjgxRnF5cFBsMi00eU5uVXI5ODFyQ3YybTU4YWxZSXlOVTdNMnEyU2RhRGg4bDZqOWFYM1lYTG5fbXFyUjJoRVVKdHJRZnh5cWxKSURiUDczU2tFUlpFQnQyMHVYZFFzRnBSQnJjd0Vac0czSW1DcWJBYmpuQ0YwdVc3bFpfVVBoRk5nMG51WFh4MEJtMzRjY0NpQ0t3T0N1TmFHcktYcGk2V3c?oc=5",
       "source": "news.google.com",
-      "description": "Meilleur taux hypothécaire au Canada | Comparer les taux hypothécaires  Ratehub.ca",
-      "cities": [],
-      "category": "general"
+      "description": "Marché immobilier du Grand Montréal — Juin 2026  Journal Métro",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Marché de l’habitation : vers une reprise au Québec - conseiller.ca",
@@ -163,12 +185,53 @@
       "category": "general"
     },
     {
+      "title": "Comment l’intelligence artificielle trompe-t-elle les acheteurs immobiliers? - 98.5 Montréal",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWUVzR3R6dWM0YU9wTEh5d2tESVd4UG5va2J2Sll2enQ5cm9sNk5lUG56Y0FkaDVXb2FEMG80dWxnTVU2MEduU3dHTlpsVXFYZXR0Z3JYdDJ4cTN4MUxDM2RBYzlrYmliX1Y5TlE2NmpoRV9FaXptWnNyTlQySWV1OFVxbjU5Z3dIZjJuTWlLX1AtX0FzSjNLRmlVNFNrQTBnaElyRDBfSjUwaTlycUE?oc=5",
+      "source": "news.google.com",
+      "description": "Comment l’intelligence artificielle trompe-t-elle les acheteurs immobiliers?  98.5 Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Une maison s'envole pour seulement 175 000$ dans les Laurentides et 70 autres transactions dans vos régions - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNT2c2eGkwVlkzcW9uWG1Ta2lTR3RRQkFiM2wyckJNMk1hemxZY096LUF6QTUzOXpxMlZhX2NsQlRHQ05xYkprX25pdUV1eGRwTENyRWNwWTlWNjJkb1F2NkdCQkpUOHd4VGhleG5MamVSNTNvT3hhNjBiUXpfZEFoRi11STNwRmJobzZoZkhHYVBpc0dwa1I1V21fV3BUU2lQcXRQNmYxdHNraURnbzA2R0V5N3JTN3dwNmZGM0pXdkFSeXpRUG4xY0tfbXI0LU5ZZ3czQXpoMlN6RkFvcXpoRzFDQ2k?oc=5",
+      "source": "news.google.com",
+      "description": "Une maison s'envole pour seulement 175 000$ dans les Laurentides et 70 autres transactions dans vos régions  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
       "title": "5000 maisons en banlieue : Marchand loin de livrer sa promesse électorale - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNeXVfZHRkbWN4VU96RlhQQVZ1NDRlRjRrUnpfX0hZZDRRbkxzZm1MTXktYXJJMXpkSVFZYzZNa0p4UnFJU3h1bklXR1lzRk5CcEJqOUtQbnVRWV96X3E3c0JrYVpfVzJVVkMwOWRQYjFZWGJOTEItc2liSUdlaG16cDhadEswd2FWRDV1NQ?oc=5",
       "source": "news.google.com",
       "description": "5000 maisons en banlieue : Marchand loin de livrer sa promesse électorale  Radio-Canada",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "Marché immobilier de la Rive-Sud de Montréal — Juin 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSFpFUU1FRVk4cUQwRS0wajgwaDRYY20xb0tzLVpVS19sXzJIWFd3dExLR3VoNDhjbGhXTlVMcXJzcW5zNmlKOERBcVltS3hqeENQYTgzMVktWHV1eUtaVEFuVEVRXzVfZ3Fkb1pwVWh6STk2aWYxSDJNdnZPVXhLQnpmUnRCWjRpcUNWb1UycnljQl9fSVZNbFE5dzNLNjJrU2VBcnZEcEtpMk9oT0RlMi1WVkd4OXNVU2NqTVdSajJhTHM?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de la Rive-Sud de Montréal — Juin 2026  Journal Métro",
+      "cities": [
+        "montreal",
+        "rive-sud"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier de l’île de Montréal — Juin 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNb3UzdVJ5ZzBYM0hELW51SWV2Vk1naG5rZzBzbzI2Q3ZuMFQ4VXRvclZidjIxSGREM0Z5cE56TG1kZkRuS21pLXduaGNVQ05EVXc5SHgtVjZrQk8tY1llUU14Z3ZSc3lxcnNlMUpad1AyblE0UlFHcmJOS3BHa1ZjaDNmUkNnTkM2QzZwUWo2Q1BKdEFrMTZNYzhidmZnaEZnc0VOZlFMNEp0d0FYT0FzTnFEUTVVYjdiMFE?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de l’île de Montréal — Juin 2026  Journal Métro",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "La SCHL se verse des millions en bonus, déplore la FCC - Le Journal de Montréal",
@@ -181,22 +244,12 @@
       "category": "local"
     },
     {
-      "title": "Scotia admet une erreur d'inscription hypothécaire: un investisseur de Châteauguay poursuit la banque pour 10 M - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOUm1mcDlhelBjYThkelRBeTYtMlN4M2hUSDhkeDVhLXFUdTRmYTNaNERNNTdfYTc1X2gtNnNyT3lRdXJNeURXSGtrV2R2NzJ0d3hDMW1qUUVLNDY0c0w0cDBxUnBTdHJjTkVoWkNHcWcyemJPczhMWjk4bjRvZVFaaDVvQjh5ajVRQUQ0RUJfQlY5OVFpS1ZkSWhwbXR0VXVXWVpSY3JYRjVtbkxYUGpmbzRSQ2ZTZzl5dmVFSThMUjRqYVoxMlFVSl9fdjZJR3ZxUWlYV0JwUFRqM1ZDWThJY3hJempUM3BjNWtRRy1Ebnl1eEs2?oc=5",
+      "title": "Marché immobilier de Laval — Juin 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVldsTV9rMk5YMmk1SWZ6UUVYYnRoeHRJb0lUSnIzRHB6MDhWZjdnNUFkWUpNUGpmYWpLUkZMZWlCSkt5TFFuZmRhMk1vRzgwc1pZRWZJS1ZUNlNmLTU0V0pTMHpEXzN2dG9qdUpTTy1VaWRtMFBpejYxU3BralVBOW15MTNZU3NKYWVSZ0ZIZ1c4ODE4UkF1Z1RJWWh2MUljMmVpTUVVV25aMXNQVnVvRw?oc=5",
       "source": "news.google.com",
-      "description": "Scotia admet une erreur d'inscription hypothécaire: un investisseur de Châteauguay poursuit la banque pour 10 M  Le Journal de Montréal",
+      "description": "Marché immobilier de Laval — Juin 2026  Journal Métro",
       "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Renouvellement hypothécaire: ce que votre banque ne vous dira pas - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQX0k5QkFOeEJFa1FBSnROOTl0UkVTNWhoSVE0dnlGYWdfNlEwRmxBNjZlQ1pwQWF0UWJFcXVsWlV0dWNiQ05UOUllb0E3NjZpa2k0TC1NU1VLNXAwcUJGX3I5UHZkdkU0REVHMUtoOHNCbVJGcDJJQ0x2UWhRS2tuMko5ekphOXViX3JrRzdTWXdnbUpOdEVqMnZQc0VIYjRoc05EbHpWcFo2alZWakpB?oc=5",
-      "source": "news.google.com",
-      "description": "Renouvellement hypothécaire: ce que votre banque ne vous dira pas  Le Journal de Montréal",
-      "cities": [
-        "montreal"
+        "laval"
       ],
       "category": "local"
     },
@@ -217,18 +270,10 @@
       "category": "general"
     },
     {
-      "title": "Le taux de chômage baisse au Québec et au Canada - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTnVkR202bjhWOFRYdWt1cWRHRWpheWJWYzRPMjVqeVJNN084LTlIVkVZbW14emswMndMalB3QXE4WjlZTUNhcGU1TDZVUWhTVTRTTTRheW95Tm9zX3ZHbDFXSUtxU2NpaTc4elduZGFmNGNnb3QyelQyM3pQWEZ4QlNiREpHUlhWdE5mMmRkWF9zWmViclE?oc=5",
+      "title": "La Banque du Canada devrait maintenir son taux directeur inchangé une nouvelle fois - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNTZLQXdDU0kwTWIwUV9mX1B1NFV3Z1dyTVI1NjlaN29kR3ZoWk93ZHFud2lBQWFPemNGRWZqRGxBVnMyWUNKV3ZYaVRDUGRTYVZWanlIRkJsbEtfd1RadTZCQWphTnR6d0tiY2lLNF9XbzhReWRTTDY2ZnNWZk03SHJjNU1QbmVZWkpjMk9aVlJYZVQ3WklJZHZJdko0U0FhQ05BdlJUMDk3R20wVTBRVTBxMjVjN1JhY2daamNGTGVKYTN3aVNRcXdBZ2FiT0E?oc=5",
       "source": "news.google.com",
-      "description": "Le taux de chômage baisse au Québec et au Canada  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le moment idéal pour acheter une propriété ? Pour 61 % des Québécoisa, il n'existe pas : sondage RBC sur l'accession à la propriété - Lelezard",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE51Y0pfc2kyVE1rUy1ScXBXdGRlRmdQdUN5U0QyV1psbWZiU05BRXlMUkpBZkRxRy1UdFd1Z0RWUmF6LVYtYllkVmc4MS1JaTU4ZXFWZmVjT1dmSklrQkE?oc=5",
-      "source": "news.google.com",
-      "description": "Le moment idéal pour acheter une propriété ? Pour 61 % des Québécoisa, il n'existe pas : sondage RBC sur l'accession à la propriété  Lelezard",
+      "description": "La Banque du Canada devrait maintenir son taux directeur inchangé une nouvelle fois  Noovo Info",
       "cities": [],
       "category": "general"
     },
@@ -241,10 +286,18 @@
       "category": "general"
     },
     {
-      "title": "Contrat à des agents de Garda | La Banque du Canada aurait enfreint le Code du travail - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNNFotNG9QUUkxcllVclFvazN5NkxfV1BFTjdFNVJHZndONjM3T3FIN2pwSjV3blBVbkdYUWhLX2k5VXNzNUJWNkx0NXRwTHRhV3RhMW5sT29nTjBSdnhqSTJPLXVDY0ppN3p2bFZILTJ5R1dJQVd5U3FXN0RDMVpTUjdiMU9fUk9acUZvTUI1UHlhQ0M1ZmtWaENqSUFKV0ZiMHZmQ21wNTJRSFpwRE00WTBWU181M3drUnVWLUdPMDJJMUJab0V4WVVmamo?oc=5",
+      "title": "Le moment idéal pour acheter une propriété ? Pour 61 % des Québécoisa, il n'existe pas : sondage RBC sur l'accession à la propriété - Lelezard",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE51Y0pfc2kyVE1rUy1ScXBXdGRlRmdQdUN5U0QyV1psbWZiU05BRXlMUkpBZkRxRy1UdFd1Z0RWUmF6LVYtYllkVmc4MS1JaTU4ZXFWZmVjT1dmSklrQkE?oc=5",
       "source": "news.google.com",
-      "description": "Contrat à des agents de Garda | La Banque du Canada aurait enfreint le Code du travail  La Presse",
+      "description": "Le moment idéal pour acheter une propriété ? Pour 61 % des Québécoisa, il n'existe pas : sondage RBC sur l'accession à la propriété  Lelezard",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Annonce à venir mercredi | La Banque du Canada devrait maintenir son taux directeur inchangé - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNMWh4ZkJST2hfMFlGb1lUYzc2MFdGc3BqREtVS3ZIcVY2ejNFQWc3Y1VPT2JWQmRiTjJGZVNSangxUXB2YnNhM1JCb1N5Nk5vOTQtNEw0ODloZlhGUjI4ZXhNZjMwRUUwUkhrMzlRajN4X01WSGtDOHI2VWF3dkRkMzJuUWRTbDBhVkRmdDY4V21iQWcwWHIwNlp2LVM3c0NDZG92cEgtZGI2dXJfbnRqT3NyTEVlVDJDNldsV0pJLXl2UGxyMmhYM05mdUlGRkFyRkdYSml5bTJxLTFoMEM0Rw?oc=5",
+      "source": "news.google.com",
+      "description": "Annonce à venir mercredi | La Banque du Canada devrait maintenir son taux directeur inchangé  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -253,6 +306,14 @@
       "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE51ZHMwbXI1aW4wSF9jcFhmRExYS2dOR253STBNQWJDVjBBRmF4bWkyT3BTQTBzSjgzYjdVVWhUY3A0WEJvQlp1U0VTV09FbHpqVkM2aWtLSnBzS0hzSzdkanp6N0NTZDdUTndoUzZIMzhYVk9DRWVKdGRINXV3QQ?oc=5",
       "source": "news.google.com",
       "description": "Victoire à la Banque du Canada : la loi anti-briseurs de grève fonctionne!  Alliance de la Fonction publique du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Conférence de presse : Rapport sur la politique monétaire – Juillet 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbVJfNzZFQTFacTlWcjlBVDZvMjhIN3VULWVBek45amNpQUxyVGc0WmRqSTJSRk5PZmdlaXRjNVk1RTZfejdsV181eXZNWTlYZUtNVXRESnl2Y25JVkJuakFQeHR6c21rMWluVmhGNXVMT2FyM0JGMGpGQjd5RlJSUTRpMnZIZG15R1pGbmdGV0c0REVKbG1sa3BvV2Y2TTY1R1F0djJqODl3UEF1aU13?oc=5",
+      "source": "news.google.com",
+      "description": "Conférence de presse : Rapport sur la politique monétaire – Juillet 2026  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -273,10 +334,26 @@
       "category": "general"
     },
     {
+      "title": "Contrat à des agents de Garda | La Banque du Canada aurait enfreint le Code du travail - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNNFotNG9QUUkxcllVclFvazN5NkxfV1BFTjdFNVJHZndONjM3T3FIN2pwSjV3blBVbkdYUWhLX2k5VXNzNUJWNkx0NXRwTHRhV3RhMW5sT29nTjBSdnhqSTJPLXVDY0ppN3p2bFZILTJ5R1dJQVd5U3FXN0RDMVpTUjdiMU9fUk9acUZvTUI1UHlhQ0M1ZmtWaENqSUFKV0ZiMHZmQ21wNTJRSFpwRE00WTBWU181M3drUnVWLUdPMDJJMUJab0V4WVVmamo?oc=5",
+      "source": "news.google.com",
+      "description": "Contrat à des agents de Garda | La Banque du Canada aurait enfreint le Code du travail  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Les attentes d’inflation bondissent au Canada après la flambée des prix de l’énergie - Canadian Mortgage Trends",
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNckhqQ2p6T2VGLTRVNWw4bzVfYzVQRlVQUmh4UXE1MXJuUXZiU0JQdU85XzNTQ2ltc3RodEpzWXlwbFQ3YTBEc0pic05BMTBHVnVLS1F3czFOOWh6VnVnWGczWmVjUHdBRGNnVlBvMkI1YWx0VExTSFRDdVhMV1BnRTRyTV8weW1JcXlpNE1aUzl5NUJ5aFNwQ0hiN05nYmZ3S2xMLWRZOGtjMmhnT3QzNl9UcFVaZkQtTGZqNE5DWGJ0SndtekRxQXoyYm1Hdw?oc=5",
       "source": "news.google.com",
       "description": "Les attentes d’inflation bondissent au Canada après la flambée des prix de l’énergie  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Grève des gardiens de sécurité | Qui protège la Banque du Canada ? - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQThic1JEVHk2OEFzdS1Uc2ZvdmpTY1dQQVNxUldwWGFQc0hNY2NwaDVNaktLU3dzM2l5RW9nU2ZZNnZTNnRYeFppS2tZTlB0czVucW9kRnBrMUtUejRuSXhQU2lqQmxOb2NJZUdobFlWM1ZmVmNLUXdPNU5QaWVQaFVrUzcxaWJOT25id1BMc0kyZGRWX0YxNEZreWdOSWR3R3RSNlhvUUVuT2xIYzZDUTVuTHpJaXpTSk5v?oc=5",
+      "source": "news.google.com",
+      "description": "Grève des gardiens de sécurité | Qui protège la Banque du Canada ?  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -289,10 +366,34 @@
       "category": "general"
     },
     {
-      "title": "Une enquête de la Banque du Canada montre un recul des anticipations d’inflation après la paix au Moyen-Orient - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPYnc1U09vREZVN1FQY0JWNG52aWNEdWNWNFAtNE9pVzc5SC1CYVN2Q2t6NnVfRzA5NzRsYmw3NzNoMXJVdE9HaXduZXpTMm95TWxpc0ZRbkJLVG43YUppNzZwb25XLVdvRlFPQW9VWDRuOVJkb216dGNpelR6V2JrS0pXYWhrajIzMF9JODhnVXZGQjcxU21sZnhBeXFSY0hwYzg4b2ZSS19UOHdnQXc0dVY1S0pBSmJWcmJkTXdxZTdYcnVYMlF6ZXRuVTl3bXR4eE1DdHVzcnJBZDBUQzBsT0VxaDZ4TGNDYm1FMHNOMHBmVmRZY0ln?oc=5",
+      "title": "Canada | Nouvelle baisse du taux de chômage à 6,5 % en juin - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZDIwYV8td0xvRWVnVlo0RDIyOFc5TjZ4dmM2bmJWc0VfaWZ2MWoxMFh1ZkFYTDBXZnF4eExjSXVVTHp3ZGZXNkhVZ21SSWd4UW41a3Brc3pJNXdlQzFwMW9LZUg0T1VvV3NBZUxrZk5kMEcwSkF5RldBQjVQNjB1WW14Q3QxZFp4b0p3OWhwMGpJUEJXb2I5U3d6QzFPMGpMWHNFdlp1V0cxeFEtdzZ2Zjd3?oc=5",
       "source": "news.google.com",
-      "description": "Une enquête de la Banque du Canada montre un recul des anticipations d’inflation après la paix au Moyen-Orient  Investing.com France",
+      "description": "Canada | Nouvelle baisse du taux de chômage à 6,5 % en juin  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux directeur: la Banque du Canada encore et toujours sous pression - Entrevue avec l'économiste Francis Gosselin - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9ubHYwajEtLW1Ga3plOUZjNkZsU1V0YUtKVm1NVWNKN3RRS1VUel9tcUVBMEN1TjBkbmw0bjFyRC0xZDBoZ0NSTlV2b3RSbG53U0V6ZTdtS0lucjJu?oc=5",
+      "source": "news.google.com",
+      "description": "Taux directeur: la Banque du Canada encore et toujours sous pression - Entrevue avec l'économiste Francis Gosselin  TVA Nouvelles",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Prêts hypothécaires | Le choc annoncé n’a pas eu lieu - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNzRPMHVoVFdObVlBZ3BZN0lRRU5iaFFPWDg2N2R3Q2RZZEJ3b0dmVnZ4dHZQVnFldFVWXzRucXB4Mno0SjFUaF9jVjBzUlhaOE91RUdCcEZKU0xmYVNKRjJmSGNHN0h3VXFhS2w1MjFqMXB4NXJVRncyVkhUVjVTZllDN2gxd0xFTXBxVEhWcHdpMEpRd3U3bThWSXFlZnF6Qm1LblZVWFN6aUN3RlFtZGpvWlkyeGZE?oc=5",
+      "source": "news.google.com",
+      "description": "Prêts hypothécaires | Le choc annoncé n’a pas eu lieu  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Canada | Les loyers moyens demandés ont baissé de plus de 4 % en juin - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQekZqSEhLZHBoUFRxLUJ5eW0wVlZ4RXJYUEJPeC1sV1AzMEhBTnlnMVJaVXdBLURkeGlXeENuY0Q0T0VuNXlzOG9TUkZqRmJORHUwNkU2ZGVCT3ZyV2VWMWR6cVpsSFl6YzdYcDVnTHcxTi13S192NnFMU1p1aXpYU1FFWnFoWVBGeDd5N0RzR3dweldGVjVRVEVZcFFQdmRJZm0xT0V0Mko2UUlfS1RBNnNMYw?oc=5",
+      "source": "news.google.com",
+      "description": "Canada | Les loyers moyens demandés ont baissé de plus de 4 % en juin  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -313,10 +414,18 @@
       "category": "general"
     },
     {
-      "title": "Canada : les perspectives d'inflation des entreprises s'apaisent après le cessez-le-feu en Iran, selon la Banque du Canada - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNSjd5NGZvUFNWdndhUkNVTTBNTFB0RzM1cjAtd1QzVjZBak82ZGZkNDB5ejJXdV9ac2poYTFIbUcxVmdJaHJrTWM5VFc0VWJBUUdJbGFrQ1pfSWxFN3EzTkxyN2hNX1VfVm9IcmZTVk1PX2NIdmpVdXRaeFRKeTBmemU4ZHI3Y3lkSWlEWHBFRkpIamtTRlFBVjZqcnhUOGwweTBWSHlxdnBWVjBqbVF2YlE1aVN5MkM5UFNvSmY3bXhaNl9DTW52VEVBU3lZdkZVU3RnZGdYSWs2R0NPdWFENkFZYVRvREktRzZkWlFBVQ?oc=5",
+      "title": "La Banque du Canada devrait maintenir ses taux, le rebond de la croissance compensant les craintes inflationnistes - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOMzlidWpncktzd1N5VlBsblRKWk5mWGk4SUlEcGw4WDYtaThQSzRMTlgxc05VOXd0QS01Ql9xN2tJS19MZDBZSkhkeklXaXJ5dS00N0NWQ3B5ZE1TdmhaVWFTdlVpbzFKd2RFTmpyZFBkVEhBZlR6d3Nrd21kV1VsR0hoaUt0TjF4ZjdVUFFwWlEyejFIZ3RYVl9sNWZGMTF4ZnVyVFpzdjRkcFlZeFJLeW5NUEY2MkRjVEhJMG14S2FqeHY0d1VKTjc3WndkYXNNS3VUTnRqa3NoNE1yVk40bk1Yekh2Rk12YlIwRzZTRHBwQQ?oc=5",
       "source": "news.google.com",
-      "description": "Canada : les perspectives d'inflation des entreprises s'apaisent après le cessez-le-feu en Iran, selon la Banque du Canada  Zonebourse",
+      "description": "La Banque du Canada devrait maintenir ses taux, le rebond de la croissance compensant les craintes inflationnistes  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Canada : le taux de chômage poursuit sa baisse en juin, à 6,5% - TradingView",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA1Vy1jeWlkQVFTVVJ3OHo1WFZtMUFTRWN0Z2pzbDVCaGhtaERtQURPTHB4TFZlMUhOOFlBOFFBaHJ5a3NkYXBtRmd5aDJIRVRzNVplTXZUM3JKUWFTNFkxTk93?oc=5",
+      "source": "news.google.com",
+      "description": "Canada : le taux de chômage poursuit sa baisse en juin, à 6,5%  TradingView",
       "cities": [],
       "category": "general"
     }
@@ -373,5 +482,5 @@
     },
     "last_quarter": "juin 2026"
   },
-  "last_update": "2026-07-12 14:26"
+  "last_update": "2026-07-13 15:43"
 }
