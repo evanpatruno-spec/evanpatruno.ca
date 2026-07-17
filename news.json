@@ -89,42 +89,18 @@
       "category": "local"
     },
     {
-      "title": "À l’issue d’une enquête | Washington impose 25 % de droits de douane sur certains produits brésiliens",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-07-15/a-l-issue-d-une-enquete/washington-impose-25-de-droits-de-douane-sur-certains-produits-bresiliens.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Côte-Nord | Deux gestionnaires prennent du galon à la mine du lac Bloom",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-16/cote-nord/deux-gestionnaires-prennent-du-galon-a-la-mine-du-lac-bloom.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Le gouvernement américain a annoncé mercredi qu’il allait imposer 25 % de droits de douane sur un certain nombre de produits brésiliens, à l’issue d’une enquête menée par le représentant de la Maison-Blanche au Commerce (USTR) en se fondant sur un texte de loi de 1974.",
+      "description": "Au cœur d’une offensive dans le minerai de fer à haute pureté, le propriétaire du complexe minier du lac Bloom – l’un des piliers économiques de la Côte-Nord – remanie sa haute direction.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Taux directeur inchangé à 2,25 % | La Banque du Canada est un peu plus optimiste",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-07-15/taux-directeur-inchange-a-2-25/la-banque-du-canada-est-un-peu-plus-optimiste.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Netflix | La croissance ralentit et les prévisions déçoivent, le titre chute",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-16/netflix/la-croissance-ralentit-et-les-previsions-decoivent-le-titre-chute.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Banque du Canada a maintenu mercredi son taux directeur inchangé à 2,25 %, malgré la récente poussée de l’inflation à 3,2 %, ce qui est supérieur à sa cible de 2 %. Dans la mise à jour de ses prévisions économiques, la banque centrale fait preuve d’un peu plus d’optimisme pour la suite des choses.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les propriétaires réclament un observatoire québécois de l’habitation",
-      "link": "https://www.ledevoir.com/economie/995090/proprietaires-reclament-observatoire-quebecois-habitation",
-      "source": "Le Devoir",
-      "description": "La CORPIQ souhaite avoir accès à davantage de données fiables sur le logement au Québec.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25% pour la sixième fois",
-      "link": "https://www.ledevoir.com/economie/994904/banque-canada-devrait-maintenir-taux-directeur-2-25",
-      "source": "Le Devoir",
-      "description": "L’inflation devrait redescendre et la croissance économique devrait reprendre, prévoit la banque centrale.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier périphérie nord de Québec — Juin 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM1ZEYUhQeFBYZUpLdUlNTDVvLVdKQWRRZmk5Q0RkcWR4Rm5nUGlVd08za29DdWxwVWx5SzV5ZGhWQ3RPZUt4bHlfMHpOazc4aGVlT3RNRWE1bHB6N1lHRTdCbjhab2FvSWpSZ1FCcEFsNnBHQjF2NGJxdDcxTWdvUDBZVVo4MGl4RXJMbWJkcFRyYWlkcXAtUUdTZ2NyM2c1VEJwazNhZUFFZnp0UVZQdERiVjRyTzlDRFBDa0ZDT0tqQQ?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier périphérie nord de Québec — Juin 2026  Journal Métro",
+      "description": "Netflix a vu sa croissance ralentir au deuxième trimestre et a publié jeudi des prévisions inférieures aux attentes du marché, qui s’impatiente tandis que le groupe cherche des axes de relance.",
       "cities": [],
       "category": "general"
     },
@@ -143,6 +119,14 @@
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNalZtTWlYR2pvRVZsMGk1RTBCWGJPZTZXZUJmUWtKOUcwQVRGeXFKcTVqa1AweVBJWXAtY2JtOXBQdzFidHBrUjhjN0JsMnk2Q2hGY0hyQ3BKaDFKTlRjaTQxWXNEVW0zazZEanNRdUxsbDZXX0I0ekk5a0JweGdEYlo1NmZyNG9rcmtuOWlMZU15dE5tcDFqRm5MSXBNSFZlYldHMUtYNl9teU85TUY2Sy00WGRISjQ?oc=5",
       "source": "news.google.com",
       "description": "Immobilier au Québec: vers une stabilisation progressive du marché  Noovo Info",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier du Québec — Juin 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQczdtakU4bF9IYmw5TklJMFZPRjVUSmV3QUZpY1FsN25iRzQzMFRBZU1nMHE5ZlFQUEZNN1JLMGFnMVhLUXJ5dkcwM1FDTUhPNmtBZlF5bk9UZ2lDSE85UXBBNnd0REVTVVhidnIyakVNSUJsRFZ1OXpJQV9MTU96Z1pRYjB0VURZV0JYNi1IWmZHLTNESTA0QVo5YXBUaHpNWTlUZ0VieEtiLWVw?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier du Québec — Juin 2026  Journal Métro",
       "cities": [],
       "category": "general"
     },
@@ -189,16 +173,6 @@
       "category": "general"
     },
     {
-      "title": "Le marché immobilier québécois connaît une période de répits - Le Lac-St-Jean",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNM2x3cXozV0hTZ0dvcVVabWdIYVAyNGJwcmUzcVprMllmaERDMjUzTkYtc2V6UjNLVEV0VWxLZFdfT2lyMzhrbWV6ZnJubmY1akFkNGtyT3JUTlFRaFZZUzhOZzluanVicmo5UllGeU90OG5lcnRnUV91Z09MS2FqTkFyelQ4Z0NtMkRrQXlaaFU5MTZ0VWFXM1NXUEVWUElPTThvQUJaQQ?oc=5",
-      "source": "news.google.com",
-      "description": "Le marché immobilier québécois connaît une période de répits  Le Lac-St-Jean",
-      "cities": [
-        "saint-jean"
-      ],
-      "category": "local"
-    },
-    {
       "title": "Immobilier : prix, délais, négociation — le vrai portrait du marché québécois - Le Journal de Montréal",
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPYVlwZmtSQV8wQi0tbEZHcFBSejhfX1FRZHpza0FPcFBqbW9Ecmx3NlIwZlVuVDNKbnpNR1ltVTJkeDFQZ3FWYjlzamVVcHhGNXJZWWtYckoyM0wxTDZDQmFpdFVHNjBNUkFvVlVCWHdkb0VtWGZNeFJjaVVIc3hhWTNvelpzbEsyQ2JTX3JoTjE0V05rTlhscDYxejBJdWpQZ1VRV0lVN0FDNkZpYnkyN3RsUjUyTnM0Y2c?oc=5",
       "source": "news.google.com",
@@ -209,18 +183,36 @@
       "category": "local"
     },
     {
-      "title": "Marché immobilier du Québec — Juin 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQczdtakU4bF9IYmw5TklJMFZPRjVUSmV3QUZpY1FsN25iRzQzMFRBZU1nMHE5ZlFQUEZNN1JLMGFnMVhLUXJ5dkcwM1FDTUhPNmtBZlF5bk9UZ2lDSE85UXBBNnd0REVTVVhidnIyakVNSUJsRFZ1OXpJQV9MTU96Z1pRYjB0VURZV0JYNi1IWmZHLTNESTA0QVo5YXBUaHpNWTlUZ0VieEtiLWVw?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier du Québec — Juin 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Immobilier au Québec: vers une stabilisation progressive du marché - Noovo Info",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWnkzc3pGWmhRSXEtaS1EZ04tS2RQVDNUd0YwaVZhdFhLQW0xZmdFNG9fVWwxY2Nmekx1TWE5TUxXUWN6b184c3RlQ2ViVktmWXRiQndmUEhDX2NvdFE2SHlHVTN2Sm1hbHJhN0ZYY3RYeU5UWjQzaTRPbWFyUUVJdWs1WjZIQ1NaSHU2ZzYtSWlpM1F1R2tXcmRObHVEVW9mYzJqMXRMVHVhY2s?oc=5",
       "source": "news.google.com",
       "description": "Immobilier au Québec: vers une stabilisation progressive du marché  Noovo Info",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier de la région de Québec — Juin 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTTdSS1MtSDJKdUM5d2szY1l2T2VOVGQyTnBobEhRVjZmMEJoMkN5NFJUZTBtazRsMHlNaHROVFJZa0pHT1dDTk02bmlBalNCamJxaU93eEJWczVzQURMSUpwYWxoOGFqNzdYbkJZQ3BQb016TUNtcktfdWw5RGpPVTluTkFMZWpPZDFPekVSc0R5NUxLMlduWnp4cHBxNHVFMTFmZzNDRUswUnVnOE9WcnA4T1NWLUY1U09wZjdR?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier de la région de Québec — Juin 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Commission de 1,25%: un courtier immobilier dans la tourmente - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQVUVCc2xHbUxfZmhZTlFNTHVzSDBlQ0hXX0U5eTlLWE4xYVpSdTgzazFTc3RpN21sMXBtenE2WnY4T0EyUHdTYVlxaUNzNGFEWHdlbHpVUHBtenR1VFV4OEM4MHVPbTR2bFMxZXJESEZLVEljei1tM1pHWjRsU3NFX1NaaVlxejFWYVVpTmxoNnhyRDJNZEVSMHZtbVpxLXQxS0tTWFBn?oc=5",
+      "source": "news.google.com",
+      "description": "Commission de 1,25%: un courtier immobilier dans la tourmente  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier périphérie nord de Québec — Juin 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM1ZEYUhQeFBYZUpLdUlNTDVvLVdKQWRRZmk5Q0RkcWR4Rm5nUGlVd08za29DdWxwVWx5SzV5ZGhWQ3RPZUt4bHlfMHpOazc4aGVlT3RNRWE1bHB6N1lHRTdCbjhab2FvSWpSZ1FCcEFsNnBHQjF2NGJxdDcxTWdvUDBZVVo4MGl4RXJMbWJkcFRyYWlkcXAtUUdTZ2NyM2c1VEJwazNhZUFFZnp0UVZQdERiVjRyTzlDRFBDa0ZDT0tqQQ?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier périphérie nord de Québec — Juin 2026  Journal Métro",
       "cities": [],
       "category": "general"
     },
@@ -236,26 +228,19 @@
     },
     {
       "title": "Marché immobilier de l’agglomération de Québec — Juin 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOeDVGeFdtRzN2c3c4MURES3hMeE5pOUdDWW8xcmVNYXhIZEVyZjg3UEdLU29JUFpQMWcydTF3OXFqejV6Vi16bEpMdlNsMmg0VjYyTmdrYkxHOUJnVml5Q2VhSjJHckpOSmEybmF2aVYwS3QxenBoZ1NOa3hzTTRNam0zUlZxWlNfbk1feFFqb1l6ZnF1Rms1Uk9zcFY4b3RWX2kwTzM4bEVDanpXcVI1cFNGTFpCeHJZOUp4RkszS3o5amJYcTVrR01B?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbVE4TW11MlN0UzVpdi05bXpMalRzM2ZSWEplNkVJTU5xLTRjZEg2SEhLV2RXQjVYMHJMVjlFNkJ6MDBBbDVES3d0SkJPMWNpYU8xQURHcThxN254YmVrZGtLMjhhbkUyaXI5cUZPR3VFMFplWElGN09IbE5FVFhVM0dLUmlUc1JGQUQ0Z2pYUUJUb2ZDdHdSV0VFaFhvT19Kd0lQdDkweE5tSjUzMTVjbW4ybmJjQmxnMm4taFZYUkdVLUFj?oc=5",
       "source": "news.google.com",
       "description": "Marché immobilier de l’agglomération de Québec — Juin 2026  Journal Métro",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Marché immobilier de la région de Québec — Juin 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPb042MTlXZWFYZFZ1dGEwS2lCMTd1V0FHbk45dDJ3OFFQTnMtaE9pMmlIWWxJOFI2NnRFak9SSUNMem91VTE5YjRZU0VxOUVYVHRqVUxuUndGb2hzOTdaS0xPU3ExX2lYZTc3Sk5OdXYzSkJCT3FaWURBaUpBckJmdFNvNjRZSDQtUkszMWR4ZEFsejdvZmZYeWNpSi03dmpmYnM3Tk41cFZwV29WMHdxS2lvYlY3REVJTURlZ1hvMXVEbmc?oc=5",
+      "title": "Marché immobilier de la Rive-Sud de Montréal — Juin 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSFpFUU1FRVk4cUQwRS0wajgwaDRYY20xb0tzLVpVS19sXzJIWFd3dExLR3VoNDhjbGhXTlVMcXJzcW5zNmlKOERBcVltS3hqeENQYTgzMVktWHV1eUtaVEFuVEVRXzVfZ3Fkb1pwVWh6STk2aWYxSDJNdnZPVXhLQnpmUnRCWjRpcUNWb1UycnljQl9fSVZNbFE5dzNLNjJrU2VBcnZEcEtpMk9oT0RlMi1WVkd4OXNVU2NqTVdSajJhTHM?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier de la région de Québec — Juin 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché Immobilier – Montréal ralentit au 2e trimestre - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxORERycUR4MjlrLTVkby1IT0NRVXB5V2dQM2JkcXpnMi1CaHRwWk1VZXhtclFLNjlpM2VDZ0NHSWY4MXRkaFktYnlmV1prZXpKaGdlNVFlalpadWpxVUdyUHAzOXpMY1RuRzlSS1JKWXNPdjdoNmxJYmU2V2ZFd0Nnak5IcExsT21lMlZKOWNSWXV5LVNlWjBRNndER2R5eUY4Z09ER2RDVGFlaEFVNkxRc1c1eEsyOERpNDJBaTZWTQ?oc=5",
-      "source": "news.google.com",
-      "description": "Marché Immobilier – Montréal ralentit au 2e trimestre  Journal Métro",
+      "description": "Marché immobilier de la Rive-Sud de Montréal — Juin 2026  Journal Métro",
       "cities": [
+        "rive-sud",
         "montreal"
       ],
       "category": "local"
@@ -291,44 +276,20 @@
       "category": "local"
     },
     {
-      "title": "300 nouveaux logements abordables pour les aînés à faible revenu verront le jour au Québec - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTEFXMS1uV3lYUlZvMWxBUzhHMm9PQ202dENSUzdIM2NWanNjLXV0NWRLcW44Vmpld1h2Slk5SnN0bkZtdWlNLUpTa05mYnZNNk5Va0RJeFZrUTItNnhlX2V3OThGX2ZxQ3BydEZSalNaaGZORXVEYWdPbGRBUXZRblJBYkpHX2dSR3BtNnRneTgwMGVJcVlNQi1jbGhzbkh6OHhTdWJ6ZWFTZWVBQ19Qc2t0WmhfOEk?oc=5",
+      "title": "Mises en chantiers de logements – Le Canada recule en juin, Montréal résiste - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNQ2ZSQnRPQlBVTXJfOVpJdUxqeFRyY0lXOUhIYU5OM21Uc001RGFkcjdRR1M0RUI5UHg3azU4ZzlTblpSZGtza2NPM3B6Q2NrSVhTN0JwWGw3VlFlRFlHS3NqV1hEVzItSnR2N2djQnVJc2JoQW9EbUprdVBpZkpaY1lGN1VpV3VXREVycklEZ1FvNkRyUUVtLUdzbXFZNTRQWnRhTFF0TmYtOUp0RGZMWWFoRVAzaWFwU3drNjVBRF91YUZWdGNmQmtzcjhhckVBbmhyb3NqbTk1N21z?oc=5",
       "source": "news.google.com",
-      "description": "300 nouveaux logements abordables pour les aînés à faible revenu verront le jour au Québec  Le Devoir",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Prix moyen global des propriétés: une première baisse en plus de trois ans - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOSXU1UGtBc0V5dkJ2Rm5rQUpxc2l4UmJLWFpSTGdWcDJTbzBhbC1MUjF5TjRDUUlHbkptY2RmQW04SnNIclhWVkpGdktPMy1hQlZ1aEZNbTJKR2tYcGxQMWtjeFR1TU5KdzhOLWNPcnBWNm9ZYWRCVFlEa2RHR0JMMWpzNlE2WDFKN0xlN3BYRGxKY0FFTVZwVTRibFRVai1SOVlTOGkzU0VxU3FwSEktZldfNjV1RFJCRXRXS0FRaG9INnBfN3EzUnVIYUYzSUxLRlhKZWhhSUdKOXQzekxz?oc=5",
-      "source": "news.google.com",
-      "description": "Prix moyen global des propriétés: une première baisse en plus de trois ans  Le Soleil",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Commission de 1,25%: un courtier immobilier dans la tourmente - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQVUVCc2xHbUxfZmhZTlFNTHVzSDBlQ0hXX0U5eTlLWE4xYVpSdTgzazFTc3RpN21sMXBtenE2WnY4T0EyUHdTYVlxaUNzNGFEWHdlbHpVUHBtenR1VFV4OEM4MHVPbTR2bFMxZXJESEZLVEljei1tM1pHWjRsU3NFX1NaaVlxejFWYVVpTmxoNnhyRDJNZEVSMHZtbVpxLXQxS0tTWFBn?oc=5",
-      "source": "news.google.com",
-      "description": "Commission de 1,25%: un courtier immobilier dans la tourmente  Le Journal de Montréal",
+      "description": "Mises en chantiers de logements – Le Canada recule en juin, Montréal résiste  Journal Métro",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Prêts hypothécaires | Le choc annoncé n’a pas eu lieu - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNzRPMHVoVFdObVlBZ3BZN0lRRU5iaFFPWDg2N2R3Q2RZZEJ3b0dmVnZ4dHZQVnFldFVWXzRucXB4Mno0SjFUaF9jVjBzUlhaOE91RUdCcEZKU0xmYVNKRjJmSGNHN0h3VXFhS2w1MjFqMXB4NXJVRncyVkhUVjVTZllDN2gxd0xFTXBxVEhWcHdpMEpRd3U3bThWSXFlZnF6Qm1LblZVWFN6aUN3RlFtZGpvWlkyeGZE?oc=5",
+      "title": "300 nouveaux logements abordables pour les aînés à faible revenu verront le jour au Québec - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZDY4TDJLUHRWblNzTXQzLTBQeTNhdXU0UUExTk9HU040RVNza3VlczY2WDEwN3hTdXUyVVJNMVFTYllFMEh4TExBMDdXLVFseld2Um5URjRTT3JFZkRGekZmWU0wNGNYRk9Vc0JrZjhSLUw1cHlRbFpzbzU2ZVdpRE1VVEF6cVNLSWtxVXpVcnE4djZ4T0Z1OTV4NmJyWUpHdEdXNHdrYjc3Z3hMN0s2bFphRFk3Wl9wVklQNXZ3a0dzUQ?oc=5",
       "source": "news.google.com",
-      "description": "Prêts hypothécaires | Le choc annoncé n’a pas eu lieu  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Immobilier: Trois-Rivières à contre-courant avec une progression des ventes - lenouvelliste.ca",
-      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQOEQxVWdpNjc0UWY3RGpfZVVTMmk1Yy13d0NwRm9PeDRNcGp6S1U3MnhzeGFxR0REZURwVVgtb1hZaktLUXVwU3llRTNfR1YzaklHakJwUUZIeXBHaEFuSU5jdFdYa2toZnRLcktadmMtVUdtZ2xBOHI1WWl6cUpvVDhYeng0cVM0U2dqRUV5Q0h2ZUJSUFlHMnZvR1hUTTFjcGhtQmhPTm9yN05pUGZBU3JHOWI1YXpWOUxMMEVUSFN1YW5YRk1vY3NnenR5YTBDemZjQkZNM3R1UW50OThHZ05Ja3F4Uks4dlVMRXAwWDY4RzNyQ0syWHdQR0o?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier: Trois-Rivières à contre-courant avec une progression des ventes  lenouvelliste.ca",
+      "description": "300 nouveaux logements abordables pour les aînés à faible revenu verront le jour au Québec  Le Devoir",
       "cities": [],
       "category": "general"
     },
@@ -359,14 +320,6 @@
       "category": "general"
     },
     {
-      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "news.google.com",
-      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Des logements de transition pour femmes itinérantes à Montréal - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPR3Y4RGw5MU1MbmFUUmFQRmhCVFY5d2VzYzhQVHQyUEdsQVhoS2VDSG5rVU53b1ZrQ3VPLXNUOG5DYU5fajFuSnpENkItVzhCbmtWdzhLTHhQeVVDQ2c0bS02T2pFb0hnQkh6VTJZQlJWakdrRE41TTFickxIT1lOS2tKU1Baamlxem1BWjlJZktlWHJrVVB0NA?oc=5",
       "source": "news.google.com",
@@ -377,10 +330,10 @@
       "category": "local"
     },
     {
-      "title": "Un partenariat performant : Mission Unitaïnés atteindra le cap des 2000 logements abordables construits pour les aînés du Québec - PR Newswire Canada",
+      "title": "Un partenariat performant : Mission Unitaïnés atteindra le cap des 2000 logements abordables construits pour les aînés du Québec - Newswire Canada",
       "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPT24tS3JHT3B2VE1WSEVmMVdEZE5uY0V3Q1pTZnQyaDc4ZXJIOGllUTZ6Vm5qWjlMb0lLYjNhSi1YRUhzUjV0d1VrbEN0ZVJ3czZJWGVIWmdXalNESXd4a20tTEF3NUp3MWRqTDlKXzhkWHh3WFZ6a29vcG1Ga29Iang2RzFReXlNQTUxUjUwSXdDWlVsT0FzVy1nUkN0elR1RDc5YnZIdjR1My0tNlZjcHpDelB6RHZkM1dTYmpEb3IxcnlFVHRoUnBqdk1JTFA0a0VGZGMtdmRTYnhLVmJKWU9Rc3VyZGJyRG42NXRWVjlGblBvcUZGOVhlNFJpb05mem5NWnZCeG1BbV9HcEZZ?oc=5",
       "source": "news.google.com",
-      "description": "Un partenariat performant : Mission Unitaïnés atteindra le cap des 2000 logements abordables construits pour les aînés du Québec  PR Newswire Canada",
+      "description": "Un partenariat performant : Mission Unitaïnés atteindra le cap des 2000 logements abordables construits pour les aînés du Québec  Newswire Canada",
       "cities": [],
       "category": "general"
     },
@@ -401,50 +354,18 @@
       "category": "general"
     },
     {
-      "title": "Immobilier américain : les prix pourraient baisser en 2027 - Le Revenu",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUlJmbVlqaFhpakY2YWJrWEhuUzBKZVRIZGxyaG1vVGZQemlfU2xKcW9kcGlCM3k4MVM4dzhMeE1Mc2otQUtZMENCWXo1ZUVyU0lRb2ZSaS1TaTY1elNLRVFhbkxxQWNrOTJtNDEtQmxYeTRSdnVMcEJaMzdSY2VyeG8tT29Xb2ZjYzlsV2pRejJlMXh5YVdQTDZydnYtMFNKR25CaVNlUUxEeHFhMEU3dnVDRjQ?oc=5",
+      "title": "L’église Saint-Albert-le-Grand fera place à plus de 250 logements - Monlimoilou",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNckxvanJMWThyMEladXlua3dtT2FNQ2lKLTR2S3RoTkVHOHFPRGxIZzB2ZzRNTUFWS2xELVU2bjF0TmRjZHhLSzBXOTFlT0xMeXNESjdVN2lUUk9MOHRyVnpaVTNhdDBxUnB5T0QtREFITEU3NjBWWlROWTdaOXQwMUlDeHVZRi1wc2l3Nm5OLUlfVkZyeWVQWGx3?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier américain : les prix pourraient baisser en 2027  Le Revenu",
+      "description": "L’église Saint-Albert-le-Grand fera place à plus de 250 logements  Monlimoilou",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Crédit Agricole Immobilier lance le programme Atlaseo à Bron - Le Revenu",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZzhFUFVIV3FEeVYzMmNncllScG5mNHBGakp2T19vSXF6VXhremhWMUdIRDlRQmF2RjNUcGxRcVppTjdkcFJBYmlzcmpwYkpZSkl6bFFzdDktbnhmenNGdktTRUltSUp1MkNvd1BWVUw4Uk5sYzZZUlp3MXc0UlAxelZUbklUQnVCTGlyR3N0S3R4Q056a1J0Vm5kc3huMXM1OS1YOE9kNHpMQ09DRnZlVUc1Q00?oc=5",
+      "title": "RGCQ : la copropriété est un levier stratégique pour le Québec - Le Figaro",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWDBGcU5WNUVyNTZCLWw4Q1F2MTAzX09vcXF2czJycGNQRXd4ZTlDYUZiMmhGeWNlOGFSa2JZUnFXaXZESDRwRUJiZVA1eVVJTmhwZWRBOXc2bzJ6cVZ6dU9saUdpUFZDYnJ3UV9RanZBMTllUFpGYUZCa29RNy1wX3d2VXhWNnA4YkZ2RTVzZnlWQTQ2TUhFbWYtMXBueTZyV3JNag?oc=5",
       "source": "news.google.com",
-      "description": "Crédit Agricole Immobilier lance le programme Atlaseo à Bron  Le Revenu",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Immobilier Espagne : les prix devraient encore augmenter en 2026 - Le Revenu",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUDRVM2xRbW9ZM3JLbFgxUHQ2dW01Y2NmVzdUUFVRYnV3X2xBYTZEbmwzcTJkRTJodkhuaTlORnVQUWdVQ00xQ3hKSGRKb096VVhyOG1CMzhQUDdIUXhyaXd0QTlMRkxMSWRrVFBHelZZZm9PV1BsVDdCcmRnREYwenJpWVN2R3h4N2tONlhYaS1wOTVVU1pWNDl0VURjOFhfZVFPUEUtbDNhSmZMS0pMSEhpMA?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier Espagne : les prix devraient encore augmenter en 2026  Le Revenu",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Immobilier : un Français sur trois songe à déménager à cause de la chaleur - Le Revenu",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOW9qNUt1VWJFbFY4N0JiTEg0Y2RPSU80dlp4TmJ0RE9lc09HTDdvNUtFaVlULVpKcU9pVDlDWERLdkV0WU9CMlJ4blJLUkpVeE9OcU1MSmctUzJQeVdpTWcyWWphSkwzZ0VLWnJWTEtLZWVXQkpRcFJSRjBrbG5NRTliNWt3LUR3Z0V6cmxfYlRKaloyY19ZdWt6U1NrcTVSLVRhZzh2ZXhwaDNFeC1mRXVhd3c?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier : un Français sur trois songe à déménager à cause de la chaleur  Le Revenu",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Milan : les exilés fiscaux font flamber l'immobilier de luxe - Le Revenu",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYUVHZTZKSlVCUi11V2FWWnd3Yy1PZlZzcVduODU2RnQySmV2aTJVLWN2cVR2dUd4VjhaREx1Vlhic2FITDlVQnlpbWw3Y0NmZ1dFd3NGNWF1bXlycEZNOVhBZlZPRnd1aE9KMEwwTC1QN0FXc1RvTGRtN2QwYlh6bU53bXR0ZUo4eTEzbTZkc1ZVU1JQYkJWbGkyaTZoQ2stZmRKVVZrcW9zWHpQenNYY2h4Zlk?oc=5",
-      "source": "news.google.com",
-      "description": "Milan : les exilés fiscaux font flamber l'immobilier de luxe  Le Revenu",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier francilien : trois nouveaux programmes résidentiels pour Uniti - Le Revenu",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUzZiNEptME03aGJfRkI4V25CQ2ZYR3dEemVIYnVVYVFfRndxbndONldTWUoyUDU0dDhhU3lkbVBLQ1hNaEVKUDZKX29JaE54bjRZRWxsV0w1eFhGS1F2bUV6U3lTa1Z3MXcxdWdEX0RfSTVJWFJqVFhlZmhwMVJySERHb1RLMUx3V1NONVZkM2FUN0JBN0sxak9XdjBhOC05WGlTMC1uVE5uWjY0TDZxTU5PV0I?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier francilien : trois nouveaux programmes résidentiels pour Uniti  Le Revenu",
+      "description": "RGCQ : la copropriété est un levier stratégique pour le Québec  Le Figaro",
       "cities": [],
       "category": "general"
     },
@@ -475,6 +396,24 @@
       "category": "general"
     },
     {
+      "title": "La Banque du Canada maintient son taux directeur - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQSkRmTXlMQkNUYUFyYXZ4Uy1aSzVsWjVjcWVPZDhsUnRFaDI1a1pzWEV5Skl0Q2pMUVdlSkJYTHk5VjczZGFhdXB5Zjl3UC1Mdm15bkhXeDA0dmpwVFc0RnJCMXYteW1vaExWMHFSVF93R1I2WXlEajRQSzJScEw1U3VTclVGMzRMT1J1WEtPUVY0RFVucG14Rg?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux directeur  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "La Banque du Canada maintient le taux directeur à 2,25 % - Le Droit",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZUloZFllTkVOcXlOak5KNWJ4UFZsMF9ocVdrb255ZUFFaDlsWTliTjBfa2xjTkF1cXZTQ1Q2MUF4M0FRRXJoZWpHSVZHMW1uTWVHM1dIcG1RVWVicHJNcDF1QVRhQU5KOHZ6RlN5Wm8tb0EwZ2MzQnh5SUU4SWwweTRfNVFuQjlyVVpZNHgyYlZpTUJrQ2RkcmM5bzMtTHVJbV90ZER5M0V6OXgtMXM0R1hyaEJPckVTZkdjOVQtUDMydzg?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient le taux directeur à 2,25 %  Le Droit",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La Banque du Canada maintient son taux directeur à 2,25% pour la sixième fois - Le Devoir",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUGpDb2Y2eEpuVWloTXU2STg3SkY4eEZ2QjQzZlAwV2hudVh6VHdRQzlaMS1RVkV3TjhqS05hbnRGZVM5cUNQR1JqSGEwWFk1My1nMHpWZjk5aHRsVk4zQ0wxSWNyT1pRNzltLVViVVNWbmREbGtNSWRxd2pGa0U4ck9UNWNsU2l5U0dZRk9aSHdDbzhWVENj?oc=5",
       "source": "news.google.com",
@@ -483,18 +422,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient son taux directeur - 24heures.ca",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdmxOaGlwVkl4TGhsQVpaME51RFduZWVuRWozLW8xYnExWXltbnN0aHotUnMxZUZ4OS1ScS0xZXoxNXpsbmswd2JwSEluZFF6UFBVeFhRdGNaY0JDVW12Um11dXdqUkQ4dGJwOUc4Y3RKVXdaZDRzcTRianRvYTFPZ3BVODMzaFFxbUJN?oc=5",
+      "title": "Briseurs de grève à la Banque du Canada : l’AFPC porte plainte - Alliance de la Fonction publique du Canada",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KMHh5YVl2VFZINkw5SDdzV2VtbnROdmtXcWdMRHZ2T1NsZWp0TGNDY0o2QW52TEM5TXl0R0d3Ykowd3UtczJna2tkVUpnWTNoZnNVY21PRHZmWHl6NGhpanJYRDFJT1VUaUlzVFVtblhWV21EMlE?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur  24heures.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient le taux directeur à 2,25 % - Mon La Tuque",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMktkVHB0eFRIVjIyZ2t3SmR0UXdWTFJfeF8xWmdRUlhqekNoZ09hVUJNM1lOZFZnWFMxMkpYNUx5U0FOTjFoRE1JVTNVRzU5R1BJM1h6U1VCVVpKZzlyMkVSVTlhTTlNdWx6dnU3ZmVLMThELTAycV83VDBuWmY4MTVodW10R0hCQzlzX2ozWjRFZw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient le taux directeur à 2,25 %  Mon La Tuque",
+      "description": "Briseurs de grève à la Banque du Canada : l’AFPC porte plainte  Alliance de la Fonction publique du Canada",
       "cities": [],
       "category": "general"
     },
@@ -507,10 +438,82 @@
       "category": "general"
     },
     {
-      "title": "Briseurs de grève à la Banque du Canada : l’AFPC porte plainte - Alliance de la Fonction publique du Canada",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KMHh5YVl2VFZINkw5SDdzV2VtbnROdmtXcWdMRHZ2T1NsZWp0TGNDY0o2QW52TEM5TXl0R0d3Ykowd3UtczJna2tkVUpnWTNoZnNVY21PRHZmWHl6NGhpanJYRDFJT1VUaUlzVFVtblhWV21EMlE?oc=5",
+      "title": "Expertise : annonce du taux d’intérêt de la Banque du Canada - McGill University",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZW4ybEJVcGxKc3hOdXRrQ0k1M1NpQ05pbDZkeXZwRkNSdEliRVA3aHBtem9zbUI5a3d6ZXVWdTJpeWtYQ0g0RmZRb1A5di1pRUNPc0ZzbkNzaVlYdEU1aVFTVWxpanctRnJ0dmZzSmUxdndxaHh3Z0FGc3luQ0ZZSG14cXBReUVsSXdvcUg1MV9BTUxacmVqQjZEZXJrNEZxZnJZRloyOGJ4Q01IcmVITHRB?oc=5",
       "source": "news.google.com",
-      "description": "Briseurs de grève à la Banque du Canada : l’AFPC porte plainte  Alliance de la Fonction publique du Canada",
+      "description": "Expertise : annonce du taux d’intérêt de la Banque du Canada  McGill University",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient son taux directeur à 2,25 % – 15 juillet 2026 - CPAC",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNaklZV0NkWmFlRTRSWmpETWJuY0NISDFEUi1DTWdtZEpOVlRNN0l3NnE0VHllSFplRDh3Rk5Ta3pxMjdudTY0NWFFT3M4MkxTX2xfbG9Zc0NZMnpUNlNRUGtqV0dKaUtvYVNmVGRsZDRSZ3hHZFQ3TldZa1EtVTJHUjdIRHFFZDdDSjJweW1GZUt2cTBGN2VINUd3T2ZKczdiWGZUVy1NYTk2Zk95YktTZFVjalRBRWFFUUxraEtfWnJMdWFpX1UxOVpqVTM1MDJ4R2MyN2kybzNGZmxMS3RpYW0tYWJRZw?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux directeur à 2,25 % – 15 juillet 2026  CPAC",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient son taux sur fond d'”amélioration” de l’économie - la-liberte.ca",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZ29jOXRRRF9oVDJCdHRSRXlReUhJbl9BTVpWcU53alVuVTlBV2tmaGJTQkltZ0VDQlV4eW83SnhEcVJoVkxNenpKcXFocEpBSzBwZ3BWSDRGRkRSYUdaQWp4NGVOUVlwZ3RkQUlPcGh2aEMtZy1felVUNnp0V2d3NUxJaGlVc3FDUlNjVlRSYW5vTXFSQXNBMWltdXVlM2h5V295Q2lpMUs3ZDdKeWdCdVd3?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux sur fond d'”amélioration” de l’économie  la-liberte.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada prend sa décision mercredi - Mon Thetford",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPTGtBTldlVldoNjNjVDVXTDVid0ZaVk9tTWlJTGZxbElZcGszQ2RyTzBSTkxCVU1ScWpnZW9sREgwUHM2cUVSU0ZLNUZTUnB3NE1uV1pxWkN2cUcwMkYxbVMwcmRYdHd5Z0ZaelR0VXEwYTU3Y0IwN0Z0bk1lUGxUZWxKb3Y5RmJiSXc?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada prend sa décision mercredi  Mon Thetford",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Grève des gardiens de sécurité | Qui protège la Banque du Canada ? - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQThic1JEVHk2OEFzdS1Uc2ZvdmpTY1dQQVNxUldwWGFQc0hNY2NwaDVNaktLU3dzM2l5RW9nU2ZZNnZTNnRYeFppS2tZTlB0czVucW9kRnBrMUtUejRuSXhQU2lqQmxOb2NJZUdobFlWM1ZmVmNLUXdPNU5QaWVQaFVrUzcxaWJOT25id1BMc0kyZGRWX0YxNEZreWdOSWR3R3RSNlhvUUVuT2xIYzZDUTVuTHpJaXpTSk5v?oc=5",
+      "source": "news.google.com",
+      "description": "Grève des gardiens de sécurité | Qui protège la Banque du Canada ?  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada choisit la patience, et elle a les chiffres pour le faire - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNRlJYVEdzVVBZQXNqaWFvOFlrSnVBamE2QndLZEwyWWtUUE1JdVRwd1kzWlotM1pDQ0hBb3ZTTDlsM0NFWkFrTHNsRlRnZGFPUjJmZm1uRHgtNlRyOTdrZS1VMVpNa2JhcVJwMnJmaC1XVGgtY1V4S1Q3dml3YmhEc1N4R2pnb1VlY1VnLW1iM0F1ZVZaRW92cDcxd3d6RkZ1X1hyMExZNnh1V2hDS3hxRmFzM08?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada choisit la patience, et elle a les chiffres pour le faire  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux directeur inchangé | La Banque du Canada se dit rassurée et garde le cap - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVkljbnJYSndfbW4taGNFSVBNSzVQaGxJLUdVMS1lYmVmX1lNZ21ZNWtDNXF5TnVfYUZIWTdnZUM4b2NYOW1GREJlbVpqZjY0WlJnYUcyWl9JRFczbzZvNlltUUhCNGRQVHJ1cjFHc1pkbS1VZkQzVWNaN2lMYTJLZW1DTkxmWGY5QVJqN3o0RjYyZWdMdjU0QUJ1RUY1ZW9tYkcwWWUtT09jeHRGN051SU5MR2pxT3oyNDc3azYyR1JXWDBienRDdktpcDU?oc=5",
+      "source": "news.google.com",
+      "description": "Taux directeur inchangé | La Banque du Canada se dit rassurée et garde le cap  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada est rassurée et garde le cap - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSXFBMEx0a0Q3TURQdEVyMWpheFp4LWM3MjkyRUtlN2dzbzRwejZmSWJVQlZsemdvazJmRmdKSklScG83UXZGUXNzaVhwOFBKWllJb2FkUmNBYVhJN1piYnhOQ05FTDZfU1lpZVYxT0FldGRSNF9QVnNaS2NXR0VDTEZhWEpja1dJSmRPUzdNdjdBeEhlSHVPN2RTTnlyR3ZFRllQZGRCS1c?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada est rassurée et garde le cap  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux directeur inchangé à 2,25 % | La Banque du Canada est un peu plus optimiste - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOWE1La1lfWGhob2FLcndvWTItbEhub2xoS3QzemJZSUlSeDFwOW13Ukl5OW9ERlpySTVoZll6TFdwMFZHSGJTTHQ2U3k4bUJGdzA1UlBlU0tLazN1ai1GTlptay1aTU5FeUxYbDNwSEJzd0d5M1hCUGpzd19MVGszOHFiTWVEbk9UcjhJQ0FtYjRUWWhpNEtpUzlqN1JjMFN2cmdaZG5QaExqelVRejI2d2N6blVJNWoxYVY2NW91SmQxcXo1M3V1TlZSRTgyZw?oc=5",
+      "source": "news.google.com",
+      "description": "Taux directeur inchangé à 2,25 % | La Banque du Canada est un peu plus optimiste  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada: le statu quo reflète la résilience de l’économie - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQc1dxY2Y3bnNmVGEyUHZpWW00eVZTRDI3Z3FWUUVpQnBSRWRjVkNRYk5VcjYtU3pmSjhKMGZYR2NXeDNCanZUcTZGZUd4MTN1eEV6NXJ0S09zaE5NUlR2em9HR3dPLVJyNlR5YmczcnFtWnkxeEgwM2Zkd3dBS0NSTmdETlZzOEdMVEpnbHZ2NWpSOHZwaFlUREdjaWVyT1g3aG5tSQ?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada: le statu quo reflète la résilience de l’économie  Les Affaires",
       "cities": [],
       "category": "general"
     }
@@ -567,5 +570,5 @@
     },
     "last_quarter": "juin 2026"
   },
-  "last_update": "2026-07-16 14:59"
+  "last_update": "2026-07-17 14:40"
 }
