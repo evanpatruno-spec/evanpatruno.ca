@@ -89,10 +89,18 @@
       "category": "local"
     },
     {
-      "title": "Le marché immobilier québécois tourne au ralenti sans devenir plus abordable",
-      "link": "https://www.ledevoir.com/economie/996650/marche-immobilier-quebecois-tourne-ralenti-devenir-plus-abordable",
-      "source": "Le Devoir",
-      "description": "Davantage de logements locatifs sont disponibles, mais ils ne sont pas plus abordables qu’avant, selon la SCHL.",
+      "title": "Deuxième trimestre | Le CN affiche une hausse de son bénéfice",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-24/deuxieme-trimestre/le-cn-affiche-une-hausse-de-son-benefice.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Le CN annonce que son bénéfice et son chiffre d’affaires du deuxième trimestre ont tous deux augmenté par rapport à l’année dernière, et la compagnie ferroviaire a revu à la hausse ses prévisions pour l’ensemble de l’exercice.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "A220 | L’investissement de Québec en panne sèche",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-24/a220/l-investissement-de-quebec-en-panne-seche.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "En surface, l’A220 d’Airbus prend de l’altitude avec un carnet de commandes rempli et une cadence de production qui s’accélère. Le ciel semble finalement s’éclaircir. C’est pourtant l’effet inverse qui se produit dans les comptes de l’État québécois : la valeur de son investissement dans le programme est désormais nulle.",
       "cities": [],
       "category": "general"
     },
@@ -101,6 +109,14 @@
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZ1JXa0ZRV2RPU09FUlBjWkRaVGI2VDFCWXhKRHBVazdyS0JBVmtDbGxaczBNUDFLcGdhZE5GQkFsbGtDamJPc1ZZbWRCcDBXckQ3RVFTUEFSZ3FlTlpNSXJnODY3dG92dm96NEZSdkVwMGZENGlYY09JeEtOTzhkMmxYYVRJQkNRRjhkVndjQnpvNXRKS2ZJ?oc=5",
       "source": "news.google.com",
       "description": "Perspectives du marché immobilier au Québec 2026  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Hausse de nombre de courtiers immobiliers au Québec : appât du gain ou réel appel de la profession - 24heures.ca",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPMjhvbzVKaks2UDZhSGFiT3RiR0xGb1ptWEhHZlFTRUp6WEpnUlJ6aXltaVJqMXc1dWpoak5GdlhtbHVMN3ZJYmljU2JoTGh2MXE1MXJ0dExkM2V6NGQ4NFk1QmROaEZlODhRV1BCb0xSenVTNWNXV2tNX2ZPYy1GR0pfLXBDVzBTbU92RkxUQWw2WWJibGN0ZWw4dEw2ZkU3aThXY3FEZ0xhUGhEOHFIU0pNcFdJbnpsVkFDb3NkN3JvS09LV0NQcHZPMnA?oc=5",
+      "source": "news.google.com",
+      "description": "Hausse de nombre de courtiers immobiliers au Québec : appât du gain ou réel appel de la profession  24heures.ca",
       "cities": [],
       "category": "general"
     },
@@ -115,6 +131,24 @@
       "category": "local"
     },
     {
+      "title": "Immobilier : l’incertitude s’installe chez les acheteurs québécois - Le Lac-St-Jean",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnNSaG00U2pGN0RZNTdDZUdELTg2bnRlMGNObFFUQkdHdUgwUjV6U3dpbzk2RlFGR0h5ZmVza290T25sVTRJbkhDV1RwQi1Fa2hBRHdOMklEYXF2MWtaMjVXRnlENTlIU293dVVQN25DQ2ZmMWdKS0ZtemJONVFXQlN3RTUtby0tVEpaRkZtakJ6MkQzLXZUcExFNTYwc1BHQi0wUjFtLXBRUQ?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier : l’incertitude s’installe chez les acheteurs québécois  Le Lac-St-Jean",
+      "cities": [
+        "saint-jean"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Un courtier achète à rabais la maison de ses clients qu'il devait vendre au gros prix - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQ0YyZGJHbEliNll4RUNtaFNWWkRPWXN1VFh3eGU3cWwtX0NUcmVUc0ZMbGZwY0FTWWh4akgyd2VCaTV5UnFEemdEbF9MeVpoeWZFZWdyWEh5M0R5YnBuc09zWWl2czJWUzBhNFdFa1lzWHZuaFYtRmhRd2V2cGtTWmhRRUxFZnpJNTl4aG5oOURwX2dsRFRTWThidEZxaXpOUFcxYU9jMlZKTTVOS2hFX2ZWaUdZZ0E?oc=5",
+      "source": "news.google.com",
+      "description": "Un courtier achète à rabais la maison de ses clients qu'il devait vendre au gros prix  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Le marché immobilier demeure en forte croissance à Victoriaville, selon l’APCIQ - Mon Victo",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNemdoQ05FMDZKb25TeXFOQ3p4M1pKbmRRMHNqLWJQcFU4aEJNUjEyanhJQnAwQUdSS2RleFUyS0d0RmVnZzRpdXlrbjVtakhwYUMxSnlnYjgxM1M0T3J0TnMxUTAxZkFFZE9NQU91ZzVuU3RzYUxDakQ2YURFZ3pfMjFjOHlsWGIyS3F5WWM0ODRKRVpCLWlKT1h3dnlPZmVZQlVGR0kxZHU2NGw1VXhJ?oc=5",
       "source": "news.google.com",
@@ -123,18 +157,20 @@
       "category": "general"
     },
     {
+      "title": "17 000 courtiers immobiliers, zéro concurrence sur les prix - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUUJQeGd5cjFrYUhBODVXSDhqakIzcDY3NWxzRDcyc3J2dk1BV3Z2MHRocGVhME9aZ0o2MW9zM3NlUnljSXNvMmRadjlBTGVqT3RrbEY3aTNSMkVXakNuNi1nWkZmRHpMRUwzLVhXQVBJdHk5LTdyZmc4WHBKel9qYWljR1hadmxRT1E0X1BDVFY5ZDJNRlZzclhaN0Z6ZlhDWWFYZ2dB?oc=5",
+      "source": "news.google.com",
+      "description": "17 000 courtiers immobiliers, zéro concurrence sur les prix  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
       "title": "La SCHL prévoit désormais une baisse des ventes immobilières en 2026 - Noovo Info",
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUExXWURxVjFZWHhSU3g3elBWZmkxaU1UdDRVXzJNUFN5U2RwMGVENGJhSGhrREYyeFNGV1M1WFpnSl9TRnVnLU1xSl84V0YyM3hwU1QxWjcxeU1vcHFVa1VZUEZZMVVIeUJxS0VVRzctaDRFQUdtZE9MS1RsaXVyOHFEQTdTanlRWmFEeWtock91RHdSdmdlZGM4S2F4bFJta3RqcGRyT3pBMDI5Tm5CeTVMV2VSRkcyWmNF?oc=5",
       "source": "news.google.com",
       "description": "La SCHL prévoit désormais une baisse des ventes immobilières en 2026  Noovo Info",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un courtier achète à rabais la maison de ses clients qu'il devait vendre au gros prix - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQ0YyZGJHbEliNll4RUNtaFNWWkRPWXN1VFh3eGU3cWwtX0NUcmVUc0ZMbGZwY0FTWWh4akgyd2VCaTV5UnFEemdEbF9MeVpoeWZFZWdyWEh5M0R5YnBuc09zWWl2czJWUzBhNFdFa1lzWHZuaFYtRmhRd2V2cGtTWmhRRUxFZnpJNTl4aG5oOURwX2dsRFRTWThidEZxaXpOUFcxYU9jMlZKTTVOS2hFX2ZWaUdZZ0E?oc=5",
-      "source": "news.google.com",
-      "description": "Un courtier achète à rabais la maison de ses clients qu'il devait vendre au gros prix  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -157,36 +193,10 @@
       "category": "general"
     },
     {
-      "title": "Bellechasse poursuit la mise à jour à jour de son patrimoine immobilier - La Voix du Sud",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYlhZbVV4eWhLbnFLMkQ3Q1hlX0NMdlhWX256Mm9RbjFCSHZJY0Z6cnFENXUwTjkySzU0YS1McGFZeXZjRmNLaFVkblA5MUJibUhwVmJVZWlsNFNjTWZFeVNjOUNQZnJaNUdJbW9NTGRZTjdQLVJrakZNYlByV2k4XzZlcks1NTdsMUhrOC00VHBWOTYtVDZ0NEJvMlUxLXlSUkxZTXgyaWlreXk4UmVnWQ?oc=5",
-      "source": "news.google.com",
-      "description": "Bellechasse poursuit la mise à jour à jour de son patrimoine immobilier  La Voix du Sud",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un avocat d’une société d’État spécialisée en immobilier condamné à payer 21 000$ à sa locataire jetée à la rue - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYXJjTUJjRHpOTjgzOENZNVljUkxPakJLT1hJb05PX1ItQzRyV1NaUGF6MTdrWHh0MUFnV2JRT3lxLS1iRVhKaHl3eEppQUFTdDltU1p1RkdDRjZHRlVUaUJaM2VOdURLTkU4amV2dHc4NFc2c3NCX2txTWRfSDJRZno0MHpKTi1wVEJKdmU1Z19YckNXai1BNVlzN1JPbUlTN2hfMnA4aWRfN3pqSHo0YzNWZk54eEJscDlSdW9zekJldTVId185eHNUYmdxY1J5MjJGUS1SbU9ldVZqbzBGaUtNR0VIZjdIS0E?oc=5",
-      "source": "news.google.com",
-      "description": "Un avocat d’une société d’État spécialisée en immobilier condamné à payer 21 000$ à sa locataire jetée à la rue  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
       "title": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada - Ratehub.ca",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
       "source": "news.google.com",
       "description": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada  Ratehub.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le prix des maisons unifamiliales atteint des sommets à Bromont - Le Droit",
-      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPQWRGalhJSkJQY0EzZUlMcnZaeHNiUU54bEJYempvNW5RZkNIeUxSWmd1cVIwZXlMdVhxajBwZ0ppX3k0UF9NZTdkSkhBQzlEek5tZ1d6c054OFhaT0JoMF9xSHF1dzBQTXBPS3UyZDBhN18wTjI2YnV0ODlFT090UU1wUlBYZXh2RU96N3J5clV0RXhOYUxpUkd3ZklIT1oydFhINU5Xck5WdWVNcTJseHFjS19DME1aWVJjMjV3U3Nfc1dwSUdBcGFFc05zVVJkZ1RBalhBTDhHckhiWXdCMlRDVEtUVVhoVUJ5YWF1TU15ZHBIZ1BHWTJ4YWM?oc=5",
-      "source": "news.google.com",
-      "description": "Le prix des maisons unifamiliales atteint des sommets à Bromont  Le Droit",
       "cities": [],
       "category": "general"
     },
@@ -199,10 +209,10 @@
       "category": "general"
     },
     {
-      "title": "17 000 courtiers immobiliers, zéro concurrence sur les prix - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUUJQeGd5cjFrYUhBODVXSDhqakIzcDY3NWxzRDcyc3J2dk1BV3Z2MHRocGVhME9aZ0o2MW9zM3NlUnljSXNvMmRadjlBTGVqT3RrbEY3aTNSMkVXakNuNi1nWkZmRHpMRUwzLVhXQVBJdHk5LTdyZmc4WHBKel9qYWljR1hadmxRT1E0X1BDVFY5ZDJNRlZzclhaN0Z6ZlhDWWFYZ2dB?oc=5",
+      "title": "Un avocat d’une société d’État spécialisée en immobilier condamné à payer 21 000$ à sa locataire jetée à la rue - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYXJjTUJjRHpOTjgzOENZNVljUkxPakJLT1hJb05PX1ItQzRyV1NaUGF6MTdrWHh0MUFnV2JRT3lxLS1iRVhKaHl3eEppQUFTdDltU1p1RkdDRjZHRlVUaUJaM2VOdURLTkU4amV2dHc4NFc2c3NCX2txTWRfSDJRZno0MHpKTi1wVEJKdmU1Z19YckNXai1BNVlzN1JPbUlTN2hfMnA4aWRfN3pqSHo0YzNWZk54eEJscDlSdW9zekJldTVId185eHNUYmdxY1J5MjJGUS1SbU9ldVZqbzBGaUtNR0VIZjdIS0E?oc=5",
       "source": "news.google.com",
-      "description": "17 000 courtiers immobiliers, zéro concurrence sur les prix  Le Journal de Montréal",
+      "description": "Un avocat d’une société d’État spécialisée en immobilier condamné à payer 21 000$ à sa locataire jetée à la rue  Le Journal de Montréal",
       "cities": [
         "montreal"
       ],
@@ -245,14 +255,6 @@
       "category": "general"
     },
     {
-      "title": "RGCQ : la copropriété est un levier stratégique pour le Québec - Le Figaro",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWDBGcU5WNUVyNTZCLWw4Q1F2MTAzX09vcXF2czJycGNQRXd4ZTlDYUZiMmhGeWNlOGFSa2JZUnFXaXZESDRwRUJiZVA1eVVJTmhwZWRBOXc2bzJ6cVZ6dU9saUdpUFZDYnJ3UV9RanZBMTllUFpGYUZCa29RNy1wX3d2VXhWNnA4YkZ2RTVzZnlWQTQ2TUhFbWYtMXBueTZyV3JNag?oc=5",
-      "source": "news.google.com",
-      "description": "RGCQ : la copropriété est un levier stratégique pour le Québec  Le Figaro",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada - Ratehub.ca",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBGeXFqckdIelJ2aVFNYUVYdFU1RnprYkppVzkxd0dMSHRaOW9xbzJiRjhvbjdoM3lWV05zYndMdGF4OHl2WTFnU0p6aE9GeEJ3bE9Db2w0bVRYM3dwc2p3NWw0eFVLWU0taWFCZDhLaw?oc=5",
       "source": "news.google.com",
@@ -269,10 +271,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient le taux directeur à 2,25 % pour une sixième fois consécutive - crea.ca",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdnJFdTEwaW1aTWlwZ3dHNURpSjBacEVrRUVfQldUckI5OXBLYnlfdTdfbS1tWUFnMVZqS01tX3NZMUwxN3M1ZWpoZXY3S0JDNnlhbXZtUVVwYm0wSFExM1JLbzZZeTBnUm9INUIyTnNLb1E4TDVaYl9BMzA5YU9aNER2VWw2RlJSN0hVMkJIWEkyTEEtUml4V0IwOXdKMGRoMGFFMEY3RFlKYzBMc3VpQ0laRGxGVm1jeklRUFZsdk5Jdw?oc=5",
+      "title": "Sondage de PHC : les Canadiennes et les Canadiens consultent les courtiers hypothécaires pour leurs conseils, plus seulement pour leurs taux - Lelezard",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9iWVFsN2tHaFhxcUJRSHAwdFBXN2dVbkNZaldSa1h5b0ZVX0hsODNObXlGT0lPNGM3LUpvTkNJREtMYzVmM19xcEhnVVByWlF5eWItUDJHWmpZQ1k1N2c?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient le taux directeur à 2,25 % pour une sixième fois consécutive  crea.ca",
+      "description": "Sondage de PHC : les Canadiennes et les Canadiens consultent les courtiers hypothécaires pour leurs conseils, plus seulement pour leurs taux  Lelezard",
       "cities": [],
       "category": "general"
     },
@@ -295,6 +297,14 @@
       "category": "local"
     },
     {
+      "title": "Agents de sécurité | La Banque du Canada a encore reçu l’ordre de ne pas recourir à des briseurs de grève - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOZjQ0OXNJTDNaeml5aEIxN2JOX09SdURNcHpzakJ0UVJSMjJBVExZUENXNUp1eFJ0ZUM2djVaSnVMRzI0akZUNGxLQktWNGxpbUlTNXAwLUtmR1E5THl5RUFOMHQ0NFpoN1hkajRDUFJoSzM2cnVHbXNKV3Z3aWVfRWJkblZjRjJqREVjTVR1bldISUViTUV1enhReWN4bEVRdkhLVmM4bUM3UzdoOHl0SXFhQzdXc1cxcUppc25TNHJJUWd6OG1FR2lGVnJIU05YZkJGRFRNTTFjZk1ySnFORl9UdlA2UQ?oc=5",
+      "source": "news.google.com",
+      "description": "Agents de sécurité | La Banque du Canada a encore reçu l’ordre de ne pas recourir à des briseurs de grève  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "L’inflation de juin confirme la décision de la Banque du Canada - Les Affaires",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORzlheGVhNHFHZ0hCVHdPRWJKZGRUc0VXMUFTTll1MWpPNHJzZV9VRDgyYXlfYUJHbFUzam5SMkUzVnRxSGN4dnVud0JSYXN2Y2plRzFnTkxsbF9KSGtDRVdkcHdUb0dwdm96TW5rVDFZNUlaSVRIdjZIWmVOX0NETWdQMFFXdTRodU9paEVQYWdEdDhRc1dPU2lvMEdHdEd2YXc?oc=5",
       "source": "news.google.com",
@@ -303,10 +313,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada accusée d’enfreindre encore le Code du travail - Radio-Canada",
+      "title": "La Banque du Canada enfreint encore le Code du travail - Radio-Canada",
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQaE11ZGRiZEc3WVViR0NEUG9ESU50UzFxWHFnMFNiaHBRYTFndVZFbFQ4UmwzQjBDZlFxNHA4aFNCYWtyRWhMcUI5Z0dBZTJ2cDlvaG5SLVMwU2p6NWx1ZmUwTjN6U0lTTkFxaEVsLXF4UEVnejRWZzkxb3R3X1ZEdQ?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada accusée d’enfreindre encore le Code du travail  Radio-Canada",
+      "description": "La Banque du Canada enfreint encore le Code du travail  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -319,14 +329,6 @@
       "category": "general"
     },
     {
-      "title": "Canada | L’inflation ralentit à 2,8 % en juin - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPM2VfTEdhZHd6VW1vTG9oWTYwQXhlNzFEckFzNVdnWklYdjBXZHZ5SWI4ZHBoLVByd2tzQXcxQ0J4bllYUjdYdDZ1cHJuMlFQZmlfS1kzcmpXZ3pDYjdwY0F5c1ZWOXpxemlBUGExVy1oN09XUE1ObjdHTXBuN1lWandYcUhRYnBzdXUzSWg4V1IwVURzS2k2VlBfWU1SUkE?oc=5",
-      "source": "news.google.com",
-      "description": "Canada | L’inflation ralentit à 2,8 % en juin  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "L’inflation s’atténue au Canada en juin - rbc.com",
       "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQVDhfMmwwY1JFOUp6dFJVUnpzV0dKSktRT0pUcV9XQ3plZ3hOS1N1d3kxbDdjUXhFUWItUUx4d1Y1aXJIai1rU2pwdmJOeEV3d2RUdDNtNVBzWF9zdTZTZzdSNnR2dEZMQ0pNQ003S216NUlfc0xIcTJJamhSR1p3Z0dUbjNCMmx4NFdfVTNVcFowX1ZTZDdvQTByTzJEU3htV210UzctTnpsaHVZMVlvbEJEQTVvZGFESDZYRXI5NFJ1TTM4VUpJbVVHbU5pMi1lOUtYLU9Kc05hNFNKQV90WEJn?oc=5",
       "source": "news.google.com",
@@ -335,18 +337,28 @@
       "category": "general"
     },
     {
-      "title": "Taux directeur au Canada : comprendre son rôle et son impact - Milesopedia",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oMTFxbU5QdENwSnlqaDY2NzhEc1hNc2gwSFBQUHp6RjdvTnVkbFBpRWpzNFc5bFdNTDU1bTh2QVFJMDJQdncwREtYbThla0QwLTk5NjRLQjg2ZC0zQWpZVDRqRDhPSjZ0RG94djJOMXY0cDZy?oc=5",
+      "title": "Banque du Canada: les agents de sécurité intensifient la grève - 104.7 Outaouais",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQLThYems2UUhpY1Z0d1U2cXhiYXlQQi1YQjVlSERjWktZN2pUZERVaTZzRF9fcnp5ckl6ZTFlNThhR01odEpLb2VZaFFHZXlMZExyck14ckV6YS1hWXNrUi03TjRPc1AyUGtNLXdkdDRZN1dRYU1Ecm5xZlRrYk1FTUJfTVdSM0h0RnM5TG9SQzR4N0lIZnJCWGRFdHQ?oc=5",
       "source": "news.google.com",
-      "description": "Taux directeur au Canada : comprendre son rôle et son impact  Milesopedia",
+      "description": "Banque du Canada: les agents de sécurité intensifient la grève  104.7 Outaouais",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25 % - MSN",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZHJPajIwQmFyYy1TQXplWFpVYWxEa3Zyd2dSM2UxekpQeUNIT3VoLVRTcUEzNkx4ZzYxTFNBWk90b2sxbWR5aElJbjlpcFlWMGdiQ2pIdXJidVFGYWh0SmxXdGk3Q3Y4ZWJab0gzTm1IeERxNzZfS1c0ekdZRXo5ekE0MFBCR0VkRVhPcWZMWU9tSWdzTFIxZ0N0b3Vib2JSYWNSeU1JTzc4a0xJbTlpZmlhbjJYekozejVJeGV3?oc=5",
+      "title": "La Banque du Canada a encore reçu l'ordre de ne pas recourir à des briseurs de grève - L'Écho de la Rive-Nord",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPdDY3YmZtcVRDbzViVExVeV81UlZ4ZmttZTdPbmFacEl1cnppZzV6RC1VZGdxT2Q1cHlrSTJPM0VoQVVHTFlqX0NBdlJHVWpteXZwX1NEdjU3bV9rTHVaSWloaTUtTThGZ3dUQm5Lb3RUNlJGTjVKVW9OQkVtZUF0eGNoaWxVRVNxc0Q5YWFZbHZiSFhVNTdXVmJzcmdBNTB6U2JGU1JKT3FmNUlkUkJ1alBqdzNza2RRUExvc0pJTF9RNzhxeHVyZm9YaUF1TzREdnlQWmRNdE9Ma2p1?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25 %  MSN",
+      "description": "La Banque du Canada a encore reçu l'ordre de ne pas recourir à des briseurs de grève  L'Écho de la Rive-Nord",
+      "cities": [
+        "rive-nord"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "La Banque du Canada maintient le taux directeur à 2,25 % - MSN",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNEtLaU1GMnoyelYxTURNNGRjQUtLd0F1Z2djTG00cDZCSzViWk1qSDd5NmViY25GdnFWMU1CLWdwaEVJc1RnaG9iV1hSTWk1RHhfN3dzUmF3aVk2RnZBQURhNnRfMTJFSlVlWHBmcjQ2NjYxZFRmZ2ItLThFNEE2aWtwNjN3NWNpVnpjUjNyM3pIZ2JqUGZablRMWUZBaGFaTDdubmpMUWtkdjdxQTlFWUFRdEE?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient le taux directeur à 2,25 %  MSN",
       "cities": [],
       "category": "general"
     },
@@ -367,10 +379,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient le taux directeur à 2,25 % - MSN",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNEtLaU1GMnoyelYxTURNNGRjQUtLd0F1Z2djTG00cDZCSzViWk1qSDd5NmViY25GdnFWMU1CLWdwaEVJc1RnaG9iV1hSTWk1RHhfN3dzUmF3aVk2RnZBQURhNnRfMTJFSlVlWHBmcjQ2NjYxZFRmZ2ItLThFNEE2aWtwNjN3NWNpVnpjUjNyM3pIZ2JqUGZablRMWUZBaGFaTDdubmpMUWtkdjdxQTlFWUFRdEE?oc=5",
+      "title": "Canada | L’inflation ralentit à 2,8 % en juin - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPM2VfTEdhZHd6VW1vTG9oWTYwQXhlNzFEckFzNVdnWklYdjBXZHZ5SWI4ZHBoLVByd2tzQXcxQ0J4bllYUjdYdDZ1cHJuMlFQZmlfS1kzcmpXZ3pDYjdwY0F5c1ZWOXpxemlBUGExVy1oN09XUE1ObjdHTXBuN1lWandYcUhRYnBzdXUzSWg4V1IwVURzS2k2VlBfWU1SUkE?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient le taux directeur à 2,25 %  MSN",
+      "description": "Canada | L’inflation ralentit à 2,8 % en juin  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -383,34 +395,10 @@
       "category": "general"
     },
     {
-      "title": "Pourquoi les taux hypothécaires inversés reculent au Canada - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUVRxZjM1OVJMYTdFeE9rVnB0dEV6YnhYZHRMX1pvVHNyakVybGdGOVBBME54RTgtbS03OHpHV3JaX1RoTHI2Sy1teVRJWUhjdVRaR3pqMkx3cWNNOU1aWHlFbkJocjEwWUpqcjVHcGpkQnhxZkIyY0xodXh0YjVVQklFaXdZWVMza0NKdUVoaVRObUQxRGZwRmp0N1VQRWdzLXMzUFpOOXhGN3ktcnhF?oc=5",
-      "source": "news.google.com",
-      "description": "Pourquoi les taux hypothécaires inversés reculent au Canada  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Donald Trump va-t-il pousser les taux à la hausse au Canada? - MSN",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUEt3T3U5bEJqRlE2QVlkaHBVWlJVM19LVkdXM3JkVGREREtqT2tncExSck1iQTE2SWh1NUgtdTNCdU50Qy1scTRObGpHNkV4anRqc0tzTkM0UUxLWTg5UEw5eV9wc1RZR2NHMU9HNGRaUWs2X2Fic3NzOWNfdDJjMDQzVHpzZlFraXpRaXNqY1V6ZnYtT3RncFRQeW5tSVVaU29zYXFTMVpWMmgycVFnQ3lydnBxTlc2c28wNlRMSWYwR3M?oc=5",
-      "source": "news.google.com",
-      "description": "Donald Trump va-t-il pousser les taux à la hausse au Canada?  MSN",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Canada: l'inflation ralentit en juin grâce à un recul du prix de l'essence - TradingView",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9KZ1owVENOUXdOMU5idXlKVDVfelV5V1lpZ3RnQ3IwR1RzNUg2blZ0a0phOEZEeS1rbE1zZUM2QUprR2twRkxnNVBXU3hkOElhY2wyZGdkUFRLWmt6clRJMXNB?oc=5",
       "source": "news.google.com",
       "description": "Canada: l'inflation ralentit en juin grâce à un recul du prix de l'essence  TradingView",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada s'oriente vers un soutien à la croissance tout en restant vigilante sur l'inflation, selon Nomura - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOTEFDVU5qQ24tTW85ME9QUnhPTzNmTVp2NTJkUlN3NlNvc2N4UWpxVC1rX19jREg0M184b2p3YUpzS2lqb0FNdG1JSkRHVGlscGxHSG9EWVRKNjZwU1JKbGRpT1NEQmF3cTJWdlRuajlWelhZRkxSRE1rUE1QcGhBb2o0LUN3bXhEcTVfZGs1UWdsanBXWENMWjBOLTJMU2NaTDRmTHYwYmswemppRFEtanYxZE5fdzVjOVo2WV9nTjQ5OHBmRG5nMUNaaXY5X0hLenF4cnNYQXY4UGhkSnVUYkZTcDd3QmRpanFWbWFOenVTQQ?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada s'oriente vers un soutien à la croissance tout en restant vigilante sur l'inflation, selon Nomura  Zonebourse Suisse",
       "cities": [],
       "category": "general"
     },
@@ -423,10 +411,10 @@
       "category": "general"
     },
     {
-      "title": "Canada : l'inflation de juin 2026 attendue en baisse à 2,9 % après le pic de mai - INFO.FR",
+      "title": "Canada : l’inflation de juin attendue en baisse à 2,9 % après le pic de mai - INFO.FR",
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1HaFFDY3hTR09td3A4VTJDQzlwZDFuMk0wcFBhaU81akpxS2tLOGR0ak0xMmFxV1Q0ZDFxODBVdm5DM2x3ZG5ETTlrZ2NWTnY5aTBPekxTOFB2UlZpejdWY3hRb25Ta0c5LXFPT3JSalZyTlVGZW53cw?oc=5",
       "source": "news.google.com",
-      "description": "Canada : l'inflation de juin 2026 attendue en baisse à 2,9 % après le pic de mai  INFO.FR",
+      "description": "Canada : l’inflation de juin attendue en baisse à 2,9 % après le pic de mai  INFO.FR",
       "cities": [],
       "category": "general"
     },
@@ -439,10 +427,10 @@
       "category": "general"
     },
     {
-      "title": "Soyons La Solutions ! À Ne Pas Manquer Le 21 Octobre Bank Of Canada - Banque Du Canada (3PezC92E0n) - Mshale",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9sNk5pdzJvcV9RcGxoNlNSTW9yNktJdnQ5Q2NFcFpKNlhyYjgxbVhiY0pSTmNmSS1ySFVRWlpOZDZHYmcxa014blMtVnNvQjNLWHd4OU9pV0F2blVPdWRDMg?oc=5",
-      "source": "3PezC92E0n",
-      "description": "Soyons La Solutions ! À Ne Pas Manquer Le 21 Octobre Bank Of Canada - Banque Du Canada (3PezC92E0n)  Mshale",
+      "title": "La Banque du Japon devrait maintenir ses taux à 1% face à la hausse des anticipations d’inflation - Yahoo Finance France",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNWG5pY1JkM3FpWjdzUVZfbnhPODdOcVhKU0p6Um9udGJDR25Vc2xuYU1fQUNZTlRET0F5R21nRzl5cjNJS3p5MHlROEI4eDVmb0VqaFYwVzNtRnJ5THlkeWxMTXctaGtQVWZTR1hoMW5ESFNfNjd1aXEtdk5NRzRKZWhxaWNvOXhYeVZBdkw3a3hyeTBG?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Japon devrait maintenir ses taux à 1% face à la hausse des anticipations d’inflation  Yahoo Finance France",
       "cities": [],
       "category": "general"
     },
@@ -507,5 +495,5 @@
     },
     "last_quarter": "juin 2026"
   },
-  "last_update": "2026-07-23 15:06"
+  "last_update": "2026-07-24 14:53"
 }
