@@ -1,14 +1,6 @@
 {
   "news": [
     {
-      "title": "Élections provinciales 2026",
-      "link": "https://apciq.ca/elections-provinciales-2026/",
-      "source": "APCIQ",
-      "description": "L’article Élections provinciales 2026 est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre",
       "link": "https://apciq.ca/stats-2e-trimestre-2026/",
       "source": "APCIQ",
@@ -87,18 +79,20 @@
       "category": "general"
     },
     {
-      "title": "Deuxième trimestre | Boeing en perte nette, creusée par les futurs avions présidentiels",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-28/deuxieme-trimestre/boeing-en-perte-nette-creusee-par-les-futurs-avions-presidentiels.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’horizon semble enfin se dégager pour Boeing, après plusieurs années de crises dues à moult problèmes de qualité de sa production, mais le constructeur américain continue de pâtir des erreurs du passé.",
-      "cities": [],
-      "category": "general"
+      "title": "Mars 2026 : Montréal en léger regain, Québec maintient son élan",
+      "link": "https://apciq.ca/mars-2026-montreal-en-leger-regain-quebec-maintient-son-elan/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 2 avril 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de mars 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Mars 2026 : Montréal en léger regain, Québec maintient son élan est apparu en premier sur APCIQ - Site web.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
-      "title": "Talc et cancer | Johnson & Johnson propose 5,5 milliards de dollars pour clore la bataille judiciaire",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-28/talc-et-cancer/johnson-johnson-propose-5-5-milliards-de-dollars-pour-clore-la-bataille-judiciaire.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Rebond des prix du pétrole | Wall Street ouvre en baisse",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-07-29/rebond-des-prix-du-petrole/wall-street-ouvre-en-baisse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Johnson & Johnson (J&J) est prêt à payer 5,5 milliards de dollars pour régler des dizaines de milliers de procédures judiciaires liées à des produits à base de talc accusés de provoquer des cancers ovariens, a annoncé le géant pharmaceutique américain lundi.",
+      "description": "La Bourse de New York évoluait en baisse mercredi, sous la pression d’un nouveau rebond des prix du pétrole, dans un marché en attente de la décision de la Réserve fédérale (Fed) sur ses taux et des résultats de Microsoft et Meta.",
       "cities": [],
       "category": "general"
     },
@@ -107,14 +101,6 @@
       "link": "https://www.ledevoir.com/economie/997694/pourquoi-loyers-ne-baissent-ils-pas-quebec",
       "source": "Le Devoir",
       "description": "Les conditions semblent pourtant réunies pour donner un peu d’air aux locataires.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Hausse de nombre de courtiers immobiliers au Québec : appât du gain ou réel appel de la profession - 24heures.ca",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPMjhvbzVKaks2UDZhSGFiT3RiR0xGb1ptWEhHZlFTRUp6WEpnUlJ6aXltaVJqMXc1dWpoak5GdlhtbHVMN3ZJYmljU2JoTGh2MXE1MXJ0dExkM2V6NGQ4NFk1QmROaEZlODhRV1BCb0xSenVTNWNXV2tNX2ZPYy1GR0pfLXBDVzBTbU92RkxUQWw2WWJibGN0ZWw4dEw2ZkU3aThXY3FEZ0xhUGhEOHFIU0pNcFdJbnpsVkFDb3NkN3JvS09LV0NQcHZPMnA?oc=5",
-      "source": "news.google.com",
-      "description": "Hausse de nombre de courtiers immobiliers au Québec : appât du gain ou réel appel de la profession  24heures.ca",
       "cities": [],
       "category": "general"
     },
@@ -129,10 +115,10 @@
       "category": "local"
     },
     {
-      "title": "Un courtier achète à rabais la maison de ses clients qu'il devait vendre au gros prix - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQ0YyZGJHbEliNll4RUNtaFNWWkRPWXN1VFh3eGU3cWwtX0NUcmVUc0ZMbGZwY0FTWWh4akgyd2VCaTV5UnFEemdEbF9MeVpoeWZFZWdyWEh5M0R5YnBuc09zWWl2czJWUzBhNFdFa1lzWHZuaFYtRmhRd2V2cGtTWmhRRUxFZnpJNTl4aG5oOURwX2dsRFRTWThidEZxaXpOUFcxYU9jMlZKTTVOS2hFX2ZWaUdZZ0E?oc=5",
+      "title": "Hausse de nombre de courtiers immobiliers au Québec : appât du gain ou réel appel de la profession - 24heures.ca",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPMjhvbzVKaks2UDZhSGFiT3RiR0xGb1ptWEhHZlFTRUp6WEpnUlJ6aXltaVJqMXc1dWpoak5GdlhtbHVMN3ZJYmljU2JoTGh2MXE1MXJ0dExkM2V6NGQ4NFk1QmROaEZlODhRV1BCb0xSenVTNWNXV2tNX2ZPYy1GR0pfLXBDVzBTbU92RkxUQWw2WWJibGN0ZWw4dEw2ZkU3aThXY3FEZ0xhUGhEOHFIU0pNcFdJbnpsVkFDb3NkN3JvS09LV0NQcHZPMnA?oc=5",
       "source": "news.google.com",
-      "description": "Un courtier achète à rabais la maison de ses clients qu'il devait vendre au gros prix  Journal de Québec",
+      "description": "Hausse de nombre de courtiers immobiliers au Québec : appât du gain ou réel appel de la profession  24heures.ca",
       "cities": [],
       "category": "general"
     },
@@ -163,22 +149,6 @@
       "category": "general"
     },
     {
-      "title": "Pourquoi les loyers ne baissent-ils pas au Québec? - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUTY4aWVnYy1vZThUb0Z3ZFd1NjlFbU1UZDBEQXJCcU5odFhLdmZVdmdTaFRBcTN5THhBdFVFRVUtV09ZUDluZ1FvRjM4R1NDaUJjaXc4WEY0SFJoYUlpOGw4NUxIekRjMmE2NkxhOXVlUmxReHJLYTd5MjVpd3hCWUJqUDM5aTJmWFFN?oc=5",
-      "source": "news.google.com",
-      "description": "Pourquoi les loyers ne baissent-ils pas au Québec?  Le Devoir",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le marché immobilier se stabilise au Nouveau-Brunswick, même si les prix restent élevés - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWmRWWEpyaTRoMVo2YklhNk56eks4dWktTUpkNklPYnNqQmhUTHR6ZnVuLUQtZDFWazFCZzVZMVpDOGp5WUtYbldtb29zSFFkRjFXVnE0Z1NvQ3dtTlRsbWxKQ1VuT2VlSDJkcm9CSEpqZmhlUXJ2b1FWZzZrcnZwLVJQcGQ2akRJYzhYYVVlTk1Cd3J4dzNuME4td2l5TGREMVlaSVVCemhLb2piU2VzNm4wTVJ3WjFJYjNYSTRUTHZSTUd1?oc=5",
-      "source": "news.google.com",
-      "description": "Le marché immobilier se stabilise au Nouveau-Brunswick, même si les prix restent élevés  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Il aurait obtenu plus de 400 000$: un faux courtier arrêté par le SPVQ après 5 ans de cavale - Journal de Québec",
       "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNVlBvVWJYMkVrZXVxZDRnU0wxbGl3a0pQMHhaZTNyb2FySjE5Tkxub3ZGLTR1Y2x2T0VpeGdONVNaS3FzNVFGUV96WFJuckpOYlE2M3AwYWtVNm85eTRfWkl2RXFIdUtYN29helczbHNxTTN4ZHlkZmFCY3VQdmg1ejV3QzJSdXk4NHl0WEdZamhQWXdmdDhyYVR2ZjFNZVAxamk5cFRXXzNiTXlFSl9OQkUxMk8xR0xlVFlJUDdQYmZNbDYtdXZvX2N0WFZzSFFuY0JDb3FBNmc4NXlS?oc=5",
       "source": "news.google.com",
@@ -187,14 +157,28 @@
       "category": "general"
     },
     {
-      "title": "Une maison vendue 345 000 $ à Sainte-Thérèse et 70 autres transactions dans vos régions cette semaine - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQaDBVc3JheGVQU3FfQl9PeGxjbzNwX3RocUFGWHJWZFh3ckJ1d3dWaERfZ0JhY0J4VkpXWlFRbXRuODBzUEVmQzkyTWhEWUF6cWVHanBhY2psbW9FZm5QSDZKN25MaW5mQnJsa0oxWXpscC10SkNNZ2s5OWlVOW5MdlRsRE1vb05NNjc2YXBJbFVnMndkQXhJT1lfRzJSYUZrdDNLTl9IT3RoVmlPbzJHWnRUR1JiYzdLRUU0UXA0a2FpeWhDVi1YTkxYMjBhUkNQdk91WjRJNzQ4X0pKZVE?oc=5",
+      "title": "Pourquoi les loyers ne baissent-ils pas au Québec? - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUTY4aWVnYy1vZThUb0Z3ZFd1NjlFbU1UZDBEQXJCcU5odFhLdmZVdmdTaFRBcTN5THhBdFVFRVUtV09ZUDluZ1FvRjM4R1NDaUJjaXc4WEY0SFJoYUlpOGw4NUxIekRjMmE2NkxhOXVlUmxReHJLYTd5MjVpd3hCWUJqUDM5aTJmWFFN?oc=5",
       "source": "news.google.com",
-      "description": "Une maison vendue 345 000 $ à Sainte-Thérèse et 70 autres transactions dans vos régions cette semaine  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Pourquoi les loyers ne baissent-ils pas au Québec?  Le Devoir",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "A220 | L’investissement de Québec en panne sèche - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSlBoOW1vSVFSZHI0ZGJDLWpFb05Ib3pTLUJrY0RvNzlHbEs4ZEIyZmRqYVhNU1d1S1RsbTBhTkpicTlwUTVNVmI5YzAtV3dUZGoxTk5iM1RuYXNXWk1Yek5MeEowczJTMk9Fczh6VVZPTjRDNXhMNXR1SVJBWnJhRXQ0YUVrbGwxcFZoRE8wQXpDUDdhaVVISmg3SUNPNVUtZFY3aUVKSmZrZw?oc=5",
+      "source": "news.google.com",
+      "description": "A220 | L’investissement de Québec en panne sèche  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Des fédérations prises de court par une baisse importante de leur financement - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNdGhwa1ZiQ2t2cVJ4RVNlMXJRWW1kdk9qeUl3cGQ3QXNfRlR4c3VXU0s5V0RmODN3LTYxWG4wdVgzSGxXWDJsdnh6bGZYamFMa01ycmFOdDd5YmI0eUhncjNxX1ZvUzVwLVpJSFZGa2lCWVg3MXZxOVBwbWZwd3NZNnZCVUNiUEJkR1lFeExhemtyNHNTenRfb180TFFYbGFuVkFOa0dQckhvNnBsU2V4c1lqT21URHhEQ1Q2NnVpeDNEX2ZBaE5EYjlkNXYyOUYyaTFBa1hCU196TE9VbzZFM3lncDh1dWQtR05sSFYyVVFrR3M?oc=5",
+      "source": "news.google.com",
+      "description": "Des fédérations prises de court par une baisse importante de leur financement  La Presse",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Sept mesures pour permettre aux jeunes familles d'acheter une première propriété - Le Journal de Montréal",
@@ -239,14 +223,6 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada réprimandée d’avoir contourné la grève des agents de sécurité - TVA Gatineau",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRkF2M0FpT0V2XzZFMk10b3lvNXpwaEJoQ0s4elltMlZKcGMzQjhXQk5XSVdMVTlFQmZ6eWJtbUJtcnpLQ3Rya2wxRnBlLVB4eE9QaE1jMldkZ0RWWUNvbW5Cc2F3SlNQTTd1MGFYYXBkVDY4OUxPNHp4T1JJWHNqNnpZVWZSS00xcmFPNVdwSGRRRW1Zb1BBVlNlLTdvTlhjYVdQYU1Sdw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada réprimandée d’avoir contourné la grève des agents de sécurité  TVA Gatineau",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La Banque du Canada a encore reçu l'ordre de ne pas recourir à des briseurs de grève - EnBeauce.com",
       "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOMmdEUF9mc19JYlVic3dVaUJ5aElGYTU2a0FUTWhXcFRleElMMVZVSUxxdmpnRlNoamYxVGhydTlObG5zb1RhZkVfbGFZUDN1TFNMNmJSU19Ya0x1N1E2YWJ0TURoRHV6bjY3SkUtdENJbnh2N3pMNTNIbmxBN2hDNndpams1T3dkMk5FYm5JUjVRUHFSQmtqU2g2T0dOS3Y2RmNPcHQxVTd4ZlhMMWZtemU0MTlCWG9OX2t1UWR2MXZYZjRhWEcyS1g4cGVLdTZHcmc?oc=5",
       "source": "news.google.com",
@@ -263,10 +239,10 @@
       "category": "general"
     },
     {
-      "title": "Les tarifs de Trump pourraient rouvrir la porte à des baisses de taux de la BdC : BMO - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNY0tTdHJfNVlQRE43ZnJ6MGRwQXhzUm8xS2pmT0ZmS0hPQW1nS0hMVVhXVldkSVBSUVF2VGZmY2dOaXN4VEpoc0toRW02ZXRvN0l4OENsSE56NDBCSW9pS1FMSnBXTDFURTd1MlpiVHRKdU9HUFhwNEs0LUhuQWE5ZVE1NHVwSTRVUjRlV2FCYmlBR3gxQkpJb0lfczhZcGsyRlVORjlCb1pVVWdla0lCR2tWVlVLd0NYWUxFWmdfeVhGZ2RBY0d5Z2NHZngwcFE?oc=5",
+      "title": "Les délibérations de la Banque du Canada pourraient éclairer les risques commerciaux et les perspectives de taux, selon BMO - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQNGRIVUdadnJ3UmJRRGZGQTZsQnNEUkhQYjQyLUxXNXA0RUYyX0VnaGNaLVdjN3NzRFF4aFNyUFVRNkV1Q0NwVjZpemM1QlJwS0lURXVZRFU2N2tFNzFtZjBrOFRZUEVwR0VRRmVxa0NpTTZhNjNVVFMtQ3paTFNwS2cxNFRlbEQtdlZtaHowOFEzQ0V5ZFFjUjlGY1FGemRMSFh0eWNoeE41WW1YOEdoUnRMcEN1SC1NYU9FSDhHU1k2VjhnTXlVeVZzTUhMUTRUM2FUU2ZTeXJxVVBkdjJxNjlPbnpqTFFkV0owSThReUZ2MTg?oc=5",
       "source": "news.google.com",
-      "description": "Les tarifs de Trump pourraient rouvrir la porte à des baisses de taux de la BdC : BMO  Canadian Mortgage Trends",
+      "description": "Les délibérations de la Banque du Canada pourraient éclairer les risques commerciaux et les perspectives de taux, selon BMO  Zonebourse",
       "cities": [],
       "category": "general"
     }
@@ -323,5 +299,5 @@
     },
     "last_quarter": "juin 2026"
   },
-  "last_update": "2026-07-28 15:17"
+  "last_update": "2026-07-29 15:33"
 }
