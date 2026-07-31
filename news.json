@@ -89,28 +89,10 @@
       "category": "local"
     },
     {
-      "title": "États-Unis | La croissance déçoit, l’inflation recule",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-07-30/etats-unis/la-croissance-decoit-l-inflation-recule.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "La croissance du produit intérieur brut (PIB) des États-Unis au deuxième trimestre a marqué le pas sous l’effet de la guerre au Moyen-Orient, à 1,5 % en rythme annualisé, contre 2,1 % au trimestre précédent, selon les données officielles publiées jeudi.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Gildan | Une perte de 50 millions US au deuxième trimestre",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-30/gildan/une-perte-de-50-millions-us-au-deuxieme-trimestre.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Les Vêtements de Sport Gildan ont enregistré une perte de 50 millions US au cours de son dernier trimestre, contre un bénéfice de 137,9 millions US il y a un an. Le fabricant de vêtements de Montréal a également annoncé une actualisation de ses prévisions pour 2026 et la vente de HanesBrands Australia.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Marché automobile | L’électrique représentera près d’un tiers des ventes en 2026, estime l’AIE",
-      "link": "https://www.lapresse.ca/affaires/2026-07-30/marche-automobile/l-electrique-representera-pres-d-un-tiers-des-ventes-en-2026-estime-l-aie.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Les voitures électriques, dont la demande est dopée par la flambée des prix des carburants depuis le début du conflit au Moyen-Orient, représenteront près d’une vente sur trois dans le monde en 2026, selon l’Agence internationale de l’énergie qui a légèrement relevé ses prévisions de mai.",
+      "title": "Les clients se ruent sur les produits surgelés pour lutter contre l’inflation, dit Loblaw",
+      "link": "https://www.ledevoir.com/economie/998774/clients-ruent-produits-surgeles-lutter-contre-inflation-dit-loblaw",
+      "source": "Le Devoir",
+      "description": "L’entreprise derrière Maxi, Provigo et Pharmaprix a observé une croissance des ventes de légumes surgelés.",
       "cities": [],
       "category": "general"
     },
@@ -119,14 +101,6 @@
       "link": "https://www.ledevoir.com/economie/998234/malgre-inflation-elevee-fed-maintient-taux-directeur",
       "source": "Le Devoir",
       "description": "Un relèvement des taux aurait  représenté un cas de figure défavorable pour le président Donald Trump.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Hausse de nombre de courtiers immobiliers au Québec : appât du gain ou réel appel de la profession - 24heures.ca",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPMjhvbzVKaks2UDZhSGFiT3RiR0xGb1ptWEhHZlFTRUp6WEpnUlJ6aXltaVJqMXc1dWpoak5GdlhtbHVMN3ZJYmljU2JoTGh2MXE1MXJ0dExkM2V6NGQ4NFk1QmROaEZlODhRV1BCb0xSenVTNWNXV2tNX2ZPYy1GR0pfLXBDVzBTbU92RkxUQWw2WWJibGN0ZWw4dEw2ZkU3aThXY3FEZ0xhUGhEOHFIU0pNcFdJbnpsVkFDb3NkN3JvS09LV0NQcHZPMnA?oc=5",
-      "source": "news.google.com",
-      "description": "Hausse de nombre de courtiers immobiliers au Québec : appât du gain ou réel appel de la profession  24heures.ca",
       "cities": [],
       "category": "general"
     },
@@ -147,10 +121,10 @@
       "category": "general"
     },
     {
-      "title": "Pourquoi les loyers ne baissent-ils pas au Québec? - Le Devoir",
+      "title": "Pourquoi les loyers ne baissent-ils pas au Québec? - ledevoir.com",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUTY4aWVnYy1vZThUb0Z3ZFd1NjlFbU1UZDBEQXJCcU5odFhLdmZVdmdTaFRBcTN5THhBdFVFRVUtV09ZUDluZ1FvRjM4R1NDaUJjaXc4WEY0SFJoYUlpOGw4NUxIekRjMmE2NkxhOXVlUmxReHJLYTd5MjVpd3hCWUJqUDM5aTJmWFFN?oc=5",
       "source": "news.google.com",
-      "description": "Pourquoi les loyers ne baissent-ils pas au Québec?  Le Devoir",
+      "description": "Pourquoi les loyers ne baissent-ils pas au Québec?  ledevoir.com",
       "cities": [],
       "category": "general"
     },
@@ -163,10 +137,18 @@
       "category": "general"
     },
     {
-      "title": "Des fédérations prises de court par une baisse importante de leur financement - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNdGhwa1ZiQ2t2cVJ4RVNlMXJRWW1kdk9qeUl3cGQ3QXNfRlR4c3VXU0s5V0RmODN3LTYxWG4wdVgzSGxXWDJsdnh6bGZYamFMa01ycmFOdDd5YmI0eUhncjNxX1ZvUzVwLVpJSFZGa2lCWVg3MXZxOVBwbWZwd3NZNnZCVUNiUEJkR1lFeExhemtyNHNTenRfb180TFFYbGFuVkFOa0dQckhvNnBsU2V4c1lqT21URHhEQ1Q2NnVpeDNEX2ZBaE5EYjlkNXYyOUYyaTFBa1hCU196TE9VbzZFM3lncDh1dWQtR05sSFYyVVFrR3M?oc=5",
+      "title": "78% des Canadiens prêts à rompre pour une dette cachée - metroquebec.com",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVlJCZ0NsdnR0LUU4eGZTcXdMa0Rsbk9abmJjTUhsbXdyTVZlbjRkS1VjU1BLbmxQbFpFTC1qWDE2N2JLbXpETUhudi1neFQ5UXZvdFBwYjBVQkd0ZTF0dkNuTGFsbHJCb0JScEhlX0dBSWZPdW9mQU4tM2sxSjVtc1lDSEhZSTV4NXVQNFd0c0FKZVhBNjZMT0NsTm9yRWpfSnFJQ2d4Qk5xWTEtTV9LeEVQcE5PZmYwTHpzbWtKWkRnVTTSAcMBQVVfeXFMT1ZSQmdDbHZ0dC1FOHhmU3F3TGtEbG5PWm5iY01IbG13ck1WZW40ZEtVY1NQS25sUGxaRUwtalgxNjdiS216RE1IbnYtZ3hUOVF2b3RQcGIwVUJHdGUxdHZDbkxhbGxyQm9CUnBIZV9HQUlmT3VvZkFOLTNrMUo1bXNZQ0hIWUk1eDV1UDRXdHNBSmVYQTY2TE9DbE5vckVqX0pxSUNneEJOcVkxLU1fS3hFUHBOT2ZmMEx6c21rSlpEZ1U0?oc=5",
       "source": "news.google.com",
-      "description": "Des fédérations prises de court par une baisse importante de leur financement  La Presse",
+      "description": "78% des Canadiens prêts à rompre pour une dette cachée  metroquebec.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le marché immobilier se stabilise au Nouveau-Brunswick, même si les prix restent élevés - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWmRWWEpyaTRoMVo2YklhNk56eks4dWktTUpkNklPYnNqQmhUTHR6ZnVuLUQtZDFWazFCZzVZMVpDOGp5WUtYbldtb29zSFFkRjFXVnE0Z1NvQ3dtTlRsbWxKQ1VuT2VlSDJkcm9CSEpqZmhlUXJ2b1FWZzZrcnZwLVJQcGQ2akRJYzhYYVVlTk1Cd3J4dzNuME4td2l5TGREMVlaSVVCemhLb2piU2VzNm4wTVJ3WjFJYjNYSTRUTHZSTUd1?oc=5",
+      "source": "news.google.com",
+      "description": "Le marché immobilier se stabilise au Nouveau-Brunswick, même si les prix restent élevés  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -179,50 +161,42 @@
       "category": "general"
     },
     {
-      "title": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique - Noovo Info",
+      "title": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique - noovo.info",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPMlEtbEZUUmFzM1owV0hIZ0s5WkRyenloMXBrTlNZRlBXQ3lMQWtSeXI3d3djMmFzYmtOZGdETjVsU2tjS0w1YUVSYld4RXVBZjgxaThaVGVzb0s3V3NSZE9PekVheFdoY20xN04tWURJWmYwVkx6a0U0My1Ed05EQ1BuSFlYMWxURFhTV0lmZVp0aXNKUXlWV2RQbzZFU3k4aHZwSXlvRzJPcEtqMHBCaUh4cGo2dWZDeGFPZ1ZCLVNINEM2RVp3WktyZlhRdVE?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique  Noovo Info",
+      "description": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique  noovo.info",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Marchés de crédit : La Banque du Canada reste vigilante - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOWM2MEJEX3NQLVNYaG85dHd5NUlaaVpmX3lka0h4Y2dMX1dOQUd6Yk4zSmxBd2dia2RDb3ZMSEk2T1VKV2haRk1NV2s3Tm1ab2FyWDNfUmpvMlNLWmRoVGtBSFZCNnEtYS16OHZXS0p3YTdFTnI3OHVLZkE4WjM1RzdIX21zUUppcWhsRzc5UUJjb2ZsMG5sRWhfa1k?oc=5",
+      "title": "Exercice de Coordination Transfrontalière du G7 de 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVzZjM1dGQURaYi0tNThGeHVsOTlHdEZ2eU9zQ1lTVDBtRzhaY1NZWlRwR0tCbzhUUGRFWThSeHNEcFZyRDFFSC1jWmVNZzNrM21LbVFPY0VvcGZXSmdMOFd0WVpicDIwODF0SnNMR3hPVTEyTUNfSjlNSS1GMVNQbkMtTk0zWFllUklQYUZNcjEyZnBLaG9CUjNB?oc=5",
       "source": "news.google.com",
-      "description": "Marchés de crédit : La Banque du Canada reste vigilante  conseiller.ca",
+      "description": "Exercice de Coordination Transfrontalière du G7 de 2026  Banque du Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada a encore reçu l'ordre de ne pas recourir à des briseurs de grève - EnBeauce.com",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOMmdEUF9mc19JYlVic3dVaUJ5aElGYTU2a0FUTWhXcFRleElMMVZVSUxxdmpnRlNoamYxVGhydTlObG5zb1RhZkVfbGFZUDN1TFNMNmJSU19Ya0x1N1E2YWJ0TURoRHV6bjY3SkUtdENJbnh2N3pMNTNIbmxBN2hDNndpams1T3dkMk5FYm5JUjVRUHFSQmtqU2g2T0dOS3Y2RmNPcHQxVTd4ZlhMMWZtemU0MTlCWG9OX2t1UWR2MXZYZjRhWEcyS1g4cGVLdTZHcmc?oc=5",
+      "title": "Certains responsables de la Banque du Canada s’inquiètent de la croissance et des attentes d’inflation - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOc2RsS2Y3Zzd4TFJPZWhwYmhFRmZOUER2SVFITlRrcGpnMzJIN3hWRjg3NHFtUEVQOEhHR0lmRUFpdXBRZjJlcC10b19DcFUyODQzLWY1WHhiTElFN3JDb05rSDhfU3lWNEg3WWxwOVNNdENpcGdZQi1aMjIzdnVvVS0wTVJ3Qjludjh2V3Y0MGdGNDdoUTdiQ3RUc2dEM19GUjcxQnBLTUxxUUpPcXhQYXRvSC1xeHRpd3NnQlYybjl6TWJES28wVEVGNWQ4ZkM1TDl0enpBUnJUT1kyR1JNT1dYSzBPZw?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada a encore reçu l'ordre de ne pas recourir à des briseurs de grève  EnBeauce.com",
+      "description": "Certains responsables de la Banque du Canada s’inquiètent de la croissance et des attentes d’inflation  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Banque du Canada: les agents de sécurité intensifient la grève - 104.7 Outaouais",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQLThYems2UUhpY1Z0d1U2cXhiYXlQQi1YQjVlSERjWktZN2pUZERVaTZzRF9fcnp5ckl6ZTFlNThhR01odEpLb2VZaFFHZXlMZExyck14ckV6YS1hWXNrUi03TjRPc1AyUGtNLXdkdDRZN1dRYU1Ecm5xZlRrYk1FTUJfTVdSM0h0RnM5TG9SQzR4N0lIZnJCWGRFdHQ?oc=5",
+      "title": "La Banque du Canada réprimandée d’avoir contourné la grève des agents de sécurité - TVA Gatineau",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRkF2M0FpT0V2XzZFMk10b3lvNXpwaEJoQ0s4elltMlZKcGMzQjhXQk5XSVdMVTlFQmZ6eWJtbUJtcnpLQ3Rya2wxRnBlLVB4eE9QaE1jMldkZ0RWWUNvbW5Cc2F3SlNQTTd1MGFYYXBkVDY4OUxPNHp4T1JJWHNqNnpZVWZSS00xcmFPNVdwSGRRRW1Zb1BBVlNlLTdvTlhjYVdQYU1Sdw?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada: les agents de sécurité intensifient la grève  104.7 Outaouais",
+      "description": "La Banque du Canada réprimandée d’avoir contourné la grève des agents de sécurité  TVA Gatineau",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Les gouverneurs de la Banque du Canada divisés sur les perspectives de reprise - Yahoo Finance France",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX2ZEN2syV2lIamQ4TVRFWjl2N0tYOFhrWnJJbFJMZU9DV1gtdVM4Wm9qSGlpRFVMakpMY0VDbHlaS2dLVFM5QVJjQ0RzZUxWUXliSW15Wmh2dmEwTUVsN1loeGtfdkJFaWlCbkVZVnE4NGFmZnloRUJyS18yUTdqc3g3a1BnTGRJN3dUTjRmTW5fTEk4LUlVZkxXV0RZRHVuQmJwSXJQS01wQQ?oc=5",
+      "title": "Les gouverneurs de la Banque du Canada divisés sur les perspectives de reprise - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWmd3elBKZzctd1ZQT3d2Y2xzVDF5WC1FNjlDZkhoNWczcnAxOWVJNnVqeFkweHhfYjBrNm03ZENCakp2ZzZJOTlBX3FJZl9SXzJlTXUzR1FtUkV6dGQ2X0g5Ri1QbFE4NWp2NW9nNmljejZhNHBhY3E1b1N0OUdUN2dEZ2hNS1FIRXVyZ1dXVk1MU0NIOW5ZX080Ym1YUWw0Z0VXRVRaOWttTjNONkRiUC1uRG1uWUtZZHF6RDM5MWV6TEZYY2pOXw?oc=5",
       "source": "news.google.com",
-      "description": "Les gouverneurs de la Banque du Canada divisés sur les perspectives de reprise  Yahoo Finance France",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Agents de sécurité | La Banque du Canada a encore reçu l’ordre de ne pas recourir à des briseurs de grève - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOZjQ0OXNJTDNaeml5aEIxN2JOX09SdURNcHpzakJ0UVJSMjJBVExZUENXNUp1eFJ0ZUM2djVaSnVMRzI0akZUNGxLQktWNGxpbUlTNXAwLUtmR1E5THl5RUFOMHQ0NFpoN1hkajRDUFJoSzM2cnVHbXNKV3Z3aWVfRWJkblZjRjJqREVjTVR1bldISUViTUV1enhReWN4bEVRdkhLVmM4bUM3UzdoOHl0SXFhQzdXc1cxcUppc25TNHJJUWd6OG1FR2lGVnJIU05YZkJGRFRNTTFjZk1ySnFORl9UdlA2UQ?oc=5",
-      "source": "news.google.com",
-      "description": "Agents de sécurité | La Banque du Canada a encore reçu l’ordre de ne pas recourir à des briseurs de grève  La Presse",
+      "description": "Les gouverneurs de la Banque du Canada divisés sur les perspectives de reprise  Investing.com France",
       "cities": [],
       "category": "general"
     },
@@ -295,5 +269,5 @@
     },
     "last_quarter": "juin 2026"
   },
-  "last_update": "2026-07-30 15:08"
+  "last_update": "2026-07-31 15:18"
 }
