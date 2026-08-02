@@ -1,98 +1,18 @@
 {
   "news": [
     {
-      "title": "Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre",
-      "link": "https://apciq.ca/stats-2e-trimestre-2026/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 14 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur",
-      "link": "https://apciq.ca/marche-immobilier-la-rmr-de-montreal-poursuit-son-ralentissement-graduel-alors-que-quebec-maintient-sa-vigueur/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 3 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de juin 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés",
-      "link": "https://apciq.ca/rmr-de-quebec-les-ventes-a-un-sommet-en-mai-grace-a-la-remontee-de-loffre-de-proprietes/",
-      "source": "APCIQ",
-      "description": "Québec, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue",
-      "link": "https://apciq.ca/rmr-de-montreal-la-baisse-graduelle-des-ventes-se-poursuit-et-la-pression-sur-les-prix-sattenue/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché",
-      "link": "https://apciq.ca/stats-quebec-avril-26/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
-      "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026",
-      "link": "https://apciq.ca/ventes-residentielles-stabilisation-des-ventes-mais-prix-toujours-sous-pression-au-1er-trimestre-de-2026/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026 est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville",
-      "link": "https://apciq.ca/des-marches-toujours-sous-pression-au-debut-de-2026-dans-les-rmr-de-sherbrooke-trois-rivieres-et-drummondville/",
-      "source": "APCIQ",
-      "description": "Le 15 avril 2026 — La Chambre immobilière Estrie — Mauricie — Centre-du-Québec (CIEMCQ) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent aujourd’hui les statistiques immobilières du premier trimestre de 2026 pour les régions métropolitaines de recensement (RMR) de Sherbrooke, Trois-Rivières et Drummondville. Les données sont tirées de la base provinciale Centris des courtiers immobiliers.\nL’article Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Gatineau : un recul des ventes dans un marché qui se rééquilibre progressivement",
-      "link": "https://apciq.ca/rmr-de-gatineau-un-recul-des-ventes-dans-un-marche-qui-se-reequilibre-progressivement/",
-      "source": "APCIQ",
-      "description": "Gatineau, le 15 avril 2026 — La Chambre immobilière de l’Outaouais (CIO) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent les statistiques immobilières du premier trimestre de 2026 pour la région métropolitaine de recensement (RMR) de Gatineau, établies à partir de la base de données Centris des courtiers immobiliers.\nL’article RMR de Gatineau : un recul des ventes dans un marché qui se rééquilibre progressivement est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Mars 2026 : Montréal en léger regain, Québec maintient son élan",
-      "link": "https://apciq.ca/mars-2026-montreal-en-leger-regain-quebec-maintient-son-elan/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 2 avril 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de mars 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Mars 2026 : Montréal en léger regain, Québec maintient son élan est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Menace de grève | WestJet annule des vols à l’approche de la date butoir",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-08-01/menace-de-greve/westjet-annule-des-vols-a-l-approche-de-la-date-butoir.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Assurance habitation | Bien estimer (et réviser !) son coût de reconstruction",
+      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-08-02/assurance-habitation/bien-estimer-et-reviser-son-cout-de-reconstruction.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Certains voyageurs abordent ce week-end avec une certaine inquiétude, alors que WestJet procède à une première vague d’annulations en prévision d’une éventuelle grève des agents de bord.",
+      "description": "Combien en coûterait-il de reconstruire à neuf votre maison aujourd’hui ? Si vous ne vous êtes pas posé la question récemment, il est probablement temps de réviser votre assurance habitation. Avec l’explosion des coûts de construction, la facture en cas de sinistre pourrait vous surprendre.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Conflit de travail chez WestJet | Des voyageurs dans l’incertitude et 276 annulations",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-08-01/conflit-de-travail-chez-westjet/des-voyageurs-dans-l-incertitude-et-276-annulations.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Les voyageurs avaient toutes les raisons d’être « inquiets » et « pas de très bonne humeur » samedi, alors que WestJet commençait à annuler des vols en prévision d’une possible grève des agents de bord dès dimanche matin, selon un expert. Près de 300 vols ont déjà été annulés.",
       "cities": [],
       "category": "general"
     },
@@ -105,50 +25,10 @@
       "category": "general"
     },
     {
-      "title": "Agents de sécurité de la Banque du Canada | Le gouverneur défend le recours à des travailleurs de remplacement",
-      "link": "https://www.lapresse.ca/affaires/2026-07-31/agents-de-securite-de-la-banque-du-canada/le-gouverneur-defend-le-recours-a-des-travailleurs-de-remplacement.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Le gouverneur de la Banque du Canada défend le recours à des travailleurs de remplacement par la banque centrale dans le cadre d’une grève impliquant des agents de sécurité.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Possible grève | WestJet commence à immobiliser ses avions",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-07-31/possible-greve/westjet-commence-a-immobiliser-ses-avions.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "WestJet indique vendredi après-midi avoir commencé à immobiliser ses appareils en prévision d’une éventuelle grève des agents de bord et conseille aux passagers de vérifier le statut de leur vol avant de se rendre à l’aéroport.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Les clients se ruent sur les produits surgelés pour lutter contre l’inflation, dit Loblaw",
       "link": "https://www.ledevoir.com/economie/998774/clients-ruent-produits-surgeles-lutter-contre-inflation-dit-loblaw",
       "source": "Le Devoir",
       "description": "L’entreprise derrière Maxi, Provigo et Pharmaprix a observé une croissance des ventes de légumes surgelés.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Il aurait obtenu plus de 400 000$: un faux courtier arrêté par le SPVQ après 5 ans de cavale - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNVlBvVWJYMkVrZXVxZDRnU0wxbGl3a0pQMHhaZTNyb2FySjE5Tkxub3ZGLTR1Y2x2T0VpeGdONVNaS3FzNVFGUV96WFJuckpOYlE2M3AwYWtVNm85eTRfWkl2RXFIdUtYN29helczbHNxTTN4ZHlkZmFCY3VQdmg1ejV3QzJSdXk4NHl0WEdZamhQWXdmdDhyYVR2ZjFNZVAxamk5cFRXXzNiTXlFSl9OQkUxMk8xR0xlVFlJUDdQYmZNbDYtdXZvX2N0WFZzSFFuY0JDb3FBNmc4NXlS?oc=5",
-      "source": "news.google.com",
-      "description": "Il aurait obtenu plus de 400 000$: un faux courtier arrêté par le SPVQ après 5 ans de cavale  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Prévisions des taux hypothécaires au Canada (mise à jour de juillet 2026) - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "mise à jour de juillet 2026",
-      "description": "Prévisions des taux hypothécaires au Canada (mise à jour de juillet 2026)  nesto.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Pourquoi les loyers ne baissent-ils pas au Québec? - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUTY4aWVnYy1vZThUb0Z3ZFd1NjlFbU1UZDBEQXJCcU5odFhLdmZVdmdTaFRBcTN5THhBdFVFRVUtV09ZUDluZ1FvRjM4R1NDaUJjaXc4WEY0SFJoYUlpOGw4NUxIekRjMmE2NkxhOXVlUmxReHJLYTd5MjVpd3hCWUJqUDM5aTJmWFFN?oc=5",
-      "source": "news.google.com",
-      "description": "Pourquoi les loyers ne baissent-ils pas au Québec?  Le Devoir",
       "cities": [],
       "category": "general"
     },
@@ -161,18 +41,42 @@
       "category": "general"
     },
     {
-      "title": "Le marché immobilier se stabilise au Nouveau-Brunswick - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNYllCaXk0c19hbUhhaDRpSW1ad0RNQzhtejJXTkxTS2EwVE9VVkxRNi1fRzNjejFQMVE0MWNvREx6THZsNjBhaVZ3Z0NtTTdrX05uSG5ocldwd0N1OTJGdDl3ZzIwZ1g4bDcxeXlOeUh5b2RuaHpPclVvYjEtNFA4V1g0UTBrQlNDcWxUMGtkVlhsZ2ZOMG5SMk02bTZUaFlvNGItNg?oc=5",
-      "source": "news.google.com",
-      "description": "Le marché immobilier se stabilise au Nouveau-Brunswick  Radio-Canada",
+      "title": "Prévisions des taux hypothécaires au Canada (mise à jour de juillet 2026) - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
+      "source": "mise à jour de juillet 2026",
+      "description": "Prévisions des taux hypothécaires au Canada (mise à jour de juillet 2026)  nesto.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "78% des Canadiens prêts à rompre pour une dette cachée - metroquebec.com",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVlJCZ0NsdnR0LUU4eGZTcXdMa0Rsbk9abmJjTUhsbXdyTVZlbjRkS1VjU1BLbmxQbFpFTC1qWDE2N2JLbXpETUhudi1neFQ5UXZvdFBwYjBVQkd0ZTF0dkNuTGFsbHJCb0JScEhlX0dBSWZPdW9mQU4tM2sxSjVtc1lDSEhZSTV4NXVQNFd0c0FKZVhBNjZMT0NsTm9yRWpfSnFJQ2d4Qk5xWTEtTV9LeEVQcE5PZmYwTHpzbWtKWkRnVTTSAcMBQVVfeXFMT1ZSQmdDbHZ0dC1FOHhmU3F3TGtEbG5PWm5iY01IbG13ck1WZW40ZEtVY1NQS25sUGxaRUwtalgxNjdiS216RE1IbnYtZ3hUOVF2b3RQcGIwVUJHdGUxdHZDbkxhbGxyQm9CUnBIZV9HQUlmT3VvZkFOLTNrMUo1bXNZQ0hIWUk1eDV1UDRXdHNBSmVYQTY2TE9DbE5vckVqX0pxSUNneEJOcVkxLU1fS3hFUHBOT2ZmMEx6c21rSlpEZ1U0?oc=5",
+      "title": "TransLink mise sur l’immobilier pour augmenter ses revenus - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBWeWVfR29rX216MUpKUWFSWTRhbEMzcnhDd3RWVFFMZUpZNmVnTkZ4ZWc2VVI1T1BIeE01WHpJdnp4Yl93VmZBQUl6SWxjbHhuaXZfakVXb2h1b1djU1FaZF9YOUg5V2dqZWxCVHM2d3I3dU1HWG9ZLXZuNA?oc=5",
       "source": "news.google.com",
-      "description": "78% des Canadiens prêts à rompre pour une dette cachée  metroquebec.com",
+      "description": "TransLink mise sur l’immobilier pour augmenter ses revenus  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Pourquoi les loyers ne baissent-ils pas au Québec? - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUTY4aWVnYy1vZThUb0Z3ZFd1NjlFbU1UZDBEQXJCcU5odFhLdmZVdmdTaFRBcTN5THhBdFVFRVUtV09ZUDluZ1FvRjM4R1NDaUJjaXc4WEY0SFJoYUlpOGw4NUxIekRjMmE2NkxhOXVlUmxReHJLYTd5MjVpd3hCWUJqUDM5aTJmWFFN?oc=5",
+      "source": "news.google.com",
+      "description": "Pourquoi les loyers ne baissent-ils pas au Québec?  Le Devoir",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada - Ratehub.ca",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
+      "source": "news.google.com",
+      "description": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada  Ratehub.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Il aurait obtenu plus de 400 000$: un faux courtier arrêté par le SPVQ après 5 ans de cavale - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNVlBvVWJYMkVrZXVxZDRnU0wxbGl3a0pQMHhaZTNyb2FySjE5Tkxub3ZGLTR1Y2x2T0VpeGdONVNaS3FzNVFGUV96WFJuckpOYlE2M3AwYWtVNm85eTRfWkl2RXFIdUtYN29helczbHNxTTN4ZHlkZmFCY3VQdmg1ejV3QzJSdXk4NHl0WEdZamhQWXdmdDhyYVR2ZjFNZVAxamk5cFRXXzNiTXlFSl9OQkUxMk8xR0xlVFlJUDdQYmZNbDYtdXZvX2N0WFZzSFFuY0JDb3FBNmc4NXlS?oc=5",
+      "source": "news.google.com",
+      "description": "Il aurait obtenu plus de 400 000$: un faux courtier arrêté par le SPVQ après 5 ans de cavale  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -217,6 +121,14 @@
       "category": "general"
     },
     {
+      "title": "Les délibérations de la Banque du Canada pourraient éclairer les risques commerciaux et les perspectives de taux, selon BMO - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQNGRIVUdadnJ3UmJRRGZGQTZsQnNEUkhQYjQyLUxXNXA0RUYyX0VnaGNaLVdjN3NzRFF4aFNyUFVRNkV1Q0NwVjZpemM1QlJwS0lURXVZRFU2N2tFNzFtZjBrOFRZUEVwR0VRRmVxa0NpTTZhNjNVVFMtQ3paTFNwS2cxNFRlbEQtdlZtaHowOFEzQ0V5ZFFjUjlGY1FGemRMSFh0eWNoeE41WW1YOEdoUnRMcEN1SC1NYU9FSDhHU1k2VjhnTXlVeVZzTUhMUTRUM2FUU2ZTeXJxVVBkdjJxNjlPbnpqTFFkV0owSThReUZ2MTg?oc=5",
+      "source": "news.google.com",
+      "description": "Les délibérations de la Banque du Canada pourraient éclairer les risques commerciaux et les perspectives de taux, selon BMO  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Les gouverneurs de la Banque du Canada divisés sur les perspectives de reprise - Investing.com France",
       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWmd3elBKZzctd1ZQT3d2Y2xzVDF5WC1FNjlDZkhoNWczcnAxOWVJNnVqeFkweHhfYjBrNm03ZENCakp2ZzZJOTlBX3FJZl9SXzJlTXUzR1FtUkV6dGQ2X0g5Ri1QbFE4NWp2NW9nNmljejZhNHBhY3E1b1N0OUdUN2dEZ2hNS1FIRXVyZ1dXVk1MU0NIOW5ZX080Ym1YUWw0Z0VXRVRaOWttTjNONkRiUC1uRG1uWUtZZHF6RDM5MWV6TEZYY2pOXw?oc=5",
       "source": "news.google.com",
@@ -225,18 +137,18 @@
       "category": "general"
     },
     {
-      "title": "Banque du Canada : les gouverneurs divisés sur la pérennité de la reprise, selon les minutes - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxObGRIdnAzXzBBWXhSU3FrdUczQVBYMENlLU9tY0NYSF9EOUNNdV9KbmVWT251eDRjUFl1NkNaYnR1NDE3Vm9ZbEE4eDkweE4yOUM5YVBCQ2JYOW82V2l4eXU2VEQxaHFqOWlWM2IxQnhSdEhYRExWaU1ybXR6X0JIcjdwUlp5c1hSVFRsb052QzZ6NXZtTmtjdmllcGZUcmcxLWVRdU5tNzRxNy1BMnRaUHltOVB2bEFBcFhkU2ZKUVJFUmdFQzQwSjJuZ1RHTUxYYkN6TklHNVNtN0dGQ3NpZzZhNA?oc=5",
+      "title": "Banque du Canada : les gouverneurs divisés sur la pérennité de la reprise, selon les minutes - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPUTRidkdwVjZzdmFzZDBxLVljT3ozVzU3TU13SUluTWNNZVppUEhSaGdtR1RZME42SVJXUEZSNnM5Q0kyWFBBQVViLTFTazIyYUFWd2hHMFM4OWd4LVo3dGRKV2ktZzRERV9XRjhCZ09CTWlUUUh3UnZFUUxHOVBhSGhBZ0x2RTAta2JOYVUwYm1Fc0lLOFUwVmJUVGtpR3FLUXJmRHFpWjRXemhISWVrRTF4OW5QeUo1SjJ4aUYyQ1k2aDQ4bkMzLUNUU2YyTFVRTjBMUEN2TEpHS2dvUFlxdnU4cU0?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada : les gouverneurs divisés sur la pérennité de la reprise, selon les minutes  Zonebourse Suisse",
+      "description": "Banque du Canada : les gouverneurs divisés sur la pérennité de la reprise, selon les minutes  Zonebourse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Les délibérations de la Banque du Canada pourraient éclairer les risques commerciaux et les perspectives de taux, selon BMO - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPYWRBcENRZGg5eElJXzVFWExMV2MwbHdRLXdpTTBIdFcxa3NGVUJDQkkwV2tVS1cxeXZ4ODJ0Y1YyTUZoaDV4NE9lUDJnWFU0cW1tcHNXNnFhQzdOdDdNSEM0WEF6UVkyakFjRmUxak1lZWZ2aU5xUkZ6cW05bEZtWnRsZzVYcEFSeURQdVRFTTRNR1Biblo0d0VtWldqRHc5SkJhbHpHNV9Qa1VJUTFscy1yaGRoZGlDN0dVOHgxS01uT0xXa0NZOUQ4djFzdU9vQm9hNUs3T0NTV2xTUm1rYWJidENTYW1mYzJJODBxYkF0dw?oc=5",
+      "title": "L'économie canadienne devrait croître de 0,1 % en mai, la Banque du Canada maintiendra son statu quo, selon la CIBC - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQN3EzLWdlNEhiS2VzQXdTSDE4Y3VKSWlaeHNFVlNWUnJOMGxTdzl0Y3U2eHVmTy1HdlFyOUJ4S3hrNjlra2ZMNkw3Qk5oaTV3MFhQMmRYenE3ZGR1UnAzdnQ4RWM3VEpzS1Y4MnJBQmVmZExmbkVpc0J6VlJHdm5oM3JuYW5CTm5CVUFkSF8yZGN3aVdxMTFWZmVQQV93b2Y3Q2hreGJxOE9iNHlrNm1VU3p1czQ0enhJQVRoSEh1MWljdFdPMHd5OS1MT1QxV1BzSXlOc3h2LVpQNWxxZE1QQnRONTFfel9haU1IMzhZQQ?oc=5",
       "source": "news.google.com",
-      "description": "Les délibérations de la Banque du Canada pourraient éclairer les risques commerciaux et les perspectives de taux, selon BMO  Zonebourse Suisse",
+      "description": "L'économie canadienne devrait croître de 0,1 % en mai, la Banque du Canada maintiendra son statu quo, selon la CIBC  Zonebourse",
       "cities": [],
       "category": "general"
     }
@@ -291,7 +203,7 @@
       "days": "42",
       "condition": "Vendeurs"
     },
-    "last_quarter": "juin 2026"
+    "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-08-01 14:25"
+  "last_update": "2026-08-02 14:27"
 }
