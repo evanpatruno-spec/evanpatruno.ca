@@ -89,34 +89,44 @@
       "category": "local"
     },
     {
-      "title": "L’IA est un virage à ne pas rater pour les pays en développement, selon la Banque mondiale",
-      "link": "https://www.lapresse.ca/affaires/techno/2026-08-04/l-ia-est-un-virage-a-ne-pas-rater-pour-les-pays-en-developpement-selon-la-banque-mondiale.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Québec | Le taux de chômage est de 8,2 % chez les jeunes de 15 à 29 ans",
+      "link": "https://www.lapresse.ca/affaires/2026-08-05/quebec/le-taux-de-chomage-est-de-8-2-chez-les-jeunes-de-15-a-29-ans.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Les pays en développement ont tout intérêt à parier rapidement sur l’intelligence artificielle (IA) afin de renforcer une croissance dans l’ensemble décevante s’ils ne veulent pas se retrouver encore plus en retard, a estimé la Banque mondiale (BM) dans un rapport publié mardi.",
+      "description": "Le taux de chômage des jeunes de 15 à 29 ans est estimé à 8,2 %, soit près du double du taux observé chez les personnes de 30 à 54 ans.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Marché Goodfood annonce le départ de son chef de la direction",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-08-04/marche-goodfood-annonce-le-depart-de-son-chef-de-la-direction.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Difficultés financières | Marché Goodfood demande la protection contre ses créanciers",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-08-05/difficultes-financieres/marche-goodfood-demande-la-protection-contre-ses-creanciers.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "L’entreprise de repas prêts-à-cuisiner Marché Goodfood perd un autre membre de son équipe de direction. Cette fois, c’est le chef de la direction, Selim A. Bassoul, qui quitte le navire.",
+      "description": "Marché Goodfood se protège de ses créanciers, dans l’espoir de trouver un acquéreur ou de nouveaux capitaux.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Travail d’équipe | Devenir le moteur de son propre développement",
-      "link": "https://www.lapresse.ca/affaires/2026-08-04/travail-d-equipe/devenir-le-moteur-de-son-propre-developpement.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Lorsque vous pensez à votre développement, qu’est-ce qui vous vient à l’esprit ? Les formations offertes par votre employeur ou celles plus spécialisées qui vous sont accessibles par l’entremise d’un organisme professionnel dans votre domaine ? Peut-être auriez-vous intérêt à accorder plus d’importance aux initiatives d’apprentissage autogérées.",
+      "title": "Marché Goodfood veut se placer à l’abri de ses créanciers",
+      "link": "https://www.ledevoir.com/economie/999824/marche-goodfood-veut-placer-abri-creanciers",
+      "source": "Le Devoir",
+      "description": "L’entreprise montréalaise de repas prêts-à-cuisiner connaît des ennuis financiers importants depuis plusieurs mois.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Desjardins modernisera ses systèmes de cartes de crédit en conservant la codétention",
+      "link": "https://www.ledevoir.com/economie/999686/desjardins-modernisera-systemes-cartes-credit-preservant-codetention",
+      "source": "Le Devoir",
+      "description": "La coopérative lancera la migration de son système vers la mi-octobre.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Grande entrevue | Prêt pour l’expansion dans la baie de Beauport",
-      "link": "https://www.lapresse.ca/affaires/chroniques/2026-08-04/grande-entrevue/pret-pour-l-expansion-dans-la-baie-de-beauport.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Maintenant que QSL a obtenu la certification nécessaire pour exploiter un terminal de conteneurs international dans le port de Québec, l’entreprise de logistique et de transport maritime n’attend plus que les dernières autorisations pour mettre en branle son projet de transborder quelque 200 000 conteneurs par année dans la baie de Beauport, dit son PDG, Robert Bellisle.",
+      "title": "Un ex-policier reconverti en roi de l’immobilier québécois - L’actualité",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQjQ3S2NFaExpTDNtdkhGeF93MXJLSkdNTnR1ek83STNBejJPZjVHZVZHaWJZYVZlX0o0TjEtUm9VVGEwdmdCS3hCWUU4MjFZYmx6V2hUeW9rQmdocGZXTlFwcGxnNjUwaXpiTkRqdlI5OGpZYmpCc1pqbGh6Z1VST3Nyazc4VEVZR19vZXdZVnQtcXNLNmRkV0VCRG9ZWGtvYmNV?oc=5",
+      "source": "news.google.com",
+      "description": "Un ex-policier reconverti en roi de l’immobilier québécois  L’actualité",
       "cities": [],
       "category": "general"
     },
@@ -153,10 +163,10 @@
       "category": "general"
     },
     {
-      "title": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique - Noovo Info",
+      "title": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique - noovo.info",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPMlEtbEZUUmFzM1owV0hIZ0s5WkRyenloMXBrTlNZRlBXQ3lMQWtSeXI3d3djMmFzYmtOZGdETjVsU2tjS0w1YUVSYld4RXVBZjgxaThaVGVzb0s3V3NSZE9PekVheFdoY20xN04tWURJWmYwVkx6a0U0My1Ed05EQ1BuSFlYMWxURFhTV0lmZVp0aXNKUXlWV2RQbzZFU3k4aHZwSXlvRzJPcEtqMHBCaUh4cGo2dWZDeGFPZ1ZCLVNINEM2RVp3WktyZlhRdVE?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique  Noovo Info",
+      "description": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique  noovo.info",
       "cities": [],
       "category": "general"
     },
@@ -185,10 +195,10 @@
       "category": "general"
     },
     {
-      "title": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ? - Finance et Investissement",
+      "title": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ? - finance-investissement.com",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRjlVejRHN05jWEp6ZUprOWdaWnNuaEVObVhZWGxSdWxPUUp2RnA0WWEzck9rYVhzMjIxYm5sRHQ5VVJwRWZjbkgwd280TlZQdnlONUpLSy0tMGNVZmFZUlRWN0loY2dwTFJHS0tkUmNESjNYTWhsYWxGbjNoQVFidnk2SDlMY19LTFRHem1pcmhxXzNJWlRmbExINlFxVkh6aVV3SFFJVE9nYVUzUXJOMkZDZklQZw?oc=5",
       "source": "news.google.com",
-      "description": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ?  Finance et Investissement",
+      "description": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ?  finance-investissement.com",
       "cities": [],
       "category": "general"
     },
@@ -201,14 +211,6 @@
       "category": "general"
     },
     {
-      "title": "Les délibérations de la Banque du Canada pourraient éclairer les risques commerciaux et les perspectives de taux, selon BMO - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQNGRIVUdadnJ3UmJRRGZGQTZsQnNEUkhQYjQyLUxXNXA0RUYyX0VnaGNaLVdjN3NzRFF4aFNyUFVRNkV1Q0NwVjZpemM1QlJwS0lURXVZRFU2N2tFNzFtZjBrOFRZUEVwR0VRRmVxa0NpTTZhNjNVVFMtQ3paTFNwS2cxNFRlbEQtdlZtaHowOFEzQ0V5ZFFjUjlGY1FGemRMSFh0eWNoeE41WW1YOEdoUnRMcEN1SC1NYU9FSDhHU1k2VjhnTXlVeVZzTUhMUTRUM2FUU2ZTeXJxVVBkdjJxNjlPbnpqTFFkV0owSThReUZ2MTg?oc=5",
-      "source": "news.google.com",
-      "description": "Les délibérations de la Banque du Canada pourraient éclairer les risques commerciaux et les perspectives de taux, selon BMO  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Les gouverneurs de la Banque du Canada divisés sur les perspectives de reprise - Investing.com France",
       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWmd3elBKZzctd1ZQT3d2Y2xzVDF5WC1FNjlDZkhoNWczcnAxOWVJNnVqeFkweHhfYjBrNm03ZENCakp2ZzZJOTlBX3FJZl9SXzJlTXUzR1FtUkV6dGQ2X0g5Ri1QbFE4NWp2NW9nNmljejZhNHBhY3E1b1N0OUdUN2dEZ2hNS1FIRXVyZ1dXVk1MU0NIOW5ZX080Ym1YUWw0Z0VXRVRaOWttTjNONkRiUC1uRG1uWUtZZHF6RDM5MWV6TEZYY2pOXw?oc=5",
       "source": "news.google.com",
@@ -217,18 +219,26 @@
       "category": "general"
     },
     {
-      "title": "Rémunérer les dirigeants selon les dividendes peut freiner l’investissement - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOFBwZzg1OWFuTXRxUGJyNDV6ampxTFh6RTlpWmowZVdiS3V0TkJkX3RiVHZkLWc2UWd1amZ0OG5xWUNkVlkyRFNxY2tGSnIzZ3RTR2d6LU1TNkI1QW1hX05IOW5OMmVqbW9MSGRMTjA2Z1dQY3c5QU5BMXJBbURwLUVQY0MwZUJXTHlva05lYVFrdlRSZzJNVEJySGVQVm5VdWdvQXJRcHZDSFRQUEwwTEZpdlc?oc=5",
-      "source": "news.google.com",
-      "description": "Rémunérer les dirigeants selon les dividendes peut freiner l’investissement  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Banque du Canada : les gouverneurs divisés sur la pérennité de la reprise, selon les minutes - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPUTRidkdwVjZzdmFzZDBxLVljT3ozVzU3TU13SUluTWNNZVppUEhSaGdtR1RZME42SVJXUEZSNnM5Q0kyWFBBQVViLTFTazIyYUFWd2hHMFM4OWd4LVo3dGRKV2ktZzRERV9XRjhCZ09CTWlUUUh3UnZFUUxHOVBhSGhBZ0x2RTAta2JOYVUwYm1Fc0lLOFUwVmJUVGtpR3FLUXJmRHFpWjRXemhISWVrRTF4OW5QeUo1SjJ4aUYyQ1k2aDQ4bkMzLUNUU2YyTFVRTjBMUEN2TEpHS2dvUFlxdnU4cU0?oc=5",
       "source": "news.google.com",
       "description": "Banque du Canada : les gouverneurs divisés sur la pérennité de la reprise, selon les minutes  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le G7 prêt à répondre à une cyberattaque financière majeure - finance-investissement.com",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOT2JPMGV4TWtleTNSX1AxVENQWE9SZUNMdDlIZllYaUZWcWw0LTBqdDJtOU5wVmYxcXotMXVjSHJpMUVkdmxFMm9ETWczbkVzZ2xjSUpoT05xbm4wUWMxby1HWW1Pa1prVHlOZ0FxT25nZXYyb3dHcjdvbklXMm11UG5lWDRtMGplNEMxWVVNWlozRE0yTXZLVmY1NGpfQUkx?oc=5",
+      "source": "news.google.com",
+      "description": "Le G7 prêt à répondre à une cyberattaque financière majeure  finance-investissement.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Rémunérer les dirigeants selon les dividendes peut freiner l’investissement - finance-investissement.com",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOFBwZzg1OWFuTXRxUGJyNDV6ampxTFh6RTlpWmowZVdiS3V0TkJkX3RiVHZkLWc2UWd1amZ0OG5xWUNkVlkyRFNxY2tGSnIzZ3RTR2d6LU1TNkI1QW1hX05IOW5OMmVqbW9MSGRMTjA2Z1dQY3c5QU5BMXJBbURwLUVQY0MwZUJXTHlva05lYVFrdlRSZzJNVEJySGVQVm5VdWdvQXJRcHZDSFRQUEwwTEZpdlc?oc=5",
+      "source": "news.google.com",
+      "description": "Rémunérer les dirigeants selon les dividendes peut freiner l’investissement  finance-investissement.com",
       "cities": [],
       "category": "general"
     }
@@ -285,5 +295,5 @@
     },
     "last_quarter": "juin 2026"
   },
-  "last_update": "2026-08-04 15:23"
+  "last_update": "2026-08-05 15:12"
 }
