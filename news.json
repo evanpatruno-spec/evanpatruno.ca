@@ -1,6 +1,24 @@
 {
   "news": [
     {
+      "title": "RMR de Québec : le dynamisme exceptionnel du marché s’essouffle",
+      "link": "https://apciq.ca/rmr-de-quebec-le-dynamisme-exceptionnel-du-marche-sessouffle/",
+      "source": "APCIQ",
+      "description": "Québec, le 6 août 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de juillet 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : le dynamisme exceptionnel du marché s’essouffle est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Montréal : la période d’ajustement se poursuit,  le marché des copropriétés à l’équilibre",
+      "link": "https://apciq.ca/rmr-de-montreal-la-periode-dajustement-se-poursuit-le-marche-des-coproprietes-a-lequilibre/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 6 août 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de juillet 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la période d’ajustement se poursuit,  le marché des copropriétés à l’équilibre est apparu en premier sur APCIQ - Site web.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
       "title": "Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre",
       "link": "https://apciq.ca/stats-2e-trimestre-2026/",
       "source": "APCIQ",
@@ -71,41 +89,23 @@
       "category": "general"
     },
     {
-      "title": "RMR de Gatineau : un recul des ventes dans un marché qui se rééquilibre progressivement",
-      "link": "https://apciq.ca/rmr-de-gatineau-un-recul-des-ventes-dans-un-marche-qui-se-reequilibre-progressivement/",
-      "source": "APCIQ",
-      "description": "Gatineau, le 15 avril 2026 — La Chambre immobilière de l’Outaouais (CIO) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent les statistiques immobilières du premier trimestre de 2026 pour la région métropolitaine de recensement (RMR) de Gatineau, établies à partir de la base de données Centris des courtiers immobiliers.\nL’article RMR de Gatineau : un recul des ventes dans un marché qui se rééquilibre progressivement est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Mars 2026 : Montréal en léger regain, Québec maintient son élan",
-      "link": "https://apciq.ca/mars-2026-montreal-en-leger-regain-quebec-maintient-son-elan/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 2 avril 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de mars 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Mars 2026 : Montréal en léger regain, Québec maintient son élan est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Québec | Le taux de chômage est de 8,2 % chez les jeunes de 15 à 29 ans",
-      "link": "https://www.lapresse.ca/affaires/2026-08-05/quebec/le-taux-de-chomage-est-de-8-2-chez-les-jeunes-de-15-a-29-ans.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Deuxième trimestre | Les revenus de Dorel ont baissé de 14,7 % d’une année à l’autre",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-08-06/deuxieme-trimestre/les-revenus-de-dorel-ont-baisse-de-14-7-d-une-annee-a-l-autre.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Le taux de chômage des jeunes de 15 à 29 ans est estimé à 8,2 %, soit près du double du taux observé chez les personnes de 30 à 54 ans.",
+      "description": "Les revenus des Industries Dorel ont diminué de 14,7 % d’une année à l’autre au deuxième trimestre, notamment en raison du processus de restructuration des activités qui s’est poursuivi au sein de sa division Maison.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Difficultés financières | Marché Goodfood demande la protection contre ses créanciers",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-08-05/difficultes-financieres/marche-goodfood-demande-la-protection-contre-ses-creanciers.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Québec s’engage à fond dans Premier Tech",
+      "link": "https://www.lapresse.ca/affaires/chroniques/2026-08-06/quebec-s-engage-a-fond-dans-premier-tech.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Marché Goodfood se protège de ses créanciers, dans l’espoir de trouver un acquéreur ou de nouveaux capitaux.",
+      "description": "Le gouvernement du Québec a autorisé Investissement Québec à investir jusqu’à 217,5 millions dans l’entreprise Premier Tech de Rivière-du-Loup dans le but d’appuyer le plan de développement stratégique de l’entreprise qui prévoit réaliser des investissements de 650 millions d’ici 2031. Visiblement, il y a de la croissance dans l’air.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Marché Goodfood veut se placer à l’abri de ses créanciers",
+      "title": "Avec Marché Goodfood à l’abri de ses créanciers, quel avenir pour la livraison de repas à domicile?",
       "link": "https://www.ledevoir.com/economie/999824/marche-goodfood-veut-placer-abri-creanciers",
       "source": "Le Devoir",
       "description": "L’entreprise montréalaise de repas prêts-à-cuisiner connaît des ennuis financiers importants depuis plusieurs mois.",
@@ -123,6 +123,14 @@
       "category": "general"
     },
     {
+      "title": "Immobilier résidentiel | Le marché de Québec inquiète les experts - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNjhIRHQ4UEhzMzVSZEtmTk9YY1pjdE5QYUpsN1Q3eFRsTWJYOTc0b0M1c3BSOVRBTkNBYlItdmpCX2luRHVxZTd3akd3VFBnb0lERWVFeFVsNV9HYzJLM09GeUhaamdRQzZKeTJGOFFVeEJvbWRHWFphVTN4Z0xBWVZQNTF5aUlqY0wyRndOaG5La3BwZU1zRGdOV2lDWlZIV0RZazBfcktFaTJNYjhjSVB4cHFnMXFHSXhxZ2c1Rk1jOERoVUlyNQ?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier résidentiel | Le marché de Québec inquiète les experts  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Un ex-policier reconverti en roi de l’immobilier québécois - L’actualité",
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQjQ3S2NFaExpTDNtdkhGeF93MXJLSkdNTnR1ek83STNBejJPZjVHZVZHaWJZYVZlX0o0TjEtUm9VVGEwdmdCS3hCWUU4MjFZYmx6V2hUeW9rQmdocGZXTlFwcGxnNjUwaXpiTkRqdlI5OGpZYmpCc1pqbGh6Z1VST3Nyazc4VEVZR19vZXdZVnQtcXNLNmRkV0VCRG9ZWGtvYmNV?oc=5",
       "source": "news.google.com",
@@ -131,18 +139,40 @@
       "category": "general"
     },
     {
-      "title": "De l’amiante à Habitat 67: un courtier écope d’une amende de 8000$ - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdm9uSlBpOGxmU20yUUNzcTdFa1A4dWZrTmZDUk8tdVQ3VWtpRlVhaTE5TDJWR29rSldFaVNqTTlnejM2MmlmWXNaZ2E0ZC1rSUs0RnJLbnhVRFMxeGZ0azN1djZ1WFpyRURVUWdaRVM3YjFXeFgzdld1LWgxZEZrZGFWVDdWWVlDbXlkRFlDb3BMdGYtVzVadF9IZEJFcWxTeUhQN2NVV245UQ?oc=5",
+      "title": "Surchauffe du marché immobilier | Après Montréal, au tour de Québec? - 98.5 Montréal",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5xbm1NaWNiZklfY1pTUnBSYVVEcFg3S1k1UkI4cFBnYTZVVFRobnNzbFFwMU9nam51Q0pXQWxVSGFSVE1pc2pKbHpNaTFXeXZmV1g3VG5hTXM0UXJqSy14Uk9teFJtaUo2YjAyVm5pRFozNmNK?oc=5",
       "source": "news.google.com",
-      "description": "De l’amiante à Habitat 67: un courtier écope d’une amende de 8000$  Journal de Québec",
-      "cities": [],
-      "category": "general"
+      "description": "Surchauffe du marché immobilier | Après Montréal, au tour de Québec?  98.5 Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
-      "title": "Votre hypothèque pourrait vous coûter plus cher - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaHZneUstUXR4Zi01ZjEwMFdNNEJEY2pfUzBld28wdEFsZVd3cnI5eE5BYTdrU3FOMUlzcDlMbHhsalFfYlhEZElhQ3I0cWl3Q3QtWjM2dzNybnoxOFRpT1J6MXp0VnJJZ29wMlBYTVRZaEp2VkdFN1VvTjRadDd3VnJLRWl1djVHZ3RlY2MwU3NEVGd4cy02MUgtZ2Jvc3Y4azZEUWd5ODFNSHJESmxkbUlB?oc=5",
+      "title": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre - GlobeNewswire",
+      "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNS2lBWlpaanpDaGhRc2I0X2RvYzdQaXNOcm83YU9NN3Fia0wyMmE1OVhDMmt4RFFBLXZKMkIyWmVSQUo1RXFpc3ZfZEtXTS02TkE4VERDOG82MGZONnJaOHVCeGduM1VvS25vM2hrUUNWQVA0Z251R2dTNXVRa2MzMTNNdDNySkVPbm56LTE0YWpzeGJtaDRHaHhzOG9PdjRWTTV6MXRrMGN1Z2FfMTZNVllCeVJaTHBYcHR1Y2ZkUy1HOUY5enEyUVk2YnpmZmhWd3h4WklTcFlvaDVOaDVFckZUS2V1UVFUalkxRGgyQ1BZU200dFRqM202RTlwN0lYeHY4OTZ5YnJtUjUzR1VBY0tUdnhUTjMwUWtWdHBSenZoQVhjSEE?oc=5",
       "source": "news.google.com",
-      "description": "Votre hypothèque pourrait vous coûter plus cher  Radio-Canada",
+      "description": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre  GlobeNewswire",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQWk9WakpicC1tSVNGaUg0bktVNGdlb0pZWllrUzRfX0VxNHVsdG1kOU5nTENSQzduZTZ6b0xHZ1ZudGpEZlE2Q28yXzFTeWdHdnBGZGtKMkpGZGVaUzJLNE1hVGdLWkcweVY1RmlTdmgyazRxck02cl9RVkRDSURVVEExcGdIQUUzY1FZSHFZM0hiU2VCT3hZRl9FRVg2eDlYQ3V2VVJ0THJKaVNyUEFiMnhCSFE2Qi12NlUtZ0RUVDF6VmtaYnNvMV94aC1pNDJWRjVCejY2YVBiYXIxVUhwUkIyMHF5VVp4QXJYOFdMdVhPOWlIX2xVSDhMclVKbFBNLXdBTkdEOA?oc=5",
+      "source": "news.google.com",
+      "description": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre  Le Soleil",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Québec | Le taux de chômage est de 8,2 % chez les jeunes de 15 à 29 ans - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOQW1RRXJRV0hhTG5OY1M4Nk9OM3RHZjNsX2hSSkxYdkFYZ1B0dDhUWWp6Q2gzUEZRdTVkZnZWVHUySU1UekRFNTQyX01hWkNKSU1mcHZlanBBbHlOT3RqRmNhTmxGTlRxby1tVHhnTzdIdkR1ZlRzSjh5QWJ1UERmSzBjT3pBdy1IcDRsamdza1huOVZLQml0eW45c0liUlExd19yNV85cTZFSDREY1dhdjlybzJfZw?oc=5",
+      "source": "news.google.com",
+      "description": "Québec | Le taux de chômage est de 8,2 % chez les jeunes de 15 à 29 ans  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -155,26 +185,10 @@
       "category": "general"
     },
     {
-      "title": "Banque du Canada | Des responsables divisés quant à l’ampleur de la reprise économique - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOd0VkdVhzRWtBWWQtOWxScXNINGFRak9LbmJBVGdzbGJOZ2p6ckJVbnlEb19uYUdqcU5lc3NjYXhuMElJS3EzZ3EtbW5IZmtyZVpYZGZwckpSYnZjaXhZYk5Sd0VFOG9QRmZxVW9TU2xUQmRaWGhLM0k0c0VjREhZdHczUG1xYzhjdnVCQzRycHNEOWVOXzltTjl5aW11eEhQMXhCRGxzeWJaZ1NuN0paeW10bGEwdDI0Ym9fb3J2WGF5NFFsaFZ2NUdnUkxmNHJBTmRJYXg5NjQ?oc=5",
+      "title": "Agents de sécurité de la Banque du Canada | Le gouverneur défend le recours à des travailleurs de remplacement - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNeHlDSWo2T0ZTZzl1YXUyRWxyVlZEY0RONTJxQjk2WFc1eUlfc2o0TC1wQ0JYWWhlN2FFWGhaakVqY1ltekZEVjdFeTRpcVA4Q0kwMldYVnFHaDcwOWRrTEpsZ1hXWDlKNVQzdUplOGZmS3lpMWF2ZmV2ZjV6VVUxcGl1QWE1eVIwWFRhX1JqT0tlSXRMVGxmUDZKQnRFa0ZRSmg2Z2VZa21RX2w0VnRsbTd2Z2RRNXhzUHRFU1RpNEx4U3NOTzk2UFVlT3VKclY1OE8waUZBcDRFMGdpTHJpR3VaOE83S3BxcXBTWg?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada | Des responsables divisés quant à l’ampleur de la reprise économique  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique - noovo.info",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPMlEtbEZUUmFzM1owV0hIZ0s5WkRyenloMXBrTlNZRlBXQ3lMQWtSeXI3d3djMmFzYmtOZGdETjVsU2tjS0w1YUVSYld4RXVBZjgxaThaVGVzb0s3V3NSZE9PekVheFdoY20xN04tWURJWmYwVkx6a0U0My1Ed05EQ1BuSFlYMWxURFhTV0lmZVp0aXNKUXlWV2RQbzZFU3k4aHZwSXlvRzJPcEtqMHBCaUh4cGo2dWZDeGFPZ1ZCLVNINEM2RVp3WktyZlhRdVE?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada: des responsables divisés quant à l’ampleur de la reprise économique  noovo.info",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Voici pourquoi le taux directeur est (encore) maintenu à 2,25 % - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMEU3V0RHTmFEdmdDbDhFNUo5UWRsNi1QTzBLeHpMWkVBRHJVZmlzbENNWWlPTVhTdkVBdUJETlVRakN2aldnZ0pJN3Y2cVpialprYjluWG04ek9fb19ZMW1xUUVmSFlocDVCTGxLWUZrVnpFVDlCSDNTZEQzWkM1R3k0S1lmNmR3RUtoUlVZMUliLVZSaGpmY19rODc3VDdTQ2ZSdkQwLWNSZW1hdXdBOXlYTQ?oc=5",
-      "source": "encore",
-      "description": "Voici pourquoi le taux directeur est (encore) maintenu à 2,25 %  Radio-Canada",
+      "description": "Agents de sécurité de la Banque du Canada | Le gouverneur défend le recours à des travailleurs de remplacement  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -187,58 +201,34 @@
       "category": "general"
     },
     {
-      "title": "Certains responsables de la Banque du Canada s’inquiètent de la croissance et des attentes d’inflation - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOc2RsS2Y3Zzd4TFJPZWhwYmhFRmZOUER2SVFITlRrcGpnMzJIN3hWRjg3NHFtUEVQOEhHR0lmRUFpdXBRZjJlcC10b19DcFUyODQzLWY1WHhiTElFN3JDb05rSDhfU3lWNEg3WWxwOVNNdENpcGdZQi1aMjIzdnVvVS0wTVJ3Qjludjh2V3Y0MGdGNDdoUTdiQ3RUc2dEM19GUjcxQnBLTUxxUUpPcXhQYXRvSC1xeHRpd3NnQlYybjl6TWJES28wVEVGNWQ4ZkM1TDl0enpBUnJUT1kyR1JNT1dYSzBPZw?oc=5",
-      "source": "news.google.com",
-      "description": "Certains responsables de la Banque du Canada s’inquiètent de la croissance et des attentes d’inflation  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ? - finance-investissement.com",
+      "title": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ? - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRjlVejRHN05jWEp6ZUprOWdaWnNuaEVObVhZWGxSdWxPUUp2RnA0WWEzck9rYVhzMjIxYm5sRHQ5VVJwRWZjbkgwd280TlZQdnlONUpLSy0tMGNVZmFZUlRWN0loY2dwTFJHS0tkUmNESjNYTWhsYWxGbjNoQVFidnk2SDlMY19LTFRHem1pcmhxXzNJWlRmbExINlFxVkh6aVV3SFFJVE9nYVUzUXJOMkZDZklQZw?oc=5",
       "source": "news.google.com",
-      "description": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ?  finance-investissement.com",
+      "description": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ?  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Agents de sécurité de la Banque du Canada | Le gouverneur défend le recours à des travailleurs de remplacement - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNeHlDSWo2T0ZTZzl1YXUyRWxyVlZEY0RONTJxQjk2WFc1eUlfc2o0TC1wQ0JYWWhlN2FFWGhaakVqY1ltekZEVjdFeTRpcVA4Q0kwMldYVnFHaDcwOWRrTEpsZ1hXWDlKNVQzdUplOGZmS3lpMWF2ZmV2ZjV6VVUxcGl1QWE1eVIwWFRhX1JqT0tlSXRMVGxmUDZKQnRFa0ZRSmg2Z2VZa21RX2w0VnRsbTd2Z2RRNXhzUHRFU1RpNEx4U3NOTzk2UFVlT3VKclY1OE8waUZBcDRFMGdpTHJpR3VaOE83S3BxcXBTWg?oc=5",
+      "title": "L’économie canadienne croîtrait de 3,4 % au deuxième trimestre - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOX2x2MktzOTM4TWMxSnlpdWJfVXAycFVUZ2FoVVhGUlo1enQwQlpldEZpWVZab2QxWG9JNFpNamdGV1RQVzdiTTRsYVdGX1U0cWlJOGZtWGYwbzdicjJKdnpDNjZTczNSNmtMM1RpUFhtNlR3RUZ2RGtRdTIwZ3ZlR3VOeF9EbDZxMGw0LUZMdW1nRHBBakx2cmdYY194Ni0zOVZPOTRpZ1QzZHZVbk1xak5lOA?oc=5",
       "source": "news.google.com",
-      "description": "Agents de sécurité de la Banque du Canada | Le gouverneur défend le recours à des travailleurs de remplacement  La Presse",
+      "description": "L’économie canadienne croîtrait de 3,4 % au deuxième trimestre  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Les gouverneurs de la Banque du Canada divisés sur les perspectives de reprise - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWmd3elBKZzctd1ZQT3d2Y2xzVDF5WC1FNjlDZkhoNWczcnAxOWVJNnVqeFkweHhfYjBrNm03ZENCakp2ZzZJOTlBX3FJZl9SXzJlTXUzR1FtUkV6dGQ2X0g5Ri1QbFE4NWp2NW9nNmljejZhNHBhY3E1b1N0OUdUN2dEZ2hNS1FIRXVyZ1dXVk1MU0NIOW5ZX080Ym1YUWw0Z0VXRVRaOWttTjNONkRiUC1uRG1uWUtZZHF6RDM5MWV6TEZYY2pOXw?oc=5",
-      "source": "news.google.com",
-      "description": "Les gouverneurs de la Banque du Canada divisés sur les perspectives de reprise  Investing.com France",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada : les gouverneurs divisés sur la pérennité de la reprise, selon les minutes - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPUTRidkdwVjZzdmFzZDBxLVljT3ozVzU3TU13SUluTWNNZVppUEhSaGdtR1RZME42SVJXUEZSNnM5Q0kyWFBBQVViLTFTazIyYUFWd2hHMFM4OWd4LVo3dGRKV2ktZzRERV9XRjhCZ09CTWlUUUh3UnZFUUxHOVBhSGhBZ0x2RTAta2JOYVUwYm1Fc0lLOFUwVmJUVGtpR3FLUXJmRHFpWjRXemhISWVrRTF4OW5QeUo1SjJ4aUYyQ1k2aDQ4bkMzLUNUU2YyTFVRTjBMUEN2TEpHS2dvUFlxdnU4cU0?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada : les gouverneurs divisés sur la pérennité de la reprise, selon les minutes  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le G7 prêt à répondre à une cyberattaque financière majeure - finance-investissement.com",
+      "title": "Le G7 prêt à répondre à une cyberattaque financière majeure - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOT2JPMGV4TWtleTNSX1AxVENQWE9SZUNMdDlIZllYaUZWcWw0LTBqdDJtOU5wVmYxcXotMXVjSHJpMUVkdmxFMm9ETWczbkVzZ2xjSUpoT05xbm4wUWMxby1HWW1Pa1prVHlOZ0FxT25nZXYyb3dHcjdvbklXMm11UG5lWDRtMGplNEMxWVVNWlozRE0yTXZLVmY1NGpfQUkx?oc=5",
       "source": "news.google.com",
-      "description": "Le G7 prêt à répondre à une cyberattaque financière majeure  finance-investissement.com",
+      "description": "Le G7 prêt à répondre à une cyberattaque financière majeure  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Rémunérer les dirigeants selon les dividendes peut freiner l’investissement - finance-investissement.com",
+      "title": "Rémunérer les dirigeants selon les dividendes peut freiner l’investissement - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOFBwZzg1OWFuTXRxUGJyNDV6ampxTFh6RTlpWmowZVdiS3V0TkJkX3RiVHZkLWc2UWd1amZ0OG5xWUNkVlkyRFNxY2tGSnIzZ3RTR2d6LU1TNkI1QW1hX05IOW5OMmVqbW9MSGRMTjA2Z1dQY3c5QU5BMXJBbURwLUVQY0MwZUJXTHlva05lYVFrdlRSZzJNVEJySGVQVm5VdWdvQXJRcHZDSFRQUEwwTEZpdlc?oc=5",
       "source": "news.google.com",
-      "description": "Rémunérer les dirigeants selon les dividendes peut freiner l’investissement  finance-investissement.com",
+      "description": "Rémunérer les dirigeants selon les dividendes peut freiner l’investissement  Finance et Investissement",
       "cities": [],
       "category": "general"
     }
@@ -293,7 +283,7 @@
       "days": "42",
       "condition": "Vendeurs"
     },
-    "last_quarter": "juin 2026"
+    "last_quarter": "juillet 2026"
   },
-  "last_update": "2026-08-05 15:12"
+  "last_update": "2026-08-06 15:12"
 }
