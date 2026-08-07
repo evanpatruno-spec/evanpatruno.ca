@@ -89,18 +89,18 @@
       "category": "general"
     },
     {
-      "title": "Deuxième trimestre | Les revenus de Dorel ont baissé de 14,7 % d’une année à l’autre",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-08-06/deuxieme-trimestre/les-revenus-de-dorel-ont-baisse-de-14-7-d-une-annee-a-l-autre.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Juillet | Le taux de chômage recule au Canada et augmente au Québec",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-08-07/juillet/le-taux-de-chomage-recule-au-canada-et-augmente-au-quebec.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Les revenus des Industries Dorel ont diminué de 14,7 % d’une année à l’autre au deuxième trimestre, notamment en raison du processus de restructuration des activités qui s’est poursuivi au sein de sa division Maison.",
+      "description": "L’économie canadienne a créé 75 000 emplois en juillet, dépassant les attentes des économistes, tandis que le taux de chômage a reculé à 6,4 %, son niveau le plus bas depuis deux ans.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Québec s’engage à fond dans Premier Tech",
-      "link": "https://www.lapresse.ca/affaires/chroniques/2026-08-06/quebec-s-engage-a-fond-dans-premier-tech.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Le gouvernement du Québec a autorisé Investissement Québec à investir jusqu’à 217,5 millions dans l’entreprise Premier Tech de Rivière-du-Loup dans le but d’appuyer le plan de développement stratégique de l’entreprise qui prévoit réaliser des investissements de 650 millions d’ici 2031. Visiblement, il y a de la croissance dans l’air.",
+      "title": "Le taux de chômage a légèrement baissé à 6,4% en juillet au Canada",
+      "link": "https://www.ledevoir.com/economie/1000484/taux-chomage-legerement-baisse-juillet-canada",
+      "source": "Le Devoir",
+      "description": "75 000 emplois ont été créés, dépassant les attentes des économistes. Au Québec, le taux a légèrement grimpé  à 5,6%.",
       "cities": [],
       "category": "general"
     },
@@ -113,14 +113,6 @@
         "montreal"
       ],
       "category": "local"
-    },
-    {
-      "title": "Desjardins modernisera ses systèmes de cartes de crédit en conservant la codétention",
-      "link": "https://www.ledevoir.com/economie/999686/desjardins-modernisera-systemes-cartes-credit-preservant-codetention",
-      "source": "Le Devoir",
-      "description": "La coopérative lancera la migration de son système vers la mi-octobre.",
-      "cities": [],
-      "category": "general"
     },
     {
       "title": "Immobilier résidentiel | Le marché de Québec inquiète les experts - La Presse",
@@ -139,6 +131,14 @@
       "category": "general"
     },
     {
+      "title": "Marché immobilier à Québec: la pénurie de maisons pousse les acheteurs à bout - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOY3hKeWs0T3R0UmM2WFkwYlIxRXpVLXR5RDZoYmluZncxMG9GUktBZmlrcUwtR0hBYkFBcUVObWZJNUh0UExmYXdJUVdzOUxIU29ZUDVvWVpmNnhyc1gtV01SVXdEaFM1WHpiY1dXSTVPRzBESGh4dWY1enZHbkdvMHMxakZqYWpnd2gwOEFSak40UGoxTlFxRHlfYXFFMHNUYW82bG1HcWJjOF9OdHphak93V1FiUQ?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier à Québec: la pénurie de maisons pousse les acheteurs à bout  TVA Nouvelles",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Surchauffe du marché immobilier | Après Montréal, au tour de Québec? - 98.5 Montréal",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5xbm1NaWNiZklfY1pTUnBSYVVEcFg3S1k1UkI4cFBnYTZVVFRobnNzbFFwMU9nam51Q0pXQWxVSGFSVE1pc2pKbHpNaTFXeXZmV1g3VG5hTXM0UXJqSy14Uk9teFJtaUo2YjAyVm5pRFozNmNK?oc=5",
       "source": "news.google.com",
@@ -149,12 +149,30 @@
       "category": "local"
     },
     {
-      "title": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre - GlobeNewswire",
-      "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNS2lBWlpaanpDaGhRc2I0X2RvYzdQaXNOcm83YU9NN3Fia0wyMmE1OVhDMmt4RFFBLXZKMkIyWmVSQUo1RXFpc3ZfZEtXTS02TkE4VERDOG82MGZONnJaOHVCeGduM1VvS25vM2hrUUNWQVA0Z251R2dTNXVRa2MzMTNNdDNySkVPbm56LTE0YWpzeGJtaDRHaHhzOG9PdjRWTTV6MXRrMGN1Z2FfMTZNVllCeVJaTHBYcHR1Y2ZkUy1HOUY5enEyUVk2YnpmZmhWd3h4WklTcFlvaDVOaDVFckZUS2V1UVFUalkxRGgyQ1BZU200dFRqM202RTlwN0lYeHY4OTZ5YnJtUjUzR1VBY0tUdnhUTjMwUWtWdHBSenZoQVhjSEE?oc=5",
+      "title": "Surchauffe du marché immobilier | Après Montréal, au tour de Québec? - 107.7 Estrie",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5yTGlZQTlpeUF5WkVsV1E1SWVPMnV6N2czbDI0X0JXNWE1TG0zSTRRWEZxY3ZuQTJNNUdmcnRpMV9KeTU4YUdkN1NpUG42QXEzX284anhNV2J6X05IdlBmS1JEaWNsNlNkblFfbkFnWGRndGkyd2c?oc=5",
       "source": "news.google.com",
-      "description": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre  GlobeNewswire",
+      "description": "Surchauffe du marché immobilier | Après Montréal, au tour de Québec?  107.7 Estrie",
       "cities": [
         "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Le marché immobilier de Québec inquiète les experts - FM93",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNzEySTIzcWtQYnQ3bWpCdmRQWEtkVnRsX0ZxWTRabndTWUhCQWw4U19QOW56V0QyT0FCMk5IekJpZUR4UGEtOTF5VDZGRWo0Z3lZTGtiamVFdXBHdEdMSi1naFVOLTdqWUxuUDNNaExXQnpCOGp0eVlVa2FlZW8yWXEwbG5pWDRuREdaeTln?oc=5",
+      "source": "news.google.com",
+      "description": "Le marché immobilier de Québec inquiète les experts  FM93",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Ce qu’il faut savoir ce mercredi | Marché immobilier, accident mortel à Laval et santé mentale - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOOVo2cTBPYmsxeFg1S0s3a0FCZldONjNfNGlCVHA2RXdWZ0FiZmJDSjNXaVdxdUMyUnI4Q1AwdGJwdWpCelhxN09kOU1HUXdtZ3kzckRFQUFfd0t0d3dsZllkWTZBOF9PQjZhdnlGaGlENTE4bVpTeHV1LVd5UUJaRVlpRVZzZ0o1MGhHRks1dXhmdFYyWUtrSnlDQmVhNlFPbEpyT0xkUktBeDQ1aTdjc1hrUjhwZmVaaXpOLTZyZTlLRHo5LVpXSmszanRhOHdmcU54QzFzTkE?oc=5",
+      "source": "news.google.com",
+      "description": "Ce qu’il faut savoir ce mercredi | Marché immobilier, accident mortel à Laval et santé mentale  La Presse",
+      "cities": [
+        "laval"
       ],
       "category": "local"
     },
@@ -163,6 +181,16 @@
       "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQWk9WakpicC1tSVNGaUg0bktVNGdlb0pZWllrUzRfX0VxNHVsdG1kOU5nTENSQzduZTZ6b0xHZ1ZudGpEZlE2Q28yXzFTeWdHdnBGZGtKMkpGZGVaUzJLNE1hVGdLWkcweVY1RmlTdmgyazRxck02cl9RVkRDSURVVEExcGdIQUUzY1FZSHFZM0hiU2VCT3hZRl9FRVg2eDlYQ3V2VVJ0THJKaVNyUEFiMnhCSFE2Qi12NlUtZ0RUVDF6VmtaYnNvMV94aC1pNDJWRjVCejY2YVBiYXIxVUhwUkIyMHF5VVp4QXJYOFdMdVhPOWlIX2xVSDhMclVKbFBNLXdBTkdEOA?oc=5",
       "source": "news.google.com",
       "description": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre  Le Soleil",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre - GlobeNewswire",
+      "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNS2lBWlpaanpDaGhRc2I0X2RvYzdQaXNOcm83YU9NN3Fia0wyMmE1OVhDMmt4RFFBLXZKMkIyWmVSQUo1RXFpc3ZfZEtXTS02TkE4VERDOG82MGZONnJaOHVCeGduM1VvS25vM2hrUUNWQVA0Z251R2dTNXVRa2MzMTNNdDNySkVPbm56LTE0YWpzeGJtaDRHaHhzOG9PdjRWTTV6MXRrMGN1Z2FfMTZNVllCeVJaTHBYcHR1Y2ZkUy1HOUY5enEyUVk2YnpmZmhWd3h4WklTcFlvaDVOaDVFckZUS2V1UVFUalkxRGgyQ1BZU200dFRqM202RTlwN0lYeHY4OTZ5YnJtUjUzR1VBY0tUdnhUTjMwUWtWdHBSenZoQVhjSEE?oc=5",
+      "source": "news.google.com",
+      "description": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre  GlobeNewswire",
       "cities": [
         "montreal"
       ],
@@ -193,10 +221,18 @@
       "category": "general"
     },
     {
-      "title": "Exercice de coordination transfrontalière du G7 de 2026 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVzZjM1dGQURaYi0tNThGeHVsOTlHdEZ2eU9zQ1lTVDBtRzhaY1NZWlRwR0tCbzhUUGRFWThSeHNEcFZyRDFFSC1jWmVNZzNrM21LbVFPY0VvcGZXSmdMOFd0WVpicDIwODF0SnNMR3hPVTEyTUNfSjlNSS1GMVNQbkMtTk0zWFllUklQYUZNcjEyZnBLaG9CUjNB?oc=5",
+      "title": "Progression de l’économie canadienne en mai - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQT1dodktiRElFWm9QcDI4aVFzV0FHTlZNajVkQVROcEdHaFlEem9ZZzZLZ1JKd3lVd0laWDNrYjZwWWdRS0J0YmktaUhGM0VQa0JESTJTdy1IVm5FYWVPSE9PRWtYNlpNV1pJdzlsaVBuaWIzVDZ6U3B6WmRIODVBVExxc2xtRWpZcHc?oc=5",
       "source": "news.google.com",
-      "description": "Exercice de coordination transfrontalière du G7 de 2026  Banque du Canada",
+      "description": "Progression de l’économie canadienne en mai  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux directeur au Canada : comprendre son rôle et son impact - Milesopedia",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oMTFxbU5QdENwSnlqaDY2NzhEc1hNc2gwSFBQUHp6RjdvTnVkbFBpRWpzNFc5bFdNTDU1bTh2QVFJMDJQdncwREtYbThla0QwLTk5NjRLQjg2ZC0zQWpZVDRqRDhPSjZ0RG94djJOMXY0cDZy?oc=5",
+      "source": "news.google.com",
+      "description": "Taux directeur au Canada : comprendre son rôle et son impact  Milesopedia",
       "cities": [],
       "category": "general"
     },
@@ -205,14 +241,6 @@
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRjlVejRHN05jWEp6ZUprOWdaWnNuaEVObVhZWGxSdWxPUUp2RnA0WWEzck9rYVhzMjIxYm5sRHQ5VVJwRWZjbkgwd280TlZQdnlONUpLSy0tMGNVZmFZUlRWN0loY2dwTFJHS0tkUmNESjNYTWhsYWxGbjNoQVFidnk2SDlMY19LTFRHem1pcmhxXzNJWlRmbExINlFxVkh6aVV3SFFJVE9nYVUzUXJOMkZDZklQZw?oc=5",
       "source": "news.google.com",
       "description": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ?  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’économie canadienne croîtrait de 3,4 % au deuxième trimestre - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOX2x2MktzOTM4TWMxSnlpdWJfVXAycFVUZ2FoVVhGUlo1enQwQlpldEZpWVZab2QxWG9JNFpNamdGV1RQVzdiTTRsYVdGX1U0cWlJOGZtWGYwbzdicjJKdnpDNjZTczNSNmtMM1RpUFhtNlR3RUZ2RGtRdTIwZ3ZlR3VOeF9EbDZxMGw0LUZMdW1nRHBBakx2cmdYY194Ni0zOVZPOTRpZ1QzZHZVbk1xak5lOA?oc=5",
-      "source": "news.google.com",
-      "description": "L’économie canadienne croîtrait de 3,4 % au deuxième trimestre  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -285,5 +313,5 @@
     },
     "last_quarter": "juillet 2026"
   },
-  "last_update": "2026-08-06 15:12"
+  "last_update": "2026-08-07 14:10"
 }
