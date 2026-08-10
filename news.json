@@ -89,12 +89,30 @@
       "category": "general"
     },
     {
-      "title": "Recul du taux de chômage | L’emploi s’améliore au Canada, mais recule aux États-Unis",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-08-07/recul-du-taux-de-chomage/l-emploi-s-ameliore-au-canada-mais-recule-aux-etats-unis.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Mark Zuckerberg défend les bienfaits de l’intelligence artificielle",
+      "link": "https://www.lapresse.ca/affaires/techno/2026-08-10/mark-zuckerberg-defend-les-bienfaits-de-l-intelligence-artificielle.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "C’était inattendu, rapportent les économistes : le taux de chômage a reculé à son plus bas niveau depuis deux ans au Canada, en juillet, après un début d’année difficile sur le marché de l’emploi. Une nouvelle dont on doit se réjouir, alors qu’on observe étonnamment la tendance inverse de l’autre côté de la frontière.",
+      "description": "Le fondateur de Meta, Mark Zuckerberg, a publié lundi un long texte sur le site de son entreprise afin de défendre sa nouvelle stratégie, mêlant modèles d’intelligence artificielle (IA) ouverts et investissements dans les villes accueillant des centres de données.",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "Le forum des affaires | Ancrer au Québec la valeur économique des secteurs émergents",
+      "link": "https://www.lapresse.ca/affaires/2026-08-10/le-forum-des-affaires/ancrer-au-quebec-la-valeur-economique-des-secteurs-emergents.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Presse soulignait récemment un paradoxe bien québécois et canadien : malgré des écosystèmes d’innovation technologique performants, notre faible tolérance au risque limite les investissements nécessaires à la croissance des entreprises d’ici. Ce défi structurel nous prive trop souvent des entreprises et des retombées économiques que nous devrions conserver.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Univers PME | Un nouveau programme vert pour 30 PME de Montréal",
+      "link": "https://www.lapresse.ca/affaires/pme/2026-08-10/univers-pme/un-nouveau-programme-vert-pour-30-pme-de-montreal.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Une trentaine de PME montréalaises auront la chance de suivre un nouveau programme de formation d’ici la fin de l’année, lancé par la Maison de l’innovation sociale (MIS), qui leur permettra d’améliorer leur impact environnemental et de renforcer leur compétitivité.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Le taux de chômage a un peu baissé en juillet, mais «le marché du travail n’est pas encore solide»",
@@ -131,10 +149,18 @@
       "category": "general"
     },
     {
-      "title": "Un ex-policier reconverti en roi de l’immobilier québécois - lactualite.com",
+      "title": "Un ex-policier reconverti en roi de l’immobilier québécois - L’actualité",
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQjQ3S2NFaExpTDNtdkhGeF93MXJLSkdNTnR1ek83STNBejJPZjVHZVZHaWJZYVZlX0o0TjEtUm9VVGEwdmdCS3hCWUU4MjFZYmx6V2hUeW9rQmdocGZXTlFwcGxnNjUwaXpiTkRqdlI5OGpZYmpCc1pqbGh6Z1VST3Nyazc4VEVZR19vZXdZVnQtcXNLNmRkV0VCRG9ZWGtvYmNV?oc=5",
       "source": "news.google.com",
-      "description": "Un ex-policier reconverti en roi de l’immobilier québécois  lactualite.com",
+      "description": "Un ex-policier reconverti en roi de l’immobilier québécois  L’actualité",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Immobilier : après la surchauffe, un retour au calme à Québec? - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTVl6NDJQcTJNNkc0YXRGLWNJMVROcU5rbjV3c053OXM5ZGN1dDFIWnoxZ2FiUGtFMEtqWERJZnRqVlVaRGVRaHZrUVh3bm9jS3YtVWFNcWpiNzdKRzVNN0dPTl93ZGozVUVmckt4OFpHSXpOOXVYSDZDUFlFTU5GUm44S3ZNY1RNY3JyV1l3?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier : après la surchauffe, un retour au calme à Québec?  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -169,6 +195,22 @@
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQX05MYy1RQ1FTLVhBYUZTcG94ZGdCeU9Ra2ozWnYwRFA2VktPVzh6N1Y5QlNCQnpvU092dzFBQnAwVXVTMTlfaXhNOU1mbUJ2YnoyTjNSdU9lSkZFZElaRWV6YUNDOG5JeEVaQXFhTDFxeGxseEpTdmlidUVqaF9sUGJ2QXljM2dRb2IzZjNZc1RTRzBYSUhUQ0pTUUNSZHg2cm9RbllwSXV6enNCUXRWUFc1dVlRWjdYMy1CbHFQaHRDZVnSAcgBQVVfeXFMTURQSHloblhyTGpYVXpnbVlWc3VnSXhYR1NMYjJSbGJkUkZYWWVseXhhcjU4Y1hYNGF1eXZmS0dYSUhsMkNIZmMwNW9VSld5b0l2dDcyYllYa1VrV19CcEI5aDhZall4OUxPTWw2THUzYlh1NzBIXzBHNE5qTkRxSEVjTzVidG45MnJ6cXg1VjB1c1VQMlVyN3p2bjJLQnRoV1l2dHhVY3NtRWRrT25tOEFnUGxDWWtCYmhQNkQ2MmF1Zjk3SU1uU0c?oc=5",
       "source": "news.google.com",
       "description": "Marché immobilier périphérie nord de Québec — Juillet 2026  metroquebec.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Québec : le dynamisme exceptionnel du marché s’essouffle - L'APCIQ",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOSlZGV0NmM2dBMEUtMVJ3X3NwSTI0VXl5QWhCNUZUZ0lpRGxCWmtSdk5QcHMzLXpFaS0yc1NhMjhtbjZIcjFkTHYxdlhVRlNMS2FvWl82UGVsWFFGV2tlanRITzNVNG4zNjhMNVR3TUtldUR6ZHVqdE5vbWZSTmc4amxZOXI?oc=5",
+      "source": "news.google.com",
+      "description": "RMR de Québec : le dynamisme exceptionnel du marché s’essouffle  L'APCIQ",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "\"Immobilier : après la surchauffe, un retour au calme à Québec?\" - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWXBZd3VvZGJTNE5tZ0JBb2dndTZlb2ZmUy1reU5hTFlXeWNOTUpzSWpOdWJLS0RXb2RFbExKeHkzWTNkd3FFeFZXU3pmS2ZDaWR6eVNieTRNWDlOWkZTMHNMWmpJREhMN2F2RUtXal9uWkhnbm16WHZ2b3JlZU5xVVJCd1pWNU0tVlVUUmRtanpxdlJ2NjlyNHBuLTRqY1RUNUNpV3pKZVoweHZ1SzIxazN5VDNTTnhUWUtENFduS01GNTF0UE9pTVJEMA?oc=5",
+      "source": "news.google.com",
+      "description": "\"Immobilier : après la surchauffe, un retour au calme à Québec?\"  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -251,22 +293,22 @@
       "category": "local"
     },
     {
+      "title": "Ce qu’il faut savoir ce mercredi | Marché immobilier, accident mortel à Laval et santé mentale - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOOVo2cTBPYmsxeFg1S0s3a0FCZldONjNfNGlCVHA2RXdWZ0FiZmJDSjNXaVdxdUMyUnI4Q1AwdGJwdWpCelhxN09kOU1HUXdtZ3kzckRFQUFfd0t0d3dsZllkWTZBOF9PQjZhdnlGaGlENTE4bVpTeHV1LVd5UUJaRVlpRVZzZ0o1MGhHRks1dXhmdFYyWUtrSnlDQmVhNlFPbEpyT0xkUktBeDQ1aTdjc1hrUjhwZmVaaXpOLTZyZTlLRHo5LVpXSmszanRhOHdmcU54QzFzTkE?oc=5",
+      "source": "news.google.com",
+      "description": "Ce qu’il faut savoir ce mercredi | Marché immobilier, accident mortel à Laval et santé mentale  La Presse",
+      "cities": [
+        "laval"
+      ],
+      "category": "local"
+    },
+    {
       "title": "Marché immobilier de Vaudreuil-Soulanges — Juillet 2026 - Journal Métro",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQ1FRNGN4WjBYSl81UE1rOGJBSmRzV2ZvbjdZM2FiVDZKQ2ZVZnhqdDNjbjREci1TYWNiZnROSTJzQ0FCUE5jVUptcTJ1elRSRldOclNjbHU1SWhscVk2NmJlbi1vd05PX0VzcDdTZnJUT1dacXZFN3hPYzZERm5QR1d5dksyRFVHTVJLYklDbFV2TXpUeWxpSmRhSnFtS3lpTkY2WnVvenM5V3g4aTlwUTE3dWZkZ0pTdDBtaHFWQjBBdw?oc=5",
       "source": "news.google.com",
       "description": "Marché immobilier de Vaudreuil-Soulanges — Juillet 2026  Journal Métro",
       "cities": [],
       "category": "general"
-    },
-    {
-      "title": "Marché immobilier de Saint-Jean-sur-Richelieu — Juillet 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQVHhEcjNRWEp4QkVnS1FsaXhYWDJMQm9DMXp1dWFJbXkxNUhPOHZTTzByQV9pbGZqUmJsbG56b1oxS2ZfcTdZbC1QeTVkczVmZnl0VEdrVU9QVTlLa0RxaTJTcDh2bkJRTGx5QXRUNWtCSE5sc09FXzZaZXJILWZXV0RFMlRsQlFSZ2ZqZjAzRmdxdFBNNVdUbUZrYWk1S3dDVWgwZUdsWDBnSmYwNzV6dWZBZUhNQ0t5VVpUOUpyczEtWG12Yk9ZNA?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier de Saint-Jean-sur-Richelieu — Juillet 2026  Journal Métro",
-      "cities": [
-        "saint-jean"
-      ],
-      "category": "local"
     },
     {
       "title": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre - Le Soleil",
@@ -297,10 +339,20 @@
       "category": "general"
     },
     {
-      "title": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada - Ratehub.ca",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
+      "title": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre - GlobeNewswire",
+      "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNS2lBWlpaanpDaGhRc2I0X2RvYzdQaXNOcm83YU9NN3Fia0wyMmE1OVhDMmt4RFFBLXZKMkIyWmVSQUo1RXFpc3ZfZEtXTS02TkE4VERDOG82MGZONnJaOHVCeGduM1VvS25vM2hrUUNWQVA0Z251R2dTNXVRa2MzMTNNdDNySkVPbm56LTE0YWpzeGJtaDRHaHhzOG9PdjRWTTV6MXRrMGN1Z2FfMTZNVllCeVJaTHBYcHR1Y2ZkUy1HOUY5enEyUVk2YnpmZmhWd3h4WklTcFlvaDVOaDVFckZUS2V1UVFUalkxRGgyQ1BZU200dFRqM202RTlwN0lYeHY4OTZ5YnJtUjUzR1VBY0tUdnhUTjMwUWtWdHBSenZoQVhjSEE?oc=5",
       "source": "news.google.com",
-      "description": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada  Ratehub.ca",
+      "description": "RMR de Montréal : la période d’ajustement se poursuit, le marché des copropriétés à l’équilibre  GlobeNewswire",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Immobilier au Québec : acheter devient-il enfin plus abordable en 2026 ? - Le Revenu",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZHJzYWhwRTZnU085ako5VWVzQ3UyTzRQS3gwTGJoNWRRX0dJb1JySHdaUm1rU2pjdU4yN3RTTUEzbkJfb2I0a0pUTGlKY3NHU2dLS0ZDclAtTjdJS1BuMXoxRlR2NVRBbnlpWnNYUWJwSnphcFVhcVB6YmxOUFFsT3Z3X1dTcDJDd2R2eEIzQTJFUXBKd0dpWEVOLXRuYXJVY1VPTU43REhuR2tsVUR1Q29taTk?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier au Québec : acheter devient-il enfin plus abordable en 2026 ?  Le Revenu",
       "cities": [],
       "category": "general"
     },
@@ -331,14 +383,6 @@
       "category": "general"
     },
     {
-      "title": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ? - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRjlVejRHN05jWEp6ZUprOWdaWnNuaEVObVhZWGxSdWxPUUp2RnA0WWEzck9rYVhzMjIxYm5sRHQ5VVJwRWZjbkgwd280TlZQdnlONUpLSy0tMGNVZmFZUlRWN0loY2dwTFJHS0tkUmNESjNYTWhsYWxGbjNoQVFidnk2SDlMY19LTFRHem1pcmhxXzNJWlRmbExINlFxVkh6aVV3SFFJVE9nYVUzUXJOMkZDZklQZw?oc=5",
-      "source": "news.google.com",
-      "description": "L’économie canadienne rebondit : faut-il craindre une hausse du taux directeur ?  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le taux de chômage a un peu baissé en juillet, mais «le marché du travail n’est pas encore solide» - Le Devoir",
       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWFV5UmloMXNzNWg4TDNmd0VmbFBjckk2MlpKWkFGMEFVMVVrc185bTlhWFlSRFhwS1Bud1ZZXzhERGpwRnJMckxNV0JSaTN3aVlUX1Q5VFdoVnQwNXRsZUd2X1JMakV4OHdYZG5yZW5LRFc3QUVjRmh6aE9rNGxvOGZvdlAwM1RZeUFmZ0ZRYko?oc=5",
       "source": "news.google.com",
@@ -355,10 +399,10 @@
       "category": "general"
     },
     {
-      "title": "Taux directeur au Canada : comprendre son rôle et son impact - Milesopedia",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oMTFxbU5QdENwSnlqaDY2NzhEc1hNc2gwSFBQUHp6RjdvTnVkbFBpRWpzNFc5bFdNTDU1bTh2QVFJMDJQdncwREtYbThla0QwLTk5NjRLQjg2ZC0zQWpZVDRqRDhPSjZ0RG94djJOMXY0cDZy?oc=5",
+      "title": "Le G7 prêt à répondre à une cyberattaque financière majeure - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOT2JPMGV4TWtleTNSX1AxVENQWE9SZUNMdDlIZllYaUZWcWw0LTBqdDJtOU5wVmYxcXotMXVjSHJpMUVkdmxFMm9ETWczbkVzZ2xjSUpoT05xbm4wUWMxby1HWW1Pa1prVHlOZ0FxT25nZXYyb3dHcjdvbklXMm11UG5lWDRtMGplNEMxWVVNWlozRE0yTXZLVmY1NGpfQUkx?oc=5",
       "source": "news.google.com",
-      "description": "Taux directeur au Canada : comprendre son rôle et son impact  Milesopedia",
+      "description": "Le G7 prêt à répondre à une cyberattaque financière majeure  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -371,10 +415,10 @@
       "category": "general"
     },
     {
-      "title": "Le G7 prêt à répondre à une cyberattaque financière majeure - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOT2JPMGV4TWtleTNSX1AxVENQWE9SZUNMdDlIZllYaUZWcWw0LTBqdDJtOU5wVmYxcXotMXVjSHJpMUVkdmxFMm9ETWczbkVzZ2xjSUpoT05xbm4wUWMxby1HWW1Pa1prVHlOZ0FxT25nZXYyb3dHcjdvbklXMm11UG5lWDRtMGplNEMxWVVNWlozRE0yTXZLVmY1NGpfQUkx?oc=5",
+      "title": "La Banque du Canada devrait opter pour le statu quo en septembre malgré la surprise sur le front de l'emploi en juillet, selon la TD - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNdzhlM21tdjEzQ2NyLUFqcFdXMC1vVGtWcGF0UmpSLTRXZC1NQlBYZDV2WjhCYmJaMmJGeE5hTnpuUldMWTNDVG9BbV96QmV4clRBMzhiZG5xX1dTV1FWaDdGWHFPbFVyQkFLbk5aZUtFaVZVNGhma2UwU0Y0cy1ZSjVKN2VpZjdReXR1a18xZzgyNU5tM3NpV3RIRlZnMlg5M0RPWXQ4cUI3VFlTaUotci1hZDY0MkJQdDFrVllCTXRORWlXNFJlODBFTFdmSTY0eFNVUlJwOTZUaVZwVEpJd3R0NnJaQmk3UWstT0Y2WF8zZw?oc=5",
       "source": "news.google.com",
-      "description": "Le G7 prêt à répondre à une cyberattaque financière majeure  Finance et Investissement",
+      "description": "La Banque du Canada devrait opter pour le statu quo en septembre malgré la surprise sur le front de l'emploi en juillet, selon la TD  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -455,5 +499,5 @@
     },
     "last_quarter": "juillet 2026"
   },
-  "last_update": "2026-08-09 13:47"
+  "last_update": "2026-08-10 14:20"
 }
