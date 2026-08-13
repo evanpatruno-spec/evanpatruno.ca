@@ -1,52 +1,138 @@
 {
   "news": [
     {
-      "title": "Wall Street ouvre en hausse",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-08-12/wall-street-ouvre-en-hausse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "La Bourse de New York évolue en hausse mercredi, soutenue par des données d’inflation conformes aux attentes pour le mois de juillet et par les résultats solides de plusieurs poids lourds de l’intelligence artificielle (IA).",
+      "title": "RMR de Québec : le dynamisme exceptionnel du marché s’essouffle",
+      "link": "https://apciq.ca/rmr-de-quebec-le-dynamisme-exceptionnel-du-marche-sessouffle/",
+      "source": "APCIQ",
+      "description": "Québec, le 6 août 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de juillet 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : le dynamisme exceptionnel du marché s’essouffle est apparu en premier sur APCIQ - Site web.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "États-Unis | L’inflation ralentit légèrement au mois de juillet",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-08-12/etats-unis/l-inflation-ralentit-legerement-au-mois-de-juillet.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Le ralentissement de la hausse des prix à la consommation aux États-Unis s’est confirmé en juillet, profitant de la pause dans le conflit au Moyen-Orient et son impact positif sur les prix de l’énergie, une nouvelle bienvenue pour la banque centrale américaine.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Boîte de réception | WiFi public, portefeuille Apple et internet partagé",
-      "link": "https://www.lapresse.ca/affaires/techno/2026-08-12/boite-de-reception/wifi-public-portefeuille-apple-et-internet-partage.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Chaque mercredi, notre journaliste répond à vos questions en lien avec le numérique et les nouvelles technologies. Cette semaine, on se demande comment se protéger sur un réseau WiFi public, on décortique les frais du paiement mobile d’Apple et on s’interroge sur la possibilité d’utiliser le signal WiFi partagé d’un immeuble locatif.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’AIE revoit en baisse sa prévision de la demande de pétrole en 2026",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-08-12/l-aie-revoit-en-baisse-sa-prevision-de-la-demande-de-petrole-en-2026.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’Agence internationale de l’énergie (AIE) a indiqué mercredi revoir en baisse sa prévision de la demande mondiale de pétrole en 2026, dans le sillage du conflit au Moyen-Orient et de la flambée des prix des hydrocarbures.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Ashton ouvre sa première succursale à Montréal",
-      "link": "https://www.ledevoir.com/economie/consommation/1000892/ashton-ouvre-premiere-succursale-montreal",
-      "source": "Le Devoir",
-      "description": "La chaîne de restauration rapide s’installe au Complexe Desjardins, rue Sainte-Catherine Ouest.",
+      "title": "RMR de Montréal : la période d’ajustement se poursuit,  le marché des copropriétés à l’équilibre",
+      "link": "https://apciq.ca/rmr-de-montreal-la-periode-dajustement-se-poursuit-le-marche-des-coproprietes-a-lequilibre/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 6 août 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de juillet 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la période d’ajustement se poursuit,  le marché des copropriétés à l’équilibre est apparu en premier sur APCIQ - Site web.",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Immobilier résidentiel | Le marché de Québec inquiète les experts - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNjhIRHQ4UEhzMzVSZEtmTk9YY1pjdE5QYUpsN1Q3eFRsTWJYOTc0b0M1c3BSOVRBTkNBYlItdmpCX2luRHVxZTd3akd3VFBnb0lERWVFeFVsNV9HYzJLM09GeUhaamdRQzZKeTJGOFFVeEJvbWRHWFphVTN4Z0xBWVZQNTF5aUlqY0wyRndOaG5La3BwZU1zRGdOV2lDWlZIV0RZazBfcktFaTJNYjhjSVB4cHFnMXFHSXhxZ2c1Rk1jOERoVUlyNQ?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier résidentiel | Le marché de Québec inquiète les experts  La Presse",
+      "title": "Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre",
+      "link": "https://apciq.ca/stats-2e-trimestre-2026/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 14 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur",
+      "link": "https://apciq.ca/marche-immobilier-la-rmr-de-montreal-poursuit-son-ralentissement-graduel-alors-que-quebec-maintient-sa-vigueur/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 3 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de juin 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur est apparu en premier sur APCIQ - Site web.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés",
+      "link": "https://apciq.ca/rmr-de-quebec-les-ventes-a-un-sommet-en-mai-grace-a-la-remontee-de-loffre-de-proprietes/",
+      "source": "APCIQ",
+      "description": "Québec, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue",
+      "link": "https://apciq.ca/rmr-de-montreal-la-baisse-graduelle-des-ventes-se-poursuit-et-la-pression-sur-les-prix-sattenue/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue est apparu en premier sur APCIQ - Site web.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché",
+      "link": "https://apciq.ca/stats-quebec-avril-26/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
+      "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est apparu en premier sur APCIQ - Site web.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026",
+      "link": "https://apciq.ca/ventes-residentielles-stabilisation-des-ventes-mais-prix-toujours-sous-pression-au-1er-trimestre-de-2026/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026 est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville",
+      "link": "https://apciq.ca/des-marches-toujours-sous-pression-au-debut-de-2026-dans-les-rmr-de-sherbrooke-trois-rivieres-et-drummondville/",
+      "source": "APCIQ",
+      "description": "Le 15 avril 2026 — La Chambre immobilière Estrie — Mauricie — Centre-du-Québec (CIEMCQ) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent aujourd’hui les statistiques immobilières du premier trimestre de 2026 pour les régions métropolitaines de recensement (RMR) de Sherbrooke, Trois-Rivières et Drummondville. Les données sont tirées de la base provinciale Centris des courtiers immobiliers.\nL’article Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Wall Street en hausse",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-08-13/wall-street-en-hausse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Bourse de New York évolue dans le vert jeudi, profitant des dernières données sur l’inflation aux États-Unis, qui allègent les attentes quant à de futures hausses de taux de la Réserve fédérale (Fed).",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Twitch va utiliser le contenu des streameurs pour entraîner l’IA générative d’Amazon",
+      "link": "https://www.lapresse.ca/affaires/techno/2026-08-13/twitch-va-utiliser-le-contenu-des-streameurs-pour-entrainer-l-ia-generative-d-amazon.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Twitch va utiliser le contenu diffusé par les streameurs sur ses chaînes pour entraîner les modèles d’intelligence artificielle générative de sa maison mère Amazon, a indiqué mercredi la plateforme, suscitant un flot de critiques de la part de nombreux utilisateurs.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Crédit d’impôt provincial | Est-on trop généreux avec Ubisoft et les studios de jeu vidéo ?",
+      "link": "https://www.lapresse.ca/affaires/chroniques/2026-08-13/credit-d-impot-provincial/est-on-trop-genereux-avec-ubisoft-et-les-studios-de-jeu-video.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Il y a deux ans, le gouvernement Legault a réduit (un peu) le généreux crédit d’impôt pour l’industrie du jeu vidéo et du multimédia.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Réglementer la location de courte durée permettrait de freiner la hausse des loyers",
+      "link": "https://www.ledevoir.com/economie/1001525/reglementer-location-courte-duree-permet-freiner-hausse-loyers-selon-etude",
+      "source": "Le Devoir",
+      "description": "C’est ce que constate une récente étude menée par des chercheurs de l’Université McGill.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’AIE abaisse encore ses prévisions d’offre et de demande de pétrole pour 2026",
+      "link": "https://www.ledevoir.com/economie/1001351/aie-abaisse-encore-previsions-offre-demande-petrole-2026",
+      "source": "Le Devoir",
+      "description": "Le monde s’enfonce dans un marché pétrolier déficitaire, entre la fermeture du détroit d’Ormuz et la guerre en Ukraine.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation aux États-Unis a légèrement ralenti en juillet",
+      "link": "https://www.ledevoir.com/economie/1001345/inflation-etats-unis-legerement-ralenti-juillet",
+      "source": "Le Devoir",
+      "description": "Grâce à une pause dans le conflit au Moyen-Orient, l’indice des prix à la consommation s’est établi à 3,4% sur un an.",
       "cities": [],
       "category": "general"
     },
@@ -75,28 +161,18 @@
       "category": "general"
     },
     {
-      "title": "Surchauffe du marché immobilier | Après Montréal, au tour de Québec? - 98.5 Montréal",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5xbm1NaWNiZklfY1pTUnBSYVVEcFg3S1k1UkI4cFBnYTZVVFRobnNzbFFwMU9nam51Q0pXQWxVSGFSVE1pc2pKbHpNaTFXeXZmV1g3VG5hTXM0UXJqSy14Uk9teFJtaUo2YjAyVm5pRFozNmNK?oc=5",
+      "title": "Analyse du marché immobilier | Le marché immbolier de Québec connaît «désormais peu de surenchère - FM93",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOEhsVS03Q3J1djU3bHVCcG43aG5DYXZ6R25qQUlVU0doUTN5akgzY250b0M0b2h1VWNmdktPdTgwYUZMOHZQMVQzZEhsOUN1eDBIM2J2U3JlOVV2bnpuQlZRLWhpLXI3aDZ1LUFkYUoxb1Q0QWxmVFF5Sjk3VkxkdGFab2w3ekpOeHFoWHhDVktDX19WSWVvUUJwREZMXzBD?oc=5",
       "source": "news.google.com",
-      "description": "Surchauffe du marché immobilier | Après Montréal, au tour de Québec?  98.5 Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Analyse du marché immobilier | Le marché immbolier de Québec connaît «désormais peu de surenchère  FM93",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Marché immobilier de la région de Québec — Juillet 2026 - metroquebec.com",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPeEhid0RFaWhTakREMVVxWmdOUVR3UTFnWFpvZ3pYVU41OFoweVk4dE91em5TS01GcWNwelZ6Mm1ucWxtcWVEQkJhUUhMNFJFVmJSTmlfSWMzYlctS3pwc0V3SDJfWFMzRjE0NndBSTBzNUNnZHNUVXk3RlkzeUtHdGVNaGl4YS1GLUtDSzgxSFJ0MUJEWFFIb1VZT2VmTFdSYXhoY3pYY0pMQ0VnMHhraWVsZkhzY2VxV3NiamJ4TdIBxAFBVV95cUxPZm5sczhpUG52cmhxQjFrcWFvNlBNYnYxdjk0ZzhPTFdTRmV2Z2tQbC1HSDJmZGR2dlFaZnlmUlBGN2hnOGZ0dW5GbUliN3RnR0V5T0hWS04yRTJLSkl2cXZ6SHlHS0pJajBucERGV1dxLTlkbkNWb3BZMmFPTGpybU1ZLUhIenRxYlBXZkJOZkEtV2RWdHB5Z0pTOEJMMld0RHhLTFpiVG1RaUI2NmM4ekNkQzZval9GWEVSOHBZTVdkRzhN?oc=5",
       "source": "news.google.com",
       "description": "Marché immobilier de la région de Québec — Juillet 2026  metroquebec.com",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Analyse du marché immobilier | Le marché immbolier de Québec connaît «désormais peu de surenchère - FM93",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOEhsVS03Q3J1djU3bHVCcG43aG5DYXZ6R25qQUlVU0doUTN5akgzY250b0M0b2h1VWNmdktPdTgwYUZMOHZQMVQzZEhsOUN1eDBIM2J2U3JlOVV2bnpuQlZRLWhpLXI3aDZ1LUFkYUoxb1Q0QWxmVFF5Sjk3VkxkdGFab2w3ekpOeHFoWHhDVktDX19WSWVvUUJwREZMXzBD?oc=5",
-      "source": "news.google.com",
-      "description": "Analyse du marché immobilier | Le marché immbolier de Québec connaît «désormais peu de surenchère  FM93",
       "cities": [],
       "category": "general"
     },
@@ -109,12 +185,30 @@
       "category": "general"
     },
     {
-      "title": "Analyse | Les coûts liés à l'achat d'une première maison que les acheteurs sous-estiment toujours - noovo.info",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOSG9adEJKaW0yUHBNaXFSTllKWDB5QnZYcklLMUFSSUxuTEFKMkpWTUN1MW93b2tkbjFIdVdiOU5oYkJOXzV3RUNkYlg4ZzlaLWx5bGJackkzbjM2bFR5QWI3LUd3VlZmazZqaURJV3QteC13S2xOTGlwaURIYjFIT2Q1dU5kTTZQTlhLVFFDaHQ2a25qU0d4Yy1XQjcwdFlPeWxoSzZsclBTcEhRLTFmWTFCQU93Z3RZSEtoejBBVTY5RWRsTGc2QlJkOFlVSm5QUmc?oc=5",
+      "title": "Projet de résolution C.M. 2026-1751-00 autorisant la construction d’un projet immobilier de 4 étages comprenant jusqu’à 36 logements – Zone C1799 – Lots 1 799 666 et 1 799 485 du cadastre du Québec – boulevard Bourque - Ville de Sherbrooke",
+      "link": "https://news.google.com/rss/articles/CBMimANBVV95cUxQamdXSWlJY2lRYzIxU0pWcnBFdXpJdXJPSnNnSWUwSm1LZHhONHM2ZFpMNENVNk1LTTdrazEwcnhLZndPYk1VZ2J0TFNLLW9xZ0Fzd3dDaEhTQUxaYllPSm52cFltMWU1TEc5LW9ycUR6d25mN05qSENMdDVhY2IyQVJNa1lmTThvZHFXTW1vYmtVd05ObXEzV3pTZkxFZjMzeEgycTkyYU1JSFNSYlRrQnExT1FoMU1FemdjMy1JU3hYc2FfdnV6LU0xWHlJblVNbjFfeFJOOVVyRjJ3YWNVNU1uZjcxY29ya0tUSUpMcmtrVVhNTnFlR21HdU1fUGZfamJmR2pUXzZ1d2xodlhEQjJiTDR1c1dndnUxN0tGN0RlbkFUVFlNcm1nLTNpWWhMZ0VJai1DMkVSbmJla05ablpOYWhQLW9zR1lvN3Jya2N4eXR4dHJMMTRaT1M0eFRKdkF5M25yTC0wLUFqeTNNMWtmMC1pSmlIN0RYT25aM3diUUxDbUY4a08tcnc5WlNqRUF4bWsxdDY?oc=5",
       "source": "news.google.com",
-      "description": "Analyse | Les coûts liés à l'achat d'une première maison que les acheteurs sous-estiment toujours  noovo.info",
+      "description": "Projet de résolution C.M. 2026-1751-00 autorisant la construction d’un projet immobilier de 4 étages comprenant jusqu’à 36 logements – Zone C1799 – Lots 1 799 666 et 1 799 485 du cadastre du Québec – boulevard Bourque  Ville de Sherbrooke",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
+      "source": "news.google.com",
+      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Voici le salaire qu’il te faut pour te payer une maison dans le Grand Montréal en ce moment - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE91c3RxTTNxWE00MnozMFZPWkp4dDd5bGJCMUdCb3Bfc04xUlozT2lGMUdYdG5DUTd3VnFycUdLX3hTbDFvVVk2S2thTWZLVUdtc3ZZVWVUR2paVU9haEs5Y2ctY2lhUnN1WUtKcUZUbk51b3ltcW9kTGJyWHhVU3c?oc=5",
+      "source": "news.google.com",
+      "description": "Voici le salaire qu’il te faut pour te payer une maison dans le Grand Montréal en ce moment  Narcity",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "\"Immobilier : après la surchauffe, un retour au calme à Québec?\" - Radio-Canada",
@@ -145,6 +239,14 @@
       "category": "local"
     },
     {
+      "title": "Marché immobilier périphérie nord de Québec — Juillet 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQWEVYM09mUmZFY0IzQ3c1dHFhX0pON2wwZExQMUV0eU02d0VFWWd1YWstVFpKUkRyV085bXFKZXJWcmI0NGpMbDNZT19HdjF5QTNfbThiNktkaldlcVVBV1NaUWJCdndFUkZpWmpTWlhqZFNGVUtueWs2a0c4dzBEc0YwTE91SFdUQWZfbWhaeTNVbnJ6Qm1kbFo2TGMzQVo2SkdvZzdEbFUwYm1vNUJycUVWeWlNRWhUdlVtWVVDNk9sWnBDNWc?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier périphérie nord de Québec — Juillet 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Marché immobilier de la Rive-Sud de Montréal — Juillet 2026 - Journal Métro",
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQUzNxbXJ6V3hLcUt5SEZTb0xxSmE2SnNPSmlDZXRyQXBvVWRHbjhncV9UcVIyUWl5blV5RHFqdmtvVnBHZlhRN1p1YkluMk9qUzdvNEZjdUphVFJVLUFTYkRsRVRSMWZuWmNMZGh1RUl5OHN5MmhMY2tURE5jSkg4bWN5QWhTTS1kWE9PdDdBWERnN3Q2dk1HRWFQVzZEZXdjZGNqc1AwWm9NeVVBVWtCUWFOQVdrNEhaRHgyRXRzTWp1aXA3TWFB?oc=5",
       "source": "news.google.com",
@@ -166,40 +268,22 @@
       "category": "local"
     },
     {
-      "title": "Marché immobilier périphérie nord de Québec — Juillet 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQWEVYM09mUmZFY0IzQ3c1dHFhX0pON2wwZExQMUV0eU02d0VFWWd1YWstVFpKUkRyV085bXFKZXJWcmI0NGpMbDNZT19HdjF5QTNfbThiNktkaldlcVVBV1NaUWJCdndFUkZpWmpTWlhqZFNGVUtueWs2a0c4dzBEc0YwTE91SFdUQWZfbWhaeTNVbnJ6Qm1kbFo2TGMzQVo2SkdvZzdEbFUwYm1vNUJycUVWeWlNRWhUdlVtWVVDNk9sWnBDNWc?oc=5",
+      "title": "Marché immobilier de Laval — Juillet 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEdJMEp6dEhZNUVDYlZPUURmWC1idEZseUZxN2otcVVOVTNPanZNVTlJUnA1R2VoZVJGQWN5SW04VlJtYTgyY1phU2dINjUzb21iRWp2ZHllblFTNkMySDJ4MV91QjByV3JrWkgyQklMWmV3NEVWeFFyTDNuSGQ0d3ozdHh0YzFvVS1nWk5LVTU0N3lTZXhSd29VSGxacXQ5aXpEUWZrM0Y3WDkzS0hn?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier périphérie nord de Québec — Juillet 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "news.google.com",
-      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Voici le salaire qu’il te faut pour te payer une maison dans le Grand Montréal en ce moment - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE91c3RxTTNxWE00MnozMFZPWkp4dDd5bGJCMUdCb3Bfc04xUlozT2lGMUdYdG5DUTd3VnFycUdLX3hTbDFvVVk2S2thTWZLVUdtc3ZZVWVUR2paVU9haEs5Y2ctY2lhUnN1WUtKcUZUbk51b3ltcW9kTGJyWHhVU3c?oc=5",
-      "source": "news.google.com",
-      "description": "Voici le salaire qu’il te faut pour te payer une maison dans le Grand Montréal en ce moment  Narcity",
+      "description": "Marché immobilier de Laval — Juillet 2026  Journal Métro",
       "cities": [
-        "montreal"
+        "laval"
       ],
       "category": "local"
     },
     {
-      "title": "Ce complexe de condos à Montréal donne l'impression de vivre dans les tropiques à l'année - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaVdtUm1mVVRBTTU1QXhmbmxtZXFMbGJtdVZKOTd0MFdrSktTNC1sNUZubmp5bXRtaEEya3ktN1pqanFrbzRWQWhSaHdWY3k2a1NNLTdIbEJGNTBSc05hcnhtRlFKS2U3MmhEWlZ3TnJ4WXpLNExfTWhCd1FjRElUOVVWTQ?oc=5",
+      "title": "Crise du logement : les restrictions pour la location de courte durée freinent la hausse des loyers - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQSmtsay1palJSdGYzcHA5VS1GVWExcHRUa3doV0o0MXU4R053cjBSMTZxU1FGeS1qLUhZMWxrNGJxcnZJdUlfV1U3bzE4TnFwR3NHaTU1Z1RnVVg3c2ZtbTNvUlBzbVJhQjVWTVMtTTQzMFNmcDlDcnBzY2FiODZ3dzNKRUFEa0twNEVvRzFsNDByRmREdGIwSHVnc2VtVzN4NVpxMzNFRUpocEREbUtFcmJLbm40UnRjMlNraWM5RWw4UmVDSEExZElfZkVxQTNYYk5SWGtRbjg?oc=5",
       "source": "news.google.com",
-      "description": "Ce complexe de condos à Montréal donne l'impression de vivre dans les tropiques à l'année  Narcity",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Crise du logement : les restrictions pour la location de courte durée freinent la hausse des loyers  Journal de Québec",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Immobilier au Québec : acheter devient-il enfin plus abordable en 2026 ? - Le Revenu",
@@ -210,10 +294,10 @@
       "category": "general"
     },
     {
-      "title": "Guy Laliberté vend la Maison Alcan à Groupe Mach pour 93 M$ - journaldemontreal.com",
+      "title": "Guy Laliberté vend la Maison Alcan à Groupe Mach pour 93 M$ - Le Journal de Montréal",
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcUx4Z1k4VzFTb3VoeVVGZ3pCRloycGJIV0dfU2dneW1BQm5KcV91QzE5MEczVTM4V2FBVktLNEsybTQ3Mldic3lMaUllVTZZdFJLTWJieGNNNkVBRTB0Tm9lcDVqaktTUUw5SFduNmpYd1R5X0xHYVZHTXprc1F3TndJc0ZqTkQ5bDVmVW11Y01RMW9iTHlwT3I1eFhzN3NGaE4tQTVR?oc=5",
       "source": "news.google.com",
-      "description": "Guy Laliberté vend la Maison Alcan à Groupe Mach pour 93 M$  journaldemontreal.com",
+      "description": "Guy Laliberté vend la Maison Alcan à Groupe Mach pour 93 M$  Le Journal de Montréal",
       "cities": [
         "montreal"
       ],
@@ -228,10 +312,10 @@
       "category": "general"
     },
     {
-      "title": "L’emploi a bondi en juillet, mais la Banque du Canada devrait maintenir ses taux inchangés - Morningstar",
+      "title": "L’emploi a bondi en juillet, mais la Banque du Canada devrait maintenir ses taux inchangés - global.morningstar.com",
       "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQZUpqZ013bDhVaGZPcWJkMlFDenM4bHdmQnYtTlFPcWlyU1hENjlXd2xWV3ctU05qdUJIM0lRUkNqVlJnc2FMcnlfSU5aNC1tNEJRTlJVRHRlR0laSXNHeHRYU3h6WDBXZ0NnYlI5MHd6WHhmaUhONmJpOUFlcjN5TGxVQkFmWi11Wnc4UEx1T0Q5RmFNX0N1SnZxMHdBaE9DUnpxa1Jla0dPYV95WHpKRFRMVU9tQmhCc1l5VlhLNFM5dW5HU01NOWVVZw?oc=5",
       "source": "news.google.com",
-      "description": "L’emploi a bondi en juillet, mais la Banque du Canada devrait maintenir ses taux inchangés  Morningstar",
+      "description": "L’emploi a bondi en juillet, mais la Banque du Canada devrait maintenir ses taux inchangés  global.morningstar.com",
       "cities": [],
       "category": "general"
     },
@@ -252,18 +336,18 @@
       "category": "general"
     },
     {
-      "title": "Un ancien directeur général de la SCHL présidera Maisons Canada - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbzdsRHN1UW4zMjd2cWZqQlNlWG1CZW1odzQ3WkFEM0NrNldtbEtvd01UUzc5WHZfczliWUswUzN6VGdHelBVSklnYzFnTHJ6QXhOTUFXWEw2dk80OEViZVBtdi1EMHA4cnc4Mk56bTd1YjFTWVVKUEdMdWEwS1p6R3VCOTRWa184bjhfQlN6U2VZZldUNFRCLXBMN0h3NUNmSFlvSnE5dVdYc1NmRWhoTQ?oc=5",
-      "source": "news.google.com",
-      "description": "Un ancien directeur général de la SCHL présidera Maisons Canada  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le PMI Ivey du Canada recule en juillet, alimentant les paris sur une Banque du Canada plus accommodante et pesant sur le dollar canadien - VT Markets",
       "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOS1lmOWpvOFotZ2RtZlF1REhtajc1Rm1YcUtONjVWOFRiUzR5RnJXRVZJanoxMXlEanRpS1hCYkFqN2ZJZ3UwdEctVFgwY1hkbjRXdUZoMkhBRENWa2VnX1kwUWlqcDZuR1dkT0VKN3hPc1R3MFExa2hzYjZIeDlBRDd1LTVvOERKMHd6Q1FFQzl2WUFVTGdFYmhqSHJCTmJOMUNpdlZ6V21XejBENC1YSERzMGNYTTBHR0dIYVNrZ1I5UUNSWGt6dUdhb3RpaC1iMGw0MTIybzJ6Tk56OXdSeGRTNHFnOFpsempTeDRKTXRZVjZOZWNZeGxIOW9MQUNEcWd1bXVIMzR4aHRTN0NJNjh2OA?oc=5",
       "source": "news.google.com",
       "description": "Le PMI Ivey du Canada recule en juillet, alimentant les paris sur une Banque du Canada plus accommodante et pesant sur le dollar canadien  VT Markets",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Un ancien directeur général de la SCHL présidera Maisons Canada - canadafrancais.com",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNzlNdkEtb3hqMjdMLXIzeUxtTGpHNklpemU2Y2FhNzB6UUNJTGV0QWFzQTlzV1F2UU9JbGFmZjJ2MHVTN1pGR0lSX19uQnNyOFdTSG5TRzRCMHZab1hYeVlIUFlReGMzU0trSXVmVno0UjROLS1uaWVmcXljdDYyUnNqYm0wQ29JNjV6Wm1jeDRtWWF3QVhqZXdST3ZtbGdsOXdSMU5ZV3c3N3U0THlRRnJYa0FZNkU?oc=5",
+      "source": "news.google.com",
+      "description": "Un ancien directeur général de la SCHL présidera Maisons Canada  canadafrancais.com",
       "cities": [],
       "category": "general"
     },
@@ -276,10 +360,10 @@
       "category": "general"
     },
     {
-      "title": "Canada: le taux de chômage poursuit sa baisse en juillet, à 6,4% - fr.tradingview.com",
+      "title": "Canada: le taux de chômage poursuit sa baisse en juillet, à 6,4% - TradingView",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBtTk92d3RyS2liZS00a21XdUtaaDBwN2xmMFB4dXdnNzFQSGo1bjZSSjdfckRZbnEyNGZ0cVF3U202WHM0YUpFOV92MXRQSFkzcS1fc2t6b1FRZVFRSk83NnVB?oc=5",
       "source": "news.google.com",
-      "description": "Canada: le taux de chômage poursuit sa baisse en juillet, à 6,4%  fr.tradingview.com",
+      "description": "Canada: le taux de chômage poursuit sa baisse en juillet, à 6,4%  TradingView",
       "cities": [],
       "category": "general"
     },
@@ -300,10 +384,10 @@
       "category": "general"
     },
     {
-      "title": "Bills Camp Preview: D.J. Moore Bank Of Canada - Banque Du Canada (ixoGifBQyf) - Mshale",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBUY0lrbzRjVzRKRGxFdUhTTGp4bWd4SngwSXdEMnlnQVp4VkNJa1lMRmNmWllkN0dYWXptMFBjNU9MX0JOdkJDdlhsdV9HZ3hDb2dNQWt0aElIQzQ?oc=5",
-      "source": "ixoGifBQyf",
-      "description": "Bills Camp Preview: D.J. Moore Bank Of Canada - Banque Du Canada (ixoGifBQyf)  Mshale",
+      "title": "Motokáry Bank Of Canada - Banque Du Canada (HFU9FyN1iQ) - Mshale",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBIVy1iUFRnMmxEbEFOWG9kM204R0wyVFB3WXhEdEhkV0RNRWVwWEVVNVZVeVRfTnAxSGxHYTFJa2EtSU5lVXUxNWo1S0pNNU10Y3dELV81QVd2Smc?oc=5",
+      "source": "HFU9FyN1iQ",
+      "description": "Motokáry Bank Of Canada - Banque Du Canada (HFU9FyN1iQ)  Mshale",
       "cities": [],
       "category": "general"
     }
@@ -358,7 +442,7 @@
       "days": "42",
       "condition": "Vendeurs"
     },
-    "last_quarter": "Avril 2026"
+    "last_quarter": "juillet 2026"
   },
-  "last_update": "2026-08-12 14:19"
+  "last_update": "2026-08-13 14:22"
 }
