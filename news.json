@@ -89,10 +89,28 @@
       "category": "general"
     },
     {
-      "title": "Produits laitiers | La fin du cheddar doux de Maison Riviera",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-08-15/produits-laitiers/la-fin-du-cheddar-doux-de-maison-riviera.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Univers PME | Résidences privées pour aînés : les groupes HD et Patrimoine s’allient à Montréal",
+      "link": "https://www.lapresse.ca/affaires/pme/2026-08-17/univers-pme/residences-privees-pour-aines-les-groupes-hd-et-patrimoine-s-allient-a-montreal.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Après son passage aux mains de la coopérative française Alsace Lait, que reste-t-il de la Laiterie Chalifoux, connue pour sa marque Maison Riviera ? L’an dernier, l’entreprise a cessé de produire son lait et son célèbre fromage en grains. C’est maintenant au tour du cheddar doux de passer à la trappe.",
+      "description": "Ouvrez l’œil : de nouvelles résidences privées pour aînés devraient voir le jour dans le Grand Montréal, sous la direction du promoteur immobilier Groupe HD et de l’expert de ce type de milieux de vie Groupe Patrimoine. D’importants projets sont déjà en planification dans le cadre de ce partenariat stratégique annoncé lundi.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Canada | Les prix de l’essence ont fait monter l’inflation à 3 % en juillet",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-08-17/canada/les-prix-de-l-essence-ont-fait-monter-l-inflation-a-3-en-juillet.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "L’inflation s’est établie à 3 % en juillet au pays, selon Statistique Canada, en hausse par rapport à 2,8 % en juin, notamment en raison de l’augmentation des prix de l’essence.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation s’est établie à 3,0 % en juillet au Canada",
+      "link": "https://www.ledevoir.com/economie/1002188/inflation-est-etablie-3-0-juillet-canada",
+      "source": "Le Devoir",
+      "description": "Les consommateurs ont été touchés par la hausse des prix à la pompe.",
       "cities": [],
       "category": "general"
     },
@@ -105,34 +123,18 @@
       "category": "general"
     },
     {
-      "title": "Immobilier : après la surchauffe, un retour au calme à Québec? - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTVl6NDJQcTJNNkc0YXRGLWNJMVROcU5rbjV3c053OXM5ZGN1dDFIWnoxZ2FiUGtFMEtqWERJZnRqVlVaRGVRaHZrUVh3bm9jS3YtVWFNcWpiNzdKRzVNN0dPTl93ZGozVUVmckt4OFpHSXpOOXVYSDZDUFlFTU5GUm44S3ZNY1RNY3JyV1l3?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier : après la surchauffe, un retour au calme à Québec?  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Projet de résolution C.M. 2026-1751-00 autorisant la construction d’un projet immobilier de 4 étages comprenant jusqu’à 36 logements – Zone C1799 – Lots 1 799 666 et 1 799 485 du cadastre du Québec – boulevard Bourque - Ville de Sherbrooke",
+      "title": "Projet de résolution C.M. 2026-1751-00 autorisant la construction d’un projet immobilier de 4 étages comprenant jusqu’à 36 logements – Zone C1799 – Lots 1 799 666 et 1 799 485 du cadastre du Québec – boulevard Bourque - sherbrooke.ca",
       "link": "https://news.google.com/rss/articles/CBMimANBVV95cUxQamdXSWlJY2lRYzIxU0pWcnBFdXpJdXJPSnNnSWUwSm1LZHhONHM2ZFpMNENVNk1LTTdrazEwcnhLZndPYk1VZ2J0TFNLLW9xZ0Fzd3dDaEhTQUxaYllPSm52cFltMWU1TEc5LW9ycUR6d25mN05qSENMdDVhY2IyQVJNa1lmTThvZHFXTW1vYmtVd05ObXEzV3pTZkxFZjMzeEgycTkyYU1JSFNSYlRrQnExT1FoMU1FemdjMy1JU3hYc2FfdnV6LU0xWHlJblVNbjFfeFJOOVVyRjJ3YWNVNU1uZjcxY29ya0tUSUpMcmtrVVhNTnFlR21HdU1fUGZfamJmR2pUXzZ1d2xodlhEQjJiTDR1c1dndnUxN0tGN0RlbkFUVFlNcm1nLTNpWWhMZ0VJai1DMkVSbmJla05ablpOYWhQLW9zR1lvN3Jya2N4eXR4dHJMMTRaT1M0eFRKdkF5M25yTC0wLUFqeTNNMWtmMC1pSmlIN0RYT25aM3diUUxDbUY4a08tcnc5WlNqRUF4bWsxdDY?oc=5",
       "source": "news.google.com",
-      "description": "Projet de résolution C.M. 2026-1751-00 autorisant la construction d’un projet immobilier de 4 étages comprenant jusqu’à 36 logements – Zone C1799 – Lots 1 799 666 et 1 799 485 du cadastre du Québec – boulevard Bourque  Ville de Sherbrooke",
+      "description": "Projet de résolution C.M. 2026-1751-00 autorisant la construction d’un projet immobilier de 4 étages comprenant jusqu’à 36 logements – Zone C1799 – Lots 1 799 666 et 1 799 485 du cadastre du Québec – boulevard Bourque  sherbrooke.ca",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "\"Immobilier : après la surchauffe, un retour au calme à Québec?\" - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWXBZd3VvZGJTNE5tZ0JBb2dndTZlb2ZmUy1reU5hTFlXeWNOTUpzSWpOdWJLS0RXb2RFbExKeHkzWTNkd3FFeFZXU3pmS2ZDaWR6eVNieTRNWDlOWkZTMHNMWmpJREhMN2F2RUtXal9uWkhnbm16WHZ2b3JlZU5xVVJCd1pWNU0tVlVUUmRtanpxdlJ2NjlyNHBuLTRqY1RUNUNpV3pKZVoweHZ1SzIxazN5VDNTTnhUWUtENFduS01GNTF0UE9pTVJEMA?oc=5",
+      "title": "Plus de maisons à vendre, mais elles sont plus chères - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5aY3BZblIwcFpLNTNjcjVrS3hmdlQ5b3dVU0hrbklnbTRPSWd2V3lkdU5ralh2Y011MmM2VnBIZVFPakFpTHRHT0hUOERocU95QXJVNVFRak13ZmswS1dvV1dNb1drUFRxRzR4MmJUVFgxLXRaa3c4MQ?oc=5",
       "source": "news.google.com",
-      "description": "\"Immobilier : après la surchauffe, un retour au calme à Québec?\"  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Immobilier au Québec : acheter devient-il enfin plus abordable en 2026 ? - Le Revenu",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZHJzYWhwRTZnU085ako5VWVzQ3UyTzRQS3gwTGJoNWRRX0dJb1JySHdaUm1rU2pjdU4yN3RTTUEzbkJfb2I0a0pUTGlKY3NHU2dLS0ZDclAtTjdJS1BuMXoxRlR2NVRBbnlpWnNYUWJwSnphcFVhcVB6YmxOUFFsT3Z3X1dTcDJDd2R2eEIzQTJFUXBKd0dpWEVOLXRuYXJVY1VPTU43REhuR2tsVUR1Q29taTk?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier au Québec : acheter devient-il enfin plus abordable en 2026 ?  Le Revenu",
+      "description": "Plus de maisons à vendre, mais elles sont plus chères  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -163,6 +165,16 @@
       "category": "local"
     },
     {
+      "title": "La Maison de Radio-Canada est américaine! - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNWJZNkI0VlhIam9HZFBFM2ZiNVZMVWlyTUljWUgzVFlrUE5PSGRwWWxFdFN6X19PalVCbXJmMW94N0dXN3RNVnJIVGtXZGxvbTdfWlpJRk9JTjIxYUtfVXR1eHBYUzR1aEwyYTlRb1N3ZDBEdzZ4NUplU0d2T1RMRTh2dFpiT3ZkTTNLOHVn?oc=5",
+      "source": "news.google.com",
+      "description": "La Maison de Radio-Canada est américaine!  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
       "title": "Chantal Lacroix a vendu sa maison pour 3 250 000$ et voici les photos - Vedette Québec",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPMURuUXF4VEJFYU11VnVkOXRFLXAyOEJhMEM2bEhiX2NsU0FfN1Z4TnpxX1U5eF80QlVSeWZDQW1TUWJMd0VhNmtJTTFwQmRpQVlqTDlTdlV3ZU42VXoyZXJra29Oa2s2eGFJNEZyOURNT0RSaE1FRC16SkpoMDdIS2FNN3NYeVBXb2RNWGhZUmtja1BpeWRLWjhB?oc=5",
       "source": "news.google.com",
@@ -179,14 +191,6 @@
       "category": "general"
     },
     {
-      "title": "Le marché de l’emploi surprend en juillet - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZUxaZHFyZldvV3Uza19selJRb0d5djlkdHZLdzdVd1ZmMjRtZmsxWGxKMEF1OGZCOWtzZ0xYbWt3cG1OTmR6TnptNXVtYlpXT3AwRTQwdzJKRjVSU0dNcEdHRW1ydk53VmZVOHE3aGtJUWt0bnZhcC1mVTNtRjRmTGM3czZCZW8?oc=5",
-      "source": "news.google.com",
-      "description": "Le marché de l’emploi surprend en juillet  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "USD/CAD passe sous 1,4000 sur fond de repli du dollar américain ; les marchés surveillent l’IPC canadien et la Banque du Canada (BdC) - VT Markets",
       "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNajZRRzctX2VQejhVY3JXVl9pTDRTTzd2UFIxWkx6aDFkOXNHRDVPM3FUaGNncG1FaGhjckFnUzFDMjRFbkt6aTIyVEZ4UERqV1lFZUJqVE14eUt4azhOcXZGNDVXalVYYkN3cHhLekFRQkhwN1VMZ3ZZdzhSSm1nSEt2MGlvU1JSTGJqbmNXd21BNi01TlFHNDVZY2NERThkOHhYcXNKUlkzaUpBd0ttakZlbnVIVlc1emVrS2E5RzJWQ1hoRzJSZEpDQ3FvWHM1b3V3czRGcEpyV256WUZtLWV1U04tMk92NDV3R2djeTNuaUxmWmp0WXBmUVlwQlFJNFdzamFOYw?oc=5",
       "source": "BdC",
@@ -199,14 +203,6 @@
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNzlNdkEtb3hqMjdMLXIzeUxtTGpHNklpemU2Y2FhNzB6UUNJTGV0QWFzQTlzV1F2UU9JbGFmZjJ2MHVTN1pGR0lSX19uQnNyOFdTSG5TRzRCMHZab1hYeVlIUFlReGMzU0trSXVmVno0UjROLS1uaWVmcXljdDYyUnNqYm0wQ29JNjV6Wm1jeDRtWWF3QVhqZXdST3ZtbGdsOXdSMU5ZV3c3N3U0THlRRnJYa0FZNkU?oc=5",
       "source": "news.google.com",
       "description": "Un ancien directeur général de la SCHL présidera Maisons Canada  Le Canada Français",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada devrait opter pour le statu quo en septembre malgré la surprise sur le front de l'emploi en juillet, selon la TD - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNdzhlM21tdjEzQ2NyLUFqcFdXMC1vVGtWcGF0UmpSLTRXZC1NQlBYZDV2WjhCYmJaMmJGeE5hTnpuUldMWTNDVG9BbV96QmV4clRBMzhiZG5xX1dTV1FWaDdGWHFPbFVyQkFLbk5aZUtFaVZVNGhma2UwU0Y0cy1ZSjVKN2VpZjdReXR1a18xZzgyNU5tM3NpV3RIRlZnMlg5M0RPWXQ4cUI3VFlTaUotci1hZDY0MkJQdDFrVllCTXRORWlXNFJlODBFTFdmSTY0eFNVUlJwOTZUaVZwVEpJd3R0NnJaQmk3UWstT0Y2WF8zZw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada devrait opter pour le statu quo en septembre malgré la surprise sur le front de l'emploi en juillet, selon la TD  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -235,18 +231,18 @@
       "category": "general"
     },
     {
-      "title": "Motokáry Bank Of Canada - Banque Du Canada (HFU9FyN1iQ) - mshale.com",
+      "title": "Motokáry Bank Of Canada - Banque Du Canada (HFU9FyN1iQ) - Mshale",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9nZVRXZWpJUzhoaWZ3a1pNTmdBWlpEME9LcUtXWmJhOGpkeGJtZEx3cm9Wb3FwR3pWeThwTUEzYmh5aTI4aGtIZW9FM2xoczRhMlBSeXJEZUhhXzYyeUhYcA?oc=5",
       "source": "HFU9FyN1iQ",
-      "description": "Motokáry Bank Of Canada - Banque Du Canada (HFU9FyN1iQ)  mshale.com",
+      "description": "Motokáry Bank Of Canada - Banque Du Canada (HFU9FyN1iQ)  Mshale",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Las Erradas De Higuain En Las 3 Finales Bank Of Canada - Banque Du Canada (uYGfxNQET8) - mshale.com",
+      "title": "Las Erradas De Higuain En Las 3 Finales Bank Of Canada - Banque Du Canada (uYGfxNQET8) - Mshale",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9NZmN0cU5WNTE5WHd3U1JGcV9sZUhOUEhyc29DSWhjTFU1cXpiLW9XdE81MU5lcnN1cWgwaVlMSWNISWZPOHgxdDBKdzY4NVRjci1QbG9KUmx1TVdYR18xXw?oc=5",
       "source": "uYGfxNQET8",
-      "description": "Las Erradas De Higuain En Las 3 Finales Bank Of Canada - Banque Du Canada (uYGfxNQET8)  mshale.com",
+      "description": "Las Erradas De Higuain En Las 3 Finales Bank Of Canada - Banque Du Canada (uYGfxNQET8)  Mshale",
       "cities": [],
       "category": "general"
     }
@@ -303,5 +299,5 @@
     },
     "last_quarter": "juillet 2026"
   },
-  "last_update": "2026-08-16 13:28"
+  "last_update": "2026-08-17 13:38"
 }
