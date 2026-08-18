@@ -89,20 +89,60 @@
       "category": "general"
     },
     {
-      "title": "Univers PME | Résidences privées pour aînés : les groupes HD et Patrimoine s’allient à Montréal",
-      "link": "https://www.lapresse.ca/affaires/pme/2026-08-17/univers-pme/residences-privees-pour-aines-les-groupes-hd-et-patrimoine-s-allient-a-montreal.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Par rapport à l’an dernier | Les ventes résidentielles ont baissé de 5,3 % en juillet",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-08-18/par-rapport-a-l-an-dernier/les-ventes-residentielles-ont-baisse-de-5-3-en-juillet.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Ouvrez l’œil : de nouvelles résidences privées pour aînés devraient voir le jour dans le Grand Montréal, sous la direction du promoteur immobilier Groupe HD et de l’expert de ce type de milieux de vie Groupe Patrimoine. D’importants projets sont déjà en planification dans le cadre de ce partenariat stratégique annoncé lundi.",
+      "description": "L’Association canadienne de l’immobilier (ACI) indique que les ventes résidentielles ont reculé en juillet par rapport au même mois l’an dernier, mais qu’elles ont légèrement progressé par rapport au mois de juin.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Sous pression judiciaire et législative | OpenAI encadre l’usage de ChatGPT par les adolescents",
+      "link": "https://www.lapresse.ca/affaires/techno/2026-08-18/sous-pression-judiciaire-et-legislative/openai-encadre-l-usage-de-chatgpt-par-les-adolescents.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "OpenAI a commencé mardi à déployer une version de ChatGPT réservée aux adolescents, appliquée par défaut aux 13-17 ans avec des garde-fous renforcés, un an après une première plainte accusant l’assistant IA d’avoir contribué au suicide d’un jeune Américain.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Investissements | La Caisse mise sur SpaceX et Microsoft",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-08-18/investissements/la-caisse-mise-sur-spacex-et-microsoft.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Caisse dévoile une première participation dans SpaceX et révèle avoir augmenté de 22 % son investissement dans Microsoft au deuxième trimestre, portant à près de 3 milliards US la valeur de son placement dans l’entreprise cofondée par Bill Gates.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Grande entrevue | Prêt pour une nouvelle poussée de croissance chez Pratt & Whitney Canada",
+      "link": "https://www.lapresse.ca/affaires/chroniques/2026-08-18/grande-entrevue/pret-pour-une-nouvelle-poussee-de-croissance-chez-pratt-whitney-canada.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Même si Pratt & Whitney Canada va bientôt célébrer ses 100 ans d’existence et que l’entreprise a déjà fabriqué plus de 100 000 moteurs d’avion à son usine de Longueuil, le motoriste se prépare à répondre à une nouvelle poussée de croissance en raison de la forte demande anticipée et a pris les moyens pour y parvenir, explique son nouveau PDG, Satheeshkumar Kumarasingam.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux d’inoccupation des logements | 2028, point de bascule du marché locatif ?",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-08-18/taux-d-inoccupation-des-logements/2028-point-de-bascule-du-marche-locatif.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La grande région de Montréal se dirigerait rapidement vers des hausses de loyers inférieures à l’inflation. Selon la Société canadienne d’hypothèques et de logement (SCHL), le marché du logement vivra en 2028 une situation exceptionnelle, qui ne s’est pas vue depuis 30 ans, aux débuts de la popularité de l’internet. Le taux d’inoccupation des logements sera alors de 4,8 % dans la grande région de Montréal, bien au-dessus du « point d’équilibre » de 3 %.",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Canada | Les prix de l’essence ont fait monter l’inflation à 3 % en juillet",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-08-17/canada/les-prix-de-l-essence-ont-fait-monter-l-inflation-a-3-en-juillet.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Ottawa s’apprête à abroger l’obligation de vente de véhicules électriques",
+      "link": "https://www.lapresse.ca/affaires/2026-08-17/ottawa-s-apprete-a-abroger-l-obligation-de-vente-de-vehicules-electriques.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "L’inflation s’est établie à 3 % en juillet au pays, selon Statistique Canada, en hausse par rapport à 2,8 % en juin, notamment en raison de l’augmentation des prix de l’essence.",
+      "description": "Le gouvernement fédéral a pris la semaine dernière la décision d’abroger officiellement l’obligation de vente de véhicules électriques, mais les normes d’émissions plus strictes que le premier ministre Mark Carney a promis de mettre en place pour la remplacer sont loin d’être finalisées.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Ottawa s’apprête à abroger l’obligation de vente de véhicules électriques",
+      "link": "https://www.ledevoir.com/economie/1002350/ottawa-apprete-abroger-obligation-vente-vehicules-electriques",
+      "source": "Le Devoir",
+      "description": "Ces véhicules  devaient représenter au moins 20% des ventes automobiles au pays en 2026.",
       "cities": [],
       "category": "general"
     },
@@ -115,34 +155,18 @@
       "category": "general"
     },
     {
-      "title": "La hausse des prix de l’essence devrait faire grimper l’inflation en juillet",
-      "link": "https://www.ledevoir.com/economie/1001915/hausse-prix-essence-devrait-faire-grimper-inflation-juillet",
-      "source": "Le Devoir",
-      "description": "La guerre au Moyen-Orient a de fortes conséquences sur les prix à la pompe canadiens.",
+      "title": "Jose Maltos Diaz: botteur au Canada et courtier immobilier au Mexique - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZFk3bzJPdGRPZ0I1bXpwR2JpMUx5UVpHRHVKZUc4MlVaVFlyNHRnX19XTnA2U2FLeXV3by1wQkVlSnRuZlFnejRqMkNqVnlPSjdUZ0FLRDkxX3dhQjgxXzZyOU5xbWVUYkpoaUcwNnlleVJWaG1SMjFlWHhLRU5kLUNxU19nbHZqQ2JWZzliX3g0VFpRVzFiNmJTWHNNMFJOcEZvRVJlWkp4NXVSSnRGaEVn?oc=5",
+      "source": "news.google.com",
+      "description": "Jose Maltos Diaz: botteur au Canada et courtier immobilier au Mexique  Journal de Québec",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Projet de résolution C.M. 2026-1751-00 autorisant la construction d’un projet immobilier de 4 étages comprenant jusqu’à 36 logements – Zone C1799 – Lots 1 799 666 et 1 799 485 du cadastre du Québec – boulevard Bourque - sherbrooke.ca",
-      "link": "https://news.google.com/rss/articles/CBMimANBVV95cUxQamdXSWlJY2lRYzIxU0pWcnBFdXpJdXJPSnNnSWUwSm1LZHhONHM2ZFpMNENVNk1LTTdrazEwcnhLZndPYk1VZ2J0TFNLLW9xZ0Fzd3dDaEhTQUxaYllPSm52cFltMWU1TEc5LW9ycUR6d25mN05qSENMdDVhY2IyQVJNa1lmTThvZHFXTW1vYmtVd05ObXEzV3pTZkxFZjMzeEgycTkyYU1JSFNSYlRrQnExT1FoMU1FemdjMy1JU3hYc2FfdnV6LU0xWHlJblVNbjFfeFJOOVVyRjJ3YWNVNU1uZjcxY29ya0tUSUpMcmtrVVhNTnFlR21HdU1fUGZfamJmR2pUXzZ1d2xodlhEQjJiTDR1c1dndnUxN0tGN0RlbkFUVFlNcm1nLTNpWWhMZ0VJai1DMkVSbmJla05ablpOYWhQLW9zR1lvN3Jya2N4eXR4dHJMMTRaT1M0eFRKdkF5M25yTC0wLUFqeTNNMWtmMC1pSmlIN0RYT25aM3diUUxDbUY4a08tcnc5WlNqRUF4bWsxdDY?oc=5",
+      "title": "5 maisons à vendre au Québec à moins de 200 000 $ qui valent étonnamment la visite - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1BRzRRbW4zd2RIcFJOTjUtNU1KNmczbFdfYm4tRUJ2Mzlxczh0c2VPUTlZNHJjanBQa2ZkTDFJS2w4QjVLOUVhVFFhdTZMNEwxamJLLUgyNnRCalcxVTVYT3Rhb1F0ektab2JNeWpSSDNwUGc?oc=5",
       "source": "news.google.com",
-      "description": "Projet de résolution C.M. 2026-1751-00 autorisant la construction d’un projet immobilier de 4 étages comprenant jusqu’à 36 logements – Zone C1799 – Lots 1 799 666 et 1 799 485 du cadastre du Québec – boulevard Bourque  sherbrooke.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Plus de maisons à vendre, mais elles sont plus chères - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5aY3BZblIwcFpLNTNjcjVrS3hmdlQ5b3dVU0hrbklnbTRPSWd2V3lkdU5ralh2Y011MmM2VnBIZVFPakFpTHRHT0hUOERocU95QXJVNVFRak13ZmswS1dvV1dNb1drUFRxRzR4MmJUVFgxLXRaa3c4MQ?oc=5",
-      "source": "news.google.com",
-      "description": "Plus de maisons à vendre, mais elles sont plus chères  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada - Ratehub.ca",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
-      "source": "news.google.com",
-      "description": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada  Ratehub.ca",
+      "description": "5 maisons à vendre au Québec à moins de 200 000 $ qui valent étonnamment la visite  Narcity",
       "cities": [],
       "category": "general"
     },
@@ -151,6 +175,14 @@
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNekx6bGNMeG5YenpZVnZZS01EUjdaYlJLdFlZbVg3azdOcE9EcF9KMklIaUtNS2c4LTJJY0pkQW5iZzdQd3FLZnFFMUU3b1BHQjdyVEJybDkxc3VTZnd1VnhBUnFYdGt4b1RMTWRiRmJFZkVXaFlhWnhYVkcteGRURGFYTXp0dE00bkxJQkRMM3hzdnl2WEd3TS1NNzhEbkE4ckprQlVmN1VSRXJQdzBlRC16MjNQMVVDdzVHQlI1bFpuVzUzY0ZwbHlYUzBjZw?oc=5",
       "source": "news.google.com",
       "description": "Crise du logement : les restrictions pour la location de courte durée freinent la hausse des loyers  24heures.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Coup de froid sur le marché immobilier résidentiel - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTGt1dUQyR0J1VEpIS1JuTWNXNWRDOUttZHlWbjNWUlNwdDE5VFZHbFJ6cEdQSGpNSDRhdFFnS2Njb0NGa3hURFVzU2hMNld5b25mVGx5bTBYNEpQMVJNbERuc2ZtTWZ0NjZMMWZEY19rT0UwRFc1RjZ0Mjl2Wl9SUzdkWTFiZUdxLWVNbEdaTnFQT0ROQ2FFQg?oc=5",
+      "source": "news.google.com",
+      "description": "Coup de froid sur le marché immobilier résidentiel  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -165,14 +197,20 @@
       "category": "local"
     },
     {
-      "title": "La Maison de Radio-Canada est américaine! - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNWJZNkI0VlhIam9HZFBFM2ZiNVZMVWlyTUljWUgzVFlrUE5PSGRwWWxFdFN6X19PalVCbXJmMW94N0dXN3RNVnJIVGtXZGxvbTdfWlpJRk9JTjIxYUtfVXR1eHBYUzR1aEwyYTlRb1N3ZDBEdzZ4NUplU0d2T1RMRTh2dFpiT3ZkTTNLOHVn?oc=5",
+      "title": "La Maison de Radio-Canada est américaine! - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUHN0QnQ2bTIza1U2dXlWUm9LZGNPRW5hazBWcGt1VHVaejJBU1RUOEItN2tCd0JvSVRHSW91R3NzYlk1bDFWVWdybUpTWXBXU2VRTlo5Wmw2Sk1laktIcFVCbkxlN3JuVVlRS1A4aG56d0ExVWhmMUgyY0hJZU1RUXBQOEJ5SzRYbkl3?oc=5",
       "source": "news.google.com",
-      "description": "La Maison de Radio-Canada est américaine!  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "La Maison de Radio-Canada est américaine!  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Transaction de la semaine: après deux ans, Chantal Lacroix obtient 3,25 M$ pour sa maison - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPV0h1Q0F6dmlOdThhUjYybGV0Sk9CUHBkT0VDZzB4ZUtKR0xNMGFKSGgyb0lSQUx0dF9KbTRzSGM5T25rYWx4Y1hGU1l3bG42VlpCU2w5MmVGN0Y1QnhoMmdBOWxBRjVqU1BtT0RWaXRiWEdzcjN4WGdDTzNDQ3A1WmhkUVhhMjdseW9ydkNCdUhwQkllNW5PQ0hJSkhhV0xfb2l6eURSWkRCcWFNSlhVYXdUbTlPdWhJZDhEX3d5Z2pjdw?oc=5",
+      "source": "news.google.com",
+      "description": "Transaction de la semaine: après deux ans, Chantal Lacroix obtient 3,25 M$ pour sa maison  TVA Nouvelles",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Chantal Lacroix a vendu sa maison pour 3 250 000$ et voici les photos - Vedette Québec",
@@ -191,6 +229,54 @@
       "category": "general"
     },
     {
+      "title": "Le rebond de l’inflation en juillet ne ferait pas changer d’avis la Banque du Canada - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNVUFsWUtzTjVfNm1xaVdieFRxaW1mYXpzN2N1OUdZdUxuVmpTdUpvYWJiZU5sSEtGWU9aTG5iSF85djVncE5TdDV2UDNZa29faUtpTEZ3Q3c1UVM4SVZZRjdOb2dUZVpTdWlnbnhib0l6M0RSa3FiZ0hRX1o4TGNILXZPNnFkX3otVXd4cWNqWkFMTWhyYXVVVnhwbkM4ZWxmM2Q1Mll1a0NGNjU1b19nQlltX0VvX0tjN1VCakdlYTJpWDVaX1FQUlVaWXFFYWVHMEhrLV83MC1Bb0wxRVAzWlhB?oc=5",
+      "source": "news.google.com",
+      "description": "Le rebond de l’inflation en juillet ne ferait pas changer d’avis la Banque du Canada  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Canada–États-Unis : les taux pourraient prendre des chemins différents - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWS1kRVpud253RWxwZXlHYU01V1RqOGlxQ2hWQ0NfcUN4ZUVCSjJ6eWVkak81Q1ZXRzBqU1doaTFQMjVqdnJIWEx0N3RveDVaX3VDLURGYnNiM2hCNnJJVy15R2VEMzVMdlpyQkpmS0wwQmNJMzVHdUx5Y2p5bzdkVnVucHM1TkpVbFg3YTU0OC1hREJhNkJhTHN1aVlwVExpMFhiOXFRVllHd3NJ?oc=5",
+      "source": "news.google.com",
+      "description": "Canada–États-Unis : les taux pourraient prendre des chemins différents  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les prix de l’essence ont alimenté l’inflation en juillet, sans provoquer une hausse des taux - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObmUzSGJzaER3VVpocXB4VFNOa3lRX2IzbEpuSm0wajFFbWI1alFaY3VHbUlVRS0yUGZ5aExCT19rQi03blFjMnZPaXM3QjdwaFM4bWs4eV9xYmR2UEFBa3NxRVF0cERraUlSblBqNERoMFRianBRVzdnZDROam1CMHpHZEcxZEd4N0pCV1JGc0ozZzMtQ2FyLW53S0E0QnNZbGlSQmUta1FDWWhHMUZQYnhtVGdtUWlMMWZnX2szYUlheEJVaFFDbVhWSk5VRy1n?oc=5",
+      "source": "news.google.com",
+      "description": "Les prix de l’essence ont alimenté l’inflation en juillet, sans provoquer une hausse des taux  Les Affaires",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Légère accélération de l’inflation à 3 % en juillet au Canada - ici.radio-canada.ca",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBkbVF1WU1lRHRoVzBfakphSUM2SnVsak14ZFJtV1dHRk8xMGFXVHhkYXlIWUhwOFZxSTVpOHlSUkdxaHNoSnpfTHFmNm1aSU9mYk84V2ZCbE5NVm5Sa0Jxb0RwNHN4eFpkLVpHNUVxVlBOR3lRelRlZHpscw?oc=5",
+      "source": "news.google.com",
+      "description": "Légère accélération de l’inflation à 3 % en juillet au Canada  ici.radio-canada.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Canada: l'inflation accélère à 3% en juillet - TradingView",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5CWXlrQVkxS1BpMW1VVGk1T0VVdW5faW9VTTZ2OHU0b29xY1VZZXRmbHhVNGQ5cW9ZVVVhRF9LUzBKY2RRMVQ0blU2Yk95TU5rRnF5NTYyb3BaOVdXc2ZHcTBpOA?oc=5",
+      "source": "news.google.com",
+      "description": "Canada: l'inflation accélère à 3% en juillet  TradingView",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les ventes manufacturières au Canada dépassent les prévisions, ce qui tempère les paris sur une baisse de taux de la Banque du Canada et soutient le huard. - VT Markets",
+      "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxQY3J1eEVaUlRyTDdFSmZ5WFJEM1dfSnJWR0RCNDhEMzkwcVdGZ0pybER3TWtpX3dKVXZSR0NhZTZPVGlVeTI5YjlRNXZxdnItTkdfVFltYWUxQ05odHhFYUJCdmN3TG8wcHlQRFJ4anJVSTM1N0c2V0Nnb1ZKS3UyWllacG1xUUVYTHgxTG51b3NMb2RGSDM3VUlFY2NKaGZyUnQ2c1R3cVR0dEdLU2ZjeEpJZTNIR0pjVDJKaWFZWWNjZVJYZHpVRFRUUkVZTlBrdkxKZUtHdTN3UE9DWkVNdVRvdEdBemJzUXNydXhQZ00taE4zelFhTXdGZHVSVmwwdkVwdW9rSHpvTE00dklpWDRjUnZUSnBjRjhSQWl5eXVqaEFUUEE?oc=5",
+      "source": "news.google.com",
+      "description": "Les ventes manufacturières au Canada dépassent les prévisions, ce qui tempère les paris sur une baisse de taux de la Banque du Canada et soutient le huard.  VT Markets",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "USD/CAD passe sous 1,4000 sur fond de repli du dollar américain ; les marchés surveillent l’IPC canadien et la Banque du Canada (BdC) - VT Markets",
       "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNajZRRzctX2VQejhVY3JXVl9pTDRTTzd2UFIxWkx6aDFkOXNHRDVPM3FUaGNncG1FaGhjckFnUzFDMjRFbkt6aTIyVEZ4UERqV1lFZUJqVE14eUt4azhOcXZGNDVXalVYYkN3cHhLekFRQkhwN1VMZ3ZZdzhSSm1nSEt2MGlvU1JSTGJqbmNXd21BNi01TlFHNDVZY2NERThkOHhYcXNKUlkzaUpBd0ttakZlbnVIVlc1emVrS2E5RzJWQ1hoRzJSZEpDQ3FvWHM1b3V3czRGcEpyV256WUZtLWV1U04tMk92NDV3R2djeTNuaUxmWmp0WXBmUVlwQlFJNFdzamFOYw?oc=5",
       "source": "BdC",
@@ -199,34 +285,18 @@
       "category": "general"
     },
     {
-      "title": "Un ancien directeur général de la SCHL présidera Maisons Canada - Le Canada Français",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNzlNdkEtb3hqMjdMLXIzeUxtTGpHNklpemU2Y2FhNzB6UUNJTGV0QWFzQTlzV1F2UU9JbGFmZjJ2MHVTN1pGR0lSX19uQnNyOFdTSG5TRzRCMHZab1hYeVlIUFlReGMzU0trSXVmVno0UjROLS1uaWVmcXljdDYyUnNqYm0wQ29JNjV6Wm1jeDRtWWF3QVhqZXdST3ZtbGdsOXdSMU5ZV3c3N3U0THlRRnJYa0FZNkU?oc=5",
-      "source": "news.google.com",
-      "description": "Un ancien directeur général de la SCHL présidera Maisons Canada  Le Canada Français",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada se tournera vers l'IPC après la solidité du rapport sur l'emploi de juillet, selon UBS - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPLWZSUVhMbTJFZ2FyNkdRbjdxTk1rRWxfNldDaWhKZEZSYUNmd1A5YjdzbXN0RTFqc0pGRUprZWZEdnN1bWVyVVhlRV92ZW5pU1JJdzluRGU1b21SNDFuaWFkX3FMdEV3Yjd2Y2xoY3NLNFVRUFRSOVJjZ2RhaEtMS201al9HMTZTQUZPQ0gzdDR5eHNEU2NKdzctTjJNNVhHbzBaVDZoal9OcVNuN3VVNXh6LVNvRkpFbU5EQnRDU3Z6dEsyRmdNb1JmNW9iYkwtM1NocVZmQkdWdDJHSGYwd3liSjNKbWVCYmJFRWY2VjgxZw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada se tournera vers l'IPC après la solidité du rapport sur l'emploi de juillet, selon UBS  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les ventes manufacturières canadiennes dépassent les prévisions, atténuant les anticipations de baisse des taux de la Banque du Canada et soutenant le dollar canadien - VT Markets",
-      "link": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNNDRBc0hhVUJWdUx2V1RBdW5tX3c4OTB5Z3poY1RKc3YzX0NtWGR5M014azBNZHdMNnU2NVRXWXpwUUExVlJqVkxyOWhSaUxyU3pCaWhHSUV1VV9mNFZHcHFCWlc4QXRRaGVNZzNpbUZOQmNHY3BHczM4bDNnRE02aDZ1ajQ0TkgzMGxaTjAtNWMxNXp2SnpSWU1TU2hmdURyTnpNSHNZc2hqN0NFZ3JNUEVPN3NveWc5eEhWek5hUGpuLVZiT0lRNUJ4UjNRaEFaRjBWRWZaWVVGUVRsMHlISGtZVTRsT2wxaV9sZnhvX2NlQ2Z5LS10NjlpX1F5eUhhanQ4TjBFY3Q2NURGTUdDVTNyUVpzLU1WLXM0ZmNIaUpRLTYxd3F5T0piV3U5clZsN2lRUWx3?oc=5",
-      "source": "news.google.com",
-      "description": "Les ventes manufacturières canadiennes dépassent les prévisions, atténuant les anticipations de baisse des taux de la Banque du Canada et soutenant le dollar canadien  VT Markets",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Japon : vers une hausse des taux d’intérêt ? - L'Économiste Maghrébin",
+      "title": "Banque du Japon : vers une hausse des taux d’intérêt ? - Leconomiste Maghrebin",
       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVjhrMS1Ha0RjWW83ZjlKLVAwal95Rll4VHRIckpNc0c1Rjk3Qms5SmdRbmxZOUo1OEwxTWZOZ1M2TE1Bc2tweC1qTTlVVVMtZ2ZtX0Z3N282cWROOHhrc24wYzJHUV9jdmJQbzRsNkdyb3lqSFdGcFQwVnA1dXJsbGpmMU1QM0ZIdnlUOXZuLVZSc2psdnlrQjJJZVRfY2M?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Japon : vers une hausse des taux d’intérêt ?  L'Économiste Maghrébin",
+      "description": "Banque du Japon : vers une hausse des taux d’intérêt ?  Leconomiste Maghrebin",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Canada : le CPI de base stable à 0,2 % en juillet, renforçant les paris sur une baisse des taux de la Banque du Canada - VT Markets",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPYktGOWJmbmRIZWw4OFhsZUtSdElDQlotV1RQR2xWeHhCd2xzakgyWDBSMXo3eW1rR18tYm9SeUpvRUtsblRkSlc3ZnJUOW5qMDk5QTdablZZNEJtN18xVTJhbksyYTJ6UzJBRXA0MXZxMUlsVG9BZlhOUUo0NGZSQUVfdUh4OW5MUW5VU3ZrNlJyNlVXSFI4bTBRUGpBSmF5Z0h5UmJFNkRBVUNGeUhhUEZwUHRhcUd6N05ub1YwN3FRalNFVm92UTlja0FzRGlGdDkyX1hZM19VUTZzYWFTLTQycE5PdjNDLVBlV19fcw?oc=5",
+      "source": "news.google.com",
+      "description": "Canada : le CPI de base stable à 0,2 % en juillet, renforçant les paris sur une baisse des taux de la Banque du Canada  VT Markets",
       "cities": [],
       "category": "general"
     },
@@ -235,6 +305,14 @@
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9nZVRXZWpJUzhoaWZ3a1pNTmdBWlpEME9LcUtXWmJhOGpkeGJtZEx3cm9Wb3FwR3pWeThwTUEzYmh5aTI4aGtIZW9FM2xoczRhMlBSeXJEZUhhXzYyeUhYcA?oc=5",
       "source": "HFU9FyN1iQ",
       "description": "Motokáry Bank Of Canada - Banque Du Canada (HFU9FyN1iQ)  Mshale",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les ventes manufacturières canadiennes dépassent les prévisions, atténuant les anticipations de baisse des taux de la Banque du Canada et soutenant le dollar canadien - VT Markets",
+      "link": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNNDRBc0hhVUJWdUx2V1RBdW5tX3c4OTB5Z3poY1RKc3YzX0NtWGR5M014azBNZHdMNnU2NVRXWXpwUUExVlJqVkxyOWhSaUxyU3pCaWhHSUV1VV9mNFZHcHFCWlc4QXRRaGVNZzNpbUZOQmNHY3BHczM4bDNnRE02aDZ1ajQ0TkgzMGxaTjAtNWMxNXp2SnpSWU1TU2hmdURyTnpNSHNZc2hqN0NFZ3JNUEVPN3NveWc5eEhWek5hUGpuLVZiT0lRNUJ4UjNRaEFaRjBWRWZaWVVGUVRsMHlISGtZVTRsT2wxaV9sZnhvX2NlQ2Z5LS10NjlpX1F5eUhhanQ4TjBFY3Q2NURGTUdDVTNyUVpzLU1WLXM0ZmNIaUpRLTYxd3F5T0piV3U5clZsN2lRUWx3?oc=5",
+      "source": "news.google.com",
+      "description": "Les ventes manufacturières canadiennes dépassent les prévisions, atténuant les anticipations de baisse des taux de la Banque du Canada et soutenant le dollar canadien  VT Markets",
       "cities": [],
       "category": "general"
     },
@@ -299,5 +377,5 @@
     },
     "last_quarter": "juillet 2026"
   },
-  "last_update": "2026-08-17 13:38"
+  "last_update": "2026-08-18 13:40"
 }
