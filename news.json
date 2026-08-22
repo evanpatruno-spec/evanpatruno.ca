@@ -89,18 +89,18 @@
       "category": "general"
     },
     {
-      "title": "Virage numérique à Québec | La CAQ misera sur l’IA pour équilibrer le budget",
-      "link": "https://www.lapresse.ca/affaires/techno/2026-08-21/virage-numerique-a-quebec/la-caq-misera-sur-l-ia-pour-equilibrer-le-budget.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Quartier Molson | Feu vert à des tours plus hautes que permis",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-08-22/quartier-molson/feu-vert-a-des-tours-plus-hautes-que-permis.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Trois ministres à la tête du numérique. Plusieurs projets informatiques trop complexes ou inachevés. Des coûts qui explosent. Malgré tout, le gouvernement de la CAQ défend son bilan technologique des quatre dernières années. À la tête du Conseil du trésor, des ministères de l’Efficacité de l’État et de la Cybersécurité et du Numérique, France-Élaine Duranceau estime que recourir à la technologie est inévitable pour atteindre l’équilibre budgétaire.",
+      "description": "La voie est libre pour que les tours du futur Quartier Molson, l’un des plus importants projets immobiliers de la métropole, puissent dépasser les hauteurs normalement permises au centre-ville, où le projet se mettra bientôt en branle.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Wall Street termine en baisse",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-08-20/wall-street-termine-en-baisse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Est du Québec | Près de 500 logements abordables verront le jour",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-08-22/est-du-quebec/pres-de-500-logements-abordables-verront-le-jour.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Bourse de New York a clôturé dans le rouge jeudi face à la nette remontée des taux obligataires qui met à mal la stratégie de soutien du Trésor américain et inquiète de nouveau les investisseurs.",
+      "description": "Le visage de l’habitation abordable s’apprête à changer dans l’est du Québec. Le fruit d’une collaboration inédite entre des acteurs locaux qui viennent de décrocher un contrat historique de 500 logements conçus à partir de modules préfabriqués, pour près de la moitié du prix d’un logement typique.",
       "cities": [],
       "category": "general"
     },
@@ -121,20 +121,26 @@
       "category": "general"
     },
     {
-      "title": "Coup de froid sur le marché immobilier résidentiel - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONHpKb1B2QVZJaU5hQXR1MTI3cDVsSl8zTS1DR1dpeGJ4R1l0VEdIUmxISkt2OU1zaFl5cUlfQll0aXlUUjI3c3o4bGx5UGpXQ3cyTEJoR0pIa3JXUXN1aGRKTFRTT0tiSi1DRmZyUHI1Y0NnTEQ3MDRlRC1DMl9FWFJPUkdhM0ZtRFpoWVlOdWpUbDVDSldvNzdwQQ?oc=5",
+      "title": "Est du Québec | Près de 500 logements abordables verront le jour - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNV2NyM29udmctUHhzQnppTGZkRFhZaERYclJtRWZicTlVUmtGaExvajRaU0w3VE9xQVpsUzByZUF5NnQwd2VmbHhGZFFna1NGd0lRdHRnWGhVUUQ0bmZDeUx5dnJIaFNxY1h5NlJkOVl6Y0RicTIwZm5VVm44aWp6ZmZSQS1uV1FFeVpOVnE0T0o3LTRQeGhORlJCMVROSV90eDVYemgyWmxQVHh3QmZvNVZKYllpRFhQUW5WdndlODd0UmxTcU1r?oc=5",
       "source": "news.google.com",
-      "description": "Coup de froid sur le marché immobilier résidentiel  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Est du Québec | Près de 500 logements abordables verront le jour  La Presse",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Pas gêné | Nico Pham confronte un courtier immobilier (Saison 01 Épisode 1) - Télé-Québec",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9YUGw5STgwekxHYjBTREJSZHNMbl9KWk5LaXA2QUdYcU1WT3NPV19TNlROZGw1UkNyNGhZdmtvY0tGRDNOZjB5Q3hzTENjZHpwY0oyQlNn?oc=5",
       "source": "Saison 01 Épisode 1",
       "description": "Pas gêné | Nico Pham confronte un courtier immobilier (Saison 01 Épisode 1)  Télé-Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Coup de froid sur le marché immobilier résidentiel - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTGt1dUQyR0J1VEpIS1JuTWNXNWRDOUttZHlWbjNWUlNwdDE5VFZHbFJ6cEdQSGpNSDRhdFFnS2Njb0NGa3hURFVzU2hMNld5b25mVGx5bTBYNEpQMVJNbERuc2ZtTWZ0NjZMMWZEY19rT0UwRFc1RjZ0Mjl2Wl9SUzdkWTFiZUdxLWVNbEdaTnFQT0ROQ2FFQg?oc=5",
+      "source": "news.google.com",
+      "description": "Coup de froid sur le marché immobilier résidentiel  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -155,18 +161,28 @@
       "category": "general"
     },
     {
-      "title": "Régler la crise du logement - Québec solidaire",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9nb1l1dHZHTUJ3ZGpRd2NZOFd4M3c4S0VhNmEzeXRmMFBwRkk0Z1JRU3h3ZFhtNjZST2FIemNQQVR5YTgxSWc5aS1nWjJxUlJ0LWhITg?oc=5",
+      "title": "Les ventes résidentielles plus basses que l’an dernier | RCI - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeGo3ZC1zalNTQkt0V2F2UGZQcmViMVFwd0pJOFhQVWNwU2lyenJfV0YwS29GODl5MmlrQ1NrQ2NrY1c5QmhCYlVVQ0FTaXVXVG44OHMzdkZvRUxpN2ZfSGF1NWtBbEVkczVkT2kzazNPRFpsbG1GY01Uakt5LU94ZGNWN0xqamtyUFdTallCeTlDZmtkdk9PbzNZV2VDdHlK?oc=5",
       "source": "news.google.com",
-      "description": "Régler la crise du logement  Québec solidaire",
+      "description": "Les ventes résidentielles plus basses que l’an dernier | RCI  Radio-Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Prévisions des taux hypothécaires au Canada (mise à jour d’août 2026) - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "mise à jour d’août 2026",
-      "description": "Prévisions des taux hypothécaires au Canada (mise à jour d’août 2026)  nesto.ca",
+      "title": "Perspectives du marché immobilier de Montréal 2026 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNZlZBa3hjMjlWUXZ6ZFpyaWNqdGJORHZwMlJJYkcxMmVKd3gyVFZWWWZoazVxRjZyY204U3hMOTVGbDVZckdpMUhWVnREajNVRVhETGxsUXUtallDNlktT1o4WXB1SG9UVzgtaERscDdPbDJ6V0t5eUtUZHBCckJaSHZpMzQ2cVJmUW14S190ZTFBcUszVkE?oc=5",
+      "source": "news.google.com",
+      "description": "Perspectives du marché immobilier de Montréal 2026  nesto.ca",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Régler la crise du logement - Québec solidaire",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9nb1l1dHZHTUJ3ZGpRd2NZOFd4M3c4S0VhNmEzeXRmMFBwRkk0Z1JRU3h3ZFhtNjZST2FIemNQQVR5YTgxSWc5aS1nWjJxUlJ0LWhITg?oc=5",
+      "source": "news.google.com",
+      "description": "Régler la crise du logement  Québec solidaire",
       "cities": [],
       "category": "general"
     },
@@ -181,10 +197,34 @@
       "category": "local"
     },
     {
-      "title": "Les ventes résidentielles ont baissé de 5,3 % en juillet par rapport à l’an dernier - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYlJfN1JIdy0wc0s2Wmt4djE2SV9SQzNobE0xaC0zWGtHRGxJc3I4bjRTdzcwbkc0d3Rja2NDMzlwSXNNc3JDQ05iVDFaRk0ydUVva3lNM0hwM3NuMmNxMEczVW1tWTJJVEFwTDhjMlczTTM1dlBjRi1HZjVQc3h5d2d4UnRmY3NDVWRWQ1lnMXBJZVV0UEx3?oc=5",
+      "title": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada - Ratehub.ca",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
       "source": "news.google.com",
-      "description": "Les ventes résidentielles ont baissé de 5,3 % en juillet par rapport à l’an dernier  Radio-Canada",
+      "description": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada  Ratehub.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier canadien | Prix des maisons en 2026 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUnVKX3FQVzVzNkN4R3lJeDB4NVQ2Y0hYOUlVMEtZZkNZY0RBYXB3N2FUX1FWbEE5UTBfamtaa01tZ2l4S3hLT3lkZWlzRWt4SDY1NU9uODY2U29wckI5U2M2clJPS082VW9mSHdxZDdCTTE5c0JFdUhnTHdGYkRZWTZabF9yQ0xXQW1F?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier canadien | Prix des maisons en 2026  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Prévisions des taux hypothécaires au Canada (mise à jour d’août 2026) - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
+      "source": "mise à jour d’août 2026",
+      "description": "Prévisions des taux hypothécaires au Canada (mise à jour d’août 2026)  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Israël condamné par plusieurs pays pour un projet immobilier en Cisjordanie - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPcEREYm9zTjdqY1pGYXBhY0ROZ1JKMlF6WUZBR0NQQmJqeG15dVRwWkR4X005enlPTTFaZmFCMnFsWmNrV05zdFZDeE1EdUVtUWJ3ZmlDeVVlajhFVmRwMkJzYUFHT2J2Zjh3RnZ0UXpDQ0YwZDVDWVdvNm5MX0h0Sm5ibzNOS3BjTUs3QVlLRUdibDVCZ2o1YmN1cnNWQTZzOXdXZ2lsU2U5X3ozQnA1TGsxRG5zX2syaVZyTGUyM2xBM2ZS?oc=5",
+      "source": "news.google.com",
+      "description": "Israël condamné par plusieurs pays pour un projet immobilier en Cisjordanie  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -209,14 +249,6 @@
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWS1kRVpud253RWxwZXlHYU01V1RqOGlxQ2hWQ0NfcUN4ZUVCSjJ6eWVkak81Q1ZXRzBqU1doaTFQMjVqdnJIWEx0N3RveDVaX3VDLURGYnNiM2hCNnJJVy15R2VEMzVMdlpyQkpmS0wwQmNJMzVHdUx5Y2p5bzdkVnVucHM1TkpVbFg3YTU0OC1hREJhNkJhTHN1aVlwVExpMFhiOXFRVllHd3NJ?oc=5",
       "source": "news.google.com",
       "description": "Canada–États-Unis : les taux pourraient prendre des chemins différents  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Rapport financier trimestriel - Deuxième trimestre de 2026 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNeWJpNk51VjY1SmFtZkNWTmc3TEp6M2I5c09XVEwzeFYya3d5ekl2bmRDZXVNejE5Si1VV0tUaHdOVlF5c1A0RHU5ai1NTGNOU2tKNVlndFVObUs3bGFwQ19ld2R2UXduS28tcnRqZGsyTWIzZkRZSG1HYTZJUjRieEhFZVRtaC1aUzZhUHRtSk0zaGtVQW8wc2NFSQ?oc=5",
-      "source": "news.google.com",
-      "description": "Rapport financier trimestriel - Deuxième trimestre de 2026  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -269,10 +301,10 @@
       "category": "general"
     },
     {
-      "title": "USD/CAD passe sous 1,4000 sur fond de repli du dollar américain ; les marchés surveillent l’IPC canadien et la Banque du Canada (BdC) - VT Markets",
-      "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNajZRRzctX2VQejhVY3JXVl9pTDRTTzd2UFIxWkx6aDFkOXNHRDVPM3FUaGNncG1FaGhjckFnUzFDMjRFbkt6aTIyVEZ4UERqV1lFZUJqVE14eUt4azhOcXZGNDVXalVYYkN3cHhLekFRQkhwN1VMZ3ZZdzhSSm1nSEt2MGlvU1JSTGJqbmNXd21BNi01TlFHNDVZY2NERThkOHhYcXNKUlkzaUpBd0ttakZlbnVIVlc1emVrS2E5RzJWQ1hoRzJSZEpDQ3FvWHM1b3V3czRGcEpyV256WUZtLWV1U04tMk92NDV3R2djeTNuaUxmWmp0WXBmUVlwQlFJNFdzamFOYw?oc=5",
-      "source": "BdC",
-      "description": "USD/CAD passe sous 1,4000 sur fond de repli du dollar américain ; les marchés surveillent l’IPC canadien et la Banque du Canada (BdC)  VT Markets",
+      "title": "TD Securities prévoit que la Banque du Canada maintiendra ses taux jusqu’en 2027, alors que les marchés attendent les données commerciales de novembre. - VT Markets",
+      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQQV9zVmZnSWw1S0pkVEdiNXJiOHRGa0pvZE0tb2s5V0hUTlBNWWZGa0pPVHRGYjhiVXZKSFh6M1d5MHhyNG9RSlo3Z2U1c1AyTGF1MFhVV0ZQdDlwVVBBZWQ0THdDWXRTVExWd2xUUzZOYVdLNDBYOTM4LVZsQVVCQVVmZ2FHVEFncTZLcDlpdW9TTTB1YjY0Wnl6UmV2Nm1Mck5ETlpBY1JvekFhb0Z6T0trQUxkUjNDV1ltWXJvaUVxZHFDTC1KZW83R2FNMEU4b1MtYkNwYnlmdFctclh3VF96TGQybkN3WnhIUTNGQ09jdFFidGJqbHZaT2VFMW9raG9RNmwxdzRMMG82eXNFTEprWlgzMEw2anNyemVEOA?oc=5",
+      "source": "news.google.com",
+      "description": "TD Securities prévoit que la Banque du Canada maintiendra ses taux jusqu’en 2027, alors que les marchés attendent les données commerciales de novembre.  VT Markets",
       "cities": [],
       "category": "general"
     },
@@ -285,10 +317,10 @@
       "category": "general"
     },
     {
-      "title": "Les ventes manufacturières canadiennes dépassent les prévisions, atténuant les anticipations de baisse des taux de la Banque du Canada et soutenant le dollar canadien - VT Markets",
-      "link": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNNDRBc0hhVUJWdUx2V1RBdW5tX3c4OTB5Z3poY1RKc3YzX0NtWGR5M014azBNZHdMNnU2NVRXWXpwUUExVlJqVkxyOWhSaUxyU3pCaWhHSUV1VV9mNFZHcHFCWlc4QXRRaGVNZzNpbUZOQmNHY3BHczM4bDNnRE02aDZ1ajQ0TkgzMGxaTjAtNWMxNXp2SnpSWU1TU2hmdURyTnpNSHNZc2hqN0NFZ3JNUEVPN3NveWc5eEhWek5hUGpuLVZiT0lRNUJ4UjNRaEFaRjBWRWZaWVVGUVRsMHlISGtZVTRsT2wxaV9sZnhvX2NlQ2Z5LS10NjlpX1F5eUhhanQ4TjBFY3Q2NURGTUdDVTNyUVpzLU1WLXM0ZmNIaUpRLTYxd3F5T0piV3U5clZsN2lRUWx3?oc=5",
+      "title": "Tous les articles qui parlent de Banque du Canada - Afrimag",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBxNlhEWlBKcnZjYmlLZWxkbXRMakNMVWkwdjRaQnRPUWlZekNpb2NnS1dMb2tEeGNZRFBqLWNCVUZ2THRsNkpuWm5WVkl3SklBQjFreDMzNUNfZw?oc=5",
       "source": "news.google.com",
-      "description": "Les ventes manufacturières canadiennes dépassent les prévisions, atténuant les anticipations de baisse des taux de la Banque du Canada et soutenant le dollar canadien  VT Markets",
+      "description": "Tous les articles qui parlent de Banque du Canada  Afrimag",
       "cities": [],
       "category": "general"
     }
@@ -345,5 +377,5 @@
     },
     "last_quarter": "juillet 2026"
   },
-  "last_update": "2026-08-21 13:43"
+  "last_update": "2026-08-22 13:29"
 }
