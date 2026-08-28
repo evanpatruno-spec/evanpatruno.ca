@@ -1,106 +1,18 @@
 {
   "news": [
     {
-      "title": "RMR de Québec : le dynamisme exceptionnel du marché s’essouffle",
-      "link": "https://apciq.ca/rmr-de-quebec-le-dynamisme-exceptionnel-du-marche-sessouffle/",
-      "source": "APCIQ",
-      "description": "Québec, le 6 août 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de juillet 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : le dynamisme exceptionnel du marché s’essouffle est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Montréal : la période d’ajustement se poursuit,  le marché des copropriétés à l’équilibre",
-      "link": "https://apciq.ca/rmr-de-montreal-la-periode-dajustement-se-poursuit-le-marche-des-coproprietes-a-lequilibre/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 6 août 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de juillet 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la période d’ajustement se poursuit,  le marché des copropriétés à l’équilibre est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre",
-      "link": "https://apciq.ca/stats-2e-trimestre-2026/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 14 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur",
-      "link": "https://apciq.ca/marche-immobilier-la-rmr-de-montreal-poursuit-son-ralentissement-graduel-alors-que-quebec-maintient-sa-vigueur/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 3 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de juin 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés",
-      "link": "https://apciq.ca/rmr-de-quebec-les-ventes-a-un-sommet-en-mai-grace-a-la-remontee-de-loffre-de-proprietes/",
-      "source": "APCIQ",
-      "description": "Québec, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue",
-      "link": "https://apciq.ca/rmr-de-montreal-la-baisse-graduelle-des-ventes-se-poursuit-et-la-pression-sur-les-prix-sattenue/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché",
-      "link": "https://apciq.ca/stats-quebec-avril-26/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : une hausse de l’offre de propriétés se dessine,  mais la pénurie continue de soutenir la pression sur le marché est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution",
-      "link": "https://apciq.ca/rmr-de-montreal-ralentissement-des-ventes-dans-un-contexte-de-prudence-accrue-et-de-conditions-de-marche-en-evolution/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 6 mai 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’avril 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : ralentissement des ventes dans un contexte de prudence accrue et de conditions de marché en évolution est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026",
-      "link": "https://apciq.ca/ventes-residentielles-stabilisation-des-ventes-mais-prix-toujours-sous-pression-au-1er-trimestre-de-2026/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 15 avril 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Ventes résidentielles : Stabilisation des ventes, mais prix toujours sous pression au 1er trimestre de 2026 est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville",
-      "link": "https://apciq.ca/des-marches-toujours-sous-pression-au-debut-de-2026-dans-les-rmr-de-sherbrooke-trois-rivieres-et-drummondville/",
-      "source": "APCIQ",
-      "description": "Le 15 avril 2026 — La Chambre immobilière Estrie — Mauricie — Centre-du-Québec (CIEMCQ) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent aujourd’hui les statistiques immobilières du premier trimestre de 2026 pour les régions métropolitaines de recensement (RMR) de Sherbrooke, Trois-Rivières et Drummondville. Les données sont tirées de la base provinciale Centris des courtiers immobiliers.\nL’article Des marchés toujours sous pression au début de 2026 dans les RMR de Sherbrooke, Trois-Rivières et Drummondville est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque Royale du Canada optimiste malgré les tensions commerciales",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-08-27/la-banque-royale-du-canada-optimiste-malgre-les-tensions-commerciales.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Wall Street clôture en baisse après les avertissements de Warsh sur l’inflation",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-08-28/wall-street-cloture-en-baisse-apres-les-avertissements-de-warsh-sur-l-inflation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Le président et chef de la direction de la Banque Royale du Canada estime que l’économie nationale devrait réussir à surmonter la dernière vague de tensions commerciales entre le Canada et les États-Unis grâce à un taux de droits de douane effectif faible, à des investissements étrangers solides et à de nouveaux accords commerciaux.",
+      "description": "La Bourse de New York a clôturé en baisse vendredi, les investisseurs digérant les mises en garde du président de la Réserve fédérale (Fed) sur l’inflation américaine, qui renforcent l’hypothèse d’une hausse des taux dès septembre.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Coût de la vie, logement, tarifs... l’économie au sommet des préoccupations des électeurs",
-      "link": "https://www.ledevoir.com/economie/1004363/cout-vie-logement-tarifs-economie-sommet-preoccupations-electeurs",
-      "source": "Le Devoir",
-      "description": "Dans quel état sont les finances des Québécois à l’heure des crises?",
+      "title": "États-Unis | Le patron de la Fed insiste sur l’inflation « préoccupante »",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-08-28/etats-unis/le-patron-de-la-fed-insiste-sur-l-inflation-preoccupante.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Le président de la Réserve fédérale américaine (Fed), désigné par Donald Trump pour baisser les taux d’intérêt, a opéré vendredi un changement de ton suggérant que c’est plutôt une augmentation qui se profile pour combattre l’inflation.",
       "cities": [],
       "category": "general"
     },
@@ -121,22 +33,6 @@
       "category": "general"
     },
     {
-      "title": "Le courtier immobilier Christian Cyr candidat pour le PLQ dans Bonaventure - TVA - CIMT-CHAU",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeXRTUGhKTzl2OXlYOHNldGRUSjhvaFEyV1dESHNmSjlTN3VpOWJaWkV0T293ampIUTZpVXBxRHFOWHVybjNsV24wanlOUFpmbFN6cHNJbXBQTmN6UXNuM3ZQUWtidlYtbk1FU3lsTUZWUmYxRHhaVXE1ZXdVcV9pa2lGN1VIY09xc3YtT18zNnhYOWJfOTNidy1BdUZaN0xaT29fMXlRbkU?oc=5",
-      "source": "news.google.com",
-      "description": "Le courtier immobilier Christian Cyr candidat pour le PLQ dans Bonaventure  TVA - CIMT-CHAU",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Rapport sur les impacts des exigences fiscales, réglementaires et administratives sur les coûts de développement immobilier au Québec - Réseau d'Information Municipale",
-      "link": "https://news.google.com/rss/articles/CBMiogJBVV95cUxQM1Jxc1BvZE1TaGlOLXZhbXZNVGNyZXZTNjFzeDNEUlNwTHlKZ2xuNEpCODNoM3dkXzJFWk9BdjBNSWtQNlAzRjZoOElyZXlRNzRGejVtaHVyajNRRVlsdHlFamxvdWluUm8tUnJIa1pKTjF6NTVlVTJ5V2N2WnNOZ2pseEdzMHg1VnFNeldSRnBIaWRSYk56dGY2Vnd3NnFLaUg0dzQ4RHhSLTZTTHplVXg4TmNLV2tscmp0NGJnUVRDUzRabWJCMElsQlE5MzdHUkd1azV1cEtBTDczdzlKNEh1aVdCQV9qb0QyMHlLS3Z3YVlEck5PSWs5X25wdllCeVloMHhoSmxpNmVxb054ZUxobm52RVplOXFHcGJPcmxWZw?oc=5",
-      "source": "news.google.com",
-      "description": "Rapport sur les impacts des exigences fiscales, réglementaires et administratives sur les coûts de développement immobilier au Québec  Réseau d'Information Municipale",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le gouvernement fédéral soutient des travaux majeurs touchant 637 logements à Québec - PR Newswire Canada",
       "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOcVY1SVlOMUlIVXRYQVFVM3hKTHduMVNoSUxqUzB2ZXF3Q2M2aE9ZTHg3eXNNUTNBWTVlcDUzTnIwRzN2NFlKNTBkWDZBU3NXR05KVVd6bXB1UXNza3Q5X205MEMwQnFfbnMwVFVSR0tMMjN2U3hjaTY0cUhsc1BSVmJVQnZodmtvMHdkQ2ZPbm0wZ19zZWNoSEhuS1hJckwtREotYllNbDcyNEtBQVFXc1hxTkg5dzRvb1J5cUxreEZGdTZkTnRRdW15NVhOQnZvcEFxM3FDSQ?oc=5",
       "source": "news.google.com",
@@ -145,10 +41,42 @@
       "category": "general"
     },
     {
+      "title": "Cette maison complètement unique est à vendre près de Québec — Attends de voir l'intérieur - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeEd4bDNiMGxwX0ZzaHdSeFZLMG9DSW1lVkNMTGc1M2FMOHdWNmVockNRSkRJbGNzUmN5OFFiRGp2dzNWZkNXQ19iMFZrb2pLUk42ZEg2TERLWXJhY3NyTTRPM1o5WUN4blBHUE9Tb1djLWxWSVUwX0RLZVh0V1BlR3VYNjg?oc=5",
+      "source": "news.google.com",
+      "description": "Cette maison complètement unique est à vendre près de Québec — Attends de voir l'intérieur  Narcity",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Transaction de la semaine: à Lac-Brome, une propriété vendue quatre fois plus chère que son coût il y a six ans - TVA Nouvelles",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQV3hGR0l5dktieGptUlRiV0tLM3k0V1RSWjlVMExXb3JfUzJMVkhEdmdlaEtDdzhBMFk3VHRSMGo2RkV4S3JRRF9WTmRycVdUZEpqMlB4dWdDVkRGeTVXbXd1QU9US1RNVWxPZjZ6WTBKTnF1VTUtczhYZmc4ZlNyVVlubVFYaG9qcWg0?oc=5",
       "source": "news.google.com",
       "description": "Transaction de la semaine: à Lac-Brome, une propriété vendue quatre fois plus chère que son coût il y a six ans  TVA Nouvelles",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Condos invendus | Intervenir ou ne pas intervenir, la grande question pour l’État - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxORVlmZmk0UTE2OEZIdmRDVFQtZUZ5amFKUjJkZ09NbFBVRUNTWHEwUElFVXlGQ25YQmw4aU5hcXVnUDdBSTRXWHRtUTVTYThaSjNVV3hBWC1XWXVnc3V0bGxsbDNKWDU5Qm9YYnZxcUp5OEZxQlc2OWdWczhRN0RMajRXY2tCWGQ4TVNWWndjVjZNSVJYYUVSVzFjaU01OFFSUU1KbTBiakExVzVPLUpfbXZSdVlfT2VaNTB5emdFWUt3Znhqa2tySHlPdWtyODFlR2xvTkJCX3FTSVFK?oc=5",
+      "source": "news.google.com",
+      "description": "Condos invendus | Intervenir ou ne pas intervenir, la grande question pour l’État  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’hypothèque inversée, un moyen coûteux pour financer sa retraite - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQeWFDNFZQVUNSUXRMZUN4LWRfUjhrenBFN1l0b0VlUGxKYUc2ZUhmNHV1elJkVlhxYWdtdXRtbl9FZlJTRXpNaU9UeE5TcVoxOFctdTRTTkFXU1MzT010QmJYNjhHd01XeENPbE5STTd4a2taZGIzd0VxeU9ta2UwV1FiTjE5YWhkV0FGWldqbEtzZHVnODRhcjhrSWVZYnpZclpFNDBsanRGbXN5UkQ2R2lVdmY1UFlyNHcxWGd5Zk5lWHByZzlITWRpblozRk0?oc=5",
+      "source": "news.google.com",
+      "description": "L’hypothèque inversée, un moyen coûteux pour financer sa retraite  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Conférence de presse : Annonce concernant le taux directeur – Septembre 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQUW1BS1M5OEF0SjdrMm1KMTRaOElvQ1A0czM2YjdDVUM1aEhSaHVDV1dYdWV2a0pBWnBtbnV3a05uSWtrX3k1bkNKTFktQ2FRNEFWY3hDd1BaWW83RXN4Sl9vTENLb3Jhc05ZODhfWHV0dkVTX1Raa09CMUJ1ZURfZXUyaFhFMXMwVFZhUU9YWVduaGpzaUZ2SHFxNGVnZkNreFR1bDVsZzYydU03?oc=5",
+      "source": "news.google.com",
+      "description": "Conférence de presse : Annonce concernant le taux directeur – Septembre 2026  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -177,6 +105,14 @@
       "category": "general"
     },
     {
+      "title": "Les tensions commerciales modifient les perspectives de taux - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSklJOUFZVDNYYWsxSHRScmxZZTMxNktiWEY4U282T2xfS3BYQThUb04tMXRBaXpmYXlicjI4M3J2ZHVlbnYwVE0ySmlnZ1JzSk9VOFMwcVN0RjZkM1RzdEFuWDhXSkNJYWdETTZkOEQtQm9NXzhiUlc1RTMwN0EteWJaUnRKR2tOWDc2R1c3aS1rbmRob0Zqclh0V3p1SEVEQ1QyUQ?oc=5",
+      "source": "news.google.com",
+      "description": "Les tensions commerciales modifient les perspectives de taux  conseiller.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Crédit privé: les caisses de retraite canadiennes protégées? - avantages.ca",
       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNTZLNmVPaWJ5ZkhJT0JXUmktZUdRNlhSZTl6eVc0cDUtVUVzVlBRWVdIUHpBQzV1RFdtVHlEbkFBa1kzVnBtRkJLY20zdWlHNF85UFJ6RkxiWGxzbW1kQzBiS2xzcU56eFNoOU9RZ1ZVWkhfVmU0aHJoRWpocDdPeXpLY3NlY1czZk5nQVRqMUE2TjliZXdaRmJUdmUwS1E?oc=5",
       "source": "news.google.com",
@@ -185,10 +121,10 @@
       "category": "general"
     },
     {
-      "title": "TD Securities prévoit que la Banque du Canada maintiendra ses taux jusqu’en 2027, alors que les marchés attendent les données commerciales de novembre. - VT Markets",
-      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQQV9zVmZnSWw1S0pkVEdiNXJiOHRGa0pvZE0tb2s5V0hUTlBNWWZGa0pPVHRGYjhiVXZKSFh6M1d5MHhyNG9RSlo3Z2U1c1AyTGF1MFhVV0ZQdDlwVVBBZWQ0THdDWXRTVExWd2xUUzZOYVdLNDBYOTM4LVZsQVVCQVVmZ2FHVEFncTZLcDlpdW9TTTB1YjY0Wnl6UmV2Nm1Mck5ETlpBY1JvekFhb0Z6T0trQUxkUjNDV1ltWXJvaUVxZHFDTC1KZW83R2FNMEU4b1MtYkNwYnlmdFctclh3VF96TGQybkN3WnhIUTNGQ09jdFFidGJqbHZaT2VFMW9raG9RNmwxdzRMMG82eXNFTEprWlgzMEw2anNyemVEOA?oc=5",
+      "title": "Standard Chartered estime que la Banque du Canada maintiendra son taux à 2,25 % et reportera une baisse de taux à décembre - VT Markets",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOVGxQSGYwQUVLeThBZDJzWVg5U0EzTlh1YVZXLU9wREVVWFhRelNOc3A1TnVjV0hVYmpETDY4VzluTmpRNHRlbTVka18xUG9lT3Z1NVptUEdRWVh3MUFYZjBKVlVlcGtUTUx6NDluWVdvZlE1V2JRbGZzckZyLVdBU0lEYXlPRW5odXVaMnRIbjhIYk9rUWRrMXZVN2gxSU1kXzl1WlZQLUFmLXVlbmJxMTYteTh1UVJIcTR4X2JRc0hBcDA4aENObGNrWVlNWlVaYlpZckxxWWxZblJkdVBWZUdUUDBZVkFUek84cnVIdVNWQVVYelhyUQ?oc=5",
       "source": "news.google.com",
-      "description": "TD Securities prévoit que la Banque du Canada maintiendra ses taux jusqu’en 2027, alors que les marchés attendent les données commerciales de novembre.  VT Markets",
+      "description": "Standard Chartered estime que la Banque du Canada maintiendra son taux à 2,25 % et reportera une baisse de taux à décembre  VT Markets",
       "cities": [],
       "category": "general"
     },
@@ -201,10 +137,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada devrait privilégier le soutien à la croissance face à l'inflation induite par les tarifs douaniers, selon Rosenberg Research - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNYTBFemFnMFFTUjBvZXFFYUhEUGlMalMwcFpwMy1renQ4bnNZbG5UWEM0VHJyeHVzbXhXVW9neVd5YlVTZVUzQnJrQmpnNW5PU2JEUkd4SHZVcHdSam43Z01md2Z1d1RCZ0x0cVc2WEFmN2FqY3hRaXdqSTEwMkdBNzJxRDQ3MzhvVkoyQzNTMVRmaDNXMWJPT2tXTXJQRWgybXh6UUpYRWlfVmJmcU5hVHBCLWlQdmc1VDVxRnBub3VmWlppMDBNRFJBdTNUYktFM0NUaVdaQW0tZGNUYTd1blU3N0FlMDMxUEhJQmxYTnhGRTQ?oc=5",
+      "title": "TD Securities prévoit que la Banque du Canada maintiendra ses taux jusqu’en 2027, alors que les marchés attendent les données commerciales de novembre. - VT Markets",
+      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQQV9zVmZnSWw1S0pkVEdiNXJiOHRGa0pvZE0tb2s5V0hUTlBNWWZGa0pPVHRGYjhiVXZKSFh6M1d5MHhyNG9RSlo3Z2U1c1AyTGF1MFhVV0ZQdDlwVVBBZWQ0THdDWXRTVExWd2xUUzZOYVdLNDBYOTM4LVZsQVVCQVVmZ2FHVEFncTZLcDlpdW9TTTB1YjY0Wnl6UmV2Nm1Mck5ETlpBY1JvekFhb0Z6T0trQUxkUjNDV1ltWXJvaUVxZHFDTC1KZW83R2FNMEU4b1MtYkNwYnlmdFctclh3VF96TGQybkN3WnhIUTNGQ09jdFFidGJqbHZaT2VFMW9raG9RNmwxdzRMMG82eXNFTEprWlgzMEw2anNyemVEOA?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada devrait privilégier le soutien à la croissance face à l'inflation induite par les tarifs douaniers, selon Rosenberg Research  Zonebourse",
+      "description": "TD Securities prévoit que la Banque du Canada maintiendra ses taux jusqu’en 2027, alors que les marchés attendent les données commerciales de novembre.  VT Markets",
       "cities": [],
       "category": "general"
     },
@@ -213,6 +149,54 @@
       "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPMHloemZFZzFkcmhHeVEybDM3eWh3N3dzYmFvQXBnYnFhN1d5SjVwaFZEQkN3RGlZbVFaYmdaa1I2VWhBMTVnZEVmSVllcHdtU1Z5MHNDZWRhX2swUFJxUHQ5aWJNdzQybEp2cE1TVzRxdnNyc2Z0SFgxYkZ1SWtXSVdLMldvWG15bDZXRmZ3Q0tfZEI3cTRsMGhCdHVNeFF5OTRkS0hzdTdteTg3X013cW1mT2RWVjkySnVZdGlKa0t5QzFtTVZjSlFTcjVXNVdTNWNFN2ZFY1h6ZkNXQVdMSzBxd21Yc0J6QjUzVlZmZ3ExSy1IQzJQN21SUUlqRHFtRy1Ub2hFT2pVeVAyM3NRbWFR?oc=5",
       "source": "news.google.com",
       "description": "TD Securities prévoit que la Banque du Canada maintiendra son taux directeur à 2,25 % jusqu’en 2026, à mesure que le choc pétrolier s’estompe  VT Markets",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Standard Chartered prévoit que la Banque du Canada maintiendra son taux directeur à 2,25 %, reportant une baisse des taux à décembre - VT Markets",
+      "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQUFVJUnhDX2M1VFE3T2llRWY3RGJVMXZvUDU5Y3ZXeTRvai1qMWc0eV8xSUZDUGNzMkFKT1hGQWZEOTVJVEY4SG83U2ZVblNvR1J6dnZNODNlQVowaGRrZTJvRUZ6SWw2VW03NmJrTWNmNUdSbXU1WWUyX19WRGREVmh6X0o0QTRqZFhaVi1qQjVPNEZKQVlGZmk5MklNbHM4THMxSVA4QVZJSW9tX3pnQ2NHUjI5LXZFOWRnTjk5bHAyVmdHVXVOM29Fb1ZRWmZicHlHMVBfNnJXb2xPb05tdmlCcWJWX2ozMFJGaUxRQU1hRWIwcUpjMGFFa2FLTk5UdzA0TGxRSUo?oc=5",
+      "source": "news.google.com",
+      "description": "Standard Chartered prévoit que la Banque du Canada maintiendra son taux directeur à 2,25 %, reportant une baisse des taux à décembre  VT Markets",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Standard Chartered prévoit que la Banque du Canada maintiendra son taux à 2,25 % et reportera une baisse à décembre - VT Markets",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOMzVxbTlzRkU3cm1GNFRaUDVVamlLcHhlbU5tNG1QSnlaMmVaeXktNU1BYXJYRzNuOVZnQUVidTd2MndCY2xSYnJNLU5Wd2lVZDkxYVNNd3NuMmpTSFJsTHFLX1lTNXY5WUZxb3Fzc21JVDluZkx1aWxXLVI3OUJ4cG5TdGtBZWxiTG4tc1NoM3pGcFRYcUY2cWtyTndRd2E3UVFOODNJVGRpRnUtSGNGeUVaQm14a3VOWmthRXJjZkZUNzdLUjhBVDlzQ2N3NnNMSkdOdUp2VTBidVc5aHB0RGJPLWgzNGc1VlJQQzl4UQ?oc=5",
+      "source": "news.google.com",
+      "description": "Standard Chartered prévoit que la Banque du Canada maintiendra son taux à 2,25 % et reportera une baisse à décembre  VT Markets",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada devrait maintenir ses taux pendant encore un an, dans l'attente d'une stabilisation commerciale - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPU25iaHVPb2VCbENRZFpxNzM1OVVncEpFSnlBRWRmbnNBTlBoRmJ1WmNPVFJuLTZkSTdVVkVBcXR6NVpZTUs1NjZBM3J6Z1BRUXZLUkJEZTBHTDlTakVMUnNVeGp2ekVWNjFveW5YTUpNT0tiV3VySExpMElDSW45b2RxOWRLcDFPSWlNbG9lQlVEdWh6Q2JMTU9DZHhxX09nRURFTExxU3NNN21ZVG1HTEtKMEVTbkJSUVNiRHJHdHQ5clNUOHdDVy1yNHc5OV9JTDhLNmRud0lkMUZxeEZELTFzN0JoX1BwLWdOZnJPY1BJdw?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada devrait maintenir ses taux pendant encore un an, dans l'attente d'une stabilisation commerciale  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’économie canadienne rebondit au deuxième trimestre, dépassant les prévisions de la Banque du Canada - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNempFMXFXWmJvTm1uRkhGbEJndmFaVmd6MXN0d09DS1pPNDdDNE03VXBEZEV3UWZPUWtVLUV6em5xOHA3cHFseFF4ZzFFTlJNdHZFMG9EeUtjMTY5UXh5dlZFNktrSk9FMjBSLWg5aGpCTmQ3YXAzQmVoZmM1bFUxX1lsaEJLMjlTMm8wUVRUcl93WUNWdjFQWEQ4ZElPX0J0ODRwZ3VYdnotc2h1WlI5Vm1WS2R2VTdsbVF0Y1JObUlZcEIycVpTZnVQMVVjWDlpSmdSWk5Uc1J0U0p2X2JVOTdNLTQ?oc=5",
+      "source": "news.google.com",
+      "description": "L’économie canadienne rebondit au deuxième trimestre, dépassant les prévisions de la Banque du Canada  Investing.com France",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada devrait adopter un ton équilibré la semaine prochaine, évitant toute orientation monétaire face aux tensions commerciales avec les États-Unis, selon Nomura - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPaFl2dlY3anFIT20wR0Z6bG9nSEFBSkdrMklIVHRzYXZiNGstbnBLcTBYZXJXcnJWVVBlZGxYUGJadm1hY0J4eDZ2TkZDRG9nZEZyY0drSno3VER4bWdxZzAzNWNnYlotS2ZlMDNPVk1GOFB1a2JSVVR0QXA5S2NCZXByVDNZbjFqX21mYjFndmJpUDZRdFpfa2RDVzF0VDNrSXZnejRNaVVVNnNOYmkzakFVWkNlYXB2SHJoTDk5S05yUHQ1cHoxdWcyOUhNU2dRSndTZm5SaE9ac1JpQ3laNVFnZmlqNmNqLURGdmQwcXk?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada devrait adopter un ton équilibré la semaine prochaine, évitant toute orientation monétaire face aux tensions commerciales avec les États-Unis, selon Nomura  Zonebourse Suisse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada devrait privilégier le soutien à la croissance face à l'inflation induite par les tarifs douaniers, selon Rosenberg Research - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOVVFQdDhmeVp2R3VUb0lCT3laZjVZNVdxaUFQZkVsUFFHbHFYMkZJYl9ER3NQeVZYdGFBclc3VHVhSU03NWlsVUVTb05OVkN0SjZQeFlJV0VMdkxfNkh2WlgtdUZPSHhpR3UzNzBjWnFpbEx4V1h1U25aRThuRGVOU2xsdTdhcDVMeS1EQUltMU9lSWRTUzdaVmVPZGEwRmlkeHlDNEhaekMyVkUycGc4Tk5NM2FmMm9PRXdBbFRQY1Q1WVg2TUV3R05JODFWcDExdWtybmJEUG5rQjFEWE9zX2JUWEVwWktFZDRvQTh6cW9wZw?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada devrait privilégier le soutien à la croissance face à l'inflation induite par les tarifs douaniers, selon Rosenberg Research  Zonebourse Suisse",
       "cities": [],
       "category": "general"
     },
@@ -291,7 +275,7 @@
       "days": "42",
       "condition": "Vendeurs"
     },
-    "last_quarter": "juillet 2026"
+    "last_quarter": "Avril 2026"
   },
-  "last_update": "2026-08-27 22:45"
+  "last_update": "2026-08-28 22:53"
 }
