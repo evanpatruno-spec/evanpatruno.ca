@@ -91,44 +91,58 @@
       "category": "local"
     },
     {
-      "title": "Deuxième trimestre | Groupe Dynamite surpasse les attentes et bonifie ses prévisions",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-09-10/deuxieme-trimestre/groupe-dynamite-surpasse-les-attentes-et-bonifie-ses-previsions.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "États-Unis | L’inflation continue de s’accélérer, une hausse des taux de la Fed se profile",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-09-11/etats-unis/l-inflation-continue-de-s-accelerer-une-hausse-des-taux-de-la-fed-se-profile.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Le détaillant montréalais de vêtement pour femmes, Groupe Dynamite, bonifie ses prévisions et dit avoir saisi au printemps une opportunité d’apporter de la nouveauté plus rapidement, ce qui a contribué à stimuler sa performance financière durant les mois de mai, juin et juillet.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Conflit au Moyen-Orient | L’OPEP révise encore à la baisse sa prévision de la demande de pétrole en 2026",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-09-10/conflit-au-moyen-orient/l-opep-revise-encore-a-la-baisse-sa-prevision-de-la-demande-de-petrole-en-2026.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’OPEP, l’alliance de pays exportateurs de pétrole, a encore révisé à la baisse sa prévision de croissance de la demande mondiale de pétrole sur l’année 2026, sur fond d’incertitudes persistantes liées à la guerre au Moyen-Orient, selon un communiqué.",
+      "description": "L’inflation ne s’est pas calmée en août, les prix à la pompe flambent… La Réserve fédérale américaine (Fed) ne semble avoir guère d’autres options que de relever ses taux pour refroidir l’économie, ce qui déplairait fortement à Donald Trump.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Rapport sur l’offre de logements | Les mises en chantier demeurent insuffisantes au Canada",
-      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-09-10/rapport-sur-l-offre-de-logements/les-mises-en-chantier-demeurent-insuffisantes-au-canada.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Travaux dans la rue Sainte-Catherine | Le prix des loyers commerciaux se maintient",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-09-11/travaux-dans-la-rue-sainte-catherine/le-prix-des-loyers-commerciaux-se-maintient.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Il ne se construit toujours pas assez de logements au pays pour espérer un retour aux prix d’avant la pandémie dans le secteur immobilier.",
+      "description": "Cônes orange, machinerie à l’œuvre, clôture de sécurité : les imposants travaux en cours dans la rue Sainte-Catherine ne freinent pas la demande de locaux commerciaux sur l’emblématique artère.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "États-Unis | Le taux d’emprunt à long terme au plus haut depuis 2007 après des chiffres d’inflation",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-09-10/etats-unis/le-taux-d-emprunt-a-long-terme-au-plus-haut-depuis-2007-apres-des-chiffres-d-inflation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "En 2026 | L’Agence internationale de l’énergie revoit encore en baisse sa prévision de demande de pétrole",
+      "link": "https://www.lapresse.ca/affaires/2026-09-11/en-2026/l-agence-internationale-de-l-energie-revoit-encore-en-baisse-sa-prevision-de-demande-de-petrole.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Le taux d’intérêt de la dette publique fédérale américaine a atteint jeudi un nouveau plus haut depuis 2007 après la publication de chiffres d’inflation en accélération du fait des prix élevés de l’énergie.",
+      "description": "L’Agence internationale de l’énergie (AIE) a indiqué vendredi revoir encore en baisse sa prévision de la demande mondiale de pétrole en 2026, dans le sillage du conflit au Moyen-Orient et de la flambée des prix des hydrocarbures notamment du diesel.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "RMR de Québec : les vendeurs ajustent leurs attentes à la réalité du marché - L'APCIQ",
+      "title": "Toujours trop d’inflation aux États-Unis, une hausse des taux de la Fed se profile",
+      "link": "https://www.ledevoir.com/economie/1008323/toujours-trop-inflation-etats-unis-hausse-taux-fed-profile",
+      "source": "Le Devoir",
+      "description": "L’indice des prix à la consommation a progressé de 3,4% sur un an en août, le même rythme élevé qu’en juillet.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le Canada aura besoin de près de 5 millions de nouveaux logements d’ici 2036, calcule la SCHL",
+      "link": "https://www.ledevoir.com/economie/1008083/canada-aura-besoin-presque-4-7-millions-nouveaux-logements-ici-2036-calcule-schl",
+      "source": "Le Devoir",
+      "description": "Le rythme de construction doit accélérer pour rétablir l’abordabilité d’avant la pandémie, souligne l’organisme.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le groupe immobilier Mach doit plus de 1,5 M$ en taxes municipales impayées - fm93.com",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPV0phZlZpc1I2bC1kMWZaVnluY0o5eVZWUmZzVXZWc1N2MEk0NmFXUVZVekJkRm9WTzIxenktQ0d6eXRXbkE1STVNM1FQMXR4NFZ0c1pZdXpiaG5LOXB3YXdJVXNRY2ZxMWZQV0lDR1l5UzN6aHVJMjhZYjFSMzNQMkhrXzduNmVpMGZvRnplRHJzYVN1RlU1NTBoWlQ0cTU3dXZrUQ?oc=5",
+      "source": "news.google.com",
+      "description": "Le groupe immobilier Mach doit plus de 1,5 M$ en taxes municipales impayées  fm93.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Québec : les vendeurs ajustent leurs attentes à la réalité du marché - apciq.ca",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxObXhzUDBxeXF0bDdKWmpoLW1Ya1pLVmRGaGNIVkp3UXdMSFV4YTNTbnpZNWpLWHRpcWpzV3B6bUVWYUVFckFjSnk2eEg2NUZFZjA5aXJLdWVXU0VIUnpoQnNzeWRGWTRNVnZBQmMwQ3dXZlR0UmtEQ1JXZHYwSm1SNGhFekp5UTJ0SW9wQl9yWGdzd0NEeWc?oc=5",
       "source": "news.google.com",
-      "description": "RMR de Québec : les vendeurs ajustent leurs attentes à la réalité du marché  L'APCIQ",
+      "description": "RMR de Québec : les vendeurs ajustent leurs attentes à la réalité du marché  apciq.ca",
       "cities": [],
       "category": "general"
     },
@@ -151,36 +165,36 @@
       "category": "local"
     },
     {
-      "title": "Transaction de la semaine: Francis Reddy cède sa maison centenaire de Montréal pour 1,77 M - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOR25SUkJmRWJrb0RnMGN5UWEwZWt2UEFKSDllOGRsT21LZE9GRmlOd0FFdTg1TlktclkwR1JhRkFEcllib1R0WW52T2FXMXUwLWdsTGpvSVFSRzdfWGU4ek1IOTF4UkI3QThRNGg0eWxfVENsd3dpYWdoMzdVaWtOU05XTXktcnZRaXViQnltWHZtbFBJakRXRUY5NU5XY0NwdzNTdkJxYl9PalNBbEt4YS1fMmI2TDYtZEowS0xTWmFYMXhkbmc?oc=5",
+      "title": "Virage vers les hypothèques à taux variable, dit la SCHL - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOaURmM2pmUUJDclVHbndWZjdRZXJaVF9xQ3hIWjE1QnRRZE9aYnFLaS1ocTFqX0lmRjJVWGhkMzA2VDFwT1JuZTJoVXpMQi1jRGh2Z2hQLXdnaVhUMWxmRDNROWQtVTFGUjZWWENVcHNYZU5FT2J6RmVPcVpja2p6VG0zUGFhTG1oUzg2cHU0U0xIY1BsZnpvQVh1UmM3aGlNVUpMTlMySEhlWnBCeDVpUW1tXzZTb1FiV2hyS190UVN6TzhDUG5nSW1xbWxRUUhYTFo0cmR5bzVUelZza0ZZSjFEakg?oc=5",
       "source": "news.google.com",
-      "description": "Transaction de la semaine: Francis Reddy cède sa maison centenaire de Montréal pour 1,77 M  TVA Nouvelles",
+      "description": "Virage vers les hypothèques à taux variable, dit la SCHL  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Transaction de la semaine: Francis Reddy cède sa maison centenaire de Montréal pour 1,77 M - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPblZ0R0traFVWRHhCbHVhSVBlNDQ3bkhRdDJTaXdIYUZhd0RFb2RodGNLSFo2bDVyN2xseVlIM3lSSmRaOGJFdEJVcnZ6TFZCT19ZRTIxZVVTc1lzM0dId3hGS1hoXzQwMEhTd3hEZFNGb2NDZGhXNWoycG5GYjkybVBlaDVQc1hDVFFQenhLRFpKNWttMHp6TGU0eXBxUHE4N0MyclF4V3h5VXpXLWRIZlIyOVQ4WVY5ZEF4SEFIeHhyRVQ2aHhITXQ0ZkNIZw?oc=5",
+      "source": "news.google.com",
+      "description": "Transaction de la semaine: Francis Reddy cède sa maison centenaire de Montréal pour 1,77 M  Le Journal de Montréal",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Quartier des spectacles | Dix-huit vitres de deux tours résidentielles ont éclaté depuis 2024 - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOeWFkd1RnVHJyLXowODlGQVNsZ1NYY0p2Vk9GaTRQZERCdkVtSnlSb1prMnZmZTBjRlljWVBndjVoeHBHVkdwa2VGcGpkTmpfbWtnelZXejFBZnEwbzB0NTFlN1kwVU1uZEIwQ1AyMnAzS3lpX1R2QW5ucHR0V01hZVZCNUh1Q3d3bzBENTF4aDljNDFQajY5VjBnR0lGWk1IZjFtemF0RTVxYlh0NzdkSzB2LTRKRlNnVGRpeTdPUFktSjV0ak1tSXFUUXY3UlRxUlhtaHVrZTRvVlhOZGR5bndRcE9waU9XeWJOMA?oc=5",
-      "source": "news.google.com",
-      "description": "Quartier des spectacles | Dix-huit vitres de deux tours résidentielles ont éclaté depuis 2024  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans - Legossip.net",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMUR3UW02TGRaVVd5aG9hbjU1N1RnSm9iZGE0T1BrZlhQLUJXUjdCenp4a3dMZkxZaFB0eUJCMmF1aUxRaW52S1RxNFFmNTR5Y25JUG5EcThzd01aZVJKY2p2bjFnV05yZW0wRFZacHlRSHBJUEppTVV6Q3B3Ny13di13bnhob2FLY2ppUUNLLWxZaHc?oc=5",
-      "source": "news.google.com",
-      "description": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans  Legossip.net",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "L'acteur Francis Reddy vient de vendre sa maison pour 1 700 000 $ et voici toutes les photos - Vedette Québec",
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZXQ5dHo0N0xoYlhyMDdYaGQtN3RGV2JQZjlOMXRCR01xNWUxUzBINUNaTnc1NkhxVmQ0THpmbHZvZF9SRVRJVkNfc1h0TjZDNDlKQ2tHcWlpaGpINEdFVHFhMk0zX3FmaUZvZUVpLXZKV213VGhLZWRjWlM3WkJLa0pnV1ZYRVVjWTJOQWpOOHdCRi1oU0lxTXRFSQ?oc=5",
       "source": "news.google.com",
       "description": "L'acteur Francis Reddy vient de vendre sa maison pour 1 700 000 $ et voici toutes les photos  Vedette Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans - legossip.net",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMUR3UW02TGRaVVd5aG9hbjU1N1RnSm9iZGE0T1BrZlhQLUJXUjdCenp4a3dMZkxZaFB0eUJCMmF1aUxRaW52S1RxNFFmNTR5Y25JUG5EcThzd01aZVJKY2p2bjFnV05yZW0wRFZacHlRSHBJUEppTVV6Q3B3Ny13di13bnhob2FLY2ppUUNLLWxZaHc?oc=5",
+      "source": "news.google.com",
+      "description": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans  legossip.net",
       "cities": [],
       "category": "general"
     },
@@ -201,10 +215,10 @@
       "category": "general"
     },
     {
-      "title": "Coup de frein sur l’emploi au Canada - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNd2Q3MTBlMkROMHpMeTFwVm1FSGhiU00wOWFtM1JsNlJ4d0xIamlUdEZheDlhMzNOVmdDUWZ6bkZJa05EN3IxVDlBOVVkXzR3U3JvMmY3cmZkN19venViSk41N2JkNjdmNDNiMXU4a2YyckJNWXZVTS1KR0k4QjFneA?oc=5",
+      "title": "Guerre commerciale | La hausse des taux d’intérêt s’ajoute aux craintes - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQ2FidHNxdTRDSWF3LWJrWjR4azBRZzRlaXJIc3kwam1pYVJsQ1pVTE4xZE84TjhuNjI2X0ctNTlUcUpDRnhtVTdqcVAyMUxtS3FvQ0JGWXFKclRsNDhmVlNObVpDQUVieXJTWTBpTXJsb0VPXzNaSm8wMnBsZDltMko1NEIzc2hnY254NHlYc2FNa0NtZDA5LVh2SEN4LXEwOTgteHE1c1pkbzBFVGUza2h4akdnN3ZYdXdaOG9tQkgxcEM4?oc=5",
       "source": "news.google.com",
-      "description": "Coup de frein sur l’emploi au Canada  Finance et Investissement",
+      "description": "Guerre commerciale | La hausse des taux d’intérêt s’ajoute aux craintes  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -217,10 +231,10 @@
       "category": "general"
     },
     {
-      "title": "«Vous pouvez négocier votre taux hypothécaire!!»: mauvaise nouvelle de la Banque du Canada, dit PO Zappa - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPYmd2T3JLcFhzb2Y0YkkyM2pQVXhYMGIxRzkyUkdPc29xeEdUclMwaFo5N21KdG5wOGNjSWRwLTJxNFpTMHdfVmhiNGdycmV3VWJLdUdPSkRhOFk2MER4VWhLOVhTMTBjQnZYQkw3WXMzSnNxQmdCS2RqTjVZbW51X2hsQ3NlUVdrMWZudg?oc=5",
+      "title": "Le taux de chômage s’est maintenu à 6,4 % au pays et à 5,6 % au Québec en août - Le Canada Français",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZy1LMWt1MTFoZzNwcVhkVlFYaXVTQTFfeDZpWGZqRXd5YnplQjNFT0s1WldNVW9UTzdad3cwb3pudjJtQW15am42aFJCMF9aSWhNaDg4MWstSFloSkdnUEoySEhnV1NJNFNEU2xEM1Rmd09UdjMyNzNzaWRyckJJanE0ZFVQbTQ1T0FPOUg1WmI1OEdGYmJ6TXI0WTYzb3poSExrNFJ0blUxZFhWaXVmS19sNUN3bzYxWURmbVlBRC10QQ?oc=5",
       "source": "news.google.com",
-      "description": "«Vous pouvez négocier votre taux hypothécaire!!»: mauvaise nouvelle de la Banque du Canada, dit PO Zappa  QUB radio",
+      "description": "Le taux de chômage s’est maintenu à 6,4 % au pays et à 5,6 % au Québec en août  Le Canada Français",
       "cities": [],
       "category": "general"
     },
@@ -233,10 +247,26 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada dévoile le nouveau billet de 20$ à l’effigie du roi Charles - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPQ3gxNUlsZ0xBS2VzQTh2MzZKb0FZUHhHc2JmVmRPVmFBNV9jSW9GSjVESVkxaEx6eXlVY29raW8zcnRjZEtVN2hXY2s5cG9FNmc3YUJySEpSQzhOZ1RkdEs3dk0yYTNWcTRiQjZhRDd1M3NXdVdkenEtTEx2X0wtX3l1ZVVIdjU4cDBCdkZMdlBQb1ktdUZoTEZ0Sk1hbmhYSmZEWkN0bG9oYzdFS0w4RldOdDJUd2xRbVZReHhBMFllUFVmbTNoaUJUeGRFZw?oc=5",
+      "title": "Crédit privé : les caisses de retraite bien armées - conseiller.ca",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMG96ZWVsZkNNZ29tQ3RBTG1UOW40YkJCajBTdlJfcHJHRFdVYko5NmRpZ3U2MEgyRDdVMVRyMUNqSVkzYXZ3a1lqOFdpdVhQcnRDQkhqcjZPYTVzZmo0YVpRQVBQZE5xN2YxRlloREZUY0h2b0dETkxYOTZOY1lLQ0d4Njc4UERT?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada dévoile le nouveau billet de 20$ à l’effigie du roi Charles  Investing.com France",
+      "description": "Crédit privé : les caisses de retraite bien armées  conseiller.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les marchés anticipent une hausse des taux de la Banque du Canada d'ici décembre, l'échéance d'octobre étant désormais envisagée, selon Scotiabank - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNVWx4d1R3ZXFSZDBfbzd0NERmOVVFZWIwWVRsWFpqSXpvS1JwVF91Z05KNWlfZTRLanlTS0ZZeG1uRmVyUWQwVG5lZDBpVWE4bS1BZlVDMHhOT2R5TmRWNmhOWDl5bG1KbldLWWJTTllnN01GM0R5b3AtbzBXVDRZWjBrX21Hd3BSLVY2Q25VS3JNTjJqejdnOGtGLWJidEQ0NUZfSEVOMHkxeS1ScGpuMVBRZ053enRTRUl2UHhZRFBaOUw4cXNSWW5EWVpkZHhoZXZUUlJYeXpxZ3ZZa3hoWEhnd3dSNTh6ZzdqZkdWT2xXZw?oc=5",
+      "source": "news.google.com",
+      "description": "Les marchés anticipent une hausse des taux de la Banque du Canada d'ici décembre, l'échéance d'octobre étant désormais envisagée, selon Scotiabank  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L'incertitude commerciale rend les hausses de taux de la Banque du Canada plus difficiles à justifier, selon Rosenberg Research - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOUkhuY3VwWURpWGhKSTB0WGUyc0psRUsyc1lseHlDVmFLelh4eUJKTmVKc29US2tsaDgtbkVFZHk1VGVqS2d2dE0xYkc1WXBZU0p4c0p5dTNENmVQa1lDTGg1OS1OMDVBVndxN2ZRU0RXd3VsUDRXZUl5WkpvOUlyTkI1aGlfbF9kWlhYY1U2RWJuWWxwLUYyQV9aTWg5RHpIVEJRM01aVU01aEt1a0tCYmVYbjJONHd3Sy16bFk2MGJSUkJfLUtSV2pndWozcGUtaThPMjluSnFLXzFMMnRjWjBNU2FWRGNlVkVsVi1UQXhoMGM?oc=5",
+      "source": "news.google.com",
+      "description": "L'incertitude commerciale rend les hausses de taux de la Banque du Canada plus difficiles à justifier, selon Rosenberg Research  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -245,22 +275,6 @@
       "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOd1IwM0IzeG9tVkRsUGFVYTdxTmhVVDlFd2t4ZjVyd3ZfbVI2ZlNUVVZ5THBYWUVlVW02alNNTkhXTHFNeWFxLWR4SFBsMGs5eW0wNk4tTi1LTVByclA1QUprdkJaMnlOSVNOQ3NxTHl0TkdDMkNTSVdYUm5DVTctRlpfWmpkVmNLa2FORjFfUDdiUUNYLWxVQjJ6RlJPb1pXT2hIOGlUejJqT3RBQW5iTjBIOVJCOGVRMXZJcW9meHQ0NWwzWHFTbkRoRnJYQmtsa2x3ckYzWHA3dFMtVnVXelFINHVzblRJemZxaUEyRkw?oc=5",
       "source": "news.google.com",
       "description": "Le marasme de l'emploi au Canada en août suggère que le resserrement de la Banque du Canada est mal évalué par le marché, selon Rosenberg Research  Zonebourse Suisse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada dévoile son nouveau billet de 20 $ vertical à l'effigie du roi Charles III - Mon Fric",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPOHpvZzJTMmd1MVdRZmI3bkg2azE0U2laV29iX2lhcHJlWG53Tnh6dUVUaWhCQ1pocm9Rc2JsWU1lZXUxaHdKdEtEeHpJQzI5OG1yN3E3VzZUSnV3TDRJM3BvUk85dzRxNktPMmJiSmc1Rl91Uy1odjlZNXBEV3YydTJPUTBtM0JpOW1lNXU1cndZbG9CdGlfRERvMFQ5dzBqTE12RUllZ3BoeXFSY2RJWWJMTklwZ1hBSWtqVl9GUmQxQQ?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada dévoile son nouveau billet de 20 $ vertical à l'effigie du roi Charles III  Mon Fric",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada maintient son taux directeur à 2,25 % tout en évoquant des hausses possibles face à l'inflation accrue - news.ssbcrack.com",
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNYm16enpMRjAxTm93bU1JeHg1WVJsVHB3NHRqNV9VX0VfcWZkenNxa2RYRVRSU0JlYWFQTVFoSnJZRmdBTjBOMVB3cS1TY2lLbDN1b1QtX2ZnOVd3c2hpR2JPdDBKX1djZVFZNnkteE11NGxjT3RoSW5icmUzT2x2eUJhTm9uR19SYVByZTF1MHFqQXRBX193ZlNHU0U4WVM0VVJVZVl6eS1fRU9WWjg4RklDY2RYYWtvMkpIdm53UGxuYmY0NnVFUU9rSzNZUFFqU0RPZEhMTEtyTk50Nmc?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur à 2,25 % tout en évoquant des hausses possibles face à l'inflation accrue  news.ssbcrack.com",
       "cities": [],
       "category": "general"
     }
@@ -317,5 +331,5 @@
     },
     "last_quarter": "août 2026"
   },
-  "last_update": "2026-09-10 16:53"
+  "last_update": "2026-09-11 16:54"
 }
