@@ -91,26 +91,34 @@
       "category": "local"
     },
     {
-      "title": "États-Unis | L’inflation continue de s’accélérer, une hausse des taux de la Fed se profile",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-09-11/etats-unis/l-inflation-continue-de-s-accelerer-une-hausse-des-taux-de-la-fed-se-profile.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Sommet canadien de l’investissement | Le Québec loin dans la parade",
+      "link": "https://www.lapresse.ca/affaires/chroniques/2026-09-12/sommet-canadien-de-l-investissement/le-quebec-loin-dans-la-parade.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "L’inflation ne s’est pas calmée en août, les prix à la pompe flambent… La Réserve fédérale américaine (Fed) ne semble avoir guère d’autres options que de relever ses taux pour refroidir l’économie, ce qui déplairait fortement à Donald Trump.",
+      "description": "La ville de Toronto va recevoir lundi les dirigeants des plus grandes firmes d’investissement du monde entier. Ils ont été convoqués par le premier ministre Mark Carney, qui souhaite générer 1000 milliards d’investissements étrangers au pays au cours des cinq prochaines années, une initiative dans laquelle le Québec va jouer un rôle plutôt modeste.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Travaux dans la rue Sainte-Catherine | Le prix des loyers commerciaux se maintient",
-      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-09-11/travaux-dans-la-rue-sainte-catherine/le-prix-des-loyers-commerciaux-se-maintient.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Wall Street se ressaisit, poussée par le répit sur l’énergie",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-09-11/wall-street-se-ressaisit-poussee-par-le-repit-sur-l-energie.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Cônes orange, machinerie à l’œuvre, clôture de sécurité : les imposants travaux en cours dans la rue Sainte-Catherine ne freinent pas la demande de locaux commerciaux sur l’emblématique artère.",
+      "description": "La Bourse de New York a terminé dans le vert vendredi, profitant d’une accalmie du côté des prix du pétrole après la flambée des derniers jours, la publication d’un nouvel indice d’inflation aux États-Unis n’ayant pas surpris.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "En 2026 | L’Agence internationale de l’énergie revoit encore en baisse sa prévision de demande de pétrole",
-      "link": "https://www.lapresse.ca/affaires/2026-09-11/en-2026/l-agence-internationale-de-l-energie-revoit-encore-en-baisse-sa-prevision-de-demande-de-petrole.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’Agence internationale de l’énergie (AIE) a indiqué vendredi revoir encore en baisse sa prévision de la demande mondiale de pétrole en 2026, dans le sillage du conflit au Moyen-Orient et de la flambée des prix des hydrocarbures notamment du diesel.",
+      "title": "Le déficit d’entretien des infrastructures est-il sous-estimé au Québec?",
+      "link": "https://www.ledevoir.com/economie/1008479/deficit-entretien-infrastructures-est-il-sous-estime-quebec",
+      "source": "Le Devoir",
+      "description": "L’explosion des coûts de construction plombe les efforts visant à freiner la dégradation des hôpitaux, écoles et routes.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation en août devrait se maintenir à 3% avec la baisse du prix du pétrole",
+      "link": "https://www.ledevoir.com/economie/1008488/inflation-aout-devrait-maintenir-3-baisse-prix-petrole",
+      "source": "Le Devoir",
+      "description": "La pression inflationniste canadienne provient exclusivement des prix de l’essence et de l’énergie, estime un expert.",
       "cities": [],
       "category": "general"
     },
@@ -123,26 +131,10 @@
       "category": "general"
     },
     {
-      "title": "Le Canada aura besoin de près de 5 millions de nouveaux logements d’ici 2036, calcule la SCHL",
-      "link": "https://www.ledevoir.com/economie/1008083/canada-aura-besoin-presque-4-7-millions-nouveaux-logements-ici-2036-calcule-schl",
-      "source": "Le Devoir",
-      "description": "Le rythme de construction doit accélérer pour rétablir l’abordabilité d’avant la pandémie, souligne l’organisme.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le groupe immobilier Mach doit plus de 1,5 M$ en taxes municipales impayées - fm93.com",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPV0phZlZpc1I2bC1kMWZaVnluY0o5eVZWUmZzVXZWc1N2MEk0NmFXUVZVekJkRm9WTzIxenktQ0d6eXRXbkE1STVNM1FQMXR4NFZ0c1pZdXpiaG5LOXB3YXdJVXNRY2ZxMWZQV0lDR1l5UzN6aHVJMjhZYjFSMzNQMkhrXzduNmVpMGZvRnplRHJzYVN1RlU1NTBoWlQ0cTU3dXZrUQ?oc=5",
+      "title": "Une autre sanction s’abat sur cet entrepreneur immobilier de Québec - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQb1VDWldTa3JIT21SU1NRekhyQlpVelRNMURDMmxRUlptWXpwa1ZVNjBYWV9BQnBWWm15clUwQzVpd3dqTTZ4aVFkeU9KUWlLdFRFY2hyWHRDTFJUM25iY1VfN2ZCQWdWdVlBVXk0N0J6WGh3dExlb0kxVkg5Y2F1YjUwUTVHSEI2em5weTRNMzNHLW9UMWVORWZlVEdyQjNsU3hTU3dxem5qNXNRekFzWVkzSS1PNEI5T3NUWDczc0Z3VlRobmxfQ0hvMlFIMXgtdzRGeElDTDRtdG1wRndBQzRtdDJ1cHpseW0tNVAtdVNDanlHY0J4LW5LcVNxUzhaMnc?oc=5",
       "source": "news.google.com",
-      "description": "Le groupe immobilier Mach doit plus de 1,5 M$ en taxes municipales impayées  fm93.com",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Québec : les vendeurs ajustent leurs attentes à la réalité du marché - apciq.ca",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxObXhzUDBxeXF0bDdKWmpoLW1Ya1pLVmRGaGNIVkp3UXdMSFV4YTNTbnpZNWpLWHRpcWpzV3B6bUVWYUVFckFjSnk2eEg2NUZFZjA5aXJLdWVXU0VIUnpoQnNzeWRGWTRNVnZBQmMwQ3dXZlR0UmtEQ1JXZHYwSm1SNGhFekp5UTJ0SW9wQl9yWGdzd0NEeWc?oc=5",
-      "source": "news.google.com",
-      "description": "RMR de Québec : les vendeurs ajustent leurs attentes à la réalité du marché  apciq.ca",
+      "description": "Une autre sanction s’abat sur cet entrepreneur immobilier de Québec  Le Soleil",
       "cities": [],
       "category": "general"
     },
@@ -155,6 +147,14 @@
       "category": "general"
     },
     {
+      "title": "Rapport sur l’offre de logements | Les mises en chantier demeurent insuffisantes au Canada - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxObF9fLU9fN21XMjBLeWNMVmJJY0pSVHpMYm9FaHRqbS1BZDdyOVpFUXRlcm1MRGRjLTlrZkgxZWxuTnZVcnRES3hnVWMwdDZSR2c5RjFrVmFvZXd4S3J5SVktMXRvdXVrM3RTSWlaem9TS2QyZmY4a0ttbU1OcE02UTRPNlg5QnFnMDg4Rnk2dkVKanB3S2dfeENvMEhOdzFpVWpDdG9SSDJtRm9fMXl2VjdJOXZTT19yMkRPNkw3Si1BSDNYSm5nODF3Wk5GRXU0clk5VVpKWjhZRzhRQkhlYklxNXZCXzkzZ0E?oc=5",
+      "source": "news.google.com",
+      "description": "Rapport sur l’offre de logements | Les mises en chantier demeurent insuffisantes au Canada  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Des milliers de logements de luxe vides à Montréal - Le Journal de Montréal",
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVE9xZmxpeWxOOS14SzJDaFNmZnZ5d0V5dTlIMHZNWmNjTUZnb1VjRllrRTBzN0NZR1ViU25GVGhtUlFmTUJxQ0trOG96QWl2eWM2a0xBQjhpOEhORWQ5UEhSN3pyRFdNV1laTXBOUkxqVFIwbGxBUF93YmdNMjdUcExNMmVfcENfVVJHaFJrWGU4cFQwVTNaZmNYQQ?oc=5",
       "source": "news.google.com",
@@ -163,14 +163,6 @@
         "montreal"
       ],
       "category": "local"
-    },
-    {
-      "title": "Virage vers les hypothèques à taux variable, dit la SCHL - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOaURmM2pmUUJDclVHbndWZjdRZXJaVF9xQ3hIWjE1QnRRZE9aYnFLaS1ocTFqX0lmRjJVWGhkMzA2VDFwT1JuZTJoVXpMQi1jRGh2Z2hQLXdnaVhUMWxmRDNROWQtVTFGUjZWWENVcHNYZU5FT2J6RmVPcVpja2p6VG0zUGFhTG1oUzg2cHU0U0xIY1BsZnpvQVh1UmM3aGlNVUpMTlMySEhlWnBCeDVpUW1tXzZTb1FiV2hyS190UVN6TzhDUG5nSW1xbWxRUUhYTFo0cmR5bzVUelZza0ZZSjFEakg?oc=5",
-      "source": "news.google.com",
-      "description": "Virage vers les hypothèques à taux variable, dit la SCHL  Journal Métro",
-      "cities": [],
-      "category": "general"
     },
     {
       "title": "Transaction de la semaine: Francis Reddy cède sa maison centenaire de Montréal pour 1,77 M - Le Journal de Montréal",
@@ -191,10 +183,18 @@
       "category": "general"
     },
     {
-      "title": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans - legossip.net",
+      "title": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans - Legossip.net",
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMUR3UW02TGRaVVd5aG9hbjU1N1RnSm9iZGE0T1BrZlhQLUJXUjdCenp4a3dMZkxZaFB0eUJCMmF1aUxRaW52S1RxNFFmNTR5Y25JUG5EcThzd01aZVJKY2p2bjFnV05yZW0wRFZacHlRSHBJUEppTVV6Q3B3Ny13di13bnhob2FLY2ppUUNLLWxZaHc?oc=5",
       "source": "news.google.com",
-      "description": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans  legossip.net",
+      "description": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans  Legossip.net",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Virage vers les hypothèques à taux variable, dit la SCHL - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOaURmM2pmUUJDclVHbndWZjdRZXJaVF9xQ3hIWjE1QnRRZE9aYnFLaS1ocTFqX0lmRjJVWGhkMzA2VDFwT1JuZTJoVXpMQi1jRGh2Z2hQLXdnaVhUMWxmRDNROWQtVTFGUjZWWENVcHNYZU5FT2J6RmVPcVpja2p6VG0zUGFhTG1oUzg2cHU0U0xIY1BsZnpvQVh1UmM3aGlNVUpMTlMySEhlWnBCeDVpUW1tXzZTb1FiV2hyS190UVN6TzhDUG5nSW1xbWxRUUhYTFo0cmR5bzVUelZza0ZZSjFEakg?oc=5",
+      "source": "news.google.com",
+      "description": "Virage vers les hypothèques à taux variable, dit la SCHL  Journal Métro",
       "cities": [],
       "category": "general"
     },
@@ -207,34 +207,10 @@
       "category": "general"
     },
     {
-      "title": "Ce que les faibles données de l’emploi en août révèlent sur la trajectoire des taux de la Banque du Canada - Morningstar",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMUNwN2VXZUFOZXFQQzJsc1MwMVduR1Bmd1ctMEFaOGVwYktnbU94U1RGR093RlV1Ri0zNENIUEozbUlpcjFoQW9Cek9fQkdxbEtfUWxDb0ZURzlBcUE5Vkd1RjdBbG5uSC1RWVBjeVZMQkJEZWNxMFgtaHVYNThxSldKclhZYzdXVHRleTJ4cU13ejJoMXBMLWVac0NDa0FodjFN?oc=5",
+      "title": "L’inflation en août devrait se maintenir à 3 % avec la baisse du prix du pétrole - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNV1lFbEpsY050SHF1ZnVydVUtRGx5d0p4eHpJRFNuRnN5SERhdEJSelB3dE93eUxBN0VjYmI2Y0dIRmpnekV2Tm0wM1JOQ25lVk5JTkZ2ME5rT1RTTWNsbVlKOWRoaUJKRHg5OG43QzltV3FrUXBYY1F5aUNMVFl0QnFLS041M1FqRURMM1hkUENlMkpuZlk3eVVKeUNxWHZrZURGc0Zjb2FjVlRWdV9mTzc2NmxNNDJaRkFlT0JpVWlLQzhPcVg0?oc=5",
       "source": "news.google.com",
-      "description": "Ce que les faibles données de l’emploi en août révèlent sur la trajectoire des taux de la Banque du Canada  Morningstar",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Guerre commerciale | La hausse des taux d’intérêt s’ajoute aux craintes - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQ2FidHNxdTRDSWF3LWJrWjR4azBRZzRlaXJIc3kwam1pYVJsQ1pVTE4xZE84TjhuNjI2X0ctNTlUcUpDRnhtVTdqcVAyMUxtS3FvQ0JGWXFKclRsNDhmVlNObVpDQUVieXJTWTBpTXJsb0VPXzNaSm8wMnBsZDltMko1NEIzc2hnY254NHlYc2FNa0NtZDA5LVh2SEN4LXEwOTgteHE1c1pkbzBFVGUza2h4akdnN3ZYdXdaOG9tQkgxcEM4?oc=5",
-      "source": "news.google.com",
-      "description": "Guerre commerciale | La hausse des taux d’intérêt s’ajoute aux craintes  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Interview de Knightsbridge FX sur BNN : La Banque du Canada prévoit une accélération de l’inflation. - Knightsbridge Foreign Exchange",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMnFabTE2TjZwMl9rVWZJYTFBN21UR3oxdGhhVkM3bUhsZFVKS1hnVUVNMHJ5LUZZamdERlE0a3lQbEZYNVdOdWdVQ0VuZUVRcUtSTENGYTljMWc1OGs3S1FVMEpDUmJQdXI0VTZIaFdPdWd0bTF1OHdJT0NBcmRJRUZYZHhfbWVkRlkxY04zMnRmOU9Hdk1SOER3UUlGWWpjNDMxdGFRVnFBVkVMcmhGam9IbTNIanJzdmQ0UVZDWjlsSjVWUnRuNzBzM242S0U?oc=5",
-      "source": "news.google.com",
-      "description": "Interview de Knightsbridge FX sur BNN : La Banque du Canada prévoit une accélération de l’inflation.  Knightsbridge Foreign Exchange",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le taux de chômage s’est maintenu à 6,4 % au pays et à 5,6 % au Québec en août - Le Canada Français",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZy1LMWt1MTFoZzNwcVhkVlFYaXVTQTFfeDZpWGZqRXd5YnplQjNFT0s1WldNVW9UTzdad3cwb3pudjJtQW15am42aFJCMF9aSWhNaDg4MWstSFloSkdnUEoySEhnV1NJNFNEU2xEM1Rmd09UdjMyNzNzaWRyckJJanE0ZFVQbTQ1T0FPOUg1WmI1OEdGYmJ6TXI0WTYzb3poSExrNFJ0blUxZFhWaXVmS19sNUN3bzYxWURmbVlBRC10QQ?oc=5",
-      "source": "news.google.com",
-      "description": "Le taux de chômage s’est maintenu à 6,4 % au pays et à 5,6 % au Québec en août  Le Canada Français",
+      "description": "L’inflation en août devrait se maintenir à 3 % avec la baisse du prix du pétrole  Noovo Info",
       "cities": [],
       "category": "general"
     },
@@ -263,6 +239,14 @@
       "category": "general"
     },
     {
+      "title": "Une analyse de la Banque du Canada avertit que des chocs d'offre plus importants pourraient compliquer la maîtrise de l'inflation - IndexBox",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSXBDWFYzTHFfR0prUXJRQ19SUHg0YnlSdEdqdHZVdVBIQ1dLOW1ZMzNPOTJ0VXpldHJCaUQ0dVhOMU9KcFNKeUN6cjN0Y0xMcVRaV0o5NjFBSnh4Wi10Q280b3FMUGJBQS1nMTIxdnBEckdNWTFndTJKaVZ4VE5EZnkzc0dCRUpLMlYyYjItUGUzWEVOS2w0TWZmSnB6WGd1TllJdFBXMzdZSUVPNjRwNkJWTlZpNVZWcFE?oc=5",
+      "source": "news.google.com",
+      "description": "Une analyse de la Banque du Canada avertit que des chocs d'offre plus importants pourraient compliquer la maîtrise de l'inflation  IndexBox",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "L'incertitude commerciale rend les hausses de taux de la Banque du Canada plus difficiles à justifier, selon Rosenberg Research - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOUkhuY3VwWURpWGhKSTB0WGUyc0psRUsyc1lseHlDVmFLelh4eUJKTmVKc29US2tsaDgtbkVFZHk1VGVqS2d2dE0xYkc1WXBZU0p4c0p5dTNENmVQa1lDTGg1OS1OMDVBVndxN2ZRU0RXd3VsUDRXZUl5WkpvOUlyTkI1aGlfbF9kWlhYY1U2RWJuWWxwLUYyQV9aTWg5RHpIVEJRM01aVU01aEt1a0tCYmVYbjJONHd3Sy16bFk2MGJSUkJfLUtSV2pndWozcGUtaThPMjluSnFLXzFMMnRjWjBNU2FWRGNlVkVsVi1UQXhoMGM?oc=5",
       "source": "news.google.com",
@@ -271,10 +255,10 @@
       "category": "general"
     },
     {
-      "title": "Le marasme de l'emploi au Canada en août suggère que le resserrement de la Banque du Canada est mal évalué par le marché, selon Rosenberg Research - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOd1IwM0IzeG9tVkRsUGFVYTdxTmhVVDlFd2t4ZjVyd3ZfbVI2ZlNUVVZ5THBYWUVlVW02alNNTkhXTHFNeWFxLWR4SFBsMGs5eW0wNk4tTi1LTVByclA1QUprdkJaMnlOSVNOQ3NxTHl0TkdDMkNTSVdYUm5DVTctRlpfWmpkVmNLa2FORjFfUDdiUUNYLWxVQjJ6RlJPb1pXT2hIOGlUejJqT3RBQW5iTjBIOVJCOGVRMXZJcW9meHQ0NWwzWHFTbkRoRnJYQmtsa2x3ckYzWHA3dFMtVnVXelFINHVzblRJemZxaUEyRkw?oc=5",
+      "title": "Le marasme de l'emploi au Canada en août suggère que le resserrement de la Banque du Canada est mal évalué par le marché, selon Rosenberg Research - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOUUVPNURzeWZENWRXUEhxTHpMVEVrMU1YcVA1ZW5mbnI0WGlsc3JBbjI1SWRDbTg2R2lqMXNwdWhvMFh1Y0NDT2hETE4wSldETzhMTkZYaUgxR1ZIMm53bzB0Nl9yVVVoWUhXTE9kMmRaSnFUMkNkRmJkeGIxa3FsMThaMm51VGMwT1JLaDZTTXRRelljdWpwMUdmQXRaSjJ3VWEwS0YtNnFVaHRhQnlBS1lXVmpCeVhablVQOWlUd3NLTEZwRDkwYjZnLTlYRFFoM1BpMDdfcUFTbjEwTkdCVlpaTFhxLXUwTXhrdVVHd3RGdw?oc=5",
       "source": "news.google.com",
-      "description": "Le marasme de l'emploi au Canada en août suggère que le resserrement de la Banque du Canada est mal évalué par le marché, selon Rosenberg Research  Zonebourse Suisse",
+      "description": "Le marasme de l'emploi au Canada en août suggère que le resserrement de la Banque du Canada est mal évalué par le marché, selon Rosenberg Research  Zonebourse",
       "cities": [],
       "category": "general"
     }
@@ -331,5 +315,5 @@
     },
     "last_quarter": "août 2026"
   },
-  "last_update": "2026-09-11 16:54"
+  "last_update": "2026-09-12 15:59"
 }
