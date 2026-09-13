@@ -91,18 +91,34 @@
       "category": "local"
     },
     {
-      "title": "Sommet canadien de l’investissement | Le Québec loin dans la parade",
-      "link": "https://www.lapresse.ca/affaires/chroniques/2026-09-12/sommet-canadien-de-l-investissement/le-quebec-loin-dans-la-parade.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "États-Unis  | La Fed semble sur le point de monter au front contre l’inflation",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-09-13/etats-unis/la-fed-semble-sur-le-point-de-monter-au-front-contre-l-inflation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La ville de Toronto va recevoir lundi les dirigeants des plus grandes firmes d’investissement du monde entier. Ils ont été convoqués par le premier ministre Mark Carney, qui souhaite générer 1000 milliards d’investissements étrangers au pays au cours des cinq prochaines années, une initiative dans laquelle le Québec va jouer un rôle plutôt modeste.",
+      "description": "La Réserve fédérale américaine (Fed) va rendre la semaine prochaine une décision pas tout à fait scellée à l’avance. Les marchés penchent pour une hausse des taux d’intérêt, la bête noire de Donald Trump.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Wall Street se ressaisit, poussée par le répit sur l’énergie",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-09-11/wall-street-se-ressaisit-poussee-par-le-repit-sur-l-energie.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Train de vie | Gérer un gain de 525 000 $ quand on est retraités",
+      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-09-13/train-de-vie/gerer-un-gain-de-525-000-quand-on-est-retraites.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Bourse de New York a terminé dans le vert vendredi, profitant d’une accalmie du côté des prix du pétrole après la flambée des derniers jours, la publication d’un nouvel indice d’inflation aux États-Unis n’ayant pas surpris.",
+      "description": "Un couple d’aînés qui s’apprête à emménager dans un appartement locatif pour les 55 ans et plus veut savoir comment intégrer l’argent de la vente de sa maison à sa situation financière",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Dépenses de couples | Quand l’un gagne beaucoup plus que l’autre",
+      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-09-13/depenses-de-couples/quand-l-un-gagne-beaucoup-plus-que-l-autre.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Comment payer les dépenses courantes, le prêt hypothécaire, et jongler avec le moment de la retraite lorsqu’un couple a de grandes disparités de revenus ? Des experts se prononcent. Un dossier de Nicolas Bérubé",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Carney présentera le programme d’investissement canadien d’un sommet",
+      "link": "https://www.ledevoir.com/economie/1008557/carney-presentera-programme-investissement-canadien-sommet",
+      "source": "Le Devoir",
+      "description": "Son gouvernement cherche à lever les capitaux indispensables à la mise en œuvre de son programme économique.",
       "cities": [],
       "category": "general"
     },
@@ -147,6 +163,16 @@
       "category": "general"
     },
     {
+      "title": "Des milliers de logements de luxe vides à Montréal - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVE9xZmxpeWxOOS14SzJDaFNmZnZ5d0V5dTlIMHZNWmNjTUZnb1VjRllrRTBzN0NZR1ViU25GVGhtUlFmTUJxQ0trOG96QWl2eWM2a0xBQjhpOEhORWQ5UEhSN3pyRFdNV1laTXBOUkxqVFIwbGxBUF93YmdNMjdUcExNMmVfcENfVVJHaFJrWGU4cFQwVTNaZmNYQQ?oc=5",
+      "source": "news.google.com",
+      "description": "Des milliers de logements de luxe vides à Montréal  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
       "title": "Rapport sur l’offre de logements | Les mises en chantier demeurent insuffisantes au Canada - La Presse",
       "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxObF9fLU9fN21XMjBLeWNMVmJJY0pSVHpMYm9FaHRqbS1BZDdyOVpFUXRlcm1MRGRjLTlrZkgxZWxuTnZVcnRES3hnVWMwdDZSR2c5RjFrVmFvZXd4S3J5SVktMXRvdXVrM3RTSWlaem9TS2QyZmY4a0ttbU1OcE02UTRPNlg5QnFnMDg4Rnk2dkVKanB3S2dfeENvMEhOdzFpVWpDdG9SSDJtRm9fMXl2VjdJOXZTT19yMkRPNkw3Si1BSDNYSm5nODF3Wk5GRXU0clk5VVpKWjhZRzhRQkhlYklxNXZCXzkzZ0E?oc=5",
       "source": "news.google.com",
@@ -155,10 +181,18 @@
       "category": "general"
     },
     {
-      "title": "Des milliers de logements de luxe vides à Montréal - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVE9xZmxpeWxOOS14SzJDaFNmZnZ5d0V5dTlIMHZNWmNjTUZnb1VjRllrRTBzN0NZR1ViU25GVGhtUlFmTUJxQ0trOG96QWl2eWM2a0xBQjhpOEhORWQ5UEhSN3pyRFdNV1laTXBOUkxqVFIwbGxBUF93YmdNMjdUcExNMmVfcENfVVJHaFJrWGU4cFQwVTNaZmNYQQ?oc=5",
+      "title": "Prévisions des taux hypothécaires au Canada (mise à jour de septembre 2026) - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
+      "source": "mise à jour de septembre 2026",
+      "description": "Prévisions des taux hypothécaires au Canada (mise à jour de septembre 2026)  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "«On se sent de plus en plus coincés»: un boom immobilier qui dérange à Mont-Tremblant - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPcFZJNDdWQW80Ny1JM2hXRGxjVVY0TmR2WXZtUlVCbmFhbGUtSFNKYk9Xd3FNaFB3XzRyemJoSUtVVzB4Q0JYLVBkS25KcDFiYUhxT0o2S2RMR1RHWWJUY0JubmhPRkZuNFZPcjUzdHJVWXhjNkpoYzVuRG1BM2pJRzI0VU1nMEgxbGJueVVxc2YxRUhKeXNjVmt0NG9FRlM5dWhSTGY0ay1iREh5ZXM5REZOZldRRXhfb0xlRlFhMDEwdDVLenFleg?oc=5",
       "source": "news.google.com",
-      "description": "Des milliers de logements de luxe vides à Montréal  Le Journal de Montréal",
+      "description": "«On se sent de plus en plus coincés»: un boom immobilier qui dérange à Mont-Tremblant  Le Journal de Montréal",
       "cities": [
         "montreal"
       ],
@@ -175,10 +209,10 @@
       "category": "local"
     },
     {
-      "title": "L'acteur Francis Reddy vient de vendre sa maison pour 1 700 000 $ et voici toutes les photos - Vedette Québec",
+      "title": "L'acteur Francis Reddy vient de vendre sa maison pour 1 700 000 $ et voici toutes les photos - vedettequebec.com",
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZXQ5dHo0N0xoYlhyMDdYaGQtN3RGV2JQZjlOMXRCR01xNWUxUzBINUNaTnc1NkhxVmQ0THpmbHZvZF9SRVRJVkNfc1h0TjZDNDlKQ2tHcWlpaGpINEdFVHFhMk0zX3FmaUZvZUVpLXZKV213VGhLZWRjWlM3WkJLa0pnV1ZYRVVjWTJOQWpOOHdCRi1oU0lxTXRFSQ?oc=5",
       "source": "news.google.com",
-      "description": "L'acteur Francis Reddy vient de vendre sa maison pour 1 700 000 $ et voici toutes les photos  Vedette Québec",
+      "description": "L'acteur Francis Reddy vient de vendre sa maison pour 1 700 000 $ et voici toutes les photos  vedettequebec.com",
       "cities": [],
       "category": "general"
     },
@@ -187,6 +221,14 @@
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMUR3UW02TGRaVVd5aG9hbjU1N1RnSm9iZGE0T1BrZlhQLUJXUjdCenp4a3dMZkxZaFB0eUJCMmF1aUxRaW52S1RxNFFmNTR5Y25JUG5EcThzd01aZVJKY2p2bjFnV05yZW0wRFZacHlRSHBJUEppTVV6Q3B3Ny13di13bnhob2FLY2ppUUNLLWxZaHc?oc=5",
       "source": "news.google.com",
       "description": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans  Legossip.net",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaXFSRURHeUgtbnVYVVlORF9PdEdVS2NXTTF1Z25kQ3VodWRGSUxZQ0pTVWZXd1F4UGk4TWFqcGIySEU1R0h6elU3SjNrYlkwSWowQUdpM0VyTnR0SVdCelBDNGNxUFB5encwdDVLQWZBamtGSFBFYnVHOVROekRLNFJPa2UtRVZ1a1l6a01TWTFvY25H?oc=5",
+      "source": "news.google.com",
+      "description": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026  nesto.ca",
       "cities": [],
       "category": "general"
     },
@@ -207,6 +249,14 @@
       "category": "general"
     },
     {
+      "title": "Guerre commerciale | La hausse des taux d’intérêt s’ajoute aux craintes - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQ2FidHNxdTRDSWF3LWJrWjR4azBRZzRlaXJIc3kwam1pYVJsQ1pVTE4xZE84TjhuNjI2X0ctNTlUcUpDRnhtVTdqcVAyMUxtS3FvQ0JGWXFKclRsNDhmVlNObVpDQUVieXJTWTBpTXJsb0VPXzNaSm8wMnBsZDltMko1NEIzc2hnY254NHlYc2FNa0NtZDA5LVh2SEN4LXEwOTgteHE1c1pkbzBFVGUza2h4akdnN3ZYdXdaOG9tQkgxcEM4?oc=5",
+      "source": "news.google.com",
+      "description": "Guerre commerciale | La hausse des taux d’intérêt s’ajoute aux craintes  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "L’inflation en août devrait se maintenir à 3 % avec la baisse du prix du pétrole - Noovo Info",
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNV1lFbEpsY050SHF1ZnVydVUtRGx5d0p4eHpJRFNuRnN5SERhdEJSelB3dE93eUxBN0VjYmI2Y0dIRmpnekV2Tm0wM1JOQ25lVk5JTkZ2ME5rT1RTTWNsbVlKOWRoaUJKRHg5OG43QzltV3FrUXBYY1F5aUNMVFl0QnFLS041M1FqRURMM1hkUENlMkpuZlk3eVVKeUNxWHZrZURGc0Zjb2FjVlRWdV9mTzc2NmxNNDJaRkFlT0JpVWlLQzhPcVg0?oc=5",
       "source": "news.google.com",
@@ -219,14 +269,6 @@
       "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPY2xBOEgtQTBQY3RhTXpxQmgxdFU0QXIyT2lNdDFZSng3SVdyWlFkRXNPaDlvVWs0ZFZwbUl6UzVHb2FRMFpxR1FydkFBaXY1UXZaSThCZmQxMDhHN3hDVEZhUEhxLWZTMlFncFdCOFhETXNDRXlkWEI2cXNUeHhJOURiX0RNQzBsU2ZfQnNDbDgxcFh0TUZfLS1lVkgzVGZsdTNJM2NNLWtaZE5WRjU2YnBSTTM3Y2YyUTVXZnBxelQxX0pSdEdjYjJCVWo1SlVsa3luZTBfa0hOVlR6SzFJcWJ2RXk?oc=5",
       "source": "news.google.com",
       "description": "La Banque du Canada devrait reprendre ses hausses de taux en décembre, selon la Scotiabank  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Crédit privé : les caisses de retraite bien armées - conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMG96ZWVsZkNNZ29tQ3RBTG1UOW40YkJCajBTdlJfcHJHRFdVYko5NmRpZ3U2MEgyRDdVMVRyMUNqSVkzYXZ3a1lqOFdpdVhQcnRDQkhqcjZPYTVzZmo0YVpRQVBQZE5xN2YxRlloREZUY0h2b0dETkxYOTZOY1lLQ0d4Njc4UERT?oc=5",
-      "source": "news.google.com",
-      "description": "Crédit privé : les caisses de retraite bien armées  conseiller.ca",
       "cities": [],
       "category": "general"
     },
@@ -255,10 +297,10 @@
       "category": "general"
     },
     {
-      "title": "Le marasme de l'emploi au Canada en août suggère que le resserrement de la Banque du Canada est mal évalué par le marché, selon Rosenberg Research - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOUUVPNURzeWZENWRXUEhxTHpMVEVrMU1YcVA1ZW5mbnI0WGlsc3JBbjI1SWRDbTg2R2lqMXNwdWhvMFh1Y0NDT2hETE4wSldETzhMTkZYaUgxR1ZIMm53bzB0Nl9yVVVoWUhXTE9kMmRaSnFUMkNkRmJkeGIxa3FsMThaMm51VGMwT1JLaDZTTXRRelljdWpwMUdmQXRaSjJ3VWEwS0YtNnFVaHRhQnlBS1lXVmpCeVhablVQOWlUd3NLTEZwRDkwYjZnLTlYRFFoM1BpMDdfcUFTbjEwTkdCVlpaTFhxLXUwTXhrdVVHd3RGdw?oc=5",
+      "title": "La Banque du Canada maintient son taux directeur à 2.25 % et les acheteurs recalculent leurs prévisions. - elcentronews.net",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQWVZN1F1c3dxU2pycGZBMTZKeUdCODN2Vkw2dC1VTjFrTUpVTnp1NE9Ka01MZUF1bll1SmtDRnAxd1BZbHRBME5iNVlKZzIwUWxvOEgyZ0swSE5FdWxKblBPVGxEYm9nMzdhcFhQUGFoUUxPVk43OUJCbVUyYTN6Ry12eHV4TDU1dzhRQVFqUUh5OWdYd2dFTURKUW5Bd190Tk1OMEp0RF85VTl4LTBhcGhn?oc=5",
       "source": "news.google.com",
-      "description": "Le marasme de l'emploi au Canada en août suggère que le resserrement de la Banque du Canada est mal évalué par le marché, selon Rosenberg Research  Zonebourse",
+      "description": "La Banque du Canada maintient son taux directeur à 2.25 % et les acheteurs recalculent leurs prévisions.  elcentronews.net",
       "cities": [],
       "category": "general"
     }
@@ -315,5 +357,5 @@
     },
     "last_quarter": "août 2026"
   },
-  "last_update": "2026-09-12 15:59"
+  "last_update": "2026-09-13 16:49"
 }
