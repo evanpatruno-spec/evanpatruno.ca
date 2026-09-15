@@ -89,10 +89,68 @@
       "category": "general"
     },
     {
-      "title": "L’inflation est demeurée stable à 3,0 % en août au Canada",
+      "title": "Des taux américains au plus haut depuis 2007 plombent les marchés avant la Fed",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-09-15/des-taux-americains-au-plus-haut-depuis-2007-plombent-les-marches-avant-la-fed.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Des taux d’intérêt au plus haut depuis la crise de 2007-2008 plombaient mardi les marchés déjà sonnés par le pétrole, l’inflation et l’IA à la veille de la décision de la Fed sur ses propres taux.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les Québécois s’attendent à des hausses de salaire plus grandes que les prévisions",
+      "link": "https://www.lapresse.ca/affaires/2026-09-15/les-quebecois-s-attendent-a-des-hausses-de-salaire-plus-grandes-que-les-previsions.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "L’Ordre des conseillers en ressources humaines agréés (CRHA) prévoit des hausses salariales de 3,1 % au Québec en 2027.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Sommet canadien de l’investissement | « Le Québec est au centre de la transformation de l’économie », dit Eric Girard",
+      "link": "https://www.lapresse.ca/affaires/2026-09-15/sommet-canadien-de-l-investissement/le-quebec-est-au-centre-de-la-transformation-de-l-economie-dit-eric-girard.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Le ministre des Finances du Québec, Eric Girard, porte le message, en participant au sommet visant à stimuler l’investissement privé qui a lieu à Toronto, que « le Québec est au centre de la transformation de l’économie canadienne ».",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Ottawa entend stimuler les investissements grâce à de nouveaux avantages fiscaux",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-09-15/ottawa-entend-stimuler-les-investissements-grace-a-de-nouveaux-avantages-fiscaux.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Le gouvernement fédéral met en place une nouvelle mesure fiscale visant à stimuler les investissements des entreprises.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Sommet canadien de l’investissement | Les quatre grands aéroports du pays seront privatisés",
+      "link": "https://www.lapresse.ca/affaires/2026-09-15/sommet-canadien-de-l-investissement/les-quatre-grands-aeroports-du-pays-seront-privatises.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "L’aéroport international Montréal-Trudeau fait partie des quatre grands aéroports canadiens qui seront privatisés. Le premier ministre Mark Carney a annoncé mardi que son gouvernement se mettrait à la recherche de capitaux privés pour financer l’exploitation des aéroports de Toronto, Montréal, Vancouver et Calgary.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Investissements RPC et Brookfield lancent un fonds de 50 milliards",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-09-15/investissements-rpc-et-brookfield-lancent-un-fonds-de-50-milliards.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "L’Office d’investissement du régime de pensions du Canada et Brookfield Asset Management annoncent mardi la création d’un nouveau fonds de 50 milliards destiné à des investissements à grande échelle au Canada.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "« Le Québec est au centre de la transformation de l’économie », dit Eric Girard à Toronto",
+      "link": "https://www.ledevoir.com/economie/1009076/quebec-est-centre-transformation-economie-dit-eric-girard-toronto",
+      "source": "Le Devoir",
+      "description": "Le ministre des Finances du Québec participe au Sommet canadien de l’investissement du premier ministre Carney.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation est restée stable à 3 % en août au Canada",
       "link": "https://www.ledevoir.com/economie/1008755/inflation-est-demeuree-stable-3-0-aout-canada",
       "source": "Le Devoir",
-      "description": "La remontée des prix de l’essence avait fait grimper l’inflation à 3,0 % en juillet.",
+      "description": "La hausse des prix de l’essence a ralenti, mais a été contrebalancée par la hausse des loyers et des frais de voyage.",
       "cities": [],
       "category": "general"
     },
@@ -101,54 +159,6 @@
       "link": "https://www.ledevoir.com/economie/1008749/ecrasante-majorite-jeunes-veulent-devenir-proprietaires-malgre-obstacles",
       "source": "Le Devoir",
       "description": "Le rêve d’une maison unifamiliale demeure toutefois inatteignable pour plusieurs d’entre eux.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Carney présentera le programme d’investissement canadien lors d’un sommet",
-      "link": "https://www.ledevoir.com/economie/1008557/carney-presentera-programme-investissement-canadien-sommet",
-      "source": "Le Devoir",
-      "description": "Son gouvernement cherche à lever les capitaux indispensables à la mise en œuvre de son programme économique.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le déficit d’entretien des infrastructures est-il sous-estimé au Québec?",
-      "link": "https://www.ledevoir.com/economie/1008479/deficit-entretien-infrastructures-est-il-sous-estime-quebec",
-      "source": "Le Devoir",
-      "description": "L’explosion des coûts de construction plombe les efforts visant à freiner la dégradation des hôpitaux, écoles et routes.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’inflation en août devrait se maintenir à 3% avec la baisse du prix du pétrole",
-      "link": "https://www.ledevoir.com/economie/1008488/inflation-aout-devrait-maintenir-3-baisse-prix-petrole",
-      "source": "Le Devoir",
-      "description": "La pression inflationniste canadienne provient exclusivement des prix de l’essence et de l’énergie, estime un expert.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Toujours trop d’inflation aux États-Unis, une hausse des taux de la Fed se profile",
-      "link": "https://www.ledevoir.com/economie/1008323/toujours-trop-inflation-etats-unis-hausse-taux-fed-profile",
-      "source": "Le Devoir",
-      "description": "L’indice des prix à la consommation a progressé de 3,4% sur un an en août, le même rythme élevé qu’en juillet.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier Périphérie Nord de Québec — Août 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeGQxTVREeTBIUXRsNzR1TFRZbkR3UEc3T0dFX0dIQnNHRDN6bVJFYjFKTzY3YU0wQVpLdGRsU0tFbGpjb0NRZlNtWTBNdFAtVmFWNGhEZVNpT0YtZ2lsUW1zbEpsaDNJSU9JMjJWVGktR1JBNlM0MkVxN0pwNHdhZHJaSFU4UnhZWjExd0dxX3FVU29KM1BHdC1JemtvT09fd1Y2SWpoM2tvdFdudUJJT1lnR05uRnAyTVhqOHpiWC1IZw?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier Périphérie Nord de Québec — Août 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Une autre sanction s’abat sur cet entrepreneur immobilier de Québec - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQb1VDWldTa3JIT21SU1NRekhyQlpVelRNMURDMmxRUlptWXpwa1ZVNjBYWV9BQnBWWm15clUwQzVpd3dqTTZ4aVFkeU9KUWlLdFRFY2hyWHRDTFJUM25iY1VfN2ZCQWdWdVlBVXk0N0J6WGh3dExlb0kxVkg5Y2F1YjUwUTVHSEI2em5weTRNMzNHLW9UMWVORWZlVEdyQjNsU3hTU3dxem5qNXNRekFzWVkzSS1PNEI5T3NUWDczc0Z3VlRobmxfQ0hvMlFIMXgtdzRGeElDTDRtdG1wRndBQzRtdDJ1cHpseW0tNVAtdVNDanlHY0J4LW5LcVNxUzhaMnc?oc=5",
-      "source": "news.google.com",
-      "description": "Une autre sanction s’abat sur cet entrepreneur immobilier de Québec  Le Soleil",
       "cities": [],
       "category": "general"
     },
@@ -163,6 +173,22 @@
       "category": "local"
     },
     {
+      "title": "Une autre sanction s’abat sur cet entrepreneur immobilier de Québec - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQb1VDWldTa3JIT21SU1NRekhyQlpVelRNMURDMmxRUlptWXpwa1ZVNjBYWV9BQnBWWm15clUwQzVpd3dqTTZ4aVFkeU9KUWlLdFRFY2hyWHRDTFJUM25iY1VfN2ZCQWdWdVlBVXk0N0J6WGh3dExlb0kxVkg5Y2F1YjUwUTVHSEI2em5weTRNMzNHLW9UMWVORWZlVEdyQjNsU3hTU3dxem5qNXNRekFzWVkzSS1PNEI5T3NUWDczc0Z3VlRobmxfQ0hvMlFIMXgtdzRGeElDTDRtdG1wRndBQzRtdDJ1cHpseW0tNVAtdVNDanlHY0J4LW5LcVNxUzhaMnc?oc=5",
+      "source": "news.google.com",
+      "description": "Une autre sanction s’abat sur cet entrepreneur immobilier de Québec  Le Soleil",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier Périphérie Nord de Québec — Août 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeGQxTVREeTBIUXRsNzR1TFRZbkR3UEc3T0dFX0dIQnNHRDN6bVJFYjFKTzY3YU0wQVpLdGRsU0tFbGpjb0NRZlNtWTBNdFAtVmFWNGhEZVNpT0YtZ2lsUW1zbEpsaDNJSU9JMjJWVGktR1JBNlM0MkVxN0pwNHdhZHJaSFU4UnhZWjExd0dxX3FVU29KM1BHdC1JemtvT09fd1Y2SWpoM2tvdFdudUJJT1lnR05uRnAyTVhqOHpiWC1IZw?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier Périphérie Nord de Québec — Août 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "«On se sent de plus en plus coincés»: un boom immobilier qui dérange à Mont-Tremblant - Le Journal de Montréal",
       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPcFZJNDdWQW80Ny1JM2hXRGxjVVY0TmR2WXZtUlVCbmFhbGUtSFNKYk9Xd3FNaFB3XzRyemJoSUtVVzB4Q0JYLVBkS25KcDFiYUhxT0o2S2RMR1RHWWJUY0JubmhPRkZuNFZPcjUzdHJVWXhjNkpoYzVuRG1BM2pJRzI0VU1nMEgxbGJueVVxc2YxRUhKeXNjVmt0NG9FRlM5dWhSTGY0ay1iREh5ZXM5REZOZldRRXhfb0xlRlFhMDEwdDVLenFleg?oc=5",
       "source": "news.google.com",
@@ -173,18 +199,10 @@
       "category": "local"
     },
     {
-      "title": "Projet de résolution C.M. 2026-1821-00 autorisant la construction d’un projet immobilier de 10 étages comportant 88 logements – Zone C0583 – Lots 1 030 645 et 1 030 649 du cadastre du Québec – 340 rue King Ouest - Ville de Sherbrooke",
-      "link": "https://news.google.com/rss/articles/CBMikANBVV95cUxPTmhRczVkRlpYeHZ2NWJoaEs0eXNEbEhKUTNYSW5HUHdaRmV1WUt5S1d1aHVfTTl5cHNnYzhaa2h1akR4eW5QUGFJYTcyT292elpGcmJhVkxjT0FLTnl1OFRidHZfTXpoSVY4MTdsMVFnbE53cFIxSjlLODYyWnlFTmxpRm9sdUw4bUFyaDZaNjJROW5iLWI3SlA0bUtXZmVHaDJMZGc3NVFjQzBmQzVGMXN3OTVtS1E5Ml9fQjJ0TnhSaUxsZnlOVVYxbUMzTVFpS3VEZjA5Uzg3bjRyeTc5WHFBT0xjY1ExQjRLWHhfaHVTZnNqQnJPR1dMSENPSUhoTk1MZ21jV09HWjlydmxINFBmWHUyM1ZZcTMxMktIOENDZDVkWnF0UTJuRUc4ZGtaYW1nNkNoLUlJQ19KWFpRYzF6d1QwOWdRb0ZuRVlValQyYWI0TVh5bkhiT0FBWHF2OUwwTnB5Qk5kY1NxdmVPZnFEX1BpNzM4c09mM05LNW53V0Q0VURlYXIzdjJKWDhv?oc=5",
+      "title": "Rapport sur l’offre de logements | Les mises en chantier demeurent insuffisantes au Canada - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxObF9fLU9fN21XMjBLeWNMVmJJY0pSVHpMYm9FaHRqbS1BZDdyOVpFUXRlcm1MRGRjLTlrZkgxZWxuTnZVcnRES3hnVWMwdDZSR2c5RjFrVmFvZXd4S3J5SVktMXRvdXVrM3RTSWlaem9TS2QyZmY4a0ttbU1OcE02UTRPNlg5QnFnMDg4Rnk2dkVKanB3S2dfeENvMEhOdzFpVWpDdG9SSDJtRm9fMXl2VjdJOXZTT19yMkRPNkw3Si1BSDNYSm5nODF3Wk5GRXU0clk5VVpKWjhZRzhRQkhlYklxNXZCXzkzZ0E?oc=5",
       "source": "news.google.com",
-      "description": "Projet de résolution C.M. 2026-1821-00 autorisant la construction d’un projet immobilier de 10 étages comportant 88 logements – Zone C0583 – Lots 1 030 645 et 1 030 649 du cadastre du Québec – 340 rue King Ouest  Ville de Sherbrooke",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Prévisions des taux hypothécaires au Canada (mise à jour de septembre 2026) - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "mise à jour de septembre 2026",
-      "description": "Prévisions des taux hypothécaires au Canada (mise à jour de septembre 2026)  nesto.ca",
+      "description": "Rapport sur l’offre de logements | Les mises en chantier demeurent insuffisantes au Canada  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -204,6 +222,14 @@
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZkMyTVVhbFVsOUpnbTVCV2NDWEZGclpMYTF3X2Z1UklxMGlTdnB6cUJBRTNwODF4ZTc1b01KVnR3ZG1Qb2txLUpMMFI4OFVQZE1hVVJYZ0o1UVIzMkVwU1d3eXE3SHZibUtaUU9hemRBTHJ1enA5RWxhZGQ0T0puUFVrOFhoOVQxeC1MOVhzdkZlQTR2Y0dDOXBUZno2SnFtcTNqc2tjQ29xWldHazJIcnFn?oc=5",
       "source": "news.google.com",
       "description": "Marché immobilier RMR de Québec — Août 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le PCQ dévoile son plan pour construire plus de logements - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPM0pVbXZITk9rRFE3elpMaUczMTNrMW9QOEIwbkg2eENhbVlEU2gwVVlmbEF3M21fUWZtVnIxOUlOTHBUQVp5QWdVSkpIX3RkT0t3cTRidkpzcGcxTkR6YjFvVWhXZlZUVnZuWFpma3JlWlVwVjA2N0swOWc2YmMyS2VmZGlHRnJ4WmdZeWRMTU85dTluZFVKZkZzcFJJLXhfUTA1clNUTUl4TU1JOHdsd2NMVVdWeHVScFE?oc=5",
+      "source": "news.google.com",
+      "description": "Le PCQ dévoile son plan pour construire plus de logements  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -249,8 +275,8 @@
       "source": "news.google.com",
       "description": "Marché immobilier Rive-Sud de Montréal — Août 2026  Journal Métro",
       "cities": [
-        "montreal",
-        "rive-sud"
+        "rive-sud",
+        "montreal"
       ],
       "category": "local"
     },
@@ -273,26 +299,26 @@
       "category": "general"
     },
     {
-      "title": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada - ratehub.ca",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
-      "source": "news.google.com",
-      "description": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada  ratehub.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans - legossip.net",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMUR3UW02TGRaVVd5aG9hbjU1N1RnSm9iZGE0T1BrZlhQLUJXUjdCenp4a3dMZkxZaFB0eUJCMmF1aUxRaW52S1RxNFFmNTR5Y25JUG5EcThzd01aZVJKY2p2bjFnV05yZW0wRFZacHlRSHBJUEppTVV6Q3B3Ny13di13bnhob2FLY2ppUUNLLWxZaHc?oc=5",
-      "source": "news.google.com",
-      "description": "Michel Drucker : son rêve immobilier au Québec refait surface à 83 ans  legossip.net",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026 - nesto.ca",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaXFSRURHeUgtbnVYVVlORF9PdEdVS2NXTTF1Z25kQ3VodWRGSUxZQ0pTVWZXd1F4UGk4TWFqcGIySEU1R0h6elU3SjNrYlkwSWowQUdpM0VyTnR0SVdCelBDNGNxUFB5encwdDVLQWZBamtGSFBFYnVHOVROekRLNFJPa2UtRVZ1a1l6a01TWTFvY25H?oc=5",
       "source": "news.google.com",
       "description": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La valeur nette des ménages canadiens : ce que les dernières données signifient pour votre hypothèque - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5iZ0trLXRaVXljNGdsbTN2WVBFUWExekxXTUdvb0xINFFPYkZBY1VOOUE5WkszMkhFRmt2NEJ4MGdFc3RmVk9kamlVVXZkRmtycWNzZzR4NU83b19NQmtlOG4zaXhPWFpIeHdFRVlrVE1yLU0?oc=5",
+      "source": "news.google.com",
+      "description": "La valeur nette des ménages canadiens : ce que les dernières données signifient pour votre hypothèque  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les taux de la Banque du Canada et de la Fed devraient augmenter selon différents points de départ - rbc.com",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPVHllMTZLeDEwdE40Y3R6V1gtUnU2WEdMOFBmNTNzZm84ZWNETlZfN0Z2NUlOSVI4Nk1uNmo5Z3ExaU10ZzRQV1NMZDhjMGtpZlluMHE0S1VqNUhZWTFPeVhCWGZFeXBvbnlCaG5peHRQMFBSdkJkZEsxWEFfRGVhNThfNk5wSFpRZGVqS2wxemJucUxMckNheE5lTGJEUlR4alhLdVR2Vnh4N1Vydjl2QmFveVp1V1A5eDZ6ZXpYOUpNRHpyaE00RXVIWUNhUklEM080OUFIVmFqUHp4RWdfb1ZFdWdfNFE?oc=5",
+      "source": "news.google.com",
+      "description": "Les taux de la Banque du Canada et de la Fed devraient augmenter selon différents points de départ  rbc.com",
       "cities": [],
       "category": "general"
     },
@@ -305,18 +331,18 @@
       "category": "general"
     },
     {
-      "title": "La hausse des taux d’intérêt s’ajoute aux craintes liées à la guerre commerciale - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONU55QTRfZkUtbndEVXozVG5mZUVGNXRKbTBUclBlWTJxN0lfT1FQbG9sc25aN0x5RE5aeDJMQ3czcnRfSkVySm9LZUlGV21YNW5rbjhGa1llaUVXNHBGSDBiVXZtUmtjaUxzdEZMMlcyenFuS21jNU1NckU4QVNNVUpMelVNS1dXSzdaQjFHQUlTVjZnbXo5WTR2eTl3Zi1WaU9DWA?oc=5",
+      "title": "Guerre commerciale | La hausse des taux d’intérêt s’ajoute aux craintes - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQ2FidHNxdTRDSWF3LWJrWjR4azBRZzRlaXJIc3kwam1pYVJsQ1pVTE4xZE84TjhuNjI2X0ctNTlUcUpDRnhtVTdqcVAyMUxtS3FvQ0JGWXFKclRsNDhmVlNObVpDQUVieXJTWTBpTXJsb0VPXzNaSm8wMnBsZDltMko1NEIzc2hnY254NHlYc2FNa0NtZDA5LVh2SEN4LXEwOTgteHE1c1pkbzBFVGUza2h4akdnN3ZYdXdaOG9tQkgxcEM4?oc=5",
       "source": "news.google.com",
-      "description": "La hausse des taux d’intérêt s’ajoute aux craintes liées à la guerre commerciale  Le Devoir",
+      "description": "Guerre commerciale | La hausse des taux d’intérêt s’ajoute aux craintes  La Presse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L’inflation en août devrait se maintenir à 3 % avec la baisse du prix du pétrole - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNV1lFbEpsY050SHF1ZnVydVUtRGx5d0p4eHpJRFNuRnN5SERhdEJSelB3dE93eUxBN0VjYmI2Y0dIRmpnekV2Tm0wM1JOQ25lVk5JTkZ2ME5rT1RTTWNsbVlKOWRoaUJKRHg5OG43QzltV3FrUXBYY1F5aUNMVFl0QnFLS041M1FqRURMM1hkUENlMkpuZlk3eVVKeUNxWHZrZURGc0Zjb2FjVlRWdV9mTzc2NmxNNDJaRkFlT0JpVWlLQzhPcVg0?oc=5",
+      "title": "L’inflation est demeurée stable à 3,0% en août au Canada - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNTFwV3kxVGJOTndUMXlmZjAwUFZmaFJISTNEejBINEUzb1Q4LWExTXFXbEs2eU1sb2JTV2JXcnFpOGxZZjY1TXktMDhNR3kwRndUVEwzRDBybUYwcE5nclZWV3ZIWVBObnFPaUR6MVYwMlMwM2lHUkJPNDZ5WUdqRTZhbi1SMExsanNmTldFWTBRZU5CdGFaUlprdWtqRXBzQXVLZE9POA?oc=5",
       "source": "news.google.com",
-      "description": "L’inflation en août devrait se maintenir à 3 % avec la baisse du prix du pétrole  Noovo Info",
+      "description": "L’inflation est demeurée stable à 3,0% en août au Canada  Noovo Info",
       "cities": [],
       "category": "general"
     },
@@ -329,10 +355,42 @@
       "category": "general"
     },
     {
-      "title": "Les marchés anticipent une hausse des taux de la Banque du Canada d'ici décembre, l'échéance d'octobre étant désormais envisagée, selon Scotiabank - zonebourse.com",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNVWx4d1R3ZXFSZDBfbzd0NERmOVVFZWIwWVRsWFpqSXpvS1JwVF91Z05KNWlfZTRLanlTS0ZZeG1uRmVyUWQwVG5lZDBpVWE4bS1BZlVDMHhOT2R5TmRWNmhOWDl5bG1KbldLWWJTTllnN01GM0R5b3AtbzBXVDRZWjBrX21Hd3BSLVY2Q25VS3JNTjJqejdnOGtGLWJidEQ0NUZfSEVOMHkxeS1ScGpuMVBRZ053enRTRUl2UHhZRFBaOUw4cXNSWW5EWVpkZHhoZXZUUlJYeXpxZ3ZZa3hoWEhnd3dSNTh6ZzdqZkdWT2xXZw?oc=5",
+      "title": "L’inflation canadienne se maintient à 3 % alors que la croissance des prix de l’essence ralentit - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNa056M3JEVVlOcC1WeTRvSEotWk1ZUVY4NF9DaHQ3OWxtTGRvTWZtQVJjUXRuUHBfLW51YUFqdzF3NHhyR3ktMnQ2TV95dkdTZjNNOVRlN3BNQUZ6cjc0b3VhOWJyZGUwR245TTQ2ZFc3d0VfUTNiRGctRk1vMllUMFRoYWlwaHlxZlluTWlpLWlNMktFVjlBZUpucUNLNVNYWk9MSHIyZ1o1ZVYzY1RicjM4djNzUnRmeDU1cE1OSG5NWTB1WUJXa3R6VjFEQVJDajhRQl9LclR3MEk?oc=5",
       "source": "news.google.com",
-      "description": "Les marchés anticipent une hausse des taux de la Banque du Canada d'ici décembre, l'échéance d'octobre étant désormais envisagée, selon Scotiabank  zonebourse.com",
+      "description": "L’inflation canadienne se maintient à 3 % alors que la croissance des prix de l’essence ralentit  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation globale au Canada s’est probablement maintenue à 3 % en août - rbc.com",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNaGNMbHk0eVdsTnRRQks2Q1ZYc2xFczJ5eHpZSG5vTkxzNC1LTmFWODlwNF9NTzFuY1pqTl81cW80blRvYTZMOExfX0s0YVl4OEkydmh5Q0NwTU9aOGlGS1pUQkdqeDZsdDFHOHBCSHY1enJHVkFuVTUyR2tuWnh2a1VtS3dXRGlYaTQ4b21GekM4X01YMVlKLXFNcXRmQWotdElMMjl1dUpGc1JEaC1JMFZiRVlndWlCN0lwS0dKUU5SZG9DVHJHY0VR?oc=5",
+      "source": "news.google.com",
+      "description": "L’inflation globale au Canada s’est probablement maintenue à 3 % en août  rbc.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient son taux à 2,25 % alors que les risques d’inflation s’accentuent - crea.ca",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPWWZIVF9aWGZVS3U3cVBWeHZySjdHTWFJdVp0eExSa2liU0dMaTdwcUMzVVE3dmVhNUJaeXdNNTJ4Y1kxblNBUHlVbjBoUnZJZGNKQTVuWXRKMkVaWDQ4Z0lhTkVrZ1N5TUJoSTQ5Wm02WGF3ME8xd0J2NDdxblQxNnU2Y09qQnR0dmMwLUJxYw?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux à 2,25 % alors que les risques d’inflation s’accentuent  crea.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation en août devrait se maintenir à 3 % avec la baisse du prix du pétrole - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNV1lFbEpsY050SHF1ZnVydVUtRGx5d0p4eHpJRFNuRnN5SERhdEJSelB3dE93eUxBN0VjYmI2Y0dIRmpnekV2Tm0wM1JOQ25lVk5JTkZ2ME5rT1RTTWNsbVlKOWRoaUJKRHg5OG43QzltV3FrUXBYY1F5aUNMVFl0QnFLS041M1FqRURMM1hkUENlMkpuZlk3eVVKeUNxWHZrZURGc0Zjb2FjVlRWdV9mTzc2NmxNNDJaRkFlT0JpVWlLQzhPcVg0?oc=5",
+      "source": "news.google.com",
+      "description": "L’inflation en août devrait se maintenir à 3 % avec la baisse du prix du pétrole  Noovo Info",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada devrait reprendre ses hausses de taux en décembre, selon la Scotiabank - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPY2xBOEgtQTBQY3RhTXpxQmgxdFU0QXIyT2lNdDFZSng3SVdyWlFkRXNPaDlvVWs0ZFZwbUl6UzVHb2FRMFpxR1FydkFBaXY1UXZaSThCZmQxMDhHN3hDVEZhUEhxLWZTMlFncFdCOFhETXNDRXlkWEI2cXNUeHhJOURiX0RNQzBsU2ZfQnNDbDgxcFh0TUZfLS1lVkgzVGZsdTNJM2NNLWtaZE5WRjU2YnBSTTM3Y2YyUTVXZnBxelQxX0pSdEdjYjJCVWo1SlVsa3luZTBfa0hOVlR6SzFJcWJ2RXk?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada devrait reprendre ses hausses de taux en décembre, selon la Scotiabank  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -353,26 +411,18 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada devrait reprendre ses hausses de taux en décembre, selon la Scotiabank - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNN2ZOR0VMclhsWDJVZEdISUNyclAzaURBQ2MyaUVKa2M5V3pOLTBlUVpOSjFLMGdhQ2dNTFgxelItSVMwUDBQUDlBTFlwV0RyWHRsajEtVEY3MXAtRnp6aExLMzZqXzVtVWNJMEpCeTd3U0R3cnhSVGxscDBXSThzOTVaOUZjaTdXazROR0xHblZ4WGVNOTFMVERBVGhqaXg4RURicUpLYlQ0YWxFTkFsTEo3VnZtcUNZQzJZWi05am8wcWRIVm9EakM4UVMyQVExYkU0aFZDSE1ZbjFlY3RzZDBRaw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada devrait reprendre ses hausses de taux en décembre, selon la Scotiabank  Zonebourse Suisse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Une analyse de la Banque du Canada avertit que des chocs d'offre plus importants pourraient compliquer la maîtrise de l'inflation - IndexBox",
+      "title": "Une analyse de la Banque du Canada avertit que des chocs d'offre plus importants pourraient compliquer la maîtrise de l'inflation - indexbox.io",
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSXBDWFYzTHFfR0prUXJRQ19SUHg0YnlSdEdqdHZVdVBIQ1dLOW1ZMzNPOTJ0VXpldHJCaUQ0dVhOMU9KcFNKeUN6cjN0Y0xMcVRaV0o5NjFBSnh4Wi10Q280b3FMUGJBQS1nMTIxdnBEckdNWTFndTJKaVZ4VE5EZnkzc0dCRUpLMlYyYjItUGUzWEVOS2w0TWZmSnB6WGd1TllJdFBXMzdZSUVPNjRwNkJWTlZpNVZWcFE?oc=5",
       "source": "news.google.com",
-      "description": "Une analyse de la Banque du Canada avertit que des chocs d'offre plus importants pourraient compliquer la maîtrise de l'inflation  IndexBox",
+      "description": "Une analyse de la Banque du Canada avertit que des chocs d'offre plus importants pourraient compliquer la maîtrise de l'inflation  indexbox.io",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L'incertitude commerciale rend les hausses de taux de la Banque du Canada plus difficiles à justifier, selon Rosenberg Research - zonebourse.com",
+      "title": "L'incertitude commerciale rend les hausses de taux de la Banque du Canada plus difficiles à justifier, selon Rosenberg Research - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOUkhuY3VwWURpWGhKSTB0WGUyc0psRUsyc1lseHlDVmFLelh4eUJKTmVKc29US2tsaDgtbkVFZHk1VGVqS2d2dE0xYkc1WXBZU0p4c0p5dTNENmVQa1lDTGg1OS1OMDVBVndxN2ZRU0RXd3VsUDRXZUl5WkpvOUlyTkI1aGlfbF9kWlhYY1U2RWJuWWxwLUYyQV9aTWg5RHpIVEJRM01aVU01aEt1a0tCYmVYbjJONHd3Sy16bFk2MGJSUkJfLUtSV2pndWozcGUtaThPMjluSnFLXzFMMnRjWjBNU2FWRGNlVkVsVi1UQXhoMGM?oc=5",
       "source": "news.google.com",
-      "description": "L'incertitude commerciale rend les hausses de taux de la Banque du Canada plus difficiles à justifier, selon Rosenberg Research  zonebourse.com",
+      "description": "L'incertitude commerciale rend les hausses de taux de la Banque du Canada plus difficiles à justifier, selon Rosenberg Research  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -437,5 +487,5 @@
     },
     "last_quarter": "août 2026"
   },
-  "last_update": "2026-09-14 18:21"
+  "last_update": "2026-09-15 17:28"
 }
