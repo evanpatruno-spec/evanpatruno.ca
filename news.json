@@ -89,36 +89,38 @@
       "category": "general"
     },
     {
-      "title": "Sommet canadien de l’investissement | Les grands projets se heurtent à des obstacles",
-      "link": "https://www.lapresse.ca/affaires/2026-09-16/sommet-canadien-de-l-investissement/les-grands-projets-se-heurtent-a-des-obstacles.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Selon le Bureau de la directrice parlementaire du budget | L’inflation a fait flamber les coûts liés aux allocations pour enfants",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-09-17/selon-le-bureau-de-la-directrice-parlementaire-du-budget/l-inflation-a-fait-flamber-les-couts-lies-aux-allocations-pour-enfants.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Le premier sommet canadien de l’investissement a suscité un vif intérêt, montrant que le pays est ouvert aux affaires, mais, selon des experts, le véritable défi consistera à déterminer si cette dynamique pourra se traduire par des projets d’envergure capables de surmonter les pénuries de main-d’œuvre, les préoccupations locales, les obstacles environnementaux et la lenteur des procédures d’autorisation.",
+      "description": "L’organisme de surveillance budgétaire d’Ottawa indique que la forte hausse de l’inflation enregistrée il y a quelques années a entraîné une augmentation considérable du coût de la mise en œuvre de l’Allocation canadienne pour enfants (ACE) après la pandémie.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Les mises en chantier d’habitations ont légèrement reculé en août",
-      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-09-16/les-mises-en-chantier-d-habitations-ont-legerement-recule-en-aout.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Wall Street ouvre en hausse, rassurée sur l’inflation",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-09-17/wall-street-ouvre-en-hausse-rassuree-sur-l-inflation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Société canadienne d’hypothèques et de logement (SCHL) indique que le rythme des mises en chantier en août a légèrement reculé par rapport à juillet.",
+      "description": "La Bourse de New York a ouvert en nette hausse jeudi, portée par des craintes moins élevées quant à l’inflation face au recul des prix du pétrole et au serrage de vis de la Réserve fédérale (Fed).",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Prise en main | L’iPhone 18 Pro remet le Pro dans l’iPhone",
-      "link": "https://www.lapresse.ca/affaires/techno/2026-09-16/prise-en-main/l-iphone-18-pro-remet-le-pro-dans-l-iphone.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Prise en main | Apple Watch Series 12 et Ultra 4 : poignet sous haute surveillance",
+      "link": "https://www.lapresse.ca/affaires/techno/2026-09-17/prise-en-main/apple-watch-series-12-et-ultra-4-poignet-sous-haute-surveillance.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Il en va de l’iPhone comme des autres produits de la marque Apple : plusieurs acheteurs vont préférer le modèle dernier cri sans l’utiliser à fond. Ce sera sans doute encore le cas pour l’iPhone 18 Pro, un iPhone plus puissant, plus polyvalent et plus cher que jamais. Bref, plus « Pro ».",
+      "description": "Il y a deux acheteurs d’Apple Watch. Le premier veut fermer ses trois anneaux d’activité chaque jour et lire des textos sans toucher à son téléphone. Le second prépare un demi-marathon à longueur d’année. Apple a une montre pour tout le monde : la Series 12 pour la vie de bureau et l’Ultra 4 pour les aventuriers du dimanche.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "«Le Québec est au centre de la transformation de l’économie», dit Eric Girard à Toronto",
-      "link": "https://www.ledevoir.com/economie/1009076/quebec-est-centre-transformation-economie-dit-eric-girard-toronto",
-      "source": "Le Devoir",
-      "description": "Le ministre des Finances du Québec participe au Sommet canadien de l’investissement du premier ministre Carney.",
-      "cities": [],
-      "category": "general"
+      "title": "Marché immobilier Rive-Sud de Québec — Août 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaXpTemgwXzE0QnF5SUJSQ0VyUnJCTmJUNVZRZUFhY0gxX21Cbmo5WHdMbFVsdDY1S1hoOWN5Q21hR2VWQU9vVGl4UDNEUXM2dlBmRWpqZ2RpdzBVVHc2Sm03TUNVRG1WRzZqVkFWQnZFcmNIaEpJZ1FZamR2RTAxZFRYVDRfRG9kc1ZHTWJfc3lFMi1ZWGptRko4cFFJWjFpV2VTMjQ2VUhHLU9JRS1RdzJtVTlwM2RMOFNFakRySWw?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier Rive-Sud de Québec — Août 2026  Journal Métro",
+      "cities": [
+        "rive-sud"
+      ],
+      "category": "local"
     },
     {
       "title": "Une autre sanction s’abat sur cet entrepreneur immobilier de Québec - Le Soleil",
@@ -129,15 +131,12 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier Rive-Nord de Montréal — Août 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSElPb2cwaTNON3gxYTJuX20zbGZwd1pvWEp0TGx6QUd6VHR4Yl9GRng3R1R3eFRBNktkeS1LSTBkcUx4NzlrR3ZWR2EyQm94d0RfS0FVXzRxSDU1ZjZpNFJydWtBeFlIRHFOaVhVaVNSNzU0SGRleXFxdXkyUS1nTkhlYUl5dXVrWkE2QzZsZmUtcDVYcXRfVjBkZzhHV3ViZk9OakQ1UzUyMm5HLTN5am12SUFSMkhPZHB1dQ?oc=5",
+      "title": "Le Québec impose de nouvelles obligations de divulgation énergétique aux propriétaires immobiliers - Fasken",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPV1V2RnhuNm9EV0dXRGtVX2hWX3hIRDlhNUVxT1Z2ckYxYXp0N0FPalBmYk90cV96VFQ5bTRKdElfbFgwbmdTQzRCTDNtM2o1cFhiaHV1U0dPai02MWVQSXZuY0ZlX0dEaFNwaGpaTnFRR3Q2aG9Tdnd5RE40OVFjM1B6cHBXdTc2RWJ3TER3?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier Rive-Nord de Montréal — Août 2026  Journal Métro",
-      "cities": [
-        "rive-nord",
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Le Québec impose de nouvelles obligations de divulgation énergétique aux propriétaires immobiliers  Fasken",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "«On se sent de plus en plus coincés»: un boom immobilier qui dérange à Mont-Tremblant - Le Journal de Montréal",
@@ -150,10 +149,10 @@
       "category": "local"
     },
     {
-      "title": "Rapport sur l’offre de logements | Les mises en chantier demeurent insuffisantes au Canada - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxObF9fLU9fN21XMjBLeWNMVmJJY0pSVHpMYm9FaHRqbS1BZDdyOVpFUXRlcm1MRGRjLTlrZkgxZWxuTnZVcnRES3hnVWMwdDZSR2c5RjFrVmFvZXd4S3J5SVktMXRvdXVrM3RTSWlaem9TS2QyZmY4a0ttbU1OcE02UTRPNlg5QnFnMDg4Rnk2dkVKanB3S2dfeENvMEhOdzFpVWpDdG9SSDJtRm9fMXl2VjdJOXZTT19yMkRPNkw3Si1BSDNYSm5nODF3Wk5GRXU0clk5VVpKWjhZRzhRQkhlYklxNXZCXzkzZ0E?oc=5",
+      "title": "Prix des logements | Pour un Québec abordable - lapresse.ca",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbjJpYlhCMXg0b1VLeFppdEI5ZEVUV21qZmhoUUpRaFlaM2ljWXlpZ1huZXo3LVZUZ2QxMEk2QlpCbm9BSy12V041Umc4enltWVBfdl9nT0NMZ25IOFowNUViSElLYm5wYkxfRF92ZVZsRS1PTU05OXBSZEFKSEQxdklmeEN1SlE1OGRSNTh4Yk5IUnkwdkFtdERIa0h6SHBXU0E?oc=5",
       "source": "news.google.com",
-      "description": "Rapport sur l’offre de logements | Les mises en chantier demeurent insuffisantes au Canada  La Presse",
+      "description": "Prix des logements | Pour un Québec abordable  lapresse.ca",
       "cities": [],
       "category": "general"
     },
@@ -166,42 +165,34 @@
       "category": "general"
     },
     {
+      "title": "Prévisions des taux hypothécaires au Canada (mise à jour de septembre 2026) - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
+      "source": "mise à jour de septembre 2026",
+      "description": "Prévisions des taux hypothécaires au Canada (mise à jour de septembre 2026)  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Marché immobilier RMR de Québec — Août 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZkMyTVVhbFVsOUpnbTVCV2NDWEZGclpMYTF3X2Z1UklxMGlTdnB6cUJBRTNwODF4ZTc1b01KVnR3ZG1Qb2txLUpMMFI4OFVQZE1hVVJYZ0o1UVIzMkVwU1d3eXE3SHZibUtaUU9hemRBTHJ1enA5RWxhZGQ0T0puUFVrOFhoOVQxeC1MOVhzdkZlQTR2Y0dDOXBUZno2SnFtcTNqc2tjQ29xWldHazJIcnFn?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSmF0UVRYZjRVLXZ6SEdia290Y3ozT01mVk9icFlieUtBLXB1RGpLeTVtWEMzaktzYzJINDNaMHFRNTNTeUZMckdBeWxaSVhOVkVZRXFKc2w4cERldk1yYVdENnhaRy1uaEpGUHFuMzdwV0lkeTJwajBwcUdkWVZjVzBjMmlWZkM4cTJVVlN4N2xjQ1llUnB6R05SVjdqQWVKNmFLeXBUNmxycU5qLW9uSW12U2YzbVE?oc=5",
       "source": "news.google.com",
       "description": "Marché immobilier RMR de Québec — Août 2026  Journal Métro",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Les mises en chantier d’habitations ont légèrement reculé en août - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNRF90OXRjLWdqZkgwbzFiV1lYOWw0SzBmZ0J1SHVvRU9KUDVZMnVfNWl2bUtsOFFGZzhENlgtMnhjOXJ3dzhFM3doVVM3TUFVR2ktNmJNZ3k1ZWtydFhnakZKRDkwcmJCekY2WWZ6a0RiaXRsTTBzdm4wUzlsbXVjTjhjMVFqY3IyLTNldHY5U3F6S2FCUFA3LXZmNkI5TnZwOGJ5QU1uMEpQLVNJQmdGSWxOV045QkNoUTBINDJET1lMZ1QtbXpLUTJqVQ?oc=5",
-      "source": "news.google.com",
-      "description": "Les mises en chantier d’habitations ont légèrement reculé en août  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier Province de Québec — Août 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQX3FhNW9fa0xfdTg2LTN1NWNyZ1dwSE85RzhiSlhaejZ3ZmhjN3ZUdm1UZzRvblI2SDBXdFFaX2FhQ055OWhKSE9fdUV6WkduWDY3Y3ZDdHJqamMyM0l6X3Z0blRTZ3N1aUJzRXRsRzUxVHBZT0hIMjR0M3kydXBhWW1xZUNESll1LWNHYy1vNS1SQktURTBmdXZnRk81RE50anh1V29Oa19wcFJIa0JPZE9xZlZCcldv?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier Province de Québec — Août 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier Agglomération de Québec — Août 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdllwOE1mLW9LZHNQcTVSWmRZMW5xX2hzOXBXWjVUR0pteU5TYUFDUW5tWGpvdXo0ZjlrMmE3SlZDTm9FX0J6V095RUg2VkZ6ODJYaVBkbFpCV3Y4aXpvUklsSlU3QTdSZEVYNXAzQXdrQzdLVW5pcmQ4cy1SeUhpdUV2MWljUENkVndDOUtqWjhRSzZ1R1g1aDZUVFpqNXBkVVJiQUhmNTZZYS1KTDlYaUhmM2QxLXVJT2xSSnUwOA?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier Agglomération de Québec — Août 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les Québécois s’attendent à des hausses de salaire plus grandes que les prévisions - La Presse",
+      "title": "Les Québécois s’attendent à des hausses de salaire plus grandes que les prévisions - lapresse.ca",
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQVWZhNU5aelY1WWdFTXhOaS1RUDJqMkZ1d0E4V2hJZjB6eVNrOGFuRjFTajlOVUhBSWZSbVIzWE85cVpRaEdvRFJNRkJXcXc0ZnljYXFFaFF3V093N3ZiX2Q0TXR1b1poLUNuN09xUy1HaDIzVjZxLTNBdExmSHROOGhERjhNd2VkQjNxWHJzRnZCUmxGWFNDc0xhVGFRUDN1aXE3bDhfc19ZUVQySC1YajJtbWs0TDJpbnFyb2Mzd2dvdlJqZDRTYV9R?oc=5",
       "source": "news.google.com",
-      "description": "Les Québécois s’attendent à des hausses de salaire plus grandes que les prévisions  La Presse",
+      "description": "Les Québécois s’attendent à des hausses de salaire plus grandes que les prévisions  lapresse.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La reconversion d’une tour de bureaux en logements menacée à la place D’Youville - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQV0JYdFo1cHpIcG1xQ3NGSEZUVXlLOVUxTk5PRmVIaHpvNlEyd28xc2pFSEk3YXlFUFZmSWpvRFdkSXBNbHptVjYwZThNYzlENlUxUlNSQWUzTVJlbjRueVcxa0JiODlubUYtRTJNa1QzUEU5Y0o4Rk5oUnV5VXB4TjRUaGJZTGFDZVpJ?oc=5",
+      "source": "news.google.com",
+      "description": "La reconversion d’une tour de bureaux en logements menacée à la place D’Youville  Radio-Canada",
       "cities": [],
       "category": "general"
     },
@@ -214,41 +205,34 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier Île de Montréal — Août 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRUZZWXVReWFMbF9mOWJud1FNc2twRTVWM3lpNVYyMlNEVlN5Nld3S0xSWTU4aFhZckZmTllwMmRIYl8tQjR2UzNnQ3lOTzRqTUNuVjlkVm1rTnVJVGxYOTY5Tk0wYWl4NG5xM0huZkp4VTVVcjJjendvdlZONkxXS2ZNQ2VTbG5KRXpsckJHbmhud2VwdVlEUEREX01FMVJLUDdvd0RUVHIxWWk1WTFnV3ZMSXc?oc=5",
+      "title": "Le PCQ dévoile son plan pour construire plus de logements - lapresse.ca",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPM0pVbXZITk9rRFE3elpMaUczMTNrMW9QOEIwbkg2eENhbVlEU2gwVVlmbEF3M21fUWZtVnIxOUlOTHBUQVp5QWdVSkpIX3RkT0t3cTRidkpzcGcxTkR6YjFvVWhXZlZUVnZuWFpma3JlWlVwVjA2N0swOWc2YmMyS2VmZGlHRnJ4WmdZeWRMTU85dTluZFVKZkZzcFJJLXhfUTA1clNUTUl4TU1JOHdsd2NMVVdWeHVScFE?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier Île de Montréal — Août 2026  Journal Métro",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Le PCQ dévoile son plan pour construire plus de logements  lapresse.ca",
+      "cities": [],
+      "category": "general"
     },
     {
-      "title": "Marché immobilier du Grand Montréal — Août 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNalNpZHJ3eEN5TTg3ZV9hczhNb0wtcFZiYXluT3BJSnM5SmRpVkFNY001b1Zhb29JNFA1SnFWQXhMVGd0cmpxZGxFWnliOXp6UzV2S1NJT1RXazU3Q2hUcjJtbzlmeHBHeExOeGpueVd2MEdFSURXRS1tTGtGZHJzRW5VX0ZXcm1BbXVzR2RsRHZFT01Pb0E?oc=5",
+      "title": "La valeur nette des ménages canadiens : ce que les dernières données signifient pour votre hypothèque - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5iZ0trLXRaVXljNGdsbTN2WVBFUWExekxXTUdvb0xINFFPYkZBY1VOOUE5WkszMkhFRmt2NEJ4MGdFc3RmVk9kamlVVXZkRmtycWNzZzR4NU83b19NQmtlOG4zaXhPWFpIeHdFRVlrVE1yLU0?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier du Grand Montréal — Août 2026  Journal Métro",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "La valeur nette des ménages canadiens : ce que les dernières données signifient pour votre hypothèque  nesto.ca",
+      "cities": [],
+      "category": "general"
     },
     {
-      "title": "Marché immobilier Rive-Sud de Montréal — Août 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWGR6SjhrNjhVZUFqRXNwN0NLRkZfZXc1cEhhN3ZCalBUN05QcUEzSHdvOVdsa0h0ZVhMQzJkMHpNSEFzeGhqZDlZQk9HX0l5LURHMVI0UVozY0hJUWJCNl9xWnVCM3JWbFVJY0lEeW9JQVR5azdsQXdyYmhEMGJSblc2UGw5OGwwNHNKbV9zOElOT1Q1enQ3VGlCTHNRYmx5U3dMUGVfSlY2eExLdUp4YzBrWlA4Vmt6OVRZ?oc=5",
+      "title": "Guerre commerciale | La Banque du Canada craint un effet sur la confiance des entreprises et des consommateurs - lapresse.ca",
+      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQNFZUY3FnVEsxTFdRdW03dlNKSzNfeXhrN3ZfZU91dkNubTRQenhwWl94ck9pR1RjZTRJNDBDbkhXcGpUbklYNDJSVm05Qk9wU1N4MWd2UDEwNl9FemtfZEk5anZvTHNlY1RkRk93SW1yVDE2SEMydjZ2a083UDVtLU5HSUVNaXJPSVpMYzNfVkcybjBYTzd6YkpBaHd4WEVHTTNJb3JPVFB2R0EzeHRWb1VSM25RVkpMOWZseDM5ZVduMW83TjJUX09tZ2xCSWtpWkhFd0RGRHpXZjZpcTlFOW9FVXdhNzRQWkR6SA?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier Rive-Sud de Montréal — Août 2026  Journal Métro",
-      "cities": [
-        "rive-sud",
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Guerre commerciale | La Banque du Canada craint un effet sur la confiance des entreprises et des consommateurs  lapresse.ca",
+      "cities": [],
+      "category": "general"
     },
     {
-      "title": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaXFSRURHeUgtbnVYVVlORF9PdEdVS2NXTTF1Z25kQ3VodWRGSUxZQ0pTVWZXd1F4UGk4TWFqcGIySEU1R0h6elU3SjNrYlkwSWowQUdpM0VyTnR0SVdCelBDNGNxUFB5encwdDVLQWZBamtGSFBFYnVHOVROekRLNFJPa2UtRVZ1a1l6a01TWTFvY25H?oc=5",
+      "title": "La Banque du Canada craint que le conflit commercial ne pèse sur la confiance - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZmlCUjJELWs2SUpuekUwWDlOOXJVZTFKMlkxV2RsSW1OSENTZm5UeW5tXzdFeDlIZDFmRE5mQWdLc0VCN3dpSFJvS2JlZFVaYV9QaG1MT1ZzTFItV0YyRWtQcVNoOXB1SEhMcmgzRTJpMGVXOVRnZ3dMX2lzUk9yMGFqeF9NaWNzR1NmUDZUd0gyeHVMMnZMampuS0x4TVFBSGdZS2J6Sk9aaWR1cjFPcERHUGloUHV0RUJOVGtTZmFUMzAtRmc0?oc=5",
       "source": "news.google.com",
-      "description": "Calendrier d’annonces du taux directeur de la Banque du Canada en 2026  nesto.ca",
+      "description": "La Banque du Canada craint que le conflit commercial ne pèse sur la confiance  Noovo Info",
       "cities": [],
       "category": "general"
     },
@@ -261,18 +245,26 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient son taux à 2,25 % alors que les risques d’inflation s’accentuent - crea.ca",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPWWZIVF9aWGZVS3U3cVBWeHZySjdHTWFJdVp0eExSa2liU0dMaTdwcUMzVVE3dmVhNUJaeXdNNTJ4Y1kxblNBUHlVbjBoUnZJZGNKQTVuWXRKMkVaWDQ4Z0lhTkVrZ1N5TUJoSTQ5Wm02WGF3ME8xd0J2NDdxblQxNnU2Y09qQnR0dmMwLUJxYw?oc=5",
+      "title": "La Banque du Canada préoccupée par les prix élevés de l’essence et le risque d’une hausse des taux - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNaE5kZDdBM1NJdEVxMThXd0ZsYWhHTFRQdnk2WGo3Nnh0dkx6ZWZnUW1yU2E1OFNkN0xBd3MyWEQ1dDBJdE1JVm1DNDFKMHNZbHBxRkNVSjZmdndmNjZKX2Fhb1ZZM3VpYVRhN1lpcW9tS2x0dGVZaHdicFRWSnF6cy01X2hBQm4yOVdqUW9heVdMRWg4VkIxN09aMEszbTFLMnBSNXRCckZEVnNLNk43c2hBOERfclpSdzZxQWN2d0NRS0hBRmlUTGM1S19IZnc1S1lNOEJkcmwwWlVuemlsUw?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux à 2,25 % alors que les risques d’inflation s’accentuent  crea.ca",
+      "description": "La Banque du Canada préoccupée par les prix élevés de l’essence et le risque d’une hausse des taux  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L’inflation est demeurée stable à 3,0% en août au Canada - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNTFwV3kxVGJOTndUMXlmZjAwUFZmaFJISTNEejBINEUzb1Q4LWExTXFXbEs2eU1sb2JTV2JXcnFpOGxZZjY1TXktMDhNR3kwRndUVEwzRDBybUYwcE5nclZWV3ZIWVBObnFPaUR6MVYwMlMwM2lHUkJPNDZ5WUdqRTZhbi1SMExsanNmTldFWTBRZU5CdGFaUlprdWtqRXBzQXVLZE9POA?oc=5",
+      "title": "Un nouveau 20 $ vertical pour déjouer les faussaires - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSEZDcGkxQURQckVjRnJrYUpKclBNUk9mcTdyaVdIM0lHS0lxWjZxU0tCTmpYUUJpLXJXLThuSTVLNWNNVlR0N2pYWkhXNlpuLVI3R0NFc3pRQlRoZmx0cjNwU0hBeWdSUVNpNzhRUHg3cVZKQmJWYWFjUTEwSzNVMGdhYWlSZmdialJocjA0cGtGVWhN?oc=5",
       "source": "news.google.com",
-      "description": "L’inflation est demeurée stable à 3,0% en août au Canada  Noovo Info",
+      "description": "Un nouveau 20 $ vertical pour déjouer les faussaires  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation est restée stable à 3 % en août au Canada - ledevoir.com",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeWUwN3RsN2pvWm5QMlBIdFdSeThtRTBWUHR4S0VjeXdHSXdsd0lvX19SeE45bkVFdU9iNTdON1FycVlSTWVFXzZiQ1JlZjJHSjRWelVGSUh6V3lFUGtqYm85Xy1rTWZXTWFrTmdTcmNuSXdGOVJfMDcyejlkVXI5SkgwMGlXZ3FjOHlmY3NILW8?oc=5",
+      "source": "news.google.com",
+      "description": "L’inflation est restée stable à 3 % en août au Canada  ledevoir.com",
       "cities": [],
       "category": "general"
     },
@@ -293,22 +285,6 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada s'apprête à dévoiler sa décision sur le taux directeur - Actualités - L'Étincelle",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNV1V1TXdSZGZPV0toQWpMWWJDU0ZNby1nWjFzTWk2MVVabUVnTDhFa2tGNUkyVi0tZFM3ZUh3aUZIbFAyX1FMQXJrY0JWRmpVZDFTT29uc1gwQ3ctcXFSaW8wQmpQOHZmSEhBeGJiU3lzMHphRWtKZXUtYkJxazE5ODZHa0RtZ1FZa1puZElZczh5UXdsM19FQkFxcmtZNXNJNXRsNzNEenFwV0JiWHdpc3lHYk9aQzd1TF9rdl9UaVd2OEVZd2IzWWRZSmhiWU1TLWNJRg?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada s'apprête à dévoiler sa décision sur le taux directeur  Actualités - L'Étincelle",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’inflation canadienne se maintient à 3 % alors que la croissance des prix de l’essence ralentit - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNa056M3JEVVlOcC1WeTRvSEotWk1ZUVY4NF9DaHQ3OWxtTGRvTWZtQVJjUXRuUHBfLW51YUFqdzF3NHhyR3ktMnQ2TV95dkdTZjNNOVRlN3BNQUZ6cjc0b3VhOWJyZGUwR245TTQ2ZFc3d0VfUTNiRGctRk1vMllUMFRoYWlwaHlxZlluTWlpLWlNMktFVjlBZUpucUNLNVNYWk9MSHIyZ1o1ZVYzY1RicjM4djNzUnRmeDU1cE1OSG5NWTB1WUJXa3R6VjFEQVJDajhRQl9LclR3MEk?oc=5",
-      "source": "news.google.com",
-      "description": "L’inflation canadienne se maintient à 3 % alors que la croissance des prix de l’essence ralentit  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La Banque du Canada choisit le service de cotations de référence CanDeal Data & Analytics (« DNA ») comme source de cotations pour les titres à revenu fixe canadiens - Yahoo Finance France",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUlAxT0JYMUQtMXJLc2FKSXVGaHd1aF9JbEhCa2hWLVljNVM0aFNVd053Q2tZRjJWUndybzNxQlZZUlFBaENHd1E4UENkaUtwZF84QWRVb3hWVjE2MmtZMFRIYVZzXzFMMXZwaGRPSzVrUEZJX2xFOWRpQXNaX2NkVjBNNVlob2lwWlkxN2Z0N0o1LVQzM3dZUlh3?oc=5",
       "source": "« DNA »",
@@ -317,18 +293,34 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada devrait reprendre ses hausses de taux en décembre, selon la Scotiabank - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNN2ZOR0VMclhsWDJVZEdISUNyclAzaURBQ2MyaUVKa2M5V3pOLTBlUVpOSjFLMGdhQ2dNTFgxelItSVMwUDBQUDlBTFlwV0RyWHRsajEtVEY3MXAtRnp6aExLMzZqXzVtVWNJMEpCeTd3U0R3cnhSVGxscDBXSThzOTVaOUZjaTdXazROR0xHblZ4WGVNOTFMVERBVGhqaXg4RURicUpLYlQ0YWxFTkFsTEo3VnZtcUNZQzJZWi05am8wcWRIVm9EakM4UVMyQVExYkU0aFZDSE1ZbjFlY3RzZDBRaw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada devrait reprendre ses hausses de taux en décembre, selon la Scotiabank  Zonebourse Suisse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "L’inflation globale au Canada s’est probablement maintenue à 3 % en août - rbc.com",
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNaGNMbHk0eVdsTnRRQks2Q1ZYc2xFczJ5eHpZSG5vTkxzNC1LTmFWODlwNF9NTzFuY1pqTl81cW80blRvYTZMOExfX0s0YVl4OEkydmh5Q0NwTU9aOGlGS1pUQkdqeDZsdDFHOHBCSHY1enJHVkFuVTUyR2tuWnh2a1VtS3dXRGlYaTQ4b21GekM4X01YMVlKLXFNcXRmQWotdElMMjl1dUpGc1JEaC1JMFZiRVlndWlCN0lwS0dKUU5SZG9DVHJHY0VR?oc=5",
       "source": "news.google.com",
       "description": "L’inflation globale au Canada s’est probablement maintenue à 3 % en août  rbc.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La décision de la Banque du Canada en octobre sera serrée, mais les marchés surestiment les hausses de 2027, selon Capital Economics - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPQmtxcldhekpVbEowRF80c2NnMk1Hc0libGZ0ODN1c0hPQW80NERMSFFpV3NaVFREcmlkU3VVTjVidnRHZkxwYlZaRVVSZ1RXY0U4MHRyQXdub1l4Zk5EWERhdnRnMmtCdVg4RFVxbkxield6NGxnRWVNT2Q3d0t1T0JQMTRBYm9XSlZfekFEUjFWNlJoaGQ1dHpFd3BQS0FwSHBISDdTMXRqamhfQ3lWZU5EZEdXQ2dMZUNSbnlYZTFBQkZGU3ZSUTN1VGtkb3pkb052RU1RVU50S3ZGM2VlX21hSGhzTm5jQVlXdkNkTQ?oc=5",
+      "source": "news.google.com",
+      "description": "La décision de la Banque du Canada en octobre sera serrée, mais les marchés surestiment les hausses de 2027, selon Capital Economics  Zonebourse Suisse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada anticipait une inflation élevée avant sa réunion de septembre - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQVXJvbS1LQ0lzWm52SkVJckQwOHlPVW1qLWd3QS1DenNvTEROYlpHazJ0WkhQdV9GaXdRek9PSmJBbmJCZ0VobUlreFNlNDJNWmJCNzcwdEx3d3FXUC12VGlDWWk2aVFocDVwU2Nvc0lEZkdjcUo1dmw0U1ZKOFhXaThmM19iWnk5UThWOWFKczFXZ0RpVzU4c0otV05EbEIySGRyZWRYSGQyWXhXUlBSRUhFbTU0QkpLMUZ2NUlOVGNzWmVHRThVTV9jVUU?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada anticipait une inflation élevée avant sa réunion de septembre  Investing.com France",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation canadienne se maintient à 3 % alors que la croissance des prix de l’essence ralentit - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNa056M3JEVVlOcC1WeTRvSEotWk1ZUVY4NF9DaHQ3OWxtTGRvTWZtQVJjUXRuUHBfLW51YUFqdzF3NHhyR3ktMnQ2TV95dkdTZjNNOVRlN3BNQUZ6cjc0b3VhOWJyZGUwR245TTQ2ZFc3d0VfUTNiRGctRk1vMllUMFRoYWlwaHlxZlluTWlpLWlNMktFVjlBZUpucUNLNVNYWk9MSHIyZ1o1ZVYzY1RicjM4djNzUnRmeDU1cE1OSG5NWTB1WUJXa3R6VjFEQVJDajhRQl9LclR3MEk?oc=5",
+      "source": "news.google.com",
+      "description": "L’inflation canadienne se maintient à 3 % alors que la croissance des prix de l’essence ralentit  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -349,18 +341,18 @@
       "category": "general"
     },
     {
-      "title": "Canada: l'inflation reste stable à 3% en août - TradingView",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE02UjQ1UXN4ZUJkLV9JamZpTVRUMjlGYjkxU0xDSk9ZWlg1VC1EUkMzbDk0c2YwR3N4OUtfazlFYXloLTE1U0ZucU1Id3Q1c0UxZUMtOTk4d2RLR3I0RmsyVHNn?oc=5",
+      "title": "La Banque du Canada prévoyait une inflation persistante à court terme, selon les procès-verbaux - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNZ3ZNVVpYZnR3RU1YakJyQ1JqZTBkNTdUU2oyaGdOWUNEVXo5Z0FRRTVFZTBLckRMTmtPVE44aElaRE5aaC1pWmdyNmZEVHVzSmRkSnNnb3k2dGhUMjRiT0htZ1VOUWV2SXcxRFhHekpSNjNFWXlGTzZDRVl5TkNQeXFmUS1yanJMWVJzTnlkYkUtS1pCcTlWbFBJUmZWVnQyRXc5TW5mbW8yNnNHdEhJcm1CdVdneEUyOUdaeGJsblN0QjFLR3VRN3hoYks4ak1qdDJ6Xy1TV2lXZi1BcU5ZT1NnckxyYkZxeFRR?oc=5",
       "source": "news.google.com",
-      "description": "Canada: l'inflation reste stable à 3% en août  TradingView",
+      "description": "La Banque du Canada prévoyait une inflation persistante à court terme, selon les procès-verbaux  Zonebourse",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L'incertitude commerciale rend les hausses de taux de la Banque du Canada plus difficiles à justifier, selon Rosenberg Research - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQZzJTdDlDaTlNVjJuSHl4T3VVNWQtOWlYcUpxRjlHOEo2M01VRkl0Z3FVeDZXNl9IYWh1bk90YnBEMTBIYlVYVGppMTJuZDZGcHp1R044U2tHcW1zeEdMYTFZei1LVnBYd1pCYkVzdlVUNUxMTHNWWGdEUmpCWFNEZzdKdHlQQXdwVURseE9qLWZ3Zk14M3E4bmNlZlVPWVVITjEwbEdod3Z6SFhLdnlod1BNT1d4RTJLXzVaWGlVNlRSQ3FDOTRuTldMbEFfOFFGT1Rnc2lzMUlxZE84dzhfX0MycWVlXzJkdjhXMEhZclFKQQ?oc=5",
+      "title": "Canada: l'inflation reste stable à 3% en août - fr.tradingview.com",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE02UjQ1UXN4ZUJkLV9JamZpTVRUMjlGYjkxU0xDSk9ZWlg1VC1EUkMzbDk0c2YwR3N4OUtfazlFYXloLTE1U0ZucU1Id3Q1c0UxZUMtOTk4d2RLR3I0RmsyVHNn?oc=5",
       "source": "news.google.com",
-      "description": "L'incertitude commerciale rend les hausses de taux de la Banque du Canada plus difficiles à justifier, selon Rosenberg Research  Zonebourse Suisse",
+      "description": "Canada: l'inflation reste stable à 3% en août  fr.tradingview.com",
       "cities": [],
       "category": "general"
     },
@@ -425,5 +417,5 @@
     },
     "last_quarter": "août 2026"
   },
-  "last_update": "2026-09-16 17:28"
+  "last_update": "2026-09-17 17:27"
 }
