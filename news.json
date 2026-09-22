@@ -89,10 +89,26 @@
       "category": "general"
     },
     {
-      "title": "La politique commerciale américaine pourrait freiner les progrès économiques",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-09-21/la-politique-commerciale-americaine-pourrait-freiner-les-progres-economiques.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "En fin de matinée | La Bourse de Toronto en hausse, Wall Street en ordre dispersé",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-09-22/en-fin-de-matinee/la-bourse-de-toronto-en-hausse-wall-street-en-ordre-disperse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "L’imprévisibilité de la politique commerciale américaine a accru l’incertitude pour les entreprises et pourrait freiner les progrès récents de l’économie canadienne, affirme lundi le gouverneur de la Banque du Canada.",
+      "description": "La Bourse de Toronto gagnait plus de 200 points mardi, en fin de matinée, soutenue par la vigueur des secteurs des technologies et des métaux de base, pendant que les grands indices américains étaient en ordre dispersé.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Électrification des transports | BRP électrifie là où ça compte",
+      "link": "https://www.lapresse.ca/affaires/portfolio/2026-09-22/electrification-des-transports/brp-electrifie-la-ou-ca-compte.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "En 2021, BRP annonçait un investissement de 300 millions de dollars sur cinq ans pour électrifier ses gammes. Depuis, l’engouement pour cette technologie s’est tempéré et la demande a évolué. Le constructeur de Valcourt garde le cap, mais concentre désormais ses efforts là où l’électrique répond à des besoins concrets. Minh Thanh Tran, premier vice-président, stratégie globale de la société et des produits chez BRP, fait le point sur cette stratégie, ses limites et les occasions qu’elle pourrait offrir.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les centres de données installés au Québec appartiennent majoritairement à des intérêts états-uniens",
+      "link": "https://www.ledevoir.com/economie/techno/1010753/centres-donnees-installes-quebec-appartiennent-majoritairement-interets-etats-uniens",
+      "source": "Le Devoir",
+      "description": "Ces installations ont représenté 3,1% des ventes d’électricité au Québec en 2025.",
       "cities": [],
       "category": "general"
     },
@@ -105,18 +121,18 @@
       "category": "general"
     },
     {
-      "title": "Pourquoi la probabilité d’une hausse des taux de la Banque du Canada dès octobre a bondi",
-      "link": "https://www.ledevoir.com/economie/1010129/pourquoi-probabilite-hausse-taux-banque-canada-octobre-bondi",
-      "source": "Le Devoir",
-      "description": "Les craintes que l’inflation perdure laissent croire qu’un cycle de resserrement monétaire est proche.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Québec solidaire souhaite réglementer l'industrie du courtage immobilier - Noovo Info",
       "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNUZveVdUdmdZd2dlVE5vOG9nWFFXS09aTl9TLVVmcVVtcUMtcXQwSFY2bGd5RjZ1aFpUdkluUHVNV0MzVVZMdUN3SXM1eHlfT2F6ek43LTRjYkllcjRjZ2J5d2dOaDY0SkhjdVRFZTBWdWU5bnFGcDdSbUZYWnkySzhva2xGLW0zSXFRdTgwRjlmeHlDS2RuYjNlRDRJNV9LLUYxUVlSZ3R5YjFpbWJncjNrMklrb2NBMzFhbVFCYUJWZUY3LWF0enpDNmRnb04yaVRuRTVjVGNRWkJyR1BlaGQ4WFozZkx5ZW9RMUFleHVHb1o2ZFZRag?oc=5",
       "source": "news.google.com",
       "description": "Québec solidaire souhaite réglementer l'industrie du courtage immobilier  Noovo Info",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Cour du Québec ramène à 60 jours la suspension imposée à un courtier immobilier - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVUF1N2xjY01MREpKalFvWkVwY3V1ZlFnOEw2cDV6U2p1eF9lQ01YMDNiaGZ0VHNPM1VnNkNZcno1enNhRk9EamZ3dXhhaHM3OG1SZE9tX1BQT1B4bTNuUm45dWxiaE1ERnBrOFhvRkp0dHJmZU5pSlJjbmFuTXd4TEIwX3NPdDVYWnRtWXFyOTZjaDUwM2xQeXREcXItbDlscnV1eldJVDNUSTA1TGlhMDdpVVR4Y1lYcjY3TjIxWFJEOXM?oc=5",
+      "source": "news.google.com",
+      "description": "La Cour du Québec ramène à 60 jours la suspension imposée à un courtier immobilier  Journal de Québec",
       "cities": [],
       "category": "general"
     },
@@ -137,10 +153,10 @@
       "category": "general"
     },
     {
-      "title": "Prix des logements | Pour un Québec abordable - lapresse.ca",
+      "title": "Prix des logements | Pour un Québec abordable - La Presse",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbjJpYlhCMXg0b1VLeFppdEI5ZEVUV21qZmhoUUpRaFlaM2ljWXlpZ1huZXo3LVZUZ2QxMEk2QlpCbm9BSy12V041Umc4enltWVBfdl9nT0NMZ25IOFowNUViSElLYm5wYkxfRF92ZVZsRS1PTU05OXBSZEFKSEQxdklmeEN1SlE1OGRSNTh4Yk5IUnkwdkFtdERIa0h6SHBXU0E?oc=5",
       "source": "news.google.com",
-      "description": "Prix des logements | Pour un Québec abordable  lapresse.ca",
+      "description": "Prix des logements | Pour un Québec abordable  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -157,6 +173,14 @@
       "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRmFpTUdkZG5Ic2MxMXBubVhyT3h2a2E0MHRCWnBNMzBjNkk5eGFUTmQ2elpLMG1kdGdySDMtSkIxRXp0dmVCc0VhNUdNOFYyMWN3VTRiWFd5bkRsYlhtTVZwNW54dEdjYWZnVC0yeHBsbXBSQzRzeEg0bzFCZE83N1dpc1N2U0xMc0E?oc=5",
       "source": "news.google.com",
       "description": "Webinaire – Naviguer dans le paysage des subventions au Québec : programmes de financement et opportunités  leyton.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Québec solidaire – Le logement, un investissement dans un actif - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOS2VvVWhKbkF1SnE1SWM2NF9IbHBxcExjZlF5N3RXVXdMUjl2VV9IOXNBSWRnNFNBMHlpZlV3OVZVNC1zOXVraEhicUY1aFRELWpWVGstbTBoV0F6ZUNfSDlybnNwT2dmSDUzU2dMRXFGZWs0TGtUeXVPdEN0emZ4UDF5QWVFVlpndlZNMkw3alVaSktkLVE5MXlpRlpVYllCZ3hnY2dYUDhlcDA3LWhlWkRObFVzQm10RWs0?oc=5",
+      "source": "news.google.com",
+      "description": "Québec solidaire – Le logement, un investissement dans un actif  Journal Métro",
       "cities": [],
       "category": "general"
     },
@@ -185,10 +209,18 @@
       "category": "general"
     },
     {
-      "title": "Vers une hausse du taux directeur cet automne? - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMXJtendRQ2t1RTYzSHBEU3VnQTZneFpvMDV6RjlReS1ZZW5VZW91WjNUQVBJUVFsV3FQRmp5SVpXNlpKQVNaSktNVUQzb2tmdWJDSTJYbnJ4MnBwa3lydl80SnpGV0dTQUloZzdHLWxBdmR6cG5PM3IyNW82a0FkTWNjaFgxSnp6Mjg0RV9XOXlKc1pJaGhxX0VPNFI?oc=5",
+      "title": "Logement | Il faut construire la ville que l’on a, pas celle que l’on souhaite - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQekxVS1RIOE9BVGtqX250X1YzZ091cTVhUzlQNHBfdzhvdXF0ZGg2Qm82QXFtdTBCNXJYei1rWXFic1EtVEtTWVZiNUpuS21IbTk0bGRDS3c5cWpyQzFySC1DQjNxUFB3R2NHczNmN3lzQkxQNHBha0U1X0pBQlhicDBuZ1ZIdy0zanJsdUNQb1BNMjgzTWZvaFdhN2VYNXRrbzFFaEYyVGxLTXd6VHprY2R3LUx1VjkxUG5JTEJHRkZmN0stSjQ0RWVCYUs?oc=5",
       "source": "news.google.com",
-      "description": "Vers une hausse du taux directeur cet automne?  Noovo Info",
+      "description": "Logement | Il faut construire la ville que l’on a, pas celle que l’on souhaite  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Jean-François Viens, un courtier immobilier du Québec fait sensation avec ses vidéos - Monde de Stars",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdDNJZVZjenhxcnZMbk1MV04zc2djLW5ZZ0l3blZPdnp5VVRwMVZQOU9KSkI4LTlQWmhPdTBrdjNWcXI0cEhZWHdQMThuaHlGUG1rZzQtSk9fSmNEaDAxUnpSUDdnSEJfbm4zcTN1bjhXMG5EWV9QRlJDemJ2djJSTl91emtYNHk0VkZGT0FJZE1hQ0swQmMyNjZNSEJYRHk2bEoxSEpRRDNaRFk?oc=5",
+      "source": "news.google.com",
+      "description": "Jean-François Viens, un courtier immobilier du Québec fait sensation avec ses vidéos  Monde de Stars",
       "cities": [],
       "category": "general"
     },
@@ -209,18 +241,18 @@
       "category": "general"
     },
     {
-      "title": "Entrevue de la Banque du Canada – Market News International - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTmQ2MHRvR3BxYnZrWk1RbGNqTXNReHFZYWxwRGNLRzNtZnRNeEhtci02QXFadnhQRm5mNElwRUVycHp5aEVZM2I5YlFDX25Lb0FYeTkyRE9YUmVHU1RuZkFtVUx4QktoUnZyNm1QWHVTM0ZpMllRdF9rcm4wVW0wY2ZXcUx1UkZQT3k5RjN5UXc1T25WWE1UQ3hveWlCSU1uQmNqY0Uta050MmM?oc=5",
+      "title": "Discours de Tiff Macklem, gouverneur de la Banque du Canada - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQX3JuVzNPSGphRUZ3Q013TlRjX3lYalAyUlNqM09kZlhSbDZYREdaekFETkd5OFFWM3ZKbk1HcU8zYjVVQmtIaE9BOHNsQjNVYXFWZ280RXk1VGM3VzRNT05RX05DVGV5cHdFUmxGd1NQN0VabXQwWHp5aTk1ZFJ0Wk1JbDBhVnFDRkJvaVRxSXgycUppLTRod0pGNDc?oc=5",
       "source": "news.google.com",
-      "description": "Entrevue de la Banque du Canada – Market News International  Banque du Canada",
+      "description": "Discours de Tiff Macklem, gouverneur de la Banque du Canada  Banque du Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Ce que vous avez manqué cette nuit | Banque du Canada, Iran, Anthropic - lapresse.ca",
+      "title": "Ce que vous avez manqué cette nuit | Banque du Canada, Iran, Anthropic - La Presse",
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWXJIb2xzQUpYZjF6VmdpSDBhMnpQTHJyeGtjbjI0RFQtY0xjRWJIcEM2VFBKV2NvQWlURHdjb2o5ZmJzNVNDRVZhOHhka2ZaYnltbFNRdU4yNVZXWVFfNVVMaHd4dm5WdmJwN09tUHhGLWMyeVhaY1ltVEFHTlFsVC1tV095OEdMaEw5bnpFZXQxSGJlbThycUxKb0tYMUVBMVB4TUZ5REFlYWFpYXNHQVRtc2hEbVk?oc=5",
       "source": "news.google.com",
-      "description": "Ce que vous avez manqué cette nuit | Banque du Canada, Iran, Anthropic  lapresse.ca",
+      "description": "Ce que vous avez manqué cette nuit | Banque du Canada, Iran, Anthropic  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -229,6 +261,14 @@
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUU9QVU4xLWdIbGJobDM5bXVPNTB3d1VDT2dKMEN3QXdGcGNDTFJGSGVsN284MzZmZDdOemk1dW9PcXIzMjZ6U3BGdzF5YklPa01hVjRNWkhoZDZ2TTRpeGZwaG5pZWFsQkJuNmxkZXZvei1zdlJaaExGS0U1SThZS1lEbjRVa1E2SldXOWFOTkxqX1BuRHVSUXJOektISUFEb1RBUGJvNE5NUDQ1ZG1tbXN3QkRFVV9KNll5dG5ucUxNOTUtOWx0RFN2X0lOeVU?oc=5",
       "source": "news.google.com",
       "description": "Discours du gouverneur de la Banque du Canada à Halifax  CPAC",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Un sous-gouverneur de la Banque du Canada en visite - Journal La Revue",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbXZyMWsyM2VrX2h1SVJ3N25LNmFDSnhBajFCUjhtclZ1THFwQ0RHUGVzR05WQkc1dTJKcG40NVJMVXhSTzFrODFBd2pUMGtZSklTWm44LXFEdnJtMG9Nb1poVGZIRlFRaVVFMmgtOThieEdOZWpHeUkyc2VzOEpXT0xYZThfT1pvWUFhbEhuTWJFb1VkNngxbHRvX1M1UQ?oc=5",
+      "source": "news.google.com",
+      "description": "Un sous-gouverneur de la Banque du Canada en visite  Journal La Revue",
       "cities": [],
       "category": "general"
     },
@@ -249,26 +289,18 @@
       "category": "general"
     },
     {
-      "title": "Un nouveau 20 $ vertical pour déjouer les faussaires - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSEZDcGkxQURQckVjRnJrYUpKclBNUk9mcTdyaVdIM0lHS0lxWjZxU0tCTmpYUUJpLXJXLThuSTVLNWNNVlR0N2pYWkhXNlpuLVI3R0NFc3pRQlRoZmx0cjNwU0hBeWdSUVNpNzhRUHg3cVZKQmJWYWFjUTEwSzNVMGdhYWlSZmdialJocjA0cGtGVWhN?oc=5",
+      "title": "La Banque du Canada est prise en étau - InfoBref",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1KR2Z5TFhtRkkzVThvUThmWGc1ZXhQNXJURHItd3FIRF9KS1pIM2VRcDZrM1RCSzFhMkVUTF9kOUQ2cmM0Z0dlc2R5Nkw2ZGR4UFEwb3BNdy1GVFZWYncxT2tzQk1EazA?oc=5",
       "source": "news.google.com",
-      "description": "Un nouveau 20 $ vertical pour déjouer les faussaires  Finance et Investissement",
+      "description": "La Banque du Canada est prise en étau  InfoBref",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "S’adapter aux forces structurelles et composer avec l’incertitude - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPREh1VzBJbEczckIyQkhQNXNzOUtxYzZtUEhINUJySHl4aDhFemZnbGE3UHBsdUNQcGFkZVVFbmNSVzROZ0JkZUlCZ05rblVLVVRNNzRrZTFoNFJSMWZXTE1Zc1liSlN4MDd5Qm9BY0ZyV2M5bTRQTmN1cnZDd3YzN05uVlI2WFNCdVJxVTVRU0xqRFJB?oc=5",
+      "title": "Entrevue de la Banque du Canada – Market News International - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTmQ2MHRvR3BxYnZrWk1RbGNqTXNReHFZYWxwRGNLRzNtZnRNeEhtci02QXFadnhQRm5mNElwRUVycHp5aEVZM2I5YlFDX25Lb0FYeTkyRE9YUmVHU1RuZkFtVUx4QktoUnZyNm1QWHVTM0ZpMllRdF9rcm4wVW0wY2ZXcUx1UkZQT3k5RjN5UXc1T25WWE1UQ3hveWlCSU1uQmNqY0Uta050MmM?oc=5",
       "source": "news.google.com",
-      "description": "S’adapter aux forces structurelles et composer avec l’incertitude  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’inflation est demeurée stable à 3,0 % en août au Canada - Le Canada Français",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWjd1NjhHOFVGN0lXTzJqdWJYcE1tN0pidWFFSHNkSEdFLWNfMHNlTGJVNURPZ2E3ckJYLUxxMEhzSDMySkZPU09pTnI1Vnphc3RzNVJjX3lLeUtDT1ZtZTc5dVpJcV91cy0zNmMyMnFSMHI5VTZlS2l6VXFKVmstNGRfX3ZVUFU5Y3RrOW5EdjF2Y3FSWUFnTVRfem1VWkM2RXFWbWM1cUlRQQ?oc=5",
-      "source": "news.google.com",
-      "description": "L’inflation est demeurée stable à 3,0 % en août au Canada  Le Canada Français",
+      "description": "Entrevue de la Banque du Canada – Market News International  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -281,10 +313,34 @@
       "category": "general"
     },
     {
-      "title": "Taux d’intérêt: l’IPC montre que l’inflation est maîtrisée, mais reste élevée - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVmRtQ1ZTZUtyMVo1RHJFRV8tdzUyVzVNOHcybXZhQUdsbjk2S2Y2ck1LaFdSbFcyOVdyU0UzMXBJLUkyM2tnZS0tV2tuUjlmOWd5OXQ4VGlDdmhlaWdfQ3QxamJtS3NKengzZGc1OWJYZk1DWFR6cDZ1WC1acVpTQ3ZUYjVwdC1vMndFd1ZjbjlQNXpNdDhQX3JfYzFNQzNLRnRHaG5IWDFUd0t3YkNGLVRNUWJvYzRp?oc=5",
+      "title": "Vers une hausse du taux directeur cet automne? - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMXJtendRQ2t1RTYzSHBEU3VnQTZneFpvMDV6RjlReS1ZZW5VZW91WjNUQVBJUVFsV3FQRmp5SVpXNlpKQVNaSktNVUQzb2tmdWJDSTJYbnJ4MnBwa3lydl80SnpGV0dTQUloZzdHLWxBdmR6cG5PM3IyNW82a0FkTWNjaFgxSnp6Mjg0RV9XOXlKc1pJaGhxX0VPNFI?oc=5",
       "source": "news.google.com",
-      "description": "Taux d’intérêt: l’IPC montre que l’inflation est maîtrisée, mais reste élevée  Les Affaires",
+      "description": "Vers une hausse du taux directeur cet automne?  Noovo Info",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada : Macklem met en garde contre le risque de relever les taux trop tard - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNU2NrWmplVFdOTldWLURzbDFOUUg3SHRpMDh1dGFHcGY0aXZIY2J6S25XUUFZWWJlazhTYi11ZUI2NUZscWdnbHV4R2ozTnNxYVhEWGtSUlNaUk8zb3lDZUpacmh6T3RlRmFKVWRtZXJoVjZXZ09wR2FYWi1XdmpCM1JTanZBZGFIYUlFaHJTLW9FSlZjQ1NWZkR4TTNUaV9tSXlMZUNkV2JOem1mWW1tazdRd0R1NEhweW1lNTRIaE1XdUhlX1JKVWo4dm9lekcx?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada : Macklem met en garde contre le risque de relever les taux trop tard  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "S’adapter aux forces structurelles et composer avec l’incertitude - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPREh1VzBJbEczckIyQkhQNXNzOUtxYzZtUEhINUJySHl4aDhFemZnbGE3UHBsdUNQcGFkZVVFbmNSVzROZ0JkZUlCZ05rblVLVVRNNzRrZTFoNFJSMWZXTE1Zc1liSlN4MDd5Qm9BY0ZyV2M5bTRQTmN1cnZDd3YzN05uVlI2WFNCdVJxVTVRU0xqRFJB?oc=5",
+      "source": "news.google.com",
+      "description": "S’adapter aux forces structurelles et composer avec l’incertitude  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Discours : Halifax Partnership - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQc2Q0TGdaNlJxMXJuQllDS1R0RFV0V1dmTXE5SU5OTkl0RzA5MkZ3MkdncG1wc3NwUmFOTzlQVEVLNUdZczZTZDdyN2htX2ZtTTZGZ2lta0xaLTRjOXIxRGtzMVNfWWhuSkQySUo1YjJLTGduQlJYeDVsejEtaE5CNU9zUzhoX0Qy?oc=5",
+      "source": "news.google.com",
+      "description": "Discours : Halifax Partnership  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -293,6 +349,14 @@
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQjc3MEhqeHNWRDhRaWhvYjR4dVUyNENwNVFWcUtHMmlSbTlwX3laQ1NqcDdUZVZTbm1Sbk5vQlJUa0lRcG5QY0xEWTM5YzhNU3JsTDlrbUxRUTlsbVN3UjJWOG84VkFNYWFwbFR4LVdlTWZvd0tmekdoVVl4UHA5WkVXVWNtV25VV2JkNENOYU1ZSUppQ3V6NTZVQQ?oc=5",
       "source": "news.google.com",
       "description": "Les effets transformateurs de l’intelligence artificielle  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Taux d’intérêt: l’IPC montre que l’inflation est maîtrisée, mais reste élevée - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVmRtQ1ZTZUtyMVo1RHJFRV8tdzUyVzVNOHcybXZhQUdsbjk2S2Y2ck1LaFdSbFcyOVdyU0UzMXBJLUkyM2tnZS0tV2tuUjlmOWd5OXQ4VGlDdmhlaWdfQ3QxamJtS3NKengzZGc1OWJYZk1DWFR6cDZ1WC1acVpTQ3ZUYjVwdC1vMndFd1ZjbjlQNXpNdDhQX3JfYzFNQzNLRnRHaG5IWDFUd0t3YkNGLVRNUWJvYzRp?oc=5",
+      "source": "news.google.com",
+      "description": "Taux d’intérêt: l’IPC montre que l’inflation est maîtrisée, mais reste élevée  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -321,18 +385,10 @@
       "category": "general"
     },
     {
-      "title": "La décision de la Banque du Canada en octobre sera serrée, mais les marchés surestiment les hausses de 2027, selon Capital Economics - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPQmtxcldhekpVbEowRF80c2NnMk1Hc0libGZ0ODN1c0hPQW80NERMSFFpV3NaVFREcmlkU3VVTjVidnRHZkxwYlZaRVVSZ1RXY0U4MHRyQXdub1l4Zk5EWERhdnRnMmtCdVg4RFVxbkxield6NGxnRWVNT2Q3d0t1T0JQMTRBYm9XSlZfekFEUjFWNlJoaGQ1dHpFd3BQS0FwSHBISDdTMXRqamhfQ3lWZU5EZEdXQ2dMZUNSbnlYZTFBQkZGU3ZSUTN1VGtkb3pkb052RU1RVU50S3ZGM2VlX21hSGhzTm5jQVlXdkNkTQ?oc=5",
+      "title": "La décision de la Banque du Canada en octobre sera serrée, mais les marchés surestiment les hausses de 2027, selon Capital Economics - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPVnNoMVJmSkVCSDhHM285QTRQM0RZekxuUFViemxfNjJWSDd4Q0hFNjFRN0FERlJwV1E1RmxoZklRd1VsSEc3V1RlN29VZ3M1MWIxTHE4TTEwd09fbzluTVNqRVk0dzVwZ0xaQV9IUW5YM1NZbWpYSkFob1pzd1pSenNQQThzRkFRUUV2YXMxbm9Icl9JMG1SZU1Yd1RraHduLUdBU2ZKQ1d2eTNYbFZCUUJhWmdQdnJGUGRoZUVQd3llN0ZnRnJGaFVpRzhlc0NDM2FmYUVuVDJ6dVlWT2FESllORFNjeWQ4ci1Hb3JIUlU?oc=5",
       "source": "news.google.com",
-      "description": "La décision de la Banque du Canada en octobre sera serrée, mais les marchés surestiment les hausses de 2027, selon Capital Economics  Zonebourse Suisse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada anticipait une inflation élevée avant sa réunion de septembre - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQVXJvbS1LQ0lzWm52SkVJckQwOHlPVW1qLWd3QS1DenNvTEROYlpHazJ0WkhQdV9GaXdRek9PSmJBbmJCZ0VobUlreFNlNDJNWmJCNzcwdEx3d3FXUC12VGlDWWk2aVFocDVwU2Nvc0lEZkdjcUo1dmw0U1ZKOFhXaThmM19iWnk5UThWOWFKczFXZ0RpVzU4c0otV05EbEIySGRyZWRYSGQyWXhXUlBSRUhFbTU0QkpLMUZ2NUlOVGNzWmVHRThVTV9jVUU?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada anticipait une inflation élevée avant sa réunion de septembre  Investing.com France",
+      "description": "La décision de la Banque du Canada en octobre sera serrée, mais les marchés surestiment les hausses de 2027, selon Capital Economics  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -345,10 +401,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada estime que les nouveaux tarifs douaniers américains pourraient plomber la croissance au quatrième trimestre - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQZmtlckJJRkNLVnBLcnVldVE0bFhDbFA5aDdsc1EtbzBRY0JwdVNRVHhIV2tFZ2w4V0V2aklQUllCRWxKLWRUX3I1LWtlMkg3ZV9SY0pNdzJDZWk4dURrVUo2REp5MnNnc0poek1IbTVNU1kxbThFR0VlS3gwbV81WDd5SGI3UVd6OHNobGs0dmtvWHh5MmVSLThpQUFpbEpZcGg5ZEdvNHh5WFBkTXV2YzY1SlJrU2QxYW9Yb292TFZBTE5TbmZ1UHByRkhncDRBZTIwUXN1QmJvUm1hOU40TU5raHVWVi1kdHFXMzFxb0pBUQ?oc=5",
+      "title": "La Banque du Canada anticipait une inflation élevée avant sa réunion de septembre - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQVXJvbS1LQ0lzWm52SkVJckQwOHlPVW1qLWd3QS1DenNvTEROYlpHazJ0WkhQdV9GaXdRek9PSmJBbmJCZ0VobUlreFNlNDJNWmJCNzcwdEx3d3FXUC12VGlDWWk2aVFocDVwU2Nvc0lEZkdjcUo1dmw0U1ZKOFhXaThmM19iWnk5UThWOWFKczFXZ0RpVzU4c0otV05EbEIySGRyZWRYSGQyWXhXUlBSRUhFbTU0QkpLMUZ2NUlOVGNzWmVHRThVTV9jVUU?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada estime que les nouveaux tarifs douaniers américains pourraient plomber la croissance au quatrième trimestre  Zonebourse Suisse",
+      "description": "La Banque du Canada anticipait une inflation élevée avant sa réunion de septembre  Investing.com France",
       "cities": [],
       "category": "general"
     },
@@ -429,5 +485,5 @@
     },
     "last_quarter": "août 2026"
   },
-  "last_update": "2026-09-21 18:27"
+  "last_update": "2026-09-22 17:31"
 }
