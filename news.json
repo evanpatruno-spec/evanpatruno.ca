@@ -89,36 +89,30 @@
       "category": "general"
     },
     {
-      "title": "Fiers d’ici | L’achat canadien en cinq chiffres",
-      "link": "https://www.lapresse.ca/affaires/portfolio/2026-09-25/fiers-d-ici/l-achat-canadien-en-cinq-chiffres.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Démystifier l’économie | Comment lutter contre l’inflation ?",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-09-26/demystifier-l-economie/comment-lutter-contre-l-inflation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Même si les ménages font preuve de prudence dans leurs dépenses, de nombreux Canadiens sont prêts à payer plus cher pour des produits fabriqués au pays, selon deux études de la Banque de développement du Canada (BDC). Cinq chiffres pour comprendre.",
+      "description": "Chaque semaine, un de nos journalistes répond, en compagnie d’experts, à l’une de vos questions sur l’économie, les finances, les marchés, etc.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Wall Street ouvre en légère hausse, portée par un répit sur le pétrole et les taux",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-09-25/wall-street-ouvre-en-legere-hausse-portee-par-un-repit-sur-le-petrole-et-les-taux.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Pourquoi le projet de loi C-39 soulève-t-il la controverse ?",
+      "link": "https://www.lapresse.ca/affaires/2026-09-26/pourquoi-le-projet-de-loi-c-39-souleve-t-il-la-controverse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Bourse de New York évolue en petite hausse vendredi, soutenue par une accalmie sur le marché du pétrole et par des rendements obligataires globalement stables après leur bond de la veille.",
+      "description": "Avant même son dépôt, le projet de loi C-39 suscitait déjà la polémique. Cette réforme, qui vise à accélérer le développement économique, est saluée par le milieu des affaires, mais vertement critiquée par les groupes environnementaux, les syndicats et l’Assemblée des Premières Nations. Voici un aperçu des points de vue.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Faut-il chercher à geler son taux hypothécaire dès que possible?",
-      "link": "https://www.ledevoir.com/economie/finances-personnelles/1011722/si-on-magasine-pret-hypothecaire-faut-il-geler-taux-maintenant",
-      "source": "Le Devoir",
-      "description": "«Les gens nous contactent et veulent s’y prendre d’avance», affirme une courtière hypothécaire.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’épargne, un frein à l’achat d’une maison pour les nouveaux arrivants au Québec, selon un sondage",
-      "link": "https://www.ledevoir.com/economie/finances-personnelles/1011437/epargne-frein-achat-maison-nouveaux-arrivants-quebec-selon-sondage",
-      "source": "Le Devoir",
-      "description": "L’obtention d’un emploi mieux rémunéré et un historique de crédit au Canada sont aussi cités comme obstacles.",
-      "cities": [],
-      "category": "general"
+      "title": "Geloso | Se battre contre les droits de douane et pour une place sur les tablettes",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-09-26/geloso/se-battre-contre-les-droits-de-douane-et-pour-une-place-sur-les-tablettes.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Serrer les rangs derrière l’industrie québécoise de l’alcool pour lui permettre de s’imposer sur les tablettes. Telle est la demande faite aux gouvernements fédéral et provincial par Groupe Geloso, une entreprise de Laval qui produit et embouteille plusieurs prêts-à-boire.",
+      "cities": [
+        "laval"
+      ],
+      "category": "local"
     },
     {
       "title": "Immobilier à Québec | Changement de garde chez Immostar - La Presse",
@@ -137,34 +131,10 @@
       "category": "general"
     },
     {
-      "title": "La Cour du Québec ramène à 60 jours la suspension imposée à un courtier immobilier - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVUF1N2xjY01MREpKalFvWkVwY3V1ZlFnOEw2cDV6U2p1eF9lQ01YMDNiaGZ0VHNPM1VnNkNZcno1enNhRk9EamZ3dXhhaHM3OG1SZE9tX1BQT1B4bTNuUm45dWxiaE1ERnBrOFhvRkp0dHJmZU5pSlJjbmFuTXd4TEIwX3NPdDVYWnRtWXFyOTZjaDUwM2xQeXREcXItbDlscnV1eldJVDNUSTA1TGlhMDdpVVR4Y1lYcjY3TjIxWFJEOXM?oc=5",
+      "title": "La Cour du Québec ramène à 60 jours la suspension imposée à un courtier immobilier - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOTd4bkI4bF9BRW41Y0Y3RFdaRVI1TS1BRG42MFZLVmt4ZDFoeDMwSGl5b0Y5M3JpcWFyX3lqbUNrbDZWcGhWaGZ2Mi1IVFdqVWZHdkxUNVpxSXU1dWlQVThSUlFSQzVZOEk5ZzJ1ckxqeXdnOF8yMndiMVZ4SXduT19RS2d3Ui11c3V4NzZkYXA5cEgyOFhFVnZhdUQ3OHcyY0NrRVVtbm41dEdsNzlZb01WSS12amFCRWlnQUNR?oc=5",
       "source": "news.google.com",
-      "description": "La Cour du Québec ramène à 60 jours la suspension imposée à un courtier immobilier  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’épargne, un frein à l’achat d’une maison pour les nouveaux arrivants au Québec, selon un sondage - ledevoir.com",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbDJ3X3l2ZmFkbGpsUDR3N2xPUkpjTWJPQ2kxcDhubzRGQzlQNWxTc0RHMjdhMDZDWG1DQmdmaW42N0ZQMzhCWEljVDRYbWNmV2h2VzZHZXpha0tKbzlZeHlWQXMxTU43TkNYUEM5YlhTMkJORFhJWkNnWnkzNjhaM2lpVlpQZmwzTHVjaE0tdDNvYmMtRVB2YTBoa3J1TjVzbnBCd2x4V3pSVXh6ZWNLcER1ckFZZTFEeVItWGVwY0Ffd0hmdWtNcXh3?oc=5",
-      "source": "news.google.com",
-      "description": "L’épargne, un frein à l’achat d’une maison pour les nouveaux arrivants au Québec, selon un sondage  ledevoir.com",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Élections 2026 - Québec solidaire va serrer la vis à l'industrie du courtage immobilier - Presse-toi à gauche",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPcXZ5TUZRN1hKcFJZM2I1NG1aV1hHZ0U1R1FDUXAtQ3hoSURSR1JIR254T1JZZW1JT3ZrSENlcEtpb2diLWRRYTdVVGJKemd6WWg0alRkTzE3MGJSd0lIWk5MNFBnT2tXRktMM0ZWcGt6X3gyWHgzTE9Ta1ltRWp2ek1xRU50OW02dVkwREkwaEFzUDdqUlRpNHdUb3hFWFJ5RUZHQXl3?oc=5",
-      "source": "news.google.com",
-      "description": "Élections 2026 - Québec solidaire va serrer la vis à l'industrie du courtage immobilier  Presse-toi à gauche",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Québec solidaire – Le logement, un investissement dans un actif - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOS2VvVWhKbkF1SnE1SWM2NF9IbHBxcExjZlF5N3RXVXdMUjl2VV9IOXNBSWRnNFNBMHlpZlV3OVZVNC1zOXVraEhicUY1aFRELWpWVGstbTBoV0F6ZUNfSDlybnNwT2dmSDUzU2dMRXFGZWs0TGtUeXVPdEN0emZ4UDF5QWVFVlpndlZNMkw3alVaSktkLVE5MXlpRlpVYllCZ3hnY2dYUDhlcDA3LWhlWkRObFVzQm10RWs0?oc=5",
-      "source": "news.google.com",
-      "description": "Québec solidaire – Le logement, un investissement dans un actif  Journal Métro",
+      "description": "La Cour du Québec ramène à 60 jours la suspension imposée à un courtier immobilier  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -173,6 +143,22 @@
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNOEFhamRVRFJKbFJmMXdVdnp4Ml9DTk5RNC1aWlRKNnZsV1gwdkxDSlpwQlB6NkFOU1g3N05vOEs0TUcxOG42Z0l6TTFsY3ZWZ29OWTk2U0JkbUd2cVl4VHhaZHJ2WVc1T3YwMjdkRmpRZERMSFhGR1oxYm5nOHo0SDFDMDRmT1dUb0YtR0ZSa3J4c240dXR4NmRaSG91TTJPT1ZlRXdXTFVXVTRnMnV0S1hqRDJTQQ?oc=5",
       "source": "news.google.com",
       "description": "Avec déjà un milliard d'actifs, le promoteur immobilier Immostar vise haut  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’épargne, un frein à l’achat d’une maison pour les nouveaux arrivants au Québec, selon un sondage - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbDJ3X3l2ZmFkbGpsUDR3N2xPUkpjTWJPQ2kxcDhubzRGQzlQNWxTc0RHMjdhMDZDWG1DQmdmaW42N0ZQMzhCWEljVDRYbWNmV2h2VzZHZXpha0tKbzlZeHlWQXMxTU43TkNYUEM5YlhTMkJORFhJWkNnWnkzNjhaM2lpVlpQZmwzTHVjaE0tdDNvYmMtRVB2YTBoa3J1TjVzbnBCd2x4V3pSVXh6ZWNLcER1ckFZZTFEeVItWGVwY0Ffd0hmdWtNcXh3?oc=5",
+      "source": "news.google.com",
+      "description": "L’épargne, un frein à l’achat d’une maison pour les nouveaux arrivants au Québec, selon un sondage  Le Devoir",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Élections 2026 - Québec solidaire va serrer la vis à l'industrie du courtage immobilier - Presse-toi à gauche",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPcXZ5TUZRN1hKcFJZM2I1NG1aV1hHZ0U1R1FDUXAtQ3hoSURSR1JIR254T1JZZW1JT3ZrSENlcEtpb2diLWRRYTdVVGJKemd6WWg0alRkTzE3MGJSd0lIWk5MNFBnT2tXRktMM0ZWcGt6X3gyWHgzTE9Ta1ltRWp2ek1xRU50OW02dVkwREkwaEFzUDdqUlRpNHdUb3hFWFJ5RUZHQXl3?oc=5",
+      "source": "news.google.com",
+      "description": "Élections 2026 - Québec solidaire va serrer la vis à l'industrie du courtage immobilier  Presse-toi à gauche",
       "cities": [],
       "category": "general"
     },
@@ -201,10 +187,26 @@
       "category": "general"
     },
     {
-      "title": "Un projet de 374 logements pourrait pousser dans le secteur de la Pointe-aux-Lièvres - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOeFB0UTgwNTBnVzlYYkxZNFIwbFpURTgzMzNVOWFULWlNRDlOOWF0bEs5dDJkY2VnaGthaHhhRDJyUzVqcGZmRzNITlQ2bDlzSG85T3UtUi1TMlVzVEdMZVhBeFhjVFlXX1V4TU5EaHpGZWIybW8zZE5xamd2VUJOLVY4a19HYlNxOXdMSQ?oc=5",
+      "title": "La copropriété québécoise sous les projecteurs de TF1 et CNews - CondoLegal.com",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNXQ0YzItdncxZGgyQkJMZFBfaVZFeFd4ZEZhWFpqYXUxVXRxZk9obWVMYkExWmNqUnVlbnNuWGtvYzlwcHFBTEQ2NEhXSlA5V0VOQmhfTmdJZlRuQ29ER2s2emY3OFJjQ2hPQVRkYUZyOWxrQ0pPRjFMbzJUb3dCbW9NcFRQNUozbmhJMTBndUNxU3JDWWdzTGU4M3JiTndlb0VEMlFWT0NycDZV?oc=5",
       "source": "news.google.com",
-      "description": "Un projet de 374 logements pourrait pousser dans le secteur de la Pointe-aux-Lièvres  Radio-Canada",
+      "description": "La copropriété québécoise sous les projecteurs de TF1 et CNews  CondoLegal.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Québec solidaire – Le logement, un investissement dans un actif - metroquebec.com",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOOS1TdTViaGd0NWZRTEh4MlBuQ1VKbV80b2JRcngxcGlpNURLdEdUdUVNQnJxcWF5M0hKTWpnejJfM3loMGY4dXZUSjI0blRUZnBzN2NLdnBlMGgtM2p2M0hhaEUxMlVNUzFhWW1BRkJlOGUzdFBHOTNGaFptbGt3ZjR1MVpVZU9XWTlEMW5UTWV1b3gxZ0stWDZOWFJDamE3QklMTDhB0gGrAUFVX3lxTE5nOHhHTkdWbDZYM0RsMGRnWVp1N3M5MHE2Mm1fQlZqaFA4bzRrakUxRm5sa1pYVXFvOFlhWkdBWlVwVVhCbXdKY3BOTENQNXFYck5xQkY1emlMYUlZSFpoMnZTUnJEV0dCclR6dTFrTzFlenhqWTVoVE9IaExndFBUdGFyYkpxaHUzeGdrU050UmhyLWlIWHlaOEItd2VkeFcwLXptRmpoTzRVdw?oc=5",
+      "source": "news.google.com",
+      "description": "Québec solidaire – Le logement, un investissement dans un actif  metroquebec.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Pointe-aux-Lièvres : un projet dérogatoire de 374 logements soulève des questions | - MonQuartier",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONzJjWUFZcTVOOG1HN0ZGSkN3WXVoZnEyd0ViWW5tekhiSjljdFNjb0t3S19ZZ280TnFubk01b2hfY0RDM3AyTU1wSmdxQVpUc1ZMMkN6ZmxoRjRZZFRHU3ctZHZDUmluUFhacEZkajFfZlZDa3JpMWdZZklOQ3N3Vk1jY1VYNG9NN19OYXRpeU0zbGtGWkt4V0ZxeEt6aGpYNEVGSEZtcDZZMHRPdlJFMnln?oc=5",
+      "source": "news.google.com",
+      "description": "Pointe-aux-Lièvres : un projet dérogatoire de 374 logements soulève des questions |  MonQuartier",
       "cities": [],
       "category": "general"
     },
@@ -213,14 +215,6 @@
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdDNJZVZjenhxcnZMbk1MV04zc2djLW5ZZ0l3blZPdnp5VVRwMVZQOU9KSkI4LTlQWmhPdTBrdjNWcXI0cEhZWHdQMThuaHlGUG1rZzQtSk9fSmNEaDAxUnpSUDdnSEJfbm4zcTN1bjhXMG5EWV9QRlJDemJ2djJSTl91emtYNHk0VkZGT0FJZE1hQ0swQmMyNjZNSEJYRHk2bEoxSEpRRDNaRFk?oc=5",
       "source": "news.google.com",
       "description": "Jean-François Viens, un courtier immobilier du Québec fait sensation avec ses vidéos  Monde de Stars",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Comment se protéger de la hausse probable des taux hypothécaires? - FM93",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcHhsZnl3ZXR1ZGZFQzZZOHYxTjdkZGtZdXpsYkExakhPQ1BhNF9OVUZSb1ZOQVMyU3UyLWctNVd2RWpqeE9QY3dpejlzeXA0SE9reEMtNFVCcjA3RDdmWnMwcElYR3BUQ2dHR3Z0bVhFUEZ6UjdKdl9fOHZMdXRqaU9NWml5TzI3UmpPQUZoT0cwdFZ5YkFRMmpiQ21ORms?oc=5",
-      "source": "news.google.com",
-      "description": "Comment se protéger de la hausse probable des taux hypothécaires?  FM93",
       "cities": [],
       "category": "general"
     },
@@ -235,66 +229,18 @@
       "category": "local"
     },
     {
+      "title": "Comment se protéger de la hausse probable des taux hypothécaires? - FM93",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcHhsZnl3ZXR1ZGZFQzZZOHYxTjdkZGtZdXpsYkExakhPQ1BhNF9OVUZSb1ZOQVMyU3UyLWctNVd2RWpqeE9QY3dpejlzeXA0SE9reEMtNFVCcjA3RDdmWnMwcElYR3BUQ2dHR3Z0bVhFUEZ6UjdKdl9fOHZMdXRqaU9NWml5TzI3UmpPQUZoT0cwdFZ5YkFRMmpiQ21ORms?oc=5",
+      "source": "news.google.com",
+      "description": "Comment se protéger de la hausse probable des taux hypothécaires?  FM93",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Entrevue de la Banque du Canada – Market News International - Banque du Canada",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTmQ2MHRvR3BxYnZrWk1RbGNqTXNReHFZYWxwRGNLRzNtZnRNeEhtci02QXFadnhQRm5mNElwRUVycHp5aEVZM2I5YlFDX25Lb0FYeTkyRE9YUmVHU1RuZkFtVUx4QktoUnZyNm1QWHVTM0ZpMllRdF9rcm4wVW0wY2ZXcUx1UkZQT3k5RjN5UXc1T25WWE1UQ3hveWlCSU1uQmNqY0Uta050MmM?oc=5",
       "source": "news.google.com",
       "description": "Entrevue de la Banque du Canada – Market News International  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Discours du gouverneur de la Banque du Canada à Halifax - CPAC",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUU9QVU4xLWdIbGJobDM5bXVPNTB3d1VDT2dKMEN3QXdGcGNDTFJGSGVsN284MzZmZDdOemk1dW9PcXIzMjZ6U3BGdzF5YklPa01hVjRNWkhoZDZ2TTRpeGZwaG5pZWFsQkJuNmxkZXZvei1zdlJaaExGS0U1SThZS1lEbjRVa1E2SldXOWFOTkxqX1BuRHVSUXJOektISUFEb1RBUGJvNE5NUDQ1ZG1tbXN3QkRFVV9KNll5dG5ucUxNOTUtOWx0RFN2X0lOeVU?oc=5",
-      "source": "news.google.com",
-      "description": "Discours du gouverneur de la Banque du Canada à Halifax  CPAC",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un sous-gouverneur de la Banque du Canada en visite - Journal La Revue",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbXZyMWsyM2VrX2h1SVJ3N25LNmFDSnhBajFCUjhtclZ1THFwQ0RHUGVzR05WQkc1dTJKcG40NVJMVXhSTzFrODFBd2pUMGtZSklTWm44LXFEdnJtMG9Nb1poVGZIRlFRaVVFMmgtOThieEdOZWpHeUkyc2VzOEpXT0xYZThfT1pvWUFhbEhuTWJFb1VkNngxbHRvX1M1UQ?oc=5",
-      "source": "news.google.com",
-      "description": "Un sous-gouverneur de la Banque du Canada en visite  Journal La Revue",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Grève à la Banque du Canada | Le NPD accuse Ottawa d’enfreindre le droit du travail - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOOXFSVDY2VmR3WkdKcXBfMlNfbU9acmRKOFAzNF9RcG5ad1Y1NzQ3QkFYRWltbHA5UEFGVmszSDJiS3J4cmZrbGZqMmZza0ZWQVhGeV8zWU03dUFVRWwwNmVOOEdxdkI1UXVqUEFZbWV5OGk4V2owM2NndDAyNmEwRFBHSFJVVkl1U3h6YVJtVEdGSzZrZk5xWFpmMzhDcFNCVnNmX25MRGlFbGw2MlBCU0RQWDNCdjNOa2w0ZDRRaWhQTFlSVFZJWA?oc=5",
-      "source": "news.google.com",
-      "description": "Grève à la Banque du Canada | Le NPD accuse Ottawa d’enfreindre le droit du travail  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada : Macklem met en garde contre le risque de relever les taux trop tard - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNU2NrWmplVFdOTldWLURzbDFOUUg3SHRpMDh1dGFHcGY0aXZIY2J6S25XUUFZWWJlazhTYi11ZUI2NUZscWdnbHV4R2ozTnNxYVhEWGtSUlNaUk8zb3lDZUpacmh6T3RlRmFKVWRtZXJoVjZXZ09wR2FYWi1XdmpCM1JTanZBZGFIYUlFaHJTLW9FSlZjQ1NWZkR4TTNUaV9tSXlMZUNkV2JOem1mWW1tazdRd0R1NEhweW1lNTRIaE1XdUhlX1JKVWo4dm9lekcx?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada : Macklem met en garde contre le risque de relever les taux trop tard  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada est prise en étau - InfoBref",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1KR2Z5TFhtRkkzVThvUThmWGc1ZXhQNXJURHItd3FIRF9KS1pIM2VRcDZrM1RCSzFhMkVUTF9kOUQ2cmM0Z0dlc2R5Nkw2ZGR4UFEwb3BNdy1GVFZWYncxT2tzQk1EazA?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada est prise en étau  InfoBref",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Risque d’inflation: un discours de Tiff Macklem - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQ2diUXVkTXc3X2hvNjhWa3JFWU9JZWZ3TlBaVExVZVY4Zlh3cFlHX0Y0X2prRnVPeDlWcUtkbW1TS3VfUU5mdERuRWlzSmZaM0tsMnFfY3NGVzczNWdaNmFxM1Zfd3VPSGtqT1NOMk1JY1VmaHdpX21oUkhua1QxcE85Qml0azdBVHpXLUJ3UXpPck5vMkxN?oc=5",
-      "source": "news.google.com",
-      "description": "Risque d’inflation: un discours de Tiff Macklem  Noovo Info",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "S’adapter aux forces structurelles et composer avec l’incertitude - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPREh1VzBJbEczckIyQkhQNXNzOUtxYzZtUEhINUJySHl4aDhFemZnbGE3UHBsdUNQcGFkZVVFbmNSVzROZ0JkZUlCZ05rblVLVVRNNzRrZTFoNFJSMWZXTE1Zc1liSlN4MDd5Qm9BY0ZyV2M5bTRQTmN1cnZDd3YzN05uVlI2WFNCdVJxVTVRU0xqRFJB?oc=5",
-      "source": "news.google.com",
-      "description": "S’adapter aux forces structurelles et composer avec l’incertitude  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -307,10 +253,58 @@
       "category": "general"
     },
     {
-      "title": "Les emprunteurs hypothécaires sur le qui-vive face à la hausse des taux d'intérêt - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPQ1pOTGQwZmd5bFJ0dnZNNVRtb1htcWxveWNpVGpwdFY3aGwycGNtV0hNc3VVTEMwQVQtMHRrLXVOLVVGSXNrd1pfTXZoaldDZUhoc2xBWHlqUmI3MEJvTG1CMEJIXzM3VW5MZERFTmNlNHA3YVlJSWEwd3JXUXAyUTZPNDVQRHRpYl9rcTU0SGpJdjF5S0xocGhoYVZzbVBRU2tRVHRSSEEzNjBLYmZoTmZ0c3dTVXFoS0c1Mg?oc=5",
+      "title": "Manulife prévoit deux hausses de taux consécutives de la Banque du Canada - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPczVxanVzXy1vbW41cHRLeElrQXpRTmo5U1ROX0hJaGxBYklTbFk1eG9SZmRWR2NHMXlySEtUbDAxam5PbW5QTDJ6NjZhbzFjcHZsR2lkdU9HN1Y3T18yTFB1NnNNYlNkT2JyVmlJdDQ5MXJZZWFub0NuZU1xc241NUNyYjhqMnFpdC1ZOHM0ejFaZzh3dlA5TG9KUUZ0UjZtYWtZT05velFpcWdJS1RQNm1uRXF1WElqSTdxWFpSYU5aZw?oc=5",
       "source": "news.google.com",
-      "description": "Les emprunteurs hypothécaires sur le qui-vive face à la hausse des taux d'intérêt  QUB radio",
+      "description": "Manulife prévoit deux hausses de taux consécutives de la Banque du Canada  Canadian Mortgage Trends",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Grève à la Banque du Canada | Le NPD accuse Ottawa d’enfreindre le droit du travail - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOOXFSVDY2VmR3WkdKcXBfMlNfbU9acmRKOFAzNF9RcG5ad1Y1NzQ3QkFYRWltbHA5UEFGVmszSDJiS3J4cmZrbGZqMmZza0ZWQVhGeV8zWU03dUFVRWwwNmVOOEdxdkI1UXVqUEFZbWV5OGk4V2owM2NndDAyNmEwRFBHSFJVVkl1U3h6YVJtVEdGSzZrZk5xWFpmMzhDcFNCVnNmX25MRGlFbGw2MlBCU0RQWDNCdjNOa2w0ZDRRaWhQTFlSVFZJWA?oc=5",
+      "source": "news.google.com",
+      "description": "Grève à la Banque du Canada | Le NPD accuse Ottawa d’enfreindre le droit du travail  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Vers une hausse importante du taux directeur? Renouvelez rapidement votre hypothèque, préviennent des experts - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQVDRidkZLOUl2YWlNQmZtSGFYTC1BdlRMY2R4SHRpM0k1bV80WTJQUDRCUFIzVVhHNFlGdVlWbzVmOVBwdXhIUDBzNTFZanFobThsWFE2TG45UncxcW1kM2Yxa2U2ckFsYUY2Ym5nMVBsTkl1Z3BFTXNubDVNSmZBR0JJTGZuZ3VOWjlMejlMQUdfcEhibktvbUpsTzlSa2dZbHozMktGclRPejllZzlyazBEU2VvM1VTbENzMkM2Wm9ORko1V2xmU2U4bXdRMW1BUWtsbUpmZ1dpVmFuMmNxTnNkX1dIRDcyT0ZLM3JIblh4V3JoMk9KZEZBc0hZZFQyY09KUjBn?oc=5",
+      "source": "news.google.com",
+      "description": "Vers une hausse importante du taux directeur? Renouvelez rapidement votre hypothèque, préviennent des experts  Noovo Info",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "S’adapter aux forces structurelles et composer avec l’incertitude - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPREh1VzBJbEczckIyQkhQNXNzOUtxYzZtUEhINUJySHl4aDhFemZnbGE3UHBsdUNQcGFkZVVFbmNSVzROZ0JkZUlCZ05rblVLVVRNNzRrZTFoNFJSMWZXTE1Zc1liSlN4MDd5Qm9BY0ZyV2M5bTRQTmN1cnZDd3YzN05uVlI2WFNCdVJxVTVRU0xqRFJB?oc=5",
+      "source": "news.google.com",
+      "description": "S’adapter aux forces structurelles et composer avec l’incertitude  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Grève à la Banque du Canada: le NPD accuse Ottawa d’enfreindre le droit du travail - Le Journal de Joliette",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNay1uNTJmM3AwTzhlU0hMVlBSazVJMk5UUWMzam1OaVlMRUdaTHpjc3BfUVBpNDVlRmZxWHE5emp5VTN1NVkwaXg4RFpuT2EzbXJZSVZNMEVwVU5xTkY3WVE3RURKV0ZGMFdTZEhBSzZacmV1TzFqck10dndHRlhqWkJmakN4aEJaRzVhb1BGU1d6Y1NOMXZzUXdyM2NpNFRXUmV0QnM1d3JQUEF3UnFzSmJtYWMwU1Nlc09oWXZiWWNsQ3pXSjhDbFZ0a25VZVB0V2J4aVFvRmprY2ZpOHpXWTVSei1KZw?oc=5",
+      "source": "news.google.com",
+      "description": "Grève à la Banque du Canada: le NPD accuse Ottawa d’enfreindre le droit du travail  Le Journal de Joliette",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Discours du gouverneur de la Banque du Canada à Halifax - CPAC",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUU9QVU4xLWdIbGJobDM5bXVPNTB3d1VDT2dKMEN3QXdGcGNDTFJGSGVsN284MzZmZDdOemk1dW9PcXIzMjZ6U3BGdzF5YklPa01hVjRNWkhoZDZ2TTRpeGZwaG5pZWFsQkJuNmxkZXZvei1zdlJaaExGS0U1SThZS1lEbjRVa1E2SldXOWFOTkxqX1BuRHVSUXJOektISUFEb1RBUGJvNE5NUDQ1ZG1tbXN3QkRFVV9KNll5dG5ucUxNOTUtOWx0RFN2X0lOeVU?oc=5",
+      "source": "news.google.com",
+      "description": "Discours du gouverneur de la Banque du Canada à Halifax  CPAC",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Banque du Canada : Macklem met en garde contre le risque de relever les taux trop tard - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNU2NrWmplVFdOTldWLURzbDFOUUg3SHRpMDh1dGFHcGY0aXZIY2J6S25XUUFZWWJlazhTYi11ZUI2NUZscWdnbHV4R2ozTnNxYVhEWGtSUlNaUk8zb3lDZUpacmh6T3RlRmFKVWRtZXJoVjZXZ09wR2FYWi1XdmpCM1JTanZBZGFIYUlFaHJTLW9FSlZjQ1NWZkR4TTNUaV9tSXlMZUNkV2JOem1mWW1tazdRd0R1NEhweW1lNTRIaE1XdUhlX1JKVWo4dm9lekcx?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada : Macklem met en garde contre le risque de relever les taux trop tard  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -319,14 +313,6 @@
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE16UmN2SmtBVnlqZ1R0YXN2UUFwbGRYZ0FSRF9TTXZHM1Q2U0dmZ1E3LU5GQ1c5V2pQZkxFQXM1WHd5YVZaVEx4QVhRamMtUFNNY1NETGZBVnBSMG5sc21BcXhieVgtOWI2T2lWZkhGQmNiV3ljMTFyRg?oc=5",
       "source": "news.google.com",
       "description": "Les pressions sur le budget des différents types de ménages depuis 2020  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’adjudication d’obligations à long terme du Canada affiche son rendement le plus élevé depuis 2007 - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNWER3QmZQQUdjWWJfVEdaRDU1Sjk0bUpMS3RUZVJqVXJRZ3I1UEI1TUtWb0dxbnFoUVhVLVduUEpIZnJxbDRTNUl6c2dfRzMyN09oc0pfTlRhaDB2aUFzTWVkQ2R0bkdkLXlaSnlYOXpxMjVPeTdHcVplTjN3ci11ZDJOQ2RDWjBWS09UNk1hU2VkUHRqN2FZXzRoVXBuMG14QnJudGU0dk5TN0tabjR6djNHd2lMbDRaREJtOXZWb2xGOTZrYTUyTDloeTlhQlNFNmhCUzhXeDd4V3hndHZ4M21B?oc=5",
-      "source": "news.google.com",
-      "description": "L’adjudication d’obligations à long terme du Canada affiche son rendement le plus élevé depuis 2007  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -355,6 +341,14 @@
       "category": "general"
     },
     {
+      "title": "Hausse des taux hypothécaires | Une solution : se réserver un taux - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSURWMFZKNjZpT213WVZlWDZuTldRaTlVM1p2R2JyVUJBMENBbjl1eWQ1N08wVk9TVFVLSnRicmZCTmgzQ29kblhiYkdLRHYtUnZrNFNkUXpLdk1MWEkyNG5BWnVNa1l2NEY4N0tYbmJROWJhM1RjN0NOUHozQXdUNnBaU2lpMUN6cUV4azFUbkE5RmhSWkRIUTFaN0NFcVNFeE0zZllhVENFWFBLdS1N?oc=5",
+      "source": "news.google.com",
+      "description": "Hausse des taux hypothécaires | Une solution : se réserver un taux  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Discours : Halifax Partnership - Banque du Canada",
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQc2Q0TGdaNlJxMXJuQllDS1R0RFV0V1dmTXE5SU5OTkl0RzA5MkZ3MkdncG1wc3NwUmFOTzlQVEVLNUdZczZTZDdyN2htX2ZtTTZGZ2lta0xaLTRjOXIxRGtzMVNfWWhuSkQySUo1YjJLTGduQlJYeDVsejEtaE5CNU9zUzhoX0Qy?oc=5",
       "source": "news.google.com",
@@ -363,18 +357,26 @@
       "category": "general"
     },
     {
-      "title": "Banque du Canada : les ménages plus jeunes et à faible revenu ont pris du retard sur leur budget depuis la pandémie - indexbox.io",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNT1U2dW5mNlVucUhrT29yQ2xFZjY4NlZsZFpOQi1TXzF1cFFmd1NJUjh1YVRMM09jbUk0T0o5U29YazRxY1hiT05PQU1rZ2REQXNHUF82b2hlRU1RanJUZmRlUVFIakRENnBjWWNHM1ltX3htbmoxclY2c0VQcEJJQTJpZU40RGs3RW9YZ2VuT1lzYXpoZGpaZ2Ftb01LVzBqRjhVcEI5OFJqZnIzNGNFWDl3RTNfRldJMHowejY1RnU3cTg?oc=5",
+      "title": "Les économistes voient une inflation plus élevée au Canada, selon un sondage - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQb3FGUFpIZDMtSUU4VmlpUDRiLUpTcFRvN0U0amhWeEstVVdrU0FjSjJYYWNsV01NQ1BkMV9yaXJENW5EYTBPRU1NSFo4RUE2QktJUDNpSWFuSHhtcjNhNHZ2Wk5Ic1VUSUlJQjczQlN5QXFxbzJPQ1JkWVFodkpUOFJqQWJwT1BYS1dPWFB2UHd0NkZnRC1UZ2plRTBqZm1RbXR3Wnd5SnQxSDNwT25WbU95VTVnSXdSWS1yMDBzTHhPNzVX?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada : les ménages plus jeunes et à faible revenu ont pris du retard sur leur budget depuis la pandémie  indexbox.io",
+      "description": "Les économistes voient une inflation plus élevée au Canada, selon un sondage  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada avertit que les tarifs américains pourraient freiner la croissance au T4 - Investing.com France",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNbjVsRXZKb2UwbHNOYXE1dzNJSmpTWnc3OVhLUkM5U09tdVp2ZGJvaXMtanZ4R3ZWQUJWTFRNenZpZ1hBcVNIbmZSUnBoSmk4S3JKdkJiU3RYeTZlaS1STkM0SzFRc2E5NEpZMTFzQlJBU1VZbGZkMGNRWlIwWGhBQzNrN2FtcW5IdThwNHNRenNJUGx6TTloQVgtUWRycUZKYXJWT0psQnFfblo1dEl1S1kxSlhRRlV4NDJIS0V4RlcxMWRpWVpTR1BvVmNnOEJxSHhRNUdGYWZscHdaUTZvaVdR?oc=5",
+      "title": "Banque du Canada : les ménages plus jeunes et à faible revenu ont pris du retard sur leur budget depuis la pandémie - IndexBox",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNT1U2dW5mNlVucUhrT29yQ2xFZjY4NlZsZFpOQi1TXzF1cFFmd1NJUjh1YVRMM09jbUk0T0o5U29YazRxY1hiT05PQU1rZ2REQXNHUF82b2hlRU1RanJUZmRlUVFIakRENnBjWWNHM1ltX3htbmoxclY2c0VQcEJJQTJpZU40RGs3RW9YZ2VuT1lzYXpoZGpaZ2Ftb01LVzBqRjhVcEI5OFJqZnIzNGNFWDl3RTNfRldJMHowejY1RnU3cTg?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada avertit que les tarifs américains pourraient freiner la croissance au T4  Investing.com France",
+      "description": "Banque du Canada : les ménages plus jeunes et à faible revenu ont pris du retard sur leur budget depuis la pandémie  IndexBox",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les emprunteurs hypothécaires sur le qui-vive face à la hausse des taux d'intérêt - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPQ1pOTGQwZmd5bFJ0dnZNNVRtb1htcWxveWNpVGpwdFY3aGwycGNtV0hNc3VVTEMwQVQtMHRrLXVOLVVGSXNrd1pfTXZoaldDZUhoc2xBWHlqUmI3MEJvTG1CMEJIXzM3VW5MZERFTmNlNHA3YVlJSWEwd3JXUXAyUTZPNDVQRHRpYl9rcTU0SGpJdjF5S0xocGhoYVZzbVBRU2tRVHRSSEEzNjBLYmZoTmZ0c3dTVXFoS0c1Mg?oc=5",
+      "source": "news.google.com",
+      "description": "Les emprunteurs hypothécaires sur le qui-vive face à la hausse des taux d'intérêt  QUB radio",
       "cities": [],
       "category": "general"
     },
@@ -439,5 +441,5 @@
     },
     "last_quarter": "août 2026"
   },
-  "last_update": "2026-09-25 17:46"
+  "last_update": "2026-09-26 16:53"
 }
