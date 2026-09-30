@@ -89,36 +89,34 @@
       "category": "general"
     },
     {
-      "title": "L’IA stimule les investissements dans l’innovation, selon l’ONU",
-      "link": "https://www.lapresse.ca/affaires/techno/2026-09-29/l-ia-stimule-les-investissements-dans-l-innovation-selon-l-onu.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Le ralentissement économique devrait limiter les hausses de taux",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-09-30/le-ralentissement-economique-devrait-limiter-les-hausses-de-taux.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "L’intelligence artificielle alimente un rebond des investissements dans l’innovation, les dépenses de recherche et développement des entreprises atteignant des niveaux records, a déclaré mardi l’ONU.",
+      "description": "Les incertitudes commerciales et le ralentissement de l’immigration pourraient empêcher la Banque du Canada de procéder à trop de hausses de taux d’intérêt dans les mois à venir.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Assurance entreprise | Assurances collectives : un atout pour les PME",
-      "link": "https://www.lapresse.ca/affaires/portfolio/2026-09-29/assurance-entreprise/assurances-collectives-un-atout-pour-les-pme.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Élections québécoises | Les deux tiers de la génération Z influencés par la question du logement",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-09-30/elections-quebecoises/les-deux-tiers-de-la-generation-z-influences-par-la-question-du-logement.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Assurance médicaments, télémédecine, santé mentale… Pour une PME, choisir les avantages sociaux qui valent l’investissement peut représenter tout un défi, encore plus lorsqu’on compte une poignée d’employés. Jean-Denis Charest, PDG de la Chambre de commerce de l’Est de Montréal, explique comment les assurances collectives peuvent devenir accessibles aux petites entreprises.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "La « crise actuelle de l’offre et de l’abordabilité du logement » se classe parmi les thèmes centraux de la présente campagne électorale alors que 42 % des Québécois affirment qu’ils seront influencés par la position des partis sur cette question.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le ralentissement économique devrait limiter les hausses de taux",
+      "link": "https://www.ledevoir.com/economie/1013279/ralentissement-economique-devrait-limiter-hausses-taux",
+      "source": "Le Devoir",
+      "description": "Capital Economics a publié mercredi un rapport.",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "L’UE s’attend à un hiver difficile, avec des prix de l’énergie très élevés",
       "link": "https://www.ledevoir.com/economie/1012949/ue-attend-hiver-difficile-prix-energie-tres-eleves",
       "source": "Le Devoir",
       "description": "Des dizaines de millions de personnes en Europe risquent de ne pas pouvoir chauffer correctement leur logement.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Immobilier à Québec | Changement de garde chez Immostar - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQW5iTk9JOUpIOWlFSWN3WDUxNUJTcS04Tml5QnM2ZG5UUVljSVhjZFoycUMyWmJrb0JZRVBadnZMUGYxb1VUSnhXMkczakNBc0xfMnVRUHgtWFE3eDMxYnJaLU4zWG5yWlhSNlVQR3Vtbmx6Y0dpWExtMjJ0cHRfSXVTTHB4THhXRmJvM211aTI4S0VKXzd6Ql8xUnZMYXc4cXdVVGYzNVBLZXdaNkJWVFA1SG1JY1FiY2s4?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier à Québec | Changement de garde chez Immostar  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -155,20 +153,30 @@
       "category": "general"
     },
     {
-      "title": "Cinq gestes incontournables et abordables pour rendre sa maison plus verte et écoénergétique - journaldemontreal.com",
+      "title": "Cinq gestes incontournables et abordables pour rendre sa maison plus verte et écoénergétique - Le Journal de Montréal",
       "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQaGdobzY1Q2dyQ0ZMaTJLYm5fM3g2YmFoQlZ0R3dNNjAtYnZDUEZSMlBkX3IwXzJVMWc5b294Q3l2bjZ5YmptOFRBa2xMQ3RHXzdQMGJQcFZLSExoRmNxV016TkVfZlFtWEFIMl9SZlJMTFRkNHBTdFpxRnYyaWwxb2E0d1B6N2dTVzZLWmFfZTF6QlNMcWFYemJ6eXl3dUpDUkRrWm03Z2llTUJKRzFtSTVRemRwNGFJWVlVdk9yVVI4WWpTeU9BTHo4b0pwYjNxVlNr?oc=5",
       "source": "news.google.com",
-      "description": "Cinq gestes incontournables et abordables pour rendre sa maison plus verte et écoénergétique  journaldemontreal.com",
+      "description": "Cinq gestes incontournables et abordables pour rendre sa maison plus verte et écoénergétique  Le Journal de Montréal",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Les emprunteurs hypothécaires sur le qui-vive face à la hausse des taux d'intérêt - journaldemontreal.com",
+      "title": "«Ç’a été vraiment un choc»: des travaux de 200 000$ même s’ils ont fait inspecter leur maison - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxORzdfRldBcUxYSERESHBTWnM2S0ZDS21SeWdmUmVUcmxndWwxWDBFZFl2TllXV3gycXFONm1ybE1iUTBIclM5bXZ5QzdDMkh4aUZOeUVNU1NNN1dnejJudkdlMTlRWXhTLXpoZ3FINHFMMjBXdWhwY0hnT0NoN0NVQ0k2UG5TYUttRHJXZDltbk9GeGY4am0ybHlocDk1aFVJNF8yMzZMMFZOcWV1OTlYU29ITjF6Nk42UzRmZWJnTERpeWs3WXEwM0dZVndGb003djZVUXFHUTd1bjRUcFBCQw?oc=5",
+      "source": "news.google.com",
+      "description": "«Ç’a été vraiment un choc»: des travaux de 200 000$ même s’ils ont fait inspecter leur maison  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Les emprunteurs hypothécaires sur le qui-vive face à la hausse des taux d'intérêt - Le Journal de Montréal",
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOSUVCVnphcW1UYVBBY1dCYUtSSXdlRzA3YlFuLTVhUE1ZSDNiU25uVTNLT3FsTFp0TlRvMWNYVmt5NDlJQWE3M1ZJX2p4MG9WUlhCN3pkaHMta0hnQzhKbEpCQ0JxVi1PUndPeE1mMjRrRmRiSkh4ZG5sT2pKSF9WeTJqYlladEV4M2tiS1d5TjQ0cWdYVnBTblpqdVI5ZVNGSWkwX0h6eDdlallsVzV3elNVbGZGMkRXcnJXajJBRzFmc3Bj?oc=5",
       "source": "news.google.com",
-      "description": "Les emprunteurs hypothécaires sur le qui-vive face à la hausse des taux d'intérêt  journaldemontreal.com",
+      "description": "Les emprunteurs hypothécaires sur le qui-vive face à la hausse des taux d'intérêt  Le Journal de Montréal",
       "cities": [
         "montreal"
       ],
@@ -183,18 +191,18 @@
       "category": "general"
     },
     {
-      "title": "Les pressions sur le budget des différents types de ménages depuis 2020 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE16UmN2SmtBVnlqZ1R0YXN2UUFwbGRYZ0FSRF9TTXZHM1Q2U0dmZ1E3LU5GQ1c5V2pQZkxFQXM1WHd5YVZaVEx4QVhRamMtUFNNY1NETGZBVnBSMG5sc21BcXhieVgtOWI2T2lWZkhGQmNiV3ljMTFyRg?oc=5",
+      "title": "Le commerce international transforme l’économie canadienne - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZ1hWQ3VOS3FWSFVoVEU5MVBxZmZBdVBZckM4Qnp5UEZPamhBdVdBd1VKMi03a2xBdXF1bGF1ck1YaXpUMDNVWktjbERWUV9STnh1ald2LTc2cHUyOEg0UFdoM1VsZDB3RWU1TGNhT2xiMFoxS3B2dE1yZkp4YUlfZEVBajdlMEx5X0tnd2RLZXdEUmNhcmFlb1J6dnY?oc=5",
       "source": "news.google.com",
-      "description": "Les pressions sur le budget des différents types de ménages depuis 2020  Banque du Canada",
+      "description": "Le commerce international transforme l’économie canadienne  Banque du Canada",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Vers une hausse importante du taux directeur? Renouvelez rapidement votre hypothèque, préviennent des experts - Noovo Info",
+      "title": "Vers une hausse importante du taux directeur? Renouvelez rapidement votre hypothèque, préviennent des experts - noovo.info",
       "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQVDRidkZLOUl2YWlNQmZtSGFYTC1BdlRMY2R4SHRpM0k1bV80WTJQUDRCUFIzVVhHNFlGdVlWbzVmOVBwdXhIUDBzNTFZanFobThsWFE2TG45UncxcW1kM2Yxa2U2ckFsYUY2Ym5nMVBsTkl1Z3BFTXNubDVNSmZBR0JJTGZuZ3VOWjlMejlMQUdfcEhibktvbUpsTzlSa2dZbHozMktGclRPejllZzlyazBEU2VvM1VTbENzMkM2Wm9ORko1V2xmU2U4bXdRMW1BUWtsbUpmZ1dpVmFuMmNxTnNkX1dIRDcyT0ZLM3JIblh4V3JoMk9KZEZBc0hZZFQyY09KUjBn?oc=5",
       "source": "news.google.com",
-      "description": "Vers une hausse importante du taux directeur? Renouvelez rapidement votre hypothèque, préviennent des experts  Noovo Info",
+      "description": "Vers une hausse importante du taux directeur? Renouvelez rapidement votre hypothèque, préviennent des experts  noovo.info",
       "cities": [],
       "category": "general"
     },
@@ -231,10 +239,10 @@
       "category": "general"
     },
     {
-      "title": "Le commerce international transforme l’économie canadienne - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZ1hWQ3VOS3FWSFVoVEU5MVBxZmZBdVBZckM4Qnp5UEZPamhBdVdBd1VKMi03a2xBdXF1bGF1ck1YaXpUMDNVWktjbERWUV9STnh1ald2LTc2cHUyOEg0UFdoM1VsZDB3RWU1TGNhT2xiMFoxS3B2dE1yZkp4YUlfZEVBajdlMEx5X0tnd2RLZXdEUmNhcmFlb1J6dnY?oc=5",
+      "title": "Les pressions sur le budget des différents types de ménages depuis 2020 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE16UmN2SmtBVnlqZ1R0YXN2UUFwbGRYZ0FSRF9TTXZHM1Q2U0dmZ1E3LU5GQ1c5V2pQZkxFQXM1WHd5YVZaVEx4QVhRamMtUFNNY1NETGZBVnBSMG5sc21BcXhieVgtOWI2T2lWZkhGQmNiV3ljMTFyRg?oc=5",
       "source": "news.google.com",
-      "description": "Le commerce international transforme l’économie canadienne  Banque du Canada",
+      "description": "Les pressions sur le budget des différents types de ménages depuis 2020  Banque du Canada",
       "cities": [],
       "category": "general"
     },
@@ -247,18 +255,26 @@
       "category": "general"
     },
     {
-      "title": "Grève à la Banque du Canada: le NPD accuse Ottawa d’enfreindre le droit du travail - lejournaldejoliette.ca",
+      "title": "Grève à la Banque du Canada: le NPD accuse Ottawa d’enfreindre le droit du travail - Le Journal de Joliette",
       "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNay1uNTJmM3AwTzhlU0hMVlBSazVJMk5UUWMzam1OaVlMRUdaTHpjc3BfUVBpNDVlRmZxWHE5emp5VTN1NVkwaXg4RFpuT2EzbXJZSVZNMEVwVU5xTkY3WVE3RURKV0ZGMFdTZEhBSzZacmV1TzFqck10dndHRlhqWkJmakN4aEJaRzVhb1BGU1d6Y1NOMXZzUXdyM2NpNFRXUmV0QnM1d3JQUEF3UnFzSmJtYWMwU1Nlc09oWXZiWWNsQ3pXSjhDbFZ0a25VZVB0V2J4aVFvRmprY2ZpOHpXWTVSei1KZw?oc=5",
       "source": "news.google.com",
-      "description": "Grève à la Banque du Canada: le NPD accuse Ottawa d’enfreindre le droit du travail  lejournaldejoliette.ca",
+      "description": "Grève à la Banque du Canada: le NPD accuse Ottawa d’enfreindre le droit du travail  Le Journal de Joliette",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Une hausse des taux hypothécaires à l’horizon - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQS3E4Q2o5dnpRZEV6YkJOVFpnbTJjbVZxQ2NvSWpFVnhBOVVOamwxRzlJc2VTQkREUWVhR1pWa0kxdWo5bFV3S2VOeUdYelIyVEFEU3lvR241TEFmdE40Y2NUOFNFUHl3UzJheEpzYlFFX29ySlBreUxRbnJYc2xTY0Z4MGJsMnRVdkw3Q0FLRVI1dFR6UzRzZDlQc0pSN0llcy1LVTFlMllXR2kzQjhNTDBqVkRzUQ?oc=5",
+      "title": "La Banque du Canada invite les banques à utiliser sa facilité de liquidité - Yahoo Finance France",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUzR4RnlpNDhnQWNkUVpoeVRHbDM0N0UzT0dnZmQ5S2h0Ty15LXRFQXJWeXpuMzZadUhKV2FhSGNvc05qMGozX0t3X1BxR2FvYVNUSEwzNzUxRW5pd3lfZDdCNTV2UjZ2cW9kazdENVptOWRHNDBLZTlKRmV6U2hsOFFpTVdPRk01aC0zM290aHJjMm1O?oc=5",
       "source": "news.google.com",
-      "description": "Une hausse des taux hypothécaires à l’horizon  La Presse",
+      "description": "La Banque du Canada invite les banques à utiliser sa facilité de liquidité  Yahoo Finance France",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le ralentissement économique devrait limiter les hausses de taux - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQb0lwbktPMW5JODVzaWFXNkJKUEVBTDdIeVZSM3AxRlQwZXFiQkRRNG1kUnppQlpRVEtKTmlyZDNVOUlsTUpNNGIwVk9odGR1SURGSkxXbHYtRnlZVzNpLWg3dlBXWmZoUWxXVHlQZXFyYWdtWEYzczRtVnZlU2JoSmNlX1laNURUZlZSR2lKNzd1YllKNjVDV0NldmpiMDRucEhNN0lZT1pBR0NtLU1RMjJESHJrdkszYnRDbl9R?oc=5",
+      "source": "news.google.com",
+      "description": "Le ralentissement économique devrait limiter les hausses de taux  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -287,10 +303,10 @@
       "category": "general"
     },
     {
-      "title": "TD : les arguments en faveur d’une hausse de taux sont « peu convaincants » - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSHdWTW5XLVRPZnI2Z0FvdHBCaVdYMUxwdEdhYUhFVUlfWU9RSzdOYmxBUzUzeFdFWHlON2otWldjYW5zR1BJbkNSVEh2MzBUMWRsYjZ5TWk3czB3QlNESFlMcFhjUzdEY2ZLZDg3Q2ZwMjd4dDBLZG9MTW11MWwzRXdtTHpHclpoQ2lVTXFRR28xQ3dPZmZDTkFhYTdnNFg2ZVZ1NVlWYW9oSVUwNlBGZlFhcGNHU1ZwT1g4?oc=5",
+      "title": "Le Canada à l’aube d’un boom de l’investissement, selon Marion de la Banque Nationale - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNRFBiYzVHd3ZFdkRLUUpCSG5lVTFsYlJnekxfUG4xNTZORkJodnlzWGRYYzNPazR3SzBLWlN6Z0NBcEhCNkxtMmRpVjhQYWJHbkNkemYtMWI3SGI5NXhqVjBleGNyeVI2djZIN2NBa1lwUUtvOUFPcm1JcFBlVWNWMWJ1eUtVRW54U1I5Q3JIR0pRRURwZC1naWkxV3VFRWVTVGxubFpLYllvNVJ5TXF1eWVwaVoxakkxUjZfei05TG5nNFJHUUJ3S1VFUnY?oc=5",
       "source": "news.google.com",
-      "description": "TD : les arguments en faveur d’une hausse de taux sont « peu convaincants »  Canadian Mortgage Trends",
+      "description": "Le Canada à l’aube d’un boom de l’investissement, selon Marion de la Banque Nationale  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -311,10 +327,34 @@
       "category": "general"
     },
     {
-      "title": "La bouffe, l’essence... et maintenant l’hypothèque - PressReader",
+      "title": "UBS prévoit désormais une hausse du taux directeur de la Banque du Canada en octobre, puis une autre en janvier 2027 - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOR19LUXU5elU4ZENlQlZBSkRhV0ZSX01qU0dtUFNhMmFNZzVUUnFFWS05Q2t3RGtkQ3ROQW0yeWdWNS1KODVxR2c5T0tJSUQ0REUzaEt1bzM4VXJIdnpDN2YtUDdJV29mZjAwWE1kNjlYRlgyU1ZEV3FNLVY4eTNEZ0V2X0VRSVliZlgxdU44RnhMbzBpNGpadXBDU1V6TXg5T2NfQllrT3hOczZZb1g5TWl4RFdEX05fbWdWcXB0TGRka0tVWVBPWW9CTXptRDgtZlRMSGtjRlB1RGFRdFNyMHpRS3dyMUV1UWRGdmFRRTJ4UQ?oc=5",
+      "source": "news.google.com",
+      "description": "UBS prévoit désormais une hausse du taux directeur de la Banque du Canada en octobre, puis une autre en janvier 2027  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les institutions canadiennes ne doivent pas craindre de recourir à la facilité de liquidité, estime la Banque du Canada - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNeWYtNXJQaGtxczR1Rl9yLVBTblR0OVVMcTJ2MnNhR0Z0ODhfb3JHY2YzREtDUlVFRl9DNENTenR6NVNHV1NMcjM2VXl0bjZJU2NRcUE2aXB5MExQZW02TzNZYTR5NzdKaFJSNE5yZ1hwVlMxNDdtRTBrTzFIRE5fWTFXZ0g2NThqVVpNR1ZDNTBhY1NTR1ZSWDhNZ0dGdHV1TTZNRmwwNERPMWdEei1SVjdaZU5ZVE1xTllZcWtISDU5WUpqbUtmUVJCVG9oWGdkSDdhMmJhTzhyNXpjSFh3NXNLbm1hd0JySnk2bkVjWE5SQQ?oc=5",
+      "source": "news.google.com",
+      "description": "Les institutions canadiennes ne doivent pas craindre de recourir à la facilité de liquidité, estime la Banque du Canada  Zonebourse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La bouffe, l’essence... et maintenant l’hypothèque - pressreader.com",
       "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPX1JCMklINmE0TVpmRk1fYzNYZGw3TnJoOGZJTjNpREI0THZGcE44dWFHMm80MWlyZDd4ajItODQ1THpFb2ZWOWVBTUV2TG5ya0JETnNDNEJ6RDVVMnVCQ0M4aUpNWFEyLUpsZFhORmw3UFBBVkJfUHpJZmI2MHIwZlR5al9HcVBYM1E?oc=5",
       "source": "news.google.com",
-      "description": "La bouffe, l’essence... et maintenant l’hypothèque  PressReader",
+      "description": "La bouffe, l’essence... et maintenant l’hypothèque  pressreader.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada présente des améliorations du marché des pensions et des modifications de ses opérations de politique monétaire - Traders Union",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa2ZuQ01mVEhJUTJqQzZGbmh1WVllNWc1U29NRnR3aW9kdDNBODE1cEdXRkZNNlMzNjVjMDdlRU5kSXpNdkFSUm1xa3FWbUVmZW9PVERjNVNZN0RtaEVqdEtkZ2RTZkVxRGpOcjhjR3F1YXlzNUZNMU1wNFNrQUxoVHdjcFNFcU1uQmVpalJpbGZMVS1ROEF0Uk4tN0F4X3ZkNVpCa0t2dw?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada présente des améliorations du marché des pensions et des modifications de ses opérations de politique monétaire  Traders Union",
       "cities": [],
       "category": "general"
     }
@@ -371,5 +411,5 @@
     },
     "last_quarter": "août 2026"
   },
-  "last_update": "2026-09-29 18:28"
+  "last_update": "2026-09-30 18:16"
 }
