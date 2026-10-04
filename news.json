@@ -91,26 +91,30 @@
       "category": "local"
     },
     {
+      "title": "L’investisseur avisé | Un vendeur chez Savaria",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-10-04/l-investisseur-avise/un-vendeur-chez-savaria.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Le président exécutif du conseil d’administration de Savaria a vendu cette semaine pour 85 millions de dollars d’actions du fournisseur lavallois d’équipement pour personnes à mobilité réduite.",
+      "cities": [
+        "laval"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Assurance auto | Fournir votre emplacement exact en échange d’un rabais",
+      "link": "https://www.lapresse.ca/affaires/chroniques/2026-10-04/assurance-auto/fournir-votre-emplacement-exact-en-echange-d-un-rabais.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Je marchais tranquillement à la noirceur sur le trottoir d’une rue résidentielle de Montréal quand une forte lumière a soudainement jailli d’un immeuble à ma gauche. Un indicateur surplombant une caméra s’est allumé du même coup, probablement pour que je comprenne que j’étais filmée et que je n’avais pas intérêt à aller voler un colis sur ce balcon-là.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
       "title": "Quoi faire de ses épargnes face au péril orange ?",
       "link": "https://www.lapresse.ca/affaires/economie/2026-10-03/quoi-faire-de-ses-epargnes-face-au-peril-orange.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
       "description": "Notre journaliste André Dubuc a lancé le 30 septembre un nouvel ouvrage consacré à la gestion des épargnes au moment où le président américain bouleverse l’économie mondiale avec ses politiques à l’emporte-pièce. Nous publions ici un extrait du chapitre portant sur la période inflationniste qui n’en finit plus et son impact sur les placements de l’épargnant.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Wall Street clôture la semaine en hausse",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-10-02/wall-street-cloture-la-semaine-en-hausse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "La Bourse de New York a clôturé dans le vert vendredi, les mauvais chiffres de l’emploi américain donnant davantage de raisons à la Réserve fédérale (Fed) de temporiser sur les taux.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Réserve fédérale américaine | Le département de la Justice ne rouvre pas l’enquête contre l’ex-président",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-10-02/reserve-federale-americaine/le-departement-de-la-justice-ne-rouvre-pas-l-enquete-contre-l-ex-president.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Le département américain de la Justice a indiqué vendredi qu’il ne réactivait pas la procédure visant l’ex-chef de la Réserve fédérale (Fed) concernant un chantier immobilier, après que le président Trump a appelé à des poursuites.",
       "cities": [],
       "category": "general"
     },
@@ -175,12 +179,14 @@
       "category": "local"
     },
     {
-      "title": "Élections québécoises | Les deux tiers de la génération Z influencés par la question du logement - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQQjkzQktzaFhOdXFYSXBmMC03Z25VMWNvOWcxNEJ5VDFqTzAyaml2LUZYeFl2b2M5RjJFX3BDcU1pXzdQZnBmeUVublRhcFliazJOUXZScFRMTGtlQW0zWjZ2SXNLaVhGZ0VkdnFSdkF3LWpWbXZEMFBDYkpfMF9KTk9femZHY1c0bEpoZ18zNlk1RkRBMkUwR1VPVUhDak1xTUw3ZHpHU295Tm5aUlprd3JkZHhGZVFnZnpjZ0JSWFhaT3Z5Q29GN041cGF2LTFmRGV3eUhxNmQ1c2tkTE52WnJjZG1VanFBc00yX1BqamQ3Zw?oc=5",
+      "title": "Marché immobilier à Montréal | Prix des maisons en 2026 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNZlZBa3hjMjlWUXZ6ZFpyaWNqdGJORHZwMlJJYkcxMmVKd3gyVFZWWWZoazVxRjZyY204U3hMOTVGbDVZckdpMUhWVnREajNVRVhETGxsUXUtallDNlktT1o4WXB1SG9UVzgtaERscDdPbDJ6V0t5eUtUZHBCckJaSHZpMzQ2cVJmUW14S190ZTFBcUszVkE?oc=5",
       "source": "news.google.com",
-      "description": "Élections québécoises | Les deux tiers de la génération Z influencés par la question du logement  La Presse",
-      "cities": [],
-      "category": "general"
+      "description": "Marché immobilier à Montréal | Prix des maisons en 2026  nesto.ca",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Remboursement de la taxe de bienvenue : Tu peux maintenant réclamer jusqu'à 5 875 $ - Narcity",
@@ -191,24 +197,30 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier à Montréal | Prix des maisons en 2026 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNOUdZTlhoejlheGJBb2lvU19nZEM5eVdRak5zU3hLa1plLUxzRVM5algxVGdqbTZpUGw2Zmlmd1N0bDAtYURtR2VrLWVweDBxQkREMUVSdGVXcXU4LTVSWUZFZG0xYnhpWFJxZkU1T1MxX3dYUE00dVp4MW1INEEybElhdTRZLUlRNzJZ?oc=5",
+      "title": "Trouver les meilleurs taux hypothécaires variables sur 5 ans au Canada - Ratehub.ca",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier à Montréal | Prix des maisons en 2026  nesto.ca",
+      "description": "Trouver les meilleurs taux hypothécaires variables sur 5 ans au Canada  Ratehub.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Immobilier Canada : Guy Hoquet s’installe à Montréal - mysweetimmo.com",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPX2xXM21TdXdYOHcwQTVucVhiNk90a3pIdU1SUndnQ1Bmck02S0hkbmlaM3lrU0JVTGUwZ3Q1ckN6M01IckNxOWtBTGhmRU9VbldHUllrOUlrUFcwOXV3bU9IYTBrVmw0TlZPeU0xMHAyLUxlNnBRSVNOZm4xbm5IbEREblRFU2NWWFZKRElVU05BUEk?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier Canada : Guy Hoquet s’installe à Montréal  mysweetimmo.com",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Cinq gestes incontournables et abordables pour rendre sa maison plus verte et écoénergétique - Le Journal de Montréal",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQaGdobzY1Q2dyQ0ZMaTJLYm5fM3g2YmFoQlZ0R3dNNjAtYnZDUEZSMlBkX3IwXzJVMWc5b294Q3l2bjZ5YmptOFRBa2xMQ3RHXzdQMGJQcFZLSExoRmNxV016TkVfZlFtWEFIMl9SZlJMTFRkNHBTdFpxRnYyaWwxb2E0d1B6N2dTVzZLWmFfZTF6QlNMcWFYemJ6eXl3dUpDUkRrWm03Z2llTUJKRzFtSTVRemRwNGFJWVlVdk9yVVI4WWpTeU9BTHo4b0pwYjNxVlNr?oc=5",
+      "title": "Un futur développement immobilier dérange à Drummondville - ici.radio-canada.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaklWNXJZRHVZRzA4NjlGaUwwa0owNXZubDJvQUtPU3BXLTdodGY3TjJnVElMZENkeTlTMk1LaFdIZlduVW02V3RTM0xMd21mZ2NrMV9GVlU5aERwMWYxOGtWSHhCMjd1WFFzLWVFTWg1UXJDelBnVF8xV0d4R0xCd1BES1o2cV9fLU13ZUNlUWllY0xpSTlz?oc=5",
       "source": "news.google.com",
-      "description": "Cinq gestes incontournables et abordables pour rendre sa maison plus verte et écoénergétique  Le Journal de Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Un futur développement immobilier dérange à Drummondville  ici.radio-canada.ca",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Que proposent les partis pour les premiers acheteurs? - Le Devoir",
@@ -255,14 +267,6 @@
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQb0lwbktPMW5JODVzaWFXNkJKUEVBTDdIeVZSM3AxRlQwZXFiQkRRNG1kUnppQlpRVEtKTmlyZDNVOUlsTUpNNGIwVk9odGR1SURGSkxXbHYtRnlZVzNpLWg3dlBXWmZoUWxXVHlQZXFyYWdtWEYzczRtVnZlU2JoSmNlX1laNURUZlZSR2lKNzd1YllKNjVDV0NldmpiMDRucEhNN0lZT1pBR0NtLU1RMjJESHJrdkszYnRDbl9R?oc=5",
       "source": "news.google.com",
       "description": "Le ralentissement économique devrait limiter les hausses de taux  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Carolyn Rogers, de la Banque du Canada, parle du marché du logement - CPAC",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNSWE2SkxfNkJPSjJQWm9saUcteUt2ZGs0bGRqd01paHhFZS1tTUhnMkx2QlI2UklvZkNETnpRMjc0bkNfeUYzck5LT1hueVVFSW1pOXUxT1RGQXhwT3VuUW44LUlwRGltbklZZmdENFhfX2FXYXB2blktWDVldGplSGptb2oxZnoyYzJrOXhrR0ttU0t6ZGVUSjlwSVdHbmFpTUVIbnZfUHo5amRHRnE2SUhjWDB1WTJkQ3RTdWZ4Vjc4U0JNbFdZSGZIS2I4SHlKLUh4QjdoaHZkMEdM?oc=5",
-      "source": "news.google.com",
-      "description": "Carolyn Rogers, de la Banque du Canada, parle du marché du logement  CPAC",
       "cities": [],
       "category": "general"
     },
@@ -315,10 +319,26 @@
       "category": "general"
     },
     {
+      "title": "Taux directeur: la Banque du Canada opte pour le statu quo - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNTFPX2FLcjBWNGN3Rk0wdW9QOFRaQURhaHRuNTBtdlNhRWNSVVdrTlZqQWtTcExrT0xmT0tELTBRZDVHaHNyMnBHWUVHSEFrZ2Y1Y3drQWotVHQtdnFQUlNoaWRiaEQtV3lQWXZBX2YyM3BaYVkydTJQMXZlOUxqQ2JFcFVOVEh4YXVjOERpZkhRejFPU0Rmb0NuM19kbS0wTHh6RjdXNlA5V21W?oc=5",
+      "source": "news.google.com",
+      "description": "Taux directeur: la Banque du Canada opte pour le statu quo  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Banque du Canada : le taux de change flottant a aidé l’économie - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObWQ0eDhiak5zWlFuVTh2ekhBVHlGTHFQNWowTzR5QTRjZkhJTjlfZnJwbWxPZmZzaEN2ODFHdktaQjBMOUMxbHo3VkpCVk1ZTktmQ2kwVzExdlV0LVdpZU56WEtMMk5vNGVjNHBJN2hTMFNTVVpDOW44S0FCQWlhZ2lOMnA1UkJBOHlFNWVSdlpSZ1lwLXZuekJwSWdFeGNidjZyOW9JM0c4SU5jYWNtTTVsbFJIa0txWHhXNk4wTjE0a0I0NnJESzduMUZ3QQ?oc=5",
       "source": "news.google.com",
       "description": "Banque du Canada : le taux de change flottant a aidé l’économie  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada prévoit sa propre monnaie numérique - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQT1dFYmRiLWg2YVpxeXFhRHIyZkt3RkoyMXhnbGhtWFJkOTU0SXZDSzA5Q0oyNGF4blg5RXoxejRINVBUVGZNYkNKT0FtaGdPa1JMVDJSRkI2RjFLM3NkS2hfc243VWtNOHg5UmlYaVM1R1dud0JYdzgtUS1CR3NPRE5idmwzYzd3TmZJcHNlSktDM1QxZmpJcjdtc25ISFl3cDRqaVVMWnFUUQ?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada prévoit sa propre monnaie numérique  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -347,10 +367,26 @@
       "category": "general"
     },
     {
+      "title": "La hausse de taux de la Banque du Canada n’est pas pour demain - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMG44ZzFwdmNnUnBqMk96cENfdHVlc05TSHlyLVFkNTE1MjNnZUtfWjNwZ2JWRDU0S0R6N3dFclF1a0s2bVZYcGs2Y2xYbFNFRUNDZ0RKUEZaRmJiM1RXYXB1dnhxWHFYSm9GRFk1NDNKdzBzNV8xZzA1VnhVQWFsMTBwYXVTTVlqV1g0RS1USW4tOThVOFJjR2xDUjZ5NkRZTzIwQThZS1JrUEZnNkxxekpKODJLWUhyZUo3LTJTS0lObGNEckpQWkdJX21WVVNQ?oc=5",
+      "source": "news.google.com",
+      "description": "La hausse de taux de la Banque du Canada n’est pas pour demain  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Les économistes croient que la Banque du Canada va laisser son taux inchangé - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUnV3ejNXQTlsclFRUTF4dHUtci1XUElsYnF0QzJSaGNudVdDRUF5aW12WmItSGp3XzZtMHRJQmZNbG40eHV1M1JIR211enJuWDhWT0lKVlVmd19wbWNiT3RYeUI1NTAtWEQtdkx4UWpCOWs5RmFpTE54czFXaUs2OEZfQlBkaTZPMGpuVFQ0Z3FGUElxamN0Y2YyNW1ubk5LT1BfdG1sdGFYV0RTNTc0RlBhSlZINlBGS1FvN2g3NE93eWt4VVpCd3Z6cXBSeWRNZzRXNzBsblBBcVZOc3dMVldaSQ?oc=5",
       "source": "news.google.com",
       "description": "Les économistes croient que la Banque du Canada va laisser son taux inchangé  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Carolyn Rogers, de la Banque du Canada, parle du marché du logement - CPAC",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNSWE2SkxfNkJPSjJQWm9saUcteUt2ZGs0bGRqd01paHhFZS1tTUhnMkx2QlI2UklvZkNETnpRMjc0bkNfeUYzck5LT1hueVVFSW1pOXUxT1RGQXhwT3VuUW44LUlwRGltbklZZmdENFhfX2FXYXB2blktWDVldGplSGptb2oxZnoyYzJrOXhrR0ttU0t6ZGVUSjlwSVdHbmFpTUVIbnZfUHo5amRHRnE2SUhjWDB1WTJkQ3RTdWZ4Vjc4U0JNbFdZSGZIS2I4SHlKLUh4QjdoaHZkMEdM?oc=5",
+      "source": "news.google.com",
+      "description": "Carolyn Rogers, de la Banque du Canada, parle du marché du logement  CPAC",
       "cities": [],
       "category": "general"
     },
@@ -435,6 +471,22 @@
       "category": "general"
     },
     {
+      "title": "Le taux directeur montera plus rapidement aux États-Unis qu’au Canada - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOX2dNTmZmOTdjTHZ1eTl3Rkt4cmx6cUJmS3JJY1pscU9hMDRIeHRmRkt1NHVyeUxQNnhCMGNwbkJqSGlObXE0YVJKRGUtd0FLLWtycFlfd1FrNlUwT3l5TnE2MWw3R0h0ME1Tb25Sd1RJUm1UOVVZOEZBaDBmRFFIclIxU1hTVy02bXQwMm1zUjlYdW1vbm03RUJhczVSdUE0UEJCdUszcmpVd1NnUFZxU09tSFBIdWJNU3lLZTc4NVRQS21sQmNEYXBUakZIUDYyM3pQSkpJN28?oc=5",
+      "source": "news.google.com",
+      "description": "Le taux directeur montera plus rapidement aux États-Unis qu’au Canada  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Une hausse de taux en 2013? Pas si vite - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRHEzZUZhTjNvX2ZWWkdVSTRLbVp6LVB2UlJEZHowbm5abHB4WTlCTkhTZ2djVVpFeFJHZmdEcXNaNXdxVTBNanF1ajdPWVd3VDFBZXpGNFFJeGVYSmE4ZlNmbndaeGFYa081RGk5aENjcC1mckpZdGd0N3BYeV92QkNKbw?oc=5",
+      "source": "news.google.com",
+      "description": "Une hausse de taux en 2013? Pas si vite  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Politique monétaire : l’exception devient la règle - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcC1QaDdTemJLSUJ2X1d6NDFGQmxRSXY5ZHJGdmNrSjdkN2NIMTB3ekpycXBxQWJIZGljYTZVWU1nNEhuRUU1b25IOFlmb2RGcWtWelhyS2NTWllGMUJ3c041eUNqNVBCNG5kV1Z3RmF3TnRNaHBTOUJDcmNjVHlmME52N1pBNUR2dmM4Y2V1MVBLc09rU3E4ZHI4Wm1HZHRP?oc=5",
       "source": "news.google.com",
@@ -447,54 +499,6 @@
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNMzlNU185UTZTM2p3elFTODVWWnlRMXdTeXJOelNvQU9qb3hJekR1VmhWbWlaTmtfQUNkQW1ZS2h1dE04MDl0Z045TGVvRmZ2MDRyUVluZng1N0FzbUVRN29GVk1XQWRYTEVEbG45TDVBeHBQX2ZncnlfaEFHMmozUDRiWHlwYUh2bk1aTU9xVmNPMnpHTUZ5NFhfb0VudW1UXzlfTXlOQkNLZ2NhQ0NLcUw2WW9aMkVGdGdhVTJlSnNDUTRCUldR?oc=5",
       "source": "news.google.com",
       "description": "COVID 19: le paiement en espèces doit être maintenu plaide la Banque du Canada  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Bientôt une cryptodevise émise par le Canada ? - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQmtYVHhFNktBbGZlcGNwc3FTUEZBdVlKR0UxaDJ2ZUZrMC1NNXhpZFBpeVJFZHhZMU9KNlNQdzFkX2hPb2d3NXhEUUFWQTNJTnp6X3ROelpIbFdWbVBTWmZjV0FRYmRVRXBtUlcwMURtTnhOTHpvV2I3MDhoY29NbEQ5RFFCRVc0WS1SUXB2RTZVRU5uMkZfa0tGbzc1QVVuZ0lnNGFqTDJrRkFoTGZlWWdLOHV0aDJ6?oc=5",
-      "source": "news.google.com",
-      "description": "Bientôt une cryptodevise émise par le Canada ?  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La croissance économique a ralenti au Canada pendant le troisième trimestre - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOVVktTE92ZUFEa2x3NWZ2aEdWd3k3bHBFaUdGcW9fQUppQWxQZFg3eHo3VHpxbUNkQVFQMHVwSHJ6aHVsamQtdE9fSC01V2h3OV9hMXdhNVBWY2VSbHNaX05TZWtpaDIyV0lZamgyVlpBOWg3NFkxZDRIYVZLWlowY0NNYWV5dEpJcXlBajh4U3NBTEZLbDFTbVhUOTZWRkt5a1JPVmdyTjFQMmtWYXR6Y3BYNHo5YUNpSzQ1NjBNS3BrdGZ0aDVwQ043QmNJcy1xYVJsTHYtdS1KbnhkaTRRUS1n?oc=5",
-      "source": "news.google.com",
-      "description": "La croissance économique a ralenti au Canada pendant le troisième trimestre  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le Canada à l’aube d’un boom de l’investissement, selon Marion de la Banque Nationale - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNRFBiYzVHd3ZFdkRLUUpCSG5lVTFsYlJnekxfUG4xNTZORkJodnlzWGRYYzNPazR3SzBLWlN6Z0NBcEhCNkxtMmRpVjhQYWJHbkNkemYtMWI3SGI5NXhqVjBleGNyeVI2djZIN2NBa1lwUUtvOUFPcm1JcFBlVWNWMWJ1eUtVRW54U1I5Q3JIR0pRRURwZC1naWkxV3VFRWVTVGxubFpLYllvNVJ5TXF1eWVwaVoxakkxUjZfei05TG5nNFJHUUJ3S1VFUnY?oc=5",
-      "source": "news.google.com",
-      "description": "Le Canada à l’aube d’un boom de l’investissement, selon Marion de la Banque Nationale  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La croissance économique mondiale devrait rester lente - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQMG5OMGtOWm5LUzVhR2xsbGtuMjhCZTFOandYSW9tbi1ZUGZKVUFRX3RkVDFKTXBlUUpvTm1KTWxOM1BxVDUzWGRZWV9PSkhmbFRQbUJWV2lIeFJjVk5jcEFvNGd1NEU1cG81YVQtYXNYVUxGMHNaOWtmUF9mbFJIX0MxQ080dk1rTVVKUjZ6QzBVQmVNSThVX3B5UXEyNlNUMHlKVmZ2NDFWNzRUcE9mbnpUb291aVpzSHQ3TFlXNFBfd1hRcmc?oc=5",
-      "source": "news.google.com",
-      "description": "La croissance économique mondiale devrait rester lente  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les taux hypothécaires fixes continuent de grimper, les emprunteurs évaluent le variable - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdC12c2xleXBpMlR0OV9xUC0ydEdwcGNFZm9RUDhhelRBNG9SVVhsZEtHYTNUOU01a3hZWjNRSWFLYU8wcG9TVlNMdThSTzJlNW9jdFpjNjZZQ0pCV3pzN1doYm5aODNTS3RnNUhjaTN0Sy1fc2tVQW5XSDB0YV9IbDVwZnlBSElvWFZuVF9IYVhBSm5oN2lYNUdDZ3Vfb1J6TmhEWVZ6Tkc2Q2k0aV9NN1phcE92VDhDZVhjaVo3azNfQnNR?oc=5",
-      "source": "news.google.com",
-      "description": "Les taux hypothécaires fixes continuent de grimper, les emprunteurs évaluent le variable  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada invite les banques à utiliser sa facilité de liquidité - Yahoo Finance France",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUzR4RnlpNDhnQWNkUVpoeVRHbDM0N0UzT0dnZmQ5S2h0Ty15LXRFQXJWeXpuMzZadUhKV2FhSGNvc05qMGozX0t3X1BxR2FvYVNUSEwzNzUxRW5pd3lfZDdCNTV2UjZ2cW9kazdENVptOWRHNDBLZTlKRmV6U2hsOFFpTVdPRk01aC0zM290aHJjMm1O?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada invite les banques à utiliser sa facilité de liquidité  Yahoo Finance France",
       "cities": [],
       "category": "general"
     }
@@ -551,5 +555,5 @@
     },
     "last_quarter": "septembre 2026"
   },
-  "last_update": "2026-10-03 16:58"
+  "last_update": "2026-10-04 17:16"
 }
