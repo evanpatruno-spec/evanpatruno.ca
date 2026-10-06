@@ -91,30 +91,10 @@
       "category": "local"
     },
     {
-      "title": "L’investisseur avisé | Un vendeur chez Savaria",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-10-04/l-investisseur-avise/un-vendeur-chez-savaria.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Le président exécutif du conseil d’administration de Savaria a vendu cette semaine pour 85 millions de dollars d’actions du fournisseur lavallois d’équipement pour personnes à mobilité réduite.",
-      "cities": [
-        "laval"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Assurance auto | Fournir votre emplacement exact en échange d’un rabais",
-      "link": "https://www.lapresse.ca/affaires/chroniques/2026-10-04/assurance-auto/fournir-votre-emplacement-exact-en-echange-d-un-rabais.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Je marchais tranquillement à la noirceur sur le trottoir d’une rue résidentielle de Montréal quand une forte lumière a soudainement jailli d’un immeuble à ma gauche. Un indicateur surplombant une caméra s’est allumé du même coup, probablement pour que je comprenne que j’étais filmée et que je n’avais pas intérêt à aller voler un colis sur ce balcon-là.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Quoi faire de ses épargnes face au péril orange ?",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-10-03/quoi-faire-de-ses-epargnes-face-au-peril-orange.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Notre journaliste André Dubuc a lancé le 30 septembre un nouvel ouvrage consacré à la gestion des épargnes au moment où le président américain bouleverse l’économie mondiale avec ses politiques à l’emporte-pièce. Nous publions ici un extrait du chapitre portant sur la période inflationniste qui n’en finit plus et son impact sur les placements de l’épargnant.",
+      "title": "La dette de l’IA explose et accélère la hausse des taux d’intérêt aux États-Unis",
+      "link": "https://www.ledevoir.com/economie/1014773/dette-ia-explose-accelere-hausse-taux-interet-etats-unis",
+      "source": "Le Devoir",
+      "description": "Les géants du secteur n’avaient pratiquement aucune dette en 2024; elle s’élève aujourd’hui à plus de 500 milliards.",
       "cities": [],
       "category": "general"
     },
@@ -127,40 +107,6 @@
       "category": "general"
     },
     {
-      "title": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec",
-      "link": "https://www.ledevoir.com/economie/1014026/ventes-proprietes-residentielles-sont-baisse-montreal-quebec",
-      "source": "Le Devoir",
-      "description": "Les ventes de propriétés résidentielles ont reculé de 12 % dans la région métropolitaine de Montréal.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Plus de chômage, moins de créations d’emplois en septembre aux États-Unis",
-      "link": "https://www.ledevoir.com/economie/1013906/plus-chomage-moins-creations-emplois-septembre-etats-unis",
-      "source": "Le Devoir",
-      "description": "Seuls 29 000 emplois ont été créés, nettement en deçà des attentes des marchés. Le taux de chômage s’établit à 4,2%.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Que proposent les partis pour les premiers acheteurs?",
-      "link": "https://www.ledevoir.com/economie/1013816/proposent-partis-premiers-acheteurs",
-      "source": "Le Devoir",
-      "description": "«Le Devoir» fait un survol des promesses des principaux partis en matière de logement.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Une charte pour encadrer l’IA… mais est-ce suffisant?",
-      "link": "https://www.ledevoir.com/economie/techno/1013666/charte-encadrer-ia-mais-est-ce-suffisant",
-      "source": "Le Devoir",
-      "description": "Présentée par la Maison-Blanche, cette charte est «décevante et insuffisante», selon un expert.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Marché immobilier au Québec | Prix des maisons en 2026 - nesto.ca",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZ1JXa0ZRV2RPU09FUlBjWkRaVGI2VDFCWXhKRHBVazdyS0JBVmtDbGxaczBNUDFLcGdhZE5GQkFsbGtDamJPc1ZZbWRCcDBXckQ3RVFTUEFSZ3FlTlpNSXJnODY3dG92dm96NEZSdkVwMGZENGlYY09JeEtOTzhkMmxYYVRJQkNRRjhkVndjQnpvNXRKS2ZJ?oc=5",
       "source": "news.google.com",
@@ -169,12 +115,34 @@
       "category": "general"
     },
     {
+      "title": "Marché immobilier Rive-Nord de Montréal — Septembre 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQa3hLMTd0aXkwdVFuZnJxTmJ3RUtIamZ5eHlsUXJxYl9ibWdncUxjN0tDYi1PNHhZd3kxcTZLV3YtVXNLZDVMeTFfdVd2TEtPdnBMdnlEdURFYmRqd1ZfSDdDQTZqVmxkMk00WVk2QTdCOGh1YVRvdEhRcHRFVHVpYkgyTk5veXBYakN6eExPUGlWc2ZSSXM3a1pxRFczSHBzSDNzM2s3V2V3NER1SDlIaVRSYW5KQ3dHX3pnTlhzbllRcE0?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier Rive-Nord de Montréal — Septembre 2026  Journal Métro",
+      "cities": [
+        "montreal",
+        "rive-nord"
+      ],
+      "category": "local"
+    },
+    {
       "title": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec - Le Devoir",
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMFhiTWtFMms5QUcxWUthX3NsUUlwc2FuWEltdFhOS1dSMDNUNnBZaEEySWlqUkp1cUViR2l4UHFXaU5TSkc1R3FOUnZJOVhGeW1IbGJUc2VMcWVPYlZjU2RuQ2hzWHdudWc4NXphZ203N1JRbnBQRmxYa185VTFJLWFKT2tKNTkzbU1ONTdJSTNmOUJlMDBxdVQ0SmJlaVMtT1Bybw?oc=5",
       "source": "news.google.com",
       "description": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec  Le Devoir",
       "cities": [
         "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier Rive-Sud de Montréal — Septembre 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaVRTZWdlT1dFbFRNMXc2V2F6NExwTVdhb2ViTDBCcmhvcWg1dHE0OTU5aHBJMkQtZXZBZUV3S2xBb09rNlpvUWYxYlRrT2dESTZJcVpnVkpZOTNyaWFldXBaMzl0QVlDb2lzcWxZU3IxTFVjNEhRRk42bzdmV3UyNzN0SzJ0RW5XU3MtMDQxN3JCemJuOWFPU1BnRVBNLVRVeTRKY3V3Rl9wQ216cHdtZTNrTGtoS0JoQk1UVWVtUUx0dw?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier Rive-Sud de Montréal — Septembre 2026  Journal Métro",
+      "cities": [
+        "montreal",
+        "rive-sud"
       ],
       "category": "local"
     },
@@ -189,40 +157,6 @@
       "category": "local"
     },
     {
-      "title": "Remboursement de la taxe de bienvenue : Tu peux maintenant réclamer jusqu'à 5 875 $ - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5KbFRuVm8zV3NVbENJMGcyMXBnYUdmbERLNzk1QWk4cE9OZktfUXpzVVduU1d1Z3hJOFFPR2RRWS1FdXVTaXpfWko1V3lRNFBabWdidUpsMV9raGwzMEhra2Q3ZEZwNlBYNG1URlZ0R1VLRk1iUXF3bU51dUg?oc=5",
-      "source": "news.google.com",
-      "description": "Remboursement de la taxe de bienvenue : Tu peux maintenant réclamer jusqu'à 5 875 $  Narcity",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Trouver les meilleurs taux hypothécaires variables sur 5 ans au Canada - Ratehub.ca",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
-      "source": "news.google.com",
-      "description": "Trouver les meilleurs taux hypothécaires variables sur 5 ans au Canada  Ratehub.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Immobilier Canada : Guy Hoquet s’installe à Montréal - mysweetimmo.com",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPX2xXM21TdXdYOHcwQTVucVhiNk90a3pIdU1SUndnQ1Bmck02S0hkbmlaM3lrU0JVTGUwZ3Q1ckN6M01IckNxOWtBTGhmRU9VbldHUllrOUlrUFcwOXV3bU9IYTBrVmw0TlZPeU0xMHAyLUxlNnBRSVNOZm4xbm5IbEREblRFU2NWWFZKRElVU05BUEk?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier Canada : Guy Hoquet s’installe à Montréal  mysweetimmo.com",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Un futur développement immobilier dérange à Drummondville - ici.radio-canada.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaklWNXJZRHVZRzA4NjlGaUwwa0owNXZubDJvQUtPU3BXLTdodGY3TjJnVElMZENkeTlTMk1LaFdIZlduVW02V3RTM0xMd21mZ2NrMV9GVlU5aERwMWYxOGtWSHhCMjd1WFFzLWVFTWg1UXJDelBnVF8xV0d4R0xCd1BES1o2cV9fLU13ZUNlUWllY0xpSTlz?oc=5",
-      "source": "news.google.com",
-      "description": "Un futur développement immobilier dérange à Drummondville  ici.radio-canada.ca",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Que proposent les partis pour les premiers acheteurs? - Le Devoir",
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONGhDSmkwQ1ZSOXFZcXJkdHM5bVE0dFhEekwyNDl2TGlXYXlrU0lWQnEzX2p6SHNPV01JaFZQN2ZoWUwyVnU0VWhsWEV2Q21zajd4M216QlRscnVoSU02UERlLW5hYXRqTlhnVE92S2tPU0FabXlKLTVXRVBCSDQtRE9zQQ?oc=5",
       "source": "news.google.com",
@@ -231,12 +165,82 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada ne peut pas seule régler l’abordabilité des logements - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQLUlrN1JyX3F6bGRaYkpZRmNiU3ZzY2YtcG9faHE3X091U0Z6Y3hIWmJMSHpWckNxS1E5SFNIc0x2UWFwaG5UT3FZVGdDT19WZGc4VmM0cFhCLWMzUi04RGgyTExDMkFWb1VMWjdaMTZCZFlBTnBIU2N0YkNXMjhBcTFjX2E3Q21kNjZuMFQ5eUI0Z01QZGxHcmNHRjNGYnRuTzNTVEtkNE1EdUVqN2xsTF96UnVMNEY1OWY4bnZsTWs?oc=5",
+      "title": "Élections québécoises | Les deux tiers de la génération Z influencés par la question du logement - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQQjkzQktzaFhOdXFYSXBmMC03Z25VMWNvOWcxNEJ5VDFqTzAyaml2LUZYeFl2b2M5RjJFX3BDcU1pXzdQZnBmeUVublRhcFliazJOUXZScFRMTGtlQW0zWjZ2SXNLaVhGZ0VkdnFSdkF3LWpWbXZEMFBDYkpfMF9KTk9femZHY1c0bEpoZ18zNlk1RkRBMkUwR1VPVUhDak1xTUw3ZHpHU295Tm5aUlprd3JkZHhGZVFnZnpjZ0JSWFhaT3Z5Q29GN041cGF2LTFmRGV3eUhxNmQ1c2tkTE52WnJjZG1VanFBc00yX1BqamQ3Zw?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada ne peut pas seule régler l’abordabilité des logements  Noovo Info",
+      "description": "Élections québécoises | Les deux tiers de la génération Z influencés par la question du logement  La Presse",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "Marché immobilier Province de Québec — Septembre 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZ1lQNndJajRDMFRSSmJyekRSSktwX0tYaThiMUotY2VNbW05X2dwOS1Jb0VQRmM1NEp4aTIwaUVwQmRpYS1DRC14SGRQLTR6dmZtcG1vOUwtYTNqV3pHellDMVFjZHFCaWFBYjFIcHRBZnRORmVnREZsQ2luYVBMT0xrRWpDakd1MTQ1a0NxS3Y1SDFJbU9Ja1RBNWZjekhyMHhOR2cxRlgwVHVDdU9md2NJdW1heWNHNmxyTGhLSQ?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier Province de Québec — Septembre 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier RMR de Québec — Septembre 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMFhxenN5U20xMXNEa1htZzFsNlE5R25vS181WFpEWHpvaFJUZkg4M1VKSzl1ejRiekhzOHkxYldTLUsxSi1QclBSZldlYVBfbmI4bjRRMElOWXMyYmk2bTlfMDBYYU9ZdE5CYWc3VC1xRGF0SFNKd2hlS0pBQmRvYzNMZkdDbFcyTF8zSGp3X3dVWHoxQVh4MDJlbWJVbkQzT2FoMHNHWEhVdGxiSFljcGNJVjBNY0Zo?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier RMR de Québec — Septembre 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier Agglomération de Québec — Septembre 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd1dSSlZUVlBjRkJ5S3NRQzFsNUxRTGFDNElPRE5SM2dYU2prbVNqSG9nT1lSZkxfVEwwN3VpTHFJb0pmbk1GNFR4ZlFMcUotdzhrTzZKUHd6eU1vZ1RpY0R6cldKTVdvVTJoaENOZEd5bkpLUk82NTR6YnB2dC05SWhkc3VOSGZsSUJFT0RjbVI1Z0hSekwyUGJ5cTl4NXRPZUlhV2J0VW1wbXhWY2Jicl9ob19tNVlrR0VsUzhlZ3JraFlBWnc?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier Agglomération de Québec — Septembre 2026  Journal Métro",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier RMR de Montréal — Septembre 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNT1lPWGF2bTlRaEtBRTUydEZPV0Rqak14TDZVb0hFOE9nekM3T3dRUm9qZmRxSFMxcE9yTmtzOS1wTmw4NTlIWGIzbDJwNWdTWGVmSXZCX0stcVFzajgwVmdVMWkzZlItbHpCa2lyMTJWS2xMR1FDOEotUnZoNzBOTVppN0F6Q2ZkYzdlbHlFMzZwQlVOS1dmbHFfUEJtbUxBNEpWX2hIeDU5MHNLNWF2c0F0dEhEeENvZHkw?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier RMR de Montréal — Septembre 2026  Journal Métro",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier Laval — Septembre 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdDhzdU9LbGM5dTcwaXZsdE1taDRVV0NtMm9kWTJQcEdiYVJYRC1GcU1sSFZJQXd1d1J6Y1p2dUJVWHJYRmNLcDhFWHVmQ21WZ1RKLUJiYXVpZGdjYmQ1Y2pPRUZFX2dPb0R4d0d3RDBQRnZKUTk3aGdnUGpvVThwMjFwVm1udk12TmVZMzZleXctWU5ibVdFQ0MteENhYkRpYndPNlRnbm5HQjJpREE?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier Laval — Septembre 2026  Journal Métro",
+      "cities": [
+        "laval"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Cette maison à étages à moins de 100 000 $ te donnera le goût de déménager en région - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBzZlp4YkFIcU5kOUREZXI1MnVZTHNodnQtNE5xNE1YTHJQaEw1aVNLcDRGRzg0OUVtQTljODU3YWtSR25Bczh2ZnB4YlRvU3E0TlY4aHhyb1pwaDMtSFdhQmhqNWhwMGdhNEtsZmFSNV9sZGh1dEE?oc=5",
+      "source": "news.google.com",
+      "description": "Cette maison à étages à moins de 100 000 $ te donnera le goût de déménager en région  Narcity",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Remboursement de la taxe de bienvenue : Tu peux maintenant réclamer jusqu'à 5 875 $ - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5KbFRuVm8zV3NVbENJMGcyMXBnYUdmbERLNzk1QWk4cE9OZktfUXpzVVduU1d1Z3hJOFFPR2RRWS1FdXVTaXpfWko1V3lRNFBabWdidUpsMV9raGwzMEhra2Q3ZEZwNlBYNG1URlZ0R1VLRk1iUXF3bU51dUg?oc=5",
+      "source": "news.google.com",
+      "description": "Remboursement de la taxe de bienvenue : Tu peux maintenant réclamer jusqu'à 5 875 $  Narcity",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Immobilier Canada : Guy Hoquet s’installe à Montréal - MySweetImmo",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPX2xXM21TdXdYOHcwQTVucVhiNk90a3pIdU1SUndnQ1Bmck02S0hkbmlaM3lrU0JVTGUwZ3Q1ckN6M01IckNxOWtBTGhmRU9VbldHUllrOUlrUFcwOXV3bU9IYTBrVmw0TlZPeU0xMHAyLUxlNnBRSVNOZm4xbm5IbEREblRFU2NWWFZKRElVU05BUEk?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier Canada : Guy Hoquet s’installe à Montréal  MySweetImmo",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Taux: les marchés s’emballent, la Banque du Canada résiste - Les Affaires",
@@ -251,6 +255,14 @@
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNaFBJWUJTaTNVTHVSRDZVSDI3c2lkRXpJUDcyWDNlMUNGZFNPeEhNcGtkS2JiM2k0NnJPalppT2JwRXUyTU9lVlBiT2JjdHhrSVZwdGhiOWUxSy1pbFJrZ3BwMVlwTVltMl9uRXVhbkxXZnVjaDZjVUI4SHpYSTJVQ1lB?oc=5",
       "source": "news.google.com",
       "description": "Le dilemme de l’abordabilité du logement au Canada  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada ne peut pas seule régler l’abordabilité des logements - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQLUlrN1JyX3F6bGRaYkpZRmNiU3ZzY2YtcG9faHE3X091U0Z6Y3hIWmJMSHpWckNxS1E5SFNIc0x2UWFwaG5UT3FZVGdDT19WZGc4VmM0cFhCLWMzUi04RGgyTExDMkFWb1VMWjdaMTZCZFlBTnBIU2N0YkNXMjhBcTFjX2E3Q21kNjZuMFQ5eUI0Z01QZGxHcmNHRjNGYnRuTzNTVEtkNE1EdUVqN2xsTF96UnVMNEY1OWY4bnZsTWs?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada ne peut pas seule régler l’abordabilité des logements  Noovo Info",
       "cities": [],
       "category": "general"
     },
@@ -287,6 +299,22 @@
       "category": "general"
     },
     {
+      "title": "Le dollar canadien chute avant la Banque du Canada - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMFJPMnM1RXdzb2N2c2c5ek5TeGVWM3pIQkw3UlBrY3B1bHpyUjFleWI5RWxzZUF3ZGNoT2dSTWh1WnpIcGdsZ3FQeUROT0lia0o3NUI2Wl9CeXNTQ2hSSzNqRkRnNjdodlpQN0tpSTlwZURlRnVCZVVyUXFvd1k2ZlZ6aWJjNkFtT0NPSFd3bDlURkNsQkd5a05OT2lyUDY3V2ZSUm0xb2tLVU1QaUl0RXhDZU10R1FYRjcwTEI4cUM?oc=5",
+      "source": "news.google.com",
+      "description": "Le dollar canadien chute avant la Banque du Canada  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada a maintenu son taux directeur à 0,5 % - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNOTlYZllBNTl3WVQyNl91NFR1N3I4TTk5OVg4ckliMmlyNk5ydGwxQTBfMHhXVnVkckVlTm9aWWdBZEhqTlQ1LUR6V2R1NFMwaDBQS0ZSUzRPbktfQ1JyTWE3VGpEVWw1NnpqT0FteWN5bVJMZi0xMV9sV014MkY4Y19tTmtQZlY1NDBadDJYNEg3ejZMX29rX205Q1Zrb1Y5LW1aSEQ4aDloaEdlc2FkMTNxdHpIM2c4WDV0NlRDTG1ZWThudGc?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada a maintenu son taux directeur à 0,5 %  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Banque du Canada : nouvelle baisse des taux en vue? - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQSE1NSE1RTG0zbHBLaklSU29ONGpHVGY3OVYzUndZZmo3MlJQU0dDT0ZKTHNobm9oeUhWdWhRTFhPV1M0SHRvb09fT2RhbEFaREhzY0gwMWJSTTB1angxanU5aUF0TWJkQ1gyYjhFMzRsc2ZvYlBfZ0ZnQlhJWXg0UXlPOGpRYWNBOG1BaGN0Z0JRa2dnRkJyQWIxWUp4TzNsNnl1Qi04LXEybE5iQlByWDlyV2FkUmxTdzBRSlJR?oc=5",
       "source": "news.google.com",
@@ -295,18 +323,58 @@
       "category": "general"
     },
     {
-      "title": "Les pressions sur le budget des différents types de ménages depuis 2020 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE16UmN2SmtBVnlqZ1R0YXN2UUFwbGRYZ0FSRF9TTXZHM1Q2U0dmZ1E3LU5GQ1c5V2pQZkxFQXM1WHd5YVZaVEx4QVhRamMtUFNNY1NETGZBVnBSMG5sc21BcXhieVgtOWI2T2lWZkhGQmNiV3ljMTFyRg?oc=5",
+      "title": "Taux directeur: statu quo à la Banque du Canada - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNT2wyTjF2UWVLSFJtaWl0Sm9XOUk3VGZaSDBCVndCZDN1ZldXNHpXc1hvTWlDTGZrMFYxcmplUTZQZWczNWYtZkNrS1llSkRVTE1XTFc5dGJ1eVpKZHZlZE9Rd05yWXIwVVZDdHdRTWVQdmpmb2F2Nm1GUm5yX0M3amtybjVTUHJfTXBEVUYxUVlIdDBMSHNqbXk2bk5SNWtIdWowcXc1QUdpd1h6T0lpWm0tSkxnQTB0TDJB?oc=5",
       "source": "news.google.com",
-      "description": "Les pressions sur le budget des différents types de ménages depuis 2020  Banque du Canada",
+      "description": "Taux directeur: statu quo à la Banque du Canada  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient son taux d’intérêt directeur - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcVk3WjVGVjdXendpTkI1VHYyck93RlZPR0dxbjlVcFFtdmNRZ0p0YTZyckpCcXVnQmlvdWNqbzVob2dlOHhncHJ0Y1lMNEY4SE1zYlhSYkFlQndYWFhRV2NyVFJSV2R6bVgwR3Vzd05Rdy1tSVhwamxxbVJpeUtHMGprMFFmSUNaSUJyeTlGQWJTc2lqTDZzZWY3ZjF6cV9jb3Jma004RXJCcVFJY3hoOG5odENvSlhRdThYRDM4aktVWkZ0X2wxNE1B?oc=5",
+      "title": "La Banque du Canada laisse son taux directeur à 1 % - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQWFUZGlpaWZ6UlF1ZGpiSHRSTEJwR1lwUWpFeC0yUm1pNnVwX1VaZm5oYWtMRFU0TlhXTUFlZ1o1NmFXREJ0QUpsVUdCNDVFelZNbUN5NTN2VmJ5RFczNjFLWGxDUl9MTTRTTUJvX1FjR3lGU0pQRFd5WkUzRU54M0p2SW4zODdMNm1JTnZmbVpKUExMbmFSMzhvdUM1N2N6d0NYQWF5amVyRldFT05CckQtSDR0MnJIdjZFcjN6aw?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux d’intérêt directeur  Finance et Investissement",
+      "description": "La Banque du Canada laisse son taux directeur à 1 %  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada adopte un ton plus prudent - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQW5BcWplTEpjUTA5NW0ySVh2eGx1UmFEU1lfLW1vNVdwR3o4a2tBYmNHNFVmWDdnWkNMUWtseXlRemVmSVdvQldCMHpPSFF1aXdxNEpaWW5uV3J4d2JRdkVuaDMtLVZ2NEUyZ0dXeU1vMVVvQ2dpblpjSUNDNGoxcmF3clRkdXNsZkx2bk92ejRXeHJqeXRaU1V6TGZiQlZLbFlLRDhFSmh6T2NUVEM3MWVuUkhnQnk2Nmxn?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada adopte un ton plus prudent  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient le taux directeur à 0,75 % - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPaEltMWU3dFFMWEVfT0hnOVU3SEUzMEstWmY5cVUzTW0xVmJjajZGaExKc3VaTm5BRDR5SUp3NF9tYnRDUkJROUhEQ3RFZTc4cXRDUGgyY1Y3TWVHdTB0UFVVNmRKTm01eDdYcUoyTzNhT0VnUnlUVndOSFhfckYzTnlMVDFXYnFCZS1tbnUxck1aem5aNldoYmhnX1RiUTNBaHRKMkxkT2ZCTmotNTdoSnB5SE9tSGhPcWItVFJEc0M2Vy1TLTBN?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient le taux directeur à 0,75 %  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada laisse son taux directeur inchangé - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbkgxcTFySVJacTl3bDNlYnNiLXJBbTc2SUV5VkYwcGR1cjIxTmtROFJiT3hyMV9IUmN0OWd0aV9GRC1kTG5IZkRmblhXbFlCS3BkX3lXUWFJMzl2Uk85QU96VkNodkpEN2JfY3kxdTZNTWEwOGtXODV3QVBjS29OOTdQT083SEEyNEZubHh3OWYzaVViUlhtZ0IwUEVuNzQwa1dpU3lxZGNFU0FjdDNRTWRBX3FmYkdmejFXVDdLV2FtV1l0ZUE?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada laisse son taux directeur inchangé  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient son taux directeur - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZVJ3NTZjVjVETlVRVG4ySEhSRUFQNWRfNmJ4S24wWXVEbzk5NzhYVWNIZkt5Sm9WN0YyMUNrYk44YmNkdlM5VjRwZk1nM2Vxa040NlMtN3p3VGFoNU5NT181bkdVcmpFUXRQN0pydVBubFJQdEhENDBXNWVaNS1wSGhCYW5QWDRta28wYmh5VjV5SHpWbjh4R3NwbnRGR0dI?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient son taux directeur  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada réduira-t-elle ses prévisions de croissance? - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOM1h5bWR3VnRfakZDanFidWw0TjVyTWhsdWN0d2RJcTNzVkJDNUxmTFNaS1N1ckMxUUJLLXB3emh0b2YxUld1dTU0NWppMHZ0dm40UjVycjdOX0RSYzJXUmZXTVFHTnFTNThMVWZtaVVDNjZ4Zmk2WDJwOGFONjhKN054V3ZvZUk3NEs4dC1hZmZuenl5dzFWWnFxVkxGQWhDM1djY2lBYUtNRmVrcG5TWWtmeFg0UW5hdER6Mld4N1FWbmd0QlRmU29abU5SYzJrc2c?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada réduira-t-elle ses prévisions de croissance?  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -327,6 +395,22 @@
       "category": "general"
     },
     {
+      "title": "Étude de la Banque du Canada | La réplique tarifaire du Canada alimente l’inflation - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOWF9JSlVFNjRGdGxrSGxpWjNwOEx1eWRfVnplSnotUzhQbXpubldFeFQzRHNLcDFUdEd5dVR0czV6UkFGak5lUFZKNm1PM0I2bkhFd2Z1ODk2ZFFuXzIwRVRtTEtNczV4allWUG1XcmxhYUJvRS12dDRRMVhMcGlMU2JHcW9ib25tcVk4eHdhZWNqdFFMV2Z0U0huN25tcDNhSlJhMklwQXV2WWF1TXRoTFhmaXI2Y2hmVjZ0T2VPSTZwZHVQaTdDeUllbFlEdXpJUDhhWg?oc=5",
+      "source": "news.google.com",
+      "description": "Étude de la Banque du Canada | La réplique tarifaire du Canada alimente l’inflation  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada maintient le cap - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSF83bUdESnh4aURRTzg5U2JGb2F0N0kyMEpJbFRWNkZyNTE4bU8yWTlaeXd3b25DYm1leWZtLXJwMGQyNWRJZUNzcHZCMG1YdUU2ak5mVXRjSzZMM0pjSnFMZlpCNnk0R0FjbU9MdkUyU3VtanBSdlF4SHBiOU1UT1R5RER5aGo3MFA0a0hleHhJam00VFJRVkV6NXlrNmZrUy1LQTJMUXhDWkJuOUE?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada maintient le cap  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Banque du Canada : le taux de change flottant a aidé l’économie - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObWQ0eDhiak5zWlFuVTh2ekhBVHlGTHFQNWowTzR5QTRjZkhJTjlfZnJwbWxPZmZzaEN2ODFHdktaQjBMOUMxbHo3VkpCVk1ZTktmQ2kwVzExdlV0LVdpZU56WEtMMk5vNGVjNHBJN2hTMFNTVVpDOW44S0FCQWlhZ2lOMnA1UkJBOHlFNWVSdlpSZ1lwLXZuekJwSWdFeGNidjZyOW9JM0c4SU5jYWNtTTVsbFJIa0txWHhXNk4wTjE0a0I0NnJESzduMUZ3QQ?oc=5",
       "source": "news.google.com",
@@ -335,10 +419,42 @@
       "category": "general"
     },
     {
+      "title": "Banque du Canada : nouvelles prévisions économiques le 15 juillet - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxONXFZWmEyRTZldWtxRHFsejJMREtiQUN1MzZJc0xXM0hxZnQ2cU5FY3N2cVhIWWc5Y1ZtX1B5a2l5ZURWV3Q4STFGd1NMOHhlTm0zSUdlMm9VZE04dzV2NjEtdmNCaVZxSlh1ZTlQNXpEVmYwVkpScnIzSnFwUkIyNFhjV1V4TnhJZUdPZGY3QWlWeE9rclljaVUwWXFwUmFWQ1Q4NGtWb1QwakdONG1SbmxRbXEwMGdkRkZnUmdqbTE?oc=5",
+      "source": "news.google.com",
+      "description": "Banque du Canada : nouvelles prévisions économiques le 15 juillet  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada va réduire son taux directeur de nouveau, prédit la CIBC - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNT052UmlYdlRSdzIybGY5YjU1N0o4Ry1BTEVTUWI4UnBxc1BmOTF3V2h0Q3czeUw4WEFENnZlV0QxdFJ4dG9ZdzcyMXRKTkJEOXNRUnZ1ZE53Tmw0WnVjVGF4Z09FX0hkaUFwblY0WE94REs1WWZTd2dTOGU5ZzVlak9VemNHbWNuSTVzWklrQ2V1UjVVZ3BmdzdpRDdxVUhuMmtHcWtySDZwQ1pkMk9kRXF4TUtER2lYMGdYWTFEOURWWjYzWG1CWk8yb1ZKVGZiVDMyakI5S3V0VGEteTA5UmJ3?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada va réduire son taux directeur de nouveau, prédit la CIBC  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada nomme une première sous-gouverneure - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNYWRaOEptX0F5RzE5dmpEbml1dGlnMHFmTlJpSkdMSTVrcXFUeFBpd1NFNVh3ejRPN1BlY21wZzNGMnpteGI2Wmdnb0luU3IzYi1aWE9NU0tNcEF0RGlzazdaQVFZazZpaHpXejhNM1NOLW1tVnlzaEJObE5WNXlIVjJNRXYyM25qdUpETi0xR0lUVFBpRG5LckZubkRlWEc4MXBUR2dBYngzQWhqc3EwNjk3XzlZQ3Z1UG9ONXZ0MnZKd0d5WHRNbFAtT1J4NkJN?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada nomme une première sous-gouverneure  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La Banque du Canada prévoit sa propre monnaie numérique - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQT1dFYmRiLWg2YVpxeXFhRHIyZkt3RkoyMXhnbGhtWFJkOTU0SXZDSzA5Q0oyNGF4blg5RXoxejRINVBUVGZNYkNKT0FtaGdPa1JMVDJSRkI2RjFLM3NkS2hfc243VWtNOHg5UmlYaVM1R1dud0JYdzgtUS1CR3NPRE5idmwzYzd3TmZJcHNlSktDM1QxZmpJcjdtc25ISFl3cDRqaVVMWnFUUQ?oc=5",
       "source": "news.google.com",
       "description": "La Banque du Canada prévoit sa propre monnaie numérique  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada ne bouge pas, mais garde un oeil sur l’Ukraine - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNMHpJYTJzMVRNMHdOVk1UQnNDTFY5ZTFoZmZYZnVFT2ZFeFRJSVg2cDlQejVFd1JVenpoWVlUTjEtNmZHVDlWTm1LWTdzeDl3ZVhINHZNUVB1MTdXNG5ub3k1Y1NQUEc3S3hMZGMxMklfOV9GVDBoS1FxM0IzYjNGZEZHWEFvWmpjZ0NrdmxXRXc0U2loT0s0akU2eHhnQmRrLXhMWS1OLWhVbktSRUdEUURBemZwMlFOUFVwOVR0RHZnN2xIMFFJc1Byd2ZZQzQ5YnFpOA?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada ne bouge pas, mais garde un oeil sur l’Ukraine  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -359,10 +475,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient le cap - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSF83bUdESnh4aURRTzg5U2JGb2F0N0kyMEpJbFRWNkZyNTE4bU8yWTlaeXd3b25DYm1leWZtLXJwMGQyNWRJZUNzcHZCMG1YdUU2ak5mVXRjSzZMM0pjSnFMZlpCNnk0R0FjbU9MdkUyU3VtanBSdlF4SHBiOU1UT1R5RER5aGo3MFA0a0hleHhJam00VFJRVkV6NXlrNmZrUy1LQTJMUXhDWkJuOUE?oc=5",
+      "title": "Carolyn Rogers, de la Banque du Canada, parle du marché du logement - CPAC",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNSWE2SkxfNkJPSjJQWm9saUcteUt2ZGs0bGRqd01paHhFZS1tTUhnMkx2QlI2UklvZkNETnpRMjc0bkNfeUYzck5LT1hueVVFSW1pOXUxT1RGQXhwT3VuUW44LUlwRGltbklZZmdENFhfX2FXYXB2blktWDVldGplSGptb2oxZnoyYzJrOXhrR0ttU0t6ZGVUSjlwSVdHbmFpTUVIbnZfUHo5amRHRnE2SUhjWDB1WTJkQ3RTdWZ4Vjc4U0JNbFdZSGZIS2I4SHlKLUh4QjdoaHZkMEdM?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient le cap  Finance et Investissement",
+      "description": "Carolyn Rogers, de la Banque du Canada, parle du marché du logement  CPAC",
       "cities": [],
       "category": "general"
     },
@@ -383,122 +499,10 @@
       "category": "general"
     },
     {
-      "title": "Carolyn Rogers, de la Banque du Canada, parle du marché du logement - CPAC",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNSWE2SkxfNkJPSjJQWm9saUcteUt2ZGs0bGRqd01paHhFZS1tTUhnMkx2QlI2UklvZkNETnpRMjc0bkNfeUYzck5LT1hueVVFSW1pOXUxT1RGQXhwT3VuUW44LUlwRGltbklZZmdENFhfX2FXYXB2blktWDVldGplSGptb2oxZnoyYzJrOXhrR0ttU0t6ZGVUSjlwSVdHbmFpTUVIbnZfUHo5amRHRnE2SUhjWDB1WTJkQ3RTdWZ4Vjc4U0JNbFdZSGZIS2I4SHlKLUh4QjdoaHZkMEdM?oc=5",
-      "source": "news.google.com",
-      "description": "Carolyn Rogers, de la Banque du Canada, parle du marché du logement  CPAC",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La Banque du Canada actualise ses prévisions économiques - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxONER2VkV4YmNpSlNETVZ4LXBEYmRVcUg2MlZHRjNTM3k2TUM1UXZFWk1RVFcyVHhwa2JsQ0F1eEd1N1J4MWxEVUl4N0NPWUdPc3o3X003OFFISzNZbXVONkVxN2FDUVMwUjV0eFRRV2lVNkFZZmRTcmszY2ZUMEsxNnROUTFEOWVKbVRwU1EwUDFDaXFRNWJNaHJMVDZRR2dGYmJsOVJzeU5ORFhjTHdIWmx4Q2hwTjNMcHF1cWxOZXllV0pBaWFKYQ?oc=5",
       "source": "news.google.com",
       "description": "La Banque du Canada actualise ses prévisions économiques  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada ne finance pas le gouvernement fédéral, se défend le gouverneur - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNOE9nVFRLNlVEcWZfRHRWcTBybjYxendrRVlNSUFhcUhtWms2amVtYTRPT0NaR2ZZVkJJOXhfN3ppWjVTVlQtYmhXR3dueWYyT3lweDhYVVRzWThFRnBlM216bkJEZXNSaFNTdldnTlJfeGhodGozSzVxYktvTzF2QUFEVDlwN1hoOEJtTHdWZEltT2xSUWJFLTNKRWFndjQwNVB5WENEX1l1NFVyajI1NlowTFQybndrc2I2SWxYRDl2MWxadE9JeVFuOGR3ejVjT21TZzEzME5Rb2pSMEhZNHEzcVFqVzdvX3E0?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada ne finance pas le gouvernement fédéral, se défend le gouverneur  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Deux sous-gouverneurs quittent la Banque du Canada - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNTjUxTEhEZ25LUEhnSEJjcnBwWUthRC1RT18zTEgwX3FYbFY1R0NQaWI1Ujliby1OLVIxZlFLNGdMWFpvcVNKX0RwMHU5d2g2akV4QkdEUnNvUjhBeFRBblJsUjVKY09iTFlXYUtSOXJvNU1CVVRFODAtVjkydlVfZ0lObjVXR25icVJKT2pSZElhR1JYR0ZvYW9pOW9YcWZWM1RXRmU5UWZCZFNteE40S1ZQdnVZYlQ1a0JtSlRxWFNnS3FTNTdpRVNyU1JSVkE2MDNRVVM5SEdXXzlKMHBGMU53WjZoUk5DMGdhNnJnVE9zdnVMc2hkeEgyS1NUa1B1aG9ZUUxuQjk3Ti00?oc=5",
-      "source": "news.google.com",
-      "description": "Deux sous-gouverneurs quittent la Banque du Canada  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada ne ciblera pas les prix des logements avec ses taux d’intérêt - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZGt3UVZsYmpzY2FpN3lreFA5REdIMDQyUHhhdGx4bjlJZHE2eEtUQlFXWEVMR05JZ1dWdWN6T0tvdzh3R0dqV19idGhITUwtYTFtNEZTRGp1Z3dTYmphS2lkTFVrU3B4VjhBUWo2NWQ3emtmLXhDZlVpdUtZSGxuRjJoTFo5cmp2OWg5b0JLU2pXcHNTUzdmbzdSQmNyNjVoSTAyYU9rbUV1cUVpSGdoLVE1YlVnbnlPSXlBUHhsNXpkSlIyUDZUMWJnWQ?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada ne ciblera pas les prix des logements avec ses taux d’intérêt  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada : qui prendra la relève de Steven Poloz ? - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNd3lSTVhydlpKUm5LaEN1aS1Mejk2cU5YanVQelhkYWJ2cU5SZnd1Q3gtRExnQ3R4QlcyZE5CSG90elVkVXpidWd4b2NPRWEyTnJFRzlHS1NiNzNIZTBuQklpczcxYk5uN2VNb25pNEpwbHQtZTRybzdyRG1BckNXeExqamhNcXlHVVQxeXdQLWw1MUNsZWtIdnhCekJvaFBnMGFLMmZoZnI?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada : qui prendra la relève de Steven Poloz ?  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Pas de hausse de taux d’intérêt en vue au Canada - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNYlZnM0JYWVVNeGNFbEVWTjFYLXNpcFJoWUFiNXVnWlZUU2EtN3lOTU9IMWxocmpleDhYQWtmekFZOUs1VzMwbmN5YTRhenpLdS1TYzNZcC1yV01lNlg2Q3FXTHowVV90VS1kOXR5VFdoTDBfcHNPOC1UeFpobTl2WGZuSnAycmJZSXhHOFltOFBaNVJldTlHOHlfQ1p1TVVzRWpiNjdLZnU4Q3dyR0lic0c1eUQtSDAyWF9TbQ?oc=5",
-      "source": "news.google.com",
-      "description": "Pas de hausse de taux d’intérêt en vue au Canada  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Fed : troisième réduction de taux cette année - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQRDlmdW1ETE9OQVktc01weTRsbXV5Qkt1NFplaHRmYmxoUVdERl9wRjJBOTRWelZiTmhRb2NjS1RoR3VCQU14RXV5eWxrYXhDejdtWkpwMnVDazM0bWdlMEtnb0cyM2Z3cXh0NWw2VzJIT3pwR242YjhWOFkxQjFkYnBLNlhWbTFlN3hTZTBuUTVVX2djaHNNWXBR?oc=5",
-      "source": "news.google.com",
-      "description": "Fed : troisième réduction de taux cette année  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le taux directeur reste à 1 % - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQajFCMTdIaDUzWTA4aFROQkw5b1pLMDhDSnp0UGpvanU0aFpyOFdpcGV2S0tCMmdON0hVRlBDZ0ZNTVlBekt2cVRJZXp0MlpOX3U1OUQydXMtc2tSUVRnQ0hxZGxzMGtKTFkyb3hLbnphVVBLV3JCZE1peFVIZWgydVM1a3QtcmwtQ2dzdlpvdmVhY29QSkZteTdpRlJsbmMtYlE?oc=5",
-      "source": "news.google.com",
-      "description": "Le taux directeur reste à 1 %  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La BdC abaisse son taux directeur à 2,25 % - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQM24td1B4NHBkUWxnUGR6ZjFxdjFXOGV4eUFGN1BWQzBLQWNEdGNSSW4tWF9TVThnMjNuT2xGTWxsanJ6TzRiUGU0clhvVE1VcWlscVZxM3MtSUU0MS0tRnhXVkZCZ1p6cFN5NEZ0UFlLeVFUeFZmXzJYMWZUMEphTXM1RlI0MmVUMFM2ekIwbXRVeElJbDk4ZS1pNmNESjAtSXgzOURDOXBXOGxoZkxEUFpB?oc=5",
-      "source": "news.google.com",
-      "description": "La BdC abaisse son taux directeur à 2,25 %  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les faillites sont en hausse au Canada, comme le taux directeur - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQclQ3aFdYRWJLRTFzNUl1aDNGd2kzT3pYaUF3cGV3UXRKaTJDSjVURUl0YXVCZ1FRbkotRFVGQWhBRTNLRlZvaVRKX2VIWlZ6bXJxQWZ1WDRRUWRWdkwydHBFOFhVMUJydDVadWRIMTRhNGU4UjB6VzFmWi12SmpPbVNqY1V2NmxYcEtUMzk5LXpaLU9NOTV2Q3g5UTgyMmx2SWFEZ0Y4ZEZKNHVxUHJRUDVveHduNDhBaEl5OHUzM2tQaVE5NV9uLXVDY1NTX1pi?oc=5",
-      "source": "news.google.com",
-      "description": "Les faillites sont en hausse au Canada, comme le taux directeur  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le taux directeur montera plus rapidement aux États-Unis qu’au Canada - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOX2dNTmZmOTdjTHZ1eTl3Rkt4cmx6cUJmS3JJY1pscU9hMDRIeHRmRkt1NHVyeUxQNnhCMGNwbkJqSGlObXE0YVJKRGUtd0FLLWtycFlfd1FrNlUwT3l5TnE2MWw3R0h0ME1Tb25Sd1RJUm1UOVVZOEZBaDBmRFFIclIxU1hTVy02bXQwMm1zUjlYdW1vbm03RUJhczVSdUE0UEJCdUszcmpVd1NnUFZxU09tSFBIdWJNU3lLZTc4NVRQS21sQmNEYXBUakZIUDYyM3pQSkpJN28?oc=5",
-      "source": "news.google.com",
-      "description": "Le taux directeur montera plus rapidement aux États-Unis qu’au Canada  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Une hausse de taux en 2013? Pas si vite - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRHEzZUZhTjNvX2ZWWkdVSTRLbVp6LVB2UlJEZHowbm5abHB4WTlCTkhTZ2djVVpFeFJHZmdEcXNaNXdxVTBNanF1ajdPWVd3VDFBZXpGNFFJeGVYSmE4ZlNmbndaeGFYa081RGk5aENjcC1mckpZdGd0N3BYeV92QkNKbw?oc=5",
-      "source": "news.google.com",
-      "description": "Une hausse de taux en 2013? Pas si vite  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Politique monétaire : l’exception devient la règle - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcC1QaDdTemJLSUJ2X1d6NDFGQmxRSXY5ZHJGdmNrSjdkN2NIMTB3ekpycXBxQWJIZGljYTZVWU1nNEhuRUU1b25IOFlmb2RGcWtWelhyS2NTWllGMUJ3c041eUNqNVBCNG5kV1Z3RmF3TnRNaHBTOUJDcmNjVHlmME52N1pBNUR2dmM4Y2V1MVBLc09rU3E4ZHI4Wm1HZHRP?oc=5",
-      "source": "news.google.com",
-      "description": "Politique monétaire : l’exception devient la règle  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "COVID 19: le paiement en espèces doit être maintenu plaide la Banque du Canada - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNMzlNU185UTZTM2p3elFTODVWWnlRMXdTeXJOelNvQU9qb3hJekR1VmhWbWlaTmtfQUNkQW1ZS2h1dE04MDl0Z045TGVvRmZ2MDRyUVluZng1N0FzbUVRN29GVk1XQWRYTEVEbG45TDVBeHBQX2ZncnlfaEFHMmozUDRiWHlwYUh2bk1aTU9xVmNPMnpHTUZ5NFhfb0VudW1UXzlfTXlOQkNLZ2NhQ0NLcUw2WW9aMkVGdGdhVTJlSnNDUTRCUldR?oc=5",
-      "source": "news.google.com",
-      "description": "COVID 19: le paiement en espèces doit être maintenu plaide la Banque du Canada  Finance et Investissement",
       "cities": [],
       "category": "general"
     }
@@ -555,5 +559,5 @@
     },
     "last_quarter": "septembre 2026"
   },
-  "last_update": "2026-10-04 17:16"
+  "last_update": "2026-10-06 18:46"
 }
