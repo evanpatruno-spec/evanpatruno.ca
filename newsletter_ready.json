@@ -3,9 +3,9 @@
   "Mois": "Septembre",
   "Annee": "2026",
   "Taux_BOC": "2.25%",
-  "Contenu_Article": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue: L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immob...\n\nRMR de Montréal et de Québec : la route vers un marché  plus équilibré se poursuit: L’Île-des-Sœurs, le 2 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de septembre 2026. Les plus récentes statist...\n\nRMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes: L’Île-des-Sœurs, le 4 septembre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’août 2026. Les plus récentes statistiques du marché ...",
+  "Contenu_Article": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs - La Presse: Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs  La Presse...\n\nRMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue: L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immob...\n\nImmobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max - Noovo Info: Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max  Noovo Info...",
   "Citation": "Achetez des terres. Ils n'en fabriquent plus. – Mark Twain",
-  "Astuce_Pro": "Crédit d'Impôt : N'oubliez pas le crédit d'impôt pour l'achat d'une première habitation (CIAPH) qui peut vous redonner jusqu'à 1500$ au fédéral et provincial.",
+  "Astuce_Pro": "Rénovations Payantes : La cuisine et la salle de bain offrent le meilleur retour sur investissement lors de la revente. Priorisez ces pièces.",
   "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-09.pdf",
   "campaign_id": "NL-9-2026",
   "month": "Septembre",
@@ -19,22 +19,22 @@
   "linkedin_url": "https://www.linkedin.com/in/evan-patruno/",
   "top_articles": [
     {
+      "title": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs - La Presse",
+      "summary": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs  La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOdzBpbmJoZzFQdnVCdWRodmtIZ0x4OTR3XzVJREpMa1cweTJ6NjZSNmhVNWItdkZ4WHhFRzlyalg1T0Z5ek1jaUVmTWlDY2ZXXzZVcF9EQ1loLTZFVGhKQy1YcE5iczdDb29VLVo3WlRhOFhrY2hiYTlxMnE4TnpwM2F1OGlCOTYzRW0wVlRlOGwwVFM5VkRTdW1nN2U0N2hna2I0a1FCcTdJLW9OM1VZajFuX2ZnTjg3cFBDNHNJVTVYMWswblNFbmkydlNCVWNNcGNBc2RWQnVWOE9MUElyaHR3?oc=5",
+      "source": "news.google.com"
+    },
+    {
       "title": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue",
       "summary": "L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue est apparu en premier s",
       "link": "https://apciq.ca/rmr-de-montreal-la-baisse-graduelle-des-ventes-se-poursuit-et-la-pression-sur-les-prix-sattenue/",
       "source": "APCIQ"
     },
     {
-      "title": "RMR de Montréal et de Québec : la route vers un marché  plus équilibré se poursuit",
-      "summary": "L’Île-des-Sœurs, le 2 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de septembre 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal et de Québec : la route ",
-      "link": "https://apciq.ca/stats-septembre-2026-fr/",
-      "source": "APCIQ"
-    },
-    {
-      "title": "RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes",
-      "summary": "L’Île-des-Sœurs, le 4 septembre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’août 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes est apparu en premier sur APCIQ - Site web",
-      "link": "https://apciq.ca/rmr-de-montreal-le-reequilibrage-du-marche-gagne-desormais-les-couronnes/",
-      "source": "APCIQ"
+      "title": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max - Noovo Info",
+      "summary": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max  Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMmxZU2gwN0ZkZVZ4N0lWVm12V3pRVHQ0LWpyM2F0TWhSOVM5Y1FyZTN3SGduc0ppVjJOMmpvZVBVRXFsSHFEUWtJUzZwSHhHeXMybnF2RDVkdmhLTDh0QXB5REIzbWI5MF85ZDBRWkxoa21WcDB4Q0ZySmtJbHZCaFpTTHFMNlc2dWNWbFJHT2lxbjNyT3RsR29zUXgwNWJ5Y09tZ1JpX1lEZXFlRFBsOVZzSFJ3WGNCdXdLQQ?oc=5",
+      "source": "news.google.com"
     }
   ],
   "report_label": "Rapport de Marché - Septembre 2026",
@@ -52,42 +52,42 @@
   ],
   "articles": [
     {
+      "title": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs - La Presse",
+      "summary": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs  La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOdzBpbmJoZzFQdnVCdWRodmtIZ0x4OTR3XzVJREpMa1cweTJ6NjZSNmhVNWItdkZ4WHhFRzlyalg1T0Z5ek1jaUVmTWlDY2ZXXzZVcF9EQ1loLTZFVGhKQy1YcE5iczdDb29VLVo3WlRhOFhrY2hiYTlxMnE4TnpwM2F1OGlCOTYzRW0wVlRlOGwwVFM5VkRTdW1nN2U0N2hna2I0a1FCcTdJLW9OM1VZajFuX2ZnTjg3cFBDNHNJVTVYMWswblNFbmkydlNCVWNNcGNBc2RWQnVWOE9MUElyaHR3?oc=5",
+      "source": "news.google.com"
+    },
+    {
       "title": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue",
       "summary": "L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue est apparu en premier s",
       "link": "https://apciq.ca/rmr-de-montreal-la-baisse-graduelle-des-ventes-se-poursuit-et-la-pression-sur-les-prix-sattenue/",
       "source": "APCIQ"
     },
     {
-      "title": "RMR de Montréal et de Québec : la route vers un marché  plus équilibré se poursuit",
-      "summary": "L’Île-des-Sœurs, le 2 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de septembre 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal et de Québec : la route ",
-      "link": "https://apciq.ca/stats-septembre-2026-fr/",
-      "source": "APCIQ"
-    },
-    {
-      "title": "RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes",
-      "summary": "L’Île-des-Sœurs, le 4 septembre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’août 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes est apparu en premier sur APCIQ - Site web",
-      "link": "https://apciq.ca/rmr-de-montreal-le-reequilibrage-du-marche-gagne-desormais-les-couronnes/",
-      "source": "APCIQ"
+      "title": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max - Noovo Info",
+      "summary": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max  Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMmxZU2gwN0ZkZVZ4N0lWVm12V3pRVHQ0LWpyM2F0TWhSOVM5Y1FyZTN3SGduc0ppVjJOMmpvZVBVRXFsSHFEUWtJUzZwSHhHeXMybnF2RDVkdmhLTDh0QXB5REIzbWI5MF85ZDBRWkxoa21WcDB4Q0ZySmtJbHZCaFpTTHFMNlc2dWNWbFJHT2lxbjNyT3RsR29zUXgwNWJ5Y09tZ1JpX1lEZXFlRFBsOVZzSFJ3WGNCdXdLQQ?oc=5",
+      "source": "news.google.com"
     }
   ],
   "news_list": [
     {
+      "title": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs - La Presse",
+      "summary": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs  La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOdzBpbmJoZzFQdnVCdWRodmtIZ0x4OTR3XzVJREpMa1cweTJ6NjZSNmhVNWItdkZ4WHhFRzlyalg1T0Z5ek1jaUVmTWlDY2ZXXzZVcF9EQ1loLTZFVGhKQy1YcE5iczdDb29VLVo3WlRhOFhrY2hiYTlxMnE4TnpwM2F1OGlCOTYzRW0wVlRlOGwwVFM5VkRTdW1nN2U0N2hna2I0a1FCcTdJLW9OM1VZajFuX2ZnTjg3cFBDNHNJVTVYMWswblNFbmkydlNCVWNNcGNBc2RWQnVWOE9MUElyaHR3?oc=5",
+      "source": "news.google.com"
+    },
+    {
       "title": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue",
       "summary": "L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue est apparu en premier s",
       "link": "https://apciq.ca/rmr-de-montreal-la-baisse-graduelle-des-ventes-se-poursuit-et-la-pression-sur-les-prix-sattenue/",
       "source": "APCIQ"
     },
     {
-      "title": "RMR de Montréal et de Québec : la route vers un marché  plus équilibré se poursuit",
-      "summary": "L’Île-des-Sœurs, le 2 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de septembre 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal et de Québec : la route ",
-      "link": "https://apciq.ca/stats-septembre-2026-fr/",
-      "source": "APCIQ"
-    },
-    {
-      "title": "RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes",
-      "summary": "L’Île-des-Sœurs, le 4 septembre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’août 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes est apparu en premier sur APCIQ - Site web",
-      "link": "https://apciq.ca/rmr-de-montreal-le-reequilibrage-du-marche-gagne-desormais-les-couronnes/",
-      "source": "APCIQ"
+      "title": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max - Noovo Info",
+      "summary": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max  Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMmxZU2gwN0ZkZVZ4N0lWVm12V3pRVHQ0LWpyM2F0TWhSOVM5Y1FyZTN3SGduc0ppVjJOMmpvZVBVRXFsSHFEUWtJUzZwSHhHeXMybnF2RDVkdmhLTDh0QXB5REIzbWI5MF85ZDBRWkxoa21WcDB4Q0ZySmtJbHZCaFpTTHFMNlc2dWNWbFJHT2lxbjNyT3RsR29zUXgwNWJ5Y09tZ1JpX1lEZXFlRFBsOVZzSFJ3WGNCdXdLQQ?oc=5",
+      "source": "news.google.com"
     }
   ]
 }
