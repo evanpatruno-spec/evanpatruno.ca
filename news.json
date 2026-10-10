@@ -91,6 +91,14 @@
       "category": "local"
     },
     {
+      "title": "Wall Street clôture en hausse au terme d’une semaine agitée",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-10-09/wall-street-cloture-en-hausse-au-terme-d-une-semaine-agitee.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Bourse de New York a terminé en hausse vendredi, aidée par la vigueur de certains géants technologiques et par une stabilisation des taux obligataires, à l’issue d’une semaine mouvementée sur les deux fronts.",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Trump repart à l’attaque contre une responsable de la Fed, convoquée à la Maison-Blanche",
       "link": "https://www.lapresse.ca/affaires/2026-10-09/trump-repart-a-l-attaque-contre-une-responsable-de-la-fed-convoquee-a-la-maison-blanche.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
@@ -103,22 +111,6 @@
       "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-10-09/ce-qui-changera-des-lundi-avec-votre-carte-de-credit-desjardins.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
       "description": "Dès le lundi 12 octobre, les détenteurs de cartes de crédit Desjardins feront face à des changements en raison de la migration de celles-ci vers un nouveau système de gestion. Voici ce à quoi il faut s’attendre.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Canada et Québec | L’emploi recule encore en septembre et le taux de chômage augmente",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-10-09/canada-et-quebec/l-emploi-recule-encore-en-septembre-et-le-taux-de-chomage-augmente.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Après avoir reculé en août, l’emploi a de nouveau baissé au Canada et le taux de chômage a augmenté à 6,5 % en septembre. Le Québec a perdu 49 000 emplois et son taux de chômage atteint maintenant 6 %.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La plateforme Ubee veut faciliter l’accès à l’historique de vente des propriétés",
-      "link": "https://www.ledevoir.com/economie/1015580/plateforme-ubee-veut-faciliter-acces-historique-vente-proprietes",
-      "source": "Le Devoir",
-      "description": "Le prix de vente passé ne fait toutefois pas foi de tout, prévient une courtière.",
       "cities": [],
       "category": "general"
     },
@@ -143,14 +135,12 @@
       "category": "local"
     },
     {
-      "title": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMFhiTWtFMms5QUcxWUthX3NsUUlwc2FuWEltdFhOS1dSMDNUNnBZaEEySWlqUkp1cUViR2l4UHFXaU5TSkc1R3FOUnZJOVhGeW1IbGJUc2VMcWVPYlZjU2RuQ2hzWHdudWc4NXphZ203N1JRbnBQRmxYa185VTFJLWFKT2tKNTkzbU1ONTdJSTNmOUJlMDBxdVQ0SmJlaVMtT1Bybw?oc=5",
+      "title": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPU1o0U2s1RDBTTS1iUERKaklVZklpUnFlWjNUbDIwWU85REU1WDc2NWw2VVAtbWJ2Tk45MHlabmpaZm4ybmJXUC1Tcjgxd3QtU2VTSzVVRnJYT1VFZ3g2VnZYOF9WVE1Gak44ZWxGWVdlMWduTkJ0NGRmbnZOVGtoQnR1NnFwMG1WOExRdmU2YUhKRmQtMFNGc0p5ZjZEV2NaWW04UXR4WHJzTzNpTEx2ZGVlRTBJNjQ0MnlodV9XRHJsWU5BZGxlY3Bn?oc=5",
       "source": "news.google.com",
-      "description": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec  Le Devoir",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier  QUB radio",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max - Noovo Info",
@@ -166,8 +156,8 @@
       "source": "news.google.com",
       "description": "Marché immobilier Rive-Sud de Montréal — Septembre 2026  Journal Métro",
       "cities": [
-        "montreal",
-        "rive-sud"
+        "rive-sud",
+        "montreal"
       ],
       "category": "local"
     },
@@ -182,18 +172,10 @@
       "category": "local"
     },
     {
-      "title": "Immobilier Québec 2026 : le marché se rééquilibre - Le Revenu",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcWp5dE8tWmVtd25WcnBLbW5CbVlrenNsQW93QWM5cnhpaWtjSmFVajFfbjM2LUtSckRRR0t3c2xtbEpMS2FBczNEMXF3YzlkR25BQnNhS1JBOUZmeFJ3eFZCT0t0VGlaVnYtOUpOb0xMcHNYbkFzTFBCN0lFclh0SWpSMWRsOUZlRW9GYnNsZ1laMHJfdjBnbVRXdlJvX0YtM0dQSmtQWmZoZV9BcEphN1ZsSlk?oc=5",
+      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier Québec 2026 : le marché se rééquilibre  Le Revenu",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Cette maison à étages à moins de 100 000 $ te donnera le goût de déménager en région - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBzZlp4YkFIcU5kOUREZXI1MnVZTHNodnQtNE5xNE1YTHJQaEw1aVNLcDRGRzg0OUVtQTljODU3YWtSR25Bczh2ZnB4YlRvU3E0TlY4aHhyb1pwaDMtSFdhQmhqNWhwMGdhNEtsZmFSNV9sZGh1dEE?oc=5",
-      "source": "news.google.com",
-      "description": "Cette maison à étages à moins de 100 000 $ te donnera le goût de déménager en région  Narcity",
+      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
       "cities": [],
       "category": "general"
     },
@@ -207,6 +189,14 @@
         "rive-nord"
       ],
       "category": "local"
+    },
+    {
+      "title": "Après une longue gestation, des condos de luxe enfin lancés à Sillery - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQLTVZaTBOelpfRnBWVVJsLVRoZ3lwaGE5TkRyc0NBaTlFdy13aFIxemJpOTdPQnd5NmZ0SGF6akhsR1hBRTl6a3prUTJ5U0NHMnc2Z1hXZ0RZZzdXeEZUNmh3SDAwWFpZcFMwelN4WlNCamhkSGMySlJGNTRsc09CWG9SVmpYcmdZbF9MaUVhRmpBbFJmRjViTlljc19ZU3FiQTFUWHh1Y3A3VDY3QkFkOA?oc=5",
+      "source": "news.google.com",
+      "description": "Après une longue gestation, des condos de luxe enfin lancés à Sillery  Journal de Québec",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Immobilier | Ubee : moins de secrets pour les acheteurs de maison - La Presse",
@@ -233,30 +223,12 @@
       "category": "general"
     },
     {
-      "title": "Deux ans de baisse au Canada | Les loyers moyens demandés ont reculé de 4,2 % en septembre - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPT3ktRkYzVUFERTlSMFQ3MldnYk1iUzYyUGxCZGlrdGFZSlF4ZG5wdEVQbThOc1J4QXhzaFlaNFJMeDFhYkR1MDdJMjVCNlJTVDdhMVZKaE9kUzBEbWhTMVRzM3U3dW50MDJ6c2w1V1NNbDZTVUN2XzlUQkU3QUpzNWhhbU5lcHJuanBhcjRVWjdZbDIzWU1yTDhNRW1INXFRVHcxVVVMNGlvbGU2TG9pTmtHT1F6YXVCM3d6R25IY1k2cTFUM1pIc3ItakpNTFBkLWU1ZkJaaEkzSUhfaVNLRzlUUkZheXc?oc=5",
-      "source": "news.google.com",
-      "description": "Deux ans de baisse au Canada | Les loyers moyens demandés ont reculé de 4,2 % en septembre  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Marché immobilier Agglomération de Québec — Septembre 2026 - Journal Métro",
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd1dSSlZUVlBjRkJ5S3NRQzFsNUxRTGFDNElPRE5SM2dYU2prbVNqSG9nT1lSZkxfVEwwN3VpTHFJb0pmbk1GNFR4ZlFMcUotdzhrTzZKUHd6eU1vZ1RpY0R6cldKTVdvVTJoaENOZEd5bkpLUk82NTR6YnB2dC05SWhkc3VOSGZsSUJFT0RjbVI1Z0hSekwyUGJ5cTl4NXRPZUlhV2J0VW1wbXhWY2Jicl9ob19tNVlrR0VsUzhlZ3JraFlBWnc?oc=5",
       "source": "news.google.com",
       "description": "Marché immobilier Agglomération de Québec — Septembre 2026  Journal Métro",
       "cities": [],
       "category": "general"
-    },
-    {
-      "title": "Marché immobilier Île de Montréal — Septembre 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSW9JT0xzU21qUno2SW5vOU1ad1daZWRRaWdLTU1CeGhpZjk3N2hFVERKRHVMRERNZW1XcEJtc0RGOURMVVlwTkZzUzRDaWVoeEw3TlZZR3Nfd0NkMmh0VlhlZlNLOV9tWGVRd3JvYjRfN21BU0h0RUx1dmR6aU9kRXlBQ3RIX3hjUUVOcEpFaUhyNV9GdVdfanhxRXl6dTVNOHNkSTNKUGhrN1FFTDMzN3hJcFZadEJHLTZJ?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier Île de Montréal — Septembre 2026  Journal Métro",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
     },
     {
       "title": "Marché immobilier du Grand Montréal — Septembre 2026 - Journal Métro",
@@ -269,28 +241,36 @@
       "category": "local"
     },
     {
-      "title": "Marché immobilier Laval — Septembre 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdDhzdU9LbGM5dTcwaXZsdE1taDRVV0NtMm9kWTJQcEdiYVJYRC1GcU1sSFZJQXd1d1J6Y1p2dUJVWHJYRmNLcDhFWHVmQ21WZ1RKLUJiYXVpZGdjYmQ1Y2pPRUZFX2dPb0R4d0d3RDBQRnZKUTk3aGdnUGpvVThwMjFwVm1udk12TmVZMzZleXctWU5ibVdFQ0MteENhYkRpYndPNlRnbm5HQjJpREE?oc=5",
+      "title": "Marché immobilier Île de Montréal — Septembre 2026 - Journal Métro",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSW9JT0xzU21qUno2SW5vOU1ad1daZWRRaWdLTU1CeGhpZjk3N2hFVERKRHVMRERNZW1XcEJtc0RGOURMVVlwTkZzUzRDaWVoeEw3TlZZR3Nfd0NkMmh0VlhlZlNLOV9tWGVRd3JvYjRfN21BU0h0RUx1dmR6aU9kRXlBQ3RIX3hjUUVOcEpFaUhyNV9GdVdfanhxRXl6dTVNOHNkSTNKUGhrN1FFTDMzN3hJcFZadEJHLTZJ?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier Laval — Septembre 2026  Journal Métro",
+      "description": "Marché immobilier Île de Montréal — Septembre 2026  Journal Métro",
       "cities": [
-        "laval"
+        "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Après une longue gestation, des condos de luxe enfin lancés à Sillery - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQLTVZaTBOelpfRnBWVVJsLVRoZ3lwaGE5TkRyc0NBaTlFdy13aFIxemJpOTdPQnd5NmZ0SGF6akhsR1hBRTl6a3prUTJ5U0NHMnc2Z1hXZ0RZZzdXeEZUNmh3SDAwWFpZcFMwelN4WlNCamhkSGMySlJGNTRsc09CWG9SVmpYcmdZbF9MaUVhRmpBbFJmRjViTlljc19ZU3FiQTFUWHh1Y3A3VDY3QkFkOA?oc=5",
+      "title": "Immobilier Québec 2026 : le marché se rééquilibre - Le Revenu",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcWp5dE8tWmVtd25WcnBLbW5CbVlrenNsQW93QWM5cnhpaWtjSmFVajFfbjM2LUtSckRRR0t3c2xtbEpMS2FBczNEMXF3YzlkR25BQnNhS1JBOUZmeFJ3eFZCT0t0VGlaVnYtOUpOb0xMcHNYbkFzTFBCN0lFclh0SWpSMWRsOUZlRW9GYnNsZ1laMHJfdjBnbVRXdlJvX0YtM0dQSmtQWmZoZV9BcEphN1ZsSlk?oc=5",
       "source": "news.google.com",
-      "description": "Après une longue gestation, des condos de luxe enfin lancés à Sillery  Journal de Québec",
+      "description": "Immobilier Québec 2026 : le marché se rééquilibre  Le Revenu",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Remboursement de la taxe de bienvenue : Tu peux maintenant réclamer jusqu'à 5 875 $ - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5KbFRuVm8zV3NVbENJMGcyMXBnYUdmbERLNzk1QWk4cE9OZktfUXpzVVduU1d1Z3hJOFFPR2RRWS1FdXVTaXpfWko1V3lRNFBabWdidUpsMV9raGwzMEhra2Q3ZEZwNlBYNG1URlZ0R1VLRk1iUXF3bU51dUg?oc=5",
+      "title": "Deux ans de baisse au Canada | Les loyers moyens demandés ont reculé de 4,2 % en septembre - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPT3ktRkYzVUFERTlSMFQ3MldnYk1iUzYyUGxCZGlrdGFZSlF4ZG5wdEVQbThOc1J4QXhzaFlaNFJMeDFhYkR1MDdJMjVCNlJTVDdhMVZKaE9kUzBEbWhTMVRzM3U3dW50MDJ6c2w1V1NNbDZTVUN2XzlUQkU3QUpzNWhhbU5lcHJuanBhcjRVWjdZbDIzWU1yTDhNRW1INXFRVHcxVVVMNGlvbGU2TG9pTmtHT1F6YXVCM3d6R25IY1k2cTFUM1pIc3ItakpNTFBkLWU1ZkJaaEkzSUhfaVNLRzlUUkZheXc?oc=5",
       "source": "news.google.com",
-      "description": "Remboursement de la taxe de bienvenue : Tu peux maintenant réclamer jusqu'à 5 875 $  Narcity",
+      "description": "Deux ans de baisse au Canada | Les loyers moyens demandés ont reculé de 4,2 % en septembre  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Cette maison à étages à moins de 100 000 $ te donnera le goût de déménager en région - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBzZlp4YkFIcU5kOUREZXI1MnVZTHNodnQtNE5xNE1YTHJQaEw1aVNLcDRGRzg0OUVtQTljODU3YWtSR25Bczh2ZnB4YlRvU3E0TlY4aHhyb1pwaDMtSFdhQmhqNWhwMGdhNEtsZmFSNV9sZGh1dEE?oc=5",
+      "source": "news.google.com",
+      "description": "Cette maison à étages à moins de 100 000 $ te donnera le goût de déménager en région  Narcity",
       "cities": [],
       "category": "general"
     },
@@ -313,14 +293,6 @@
       "category": "general"
     },
     {
-      "title": "Les condos | 2 événements à surveiller pour les professionnels et les copropriétaires - 104.7 Outaouais",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNEdxNGF2ZDhFMXNSVnBJaUlIZGVhVTRvbXl4UjNRamM1c3N1d0R6WVpSaU13TzVIcG9JNk5udUpzSWpYcGJUajVmRGRoNXg4U3lQQWo0aWNlNlJ6M3ljbmx6Tm51SkNFV0kybnpRWVo0UXFQQ3FLRTU2dlhMQWxBMHRWeEtROHIxOEZuUUVnbmdWOTZYb0FIZDVQY3VocmF3dGZ0ZTRsb3NiZUk?oc=5",
-      "source": "news.google.com",
-      "description": "Les condos | 2 événements à surveiller pour les professionnels et les copropriétaires  104.7 Outaouais",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "FRAPRU réclame des gestes immédiats pour le logement social - Journal Métro",
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQbVlGMTQ4RVJMTjQ5c0NWV2FkVzVkVGVKYUFtX3d1RzhNdHNTTC1qVm1wM2FRajNnYVNmdFhOcTdsbUhZUVprTDJhN2VUMUhRVHhCeGlCYW16aF92U05SdHVXSFVzMFQ3SVZ3OUVfRWkxMnRkVkJmbmxQbDM4NzVBQzZtUnlUd0xOdUdrRFdWbk9DUXpTRlIzVTB6Tmd1WFBfTmhLVDh5UUYtdEU4bGZXcDRqU2NKTkp5d1VnaVU0SFRyc2ZKMnZQUlc3TFhXdXFGdDZiUw?oc=5",
       "source": "news.google.com",
@@ -329,10 +301,18 @@
       "category": "general"
     },
     {
-      "title": "Les Banques centrales augmentent le taux directeur : que faire avec notre hypothèque ? - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREh2T1NXc0NjQUJjNTJnMEpCUTB6eXNaQjB3cTNTZEE0Um9WRzc4Um83MTFLalNJbXI5RlJreE9wRG9oRWUyMC1ZTlNVSE1CcWJLSWdhRk5hRjZKdU5ObGlSVkdITXFXSmRvN1pzVDU2Wm02TEl2UDB0akxTeC1rX3Y2eDJuM1M2ZENIWjBIUE14RWlYR1NwN29zNldrMUhrRmN2Y2xMTGt2bVRMZExIcmRQRHE0Y0t0RUw1OFBFV0RWelJWYkpITDF6WlhhelRURWZ2SExORGhiaDl6Z05XQm4tUGc?oc=5",
+      "title": "Maison à vendre Lac-Beauport #maisonavendre #immobilierquebec #centris - YouTube",
+      "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE81WFEyeTQwbzliWnltLWdkLTFaR0xYY2w5QlRwWDlZREpaQkhJOS1Xd1lXa21fT2djWjlqVDNGc3dpQQ?oc=5",
       "source": "news.google.com",
-      "description": "Les Banques centrales augmentent le taux directeur : que faire avec notre hypothèque ?  Finance et Investissement",
+      "description": "Maison à vendre Lac-Beauport #maisonavendre #immobilierquebec #centris  YouTube",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada - Ratehub.ca",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBGeXFqckdIelJ2aVFNYUVYdFU1RnprYkppVzkxd0dMSHRaOW9xbzJiRjhvbjdoM3lWV05zYndMdGF4OHl2WTFnU0p6aE9GeEJ3bE9Db2w0bVRYM3dwc2p3NWw0eFVLWU0taWFCZDhLaw?oc=5",
+      "source": "news.google.com",
+      "description": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada  Ratehub.ca",
       "cities": [],
       "category": "general"
     },
@@ -341,6 +321,14 @@
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMDFXU2JSUVhsMWNIcmhka1hqOFB3eG4wNnhnbE56eXZkWnhfSzVTVDlyMDBXd2NhRGZNeTNBMThIN3hJTlM2Z0RFRU1IVjRZdE1mNnNseE9pajltbHNnZ0x1REhPOXpvU1JZZ0NXbHJmZEVCaGo4LWYzcWpPeko4OHJDS2d1d1VKRElscDhZeHk5RGtqbW5uQQ?oc=5",
       "source": "news.google.com",
       "description": "Grand Vancouver : des ventes de logement ordonnées  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les Banques centrales augmentent le taux directeur : que faire avec notre hypothèque ? - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREh2T1NXc0NjQUJjNTJnMEpCUTB6eXNaQjB3cTNTZEE0Um9WRzc4Um83MTFLalNJbXI5RlJreE9wRG9oRWUyMC1ZTlNVSE1CcWJLSWdhRk5hRjZKdU5ObGlSVkdITXFXSmRvN1pzVDU2Wm02TEl2UDB0akxTeC1rX3Y2eDJuM1M2ZENIWjBIUE14RWlYR1NwN29zNldrMUhrRmN2Y2xMTGt2bVRMZExIcmRQRHE0Y0t0RUw1OFBFV0RWelJWYkpITDF6WlhhelRURWZ2SExORGhiaDl6Z05XQm4tUGc?oc=5",
+      "source": "news.google.com",
+      "description": "Les Banques centrales augmentent le taux directeur : que faire avec notre hypothèque ?  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -385,26 +373,18 @@
       "category": "general"
     },
     {
+      "title": "Les pertes d’emplois de septembre freinent les discussions sur une hausse des taux - Le Canada Français",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOLUtOUm04dXFNOXVVNjFSQVlYMGh0S1FpdmVBSUZZa045YUtCQW5Mc3ZtZ0NvMGdxRE0wWmM2Z1hsRDJJUTFwTjB4NmZmN254cXMxVkRuQmhubTZMSFlQU2RmSEpKeEpJWVRmLVlzUmhDWkdaUGhodkg1LWszN3N0Y1ltR21YSVo4cXJfSllWazlIYU9IS3c2dTFpVG1jT1RIUXIweGZ6RzBIeFhmaEZtR201WkY0S0lKcEFFSUk3ZkgxNjJpQ25jczgteVRMbVk?oc=5",
+      "source": "news.google.com",
+      "description": "Les pertes d’emplois de septembre freinent les discussions sur une hausse des taux  Le Canada Français",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Taux directeur: la Banque du Canada opte pour le statu quo - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNTFPX2FLcjBWNGN3Rk0wdW9QOFRaQURhaHRuNTBtdlNhRWNSVVdrTlZqQWtTcExrT0xmT0tELTBRZDVHaHNyMnBHWUVHSEFrZ2Y1Y3drQWotVHQtdnFQUlNoaWRiaEQtV3lQWXZBX2YyM3BaYVkydTJQMXZlOUxqQ2JFcFVOVEh4YXVjOERpZkhRejFPU0Rmb0NuM19kbS0wTHh6RjdXNlA5V21W?oc=5",
       "source": "news.google.com",
       "description": "Taux directeur: la Banque du Canada opte pour le statu quo  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Statistique Canada s’apprête à publier ses données sur l’emploi - Le Canada Français",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOEIxVkZwdzVnbWt0Z0k3Nkk2cGF5bmRZXzVLMm9SZDdFQ2JaVkQwNER3S2d2elRZd1lwZmFvQVhENFI2RUhIekdEMmNqMC0zcnpERjRUSkFEZDBqVWFHRldxVU13SkRzNC1PSDJscTRwNXpWeEQtVUI5cXdwcTFBNUc5cXVxZ28tYlVMYzh6NDhiUy1xcXJIV0VhSW5SZWozVzRwZ2RTVGQ2cVJSY0R3S0ZiWk0?oc=5",
-      "source": "news.google.com",
-      "description": "Statistique Canada s’apprête à publier ses données sur l’emploi  Le Canada Français",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "KPMG Canada anticipe une hausse du taux directeur de la Banque du Canada en décembre, avant un retour à l’attentisme - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPdnFrQjU5dlE0aUdwNVgtczJjNW9ZNzMtS0pYSGhNYmd2OEQ0QXBqZXdNc3MwU3JETHBBZXBkTEJtM09OT09xY2QyZnY4ajM0LVlnQ1ZJb1M2d09NUVdLSU81c29yWDN3b1FEcTFNbjVvZC1DRkxPYU5od29RQzBrN1BjbjdTMGQ0dERoWHFhX05XVzNqamhjMmg5RU1WbU5pV09XUzlwUjFwMnUzRXc3VlljaWtFZWZuYm5OLXJBak9WZXFXN2l1QUcwcjY3dnZGZnR1ZTNjajk2ZHJKdmhLM3VmRGJYSi1VR0JSd250X3c?oc=5",
-      "source": "news.google.com",
-      "description": "KPMG Canada anticipe une hausse du taux directeur de la Banque du Canada en décembre, avant un retour à l’attentisme  Zonebourse Suisse",
       "cities": [],
       "category": "general"
     },
@@ -425,6 +405,14 @@
       "category": "general"
     },
     {
+      "title": "Un ancien gouverneur de la Banque du Canada à la tête du FMI? - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOODZoREs1cHVIYXJlYW5RVVhJSVNxRUxTWnZaRzVDMEtRWEtSSW5JdnFvWVVCNm5tMkVtSEl4dHdOUUpacWhqSE0tTy1DT091LXZPbUJrNkNnbk05MUNwVjVHUWh5eWhUNEZLWWR6T3ZNQzgxU3BTeE9IdTAwZ0VoX20xN1g5UG9rSDZ2NjROemVHUDF0aHBsbFJ1cmFiazZyUG00Z2xlZXNhVWxrWVFZaA?oc=5",
+      "source": "news.google.com",
+      "description": "Un ancien gouverneur de la Banque du Canada à la tête du FMI?  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La Banque du Canada nomme une sous-gouverneure externe - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRHFhckJkekp4ZUF6Q0FOVVNRc1Y2cEZfdFZtWmFIQlhrc2d5eHZpanBkN3hxNkQwNlUyS24xd2FlaWk4VWRXX3dwWGtLRHRfMGVtNEZhX1h2RkkzRHlFcjl3YWFVNWZlcENmeHk0Wmw5M19xQm0yZklVSGwxeTdraUdGcTJicVJzNWhsVDlIVUplemFGNEV0ZGhDeWJuZmQ5YkpGVTFwamhCQThmQlctZ0VQTkZCR3lTUEhqV0V5UGI5WkU1dTBsNWpzREZsd1k?oc=5",
       "source": "news.google.com",
@@ -441,18 +429,18 @@
       "category": "general"
     },
     {
-      "title": "L’AMF et la Banque du Canada concluent un protocole d’entente - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNGlzTURtamtCdHRpclhTcUZ1OV9sQjkxbEwxMDljdjhlVjhJQVdCOW42UmpMQm10bkdhZ2NGREZpTzJYVFpYSnV4a2VkRUNpakZ1ZXU4cGROVkR5dFJtQmlNamRaTzRreHozQ2ZGTFpuc1JabC1YU1o2YThYZVpuczV2cVVqcko4WUxKNjZXN1VtUW5oSEhuazNOOTZndkJUWWlfT1ZQaDVzNElrTnZn?oc=5",
-      "source": "news.google.com",
-      "description": "L’AMF et la Banque du Canada concluent un protocole d’entente  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Carolyn Wilkins quittera la Banque du Canada en décembre - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQ1ZNdXFEMkhzZUtJcDhvUGhJSnlPNGhUVDlqWHd6ZkxDY3BNLWcwR094NWZaRERPa0xRUEd6UVRqRVZ1ajFyaXVSNEdMZGhKMW1Ta3NodlRpNzRyeGxtaUZteThhYUp5RHVsdTNJMFRsT3B3Qy1HXy1OYmEyOXh5MDh5SUhSTWE0cnk2T2piZlRQMFY0N3RQSGVyUUVueWFQY1h0MGF0dlJzd1U?oc=5",
       "source": "news.google.com",
       "description": "Carolyn Wilkins quittera la Banque du Canada en décembre  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’AMF et la Banque du Canada concluent un protocole d’entente - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNGlzTURtamtCdHRpclhTcUZ1OV9sQjkxbEwxMDljdjhlVjhJQVdCOW42UmpMQm10bkdhZ2NGREZpTzJYVFpYSnV4a2VkRUNpakZ1ZXU4cGROVkR5dFJtQmlNamRaTzRreHozQ2ZGTFpuc1JabC1YU1o2YThYZVpuczV2cVVqcko4WUxKNjZXN1VtUW5oSEhuazNOOTZndkJUWWlfT1ZQaDVzNElrTnZn?oc=5",
+      "source": "news.google.com",
+      "description": "L’AMF et la Banque du Canada concluent un protocole d’entente  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -473,6 +461,14 @@
       "category": "general"
     },
     {
+      "title": "Les politiques monétaires transfrontalières vont diverger - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSlJvempmdFZKb2ZhZmhHYXNMR2NlUy12bklkWFU1Znp6cHVYRWxEdzdoZkdtVWoxQzZuU0lqY0tJUjA3WmhZbWVIZHUtamtUZl9QY2VsZXBrd3RiQUFYaTNqdFVYam56ZXE3VDVueGlfVXJsSzVueTB6UGM2WnFwZ3J5aFhVdHpnUGVMVmhZS0hIMTNNSXh5bUV2ak9NSzdFSVduMFZDQTdJQTgz?oc=5",
+      "source": "news.google.com",
+      "description": "Les politiques monétaires transfrontalières vont diverger  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Partenariat entre la Banque Royale du Canada et l’Université Ben-Gurion - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTk4yWm5mOFR4ZnVzY1pXRzlQQWY4TVVBT280T1BSdEg5RENpTGMxOUY1SW04UEJHWkhyTFItUGxyMDJrV3NKZURzSVI4ZkV6UUtPcnZHcUZ0emhuZWZSMUVyVk0wMXJJM3Fzd1FsWk9RQVY4bmw3VnJWTUdfOWotMEpPeVpRNnhiZzNCeERlZHRkLURwaFJGWUtLVkxaMnl6MlJwS2NjSEtUVDhVcmdkVFhkcldqcVFDVUZ0U2ln?oc=5",
       "source": "news.google.com",
@@ -489,10 +485,10 @@
       "category": "general"
     },
     {
-      "title": "Les politiques monétaires transfrontalières vont diverger - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSlJvempmdFZKb2ZhZmhHYXNMR2NlUy12bklkWFU1Znp6cHVYRWxEdzdoZkdtVWoxQzZuU0lqY0tJUjA3WmhZbWVIZHUtamtUZl9QY2VsZXBrd3RiQUFYaTNqdFVYam56ZXE3VDVueGlfVXJsSzVueTB6UGM2WnFwZ3J5aFhVdHpnUGVMVmhZS0hIMTNNSXh5bUV2ak9NSzdFSVduMFZDQTdJQTgz?oc=5",
+      "title": "KPMG Canada anticipe une hausse du taux directeur de la Banque du Canada en décembre, avant un retour à l’attentisme - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPdnFrQjU5dlE0aUdwNVgtczJjNW9ZNzMtS0pYSGhNYmd2OEQ0QXBqZXdNc3MwU3JETHBBZXBkTEJtM09OT09xY2QyZnY4ajM0LVlnQ1ZJb1M2d09NUVdLSU81c29yWDN3b1FEcTFNbjVvZC1DRkxPYU5od29RQzBrN1BjbjdTMGQ0dERoWHFhX05XVzNqamhjMmg5RU1WbU5pV09XUzlwUjFwMnUzRXc3VlljaWtFZWZuYm5OLXJBak9WZXFXN2l1QUcwcjY3dnZGZnR1ZTNjajk2ZHJKdmhLM3VmRGJYSi1VR0JSd250X3c?oc=5",
       "source": "news.google.com",
-      "description": "Les politiques monétaires transfrontalières vont diverger  Finance et Investissement",
+      "description": "KPMG Canada anticipe une hausse du taux directeur de la Banque du Canada en décembre, avant un retour à l’attentisme  Zonebourse Suisse",
       "cities": [],
       "category": "general"
     },
@@ -505,10 +501,10 @@
       "category": "general"
     },
     {
-      "title": "Luc Vallée quitte Valeurs mobilières Banque Laurentienne - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZ2dCek10eUozeV9ZUEN0MVBXWXFObjEtVkMybnAzaU1jQjNKN2pNelg1LXhRVUdrMFRMS24zLUJUYkdoLXJRaTQwOGlBZUJqclpwN0szWUxQd3hNSUIycThzNmtaRXpaaUhWaGxfYkdobDdSRXFVNUg1eEd2OVZscGFZNFpfZVJTSkVMRXU3STJNSFBfdHg4U01MSmZBQ1lnQzNyUUZyRFl5Rlk?oc=5",
+      "title": "Statistique Canada s’apprête à publier ses données sur l’emploi - Le Canada Français",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOEIxVkZwdzVnbWt0Z0k3Nkk2cGF5bmRZXzVLMm9SZDdFQ2JaVkQwNER3S2d2elRZd1lwZmFvQVhENFI2RUhIekdEMmNqMC0zcnpERjRUSkFEZDBqVWFHRldxVU13SkRzNC1PSDJscTRwNXpWeEQtVUI5cXdwcTFBNUc5cXVxZ28tYlVMYzh6NDhiUy1xcXJIV0VhSW5SZWozVzRwZ2RTVGQ2cVJSY0R3S0ZiWk0?oc=5",
       "source": "news.google.com",
-      "description": "Luc Vallée quitte Valeurs mobilières Banque Laurentienne  Finance et Investissement",
+      "description": "Statistique Canada s’apprête à publier ses données sur l’emploi  Le Canada Français",
       "cities": [],
       "category": "general"
     }
@@ -565,5 +561,5 @@
     },
     "last_quarter": "septembre 2026"
   },
-  "last_update": "2026-10-09 18:39"
+  "last_update": "2026-10-10 17:37"
 }
