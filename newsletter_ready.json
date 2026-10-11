@@ -1,14 +1,14 @@
 {
-  "Sujet": "Infolettre - Septembre 2026",
-  "Mois": "Septembre",
+  "Sujet": "Infolettre - Octobre 2026",
+  "Mois": "Octobre",
   "Annee": "2026",
   "Taux_BOC": "2.25%",
   "Contenu_Article": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs - La Presse: Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs  La Presse...\n\nRMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue: L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immob...\n\nCondos et maisons à Montréal | Immobilier: «Ce n'est pas vrai que ça monte sans arrêt en ce moment, ça stagne - 98.5 Montréal: Condos et maisons à Montréal | Immobilier: «Ce n'est pas vrai que ça monte sans arrêt en ce moment, ça stagne  98.5 Montréal...",
-  "Citation": "L'immobilier ne peut pas être perdu ou volé, ni emporté. Géré avec soin, il s'agit de l'investissement le plus sûr au monde. – Franklin Roosevelt",
-  "Astuce_Pro": "Inspection Préachat : Ne négligez jamais l'état de la fondation. Une fissure mineure peut cacher un problème structurel coûteux. Soyez vigilant !",
-  "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-09.pdf",
-  "campaign_id": "NL-9-2026",
-  "month": "Septembre",
+  "Citation": "Le succès ne s'offre qu'à ceux qui osent essayer. – Charlie Chaplin",
+  "Astuce_Pro": "Le portefeuille fictif de La Presse | Inquiétudes sur le marché obligataire : Après un troisième trimestre de méfiance en Bourse face aux soubresauts du très influent marché obligataire, comment se profilent les perspectives d’investissement pour les prochains mois ? C’est le moment du tour d’horizon trimestriel avec les experts du « Portefeuille fictif » de La Presse.",
+  "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-10.pdf",
+  "campaign_id": "NL-10-2026",
+  "month": "Octobre",
   "year": 2026,
   "boc_rate": "2.25%",
   "market_temp": "Marché Actif (Acheteur)",
@@ -37,7 +37,7 @@
       "source": "news.google.com"
     }
   ],
-  "report_label": "Rapport de Marché - Septembre 2026",
+  "report_label": "Rapport de Marché - Octobre 2026",
   "expert_note": "Le marché s'équilibre. C'est le moment idéal pour réévaluer vos capacités de financement avant la prochaine vague immobilière.",
   "footer_msg": "Besoin d'une évaluation précise de votre propriété ?",
   "quick_links": [
