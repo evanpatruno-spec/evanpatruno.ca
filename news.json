@@ -91,10 +91,26 @@
       "category": "local"
     },
     {
-      "title": "New York | Wall Street opte pour la prudence",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-10-12/new-york/wall-street-opte-pour-la-prudence.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Gazoduc Coastal GasLink | TC Énergie conclut un accord avec des Premières Nations",
+      "link": "https://www.lapresse.ca/affaires/2026-10-13/gazoduc-coastal-gaslink/tc-energie-conclut-un-accord-avec-des-premieres-nations.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Bourse de New York a terminé en ordre dispersé lundi, la publication prochaine de l’inflation américaine et de nombreux résultats d’entreprises incitant les investisseurs à rester prudents.",
+      "description": "TC Énergie a conclu un accord d’investissement qui confère à cinq Premières Nations une participation économique dans le gazoduc Coastal GasLink, qui achemine du gaz naturel depuis le nord-est de la Colombie-Britannique jusqu’à l’usine et au terminal d’exportation de LNG Canada à Kitimat.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Vie numérique | HomeView : la maison connectée d’Apple passe par Siri AI",
+      "link": "https://www.lapresse.ca/affaires/techno/2026-10-13/vie-numerique/homeview-la-maison-connectee-d-apple-passe-par-siri-ai.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Identification de chacun des membres d’une même famille. Commande vocale personnalisée propulsée par l’IA. Promesse d’un respect strict de la vie privée. Voilà les trois leviers sur lesquels mise Apple avec son tout nouveau HomeView, tout nouveau hub pour la maison connectée qui s’avère aussi le premier grand test pour le nouveau grand patron à Cupertino, John Ternus.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Geely lancera ses premiers véhicules électriques au Canada en 2027",
+      "link": "https://www.ledevoir.com/economie/1016486/geely-lancera-premiers-vehicules-electriques-canada-2027",
+      "source": "Le Devoir",
+      "description": "Le constructeur chinois n’a pas dévoilé quels modèles seront d’abord commercialisés, ni leur prix de vente.",
       "cities": [],
       "category": "general"
     },
@@ -109,34 +125,6 @@
       "category": "local"
     },
     {
-      "title": "Marché immobilier Rive-Sud de Québec — Septembre 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOWVzMHNXXzJSQ3JXVDVzNmVWSGlnb0p1RE9PMkM3VWFTMndpOWMwVW1EX050MXNRY1lESTNfRl9kZE8zekhKWnN5X2Q4cmJ4clpSMVBxclJ1cGgwclBkeWlRbVJMMnA1WVB4NG92RHFCZFJjeDZPLVd4Q2piX21WaGNZTi1OQUxlQnhSTnBIYTU4YXQzY0J1aHdrX1FsdkxyQ243WU9NaWZBTk1hRGEyNE16UEt5ZUdmMTZyRFBRSQ?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier Rive-Sud de Québec — Septembre 2026  Journal Métro",
-      "cities": [
-        "rive-sud"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWENGR3MtWlRmczh1QTVOYUliWjFkWnpyUW1xU0RDaE83eEJmTEIweFprS09EOE9EMXpNckZ2WG9RZVB2NVktVmEzdDM4bHd2dG9MdWpRR2tDbExMdXpkc2I2N3N5eVoybnZNdnlqNzIyelBZOUwyNnBxMmFWWjdEUVM5RmtZUDhyT2hJTUZreG1tVlE3QmdydV9Fd0JfOE5HeTRvb1lKSUtRREgwbllFMjYzOW9UQkZkTXptZzFTVWoxUXlPMnk1M0xOZm0tTXRD?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le marché immobilier ralentit à Montréal et c'est une bonne nouvelle pour les acheteurs - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1oQUZXOWlZMktsSjdnUDYwNzNmVHVoemdMQTBQVU9ZSjRYd0tWU0lsMHBkeEJWbjVSQU82UlJ3Mm9hVy1GaUNKb1dhczBnM3gyWk9KWUkzSUl3dG9JVXBaQndlTUhNX1ZXd3BXZVppcFpWbGk4eFAzTzRGUXY?oc=5",
-      "source": "news.google.com",
-      "description": "Le marché immobilier ralentit à Montréal et c'est une bonne nouvelle pour les acheteurs  Narcity",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
       "title": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max - Noovo Info",
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMmxZU2gwN0ZkZVZ4N0lWVm12V3pRVHQ0LWpyM2F0TWhSOVM5Y1FyZTN3SGduc0ppVjJOMmpvZVBVRXFsSHFEUWtJUzZwSHhHeXMybnF2RDVkdmhLTDh0QXB5REIzbWI5MF85ZDBRWkxoa21WcDB4Q0ZySmtJbHZCaFpTTHFMNlc2dWNWbFJHT2lxbjNyT3RsR29zUXgwNWJ5Y09tZ1JpX1lEZXFlRFBsOVZzSFJ3WGNCdXdLQQ?oc=5",
       "source": "news.google.com",
@@ -145,29 +133,26 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier Rive-Sud de Montréal — Septembre 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaVRTZWdlT1dFbFRNMXc2V2F6NExwTVdhb2ViTDBCcmhvcWg1dHE0OTU5aHBJMkQtZXZBZUV3S2xBb09rNlpvUWYxYlRrT2dESTZJcVpnVkpZOTNyaWFldXBaMzl0QVlDb2lzcWxZU3IxTFVjNEhRRk42bzdmV3UyNzN0SzJ0RW5XU3MtMDQxN3JCemJuOWFPU1BnRVBNLVRVeTRKY3V3Rl9wQ216cHdtZTNrTGtoS0JoQk1UVWVtUUx0dw?oc=5",
+      "title": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPU1o0U2s1RDBTTS1iUERKaklVZklpUnFlWjNUbDIwWU85REU1WDc2NWw2VVAtbWJ2Tk45MHlabmpaZm4ybmJXUC1Tcjgxd3QtU2VTSzVVRnJYT1VFZ3g2VnZYOF9WVE1Gak44ZWxGWVdlMWduTkJ0NGRmbnZOVGtoQnR1NnFwMG1WOExRdmU2YUhKRmQtMFNGc0p5ZjZEV2NaWW04UXR4WHJzTzNpTEx2ZGVlRTBJNjQ0MnlodV9XRHJsWU5BZGxlY3Bn?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier Rive-Sud de Montréal — Septembre 2026  Journal Métro",
-      "cities": [
-        "montreal",
-        "rive-sud"
-      ],
-      "category": "local"
+      "description": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier  QUB radio",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
+      "source": "news.google.com",
+      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Immobilier Québec 2026 : le marché se rééquilibre - Le Revenu",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcWp5dE8tWmVtd25WcnBLbW5CbVlrenNsQW93QWM5cnhpaWtjSmFVajFfbjM2LUtSckRRR0t3c2xtbEpMS2FBczNEMXF3YzlkR25BQnNhS1JBOUZmeFJ3eFZCT0t0VGlaVnYtOUpOb0xMcHNYbkFzTFBCN0lFclh0SWpSMWRsOUZlRW9GYnNsZ1laMHJfdjBnbVRXdlJvX0YtM0dQSmtQWmZoZV9BcEphN1ZsSlk?oc=5",
       "source": "news.google.com",
       "description": "Immobilier Québec 2026 : le marché se rééquilibre  Le Revenu",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Immobilier | Ubee : moins de secrets pour les acheteurs de maison - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQay1Ic3dFUHdWZThSMWFsS3hpcTZOd2NNOUdmMmpseURwTTIzNktFMVU3OF85emxOeVA5d1YwcUJjM0hVV3JCSF9meXBCMnFybHZXNVFfQ3N0MU5ZS0d4RHJHQktRNzlLVVdOVkdJYmxBdEJnWHdvamxPTUtmay05b19ieWJpeXNTVFF1cklRVDVwbFdpX09MczdmdG9jNDFsc2NQYzd2aWE0b1hOR0RxTHF4SmdaNGl6Ujl5MFN3?oc=5",
-      "source": "news.google.com",
-      "description": "Immobilier | Ubee : moins de secrets pour les acheteurs de maison  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -186,43 +171,6 @@
       "description": "Trouver les meilleurs taux hypothécaires variables sur 5 ans au Canada  Ratehub.ca",
       "cities": [],
       "category": "general"
-    },
-    {
-      "title": "Marché immobilier Rive-Nord de Montréal — Septembre 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQa3hLMTd0aXkwdVFuZnJxTmJ3RUtIamZ5eHlsUXJxYl9ibWdncUxjN0tDYi1PNHhZd3kxcTZLV3YtVXNLZDVMeTFfdVd2TEtPdnBMdnlEdURFYmRqd1ZfSDdDQTZqVmxkMk00WVk2QTdCOGh1YVRvdEhRcHRFVHVpYkgyTk5veXBYakN6eExPUGlWc2ZSSXM3a1pxRFczSHBzSDNzM2s3V2V3NER1SDlIaVRSYW5KQ3dHX3pnTlhzbllRcE0?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier Rive-Nord de Montréal — Septembre 2026  Journal Métro",
-      "cities": [
-        "montreal",
-        "rive-nord"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Marché immobilier Province de Québec — Septembre 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZ1lQNndJajRDMFRSSmJyekRSSktwX0tYaThiMUotY2VNbW05X2dwOS1Jb0VQRmM1NEp4aTIwaUVwQmRpYS1DRC14SGRQLTR6dmZtcG1vOUwtYTNqV3pHellDMVFjZHFCaWFBYjFIcHRBZnRORmVnREZsQ2luYVBMT0xrRWpDakd1MTQ1a0NxS3Y1SDFJbU9Ja1RBNWZjekhyMHhOR2cxRlgwVHVDdU9md2NJdW1heWNHNmxyTGhLSQ?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier Province de Québec — Septembre 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier Agglomération de Québec — Septembre 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd1dSSlZUVlBjRkJ5S3NRQzFsNUxRTGFDNElPRE5SM2dYU2prbVNqSG9nT1lSZkxfVEwwN3VpTHFJb0pmbk1GNFR4ZlFMcUotdzhrTzZKUHd6eU1vZ1RpY0R6cldKTVdvVTJoaENOZEd5bkpLUk82NTR6YnB2dC05SWhkc3VOSGZsSUJFT0RjbVI1Z0hSekwyUGJ5cTl4NXRPZUlhV2J0VW1wbXhWY2Jicl9ob19tNVlrR0VsUzhlZ3JraFlBWnc?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier Agglomération de Québec — Septembre 2026  Journal Métro",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier Île de Montréal — Septembre 2026 - Journal Métro",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSW9JT0xzU21qUno2SW5vOU1ad1daZWRRaWdLTU1CeGhpZjk3N2hFVERKRHVMRERNZW1XcEJtc0RGOURMVVlwTkZzUzRDaWVoeEw3TlZZR3Nfd0NkMmh0VlhlZlNLOV9tWGVRd3JvYjRfN21BU0h0RUx1dmR6aU9kRXlBQ3RIX3hjUUVOcEpFaUhyNV9GdVdfanhxRXl6dTVNOHNkSTNKUGhrN1FFTDMzN3hJcFZadEJHLTZJ?oc=5",
-      "source": "news.google.com",
-      "description": "Marché immobilier Île de Montréal — Septembre 2026  Journal Métro",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
     },
     {
       "title": "Maison à vendre Lac-Beauport #maisonavendre #immobilierquebec #centris - YouTube",
@@ -249,18 +197,10 @@
       "category": "general"
     },
     {
-      "title": "Étude de la Banque du Canada | La réplique tarifaire du Canada alimente l’inflation - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOWF9JSlVFNjRGdGxrSGxpWjNwOEx1eWRfVnplSnotUzhQbXpubldFeFQzRHNLcDFUdEd5dVR0czV6UkFGak5lUFZKNm1PM0I2bkhFd2Z1ODk2ZFFuXzIwRVRtTEtNczV4allWUG1XcmxhYUJvRS12dDRRMVhMcGlMU2JHcW9ib25tcVk4eHdhZWNqdFFMV2Z0U0huN25tcDNhSlJhMklwQXV2WWF1TXRoTFhmaXI2Y2hmVjZ0T2VPSTZwZHVQaTdDeUllbFlEdXpJUDhhWg?oc=5",
+      "title": "La Banque du Canada maintient son taux directeur - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZVJ3NTZjVjVETlVRVG4ySEhSRUFQNWRfNmJ4S24wWXVEbzk5NzhYVWNIZkt5Sm9WN0YyMUNrYk44YmNkdlM5VjRwZk1nM2Vxa040NlMtN3p3VGFoNU5NT181bkdVcmpFUXRQN0pydVBubFJQdEhENDBXNWVaNS1wSGhCYW5QWDRta28wYmh5VjV5SHpWbjh4R3NwbnRGR0dI?oc=5",
       "source": "news.google.com",
-      "description": "Étude de la Banque du Canada | La réplique tarifaire du Canada alimente l’inflation  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada : nouvelle hausse de taux - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNWV9DcDhNc2J2a3FXRU92a2RlTE1LdHhpbGoydjZpREJGRFNHV1hwdnhZYk1SNVhTeHR4bENOSG5vaDZGQS1heEpBQlFsNWVmaUZxMUxvOHFzYVdabVZqM01MNllVOTdfOFcyZzFqNjM2NVg4X1lYNnlnRklBbVNNRW5SdHJNTUViOTIwdi1xbmdXMUxGYlE?oc=5",
-      "source": "news.google.com",
-      "description": "Banque du Canada : nouvelle hausse de taux  Finance et Investissement",
+      "description": "La Banque du Canada maintient son taux directeur  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -281,18 +221,10 @@
       "category": "general"
     },
     {
-      "title": "Les Canadiens anticipent une inflation accrue, la Banque du Canada envisage des hausses de taux - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNdXNpRXFvRVA4c21IellDX0JkX1JUdU5Rc1ZIdTlVcHRHeGdRS0dmTmVvMXVsUlQ4TXZiV0N4YlF2OVRUM1drZ3loTGV6VEpZNE84VmdxZFc2ZUtrT3MxMm9YTmZPR0pCMjJBWlpVTnhNeWtzNXl1VDRrYy1NaEM1UVlLTmhFODktV21PZ3NRM1VONi1mSDU4ek1DT0JlVTBUVzBGdzFKSTV5YU4xX1FOMFBkSjNyQ2RZYXZCLXR1bmVEa0pudC1DcUhmV0ZmbnJvOU8tNEdycGloMmZlV2c?oc=5",
+      "title": "Banque du Canada : nouvelle baisse de taux inattendue - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQSFNmcmZXUldabEVlMFJxb1dXaXpvMzI0LUFSVDVQcWFBX3pvSHRSNDFVVGNKQ29CVURBbzdRa1FCM3duWDR2RU1LMWpCaDIyUG00QjV6ZDN6dUJfTWgzSm9mc1BHZll1UXdLaUxLWV9iVnhpWG5KTk9KRHZpTUFhYkNtQnJqcDc5TmUxMDFKVndzTm5jQ1NyTzRudHI4VnZfV3Qtaw?oc=5",
       "source": "news.google.com",
-      "description": "Les Canadiens anticipent une inflation accrue, la Banque du Canada envisage des hausses de taux  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les pertes d’emplois de septembre freinent les discussions sur une hausse des taux - Le Canada Français",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOLUtOUm04dXFNOXVVNjFSQVlYMGh0S1FpdmVBSUZZa045YUtCQW5Mc3ZtZ0NvMGdxRE0wWmM2Z1hsRDJJUTFwTjB4NmZmN254cXMxVkRuQmhubTZMSFlQU2RmSEpKeEpJWVRmLVlzUmhDWkdaUGhodkg1LWszN3N0Y1ltR21YSVo4cXJfSllWazlIYU9IS3c2dTFpVG1jT1RIUXIweGZ6RzBIeFhmaEZtR201WkY0S0lKcEFFSUk3ZkgxNjJpQ25jczgteVRMbVk?oc=5",
-      "source": "news.google.com",
-      "description": "Les pertes d’emplois de septembre freinent les discussions sur une hausse des taux  Le Canada Français",
+      "description": "Banque du Canada : nouvelle baisse de taux inattendue  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -321,26 +253,26 @@
       "category": "general"
     },
     {
+      "title": "La Banque du Canada défend l’indépendance de la Fed - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdG5yMS1wQ2NKZkdHRXczRV9sY0EyaGxRMjhvTkc4ejU4SVVDSlMyWjlPbGZzaERGZm80QnllMkJOTnZWMHhxZmxJazlLNXM3OGVNcmE5S1NQc2ZGUW1MVDVXRkgtM3dlc0FJejh4bTJQT1kwVmg0X3h6d1BKNFotY1BZWV8tRHVxenVYcEgtb3NRTUdTeGNHOE0wdnAzOFBiSDMw?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada défend l’indépendance de la Fed  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada nomme une première sous-gouverneure - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNYWRaOEptX0F5RzE5dmpEbml1dGlnMHFmTlJpSkdMSTVrcXFUeFBpd1NFNVh3ejRPN1BlY21wZzNGMnpteGI2Wmdnb0luU3IzYi1aWE9NU0tNcEF0RGlzazdaQVFZazZpaHpXejhNM1NOLW1tVnlzaEJObE5WNXlIVjJNRXYyM25qdUpETi0xR0lUVFBpRG5LckZubkRlWEc4MXBUR2dBYngzQWhqc3EwNjk3XzlZQ3Z1UG9ONXZ0MnZKd0d5WHRNbFAtT1J4NkJN?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada nomme une première sous-gouverneure  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Un sous-gouverneur de la Banque du Canada annonce sa retraite - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUU4ybEtSV0hCQWxidk5LLUNSYVlocURRZTBCNUFpdGdYX05zcVhLRmlJYnNLaFdoQWRWTlV6eWFfSlU2WjhsallyaElmV3NaaFNQX1lCdEFYUW9ibjIwUDJndWRPYVh5MzRUb3ZmY0Z4YnRQT2tBclpXVGp2M01rRk9WYnNuNFVaT0dLSm54bWhSSkdDbVowbVZJVkRTTnU5MDBRWVg2VFFLeDBLdmt3SllKS04yN09hdzI2WVo4TF91YWtWSEhFeXJ5V2k1SnNKenNyX0hrRUY?oc=5",
       "source": "news.google.com",
       "description": "Un sous-gouverneur de la Banque du Canada annonce sa retraite  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada cultive le verdissement du système financier - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWW1TdmZBX3pKQlhXWTRLb1JkUUpHcVI0SHlOc1NXYXNGWXNCMHF3dC1DVmo5UFRraHRseDZ5bGU0TjQ0d0RsU1FKS2RjSk1xc0k2Z0RQY2FVdVlhZHVDU2xKb0xLZE5vaDNqNVdUV2lEZG5nMG9weDFBYU5NbWRzaGJhcGlVT21HSFhNMHM5dlcwWUFLcW5ENEhQN25iVTdlU2lBaUx2Z1Nzb0dlTWZDczNsY3Exdw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada cultive le verdissement du système financier  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Un ancien gouverneur de la Banque du Canada à la tête du FMI? - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOODZoREs1cHVIYXJlYW5RVVhJSVNxRUxTWnZaRzVDMEtRWEtSSW5JdnFvWVVCNm5tMkVtSEl4dHdOUUpacWhqSE0tTy1DT091LXZPbUJrNkNnbk05MUNwVjVHUWh5eWhUNEZLWWR6T3ZNQzgxU3BTeE9IdTAwZ0VoX20xN1g5UG9rSDZ2NjROemVHUDF0aHBsbFJ1cmFiazZyUG00Z2xlZXNhVWxrWVFZaA?oc=5",
-      "source": "news.google.com",
-      "description": "Un ancien gouverneur de la Banque du Canada à la tête du FMI?  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -353,10 +285,34 @@
       "category": "general"
     },
     {
+      "title": "Un ancien gouverneur de la Banque du Canada à la tête du FMI? - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOODZoREs1cHVIYXJlYW5RVVhJSVNxRUxTWnZaRzVDMEtRWEtSSW5JdnFvWVVCNm5tMkVtSEl4dHdOUUpacWhqSE0tTy1DT091LXZPbUJrNkNnbk05MUNwVjVHUWh5eWhUNEZLWWR6T3ZNQzgxU3BTeE9IdTAwZ0VoX20xN1g5UG9rSDZ2NjROemVHUDF0aHBsbFJ1cmFiazZyUG00Z2xlZXNhVWxrWVFZaA?oc=5",
+      "source": "news.google.com",
+      "description": "Un ancien gouverneur de la Banque du Canada à la tête du FMI?  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Mandats prolongés au c.a. de la Banque du Canada - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOYWc5S1FndjZJVjZKMnY2STlsbjkxZHdGMy04Vzk2aFVTR0J1ZlpxVG51eHhSUWk1dHFUYm5jdzVwb0R2dUZUdHlxS2lCMUNQWUp2OUx0MmZNY2VGdXF1dktsaERIaWh5aUw4cWU0RllfRjVqX0Z1YVVsaVE4bEw5SVl6NGplTEJDckxYSV9hQ1FQeXNZVnlHWEVRaG5hVmlDX1JURDVITF9xdEVTYjVodnFJVWlKcnBGaWhRUUQxLS1GTE9QVVE?oc=5",
+      "source": "news.google.com",
+      "description": "Mandats prolongés au c.a. de la Banque du Canada  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Un nouveau gouverneur nommé à la Banque du Canada - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPVUNDWGM4NVVLSUJacWs3OVZQU01KcE9INmhrME5aV2k5ZFJRZEN4bzlqMkJKVGlQYzhUOVp1TGliU3Yxc0E5U3J3OGxUTWxsX2RaeHphdnJCd21ETmZWcVhmeU1panFJN1FQY0FUOW9YMTJKdS1lbHhMUEQ3Z2tRSFZOX3p3NTFTbmZwOExQWXNVcjFBbVJkME5YS1dzWUJxRnc?oc=5",
       "source": "news.google.com",
       "description": "Un nouveau gouverneur nommé à la Banque du Canada  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada nomme une sous-gouverneure externe - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRHFhckJkekp4ZUF6Q0FOVVNRc1Y2cEZfdFZtWmFIQlhrc2d5eHZpanBkN3hxNkQwNlUyS24xd2FlaWk4VWRXX3dwWGtLRHRfMGVtNEZhX1h2RkkzRHlFcjl3YWFVNWZlcENmeHk0Wmw5M19xQm0yZklVSGwxeTdraUdGcTJicVJzNWhsVDlIVUplemFGNEV0ZGhDeWJuZmQ5YkpGVTFwamhCQThmQlctZ0VQTkZCR3lTUEhqV0V5UGI5WkU1dTBsNWpzREZsd1k?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada nomme une sous-gouverneure externe  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -373,6 +329,22 @@
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVnRocEdRNjl6RExZaVpKMXlRb2dnb2dYODgtYmNCRGtaNUFEWFFrdnhSa2JwVUpzdGxtRkJqVkdwaWJOWHFGYkJWejllZVdsc0dZZTgtUnpfRmFuSzdrSldsc0lxcFAycmd6cHJSYy1SRmhxTWdIWGh4Qi1xUzdYcTRVUUZDRW9lVnpxcy1TTQ?oc=5",
       "source": "news.google.com",
       "description": "La BdC maintient son taux directeur  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Fed : troisième réduction de taux cette année - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQRDlmdW1ETE9OQVktc01weTRsbXV5Qkt1NFplaHRmYmxoUVdERl9wRjJBOTRWelZiTmhRb2NjS1RoR3VCQU14RXV5eWxrYXhDejdtWkpwMnVDazM0bWdlMEtnb0cyM2Z3cXh0NWw2VzJIT3pwR242YjhWOFkxQjFkYnBLNlhWbTFlN3hTZTBuUTVVX2djaHNNWXBR?oc=5",
+      "source": "news.google.com",
+      "description": "Fed : troisième réduction de taux cette année  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Ce que les pertes d’emploi de septembre laissent présager quant aux perspectives de la Banque du Canada en matière de taux d’intérêt - Morningstar",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPU0cxR2g4aW9RN3p3RE1nVTl3bkZqdWdaMV9yelhteFNxS1Mya19qcmZJTHg1emhybDFadEhCdmJaT0U4UVpVMk5KcGFXeDFvX2xpRTk5eHhJR3RnUng3OUpveXE3WTFoUEQ1ck5qdFJhaHNTRWZSODNDU2Z3dlRRQWNrdVRaVFF3XzAwcldqZi1xT2dIb01abU8yMlhhdEtneEFMeG56akNNQnZQcWZVWE5WMEVkbUdnRUZMRTdYOHhMOXhieU9NWUd0aGpmTGllbEFIMUFiN3lrT09lN1hCcFFHM0RORXVCTjY0dFFJRDBJeDVZYVo5dE1TR3VsQjRwdlE?oc=5",
+      "source": "news.google.com",
+      "description": "Ce que les pertes d’emploi de septembre laissent présager quant aux perspectives de la Banque du Canada en matière de taux d’intérêt  Morningstar",
       "cities": [],
       "category": "general"
     },
@@ -401,26 +373,18 @@
       "category": "general"
     },
     {
+      "title": "Les pertes d’emplois de septembre freinent les discussions sur une hausse des taux - Le Canada Français",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOLUtOUm04dXFNOXVVNjFSQVlYMGh0S1FpdmVBSUZZa045YUtCQW5Mc3ZtZ0NvMGdxRE0wWmM2Z1hsRDJJUTFwTjB4NmZmN254cXMxVkRuQmhubTZMSFlQU2RmSEpKeEpJWVRmLVlzUmhDWkdaUGhodkg1LWszN3N0Y1ltR21YSVo4cXJfSllWazlIYU9IS3c2dTFpVG1jT1RIUXIweGZ6RzBIeFhmaEZtR201WkY0S0lKcEFFSUk3ZkgxNjJpQ25jczgteVRMbVk?oc=5",
+      "source": "news.google.com",
+      "description": "Les pertes d’emplois de septembre freinent les discussions sur une hausse des taux  Le Canada Français",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Statistique Canada s’apprête à publier ses données sur l’emploi - Le Canada Français",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOEIxVkZwdzVnbWt0Z0k3Nkk2cGF5bmRZXzVLMm9SZDdFQ2JaVkQwNER3S2d2elRZd1lwZmFvQVhENFI2RUhIekdEMmNqMC0zcnpERjRUSkFEZDBqVWFHRldxVU13SkRzNC1PSDJscTRwNXpWeEQtVUI5cXdwcTFBNUc5cXVxZ28tYlVMYzh6NDhiUy1xcXJIV0VhSW5SZWozVzRwZ2RTVGQ2cVJSY0R3S0ZiWk0?oc=5",
       "source": "news.google.com",
       "description": "Statistique Canada s’apprête à publier ses données sur l’emploi  Le Canada Français",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Luc Vallée quitte Valeurs mobilières Banque Laurentienne - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZ2dCek10eUozeV9ZUEN0MVBXWXFObjEtVkMybnAzaU1jQjNKN2pNelg1LXhRVUdrMFRMS24zLUJUYkdoLXJRaTQwOGlBZUJqclpwN0szWUxQd3hNSUIycThzNmtaRXpaaUhWaGxfYkdobDdSRXFVNUg1eEd2OVZscGFZNFpfZVJTSkVMRXU3STJNSFBfdHg4U01MSmZBQ1lnQzNyUUZyRFl5Rlk?oc=5",
-      "source": "news.google.com",
-      "description": "Luc Vallée quitte Valeurs mobilières Banque Laurentienne  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Quelle banque canadienne offre le meilleur taux de change ? [Oct. 2026] - Knightsbridge Foreign Exchange",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPVTdQNEVkbmxJWTkxenRXeW5PWEtucTB6RVIyUlVEZ1VTRW9QSTJiWU9LM3VnNENrZHdxVDlQeWVRemQ0X3FOZERhQlRodWgxTzVEMm1QVVlxMDFPbDlEVVpESUptWlo0NEVMYzQtWEh6dnBQQ0s5eTJKVzU1YkpZbzZVeTFTOW5wRnc?oc=5",
-      "source": "news.google.com",
-      "description": "Quelle banque canadienne offre le meilleur taux de change ? [Oct. 2026]  Knightsbridge Foreign Exchange",
       "cities": [],
       "category": "general"
     },
@@ -441,6 +405,14 @@
       "category": "general"
     },
     {
+      "title": "La Banque du Canada devrait maintenir ses taux le 28 octobre, les risques liés à la croissance et à l’inflation persistant, selon TD - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUU5zTjRzX002UEZGVHdPNzFGLUZHc0RGamlMRzFucnJPTS1mcnBjaDV4czlIMUhveE9GNHgteWJwd0VrNXZxUTMxQ3podnA1bW84bW1ZOUJmUk1sMFNPTXRtWlpCVVlOUzNKbW1leW9UOHdmZ25vMWRCTHVuN1lrdE9obndFYkhtVEcxelotU1o0ekRiM1ZzanhHNXlNNkV2a3NaLUdtc2VRckpjR1hYdElidDNUNHhfNWFDb0VjeDlya3NXMG81SnBCam53Z0gzQ3g1U2o0MmN3dGRiU2dHLVBydHBSWWh5VFpUdnJSYw?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada devrait maintenir ses taux le 28 octobre, les risques liés à la croissance et à l’inflation persistant, selon TD  Zonebourse Suisse",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "Taux de chômage au Canada en septembre 2026 : aperçu du rapport sur l'emploi du 9 octobre - Admirals",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdGlRX1ZHaVZQLWxlTnk1aWg2cVlKYmI3NktTckh3YnI1djNzb1gwbV9nVUI4aEd5c2ppYTctX0pSTGxyYTEyZUNuNzBnekF4UG96YnliSXhkZ3A5cWJEZ0Z3My1BXzFoRVdMMEtZN0I5SGpkZll6OFpwYTh6T2lGZ2RjNTBDeTNTRS1hem40QkRZNzNkUWc?oc=5",
       "source": "news.google.com",
@@ -453,30 +425,6 @@
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1nVVVEY29uV1pUVHJ1eGZuYWpUeFUxZmFQYTJ5aWxOcG1aT1RIV1pxQkVpdjhJMS03MVFvaF8yZ2R3Qm5EMmlnMmY0NWtYU0k2Smh6UFNHX0NYZHJtbFZXRTd3?oc=5",
       "source": "news.google.com",
       "description": "Canada: le taux de chômage augmente à 6,5% en septembre  TradingView",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada présente l’orientation de sa politique monétaire pour l’économie canadienne - Traders Union",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOYU11NkQ2Q0JUb0NvNGFBTDQ4bVFvM0tLSFVaUUh0QVRkUHhaUnR5Uk9tTkxfRGF3MHlrUjdENS1LY0ZCY1lYUXg1eng5U1FjQmNHRldIVFVFN2hCRHhYVENiQU1TZzV6ZzAxWm9vTElockFaNnA1MUJ2WmJ3Q3E3SGJuUWk3dHZBOWlLODFnWVhleDllVTY4ZElVU24?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada présente l’orientation de sa politique monétaire pour l’économie canadienne  Traders Union",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada présente les priorités de sa politique monétaire pour l’économie canadienne - Traders Union",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdGxYRFR5R1N0R2hXQU1TcllubTU3aWozS2Q2dmNHODZZZ2xiVlg1Y2Y3UGtISDNid1BYa3RwRGZZVFpQTEpMX3I0NlhOSzVqZG5KSWxKUWZLbmswWHJSaXUzckNMMVl5Z1IwMHk0RzFIVHAxdXVoQVJRcDJvMUVJZDJ2bTA2MmN4UlNyekZxOUs5Q1RBTEN3eWo1MEthczl1?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada présente les priorités de sa politique monétaire pour l’économie canadienne  Traders Union",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Une enquête de la Banque du Canada signale un resserrement des conditions de prêt aux entreprises au Canada - Traders Union",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOYldhM3p6WEdWQnNLNjNqUDNiMFF4SDdJREQ5ZlNLT2oxdnhWb1Z3SEo5dFlHMm9fVmU0NERTTWtpdFJsTTl4Zkg4aXlzR3d5MXVPNHAwaWFNQ09WcUd4V0dFWXhvLS03MUZNZEozRmdra0c0WnNmX3RhYXFlYkF6OE42cVRlNFdta0NMeEMwUFpZTDFjWE5maU9xQQ?oc=5",
-      "source": "news.google.com",
-      "description": "Une enquête de la Banque du Canada signale un resserrement des conditions de prêt aux entreprises au Canada  Traders Union",
       "cities": [],
       "category": "general"
     }
@@ -533,5 +481,5 @@
     },
     "last_quarter": "septembre 2026"
   },
-  "last_update": "2026-10-12 21:32"
+  "last_update": "2026-10-13 19:45"
 }
