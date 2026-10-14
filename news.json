@@ -1,6 +1,30 @@
 {
   "news": [
     {
+      "title": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs",
+      "link": "https://apciq.ca/stats-t3-2026/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 14 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers. Au cours du 3e trimestre de 2026, 20 935 ventes résidentielles ont été réalisées par les courtiers immobiliers du Québec, soit 7 % de moins qu’à la même période en 2025.\nL’article L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Gatineau : plus de choix pour les acheteurs et moins de pression sur les prix",
+      "link": "https://apciq.ca/rmr-de-gatineau-plus-de-choix-pour-les-acheteurs-et-moins-de-pression-sur-les-prix/",
+      "source": "APCIQ",
+      "description": "Gatineau, le 14 octobre 2026 — La Chambre immobilière de l’Outaouais (CIO) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent les statistiques immobilières du troisième trimestre de 2026 pour la région métropolitaine de recensement (RMR) de Gatineau, établi à partir de la base de données Centris des courtiers immobiliers.\nL’article RMR de Gatineau : plus de choix pour les acheteurs et moins de pression sur les prix est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "RMR de Sherbrooke, Trois-Rivières et Drummondville : trois marchés  qui résistent au ralentissement observé ailleurs au Québec",
+      "link": "https://apciq.ca/rmr-de-sherbrooke-trois-rivieres-et-drummondville-trois-marches-qui-resistent-au-ralentissement-observe-ailleurs-au-quebec/",
+      "source": "APCIQ",
+      "description": "Le 14 octobre 2026 — La Chambre immobilière — Estrie — Mauricie — Centre du Québec (CIEMCQ) et l’Association professionnelle des courtiers immobiliers du Québec (APCIQ) présentent les statistiques immobilières du troisième trimestre de 2026 pour les régions métropolitaines de recensement (RMR) de Sherbrooke, Trois-Rivières et Drummondville, établies à partir de la base de données Centris des courtiers immobiliers.\nL’article RMR de Sherbrooke, Trois-Rivières et Drummondville : trois marchés  qui résistent au ralentissement observé ailleurs au Québec est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "RMR de Montréal et de Québec : la route vers un marché  plus équilibré se poursuit",
       "link": "https://apciq.ca/stats-septembre-2026-fr/",
       "source": "APCIQ",
@@ -63,54 +87,60 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur",
-      "link": "https://apciq.ca/marche-immobilier-la-rmr-de-montreal-poursuit-son-ralentissement-graduel-alors-que-quebec-maintient-sa-vigueur/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 3 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de juin 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Marché immobilier : La RMR de Montréal poursuit son ralentissement graduel alors que Québec maintient sa vigueur est apparu en premier sur APCIQ - Site web.",
+      "title": "Montréal | Le Quartier Molson érige sa première tour",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-10-14/montreal/le-quartier-molson-erige-sa-premiere-tour.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Vous l’avez peut-être remarqué : les entrepôts au pied de l’emblématique horloge Molson à Montréal ont maintenant laissé place à d’immenses chantiers de construction depuis déjà quelques semaines. Et la première tour résidentielle du groupe Montoni accueillera ses occupants dès l’été 2028.",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés",
-      "link": "https://apciq.ca/rmr-de-quebec-les-ventes-a-un-sommet-en-mai-grace-a-la-remontee-de-loffre-de-proprietes/",
-      "source": "APCIQ",
-      "description": "Québec, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Québec : les ventes à un sommet en mai grâce à la remontée de l’offre de propriétés est apparu en premier sur APCIQ - Site web.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue",
-      "link": "https://apciq.ca/rmr-de-montreal-la-baisse-graduelle-des-ventes-se-poursuit-et-la-pression-sur-les-prix-sattenue/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 4 juin 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de mai 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : la baisse graduelle des ventes se poursuit  et la pression sur les prix s’atténue est apparu en premier sur APCIQ - Site web.",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "Gazoduc Coastal GasLink | TC Énergie conclut un accord avec des Premières Nations",
-      "link": "https://www.lapresse.ca/affaires/2026-10-13/gazoduc-coastal-gaslink/tc-energie-conclut-un-accord-avec-des-premieres-nations.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Wall Street ouvre en baisse",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-10-14/wall-street-ouvre-en-baisse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "TC Énergie a conclu un accord d’investissement qui confère à cinq Premières Nations une participation économique dans le gazoduc Coastal GasLink, qui achemine du gaz naturel depuis le nord-est de la Colombie-Britannique jusqu’à l’usine et au terminal d’exportation de LNG Canada à Kitimat.",
+      "description": "La Bourse de New York a ouvert orientée à la baisse mercredi, minée par la publication d’un indice d’inflation supérieur aux attentes pour le mois de septembre, entraînant une remontée des taux obligataires.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Vie numérique | HomeView : la maison connectée d’Apple passe par Siri AI",
-      "link": "https://www.lapresse.ca/affaires/techno/2026-10-13/vie-numerique/homeview-la-maison-connectee-d-apple-passe-par-siri-ai.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "La valeur totale des permis de bâtir a augmenté en août",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-10-14/la-valeur-totale-des-permis-de-batir-a-augmente-en-aout.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Identification de chacun des membres d’une même famille. Commande vocale personnalisée propulsée par l’IA. Promesse d’un respect strict de la vie privée. Voilà les trois leviers sur lesquels mise Apple avec son tout nouveau HomeView, tout nouveau hub pour la maison connectée qui s’avère aussi le premier grand test pour le nouveau grand patron à Cupertino, John Ternus.",
+      "description": "La valeur totale des permis de bâtir délivrés au Canada en août a augmenté de 1,1 milliard par rapport au mois précédent, pour atteindre 13,6 milliards, grâce à la bonne santé du secteur résidentiel, selon Statistique Canada.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Geely lancera ses premiers véhicules électriques au Canada en 2027",
-      "link": "https://www.ledevoir.com/economie/1016486/geely-lancera-premiers-vehicules-electriques-canada-2027",
+      "title": "PME Monde | L’offensive internationale de Groupe Synetik",
+      "link": "https://www.lapresse.ca/affaires/portfolio/2026-10-14/pme-monde/l-offensive-internationale-de-groupe-synetik.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Fondatrice du Groupe Synetik, Caroline Saulnier revient tout juste d’un marathon de 10 jours en Europe. Objectif : faire connaître à l’international le petit nouveau de la famille, le Traxio, qui permet aux enfants de préparer leur colonne vertébrale à une intervention chirurgicale complexe.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "États-Unis | L’inflation pèse toujours plus sur les ménages à l’approche des élections de mi-mandat",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-10-14/etats-unis/l-inflation-pese-toujours-plus-sur-les-menages-a-l-approche-des-elections-de-mi-mandat.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "L’inflation continue de peser sur les ménages américains, alors que l’énergie fait toujours s’accélérer l’indice des prix à la consommation dans un contexte où le pouvoir d’achat s’est imposé comme l’un des thèmes majeurs de la campagne pour les élections de mi-mandat, prévues début novembre.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’inflation pèse toujours plus sur les ménages américains à l’approche des élections",
+      "link": "https://www.ledevoir.com/economie/1016729/inflation-pese-toujours-plus-menages-americains-approche-elections",
       "source": "Le Devoir",
-      "description": "Le constructeur chinois n’a pas dévoilé quels modèles seront d’abord commercialisés, ni leur prix de vente.",
+      "description": "Tiré par les prix de l’énergie, l’indice des prix à la consommation a atteint 3,7% sur un an en septembre.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le FMI relève sa prévision 2026 de croissance pour l’économie mondiale",
+      "link": "https://www.ledevoir.com/economie/1016642/fmi-releve-prevision-2026-croissance-economie-mondiale",
+      "source": "Le Devoir",
+      "description": "«Cette résilience est mise à rude épreuve», avertit toutefois la cheffe économiste du FMI.",
       "cities": [],
       "category": "general"
     },
@@ -125,18 +155,44 @@
       "category": "local"
     },
     {
-      "title": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMmxZU2gwN0ZkZVZ4N0lWVm12V3pRVHQ0LWpyM2F0TWhSOVM5Y1FyZTN3SGduc0ppVjJOMmpvZVBVRXFsSHFEUWtJUzZwSHhHeXMybnF2RDVkdmhLTDh0QXB5REIzbWI5MF85ZDBRWkxoa21WcDB4Q0ZySmtJbHZCaFpTTHFMNlc2dWNWbFJHT2lxbjNyT3RsR29zUXgwNWJ5Y09tZ1JpX1lEZXFlRFBsOVZzSFJ3WGNCdXdLQQ?oc=5",
+      "title": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQVXpSdHczdGlsRnBGNERtTUdKNUlsUU1VNGRjLTdIbXlRWVZSMEJhdnY1UTRISTQyakFpQmhQRW50d3Exc1g2d1g4TmtpT3hfVENxejBxZk5BOTB4bEUyOURyMkFEaWU1eU1YQ3BtRU9RbFBaclc4QWN4eWhWTXVEaVpIMDRIaVRzLUg0a3gwSkU4eVFFNU1kVTg2RDVUX0dBVFc3c1VCd2lFSFlQMUNESEZBVEl4THhfUDZoQXZNRmhMTFZ4Y3dodEJTWTJHMGdhaWMwd2RyNHRTVUtSSTBVQ3pybnp1LWJrNi1zcXMtanIydFp0ZHpJajJJVVBIV0ZNdDhuc2FxdFJsZDVsbl92UXRJcXlXOUFyVUtHMGZyOE9RbF8wSUFuaGcyUnJSbGVuYWQyUTR5ZGdaRUpE?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier: les acheteurs sont prêts à faire des compromis, selon Re/Max  Noovo Info",
+      "description": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs  Le Soleil",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier - QUB radio",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPU1o0U2s1RDBTTS1iUERKaklVZklpUnFlWjNUbDIwWU85REU1WDc2NWw2VVAtbWJ2Tk45MHlabmpaZm4ybmJXUC1Tcjgxd3QtU2VTSzVVRnJYT1VFZ3g2VnZYOF9WVE1Gak44ZWxGWVdlMWduTkJ0NGRmbnZOVGtoQnR1NnFwMG1WOExRdmU2YUhKRmQtMFNGc0p5ZjZEV2NaWW04UXR4WHJzTzNpTEx2ZGVlRTBJNjQ0MnlodV9XRHJsWU5BZGxlY3Bn?oc=5",
+      "title": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier - Journal de Québec",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWENGR3MtWlRmczh1QTVOYUliWjFkWnpyUW1xU0RDaE83eEJmTEIweFprS09EOE9EMXpNckZ2WG9RZVB2NVktVmEzdDM4bHd2dG9MdWpRR2tDbExMdXpkc2I2N3N5eVoybnZNdnlqNzIyelBZOUwyNnBxMmFWWjdEUVM5RmtZUDhyT2hJTUZreG1tVlE3QmdydV9Fd0JfOE5HeTRvb1lKSUtRREgwbllFMjYzOW9UQkZkTXptZzFTVWoxUXlPMnk1M0xOZm0tTXRD?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier  QUB radio",
+      "description": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier  Journal de Québec",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec - Noovo Info",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZFVWVGRvcUtUd3FBZllGdUhzSGZEN0tRU0lWM1FxOE14Zy0tcG5UWjc1WFhfblVScWRlaXZFTVBzQ0JzbWxhOTMtN2ZKUGVEMXFpUnRDNFlfdHpfenRCVk9QU3c1X0x4TGFIQVV1QUNPZGZoQVdNLXhIYnRRREVFRkgzQ05PUkFxV0NHQTFHdGR3MF9ETGQyVzV5U1JRaEpJdkpfeXhsY3U2d0VGRUlzYUFFQmFBMFJkbUpJSE12Nzc3Vk1YUzBvaGUxSQ?oc=5",
+      "source": "news.google.com",
+      "description": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec  Noovo Info",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Amendes salées et suspension pour un courtier de Val-d’Or - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNlU0OXl1QjNZclZyamtnMmZGV3NPbXpRUWZEV1R4aG1ibi1hTGdYWWo2WGUxQmFmMFJjb0hrQUJJUUZ1WE1CVC1fRjhfSzBKUkxHS3Qta1hYblRvaFpieUpYMHIxaVptc0hmMFR1N2lVUGRZXzhpc2czLWNhOVlZTTFoVnozVG10Z0dObVBlUEFyRDA?oc=5",
+      "source": "news.google.com",
+      "description": "Amendes salées et suspension pour un courtier de Val-d’Or  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Marché immobilier au Canada : prix et tendances 2026 - Expatica",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQYVR5eWNueEkwTVBIVlR2dnVTRmRmQjhuZFM4dGMtc3o0YWhpRlhZVDBTa3NicGowY2xpTmlSMlRyR0lNZWpJV2tsa1dxQ1VwSzY2VENVTGU4TjhnODR3M3R6V3Q4Rzc4cVJpSlhFeHdDbm1yQ1h0WWFBdkhrblE1ekNuWFVaZm5VUGhmcVI1YmE2Qi00ck5ia1F3T1RLMVRXMkY3TVJyYmltQQ?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier au Canada : prix et tendances 2026  Expatica",
       "cities": [],
       "category": "general"
     },
@@ -149,10 +205,10 @@
       "category": "general"
     },
     {
-      "title": "Immobilier Québec 2026 : le marché se rééquilibre - Le Revenu",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcWp5dE8tWmVtd25WcnBLbW5CbVlrenNsQW93QWM5cnhpaWtjSmFVajFfbjM2LUtSckRRR0t3c2xtbEpMS2FBczNEMXF3YzlkR25BQnNhS1JBOUZmeFJ3eFZCT0t0VGlaVnYtOUpOb0xMcHNYbkFzTFBCN0lFclh0SWpSMWRsOUZlRW9GYnNsZ1laMHJfdjBnbVRXdlJvX0YtM0dQSmtQWmZoZV9BcEphN1ZsSlk?oc=5",
+      "title": "Deux ans de baisse au Canada | Les loyers moyens demandés ont reculé de 4,2 % en septembre - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPT3ktRkYzVUFERTlSMFQ3MldnYk1iUzYyUGxCZGlrdGFZSlF4ZG5wdEVQbThOc1J4QXhzaFlaNFJMeDFhYkR1MDdJMjVCNlJTVDdhMVZKaE9kUzBEbWhTMVRzM3U3dW50MDJ6c2w1V1NNbDZTVUN2XzlUQkU3QUpzNWhhbU5lcHJuanBhcjRVWjdZbDIzWU1yTDhNRW1INXFRVHcxVVVMNGlvbGU2TG9pTmtHT1F6YXVCM3d6R25IY1k2cTFUM1pIc3ItakpNTFBkLWU1ZkJaaEkzSUhfaVNLRzlUUkZheXc?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier Québec 2026 : le marché se rééquilibre  Le Revenu",
+      "description": "Deux ans de baisse au Canada | Les loyers moyens demandés ont reculé de 4,2 % en septembre  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -165,10 +221,10 @@
       "category": "general"
     },
     {
-      "title": "Trouver les meilleurs taux hypothécaires variables sur 5 ans au Canada - Ratehub.ca",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Telh1M2E2VWFjNWtjcGRGTWJ3bjh3MEpWam5jdnl5bl9HUFJyQXQyZGt0U3VOSHFncGF4dVdvQTY3OXlqWVR0SEhrc0R0X3VNV05vOUY2WXFrdld3N0FvQg?oc=5",
+      "title": "Les Québécois se distinguent par leur manque d’intérêt envers les artistes nationaux - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNaGhUWS1idzZvREF0VG5JV2w4eGp5d1FHaG1OSWd1TGRYcjNxT2MySjYybEJ6VHVWLV9GVVMtWEdfR1RtSnY5NmNlc1ZQU2p1S1M3MklkQjU5TEF1aDZlZXpMQ1dvS1RsdEUyRlU0bzgyMUJFRDFTY3BjY19sYjVpbWR1eGxsVHQwTTB6WWdnQVRaN2VrUjk5cmJTVDFCeTl5MVpjNjlIZ0ZRcjBoTm9GYmFrWXdYR2NmUEVjdU96RzhLZDNMTDNIMXlvSGtfRkNpTzdadVJGY2FwOWlERHdsN0JHNkNSVldObnluN28tSEhaMlo3LWd6OG41SWNGZUJDcVlJ?oc=5",
       "source": "news.google.com",
-      "description": "Trouver les meilleurs taux hypothécaires variables sur 5 ans au Canada  Ratehub.ca",
+      "description": "Les Québécois se distinguent par leur manque d’intérêt envers les artistes nationaux  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -177,14 +233,6 @@
       "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE81WFEyeTQwbzliWnltLWdkLTFaR0xYY2w5QlRwWDlZREpaQkhJOS1Xd1lXa21fT2djWjlqVDNGc3dpQQ?oc=5",
       "source": "news.google.com",
       "description": "Maison à vendre Lac-Beauport #maisonavendre #immobilierquebec #centris  YouTube",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada - Ratehub.ca",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBGeXFqckdIelJ2aVFNYUVYdFU1RnprYkppVzkxd0dMSHRaOW9xbzJiRjhvbjdoM3lWV05zYndMdGF4OHl2WTFnU0p6aE9GeEJ3bE9Db2w0bVRYM3dwc2p3NWw0eFVLWU0taWFCZDhLaw?oc=5",
-      "source": "news.google.com",
-      "description": "Trouver les meilleurs taux hypothécaires fixes sur 5 ans au Canada  Ratehub.ca",
       "cities": [],
       "category": "general"
     },
@@ -325,6 +373,14 @@
       "category": "general"
     },
     {
+      "title": "Monique Jérôme-Forget : mandat renouvelé au C.A. de la Banque du Canada - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPM1JQZ2ZfdGdXbzNWT3dsUTVWUlZBSC1ZRmptbmZnaHI4Z1E5QXNnZHRJVklCdnlINUZzOTFWZXJhQjhXeVhMOWJRd1k2WDUxUC1yelF6VGFGZVhqOUcyV1k0SUdnemxxc3k2anJmUEM0ZHY4c2NMRGJOUDhpOXk1bTFsR2VMM3dPZ1M1eDNpQ18wZ2FaZVhUeHJ5U0FibUNvSzBqWi1kTExEcjBUTWgyM1Y5eHliVTJjOHdv?oc=5",
+      "source": "news.google.com",
+      "description": "Monique Jérôme-Forget : mandat renouvelé au C.A. de la Banque du Canada  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La BdC maintient son taux directeur - Finance et Investissement",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVnRocEdRNjl6RExZaVpKMXlRb2dnb2dYODgtYmNCRGtaNUFEWFFrdnhSa2JwVUpzdGxtRkJqVkdwaWJOWHFGYkJWejllZVdsc0dZZTgtUnpfRmFuSzdrSldsc0lxcFAycmd6cHJSYy1SRmhxTWdIWGh4Qi1xUzdYcTRVUUZDRW9lVnpxcy1TTQ?oc=5",
       "source": "news.google.com",
@@ -345,14 +401,6 @@
       "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPU0cxR2g4aW9RN3p3RE1nVTl3bkZqdWdaMV9yelhteFNxS1Mya19qcmZJTHg1emhybDFadEhCdmJaT0U4UVpVMk5KcGFXeDFvX2xpRTk5eHhJR3RnUng3OUpveXE3WTFoUEQ1ck5qdFJhaHNTRWZSODNDU2Z3dlRRQWNrdVRaVFF3XzAwcldqZi1xT2dIb01abU8yMlhhdEtneEFMeG56akNNQnZQcWZVWE5WMEVkbUdnRUZMRTdYOHhMOXhieU9NWUd0aGpmTGllbEFIMUFiN3lrT09lN1hCcFFHM0RORXVCTjY0dFFJRDBJeDVZYVo5dE1TR3VsQjRwdlE?oc=5",
       "source": "news.google.com",
       "description": "Ce que les pertes d’emploi de septembre laissent présager quant aux perspectives de la Banque du Canada en matière de taux d’intérêt  Morningstar",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’inflation, toujours élevée, pourrait annoncer une hausse des taux d’intérêt - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQMF9sS0FIOGpaeFdzUUQ3OXljSl9YejJ3YWJWcXRROU01VExRQllNVjA5aVIwd0ROb3R6d1lvS1lFbEs3LWxCamJQUEVoYktXV1VVZ3lydFhQMVM5elF0SU9NZGFuWWZsMldkUVZNc3hfN0hUM01IT09CNG41TmtHVDNNUXkxUFpYS2NiVWQwV25EZU85aGRGLWVMaU5FX3BVOHNOQXBnOGVmdW4wVlNhcXQ2MjRTNTQtS1VnTjBZR2xBdw?oc=5",
-      "source": "news.google.com",
-      "description": "L’inflation, toujours élevée, pourrait annoncer une hausse des taux d’intérêt  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -481,5 +529,5 @@
     },
     "last_quarter": "septembre 2026"
   },
-  "last_update": "2026-10-13 19:45"
+  "last_update": "2026-10-14 17:46"
 }
