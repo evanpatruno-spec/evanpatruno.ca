@@ -1,6 +1,14 @@
 {
   "news": [
     {
+      "title": "L’APCIQ conclut une entente avec le Bureau de la concurrence  concernant le partage des données immobilières",
+      "link": "https://apciq.ca/lapciq-conclut-une-entente-avec-le-bureau-de-la-concurrence-concernant-le-partage-des-donnees-immobilieres/",
+      "source": "APCIQ",
+      "description": "L’Île-des-Sœurs, le 15 octobre 2026 – L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) annonce avoir conclu une entente avec le Bureau de la concurrence concernant le partage des données immobilières.\nL’article L’APCIQ conclut une entente avec le Bureau de la concurrence  concernant le partage des données immobilières est apparu en premier sur APCIQ - Site web.",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs",
       "link": "https://apciq.ca/stats-t3-2026/",
       "source": "APCIQ",
@@ -79,60 +87,52 @@
       "category": "local"
     },
     {
-      "title": "Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre",
-      "link": "https://apciq.ca/stats-2e-trimestre-2026/",
-      "source": "APCIQ",
-      "description": "L’Île-des-Sœurs, le 14 juillet 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article Le marché immobilier québécois confirme  un rééquilibrage graduel au 2e trimestre est apparu en premier sur APCIQ - Site web.",
+      "title": "Plus de données immobilières bientôt accessibles",
+      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-10-15/plus-de-donnees-immobilieres-bientot-accessibles.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Les courtiers auront dorénavant accès à encore plus de données sur les transactions immobilières au Québec, un changement majeur annoncé jeudi et dont pourront profiter leurs clients.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Montréal | Le Quartier Molson érige sa première tour",
-      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-10-14/montreal/le-quartier-molson-erige-sa-premiere-tour.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Secteur de la fabrication | Les ventes ont progressé de 1,5 % en août",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-10-15/secteur-de-la-fabrication/les-ventes-ont-progresse-de-1-5-en-aout.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Vous l’avez peut-être remarqué : les entrepôts au pied de l’emblématique horloge Molson à Montréal ont maintenant laissé place à d’immenses chantiers de construction depuis déjà quelques semaines. Et la première tour résidentielle du groupe Montoni accueillera ses occupants dès l’été 2028.",
+      "description": "Statistique Canada rapporte jeudi que les ventes du secteur de la fabrication ont progressé de 1,5 % en août, pour atteindre 79,9 milliards, notamment grâce aux bons résultats des sous-secteurs de la transformation des métaux et de la fabrication de produits chimiques.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Dette américaine | Le facteur inquiétant derrière la hausse des taux obligataires",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-10-15/dette-americaine/le-facteur-inquietant-derriere-la-hausse-des-taux-obligataires.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Jusqu’à récemment, les analystes attribuaient une grande partie de la hausse des rendements des bons du Trésor américain en 2026 aux pressions inflationnistes découlant de la guerre en Iran et à l’optimisme face au déploiement des infrastructures d’intelligence artificielle (IA).",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Aluminium | Une structure d’aluminium pour bâtir autrement",
+      "link": "https://www.lapresse.ca/affaires/portfolio/2026-10-15/aluminium/une-structure-d-aluminium-pour-batir-autrement.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Qu’ont en commun un CPE au Nunavut, des maisons modulaires à Manawan, dans Lanaudière, et un immeuble multiplex dans les Laurentides ? Tous sont construits à partir d’une structure d’aluminium développée par la PME ACAL System.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec",
+      "link": "https://www.ledevoir.com/economie/1017020/ventes-proprietes-residentielles-sont-baisse-montreal-quebec",
+      "source": "Le Devoir",
+      "description": "L’abordabilité continue de se détériorer, notamment en raison du contexte économique et géopolitique.",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Wall Street ouvre en baisse",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-10-14/wall-street-ouvre-en-baisse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "La Bourse de New York a ouvert orientée à la baisse mercredi, minée par la publication d’un indice d’inflation supérieur aux attentes pour le mois de septembre, entraînant une remontée des taux obligataires.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La valeur totale des permis de bâtir a augmenté en août",
-      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-10-14/la-valeur-totale-des-permis-de-batir-a-augmente-en-aout.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "La valeur totale des permis de bâtir délivrés au Canada en août a augmenté de 1,1 milliard par rapport au mois précédent, pour atteindre 13,6 milliards, grâce à la bonne santé du secteur résidentiel, selon Statistique Canada.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "PME Monde | L’offensive internationale de Groupe Synetik",
-      "link": "https://www.lapresse.ca/affaires/portfolio/2026-10-14/pme-monde/l-offensive-internationale-de-groupe-synetik.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Fondatrice du Groupe Synetik, Caroline Saulnier revient tout juste d’un marathon de 10 jours en Europe. Objectif : faire connaître à l’international le petit nouveau de la famille, le Traxio, qui permet aux enfants de préparer leur colonne vertébrale à une intervention chirurgicale complexe.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "États-Unis | L’inflation pèse toujours plus sur les ménages à l’approche des élections de mi-mandat",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-10-14/etats-unis/l-inflation-pese-toujours-plus-sur-les-menages-a-l-approche-des-elections-de-mi-mandat.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "L’inflation continue de peser sur les ménages américains, alors que l’énergie fait toujours s’accélérer l’indice des prix à la consommation dans un contexte où le pouvoir d’achat s’est imposé comme l’un des thèmes majeurs de la campagne pour les élections de mi-mandat, prévues début novembre.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’inflation pèse toujours plus sur les ménages américains à l’approche des élections",
+      "title": "L’inflation américaine s’accélère à l’approche des élections",
       "link": "https://www.ledevoir.com/economie/1016729/inflation-pese-toujours-plus-menages-americains-approche-elections",
       "source": "Le Devoir",
-      "description": "Tiré par les prix de l’énergie, l’indice des prix à la consommation a atteint 3,7% sur un an en septembre.",
+      "description": "Tiré par les prix de l’énergie, l’indice des prix à la consommation a atteint 3,7 % sur un an en septembre.",
       "cities": [],
       "category": "general"
     },
@@ -145,36 +145,26 @@
       "category": "general"
     },
     {
-      "title": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOdzBpbmJoZzFQdnVCdWRodmtIZ0x4OTR3XzVJREpMa1cweTJ6NjZSNmhVNWItdkZ4WHhFRzlyalg1T0Z5ek1jaUVmTWlDY2ZXXzZVcF9EQ1loLTZFVGhKQy1YcE5iczdDb29VLVo3WlRhOFhrY2hiYTlxMnE4TnpwM2F1OGlCOTYzRW0wVlRlOGwwVFM5VkRTdW1nN2U0N2hna2I0a1FCcTdJLW9OM1VZajFuX2ZnTjg3cFBDNHNJVTVYMWswblNFbmkydlNCVWNNcGNBc2RWQnVWOE9MUElyaHR3?oc=5",
+      "title": "Le marché immobilier de la région de Québec connaît un ralentissement - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNUdVRjhtZ1JRbkY5N193Vlp6cmt1c3czMVZwYkFaVEFaRThBMFBpOG9fdHQzTWxKaFJ3bXcxQTFSRUZtV3hzS1lZWEdaM1NBSF83c05qczl1d3o0RzYtcXJrSzJ5cjFuai1UeGxxSlUwb0tRSEVLRXV2emkydUowZmUyQlA1eHF6WDRNOTV2V2c5RDFQUWlBSExfT1pXWjd6VGZ2MDQ0UHpZTm1w?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier résidentiel | Le Grand Montréal s’apprête à devenir un marché d’acheteurs  La Presse",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
-      "title": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs - Le Soleil",
-      "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQVXpSdHczdGlsRnBGNERtTUdKNUlsUU1VNGRjLTdIbXlRWVZSMEJhdnY1UTRISTQyakFpQmhQRW50d3Exc1g2d1g4TmtpT3hfVENxejBxZk5BOTB4bEUyOURyMkFEaWU1eU1YQ3BtRU9RbFBaclc4QWN4eWhWTXVEaVpIMDRIaVRzLUg0a3gwSkU4eVFFNU1kVTg2RDVUX0dBVFc3c1VCd2lFSFlQMUNESEZBVEl4THhfUDZoQXZNRmhMTFZ4Y3dodEJTWTJHMGdhaWMwd2RyNHRTVUtSSTBVQ3pybnp1LWJrNi1zcXMtanIydFp0ZHpJajJJVVBIV0ZNdDhuc2FxdFJsZDVsbl92UXRJcXlXOUFyVUtHMGZyOE9RbF8wSUFuaGcyUnJSbGVuYWQyUTR5ZGdaRUpE?oc=5",
-      "source": "news.google.com",
-      "description": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs  Le Soleil",
+      "description": "Le marché immobilier de la région de Québec connaît un ralentissement  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWENGR3MtWlRmczh1QTVOYUliWjFkWnpyUW1xU0RDaE83eEJmTEIweFprS09EOE9EMXpNckZ2WG9RZVB2NVktVmEzdDM4bHd2dG9MdWpRR2tDbExMdXpkc2I2N3N5eVoybnZNdnlqNzIyelBZOUwyNnBxMmFWWjdEUVM5RmtZUDhyT2hJTUZreG1tVlE3QmdydV9Fd0JfOE5HeTRvb1lKSUtRREgwbllFMjYzOW9UQkZkTXptZzFTVWoxUXlPMnk1M0xOZm0tTXRD?oc=5",
+      "title": "La prudence gagne le marché immobilier de Québec - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNLURZbEwtcHVNVng1V28wUXU2Tk5YOURmT0RheV9PU0dJelJ3WlY0OXdnR0dkVm5NSWw4ZHkzRU9mdmViY1N6ZGV0RXM0Q2FRMmNybjFFYUNHSWt4VjhHOG5vNGhTYjQtbElvam93UTVPd0hOY1BWc1BHcHpkVVotMWRoUGJkVThlTzVEM3lFTW9PQVB4Y0VwOG5xNE8ybnBEbGpaZk95THBhcVh5cm51a0dEQkVLRmVwQnFnN2pR?oc=5",
       "source": "news.google.com",
-      "description": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier  Journal de Québec",
+      "description": "La prudence gagne le marché immobilier de Québec  Le Soleil",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec - Noovo Info",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZFVWVGRvcUtUd3FBZllGdUhzSGZEN0tRU0lWM1FxOE14Zy0tcG5UWjc1WFhfblVScWRlaXZFTVBzQ0JzbWxhOTMtN2ZKUGVEMXFpUnRDNFlfdHpfenRCVk9QU3c1X0x4TGFIQVV1QUNPZGZoQVdNLXhIYnRRREVFRkgzQ05PUkFxV0NHQTFHdGR3MF9ETGQyVzV5U1JRaEpJdkpfeXhsY3U2d0VGRUlzYUFFQmFBMFJkbUpJSE12Nzc3Vk1YUzBvaGUxSQ?oc=5",
+      "title": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec - Le Devoir",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUDFRcnJrSmg3UGl6V3VaVVVCUXNVeGxuQjNrc1ZwVlRQQWVXaFlMSktFZmpTS0dKQ0tYYVM4TGs3QVJGR2tNbzZ4RzZOYXRNWkpvdHBEWTZoMUpkS0xqeFgxaEExNEpDRlBkdzhBOUtyUV9VaGlITF8wWERIWGRPTzI5YUs5UU5razRwNkl0bFVIVVZGN1BzNHAxYUpWNmo5X29DZQ?oc=5",
       "source": "news.google.com",
-      "description": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec  Noovo Info",
+      "description": "Les ventes de propriétés résidentielles sont en baisse à Montréal et au Québec  Le Devoir",
       "cities": [
         "montreal"
       ],
@@ -189,10 +179,62 @@
       "category": "general"
     },
     {
+      "title": "Le marché immobilier en transition - Le Peuple Lotbinière",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1rOVVmM2R1bVBjR0ZHTk1sREJCbTgyZTFacHZYWUNaeEoyMDdYNWo5XzFLM3BQVXp0N3pzemZGa1pnVkxIVTdMSU1La29IVGR4cVo5ekpkeFZFdnAyaHhkRVE0VU1hLWY3ckNhV3Y4X2VoUjQ?oc=5",
+      "source": "news.google.com",
+      "description": "Le marché immobilier en transition  Le Peuple Lotbinière",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier - QUB radio",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPU1o0U2s1RDBTTS1iUERKaklVZklpUnFlWjNUbDIwWU85REU1WDc2NWw2VVAtbWJ2Tk45MHlabmpaZm4ybmJXUC1Tcjgxd3QtU2VTSzVVRnJYT1VFZ3g2VnZYOF9WVE1Gak44ZWxGWVdlMWduTkJ0NGRmbnZOVGtoQnR1NnFwMG1WOExRdmU2YUhKRmQtMFNGc0p5ZjZEV2NaWW04UXR4WHJzTzNpTEx2ZGVlRTBJNjQ0MnlodV9XRHJsWU5BZGxlY3Bn?oc=5",
+      "source": "news.google.com",
+      "description": "Immobilier: ne vous fiez pas uniquement au prix payé par le propriétaire, prévient un courtier  QUB radio",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le marché immobilier ralentit à Montréal et c'est une bonne nouvelle pour les acheteurs - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1oQUZXOWlZMktsSjdnUDYwNzNmVHVoemdMQTBQVU9ZSjRYd0tWU0lsMHBkeEJWbjVSQU82UlJ3Mm9hVy1GaUNKb1dhczBnM3gyWk9KWUkzSUl3dG9JVXBaQndlTUhNX1ZXd3BXZVppcFpWbGk4eFAzTzRGUXY?oc=5",
+      "source": "news.google.com",
+      "description": "Le marché immobilier ralentit à Montréal et c'est une bonne nouvelle pour les acheteurs  Narcity",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier | Les ventes de maison en baisse dans les Laurentides - CIME 103.9",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPbVI0c19IY3lWbGk5Q3ZXX1h1Zjhnb3Z1NEttajd2SlNzc3BjSG9OVWVtdld3enBsc0JtMkFUUEVKQ2ZhY2x4THNhSElwREZIak1Nb2hWcEV0QVBIbEZDZVlhM2gtbVQ4UWJKZkpkSFlVMTNpVjFad05zUm1Iek5NV294VTdDMVFiTUN1WjNwVEhmdHZmelB4RnM2VWQ?oc=5",
+      "source": "news.google.com",
+      "description": "Marché immobilier | Les ventes de maison en baisse dans les Laurentides  CIME 103.9",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Condos et maisons à Montréal | Immobilier: «Ce n'est pas vrai que ça monte sans arrêt en ce moment, ça stagne - 98.5 Montréal",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUWREaHpXeEt4cjM0blpKTnhjUllOLUcyQjZCaXpiYU1KUS00YzZlQzBpcFZGZFMwYU9CM2lHNU9td1UteU1meGRhSXV6UElSYzljTnVGY2V3emJtZFhlY1QzckFvQmpKU1JZMkw4VGZ2MUNLWUpWclhTdl8wTEFlaGlBMnVpQVJucVNaakh3dmVCU3NzZFlLeThMY2dnNzlELW9SN3hiQ1VDMlZkTWc?oc=5",
+      "source": "news.google.com",
+      "description": "Condos et maisons à Montréal | Immobilier: «Ce n'est pas vrai que ça monte sans arrêt en ce moment, ça stagne  98.5 Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
       "title": "Marché immobilier au Canada : prix et tendances 2026 - Expatica",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQYVR5eWNueEkwTVBIVlR2dnVTRmRmQjhuZFM4dGMtc3o0YWhpRlhZVDBTa3NicGowY2xpTmlSMlRyR0lNZWpJV2tsa1dxQ1VwSzY2VENVTGU4TjhnODR3M3R6V3Q4Rzc4cVJpSlhFeHdDbm1yQ1h0WWFBdkhrblE1ekNuWFVaZm5VUGhmcVI1YmE2Qi00ck5ia1F3T1RLMVRXMkY3TVJyYmltQQ?oc=5",
       "source": "news.google.com",
       "description": "Marché immobilier au Canada : prix et tendances 2026  Expatica",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Au Québec, renouveler son prêt est presque aussi stressant qu’acheter : RBC - Canadian Mortgage Trends",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxON2gzbjQ3VHVhWkZsN3hnSUJySFJENUUxb3ZXbHRQZi12dVNvcEpfTkp1MkxfZlh2dFlDVURJRXhWUTJrY1BaZ1Eta3VwaVFUWS1TMWdMOTRVcmc5SVBCcmJXbDFPYnZzMW1Hend6elFTR0hzNDJRWVE2YXV4d1ppRGU2WlBPLW91RjFoMFgzdXRicGYzbGd1Rzh2MVFydUlaa29LNkJpWDU0eHNNbzJGNTlNLVVIRmlhYm9DVEdGcw?oc=5",
+      "source": "news.google.com",
+      "description": "Au Québec, renouveler son prêt est presque aussi stressant qu’acheter : RBC  Canadian Mortgage Trends",
       "cities": [],
       "category": "general"
     },
@@ -205,26 +247,52 @@
       "category": "general"
     },
     {
-      "title": "Deux ans de baisse au Canada | Les loyers moyens demandés ont reculé de 4,2 % en septembre - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPT3ktRkYzVUFERTlSMFQ3MldnYk1iUzYyUGxCZGlrdGFZSlF4ZG5wdEVQbThOc1J4QXhzaFlaNFJMeDFhYkR1MDdJMjVCNlJTVDdhMVZKaE9kUzBEbWhTMVRzM3U3dW50MDJ6c2w1V1NNbDZTVUN2XzlUQkU3QUpzNWhhbU5lcHJuanBhcjRVWjdZbDIzWU1yTDhNRW1INXFRVHcxVVVMNGlvbGU2TG9pTmtHT1F6YXVCM3d6R25IY1k2cTFUM1pIc3ItakpNTFBkLWU1ZkJaaEkzSUhfaVNLRzlUUkZheXc?oc=5",
+      "title": "L'APCIQ conclut une entente avec le Bureau de la concurrence concernant le partage des données immobilières - Lelezard",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOLXRib25Eby1ETVR1cEZETFFBRkJSSmdnM3lXcU1oVDZBTm9LV1k3bkl2ZGR2OHJBaDFyOWlkTmJvOG80M0ZMLXd4a2RzNWtxM0puNkJ0OEU5Mm5FcUxmanlHa3FiVzlIZmZVV2Z6SkJ4aldXTmpmZ3U0TENLdk5UWVU5WWxtZVUwa3hzX0hwWVpJZ2NaMVpScU94cVlHTUJlVHgwT291eXJWZ3ZvdWNSdHVvYnAxUVZhRUlsc2t6SGVia19nQUNWWDBoVHJjZWJra016SGZ3aGdPR29o?oc=5",
       "source": "news.google.com",
-      "description": "Deux ans de baisse au Canada | Les loyers moyens demandés ont reculé de 4,2 % en septembre  La Presse",
+      "description": "L'APCIQ conclut une entente avec le Bureau de la concurrence concernant le partage des données immobilières  Lelezard",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Après une longue gestation, des condos de luxe enfin lancés à Sillery - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSDdmN25BcF82amFoS3I1cXp4SFdpR2NLMXVFQndJQUsyRnZoWEFzaUdKNDR6SXVreHI3bjZNSUoybHlXcnlfdHdpN19IZ1FtQkF4a1MweDItNDRockt6RmFkc20yelhyTm5TNXRla2FwT2tIZ3pXeExKTmJLSXFyT1p3YUVFbFRReFUzVHVNMVpiS2xUUk9VMVpxVlRrVVVCNUgyS2hmMWw2NHM?oc=5",
+      "title": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQVXpSdHczdGlsRnBGNERtTUdKNUlsUU1VNGRjLTdIbXlRWVZSMEJhdnY1UTRISTQyakFpQmhQRW50d3Exc1g2d1g4TmtpT3hfVENxejBxZk5BOTB4bEUyOURyMkFEaWU1eU1YQ3BtRU9RbFBaclc4QWN4eWhWTXVEaVpIMDRIaVRzLUg0a3gwSkU4eVFFNU1kVTg2RDVUX0dBVFc3c1VCd2lFSFlQMUNESEZBVEl4THhfUDZoQXZNRmhMTFZ4Y3dodEJTWTJHMGdhaWMwd2RyNHRTVUtSSTBVQ3pybnp1LWJrNi1zcXMtanIydFp0ZHpJajJJVVBIV0ZNdDhuc2FxdFJsZDVsbl92UXRJcXlXOUFyVUtHMGZyOE9RbF8wSUFuaGcyUnJSbGVuYWQyUTR5ZGdaRUpE?oc=5",
       "source": "news.google.com",
-      "description": "Après une longue gestation, des condos de luxe enfin lancés à Sillery  TVA Nouvelles",
+      "description": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs  Le Soleil",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "Le retour du crédit social - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMGlqaE90ZjFwQVpPS0l3UkZudFZ0ck9kamhxcmlwV2w5SVNlME5OUVB6WV9ad2lTNk0zRFZyZUNnTF9pcVZhMWEtY0hDS1FpS3pSR0lQQ3ZlUWpNVXhEV1hacXVyR0FhdlAycXRucXA4V1pEbUZoM3FjOU1QMFY0X0E5Z0hSSDVoRU04?oc=5",
+      "source": "news.google.com",
+      "description": "Le retour du crédit social  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L'immobilier bientôt propice aux Montréalais? «Les chiffres tendent vers ça» - 98.5 Montréal",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTFBvcGVKNkF6OHhNcU9kZHFGbHdxNzhDMGZROWNCZS1yRHpDeWFnaklxNDRDVGVnTGxLSy1YZWJtRExFRTMxWG5lTFBhU1RqY0w4NzE3a0JYc05LOVo3YW9LTnc5bVlacFdhdDExWGhPZGZBajQ2UU1HUlpsNHNqWC1Qek9IS1ppRnJNUWdsT2hNc1B1SE5Ma3ZRMl9pWURLMTZpWUN6ZnZlREU?oc=5",
+      "source": "news.google.com",
+      "description": "L'immobilier bientôt propice aux Montréalais? «Les chiffres tendent vers ça»  98.5 Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Les Québécois se distinguent par leur manque d’intérêt envers les artistes nationaux - La Presse",
       "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNaGhUWS1idzZvREF0VG5JV2w4eGp5d1FHaG1OSWd1TGRYcjNxT2MySjYybEJ6VHVWLV9GVVMtWEdfR1RtSnY5NmNlc1ZQU2p1S1M3MklkQjU5TEF1aDZlZXpMQ1dvS1RsdEUyRlU0bzgyMUJFRDFTY3BjY19sYjVpbWR1eGxsVHQwTTB6WWdnQVRaN2VrUjk5cmJTVDFCeTl5MVpjNjlIZ0ZRcjBoTm9GYmFrWXdYR2NmUEVjdU96RzhLZDNMTDNIMXlvSGtfRkNpTzdadVJGY2FwOWlERHdsN0JHNkNSVldObnluN28tSEhaMlo3LWd6OG41SWNGZUJDcVlJ?oc=5",
       "source": "news.google.com",
       "description": "Les Québécois se distinguent par leur manque d’intérêt envers les artistes nationaux  La Presse",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le Bureau de la concurrence conclut une entente visant à accroître l'accès aux données immobilières de Centris - Lelezard",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPZC1FUkd6N0EtdDJqSkVvaUVSOXlvUGRRRzlYbjUxYU81aTZoTE9qWEFrNDcxUVA2ZnZYZC0zS0Z5ZjRVZ1lZTVhFUndqWW1mbDltSDltbWNkTVJncmlrQ09zNnlrck1SUHgxUk9ubGdwZk96WWZ6X2hzc0FjakVzOV9IZHl6TnBWRGFONDR4OUhSemJRMjM3VmhXWjJMVjd6QnFrT0Y1b0RwTVYtaEJ0dHk4VEQ2em9JZ3VkODFIczhRSHhTQklMdl82T3UxdjJndURYUW85OV9xemxxTjhVeDdWWQ?oc=5",
+      "source": "news.google.com",
+      "description": "Le Bureau de la concurrence conclut une entente visant à accroître l'accès aux données immobilières de Centris  Lelezard",
       "cities": [],
       "category": "general"
     },
@@ -237,18 +305,18 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada pourrait-elle relever ses taux? - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPV1VlOHY4RzBuVEJGSExGXzFhUkY5QmdpdHZ2RXFidmpubnZOa1FJcHpOMDVmWGstOGtkbkRibjkwdF9BdlRjMHFya0N2QXdDa0lqMTVMR3dYTk1mWVR0ZnBhZG5SWlEyenVQWk9GbkdnYUJfc1pUYU9jeXNxaGdPODlMVUoyS3J1TW9SOGdoUzB5MUFtckswYWstYw?oc=5",
+      "title": "Pertes d’emplois: la Banque du Canada maintiendra-t-elle ses taux? - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTjgwRDRLVEp4ZmtqbU51dVZQY2JUMHUxSFlqTjd6ZmNjZEh6M2RJXzRhdW16bGF6R05pa2pGbHIteW5aeGt4VnBGMllZV0tFOXFnSUV6OTVkVmVkRllaQlpDNHV3TzJmbVBuRUJyc0hSQjVob2wzcWRGemhhNXV0S1psOWRPZmt0WVJNNDdKY0FzQi1NQkM5TU84eEhIOVk2dlgwcmlmWTVQSmZl?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada pourrait-elle relever ses taux?  Les Affaires",
+      "description": "Pertes d’emplois: la Banque du Canada maintiendra-t-elle ses taux?  Les Affaires",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada maintient son taux directeur - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZVJ3NTZjVjVETlVRVG4ySEhSRUFQNWRfNmJ4S24wWXVEbzk5NzhYVWNIZkt5Sm9WN0YyMUNrYk44YmNkdlM5VjRwZk1nM2Vxa040NlMtN3p3VGFoNU5NT181bkdVcmpFUXRQN0pydVBubFJQdEhENDBXNWVaNS1wSGhCYW5QWDRta28wYmh5VjV5SHpWbjh4R3NwbnRGR0dI?oc=5",
+      "title": "La Banque du Canada revoit son approche de l’inflation - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNRlVOUlJIWmlGZkFieFdTOGJ1NTZYUkJSb1FBSVo0dldySFRNZ2k2NmNfbzdPOGVhamdXd2hFVVQzcmVHQXJaYVcyaHRWTl84cEZ6TWs0Sno5clVHSUtfVENqWGVUOU1reTN1Um1zX2pacjZJYWxhMUkzZG1OM3QyQUtpdFJTLUxsT0xnb1FWa3AyeUp6N2pUSnNRX3lMZnluVjFvNjRia05QRS1qZTFyZDc3a0JLZ05wYWROVldIaTEwLUVt?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada maintient son taux directeur  Finance et Investissement",
+      "description": "La Banque du Canada revoit son approche de l’inflation  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -261,10 +329,10 @@
       "category": "general"
     },
     {
-      "title": "Pertes d’emplois: la Banque du Canada maintiendra-t-elle ses taux? - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTjgwRDRLVEp4ZmtqbU51dVZQY2JUMHUxSFlqTjd6ZmNjZEh6M2RJXzRhdW16bGF6R05pa2pGbHIteW5aeGt4VnBGMllZV0tFOXFnSUV6OTVkVmVkRllaQlpDNHV3TzJmbVBuRUJyc0hSQjVob2wzcWRGemhhNXV0S1psOWRPZmt0WVJNNDdKY0FzQi1NQkM5TU84eEhIOVk2dlgwcmlmWTVQSmZl?oc=5",
+      "title": "La Banque du Canada maintient son taux directeur - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZVJ3NTZjVjVETlVRVG4ySEhSRUFQNWRfNmJ4S24wWXVEbzk5NzhYVWNIZkt5Sm9WN0YyMUNrYk44YmNkdlM5VjRwZk1nM2Vxa040NlMtN3p3VGFoNU5NT181bkdVcmpFUXRQN0pydVBubFJQdEhENDBXNWVaNS1wSGhCYW5QWDRta28wYmh5VjV5SHpWbjh4R3NwbnRGR0dI?oc=5",
       "source": "news.google.com",
-      "description": "Pertes d’emplois: la Banque du Canada maintiendra-t-elle ses taux?  Les Affaires",
+      "description": "La Banque du Canada maintient son taux directeur  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -289,6 +357,14 @@
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxONXFZWmEyRTZldWtxRHFsejJMREtiQUN1MzZJc0xXM0hxZnQ2cU5FY3N2cVhIWWc5Y1ZtX1B5a2l5ZURWV3Q4STFGd1NMOHhlTm0zSUdlMm9VZE04dzV2NjEtdmNCaVZxSlh1ZTlQNXpEVmYwVkpScnIzSnFwUkIyNFhjV1V4TnhJZUdPZGY3QWlWeE9rclljaVUwWXFwUmFWQ1Q4NGtWb1QwakdONG1SbmxRbXEwMGdkRkZnUmdqbTE?oc=5",
       "source": "news.google.com",
       "description": "Banque du Canada : nouvelles prévisions économiques le 15 juillet  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Malgré ses prétentions, la Banque du Canada a mis sa politique monétaire sur pause - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQbFJka253a080V1lwMVdyelhFM1RJV0d1a2ZXYTk4NzlGMHVxZ3FCV3pyTDZTZlhfYVNvQ0liRE5faE0xVTk2QXRzUmlrVHd0QUN5azYwN1pNb25TRXBQRlpEZzlsb0V2aWxmYnh0UTB4a0dGcHlHM3NKWDFmM1hXSVNGM2hBQ19aOWRsYXhVOTJmZTZnV2pqV29XTmhYN0J6cEVRc25kUExKakwxcE1CVE5uNl9xanVSRF9CNTBLdk8zaFhHaC1FRnRvZWxfNUVXWURkdlR0V1ItVmU5TE9fMUtmcw?oc=5",
+      "source": "news.google.com",
+      "description": "Malgré ses prétentions, la Banque du Canada a mis sa politique monétaire sur pause  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -325,10 +401,10 @@
       "category": "general"
     },
     {
-      "title": "Ottawa avait besoin de l’intervention de la Banque du Canada - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbkJnWXNrb0xfZmx5SUlNN0oxR2ZvN25Cd19DV2NQQkt6OTVoSzMwOGdZUmxxZm9BOFFpeE5BeTVZbzMtY2dZZWoyWlV2V19xYVJLVWQ1VFZwR01KZmRhcjFxOVhrX0ZKQ0dyZmp1OE1oODhKVnVTX3Rvb0VWbnlUZ0FjZ2xVUlgwcE13QlZMaWxVUGtxWDBkRk91ZU1nLTBqQjkwSFZETnhXLU01NThR?oc=5",
+      "title": "La Banque du Canada n’a pas besoin d’imiter la Fed, juge le sous gouverneur Lane - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNVkZNaTFwWFNyNXNzSkNTS0lvUG96d09ESjlYX1g5d0NoOTZKcTV0dm41ZTBhWFBIazZ2R1RtYlF0RlJibGp3UzlObkliOHNzWWRQOTg1N1o3dHcyVjVNZmc3VUFHaV9QNFJ0dkhIZ0QxSDJsNGhDSGdTQ0JiRU1HUzZGOUdWZFlfbEdBdEgtOFUtdlR6eUN4UU1sS0hNYmtEUERUX3BOdW52NWJ0ZEQybDZqbm52azd0ZGNVNDNqSUdhRmJvd3A0dWhOX0dBRzE1SmVuNHFfN0hLTlNPMlYwcHhXTGxUbEE?oc=5",
       "source": "news.google.com",
-      "description": "Ottawa avait besoin de l’intervention de la Banque du Canada  Finance et Investissement",
+      "description": "La Banque du Canada n’a pas besoin d’imiter la Fed, juge le sous gouverneur Lane  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -381,10 +457,10 @@
       "category": "general"
     },
     {
-      "title": "La BdC maintient son taux directeur - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVnRocEdRNjl6RExZaVpKMXlRb2dnb2dYODgtYmNCRGtaNUFEWFFrdnhSa2JwVUpzdGxtRkJqVkdwaWJOWHFGYkJWejllZVdsc0dZZTgtUnpfRmFuSzdrSldsc0lxcFAycmd6cHJSYy1SRmhxTWdIWGh4Qi1xUzdYcTRVUUZDRW9lVnpxcy1TTQ?oc=5",
+      "title": "Ce que les pertes d’emploi de septembre laissent présager quant aux perspectives de la Banque du Canada en matière de taux d’intérêt - Morningstar",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPU0cxR2g4aW9RN3p3RE1nVTl3bkZqdWdaMV9yelhteFNxS1Mya19qcmZJTHg1emhybDFadEhCdmJaT0U4UVpVMk5KcGFXeDFvX2xpRTk5eHhJR3RnUng3OUpveXE3WTFoUEQ1ck5qdFJhaHNTRWZSODNDU2Z3dlRRQWNrdVRaVFF3XzAwcldqZi1xT2dIb01abU8yMlhhdEtneEFMeG56akNNQnZQcWZVWE5WMEVkbUdnRUZMRTdYOHhMOXhieU9NWUd0aGpmTGllbEFIMUFiN3lrT09lN1hCcFFHM0RORXVCTjY0dFFJRDBJeDVZYVo5dE1TR3VsQjRwdlE?oc=5",
       "source": "news.google.com",
-      "description": "La BdC maintient son taux directeur  Finance et Investissement",
+      "description": "Ce que les pertes d’emploi de septembre laissent présager quant aux perspectives de la Banque du Canada en matière de taux d’intérêt  Morningstar",
       "cities": [],
       "category": "general"
     },
@@ -393,14 +469,6 @@
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQRDlmdW1ETE9OQVktc01weTRsbXV5Qkt1NFplaHRmYmxoUVdERl9wRjJBOTRWelZiTmhRb2NjS1RoR3VCQU14RXV5eWxrYXhDejdtWkpwMnVDazM0bWdlMEtnb0cyM2Z3cXh0NWw2VzJIT3pwR242YjhWOFkxQjFkYnBLNlhWbTFlN3hTZTBuUTVVX2djaHNNWXBR?oc=5",
       "source": "news.google.com",
       "description": "Fed : troisième réduction de taux cette année  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Ce que les pertes d’emploi de septembre laissent présager quant aux perspectives de la Banque du Canada en matière de taux d’intérêt - Morningstar",
-      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPU0cxR2g4aW9RN3p3RE1nVTl3bkZqdWdaMV9yelhteFNxS1Mya19qcmZJTHg1emhybDFadEhCdmJaT0U4UVpVMk5KcGFXeDFvX2xpRTk5eHhJR3RnUng3OUpveXE3WTFoUEQ1ck5qdFJhaHNTRWZSODNDU2Z3dlRRQWNrdVRaVFF3XzAwcldqZi1xT2dIb01abU8yMlhhdEtneEFMeG56akNNQnZQcWZVWE5WMEVkbUdnRUZMRTdYOHhMOXhieU9NWUd0aGpmTGllbEFIMUFiN3lrT09lN1hCcFFHM0RORXVCTjY0dFFJRDBJeDVZYVo5dE1TR3VsQjRwdlE?oc=5",
-      "source": "news.google.com",
-      "description": "Ce que les pertes d’emploi de septembre laissent présager quant aux perspectives de la Banque du Canada en matière de taux d’intérêt  Morningstar",
       "cities": [],
       "category": "general"
     },
@@ -425,54 +493,6 @@
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOLUtOUm04dXFNOXVVNjFSQVlYMGh0S1FpdmVBSUZZa045YUtCQW5Mc3ZtZ0NvMGdxRE0wWmM2Z1hsRDJJUTFwTjB4NmZmN254cXMxVkRuQmhubTZMSFlQU2RmSEpKeEpJWVRmLVlzUmhDWkdaUGhodkg1LWszN3N0Y1ltR21YSVo4cXJfSllWazlIYU9IS3c2dTFpVG1jT1RIUXIweGZ6RzBIeFhmaEZtR201WkY0S0lKcEFFSUk3ZkgxNjJpQ25jczgteVRMbVk?oc=5",
       "source": "news.google.com",
       "description": "Les pertes d’emplois de septembre freinent les discussions sur une hausse des taux  Le Canada Français",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Statistique Canada s’apprête à publier ses données sur l’emploi - Le Canada Français",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOEIxVkZwdzVnbWt0Z0k3Nkk2cGF5bmRZXzVLMm9SZDdFQ2JaVkQwNER3S2d2elRZd1lwZmFvQVhENFI2RUhIekdEMmNqMC0zcnpERjRUSkFEZDBqVWFHRldxVU13SkRzNC1PSDJscTRwNXpWeEQtVUI5cXdwcTFBNUc5cXVxZ28tYlVMYzh6NDhiUy1xcXJIV0VhSW5SZWozVzRwZ2RTVGQ2cVJSY0R3S0ZiWk0?oc=5",
-      "source": "news.google.com",
-      "description": "Statistique Canada s’apprête à publier ses données sur l’emploi  Le Canada Français",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Hypothèques fixes à long terme : part au plus bas, selon la Banque Nationale - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNcWdnSGNQSC02TzIyMko2Rng0RklXS0lPTkVnek1CR1BETGZDQWZ1endqZVJHeVY0QmxJeEFzbjJ6NktuLWlPU0ZNM2RwR1VXanJPbEpDNzZmWXlqNEowM3NkR2FWRVhDM1FacktHdFM5eGtkS0NZVlRvdTJGQWZBYUMwOVBZZFhCdWZtNExnanUtNk9BNmNzWmhORi1ZdzJXX2JYVlpQODJCZDBuZzRnZFRkYmxKYnNtZnFmYS1UNklsLXBuZUxlUXdGUWFVa2pqNWR5UXdIWQ?oc=5",
-      "source": "news.google.com",
-      "description": "Hypothèques fixes à long terme : part au plus bas, selon la Banque Nationale  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Selon Rosenberg Research, la Banque du Canada ne devrait pas relever ses taux, car la hausse des coûts d’emprunt pèse sur le marché immobilier - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQRi1ocmw3enVzNDZJN0pDNW40MnRCeXpaVVU0YlRPRGgzaWhOb0UyM2JteWxRVHRZX3RUMzNyLUl4R1phYTlWQWM5eE45Q2JlNHoxbVc4U2FDdEwtT1J1TEluel9HV21fc09OY0ZOUGtfVFZWQk9ISG1JeFRqeDEwYXZ5cmRZc09MUnlWamxHMGx5UnVVSGtPdWI1M1FmbVFfcWhWNXRDd0JFQWFIRGw2enR5Tjc2WUlkVW5OWTZqS3gzeC02aTdvN1I5enN3NUprb0RXd0RBRVVScmEwWGJvQzBWQlo5UHpaNS1vekFXMW4?oc=5",
-      "source": "news.google.com",
-      "description": "Selon Rosenberg Research, la Banque du Canada ne devrait pas relever ses taux, car la hausse des coûts d’emprunt pèse sur le marché immobilier  Zonebourse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada devrait maintenir ses taux le 28 octobre, les risques liés à la croissance et à l’inflation persistant, selon TD - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUU5zTjRzX002UEZGVHdPNzFGLUZHc0RGamlMRzFucnJPTS1mcnBjaDV4czlIMUhveE9GNHgteWJwd0VrNXZxUTMxQ3podnA1bW84bW1ZOUJmUk1sMFNPTXRtWlpCVVlOUzNKbW1leW9UOHdmZ25vMWRCTHVuN1lrdE9obndFYkhtVEcxelotU1o0ekRiM1ZzanhHNXlNNkV2a3NaLUdtc2VRckpjR1hYdElidDNUNHhfNWFDb0VjeDlya3NXMG81SnBCam53Z0gzQ3g1U2o0MmN3dGRiU2dHLVBydHBSWWh5VFpUdnJSYw?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada devrait maintenir ses taux le 28 octobre, les risques liés à la croissance et à l’inflation persistant, selon TD  Zonebourse Suisse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Taux de chômage au Canada en septembre 2026 : aperçu du rapport sur l'emploi du 9 octobre - Admirals",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdGlRX1ZHaVZQLWxlTnk1aWg2cVlKYmI3NktTckh3YnI1djNzb1gwbV9nVUI4aEd5c2ppYTctX0pSTGxyYTEyZUNuNzBnekF4UG96YnliSXhkZ3A5cWJEZ0Z3My1BXzFoRVdMMEtZN0I5SGpkZll6OFpwYTh6T2lGZ2RjNTBDeTNTRS1hem40QkRZNzNkUWc?oc=5",
-      "source": "news.google.com",
-      "description": "Taux de chômage au Canada en septembre 2026 : aperçu du rapport sur l'emploi du 9 octobre  Admirals",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Canada: le taux de chômage augmente à 6,5% en septembre - TradingView",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1nVVVEY29uV1pUVHJ1eGZuYWpUeFUxZmFQYTJ5aWxOcG1aT1RIV1pxQkVpdjhJMS03MVFvaF8yZ2R3Qm5EMmlnMmY0NWtYU0k2Smh6UFNHX0NYZHJtbFZXRTd3?oc=5",
-      "source": "news.google.com",
-      "description": "Canada: le taux de chômage augmente à 6,5% en septembre  TradingView",
       "cities": [],
       "category": "general"
     }
@@ -529,5 +549,5 @@
     },
     "last_quarter": "septembre 2026"
   },
-  "last_update": "2026-10-14 17:46"
+  "last_update": "2026-10-15 17:36"
 }
