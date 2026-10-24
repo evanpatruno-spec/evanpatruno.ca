@@ -87,10 +87,28 @@
       "category": "local"
     },
     {
-      "title": "Analyse | La chute des obligations de CoreWeave devrait inciter la Fed à la prudence",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-10-23/analyse/la-chute-des-obligations-de-coreweave-devrait-inciter-la-fed-a-la-prudence.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Ottawa prête 193 millions à deux géants de l’aluminium",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-10-24/ottawa-prete-193-millions-a-deux-geants-de-l-aluminium.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Le crédit aux entreprises, géant endormi de la politique monétaire, se réveille. Les obligations de l’exploitant de centres de données CoreWeave ont chuté ce mois-ci, faisant grimper les rendements atteignant 15 % sur l’échéance 2032. Sur le marché obligataire américain, les rendements des titres de pacotille et de ceux de qualité investissement ont atteint leurs plus hauts niveaux depuis 2025 et 2023, respectivement. Cela signifie que le coût du crédit aux entreprises – un important levier des banques centrales pour freiner l’économie et refroidir l’inflation – pourrait commencer à peser sur la croissance et ralentir l’inflation.",
+      "description": "La ministre de l’Industrie Mélanie Joly a annoncé vendredi un investissement de 193,3 millions pour renforcer la compétitivité de l’industrie canadienne de l’aluminium. Cette somme, offerte sous forme de prêts, servira à l’amélioration des installations de Rio Tinto au Saguenay–Lac-Saint-Jean et à la modernisation des activités d’Aluminerie Alouette sur la Côte-Nord.",
+      "cities": [
+        "saint-jean"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "La rue contre Wall Street | L’État français pris entre la rue et ses prêteurs",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-10-23/la-rue-contre-wall-street/l-etat-francais-pris-entre-la-rue-et-ses-preteurs.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Quand les Gilets jaunes se sont révoltés contre le prix de l’essence en 2018, le président Emmanuel Macron a pu offrir un paquet de mesures de 10 milliards d’euros en réductions d’impôts et en augmentations de salaire pour apaiser les manifestants devenus émeutiers. Ce montant s’est ajouté à la lourde dette française.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Nouvelle envolée du pétrole | Wall Street clôture en baisse",
+      "link": "https://www.lapresse.ca/affaires/marches/2026-10-23/nouvelle-envolee-du-petrole/wall-street-cloture-en-baisse.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "La Bourse de New York a clôturé en baisse vendredi, lestée par la flambée des prix du brut face aux craintes d’escalade au Moyen-Orient, tandis que les interrogations persistent sur la rentabilité des investissements dans l’intelligence artificielle (IA).",
       "cities": [],
       "category": "general"
     },
@@ -103,18 +121,28 @@
       "category": "general"
     },
     {
-      "title": "Ottawa met en demeure la maison mère américaine de l’aciérie Stelco",
-      "link": "https://www.ledevoir.com/economie/1018838/ottawa-met-demeure-maison-mere-americaine-acierie-stelco",
+      "title": "Les Canadiens prudents face à l’incertitude économique",
+      "link": "https://www.ledevoir.com/economie/finances-personnelles/1018814/canadiens-prudents-face-incertitude-economique",
       "source": "Le Devoir",
-      "description": "Le licenciement de 500 employés à l’usine de Hamilton serait un bris d’entente, estime la ministre Mélanie Joly.",
+      "description": "Les inquiétudes liées à l’inflation les incitent à revoir leurs habitudes de consommation, selon la Banque du Canada.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Marché immobilier vigoureux: davantage de revenus à la Ville de Québec grâce à...la taxe de bienvenue - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZFkxNWlPbzZkLWpRWXVYWUQxc3huQ1lNRWRKYnJQSHVLQnFSWEF3T1VXOWlkVTE3Y2hnTjNZRG03N2k0UVZsLVdkM1N6bkhRX3g3Uk9jLTJHZGY0V1NzNXV1RDMyTVd5OUJGY2QyTzdWNThZV08ycnhXX2hVdkF6MnhCWWxhdUJqbzFxd0dnYWxLTFZXYzNFWGt2c3V3amhTYVByNElDY09kYTlhTXhMWFBPaDBnckZnbk1DMGtQUFRDUHU5MTJjRVVTN3ljdEFUU1VWTVl5QQ?oc=5",
+      "title": "Le marché des propriétés résidentielles se détend",
+      "link": "https://www.ledevoir.com/economie/finances-personnelles/1018823/marche-proprietes-residentielles-detend",
+      "source": "Le Devoir",
+      "description": "Après une période de folie immobilière, 2026 aura été moins frénétique, en particulier sur le marché montréalais.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Marché immobilier vigoureux: davantage de revenus à la Ville de Québec grâce à...la taxe de bienvenue - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQZTljOVhOQ3Vua0Zvd2czUjE5ek9CdWdPLXh0SkYwZzJsVG1PV1RobmdHSk5TdmFkR3pxaHQ0NnhYcFF2QWxMaEkxb3M2Ui1IZzh5allPS19faXJ5OV9lbGR5MEttTDJLVmNTX3oxOFJBMjlXUGhPbDJNZ1FvMVl2V1JhQnVkZkFoMElvUXlJNThzcUtsUnNpQVplQlM0ZmktTElqeDJ0eGtuQU1XU2haWUd6cWx3cXpMMzJYQnVSNWNGTk5STjNCc2RJb1ZHdkowTWc?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier vigoureux: davantage de revenus à la Ville de Québec grâce à...la taxe de bienvenue  Journal de Québec",
+      "description": "Marché immobilier vigoureux: davantage de revenus à la Ville de Québec grâce à...la taxe de bienvenue  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -128,33 +156,9 @@
     },
     {
       "title": "Un autre écueil pour l’immobilier résidentiel en 2027 - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdHZIb3pVSmlHX0ZMa0JDd28tQ01Kb2dBcmVvRG16SjZBV3RKQ1ByMU9seDJwYmlTRmhKMjJpMG90d1I5Um9VTGNoRFVhMnZadF9Uckw0cVJYeWI1QnVpMDNITTgwWTFBaWpQYUg1X1dlREFYckExam83czJwT3owRFZ6QzBlNTdycFpKZkwxNkRhRHJjM2RkN1dTSjd0bHh4bDRlMVRR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORmdua2U1MHptdjFwMjBmQUZCYWJKaDVhWjVfOUJTMkU1ZmhjSW05dThVcUtWcDZPclJ5WkpzMGlwRlIwU242WF9nR0wtV0Eza0pZbDg1NUluZGFubHVYN21hSjBTaGNqQnNyT29FQjZyV0dlUTNLcl9BRC1VSVVKSnpjcnp2QjNzMUlYZlZwM1ptVFByM1ZGT2NOUXVEcktsOFJIU3NKRlc?oc=5",
       "source": "news.google.com",
       "description": "Un autre écueil pour l’immobilier résidentiel en 2027  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Portes à tout prix - Enquête sur des stratagèmes immobiliers qui contribuent à la crise du logement au Québec - Centre de presse de Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTm5uNGxrcS0tZWp2U0ZyZjRLMjRpS0liaHFCR2ZCS3VfRkJMUHpqTThnMGl6OE02bkJqN2Z5UzVXLWFzRGJUUFN5cmRCS0FRMnBHenk2R1dGSFZtdXZvQlBZMC1WZnVPTkRoZGdfZTZqeDItaUtfdlFlSWcyZEdOMm1ZX2tQMlZoa1lld2Jyd2lXaFR4MGlDUlRXbnZKcERoLW5WQldJazIzVmI0cjdOTkhuWkdqM3ZDNGFYSXJVcGRSN2VRa1hFSWZRNTFSOEwtR0djNm9XMnJ0cTJobndFakJHdWdIWTROS2FMSQ?oc=5",
-      "source": "news.google.com",
-      "description": "Portes à tout prix - Enquête sur des stratagèmes immobiliers qui contribuent à la crise du logement au Québec  Centre de presse de Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La construction du projet immobilier Le Phare pourrait être retardée à Rimouski - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQk83ZGYzVGNlOUgwNWNDVURYd2s5RXpMVk9nN3hMSk5BNEZ0OXNiOGlmdUg5VVFFY3NrOEZ2SVJwZDFOLTgxdl9zUGFnSzBaUnlFelVtS2pjSXBpdk9CU2lnaHlDQVA5cUhjMDgzUmdScGlrNVpkUlUzWkdJX3NjMFBTTnV1cnFJM2lZNzhHUHoyNEVkM2tlSWduZVhXamNIUmFvLVJpbVY1akJPaG9IdXJmUTBaZFFHTVE?oc=5",
-      "source": "news.google.com",
-      "description": "La construction du projet immobilier Le Phare pourrait être retardée à Rimouski  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "news.google.com",
-      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
       "cities": [],
       "category": "general"
     },
@@ -175,10 +179,34 @@
       "category": "general"
     },
     {
-      "title": "Centris au pays des merveilles - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQeGlLRGp6OWUzOVh2OFY4U0dfd2hac0czTU1yTEt5UGtPNzlhRVpPbjByVlAwbUVCMnN3SVRmZm82Q0p1MThmaWVtSVpIVzltRGFzZTV3OFh4ZTdxX1haRmcxY0lnLXozSXVTYTdWNEVra0VpNjVpcmVyNHhSRnZGX1RkYlYzazAzZ3NlQnVKckVaUURGTHc?oc=5",
+      "title": "Maisons à moins de 100 000 $ : Voici ce que tu peux acheter au Québec selon ta région - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE51WUNoXzUzYkZWakNzSTl6OHJxeGtLSlVCNFNxS0tlM1l0N3VjZnNHYnFfeDQ1V1AzdG9QTUk4d2puRTNNUnAwVXliMTFzcjMxdlI3dUllMjJINllxcGNRV1hqNUcwMHdNdTY1dkVuSTN4dkRiMEE?oc=5",
       "source": "news.google.com",
-      "description": "Centris au pays des merveilles  La Presse",
+      "description": "Maisons à moins de 100 000 $ : Voici ce que tu peux acheter au Québec selon ta région  Narcity",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
+      "source": "news.google.com",
+      "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Portes à tout prix - Enquête sur des stratagèmes immobiliers qui contribuent à la crise du logement au Québec - Centre de presse de Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTm5uNGxrcS0tZWp2U0ZyZjRLMjRpS0liaHFCR2ZCS3VfRkJMUHpqTThnMGl6OE02bkJqN2Z5UzVXLWFzRGJUUFN5cmRCS0FRMnBHenk2R1dGSFZtdXZvQlBZMC1WZnVPTkRoZGdfZTZqeDItaUtfdlFlSWcyZEdOMm1ZX2tQMlZoa1lld2Jyd2lXaFR4MGlDUlRXbnZKcERoLW5WQldJazIzVmI0cjdOTkhuWkdqM3ZDNGFYSXJVcGRSN2VRa1hFSWZRNTFSOEwtR0djNm9XMnJ0cTJobndFakJHdWdIWTROS2FMSQ?oc=5",
+      "source": "news.google.com",
+      "description": "Portes à tout prix - Enquête sur des stratagèmes immobiliers qui contribuent à la crise du logement au Québec  Centre de presse de Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La construction du projet immobilier Le Phare pourrait être retardée à Rimouski - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQk83ZGYzVGNlOUgwNWNDVURYd2s5RXpMVk9nN3hMSk5BNEZ0OXNiOGlmdUg5VVFFY3NrOEZ2SVJwZDFOLTgxdl9zUGFnSzBaUnlFelVtS2pjSXBpdk9CU2lnaHlDQVA5cUhjMDgzUmdScGlrNVpkUlUzWkdJX3NjMFBTTnV1cnFJM2lZNzhHUHoyNEVkM2tlSWduZVhXamNIUmFvLVJpbVY1akJPaG9IdXJmUTBaZFFHTVE?oc=5",
+      "source": "news.google.com",
+      "description": "La construction du projet immobilier Le Phare pourrait être retardée à Rimouski  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -231,14 +259,6 @@
       "category": "general"
     },
     {
-      "title": "Perspectives économiques « extrêmement incertaines », évoque la Banque du Canada - Finance et Investissement",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPcXR6ZXpFQ1RnaTc3d09VWDRMVy1nYzh6ZVZ1MzBFVDJFcG1yYTRtQnZVNEJpR3RwSEhzZzdDei1ncDhua0N2SUtXbVdtLVliWjZ1b2FPTl9DdjYzU2hzZnF5dUV1NVFGYXdmbXhlNHdubUhxX3pXNmxMZkxjazBJUTVES1U5MjZIUm9qekwzTXdrc1ppRnVzUlZ4NXhIdVY5V0UyWHo4NnlTWjh0c0lpbW9CQ3FFcHZ4LVE0SjFMOEQ1VEJlYTZYQmp5RkN3YzdET2ltU0JxY25UQnVzeDZrR0FB?oc=5",
-      "source": "news.google.com",
-      "description": "Perspectives économiques « extrêmement incertaines », évoque la Banque du Canada  Finance et Investissement",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Les attentes de hausse des taux de la Banque du Canada s’intensifient - Canadian Mortgage Trends",
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZHhGMmhqdFdBeUR5U2t1eVR2dl9iN2dYLXZtM29neDNjbDVBSFdnWHdnMUhITFlPU25PM253RWZLREFNbUNyOHVKUC1DZkxOeGFNN3BlMk1YYzhSYk5WTm1aRUtHM1dWc0VmZ1h1d3lEZnVNY2RoRHY0Zm1hZ05rek53bTdBN09tVUJhUUxKZFVyZ1pZeXYtRHVPN0JRRTBBalpyWTJaZjdfdFMzbGFCbW03SWlhNGRtLWFB?oc=5",
       "source": "news.google.com",
@@ -247,10 +267,18 @@
       "category": "general"
     },
     {
-      "title": "Banque du Canada: les données à surveiller avant la prochaine décision - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOUzBvd3ViWWNyLVhNeGNUYVQ4Rlc4VmhfbE9KRGNrT3dFbW1aR1BGblppUjhFZ29vMF9GY1NJV2FXMzR1MW8ySERxRXB6WlNTQXZ2R3JSeWc3dWFKV19XeS1oYWY5TzE3TzQtZGJQUnluS3AtdFJSbTdXLVVfNVpsZF90RE5HYmI4M2phQnhDdldoYnRicmQtOFJTQ3h2VWtYVTlVNlVLNy00dzdoTzBlbC1jU3Z6anMzUEZ0QkQxS2JVUmZwQkpBUXFpNA?oc=5",
+      "title": "Perspectives économiques « extrêmement incertaines », évoque la Banque du Canada - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPcXR6ZXpFQ1RnaTc3d09VWDRMVy1nYzh6ZVZ1MzBFVDJFcG1yYTRtQnZVNEJpR3RwSEhzZzdDei1ncDhua0N2SUtXbVdtLVliWjZ1b2FPTl9DdjYzU2hzZnF5dUV1NVFGYXdmbXhlNHdubUhxX3pXNmxMZkxjazBJUTVES1U5MjZIUm9qekwzTXdrc1ppRnVzUlZ4NXhIdVY5V0UyWHo4NnlTWjh0c0lpbW9CQ3FFcHZ4LVE0SjFMOEQ1VEJlYTZYQmp5RkN3YzdET2ltU0JxY25UQnVzeDZrR0FB?oc=5",
       "source": "news.google.com",
-      "description": "Banque du Canada: les données à surveiller avant la prochaine décision  Les Affaires",
+      "description": "Perspectives économiques « extrêmement incertaines », évoque la Banque du Canada  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada relèvera ses taux à 2,50 % le 28 octobre, puis une nouvelle fois d’ici fin mars - Zonebourse",
+      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOTENqM2tiV241RkFMRklwekR3SHdoejM1RGJ4eUdyMUtsQWR2TW5YSXg0bFZCUFYwYnhlY2tSdkUzVlI2TldaQi1rZ045eTJ0XzVPQzVzcjVDdG54dUkyTGNvNmd2T3BjTVpTRFFkNXk4VndBTTN0eThxbWtSZTVsTjVLTkxsVHBLV0RwaFBBWjNBWUt5X0ZwMy1YVE01bHNlWEtCZ3NxNXhyMXZCSTBNUzZTZm5UZ2k3enBUMk1TTWRSaXUzb3NuajRSS2MxMTlhS05YYl81R2NtYk5yWnhpV1JDVXVlMDFoc0ZyZHVn?oc=5",
+      "source": "news.google.com",
+      "description": "La Banque du Canada relèvera ses taux à 2,50 % le 28 octobre, puis une nouvelle fois d’ici fin mars  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -305,26 +333,10 @@
       "category": "general"
     },
     {
-      "title": "Un autre écueil pour l’immobilier résidentiel en 2027 - Les Affaires",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORmdua2U1MHptdjFwMjBmQUZCYWJKaDVhWjVfOUJTMkU1ZmhjSW05dThVcUtWcDZPclJ5WkpzMGlwRlIwU242WF9nR0wtV0Eza0pZbDg1NUluZGFubHVYN21hSjBTaGNqQnNyT29FQjZyV0dlUTNLcl9BRC1VSVVKSnpjcnp2QjNzMUlYZlZwM1ptVFByM1ZGT2NOUXVEcktsOFJIU3NKRlc?oc=5",
-      "source": "news.google.com",
-      "description": "Un autre écueil pour l’immobilier résidentiel en 2027  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Dollar canadien : les anticipations de hausse des taux de la Banque du Canada jugées excessives - Standard Chartered - www.tmgm.com",
       "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxONGNpQXRnc0RqM1RwWTcxTHItc0EtMW9JR2R1eTVQNV85WktuRVQ2OFJYRE9BUVIzampXcXpwV0MydDhsVEs4VnlsQnAtdTNKNGVMQ1pyZTh5eTFudVlBRnk1bGZpRUhHc1F0OHNUbXJrQ0MzU0JHMThBd3luUWo0ang0SGh6dktrc2hqU0FaVXRkOS1ZM29uNkxpMll5VFZ1SUFzanFJYm5vUVRFM2NkNzBxUmFXRGQyQ21vRHluUFVFaHBPVmhTY2VFWlVBcldYWDNz?oc=5",
       "source": "news.google.com",
       "description": "Dollar canadien : les anticipations de hausse des taux de la Banque du Canada jugées excessives - Standard Chartered  www.tmgm.com",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Banque du Canada relèvera ses taux à 2,50 % le 28 octobre, puis une nouvelle fois d’ici fin mars - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOTENqM2tiV241RkFMRklwekR3SHdoejM1RGJ4eUdyMUtsQWR2TW5YSXg0bFZCUFYwYnhlY2tSdkUzVlI2TldaQi1rZ045eTJ0XzVPQzVzcjVDdG54dUkyTGNvNmd2T3BjTVpTRFFkNXk4VndBTTN0eThxbWtSZTVsTjVLTkxsVHBLV0RwaFBBWjNBWUt5X0ZwMy1YVE01bHNlWEtCZ3NxNXhyMXZCSTBNUzZTZm5UZ2k3enBUMk1TTWRSaXUzb3NuajRSS2MxMTlhS05YYl81R2NtYk5yWnhpV1JDVXVlMDFoc0ZyZHVn?oc=5",
-      "source": "news.google.com",
-      "description": "La Banque du Canada relèvera ses taux à 2,50 % le 28 octobre, puis une nouvelle fois d’ici fin mars  Zonebourse",
       "cities": [],
       "category": "general"
     },
@@ -345,18 +357,18 @@
       "category": "general"
     },
     {
-      "title": "BMO penche désormais pour une hausse des taux de la Banque du Canada la semaine prochaine, les enquêtes de la BdC faisant état de risques d’inflation accrus - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOa1NVT20tLUJCalhTaFJ2UlVoQktoMVZuOVZUaWtiQ1RGNEVvVnlYVDdTQmZPYk0zYjQ3NDUwUTN0bzBBSUhPS3ljbFM3eGs3RHNWX1MwMDk4WnF4cnpBYlpKX2dkUExzVkhSZE1QWWYyVm5uU0VxeUFTbURHdnhRdW5JU2w1LXN5UkhlNlJzZEpFSGlGQW1RM3FCTk01dmtiM29NZ0xQZTR5X1lBSU85Q1k1SE5rMGVEZHEtRTlyX0hfa1BnWGQxbVhCY3Z1c3d5Ni00OFg0RmRfUGJmQXJhWmFicnBQamdYeVk3ZTVKcEQ?oc=5",
+      "title": "Le dollar canadien poursuit sa série de hausses alors que la divergence des politiques de la Fed et de la Banque du Canada retient l’attention - www.tmgm.com",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOaUx4RGpXeFNPX0p6dFB6cEg5QnhVbWV0VUxQZXJ5WG8yYmp1TWZ1WWk4aUJCZkJQY2ZxZk9tMW1NSmNGUUwtcFQ5SnpENlB3MWE2ejVSV1g2c3VzM3ZCc0FYcUlxT01ieGppcnZRV2RLZm4xSnF6WWwwbk9ERHBXWGJaU1JRSGRWampjX3M1YVZwbkVHNlQ1MURSa29NMHZsNnNCc2k4bWtyS2xKc3dsVVpKWjU3RF9Zdm9HOUZDS0JZUXRCblFJSmZTTWJSLTJncGx4dHRVQjlFUzIySHJYWGcwa1A?oc=5",
       "source": "news.google.com",
-      "description": "BMO penche désormais pour une hausse des taux de la Banque du Canada la semaine prochaine, les enquêtes de la BdC faisant état de risques d’inflation accrus  Zonebourse Suisse",
+      "description": "Le dollar canadien poursuit sa série de hausses alors que la divergence des politiques de la Fed et de la Banque du Canada retient l’attention  www.tmgm.com",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada prévoit une nette hausse de ses perspectives d’inflation avec la flambée des cours du pétrole, selon Macklem - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNaEtsYVdOeGZqQXFjUEVQcDJnaHhYNFpUc3NXNXV4LWxVSXBFdkI3OHEtVi1sRllTQjRtNWxlSmM1OS1Na3Y5REtkb3BZb0xNS0pHOVpEdU9NR3A0aGltWndFNUpKOFRlekJOTjZwc3dZWkpwWV9qc21UaHdwQTVpLTFWcmwtNXh6Vm5TSF91SktTZ09BdzRNWGxkMllkNTBCc1RjNWtsQ3JHdVZCZXUtOE9rU0xNUHRNMmpzUV8wNEltT1A2dE03QVptRU9rNGlkLW83WGRCeGlhemR4WS0ydWlzSTZkX3ZJMHlqRjduTGVpdw?oc=5",
+      "title": "BMO penche désormais pour une hausse des taux de la Banque du Canada la semaine prochaine, les enquêtes de la BdC faisant état de risques d’inflation accrus - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOa1NVT20tLUJCalhTaFJ2UlVoQktoMVZuOVZUaWtiQ1RGNEVvVnlYVDdTQmZPYk0zYjQ3NDUwUTN0bzBBSUhPS3ljbFM3eGs3RHNWX1MwMDk4WnF4cnpBYlpKX2dkUExzVkhSZE1QWWYyVm5uU0VxeUFTbURHdnhRdW5JU2w1LXN5UkhlNlJzZEpFSGlGQW1RM3FCTk01dmtiM29NZ0xQZTR5X1lBSU85Q1k1SE5rMGVEZHEtRTlyX0hfa1BnWGQxbVhCY3Z1c3d5Ni00OFg0RmRfUGJmQXJhWmFicnBQamdYeVk3ZTVKcEQ?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada prévoit une nette hausse de ses perspectives d’inflation avec la flambée des cours du pétrole, selon Macklem  Zonebourse",
+      "description": "BMO penche désormais pour une hausse des taux de la Banque du Canada la semaine prochaine, les enquêtes de la BdC faisant état de risques d’inflation accrus  Zonebourse Suisse",
       "cities": [],
       "category": "general"
     },
@@ -445,5 +457,5 @@
     },
     "last_quarter": "septembre 2026"
   },
-  "last_update": "2026-10-23 17:41"
+  "last_update": "2026-10-24 16:26"
 }
