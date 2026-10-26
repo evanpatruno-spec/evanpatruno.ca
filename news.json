@@ -87,10 +87,44 @@
       "category": "local"
     },
     {
-      "title": "Règlements sur le ménage | Airbnb et les gens qui exagèrent",
-      "link": "https://www.lapresse.ca/affaires/chroniques/2026-10-25/reglements-sur-le-menage/airbnb-et-les-gens-qui-exagerent.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Plan de transformation | CAE a trouvé un acquéreur pour Flightscape",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-10-26/plan-de-transformation/cae-a-trouve-un-acquereur-pour-flightscape.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Vous avez peut-être vu passer la nouvelle : les hôtes Airbnb ne pourront plus demander à leurs clients de laver et ranger la vaisselle avant de quitter le logement ni de faire la lessive ou de sortir les poubelles.",
+      "description": "Le fabricant montréalais de simulateurs de vol CAE a trouvé un acheteur pour Flightscape, sa division de logiciels aéronautiques, et le prix offert est plus généreux que ce qu’avaient prévu les analystes financiers.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "Donald Trump s’attend à ce que la guerre commerciale avec le Canada finisse « très bientôt »",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-10-26/donald-trump-s-attend-a-ce-que-la-guerre-commerciale-avec-le-canada-finisse-tres-bientot.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Le président des États-Unis, Donald Trump, s’attend à ce que la guerre commerciale prenne fin « très bientôt », parce que le Canada est « prêt à nous accorder tout ce que nous voulons en ce moment ».",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Forum des affaires | La polarisation des revenus des ménages",
+      "link": "https://www.lapresse.ca/affaires/2026-10-26/forum-des-affaires/la-polarisation-des-revenus-des-menages.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Selon les auteurs du livre Le monde en 2040 vu par la CIA, les pays occidentaux seront confrontés à une dette grandissante, à une faible croissance de la productivité, au vieillissement et à la réduction de la main-d’œuvre, ainsi qu’aux débats sur la politique écologique et fiscale.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Une décision «cruciale» attend la Banque du Canada, qui pourrait relever son taux directeur mercredi",
+      "link": "https://www.ledevoir.com/economie/1019744/decision-cruciale-attend-banque-canada-pourrait-relever-taux-directeur-mercredi",
+      "source": "Le Devoir",
+      "description": "Des économistes prévoient une hausse d’un quart de point d’ici janvier prochain.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Trump s’attend à ce que la guerre commerciale avec le Canada finisse «très bientôt»",
+      "link": "https://www.ledevoir.com/economie/1019627/trump-attend-ce-guerre-commerciale-canada-finisse-tres-bientot",
+      "source": "Le Devoir",
+      "description": "Le Canada est «prêt à nous accorder tout ce que nous voulons en ce moment», affirme le président américain.",
       "cities": [],
       "category": "general"
     },
@@ -113,42 +147,20 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier vigoureux: davantage de revenus à la Ville de Québec grâce à...la taxe de bienvenue - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZFkxNWlPbzZkLWpRWXVYWUQxc3huQ1lNRWRKYnJQSHVLQnFSWEF3T1VXOWlkVTE3Y2hnTjNZRG03N2k0UVZsLVdkM1N6bkhRX3g3Uk9jLTJHZGY0V1NzNXV1RDMyTVd5OUJGY2QyTzdWNThZV08ycnhXX2hVdkF6MnhCWWxhdUJqbzFxd0dnYWxLTFZXYzNFWGt2c3V3amhTYVByNElDY09kYTlhTXhMWFBPaDBnckZnbk1DMGtQUFRDUHU5MTJjRVVTN3ljdEFUU1VWTVl5QQ?oc=5",
+      "title": "Le nombre de maisons en vente atteint des sommets - Le Journal de Montréal",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNb09wZ05VNFJZRXcxRkcteWYtRU1vSFVkYWtjUGgzRklqUDJDU2c3RDBSR2s0VmtBcm16M3NRVUNOeTd1Y2c0blFWREhzWFBIamRyc0J2cnBKd2M0UW9hdVJCbGZTRFRRbVlGbUtOdVNfX1NQYks1Y0RCU204SUQ1UGpwSlhVSHp2MUczeVhUSEJWckUwaUFSbnFB?oc=5",
       "source": "news.google.com",
-      "description": "Marché immobilier vigoureux: davantage de revenus à la Ville de Québec grâce à...la taxe de bienvenue  Journal de Québec",
-      "cities": [],
-      "category": "general"
+      "description": "Le nombre de maisons en vente atteint des sommets  Le Journal de Montréal",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Un autre écueil pour l’immobilier résidentiel en 2027 - Les Affaires",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORmdua2U1MHptdjFwMjBmQUZCYWJKaDVhWjVfOUJTMkU1ZmhjSW05dThVcUtWcDZPclJ5WkpzMGlwRlIwU242WF9nR0wtV0Eza0pZbDg1NUluZGFubHVYN21hSjBTaGNqQnNyT29FQjZyV0dlUTNLcl9BRC1VSVVKSnpjcnp2QjNzMUlYZlZwM1ptVFByM1ZGT2NOUXVEcktsOFJIU3NKRlc?oc=5",
       "source": "news.google.com",
       "description": "Un autre écueil pour l’immobilier résidentiel en 2027  Les Affaires",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le marché immobilier en voie de changer? - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZkZRVTduaGFYMjRWRC0zYVpwYTMtbC1WXzR3SmRLOF9DZjJoTVpjeWw3VU42dC1hTVJjMjR0NW5mVFhyam1weDg3dEFMTDM0cDlzVmNueFc4NEplMDZPY2FmNGlQbVdORDdiUkZkWW1EM3U4UFZ5UjJKOGJoMGc1aDRpcXhFMGtyQUlqRA?oc=5",
-      "source": "news.google.com",
-      "description": "Le marché immobilier en voie de changer?  Radio-Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le nombre de maisons en vente atteint des sommets - TVA Nouvelles",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMHJIanJqUFk0ZnlRenJOYkJrSmw2cXBUaUVtSmJqYWZoUUVRa0Fpa3BkNVZKY2ZjdUYwVzE3X2pKMld2bTMzRGhnV3VQXy1oVTJ2R0NfT3pWOG1FeXlucWtwSEZPX2xJU0lkd2VBUk5WUFZBQWJ1eUpDeEhYMEdIdlZ5S1loNkpVSWtLVVRBVzg1Zw?oc=5",
-      "source": "news.google.com",
-      "description": "Le nombre de maisons en vente atteint des sommets  TVA Nouvelles",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Maisons à moins de 100 000 $ : Voici ce que tu peux acheter au Québec selon ta région - Narcity",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE51WUNoXzUzYkZWakNzSTl6OHJxeGtLSlVCNFNxS0tlM1l0N3VjZnNHYnFfeDQ1V1AzdG9QTUk4d2puRTNNUnAwVXliMTFzcjMxdlI3dUllMjJINllxcGNRV1hqNUcwMHdNdTY1dkVuSTN4dkRiMEE?oc=5",
-      "source": "news.google.com",
-      "description": "Maisons à moins de 100 000 $ : Voici ce que tu peux acheter au Québec selon ta région  Narcity",
       "cities": [],
       "category": "general"
     },
@@ -161,18 +173,10 @@
       "category": "general"
     },
     {
-      "title": "La construction du projet immobilier Le Phare pourrait être retardée à Rimouski - Journal de Québec",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbGZsWUlPVlBVNnBKS1p4UjVKa0VSMDhtd0RYN2RkUUIwUjU5cTJMVVEwZ0FxbkRwVC0xT293dC01dlpuUlotSGo2SWp1eVdzeV9vdDhKN1NGcVlaV0VabzRDWmpWTzQzTTRBaDFTYVpoSHFnOEhIUG1NNE1ncXNadnQyNEY2ZG9pSnVSYjVoYnhWTDFsRVg4dXRid1JkXzZ2MTVWMFhOUUxDaVJpOVFRR3dpbndZd2FyUHV3OTJ6cw?oc=5",
+      "title": "Maisons à moins de 100 000 $ : Voici ce que tu peux acheter au Québec selon ta région - Narcity",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE51WUNoXzUzYkZWakNzSTl6OHJxeGtLSlVCNFNxS0tlM1l0N3VjZnNHYnFfeDQ1V1AzdG9QTUk4d2puRTNNUnAwVXliMTFzcjMxdlI3dUllMjJINllxcGNRV1hqNUcwMHdNdTY1dkVuSTN4dkRiMEE?oc=5",
       "source": "news.google.com",
-      "description": "La construction du projet immobilier Le Phare pourrait être retardée à Rimouski  Journal de Québec",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Portes à tout prix - Enquête sur des stratagèmes immobiliers qui contribuent à la crise du logement au Québec - Centre de presse de Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTm5uNGxrcS0tZWp2U0ZyZjRLMjRpS0liaHFCR2ZCS3VfRkJMUHpqTThnMGl6OE02bkJqN2Z5UzVXLWFzRGJUUFN5cmRCS0FRMnBHenk2R1dGSFZtdXZvQlBZMC1WZnVPTkRoZGdfZTZqeDItaUtfdlFlSWcyZEdOMm1ZX2tQMlZoa1lld2Jyd2lXaFR4MGlDUlRXbnZKcERoLW5WQldJazIzVmI0cjdOTkhuWkdqM3ZDNGFYSXJVcGRSN2VRa1hFSWZRNTFSOEwtR0djNm9XMnJ0cTJobndFakJHdWdIWTROS2FMSQ?oc=5",
-      "source": "news.google.com",
-      "description": "Portes à tout prix - Enquête sur des stratagèmes immobiliers qui contribuent à la crise du logement au Québec  Centre de presse de Radio-Canada",
+      "description": "Maisons à moins de 100 000 $ : Voici ce que tu peux acheter au Québec selon ta région  Narcity",
       "cities": [],
       "category": "general"
     },
@@ -185,10 +189,10 @@
       "category": "general"
     },
     {
-      "title": "Influenceurs immobiliers : « Dégouté oui, surpris non », dit le BAIL - Radio-Canada",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUE5VSDE3NENwYVdiUHRIQ0pISUhCR1FRTVpMY2JaT09RaS1iNWpPOEFpMjg2M1ZVRWR0VEtCaDM5NXdJNjE2Y245dV9qRldFaTdKaGdwU1hkbG4xazA5ZkpnY1QybzBFWThQcGgzLVRlc2l3LXAtRTg2bG9wUC1BamdnX3NoMGxRMkF6My1vWjdRMW9wOExYZ2xkVm9ULWoxYWFYZlgyMHZDR0ZsVWJRQTJSNG1rNjFKUy1RYWt6V1B4YjlGa21wRWJVWQ?oc=5",
+      "title": "La construction du projet immobilier Le Phare pourrait être retardée à Rimouski - TVA Nouvelles",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQk83ZGYzVGNlOUgwNWNDVURYd2s5RXpMVk9nN3hMSk5BNEZ0OXNiOGlmdUg5VVFFY3NrOEZ2SVJwZDFOLTgxdl9zUGFnSzBaUnlFelVtS2pjSXBpdk9CU2lnaHlDQVA5cUhjMDgzUmdScGlrNVpkUlUzWkdJX3NjMFBTTnV1cnFJM2lZNzhHUHoyNEVkM2tlSWduZVhXamNIUmFvLVJpbVY1akJPaG9IdXJmUTBaZFFHTVE?oc=5",
       "source": "news.google.com",
-      "description": "Influenceurs immobiliers : « Dégouté oui, surpris non », dit le BAIL  Radio-Canada",
+      "description": "La construction du projet immobilier Le Phare pourrait être retardée à Rimouski  TVA Nouvelles",
       "cities": [],
       "category": "general"
     },
@@ -201,20 +205,34 @@
       "category": "general"
     },
     {
-      "title": "Stratégie du «cash for raise» | Enquête: les tactiques douteuses des «influenceurs immobiliers» - 98.5 Montréal",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZGRGR2dsQjNwMWoxbEoyeF9vZzlyYWJGbWZRV2pSU0ZIbEtSOHVuaXk2QnBCdDJLdkJjYTJVT3ZxOEJYUHNqdllDQjN4UzZrM09vUkRDUHpjSk80cVZmMF9aR054Qk1fb0JCV3pGeU9sVUQzdlQzTjVlQURoeGNncHdLR2ROcEQ5TXJXaXo2TDY3VThicnJhaC1B?oc=5",
-      "source": "news.google.com",
-      "description": "Stratégie du «cash for raise» | Enquête: les tactiques douteuses des «influenceurs immobiliers»  98.5 Montréal",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
-    },
-    {
       "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030 - nesto.ca",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
       "source": "news.google.com",
       "description": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030  nesto.ca",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le marché immobilier en voie de changer? - Radio-Canada",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZkZRVTduaGFYMjRWRC0zYVpwYTMtbC1WXzR3SmRLOF9DZjJoTVpjeWw3VU42dC1hTVJjMjR0NW5mVFhyam1weDg3dEFMTDM0cDlzVmNueFc4NEplMDZPY2FmNGlQbVdORDdiUkZkWW1EM3U4UFZ5UjJKOGJoMGc1aDRpcXhFMGtyQUlqRA?oc=5",
+      "source": "news.google.com",
+      "description": "Le marché immobilier en voie de changer?  Radio-Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Où sont passées les maisons imparfaites? - Le Soleil",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNNzBrYXRENGxaOUlTaEh0TXVPZE85cFZZb29aLV85QWdLMUJqRmctMjNqM3NQRWtzdG1CaVc1OGUyVWNnck5EZnN5eENfQ1JlN2FwT3FoM0p2Wk91VWJKTXJxNGlUZFNad0VOOGFhZzVRWkFHNV9RNUgtUDlua0ROamt0ZnBEVzlvZFQ5aXNqcUFzVUkzb0NZY1g4bGpFUEJSTHFuTU9CUW5Ba0VLa0h6QjRzemdaeTRyYUE2QXlLWG5vVDRSbzR3RkFaVQ?oc=5",
+      "source": "news.google.com",
+      "description": "Où sont passées les maisons imparfaites?  Le Soleil",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Prix immobiliers au Québec : le marché ralentit, les acheteurs regagnent du pouvoir - https://renseignementeconomique.fr/",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNY0wxR2c5eDBxTFRaQjY0RHZoNXVkaDNrY2JZRFlyRVRPVlMyU3NMN05LMkZpXzV5aUFqWjJtSkNneXlwOWl1bUVPUEJxbnE3SUppWmVnVmpndEhhUHdVaUMzV0Vrc25tTUdyS0NuSU1DRW5idWdJd2xSNlB3alpSck5zQTFBMmZ3cW5EbzBzSDU5RzRRaW83V0wtYVhfMUZsVnhlTUl1QmFHdlQ4QUdoWDlfRHdyQQ?oc=5",
+      "source": "news.google.com",
+      "description": "Prix immobiliers au Québec : le marché ralentit, les acheteurs regagnent du pouvoir  https://renseignementeconomique.fr/",
       "cities": [],
       "category": "general"
     },
@@ -245,14 +263,6 @@
       "category": "general"
     },
     {
-      "title": "L’inflation au Canada grimpe légèrement à 3,1 %, tandis que les mesures de base ralentissent - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPbUt6MmNEYzRmM3BUWXVYUFA0V3NJTDNhVWFzenFMT19jOUt4UUNZZ3NnVHRqNnlkdUp4a2tuT1ZTWnFpX0RXSmhEWEQ3aVI5N2ZVdlA3N3I0cl8yRW5VeTk2ejZHSFptNWdmSlh1VGpUZjJOM20yRHR0djBfN0ozczNTN1hKR0cyeGU0ejdfX3RxeFJZN1haanZJYkt5S0Y3UDhEck1KMkowa0V5emNQaHQtbDh6TW9ZMVEzNWxnWDlKVUFjcDRzQ0FuVE05dnU5THFyVw?oc=5",
-      "source": "news.google.com",
-      "description": "L’inflation au Canada grimpe légèrement à 3,1 %, tandis que les mesures de base ralentissent  Canadian Mortgage Trends",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Banque du Canada: le difficile compromis d’une hausse des taux - Les Affaires",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMklvc2tlMTFjZy1fdDJldlVSRFVfS2ZEZDRCcE5RanVKTHBibnk3ZlhHMk9veU5Wc21adWZKUTQ3bG1KcFVaVjBLdDhOcDBZNnpjN3lHQWFQZDBxaE9YWWQxZnBfV3lDSktIVTU2SG5DdTE4Z0ppYmRsWmFXTE93OHcwbE5KTVBsQXVHX0NYOFJVR0Y4cjhyRFVnT2xWZU14Q21HS0haTTQ?oc=5",
       "source": "news.google.com",
@@ -261,18 +271,10 @@
       "category": "general"
     },
     {
-      "title": "Canada | L’inflation s’accélère, la hausse des taux se rapproche - La Presse",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOX3U4SnpsMzRFQ2d6VVlVbmQ4LWxYNHk2SzFFMmZSYVBHQnlpX1dGLUZqcmlGYVJUYmNVbGtRV2V4cFVkTllEN05nNW1QZWtKZmIyT0o4eWJqQXBBbF95elU4bTZHZmdmeXZ0MWVBUkI2SDJvcEc4TUw0bWZaOUJDVTV3S2NBUEZROWJaTE5SbTFIbmdRcmx6VndUZjh6WVRUbU1KQUpOMDd1aHRoME5YbEVyTDZQRHhEc2c?oc=5",
+      "title": "La Banque du Canada pourrait relever son taux directeur cette semaine - La Presse",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNaDhmMTB4bnRuOEJ1SGcxYUptMXF1NkhGcXdUMV9UYnF4bS1fNm12NGVYZGZ0cGp3SGRNOFFqclpXVVZ5TWNNa1M3NnBKc1pxdEVGeEtDc0RDNW12OHF5Mm9ORzFiT1BKRzJYTEdzWl9tX1dvRnFCZ3RZYU1wdk5KSEd0YW9xTG9MaTBJdXR6VU4tbkN6MkZ6ZHFXZFZ3Z2swbkFSbWRBMEF1YmZDVGcyNmtlMUlpQ0JaRnpOYXJfRS0wRzJu?oc=5",
       "source": "news.google.com",
-      "description": "Canada | L’inflation s’accélère, la hausse des taux se rapproche  La Presse",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Conférence de presse : Rapport sur la politique monétaire – Octobre 2026 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa25uS1FvbjkwTkFOcVhkV0s3U3U3OGlXcE5JMHBNbnZOLUxjNlNTdG9jRFBaTWZ2QW5NTmN3TlRPN1BSMzdxeWZJcGlLR05nR01CYV9LeXBveG5VRlVvRmtCRVlyTDZpaGJwMlJkbDlBUjZ2UVN1Mzd6eGNGbTVDNFRSeEN4Y1MzOG11UGloTlVQRklxWWZ4MU9rNzJsUWloZ0EteWtBbFpEeHB2aXRj?oc=5",
-      "source": "news.google.com",
-      "description": "Conférence de presse : Rapport sur la politique monétaire – Octobre 2026  Banque du Canada",
+      "description": "La Banque du Canada pourrait relever son taux directeur cette semaine  La Presse",
       "cities": [],
       "category": "general"
     },
@@ -285,10 +287,10 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada revoit ses perspectives d’inflation à la hausse - Conseiller.ca",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaWxNYVYxNmxsQWdxaEJzdXk3TVo4X3lCUW44NzZJWlZaeXItWlFESEtDSk5OS2M1MFdpd1NLaUVSTUFkOWRIS0w0UDdYX2NCMlZTSE1OT1ZyMUZrRFRQSXRvaF84MW1sWVBsY1FFRnNjdHpfVkhYWTNOajYzZGpEclAybG9EMHRrU1FUenAwcWdreDYzRFd1N1NTMEt1b19y?oc=5",
+      "title": "Décision «cruciale»: la Banque du Canada pourrait relever son taux directeur - Le Quotidien",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQc2JKdl9TdTF1V1Y4azJqZkJQY2JiRmdCYk9CcWR4ZlVBajBIUE50X2dvV1pjSENQeEZWNTQ5UTJRUFhnX3E5ZHBaS0xhWUtDV21mTTEya2ZCaEw5SU1ubm84dGxfcnI2bDZmY2hVTWZnaEdtbWdmTEUtRGdwb0JtNHhYTngxMkFiMjVyN0g4UmNDWEwwdjZGOW10bUhLUFVRY21SNUtncDV2cjBDRXRuRVhtNlo4UXZuX3BZUGtsY2wtam5vZHNpdEl2c0M4QVp4ZDBCZTd2LXFmWHUxT3pnZ3pZY1JFN0FFdDR3MFUtVQ?oc=5",
       "source": "news.google.com",
-      "description": "La Banque du Canada revoit ses perspectives d’inflation à la hausse  Conseiller.ca",
+      "description": "Décision «cruciale»: la Banque du Canada pourrait relever son taux directeur  Le Quotidien",
       "cities": [],
       "category": "general"
     },
@@ -301,6 +303,14 @@
       "category": "general"
     },
     {
+      "title": "Conférence commémorative John Kuszczak 2026 - Banque du Canada",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxObU8xQW5fQlppOGdKQVYzV3ZPQ0thTEtXQU9JYUNzX2p3M2NBQmlYWjNqbnZyMldOajc4UzVpNll4TElZc0RtN2FCX1V6RmlSSTlXNXJNLTYtRWd5WTczRUEyN19aS1JtM1BDRmdJVy1ENnhvbVlwOUNtYWJsV0VWSlZ6and5SFVNYUJCOFdyOGdvSVBKVWc?oc=5",
+      "source": "news.google.com",
+      "description": "Conférence commémorative John Kuszczak 2026  Banque du Canada",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "La Banque du Canada relèvera ses taux à 2,50 % le 28 octobre, puis une nouvelle fois d’ici fin mars - Zonebourse",
       "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOTENqM2tiV241RkFMRklwekR3SHdoejM1RGJ4eUdyMUtsQWR2TW5YSXg0bFZCUFYwYnhlY2tSdkUzVlI2TldaQi1rZ045eTJ0XzVPQzVzcjVDdG54dUkyTGNvNmd2T3BjTVpTRFFkNXk4VndBTTN0eThxbWtSZTVsTjVLTkxsVHBLV0RwaFBBWjNBWUt5X0ZwMy1YVE01bHNlWEtCZ3NxNXhyMXZCSTBNUzZTZm5UZ2k3enBUMk1TTWRSaXUzb3NuajRSS2MxMTlhS05YYl81R2NtYk5yWnhpV1JDVXVlMDFoc0ZyZHVn?oc=5",
       "source": "news.google.com",
@@ -309,26 +319,18 @@
       "category": "general"
     },
     {
-      "title": "L’inflation a augmenté légèrement pour s’établir à 3,1% en septembre au Canada - Le Devoir",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWW0zRDZrM0h2MGh3RGNwN2tId09wQjE3VXdsd2lCYnJNLURvVmNsc002SUs1c2dYcnRrdzdmQ09WZUoxQUZlMEJEUXI1SEpLQkRjQlNNTjE0VlFTbmN5RzlFUzBDZGFTdWpWMzdndlBpMUhHNUV3RmZkRV9OaGJlWWk1UmdNZEU4STF5R1AzWDdFcEpsUjJLQ0Y5cGVQaFFTTVE?oc=5",
+      "title": "Banque du Canada : priorité au resserrement préventif – RBC - www.tmgm.com",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOeXpuSnY2NENfeExVVVZwa2xoSXhLa3kxVDdtVXpCa1BTNTRidW5ncXZIZ1VWQlJtd0djbkVndURORC1xemliSXIyT242NkhRUklaeVpKLUZRdnVCOWVlOENXaFA2ZXJxRE9SSzNJUEZ4emtLTVFkMm1NNmpxVExRRGx0Ym5IT2czVFFLWG1HY0RMUzFiWWxHemxPWGVhbV9GZXRmczNocGJSRVYxa0ItN0V3?oc=5",
       "source": "news.google.com",
-      "description": "L’inflation a augmenté légèrement pour s’établir à 3,1% en septembre au Canada  Le Devoir",
+      "description": "Banque du Canada : priorité au resserrement préventif – RBC  www.tmgm.com",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Enquête sur les attentes des consommateurs au Canada – Troisième trimestre de 2026 - Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNWFURjgzX3JmbWMtR0Uta2k5WXJsV2M1Tk40UzFZS0NtSGpTWG11VkY1Q0ZmYzkzSk5iR2tTWDBXUk1DTDdTUUNGNm96QllCcGZ5dUMyTVI3S0hjaUJ2Z05sOFN2dXhiSi05TV9YWW9ldnFuQ2U1UVlLSGdhb0I5MWtqUjExT05LYWF3TWU4WEh2cGdaeHZ6ZndCNWRxVFdyZ0k4aU53QUdiZndsMFdYbERXVWEyUjVkYXRB?oc=5",
+      "title": "L’inflation a augmenté légèrement pour s’établir à 3,1 % en septembre au Canada - Le Canada Français",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOTXBqT0o3S0o4NGxvMFF1MEoyQ3Vsd3l0ZWZnQW1VVWhVZnRfc20ycXM1OGxKbDV1TzhnZEtOT1VuNUlMLUY0UkhtR2Vzb245Q2N1c0ZpbWQwR0FMNU9zR3FGODBvZjNnd2wxVDloQjhEOWJmQU8yZnJadnBFQXA4eE1OclItWThUdVc2eUlwSnI0WWoyMVhwVGZKOVdYY0t0VTBtdi1jakZJSEtJb254NjVvMFJBcFJiT05UUlhMYmlYZXlHMmc?oc=5",
       "source": "news.google.com",
-      "description": "Enquête sur les attentes des consommateurs au Canada – Troisième trimestre de 2026  Banque du Canada",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "L’IPC de septembre affiche une légère hausse tandis que indicateurs de base marquent le pas. Voici ce que cela implique pour les taux d’intérêt - Morningstar",
-      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNSlFXQzFkQWh2R01tTG5sMmdXMXJBckZ2OXQ3NElwdnRQOWFmRWNGQkNUejI3OTk3V0hFTHhuU1N3Y0V1cFZfd2cxSHFvRnI5ZExhdl9raTAtaXVHMmhMY05sMU4tdTcySVduVi0wRWlOYUJZWnJnS1hXV2xUV1BRcXpYUTQ1T2ozOTY3cjBwV2tKWTgxUFhxTEJ3YkMzWmd5VzI5b0lnbzdqNWdJYVRjQ3gzSm14bTYyUlVKT3JmeGVDLWRBOHcxYTNJd3gxWXBmeVBWajNQcjJWQkt3VlZTYkhJM2FmYkZFWEQyUXBOZ3d2MnBSd0VaLUhMQlR0TXpzY1ZZa3d4VVRCZFRIeUlj?oc=5",
-      "source": "news.google.com",
-      "description": "L’IPC de septembre affiche une légère hausse tandis que indicateurs de base marquent le pas. Voici ce que cela implique pour les taux d’intérêt  Morningstar",
+      "description": "L’inflation a augmenté légèrement pour s’établir à 3,1 % en septembre au Canada  Le Canada Français",
       "cities": [],
       "category": "general"
     },
@@ -343,10 +345,10 @@
       "category": "local"
     },
     {
-      "title": "Les enquêtes de la Banque du Canada révèlent une hausse des attentes d’inflation - Canadian Mortgage Trends",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRTlobnYyNTRlalZodUwzMHhSTWtBYXh4MWpWejBCQWZROHpzSkJuY2tOMEZFUWlEZTJrUUUwSzItOXdfdURTWFVoeUVMLXZKZVF6VmFfLUhvU1lqSTd2aGtBT0MzSUk4dzE1cUlTQnp6akU0ckZkNVoxSTE0SV9JUXMxT0loWUQwcm9SVi1XNVBKVVBpMDQzTVFCd25ScnhjVkRLTHJfQW1mTkh6NlJHUEp4ZlJxOG9GODl3XzFyNm5SQ1ZjQ2dJSUh3?oc=5",
+      "title": "Un tournant décisif pour la Banque du Canada - Les Affaires",
+      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOVlYtZTJfR1M4aldLcmpvZGQtd3hZa1FjZjl0bVFNREE3bFdKVGFOa2tlRVVuSzh6MEtfRlI2bTB5Tnpqb0R4UE01bGQxNlVJeVR6bDJpV3UteVBKNFY3dHNRY2ZxM0RxM3N2SVo5c0dVejlLZ2N2ekNoVkwyY0k0bGVkQnRHV05SRGhJWlZXaVczdTNLVHRPRWhmLWQ4X2xpTXc1U2ltM0NHLWtJMDh6dktUd1FsODJsalZfbjN4MFNYaWJ4Mlc2SjNZNV8weFZXY3E2U1lCZE1kUTU5dHFYRk94a3I5WFpUYmpibQ?oc=5",
       "source": "news.google.com",
-      "description": "Les enquêtes de la Banque du Canada révèlent une hausse des attentes d’inflation  Canadian Mortgage Trends",
+      "description": "Un tournant décisif pour la Banque du Canada  Les Affaires",
       "cities": [],
       "category": "general"
     },
@@ -355,6 +357,22 @@
       "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQcGMycTNsekt6bHI3eFBXUHhHNE9nV1hjRkFRb1RXREhlRkpWaDJWaUpsdG4yYnM1RVgyYVVsQXo1TWdISEpnQ1RCRGNBQ1gyaUNZbVM4cEZISFQ3MFlOZ2loYUxlMXp4c1dJQWZXTlZaeWtFUjVNVG1fTkl1eFkzLUVCT2VxUnl3Q2tTTjZSVHMtZ3hnbGZZSzhxeDluWmpDUWhRV1VlWl9mbnNJTWlReVpoRXhONGllczAzTDNYUVdubk45bnhydDZmVXIzbmk3QUZaZGxPUmZ5d0pnYTMteGhTMEE5a1cyQ1JDaVRNV3k1Rjdh?oc=5",
       "source": "news.google.com",
       "description": "Le taux directeur reste inchangé  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Inflation : Tiff Macklem envisage de nouvelles hausses de taux - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPSkwzOU1acUktWjVCMkNxNERDY2dtQ1FiNl9mU2R5REs4dUNvQ0FrbUlXYTZiVWEtRTdBR0NuSy1KVXBIUzJGYnRrZENVUHR1c3p1WV85NWplaHJ0RmszVzR2eEctaThmMVZsQWItSTZ6M0Ntd05zeDFwTk1oa0hqWVpGbHlzV004WWh5Tl9tdkl6X3drU1VDRm9qdE56aUlmSzR3c0ZEbms5M3FFOXNMTg?oc=5",
+      "source": "news.google.com",
+      "description": "Inflation : Tiff Macklem envisage de nouvelles hausses de taux  Finance et Investissement",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Luc Vallée quitte Valeurs mobilières Banque Laurentienne - Finance et Investissement",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZ2dCek10eUozeV9ZUEN0MVBXWXFObjEtVkMybnAzaU1jQjNKN2pNelg1LXhRVUdrMFRMS24zLUJUYkdoLXJRaTQwOGlBZUJqclpwN0szWUxQd3hNSUIycThzNmtaRXpaaUhWaGxfYkdobDdSRXFVNUg1eEd2OVZscGFZNFpfZVJTSkVMRXU3STJNSFBfdHg4U01MSmZBQ1lnQzNyUUZyRFl5Rlk?oc=5",
+      "source": "news.google.com",
+      "description": "Luc Vallée quitte Valeurs mobilières Banque Laurentienne  Finance et Investissement",
       "cities": [],
       "category": "general"
     },
@@ -399,18 +417,18 @@
       "category": "general"
     },
     {
-      "title": "BMO penche désormais pour une hausse des taux de la Banque du Canada la semaine prochaine, les enquêtes de la BdC faisant état de risques d’inflation accrus - Zonebourse Suisse",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOa1NVT20tLUJCalhTaFJ2UlVoQktoMVZuOVZUaWtiQ1RGNEVvVnlYVDdTQmZPYk0zYjQ3NDUwUTN0bzBBSUhPS3ljbFM3eGs3RHNWX1MwMDk4WnF4cnpBYlpKX2dkUExzVkhSZE1QWWYyVm5uU0VxeUFTbURHdnhRdW5JU2w1LXN5UkhlNlJzZEpFSGlGQW1RM3FCTk01dmtiM29NZ0xQZTR5X1lBSU85Q1k1SE5rMGVEZHEtRTlyX0hfa1BnWGQxbVhCY3Z1c3d5Ni00OFg0RmRfUGJmQXJhWmFicnBQamdYeVk3ZTVKcEQ?oc=5",
-      "source": "news.google.com",
-      "description": "BMO penche désormais pour une hausse des taux de la Banque du Canada la semaine prochaine, les enquêtes de la BdC faisant état de risques d’inflation accrus  Zonebourse Suisse",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le dollar canadien prend de l’élan, porté par la hausse des cours du pétrole et les paris sur un relèvement des taux de la Banque du Canada, jugée plus restrictive - www.tmgm.com",
       "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRmZ0YVN0RWZGS1BDb3YzQjdtYnk1ZW00S0dyMXpTUWNCZ2hTTzFHRF9qTlhsUzkwLXlXOVZ5bVAtWHVNaHJVUFNtVnM3N3ZtV3RKQXBwVmhwTmJYSWI4VmF1c0VGcjNVUFpOdTBRQTVNbGdNOGFPcTVWY3lPb0lSbDhKYlJKTF9tajBNUDVGWG1IQXBuVlJuR2o4dXB2NDRpNmVaV0lJWU9DOWZKczdzZUY1TDFDMWJRZXhQT01wX0RkWDF3cXZYQUdzaDFTVHFZa25WWndzWW1JYnVD?oc=5",
       "source": "news.google.com",
       "description": "Le dollar canadien prend de l’élan, porté par la hausse des cours du pétrole et les paris sur un relèvement des taux de la Banque du Canada, jugée plus restrictive  www.tmgm.com",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "KPMG Canada s’attend désormais à une hausse des taux de la Banque du Canada en octobre et avance sa prévision par rapport à décembre - Zonebourse Suisse",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPYTJDSXhYUTdZRGVMU2tmUXlNQXdlN0tYRFc4NTRIWnpzeTlkNXVZM3dtdEFaVVkxOFgxOUtWN3NYN2dMQmU0NGl6LTVraGs0TGZJZk9ydUVfaUJ0cVFaRTZPNjBubXYzd0VIUVNEN2FZYnBRR1VCMTZhbk5KemZFaUtHdWtEUWtaYVd2c1hsMlhZcXNKckotTFN5akQwNTZOV0pTeUh4SDJwWG9UZ0U3X0ZDcUJXQk1lekFwaExMMTZVMkltMmR2VHIwYWFudzlNLXRlMEdKMmo2eENMSVA1aTJwN0JndWNKb09tMUUtSUo?oc=5",
+      "source": "news.google.com",
+      "description": "KPMG Canada s’attend désormais à une hausse des taux de la Banque du Canada en octobre et avance sa prévision par rapport à décembre  Zonebourse Suisse",
       "cities": [],
       "category": "general"
     },
@@ -423,10 +441,10 @@
       "category": "general"
     },
     {
-      "title": "Le taux d’inflation annuel du Canada a atteint 3,1 % en septembre - Zonebourse",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxObUhfak9Ga0pGT1lzX0F2Z0xUMVBGU3JsblNqOXpzV1NjMHB5NVh3TFAwSE1wSVJ3QmZ4UXdrbll6ckhyZ1pUeDRETVVHVWRBVE9oSjFlenRHX0Q5T1hFUER4dWZUVmw0bTMxX1M0eFRaRnBVMXpDbzh5WkExMjRuUy1qUEFWaWNDSnJ2QmtfRUx1SHNMSkNYeEY0YnNGTXN3SGlSOHh4UmZOb25sdW1XUUZkYVB0eWNSQjZaMHQycmJWVUI1UjRINXJyWQ?oc=5",
+      "title": "Goldman Sachs prévoit deux hausses de taux de la Banque du Canada d’ici janvier - Investing.com France",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOU1NvejdaQzZpQUdYSVZ4alpYbHlscktqd01PTTc5cVVMZnQtOE9rNUZWb0RHYmU0WlF6UFY3Qi1xdnVzVnR6ODJzYmM2a3hBbENVOHdtOVc1Y0dMXzBsZHpNUW1JbVNxOEU1UTRjTE02WlJoTTZ6N3VNbTh3N0lmZDR5Zk1yNHg4SGdZZDZNZ3ZMSUsyRFIwV3VWNGo1eHVBaUVaNFRMd012ZkN3TFdqZEtDcDVxRnR2a01wSEJRMDQtVmhZUnJ2OUJLX2N2dVBlaWZ0Smh3?oc=5",
       "source": "news.google.com",
-      "description": "Le taux d’inflation annuel du Canada a atteint 3,1 % en septembre  Zonebourse",
+      "description": "Goldman Sachs prévoit deux hausses de taux de la Banque du Canada d’ici janvier  Investing.com France",
       "cities": [],
       "category": "general"
     }
@@ -483,5 +501,5 @@
     },
     "last_quarter": "septembre 2026"
   },
-  "last_update": "2026-10-25 16:58"
+  "last_update": "2026-10-26 19:00"
 }
