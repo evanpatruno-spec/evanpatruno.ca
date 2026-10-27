@@ -14,7 +14,10 @@ export default async function handler(req, res) {
 
     const data = { ...req.query, ...(req.method === 'POST' ? req.body : {}) };
     const action = data.action || data.k;
-    const code = (data.codePortal || data.code || "").trim().toUpperCase();
+    const rawCode = (data.codePortal || data.code || "").trim().toUpperCase();
+    // Nettoyage strict pour éviter toute injection dans les critères Zoho CRM
+    const code = rawCode.replace(/[^A-Z0-9_-]/g, '');
+    const phoneLast4 = String(data.phoneLast4 || data.phone || "").replace(/\D/g, '').slice(-4);
 
     try {
         let accessToken = cachedToken;
@@ -39,15 +42,44 @@ export default async function handler(req, res) {
             tokenExpiry = Date.now() + 3000000; // Valide ~50 min (Zoho = 1h)
         }
 
-        let dealId = data.dealId;
-        if (code.includes("EP-1") || code.includes("TEST")) {
+        // Sécurité anti-IDOR : On résout TOUJOURS le dossier à partir du Code_Portail (jamais un dealId arbitraire seul)
+        let dealId = null;
+        let dealRecord = null;
+        if (code === "EP-1" || code === "TEST") {
             dealId = "6466486000011930049";
-        } else if (!dealId && code) {
-            const sResp = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=(Code_Portail:equals:'${encodeURIComponent(code)}')`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+        } else if (code) {
+            const sResp = await fetch(`${apiDomain}/crm/v2/Deals/search?criteria=(Code_Portail:equals:${encodeURIComponent(code)})`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const sData = await sResp.json();
-            if (sData.data) dealId = sData.data[0].id;
+            if (sData.data && sData.data[0]) {
+                dealRecord = sData.data[0];
+                dealId = dealRecord.id;
+            }
         }
         if (!dealId) return res.status(404).json({ error: "DOSSIER_NON_TROUVE" });
+
+        // Vérification des 4 derniers chiffres du téléphone du contact lié (sauf code démo EP-1/TEST)
+        if (code !== "EP-1" && code !== "TEST") {
+            if (!dealRecord) {
+                const dCheckResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const dCheckData = await dCheckResp.json();
+                dealRecord = dCheckData.data?.[0];
+            }
+            const linkedContactId = dealRecord?.Contact_Name?.id;
+            if (linkedContactId) {
+                const cResp = await fetch(`${apiDomain}/crm/v2/Contacts/${linkedContactId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
+                const cData = await cResp.json();
+                const contactObj = cData.data?.[0];
+                const candidatePhones = [contactObj?.Mobile, contactObj?.Phone, contactObj?.Home_Phone, contactObj?.Other_Phone]
+                    .filter(Boolean)
+                    .map(p => String(p).replace(/\D/g, '').slice(-4))
+                    .filter(p => p.length === 4);
+
+                // Si le contact possède au moins un numéro à 4 chiffres dans Zoho, on exige la correspondance
+                if (candidatePhones.length > 0 && (!phoneLast4 || !candidatePhones.includes(phoneLast4))) {
+                    return res.status(403).json({ error: "Verification téléphone échouée (4 derniers chiffres invalides)." });
+                }
+            }
+        }
 
         // --- ACTIONS LÉGÈRES (sans chargement complet de l'affaire) ---
         if (action === 'update_push_token') {
@@ -180,8 +212,8 @@ export default async function handler(req, res) {
         }
 
         // --- CHARGEMENT COMPLET DE L'AFFAIRE (requis pour certaines actions) ---
-        let deal = null;
-        if (action === 'submitReferral' || !['pushAvisV13', 'requestVisit', 'cancelVisit', 'rescheduleVisit', 'requestMLS'].includes(action)) {
+        let deal = dealRecord;
+        if (!deal && (action === 'submitReferral' || !['pushAvisV13', 'requestVisit', 'cancelVisit', 'rescheduleVisit', 'requestMLS'].includes(action))) {
             const dResp = await fetch(`${apiDomain}/crm/v2/Deals/${dealId}`, { headers: { 'Authorization': `Zoho-oauthtoken ${accessToken}` } });
             const dData = await dResp.json();
             deal = dData.data?.[0];

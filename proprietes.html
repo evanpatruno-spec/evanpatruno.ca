@@ -348,18 +348,12 @@
                 </div>
                 <!-- Info Area -->
                 <div class="info-area" style="padding: 40px; color: white;">
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px;">
-                        <h2 id="modal-title" style="font-size: 2.2rem; margin: 0; font-family: 'Outfit', sans-serif;">
-                        </h2>
-                        <div id="modal-price"
-                            style="font-size: 2rem; color: var(--accent-purple); font-weight: 800; font-family: 'Outfit', sans-serif;">
-                        </div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; margin-bottom: 8px;">
+                        <h2 id="modal-title" style="font-size: 2.2rem; margin: 0; font-family: 'Outfit', sans-serif;"></h2>
+                        <div id="modal-price" style="font-size: 2rem; color: var(--accent-purple); font-weight: 800; font-family: 'Outfit', sans-serif;"></div>
                     </div>
-                    <div id="modal-brokers" style="margin: 15px 0 25px;"></div>
-                    <div id="modal-specs" class="modal-specs-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1);">
-                    </div>
+                    <div id="modal-brokers" style="margin: 0 0 25px;"></div>
+                    <div id="modal-specs" class="modal-specs-container"></div>
                     <div id="modal-desc"
                         style="line-height: 1.8; color: var(--text-dim); white-space: pre-wrap; margin-bottom: 40px; font-size: 1rem;">
                     </div>
@@ -535,11 +529,313 @@
                 font-size: 18px;
             }
         }
+
+        /* MODAL SPECS & FINANCIALS LUXURY SYSTEM */
+        .modal-specs-container {
+            margin: 25px 0 35px;
+        }
+
+        .specs-hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .spec-hero-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .spec-hero-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 0, 127, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .hero-card-icon {
+            font-size: 1.4rem;
+            background: rgba(135, 50, 118, 0.25);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .hero-card-info {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .hero-card-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-dim, #94a3b8);
+            margin-bottom: 2px;
+        }
+
+        .hero-card-val {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffffff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* FINANCIAL BLOCK */
+        .specs-financial-block {
+            background: linear-gradient(135deg, rgba(135, 50, 118, 0.15) 0%, rgba(20, 10, 30, 0.6) 100%);
+            border: 1px solid rgba(255, 0, 127, 0.25);
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .financial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .fin-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: 0.3px;
+        }
+
+        .fin-year-badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffb8e6;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .financial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .financial-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+
+        .fin-col {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .fin-subhead {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ff80bf;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .fin-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.07);
+        }
+
+        .fin-row:last-child {
+            border-bottom: none;
+        }
+
+        .fin-row.fin-total {
+            margin-top: 6px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .tax-total-badge {
+            color: #4ade80;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .eval-total-badge {
+            color: #38bdf8;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        /* TAGS & PILLS */
+        .specs-tags-block {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 20px;
+        }
+
+        .tags-title, .box-title, .infra-title, .others-title {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.9px;
+            color: var(--text-dim, #94a3b8);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .spec-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1.2;
+            transition: all 0.2s ease;
+        }
+
+        .commerce-tag {
+            background: rgba(135, 50, 118, 0.25);
+            color: #ffb8e6;
+            border: 1px solid rgba(255, 0, 127, 0.3);
+        }
+
+        .feature-tag {
+            background: rgba(56, 189, 248, 0.15);
+            color: #bae6fd;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .location-tag {
+            background: rgba(74, 222, 128, 0.15);
+            color: #bbf7d0;
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+
+        /* HIGHLIGHTS 2-COL */
+        .specs-highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 16px;
+        }
+
+        /* INFRASTRUCTURE */
+        .specs-infra-block {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 20px;
+        }
+
+        .infra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .infra-item {
+            display: flex;
+            flex-direction: column;
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .infra-k {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            color: var(--text-dim, #94a3b8);
+            margin-bottom: 2px;
+        }
+
+        .infra-v {
+            font-size: 0.88rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* OTHERS */
+        .specs-others-block {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+
+        .others-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .other-item {
+            display: flex;
+            flex-direction: column;
+            padding: 8px 10px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+        }
+
+        .other-k {
+            font-size: 0.7rem;
+            color: var(--text-dim, #94a3b8);
+            margin-bottom: 2px;
+        }
+
+        .other-v {
+            font-size: 0.85rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
     </style>
 
     <script>
         const BIN_ID = "694462e7d0ea881f4032d140";
-        const MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C";
         let allProperties = [];
         let currentPhotos = [];
         let photoIdx = 0;
@@ -549,7 +845,7 @@
         async function fetchAndRender(filter = 'all') {
             const grid = document.getElementById('properties-grid');
             try {
-                const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, { headers: { 'X-Master-Key': MASTER_KEY } });
+                const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`);
                 const data = await res.json();
                 allProperties = data.record;
 
@@ -606,13 +902,222 @@
             }
         });
 
+        function formatMoney(val) {
+            if (!val) return '';
+            const cleaned = String(val).replace(/[^0-9]/g, '');
+            if (!cleaned) return String(val);
+            const num = parseInt(cleaned, 10);
+            return num.toLocaleString('fr-CA') + ' $';
+        }
+
+        function parseMoney(val) {
+            if (!val) return 0;
+            const cleaned = String(val).replace(/[^0-9]/g, '');
+            return cleaned ? parseInt(cleaned, 10) : 0;
+        }
+
+        function renderModalSpecs(specs) {
+            if (!specs || Object.keys(specs).length === 0) {
+                return '<div style="opacity:0.5;font-style:italic;padding:15px 0;">Aucune caractéristique technique enregistrée.</div>';
+            }
+
+            // 1. Key Metrics
+            const bldType = specs["Type de bâtiment"] || specs["Genre de propriété"] || "";
+            const units = specs["Nombre d'unités au total"] ? specs["Nombre d'unités au total"] + " unité(s)" : (specs["Nombre de chambres"] ? specs["Nombre de chambres"] + " ch." : "");
+            const year = specs["Année de construction"] || "";
+            const landSize = specs["Superficie du terrain"] || specs["Aire au sol"] || specs["Superficie habitable"] || "";
+            const zoning = specs["Zonage"] || specs["Type de commerce/Industrie"] || "";
+
+            // 2. Financials
+            const taxMuniRaw = specs["Taxes municipales"] || "";
+            const taxScolRaw = specs["Taxes scolaires"] || "";
+            const evalTerrainRaw = specs["Évaluation municipale du terrain"] || "";
+            const evalBatimentRaw = specs["Évaluation municipale du bâtiment"] || "";
+            const evalYear = specs["Année d'évaluation"] || "";
+
+            const taxMuniNum = parseMoney(taxMuniRaw);
+            const taxScolNum = parseMoney(taxScolRaw);
+            const totalTaxNum = taxMuniNum + taxScolNum;
+
+            const evalTerrainNum = parseMoney(evalTerrainRaw);
+            const evalBatimentNum = parseMoney(evalBatimentRaw);
+            const totalEvalNum = evalTerrainNum + evalBatimentNum;
+
+            const hasFinancials = taxMuniNum > 0 || taxScolNum > 0 || totalEvalNum > 0;
+
+            // 3. Tags (Commerce, Particularités, Proximité)
+            const rawCommerce = specs["Genre de commerce"] || "";
+            const commerceTags = rawCommerce ? rawCommerce.split(',').map(s => s.trim()).filter(Boolean) : [];
+
+            const rawParticularites = specs["Particularités"] || "";
+            const particulariteTags = rawParticularites ? rawParticularites.split(',').map(s => s.trim()).filter(Boolean) : [];
+
+            const rawProximite = specs["Proximité"] || "";
+            const proximiteTags = rawProximite ? rawProximite.split(',').map(s => s.trim()).filter(Boolean) : [];
+
+            // 4. Infrastructure & Equipment
+            const eau = specs["Approvisionnement en eau"] || "";
+            const egouts = specs["Système d'égouts"] || "";
+            const chauffage = specs["Énergie pour le chauffage"] || specs["Mode de chauffage"] || "";
+            const stationnement = specs["Stationnement (total)"] || specs["Garage"] || "";
+
+            // 5. Remaining Specs
+            const handledKeys = [
+                "Type de bâtiment", "Genre de propriété", "Nombre d'unités au total", "Nombre d'étages",
+                "Année de construction", "Superficie du terrain", "Aire au sol", "Superficie habitable", "Zonage", "Type de commerce/Industrie",
+                "Taxes municipales", "Taxes scolaires", "Évaluation municipale du terrain", "Évaluation municipale du bâtiment", "Année d'évaluation", "Reprise de finance",
+                "Genre de commerce", "Particularités", "Proximité", "Approvisionnement en eau", "Système d'égouts", "Énergie pour le chauffage", "Mode de chauffage",
+                "Stationnement (total)", "Garage", "Nombre de chambres", "Nombre de pièces", "Nombre de salles de bain"
+            ];
+
+            const otherSpecs = Object.entries(specs).filter(([k, v]) => !handledKeys.includes(k) && !k.includes('Pièces') && !k.includes('Dimensions'));
+
+            let html = '';
+
+            // --- SECTION 1: KEY METRICS CARDS ---
+            html += '<div class="specs-hero-grid">';
+            if (bldType || units) {
+                html += `<div class="spec-hero-card">
+                    <span class="hero-card-icon">🏢</span>
+                    <div class="hero-card-info">
+                        <span class="hero-card-label">Bâtiment / Unités</span>
+                        <strong class="hero-card-val">${bldType}${units ? ' • ' + units : ''}</strong>
+                    </div>
+                </div>`;
+            }
+            if (year) {
+                html += `<div class="spec-hero-card">
+                    <span class="hero-card-icon">📅</span>
+                    <div class="hero-card-info">
+                        <span class="hero-card-label">Année de construction</span>
+                        <strong class="hero-card-val">${year}</strong>
+                    </div>
+                </div>`;
+            }
+            if (landSize) {
+                html += `<div class="spec-hero-card">
+                    <span class="hero-card-icon">📐</span>
+                    <div class="hero-card-info">
+                        <span class="hero-card-label">Superficie du terrain</span>
+                        <strong class="hero-card-val">${landSize}</strong>
+                    </div>
+                </div>`;
+            }
+            if (zoning) {
+                html += `<div class="spec-hero-card">
+                    <span class="hero-card-icon">🏷️</span>
+                    <div class="hero-card-info">
+                        <span class="hero-card-label">Zonage & Usage</span>
+                        <strong class="hero-card-val">${zoning}</strong>
+                    </div>
+                </div>`;
+            }
+            html += '</div>';
+
+            // --- SECTION 2: FINANCIAL SUMMARY ---
+            if (hasFinancials) {
+                html += `
+                <div class="specs-financial-block">
+                    <div class="financial-header">
+                        <span class="fin-title">📊 Sommaire Financier & Évaluation</span>
+                        ${evalYear ? `<span class="fin-year-badge">Rôle ${evalYear}</span>` : ''}
+                    </div>
+                    <div class="financial-grid">
+                        <div class="fin-col">
+                            <div class="fin-subhead">Taxes Annuelles</div>
+                            ${taxMuniNum ? `<div class="fin-row"><span>Taxes municipales :</span><strong>${formatMoney(taxMuniNum)}</strong></div>` : ''}
+                            ${taxScolNum ? `<div class="fin-row"><span>Taxe scolaire :</span><strong>${formatMoney(taxScolNum)}</strong></div>` : ''}
+                            ${totalTaxNum ? `<div class="fin-row fin-total"><span>Total taxes :</span><strong class="tax-total-badge">${formatMoney(totalTaxNum)} / an</strong></div>` : ''}
+                        </div>
+                        <div class="fin-col">
+                            <div class="fin-subhead">Évaluation Municipale</div>
+                            ${evalTerrainNum ? `<div class="fin-row"><span>Terrain :</span><strong>${formatMoney(evalTerrainNum)}</strong></div>` : ''}
+                            ${evalBatimentNum ? `<div class="fin-row"><span>Bâtiment :</span><strong>${formatMoney(evalBatimentNum)}</strong></div>` : ''}
+                            ${totalEvalNum ? `<div class="fin-row fin-total"><span>Évaluation totale :</span><strong class="eval-total-badge">${formatMoney(totalEvalNum)}</strong></div>` : ''}
+                        </div>
+                    </div>
+                </div>`;
+            }
+
+            // --- SECTION 3: COMMERCIAL ACTIVITIES ---
+            if (commerceTags.length > 0) {
+                html += `
+                <div class="specs-tags-block">
+                    <div class="tags-title">💼 Activités & Vocation Commerciale</div>
+                    <div class="tags-list">
+                        ${commerceTags.map(t => `<span class="spec-tag commerce-tag">${t}</span>`).join('')}
+                    </div>
+                </div>`;
+            }
+
+            // --- SECTION 4: HIGHLIGHTS & PROXIMITY ---
+            if (particulariteTags.length > 0 || proximiteTags.length > 0) {
+                html += `<div class="specs-highlights-grid">`;
+                if (particulariteTags.length > 0) {
+                    html += `
+                    <div class="highlight-box">
+                        <div class="box-title">🌊 Atouts & Particularités</div>
+                        <div class="tags-list">
+                            ${particulariteTags.map(t => `<span class="spec-tag feature-tag">${t}</span>`).join('')}
+                        </div>
+                    </div>`;
+                }
+                if (proximiteTags.length > 0) {
+                    html += `
+                    <div class="highlight-box">
+                        <div class="box-title">📍 Proximité & Loisirs</div>
+                        <div class="tags-list">
+                            ${proximiteTags.map(t => `<span class="spec-tag location-tag">${t}</span>`).join('')}
+                        </div>
+                    </div>`;
+                }
+                html += `</div>`;
+            }
+
+            // --- SECTION 5: INFRASTRUCTURE ---
+            if (eau || egouts || chauffage || stationnement) {
+                html += `
+                <div class="specs-infra-block">
+                    <div class="infra-title">🛠️ Services & Infrastructures</div>
+                    <div class="infra-grid">
+                        ${eau ? `<div class="infra-item"><span class="infra-k">Approvisionnement en eau :</span><strong class="infra-v">${eau}</strong></div>` : ''}
+                        ${egouts ? `<div class="infra-item"><span class="infra-k">Système d'égouts :</span><strong class="infra-v">${egouts}</strong></div>` : ''}
+                        ${chauffage ? `<div class="infra-item"><span class="infra-k">Chauffage & Énergie :</span><strong class="infra-v">${chauffage}</strong></div>` : ''}
+                        ${stationnement ? `<div class="infra-item"><span class="infra-k">Stationnement / Garage :</span><strong class="infra-v">${stationnement}</strong></div>` : ''}
+                    </div>
+                </div>`;
+            }
+
+            // --- SECTION 6: OTHER SPECS ---
+            if (otherSpecs.length > 0) {
+                html += `
+                <div class="specs-others-block">
+                    <div class="others-title">📋 Autres Caractéristiques</div>
+                    <div class="others-grid">
+                        ${otherSpecs.map(([k, v]) => `
+                            <div class="other-item">
+                                <span class="other-k">${k}</span>
+                                <strong class="other-v">${v}</strong>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>`;
+            }
+
+            return html;
+        }
+
         function openDetails(mls) {
             const p = allProperties.find(item => item.mls == mls);
             if (!p) return;
 
             document.getElementById('modal-title').textContent = p.city;
             document.getElementById('modal-price').textContent = p.price;
-            document.getElementById('modal-brokers').innerHTML = `<span style="opacity:0.6;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;">Courtier(s) Inscription :</span><br><b style="font-size:1.1rem;color:#fff;">${p.brokers || "Evan Patruno"}</b>`;
+            let brokerDisplay = p.brokers || "Evan Patruno";
+            if (brokerDisplay.split(',').length > 3) {
+                brokerDisplay = brokerDisplay.split(',')[0].trim();
+            }
+            document.getElementById('modal-brokers').innerHTML = `<span style="opacity:0.6;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;">Courtier(s) Inscription :</span><br><b style="font-size:1.1rem;color:#fff;">${brokerDisplay}</b>`;
             document.getElementById('modal-desc').textContent = p.description;
             document.getElementById('modal-link').href = p.url;
 
@@ -622,8 +1127,7 @@
             const body = encodeURIComponent(`Bonjour Evan,\n\nJe suis intéressé par la propriété située à ${p.city} (MLS #${p.mls}).\n\nPourriez-vous me recontacter pour planifier une visite ou me donner plus d'informations ?\n\nMerci !`);
             contactBtn.href = `mailto:info@evanpatruno.ca?subject=${subject}&body=${body}`;
 
-            const specsGrid = document.getElementById('modal-specs');
-            specsGrid.innerHTML = Object.entries(p.specs || {}).map(([k, v]) => `<div><div style="font-size:0.75rem;opacity:0.5;margin-bottom:3px;">${k}</div><div style="font-weight:700;">${v}</div></div>`).join('');
+            document.getElementById('modal-specs').innerHTML = renderModalSpecs(p.specs);
 
             currentPhotos = p.photos && p.photos.length ? p.photos : [p.image || FALLBACK_IMG];
             photoIdx = 0;

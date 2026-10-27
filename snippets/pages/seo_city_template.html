@@ -665,8 +665,7 @@ AVEC ISOLATION DES STYLES POUR ÉVITER LES BUGS SUR LE BLOG
     };
 
     const BIN_ID = "694462e7d0ea881f4032d140";
-    const NEWS_BIN_ID = "661adbced0ea881f4082269a";
-    const MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C";
+    const NEWS_BIN_ID = "69e6d40c856a6821895644dc";
 
     function initMaster() {
         const data = CITY_MASTER_DATA[TARGET_CITY] || CITY_MASTER_DATA["Laval"];
@@ -719,7 +718,7 @@ AVEC ISOLATION DES STYLES POUR ÉVITER LES BUGS SUR LE BLOG
 
     async function fetchData() {
         try {
-            const resProp = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, { headers: { 'X-Master-Key': MASTER_KEY } });
+            const resProp = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`);
             const jsonProp = await resProp.json();
             const filtered = jsonProp.record.filter(p => {
                 const pCity = (p.city || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -728,7 +727,7 @@ AVEC ISOLATION DES STYLES POUR ÉVITER LES BUGS SUR LE BLOG
             });
             renderProperties(filtered);
 
-            const resNews = await fetch(`https://api.jsonbin.io/v3/b/${NEWS_BIN_ID}/latest`, { headers: { 'X-Master-Key': MASTER_KEY } });
+            const resNews = await fetch(`https://api.jsonbin.io/v3/b/${NEWS_BIN_ID}/latest`);
             const jsonNews = await resNews.json();
 
             // FILTRE INTELLIGENT NEWS
@@ -755,7 +754,7 @@ AVEC ISOLATION DES STYLES POUR ÉVITER LES BUGS SUR LE BLOG
         grid.style.display = 'grid'; noProp.style.display = 'none';
         grid.innerHTML = list.map(p => `
             <div class="prop-card">
-                <img src="${p.image}" class="prop-img">
+                <img src="${p.image}" alt="Propriété à ${p.city || TARGET_CITY}" class="prop-img" loading="lazy">
                 <div class="prop-info">
                     <div style="font-size: 1.5rem; font-weight: 900; color: #fff; margin-bottom: 5px;">${p.price}</div>
                     <div style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 20px;">${p.city} · MLS ${p.mls}</div>

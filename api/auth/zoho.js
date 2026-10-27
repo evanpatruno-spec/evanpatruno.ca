@@ -4,6 +4,9 @@
  */
 
 export default function handler(req, res) {
+    if (process.env.ALLOW_OAUTH_SETUP !== 'true') {
+        return res.status(403).send("Endpoint d'installation OAuth désactivé en production.");
+    }
     const clientId = process.env.ZOHO_CLIENT_ID;
     const redirectUri = `https://${req.headers.host}/api/auth/callback`;
     

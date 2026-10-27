@@ -1,7 +1,6 @@
 const CACHE_NAME = 'ep-portal-cache-v11';
 const ASSETS_TO_CACHE = [
   '/mon-dossier.html',
-  '/mon-dossier-v10.html',
   '/manifest.json',
   '/pwa-icon-512.png',
   '/pwa-icon-192.png'

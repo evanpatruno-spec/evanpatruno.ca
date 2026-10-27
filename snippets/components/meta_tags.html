@@ -229,14 +229,18 @@ INSTRUCTIONS:
         background-color: #1e0a19 !important;
     }
 
-    /* Discrete Cookie Icon (Compliance Loi 25) - HIDDEN COMPLETELY */
-    #zc-revise,
+    /* Bannière de témoins (Conformité Loi 25) — Habillage Dark Prune & Or */
     .zc-cookie-container,
     .zc-popup-container {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
+        background-color: rgba(30, 10, 25, 0.96) !important;
+        backdrop-filter: blur(15px) !important;
+        border-top: 1px solid rgba(212, 175, 55, 0.35) !important;
+        color: #ffffff !important;
+        font-family: 'Outfit', sans-serif !important;
+    }
+    #zc-revise {
+        opacity: 0.5 !important;
+        filter: hue-rotate(240deg) !important;
     }
 
     /* --- DESIGN PREMIUM DU PIED DE PAGE & FIX GLOBAL --- */
@@ -419,16 +423,16 @@ INSTRUCTIONS:
 <meta name="color-scheme" content="dark">
 
 <!-- Icons & Favicons -->
-<link rel="manifest" href="/manifest.json">
-<link rel="icon" type="image/png" href="https://www.evanpatruno.ca/files/logo.png">
-<link rel="apple-touch-icon" href="/pwa-icon-512.png">
-<link rel="shortcut icon" href="https://www.evanpatruno.ca/files/logo.png">
+<link rel="manifest" href="https://dossier.evanpatruno.ca/manifest.json">
+<link rel="icon" type="image/png" href="https://www.evanpatruno.ca/favicon.png">
+<link rel="apple-touch-icon" href="https://dossier.evanpatruno.ca/pwa-icon-512.png">
+<link rel="shortcut icon" href="https://www.evanpatruno.ca/favicon.png">
 
 <!-- Primary Meta Tags -->
-<title id="dynamic-title">Evan Patruno | Courtier Immobilier (Rive-Sud & Estrie) & Hypothécaire (Tout le Québec)</title>
-<meta name="title" id="meta-title" content="Evan Patruno | Courtier Immobilier (Rive-Sud & Estrie) & Hypothécaire (Tout le Québec)">
+<title id="dynamic-title">Evan Patruno | Courtier Immobilier (Rive-Sud & Estrie) & Courtier Hypothécaire (Tout le Québec)</title>
+<meta name="title" id="meta-title" content="Evan Patruno | Courtier Immobilier (Rive-Sud & Estrie) & Courtier Hypothécaire (Tout le Québec)">
 <meta name="description" id="meta-desc"
-    content="Services de courtage immobilier (Saint-Jean-sur-Richelieu, Rive-Sud, Estrie) et hypothécaire partout au Québec avec bureau à Laval. Expertise, meilleurs taux et accompagnement premium.">
+    content="Services professionnels de courtier immobilier résidentiel (Saint-Jean-sur-Richelieu, Rive-Sud, Estrie) et courtier hypothécaire partout au Québec avec bureau à Laval. Expertise, meilleurs taux et accompagnement premium.">
 <meta name="keywords" id="meta-keywords"
     content="courtier immobilier Saint-Jean-sur-Richelieu, courtier hypothécaire Laval, prêt hypothécaire Québec, courtage immobilier Rive-Sud, Estrie, Evan Patruno, achat maison Montréal">
 <meta name="author" content="Evan Patruno">
@@ -440,8 +444,8 @@ INSTRUCTIONS:
      */
     (function() {
         const path = window.location.pathname.toLowerCase();
-        let title = "Evan Patruno | Courtier Immobilier (Rive-Sud) & Hypothécaire (Laval)";
-        let desc = "Expertise d'un courtier immobilier agréé et hypothécaire. Bureaux à Napierville et Laval. Accompagnement premium pour achat, vente et financement partout au Québec.";
+        let title = "Evan Patruno | Courtier Immobilier (Rive-Sud) & Courtier Hypothécaire (Laval)";
+        let desc = "Services professionnels d'un courtier immobilier résidentiel et courtier hypothécaire. Bureaux à Napierville et Laval. Accompagnement premium pour achat, vente et financement partout au Québec.";
 
         const seoMap = {
             "/acheter": {
@@ -452,12 +456,44 @@ INSTRUCTIONS:
                 t: "Vendre votre Maison au Meilleur Prix | Expertise Rive-Sud | Evan Patruno",
                 d: "Maximisez la valeur de votre propriété. Mise en marché premium, photos pros et visibilité maximale à Saint-Jean et sur la Rive-Sud."
             },
+            "/proprietes": {
+                t: "Propriétés à Vendre | Rive-Sud & Montérégie | Evan Patruno",
+                d: "Découvrez nos propriétés exclusives à vendre en Montérégie et sur la Rive-Sud : maisons, condos, plex et immeubles commerciaux."
+            },
+            "/investir": {
+                t: "Investissement Immobilier (Plex & Multi-logements) | Rive-Sud & Montréal | Evan Patruno",
+                d: "Maximisez votre rentabilité immobilière avec un courtier expert en Plex, calcul de CAP Rate et financement multilogement."
+            },
+            "/prequalification": {
+                t: "Préqualification Hypothécaire Rapide | Tout le Québec | Evan Patruno",
+                d: "Obtenez votre capacité d'emprunt réelle et sécurisez votre taux hypothécaire parmi plus de 20 institutions financières au Québec."
+            },
+            "/pr%c3%a9qualification": {
+                t: "Préqualification Hypothécaire Rapide | Tout le Québec | Evan Patruno",
+                d: "Obtenez votre capacité d'emprunt réelle et sécurisez votre taux hypothécaire parmi plus de 20 institutions financières au Québec."
+            },
             "/refinancement": {
                 t: "Refinancement Hypothécaire | Optimisez votre Prêt | Evan Patruno",
                 d: "Libérez de l'équité ou réduisez vos mensualités. Profitez des meilleurs taux du marché grâce à un courtier hypothécaire expert."
             },
+            "/renouvellement": {
+                t: "Renouvellement Hypothécaire | Meilleurs Taux au Québec | Evan Patruno",
+                d: "Ne signez pas l'offre de votre banque sans comparer. Économisez des milliers de dollars lors de votre renouvellement hypothécaire."
+            },
+            "/marche": {
+                t: "Baromètre du Marché Immobilier & Taux Directeur 2026 | Evan Patruno",
+                d: "Suivez en direct le taux directeur de la Banque du Canada, les statistiques immobilières du Grand Montréal et les nouvelles du marché."
+            },
+            "/rapports": {
+                t: "Rapports Mensuels du Marché Immobilier (PDF) | Evan Patruno",
+                d: "Consultez et téléchargez gratuitement nos rapports mensuels d'analyse du marché immobilier et hypothécaire au Québec."
+            },
+            "/ambassadeur": {
+                t: "Programme Ambassadeur | Recommandez Evan Patruno",
+                d: "Recommandez un proche pour son projet immobilier ou hypothécaire et profitez des privilèges exclusifs du Programme Ambassadeur."
+            },
             "/laval": {
-                t: "Courtier Immobilier & Hypothécaire à Laval | Bureau Rive-Nord | Evan Patruno",
+                t: "Courtier Immobilier & Courtier Hypothécaire à Laval | Bureau Rive-Nord | Evan Patruno",
                 d: "Services d'expert à Laval. Que ce soit pour un condo au centre-ville ou une maison à Chomedey, profitez d'une double expertise immobilière et hypothécaire."
             },
             "/saint-jean-sur-richelieu": {
@@ -468,17 +504,33 @@ INSTRUCTIONS:
                 t: "Votre Courtier Immobilier à Napierville | Ancrage Local | Evan Patruno",
                 d: "Basé au cœur des Jardins-de-Napierville, je connais chaque recoin de ce marché. Pour une transaction sécurisée et humaine."
             },
+            "/chambly": {
+                t: "Courtier Immobilier à Chambly | Expertise Rive-Sud | Evan Patruno",
+                d: "Achetez ou vendez à Chambly au meilleur prix grâce à une stratégie de mise en marché et de financement sur mesure."
+            },
             "/montreal": {
                 t: "Immobilier Montréal : Stratégie & Performance | Evan Patruno",
                 d: "Naviguez le marché montréalais avec un avantage compétitif. Un service clé en main combinant courtage et financement rapide."
             },
             "/outils": {
-                t: "Calculatrices Hypothécaires & Outils Financiers | Evan Patruno",
+                t: "Calculatrices Hypothécaires & Outils Financiers 2026 | Evan Patruno",
                 d: "Calculez vos paiements, la taxe de bienvenue ou comparez louer vs acheter avec nos outils précis et conformes aux normes canadiennes."
             },
             "/faq": {
                 t: "Foire aux Questions Immobilier & Hypothèque | Evan Patruno",
                 d: "Réponses claires à vos questions sur l'achat, la vente et le financement immobilier au Québec."
+            },
+            "/a-propos": {
+                t: "À propos d'Evan Patruno | Courtier Immobilier (OACIQ) & Hypothécaire (AMF)",
+                d: "Découvrez le parcours d'Evan Patruno, courtier titulaire d'un double permis immobilier (Himalaya) et hypothécaire (Multi-Prêts) au Québec."
+            },
+            "/contact": {
+                t: "Contactez Evan Patruno | Bureaux à Napierville & Laval",
+                d: "Planifiez une consultation stratégique gratuite par téléphone, en ligne ou à nos bureaux de Napierville et Laval."
+            },
+            "/liens-utiles": {
+                t: "Ressources & Liens Utiles | Immobilier & Hypothèque au Québec | Evan Patruno",
+                d: "Accédez rapidement aux registres officiels (OACIQ, AMF, Centris, Banque du Canada) et aux guides gouvernementaux."
             }
         };
 
@@ -498,32 +550,35 @@ INSTRUCTIONS:
         if(metaTitle) metaTitle.setAttribute('content', title);
         if(metaDesc) metaDesc.setAttribute('content', desc);
         
-        // Update OpenGraph also
+        // Update OpenGraph & Twitter URLs/Titles dynamically
         const ogTitle = document.querySelector('meta[property="og:title"]');
         const ogDesc = document.querySelector('meta[property="og:description"]');
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        const twUrl = document.querySelector('meta[property="twitter:url"]');
         if(ogTitle) ogTitle.setAttribute('content', title);
         if(ogDesc) ogDesc.setAttribute('content', desc);
+        if(ogUrl) ogUrl.setAttribute('content', window.location.href);
+        if(twUrl) twUrl.setAttribute('content', window.location.href);
     })();
 </script>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.evanpatruno.ca/">
-<meta property="og:title" content="Evan Patruno | Courtier Immobilier et Hypothécaire au Québec">
+<meta property="og:title" content="Evan Patruno | Courtier Immobilier & Courtier Hypothécaire au Québec">
 <meta property="og:description"
     content="Achetez, vendez ou financez votre propriété au Québec avec Evan Patruno. Expertise et passion à votre service.">
-<meta property="og:image" content="https://www.evanpatruno.ca/files/logo.png">
+<meta property="og:image" content="https://www.evanpatruno.ca/Photo%20de%20profil%20courtier%20Pro%20N%20Plex.jpg">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://www.evanpatruno.ca/">
-<meta property="twitter:title" content="Evan Patruno | Courtier Immobilier et Hypothécaire au Québec">
+<meta property="twitter:title" content="Evan Patruno | Courtier Immobilier & Courtier Hypothécaire au Québec">
 <meta property="twitter:description"
     content="Achetez, vendez ou financez votre propriété au Québec avec Evan Patruno. Expertise et passion à votre service.">
-<meta property="twitter:image" content="https://www.evanpatruno.ca/files/logo.png">
+<meta property="twitter:image" content="https://www.evanpatruno.ca/Photo%20de%20profil%20courtier%20Pro%20N%20Plex.jpg">
 
-<!-- Canonical Tag -->
-<link rel="canonical" href="https://www.evanpatruno.ca/">
+<!-- Canonical Tag gérée nativement par page par Zoho Sites -->
 
 <!-- ============================================== -->
 <!-- 🔍 DONNÉES STRUCTURÉES (SCHEMA.ORG) - SEO 🔍 -->
@@ -535,11 +590,11 @@ INSTRUCTIONS:
     {
       "@type": "RealEstateAgent",
       "@id": "https://www.evanpatruno.ca/#organization",
-      "name": "Evan Patruno | Courtier Immobilier & Hypothécaire",
+      "name": "Evan Patruno | Courtier Immobilier & Courtier Hypothécaire",
       "url": "https://www.evanpatruno.ca/",
-      "logo": "https://www.evanpatruno.ca/files/logo.png",
+      "logo": "https://www.evanpatruno.ca/favicon.png",
       "image": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=320,fit=crop,q=95/m6LDVxxBaLi757nM/evan_patruno-AwvD1J3wXni11116.jpg",
-      "description": "Services de courtage immobilier et hypothécaire expert au Québec. Spécialiste Rive-Sud, Saint-Jean-sur-Richelieu, Estrie et Laval.",
+      "description": "Services professionnels de courtier immobilier résidentiel et courtier hypothécaire au Québec. Spécialiste Rive-Sud, Saint-Jean-sur-Richelieu, Estrie et Laval.",
       "telephone": "+15145673249",
       "email": "info@evanpatruno.ca",
       "priceRange": "$$$",
@@ -588,12 +643,12 @@ INSTRUCTIONS:
         "item": "https://www.evanpatruno.ca/acheter"
       },{
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "name": "Vendre",
         "item": "https://www.evanpatruno.ca/vendre"
       },{
         "@type": "ListItem",
-        "position": 2,
+        "position": 4,
         "name": "Laval",
         "item": "https://www.evanpatruno.ca/laval"
       }]
@@ -602,7 +657,7 @@ INSTRUCTIONS:
       "@type": "Person",
       "@id": "https://www.evanpatruno.ca/#person",
       "name": "Evan Patruno",
-      "jobTitle": "Courtier Immobilier & Hypothécaire",
+      "jobTitle": ["Courtier immobilier résidentiel", "Courtier hypothécaire"],
       "worksFor": { "@id": "https://www.evanpatruno.ca/#organization" },
       "sameAs": [
         "https://www.facebook.com/evanpatrunocourtier",

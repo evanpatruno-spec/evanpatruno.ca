@@ -12,7 +12,8 @@ try {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Accédez à votre Portail Client Privé Evan Patruno : suivez votre transaction immobilière, vos visites et vos conditions en temps réel.">
     <title>Portail Client Privé | Evan Patruno</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="manifest" href="/manifest.json">

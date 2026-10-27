@@ -133,12 +133,24 @@
 
     .hero-premium h1 {
         font-family: var(--font-serif);
-        font-size: 3.5rem;
+        font-size: clamp(2.1rem, 2.7vw, 3.05rem);
         margin-bottom: 25px;
         font-weight: 600;
-        line-height: 1.15;
+        line-height: 1.35;
         color: #ffffff;
         letter-spacing: -0.5px;
+    }
+
+    .hero-nowrap {
+        white-space: nowrap;
+    }
+
+    .hero-tagline-location {
+        font-weight: 400;
+        font-size: 0.88em;
+        opacity: 0.95;
+        margin-left: 0.35em;
+        display: inline-block;
     }
 
     .hero-premium p {
@@ -640,11 +652,11 @@
     <div class="hero-content-wrapper reveal">
         <div class="hero-photo-container">
             <img src="https://www.evanpatruno.ca/Photo%20de%20profil%20courtier%20Pro%20N%20Plex.jpg"
-                alt="Evan Patruno, Courtier Immobilier et Hypothécaire à Saint-Jean-sur-Richelieu et Laval">
+                alt="Evan Patruno, Courtier immobilier résidentiel et Courtier hypothécaire">
         </div>
         <div class="hero-text-side">
             <div class="hero-premium">
-                <h1>Courtier <span class="text-gold">Immobilier</span> (Rive-Sud) & <span class="text-gold">Hypothécaire</span> (Tout le Québec).</h1>
+                <h1>Courtier <span class="text-gold">Immobilier</span>&nbsp;<span class="hero-tagline-location">(Rive-Sud)</span><br>Courtier <span class="text-gold">Hypothécaire</span>&nbsp;<span class="hero-tagline-location hero-nowrap">(Tout le Québec).</span></h1>
                 <p>Expertise immobilière locale de Saint-Jean-sur-Richelieu à l'Estrie, et solutions hypothécaires sur
                     mesure pour tout le Québec avec bureau à Laval.</p>
                 <div class="hero-cta-group" style="justify-content: flex-start;">
@@ -869,7 +881,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             <!-- TANIA MADORE -->
             <div class="rev-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Avis Google" class="google-icon">
                 <div class="rev-stars">★★★★★</div>
                 <p class="rev-text">"Evan est toujours là pour répondre rapidement à nos questions. Toujours disponible pour venir visiter et faire des démarches."</p>
                 <div class="rev-footer">
@@ -880,7 +892,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             <!-- SAMUEL BEAUSOLEIL -->
             <div class="rev-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Avis Google" class="google-icon">
                 <div class="rev-stars">★★★★★</div>
                 <p class="rev-text">"Evan prend le temps de nous informer des nouveautés sur le marché. Il s'occupe de toute la logistique et répond rapidement."</p>
                 <div class="rev-footer">
@@ -891,7 +903,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             <!-- MELANIE LAGANIERE -->
             <div class="rev-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Avis Google" class="google-icon">
                 <div class="rev-stars">★★★★★</div>
                 <p class="rev-text">"Je vous recommande Evan pour vous aider avec votre transaction immobilière ! Il saura vous mettre à l'aise, il est professionnel."</p>
                 <div class="rev-footer">
@@ -969,27 +981,27 @@ document.addEventListener("DOMContentLoaded", async function() {
         </div>
 
         <div class="geo-grid">
-            <a href="/immobilier-laval" class="geo-card" style="text-decoration:none; color:inherit;">
+            <a href="/laval" class="geo-card" style="text-decoration:none; color:inherit;">
                 <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🏙️</i>
                 <h4>Laval</h4>
                 <p>Bureau Rive-Nord. Expertise urbaine et hypothécaire.</p>
             </a>
-            <a href="/immobilier-napierville" class="geo-card" style="text-decoration:none; color:inherit;">
+            <a href="/napierville" class="geo-card" style="text-decoration:none; color:inherit;">
                 <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">📍</i>
                 <h4>Napierville</h4>
                 <p>Mon bureau principal. Votre expert de proximité sur la Rive-Sud.</p>
             </a>
-            <a href="/immobilier-montreal" class="geo-card" style="text-decoration:none; color:inherit;">
+            <a href="/montreal" class="geo-card" style="text-decoration:none; color:inherit;">
                 <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🚗</i>
                 <h4>Montréal</h4>
                 <p>Accompagnement stratégique sur l'île et les environs.</p>
             </a>
-            <a href="/immobilier-chambly" class="geo-card" style="text-decoration:none; color:inherit;">
+            <a href="/chambly" class="geo-card" style="text-decoration:none; color:inherit;">
                 <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🏰</i>
                 <h4>Chambly</h4>
                 <p>Le charme de la Rive-Sud. Votre projet au juste prix.</p>
             </a>
-            <a href="/immobilier-st-jean" class="geo-card" style="text-decoration:none; color:inherit;">
+            <a href="/saint-jean-sur-richelieu" class="geo-card" style="text-decoration:none; color:inherit;">
                 <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🎈</i>
                 <h4>Saint-Jean</h4>
                 <p>Marché dynamique et bord de l'eau dans le Haut-Richelieu.</p>

@@ -7,11 +7,23 @@ import { JWT } from 'google-auth-library';
 export default async function handler(req, res) {
     if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-    const { token, title, body, icon, url } = req.body;
+    const { token, title, body, icon, url, secret } = req.body;
+
+    // Protection par clé secrète si PUSH_API_SECRET est défini dans Vercel
+    const expectedSecret = process.env.PUSH_API_SECRET;
+    const authHeader = req.headers.authorization || '';
+    if (expectedSecret && secret !== expectedSecret && authHeader !== `Bearer ${expectedSecret}`) {
+        return res.status(401).json({ error: 'Unauthorized push request' });
+    }
 
     if (!token || !title || !body) {
         return res.status(400).json({ error: 'Missing parameters (token, title, body)' });
     }
+
+    // Validation de l'URL de redirection pour éviter le phishing
+    const safeUrl = (url && (url.startsWith('https://dossier.evanpatruno.ca') || url.startsWith('https://www.evanpatruno.ca') || url.startsWith('https://evanpatruno-ca.vercel.app') || url.startsWith('/')))
+        ? url
+        : "https://dossier.evanpatruno.ca/mon-dossier.html";
 
     const projectId = process.env.FCM_PROJECT_ID;
     const clientEmail = process.env.FCM_CLIENT_EMAIL;
@@ -51,7 +63,7 @@ export default async function handler(req, res) {
                     data: {
                         title: title,
                         body: body,
-                        url: url || "https://dossier.evanpatruno.ca/mon-dossier.html"
+                        url: safeUrl
                     },
                     webpush: {
                         notification: {
@@ -67,7 +79,7 @@ export default async function handler(req, res) {
                             ]
                         },
                         fcm_options: {
-                            link: url || "https://dossier.evanpatruno.ca/mon-dossier.html"
+                            link: safeUrl
                         }
                     },
                     android: {
