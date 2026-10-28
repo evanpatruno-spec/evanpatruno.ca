@@ -1,3 +1,6 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <!-- 
 SNIPPET META TAGS SEO (ZOHO SITES HEADER)
 INSTRUCTIONS:
@@ -239,8 +242,15 @@ INSTRUCTIONS:
         font-family: 'Outfit', sans-serif !important;
     }
     #zc-revise {
-        opacity: 0.5 !important;
-        filter: hue-rotate(240deg) !important;
+        opacity: 0.16 !important;
+        filter: hue-rotate(240deg) grayscale(0.4) !important;
+        transform: scale(0.72) !important;
+        transform-origin: bottom left !important;
+        transition: all 0.25s ease !important;
+    }
+    #zc-revise:hover {
+        opacity: 0.85 !important;
+        transform: scale(0.9) !important;
     }
 
     /* --- DESIGN PREMIUM DU PIED DE PAGE & FIX GLOBAL --- */
@@ -373,71 +383,134 @@ INSTRUCTIONS:
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
 
-                /* 8. COMPACT GLOBAL HEADER & REDUCED TOP GAP (UX ABOVE-THE-FOLD) */
+                    /* 8. COMPACT GLOBAL HEADER, LUXURY CARDS, SVG MEDALLIONS & EYEBROW BADGES */
     .theme-header {
         padding-top: 6px !important;
         padding-bottom: 6px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+        background: rgba(30, 10, 25, 0.92) !important;
+        backdrop-filter: blur(14px) !important;
+        -webkit-backdrop-filter: blur(14px) !important;
     }
     .theme-branding-info {
         padding-top: 2px !important;
         padding-bottom: 2px !important;
     }
     .theme-logo-parent img[data-zs-logo] {
-        height: 80px !important;
+        height: 76px !important;
         width: auto !important;
         transition: transform 0.25s ease;
     }
-    .page-container > .zpsection:first-child {
-        padding-top: 8px !important;
+    /* Refined desktop menu spacing & hierarchy */
+    .theme-menu-area .zpmenu-wrapper ul,
+    .theme-menu-content {
+        gap: 6px !important;
+        align-items: center !important;
     }
-    /* Neutralize Zoho Builder's negative margin-block-start (-77px / -75px / -58px) on wrapper rows/cols so the top of Hero banners is NEVER clipped under the header */
+    .zpmenu-wrapper .zpnav-item a,
+    .theme-menu-name {
+        font-family: 'Outfit', sans-serif !important;
+        font-size: 12.5px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.09em !important;
+        padding: 8px 14px !important;
+        margin: 0 2px !important;
+        border-radius: 999px !important;
+        color: rgba(255, 255, 255, 0.88) !important;
+        transition: all 0.25s ease !important;
+    }
+    .zpmenu-wrapper .zpnav-item a:hover,
+    .theme-menu-name:hover {
+        color: #ffffff !important;
+        background: rgba(135, 50, 118, 0.28) !important;
+    }
+    /* Highlight "MON DOSSIER" as a VIP client portal pill */
+    .zpnav-item a[href*="dossier" i],
+    .zpnav-item a[href*="portal" i],
+    a.theme-menu-name[href*="dossier" i] {
+        border: 1px solid rgba(212, 175, 55, 0.45) !important;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(135, 50, 118, 0.2)) !important;
+        color: #f3e5ab !important;
+        padding: 7px 16px !important;
+    }
+
+    .page-container > .zpsection:first-child {
+        padding-top: 10px !important;
+    }
+    /* Neutralize Zoho Builder's negative margin-block-start (-77px / -75px / -58px) on wrapper rows/cols */
     .page-container .zprow,
     .page-container .zpelem-col {
         margin-block-start: 0px !important;
         margin-top: 0px !important;
     }
-    /* Safety CSS for BoC Alert & Modal if ever included on any page */
+    /* Safety CSS for BoC Alert & Modal */
     #boc-alert-wrap { display: none; }
     #boc-lead-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 30000; }
     #boc-lead-modal.active { display: flex; }
 
-    /* Global override for internal page heroes: all 4 corners rounded (32px) + balanced top/bottom padding so H1 and CTA button breathe */
+    /* Global override for internal page heroes: all 4 corners rounded (32px) + balanced top/bottom padding */
     .hero-about, .hero-amb, .hero-buyer, .hero-seller, .hero-investor,
     .hero-commercial, .hero-immob, .hero-mortgage, .hero-prequal,
     .hero-finance, .hero-renewal, .hero-contact,
     .faq-hero, .liens-hero, .conditions-hero, .privacy-hero, .listing-hero, .city-hero {
         min-height: auto !important;
-        padding: 44px 24px 38px !important;
+        padding: 42px 24px 38px !important;
         border-radius: 32px !important;
         margin: 8px 20px 0 !important;
         overflow: hidden !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    /* Luxury Gold Eyebrow Badge inside Hero H1 */
+    .ep-hero-eyebrow {
+        display: block !important;
+        width: fit-content !important;
+        margin: 0 auto 14px auto !important;
+        padding: 6px 16px !important;
+        border-radius: 999px !important;
+        background: rgba(212, 175, 55, 0.12) !important;
+        border: 1px solid rgba(212, 175, 55, 0.35) !important;
+        color: #f3e5ab !important;
+        font-family: 'Outfit', sans-serif !important;
+        font-size: 0.73rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 2.2px !important;
+        text-transform: uppercase !important;
+        line-height: 1.3 !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
     }
     .hero-about h1, .hero-amb h1, .hero-buyer h1, .hero-seller h1,
     .hero-investor h1, .hero-commercial h1, .hero-immob h1,
     .hero-mortgage h1, .hero-prequal h1, .hero-finance h1,
     .hero-renewal h1, .hero-contact h1, .faq-hero h1,
     .liens-hero h1, .conditions-hero h1, .privacy-hero h1, .listing-hero h1, .city-hero h1 {
-        font-size: clamp(1.85rem, 3.4vw, 2.65rem) !important;
-        letter-spacing: -0.8px !important;
+        font-family: 'Outfit', sans-serif !important;
+        font-size: clamp(1.85rem, 3.3vw, 2.55rem) !important;
+        letter-spacing: -0.03em !important;
         line-height: 1.15 !important;
         margin-top: 0 !important;
-        margin-bottom: 14px !important;
+        margin-bottom: 12px !important;
+        color: #ffffff !important;
     }
     .hero-about p, .hero-amb p, .hero-buyer p, .hero-seller p,
     .hero-investor p, .hero-commercial p, .hero-immob p,
     .hero-mortgage p, .hero-prequal p, .hero-finance p,
     .hero-renewal p, .hero-contact p, .faq-hero p,
     .liens-hero p, .conditions-hero p, .privacy-hero p, .listing-hero p, .city-hero p {
-        font-size: 1.02rem !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 1rem !important;
+        max-width: 700px !important;
         margin: 0 auto 22px !important;
-        line-height: 1.5 !important;
+        line-height: 1.55 !important;
+        color: rgba(255, 255, 255, 0.85) !important;
     }
     .hero-about .hero-btn, .hero-amb .hero-btn, .hero-buyer .hero-btn,
     .hero-seller .hero-btn, .hero-investor .hero-btn, .hero-commercial .hero-btn,
     .hero-immob .hero-btn, .hero-mortgage .hero-btn, .hero-prequal .hero-btn,
     .hero-finance .hero-btn, .hero-renewal .hero-btn, .hero-contact .hero-btn {
-        padding: 15px 38px !important;
-        font-size: 0.95rem !important;
+        font-family: 'Outfit', sans-serif !important;
+        padding: 14px 36px !important;
+        font-size: 0.9rem !important;
+        letter-spacing: 1.2px !important;
         margin-bottom: 0 !important;
     }
     /* Clean positive spacing below the hero so cards NEVER cover the hero CTA button */
@@ -451,6 +524,83 @@ INSTRUCTIONS:
     .market-dashboard {
         margin: 24px auto 20px !important;
     }
+
+    /* LUXURY CARD & SVG MEDALLION SYSTEM (Replaces emojis & dark low-contrast H3 titles) */
+    .service-card, .hub-card, .info-card, .pillar-card {
+        background: linear-gradient(165deg, rgba(46, 14, 38, 0.88) 0%, rgba(24, 7, 20, 0.95) 100%) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-top: 1px solid rgba(212, 175, 55, 0.28) !important;
+        border-radius: 26px !important;
+        padding: 34px 28px !important;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4) !important;
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    .service-card:hover, .hub-card:hover, .info-card:hover, .pillar-card:hover {
+        transform: translateY(-6px) !important;
+        border-color: rgba(212, 175, 55, 0.45) !important;
+        box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55), 0 0 25px rgba(212, 175, 55, 0.1) !important;
+    }
+    /* High-contrast pure white card titles */
+    .service-card h3, .hub-card h3, .info-card h3, .pillar-card h3 {
+        font-family: 'Outfit', sans-serif !important;
+        color: #ffffff !important;
+        font-size: 1.3rem !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.01em !important;
+        margin-bottom: 10px !important;
+    }
+    .service-card p, .hub-card p, .info-card p, .pillar-card p {
+        font-family: 'Inter', sans-serif !important;
+        color: rgba(255, 255, 255, 0.74) !important;
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+    .hub-link {
+        color: #d4af37 !important;
+        font-family: 'Outfit', sans-serif !important;
+        letter-spacing: 1.8px !important;
+        font-size: 0.82rem !important;
+    }
+    .hub-card:hover .hub-link {
+        color: #f3e5ab !important;
+    }
+    /* Fine-line SVG Medallion */
+    .service-icon, .hub-icon, .info-card i, .pillar-card i {
+        width: 58px !important;
+        height: 58px !important;
+        margin: 0 auto 20px auto !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 18px !important;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(135, 50, 118, 0.22) 100%) !important;
+        border: 1px solid rgba(212, 175, 55, 0.35) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+        font-style: normal !important;
+        font-size: 1.5rem !important;
+        color: #d4af37 !important;
+        transition: transform 0.3s ease, border-color 0.3s ease !important;
+    }
+    .service-card:hover .service-icon,
+    .hub-card:hover .hub-icon,
+    .info-card:hover i,
+    .pillar-card:hover i {
+        transform: scale(1.08) !important;
+        border-color: rgba(212, 175, 55, 0.65) !important;
+    }
+    .service-icon svg, .hub-icon svg, .info-card i svg, .pillar-card i svg, .step-icon-circle svg {
+        width: 26px !important;
+        height: 26px !important;
+        stroke: #d4af37 !important;
+        fill: none !important;
+    }
+    .step-icon-circle {
+        background: linear-gradient(135deg, #2b0b24 0%, #1a0616 100%) !important;
+        border: 1px solid rgba(212, 175, 55, 0.4) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+    }
 </style>
 
 <script>
@@ -458,6 +608,7 @@ INSTRUCTIONS:
     document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
             // On exclue explicitement nos nouveaux badges de la suppression !
+            document.querySelectorAll('.zpmenu-wrapper a, .theme-menu-name').forEach(function(a) { if (a.textContent && a.textContent.trim().toUpperCase() === 'CONTACTEZ MOI') a.textContent = 'CONTACTEZ-MOI'; });
             var links = document.querySelectorAll('a[href*="commercial" i]:not(.ep-footer-accred-badge), a[href*="himalaya" i]:not(.ep-footer-accred-badge)');
             links.forEach(function (link) {
                 if (link.parentNode && link.parentNode.tagName === 'LI') {
