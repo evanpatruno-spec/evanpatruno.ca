@@ -1267,8 +1267,6 @@
     window.currentBocRate = 2.25;
 
     (function () {
-        // URLs absolues JSONbin (les fichiers /news.json et /boc_rates.json sont sur Vercel,
-        // pas sur Zoho Sites — on lit depuis JSONbin directement)
         const NEWS_BIN = 'https://api.jsonbin.io/v3/b/69e6d40c856a6821895644dc/latest';
         const BOC_BIN = 'https://api.jsonbin.io/v3/b/69e6d40f856a6821895644ed/latest';
         const BOC_VALET = 'https://www.bankofcanada.ca/valet/observations/V39079/json?recent=5';
@@ -1333,7 +1331,7 @@
             } catch (e) {
                 console.error('News fetch error:', e);
                 document.getElementById('baroNewsGrid').innerHTML =
-                    '<div class="news-empty">\u26a0\ufe0f Actualit\u00e9s temporairement indisponibles.</div>';
+                    '<div class="news-empty">⚠️ Actualités temporairement indisponibles.</div>';
             }
         }
 
@@ -1353,10 +1351,10 @@
                 const prev = obs.length > 1 ? obs[obs.length - 2] : latest;
                 const rate = parseFloat(latest.V39079.v);
                 const prevR = parseFloat(prev.V39079.v);
-                const status = rate > prevR ? 'a augment\u00e9' : rate < prevR ? 'a diminu\u00e9' : 'a maintenu';
+                const status = rate > prevR ? 'a augmenté' : rate < prevR ? 'a diminué' : 'a maintenu';
                 const todayIso = new Date().toLocaleDateString('en-CA');
-                const months = ['janvier', 'f\u00e9vrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'ao\u00fbt', 'septembre', 'octobre', 'novembre', 'd\u00e9cembre'];
-                let nextIso = '', nextFr = '\u2014', lastIso = '';
+                const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+                let nextIso = '', nextFr = '—', lastIso = '';
                 for (const d of BOC_SCHEDULE) {
                     if (d >= todayIso && !nextIso) { nextIso = d; }
                     if (d <= todayIso) { lastIso = d; }
@@ -1378,7 +1376,7 @@
             if (!s) return;
             const periodEl = document.getElementById('baroStatsPeriod');
             if (periodEl && s.last_quarter) {
-                periodEl.textContent = 'P\u00e9riode : ' + s.last_quarter;
+                periodEl.textContent = 'Période : ' + s.last_quarter;
             }
             const regions = {
                 'montreal': 'Mtl',
@@ -1399,22 +1397,22 @@
                 const elDays = document.getElementById(`stat${pfx}Days`);
                 const elCond = document.getElementById(`stat${pfx}Condition`);
 
-                if (elPrice) elPrice.textContent = data.price + ' ;
+                if (elPrice) elPrice.textContent = data.price + ' $';
                 if (elTrend) {
                     elTrend.textContent = data.trend;
                     elTrend.className = 'stats-trend-small ' + (data.trend.includes('-') ? 'trend-down' : 'trend-up');
                 }
-                if (elCondo) elCondo.textContent = (data.condo_price || '\u2014') + ' ;
+                if (elCondo) elCondo.textContent = (data.condo_price || '—') + ' $';
                 if (elCondoTrend) {
                     elCondoTrend.textContent = data.condo_trend || '';
                     elCondoTrend.className = 'stats-trend-small ' + ((data.condo_trend || '').includes('-') ? 'trend-down' : 'trend-up');
                 }
-                if (elSales) elSales.textContent = data.sales || '\u2014';
-                if (elDays) elDays.textContent = data.days || '\u2014';
+                if (elSales) elSales.textContent = data.sales || '—';
+                if (elDays) elDays.textContent = data.days || '—';
 
                 if (elCond) {
-                    const cond = data.condition || '\u2014';
-                    elCond.textContent = 'March\u00e9 ' + cond;
+                    const cond = data.condition || '—';
+                    elCond.textContent = 'Marché ' + cond;
                     elCond.className = 'stats-condition-pill ' + (cond.toLowerCase().includes('vendeur') ? 'cond-sellers' : 'cond-buyers');
                 }
             }
@@ -1422,7 +1420,7 @@
 
         function formatIsoDateFr(iso) {
             if (!iso) return '';
-            const months = ['janvier', 'f\u00e9vrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'ao\u00fbt', 'septembre', 'octobre', 'novembre', 'd\u00e9cembre'];
+            const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
             const dp = new Date(iso + 'T12:00:00');
             if (isNaN(dp.getTime())) return '';
             return `${dp.getDate()} ${months[dp.getMonth()]} ${dp.getFullYear()}`;
@@ -1439,17 +1437,17 @@
             const decisionDateFr = d.last_date_iso ? formatIsoDateFr(d.last_date_iso) : (d.date || '');
             pill.className = 'boc-status-pill';
             if (status.includes('baiss') || status.includes('diminu') || status.includes('cut')) {
-                pill.classList.add('boc-status-cut'); icon.textContent = '\ud83d\udcc9';
-                txt.textContent = 'Taux abaiss\u00e9 \u2014 ' + decisionDateFr;
+                pill.classList.add('boc-status-cut'); icon.textContent = '📉';
+                txt.textContent = 'Taux abaissé — ' + decisionDateFr;
             } else if (status.includes('hausse') || status.includes('augment') || status.includes('hike')) {
-                pill.classList.add('boc-status-hike'); icon.textContent = '\ud83d\udcc8';
-                txt.textContent = 'Taux augment\u00e9 \u2014 ' + decisionDateFr;
+                pill.classList.add('boc-status-hike'); icon.textContent = '📈';
+                txt.textContent = 'Taux augmenté — ' + decisionDateFr;
             } else {
-                pill.classList.add('boc-status-stable'); icon.textContent = '\u23f8';
-                txt.textContent = 'Taux maintenu \u2014 ' + decisionDateFr;
+                pill.classList.add('boc-status-stable'); icon.textContent = '⏸';
+                txt.textContent = 'Taux maintenu — ' + decisionDateFr;
             }
-            document.getElementById('bocLastDate').textContent = decisionDateFr || '\u2014';
-            document.getElementById('bocNextDate').textContent = d.next_announcement || '\u2014';
+            document.getElementById('bocLastDate').textContent = decisionDateFr || '—';
+            document.getElementById('bocNextDate').textContent = d.next_announcement || '—';
             if (d.next_date_iso) {
                 const target = new Date(d.next_date_iso + 'T09:45:00');
                 const now = new Date();
@@ -1461,10 +1459,10 @@
         function inferRegions(n) {
             const tags = new Set((n.cities || []).map(c => c.toLowerCase()));
             const text = `${n.title || ''} ${n.description || ''}`.toLowerCase();
-            if (/montr[\u00e9e]al|rmr|grand montr[\u00e9e]al|centris|apciq/.test(text)) tags.add('montreal');
-            if (/laval|chomedey|sainte-doroth[\u00e9e]e|vimont|pont-viau/.test(text)) tags.add('laval');
-            if (/rive-sud|longueuil|brossard|chambly|saint-jean|candiac|la prairie|boucherville|saint-bruno|saint-lambert|mont[\u00e9e]r[\u00e9e]gie|couronne/.test(text)) tags.add('rive-sud');
-            if (/rive-nord|terrebonne|blainville|saint-j[\u00e9e]r[\u00f4o]me|mascouche|mirabel|repentigny|lavaltrie|laurentides|lanaudi[\u00e8e]re|couronne/.test(text)) tags.add('rive-nord');
+            if (/montr[ée]al|rmr|grand montr[ée]al|centris|apciq/.test(text)) tags.add('montreal');
+            if (/laval|chomedey|sainte-doroth[ée]e|vimont|pont-viau/.test(text)) tags.add('laval');
+            if (/rive-sud|longueuil|brossard|chambly|saint-jean|candiac|la prairie|boucherville|saint-bruno|saint-lambert|mont[ée]r[ée]gie|couronne/.test(text)) tags.add('rive-sud');
+            if (/rive-nord|terrebonne|blainville|saint-j[ée]r[ôo]me|mascouche|mirabel|repentigny|lavaltrie|laurentides|lanaudi[èe]re|couronne/.test(text)) tags.add('rive-nord');
             return Array.from(tags);
         }
 
@@ -1478,7 +1476,7 @@
                 }
             }
             if (!filtered.length) {
-                grid.innerHTML = '<div class="news-empty">Aucune actualit\u00e9 trouv\u00e9e pour cette r\u00e9gion.</div>';
+                grid.innerHTML = '<div class="news-empty">Aucune actualité trouvée pour cette région.</div>';
                 return;
             }
             function cleanSrc(src) {
@@ -1486,25 +1484,25 @@
                 return src.replace(/[^\x00-\x7F\u00C0-\u017F\s\-\xb7'.]/g, '').trim() || 'Source';
             }
             const labelMap = {
-                'montreal': 'Grand Montr\u00e9al',
+                'montreal': 'Grand Montréal',
                 'laval': 'Laval',
                 'rive-sud': 'Rive-Sud',
                 'rive-nord': 'Rive-Nord',
-                'quebec': 'Qu\u00e9bec'
+                'quebec': 'Québec'
             };
             grid.innerHTML = filtered.slice(0, 30).map(n => {
                 const regList = inferRegions(n);
                 const isLocal = regList.length > 0;
-                const regions = regList.map(c => labelMap[c] || (c.charAt(0).toUpperCase() + c.slice(1))).slice(0, 2).join(' \u00b7 ');
+                const regions = regList.map(c => labelMap[c] || (c.charAt(0).toUpperCase() + c.slice(1))).slice(0, 2).join(' · ');
                 const src = cleanSrc(n.source);
                 return `<a href="${n.link}" target="_blank" rel="noopener" class="news-card">
                 <div class="news-card-top">
                     <span class="news-source-badge" title="${src}">${src}</span>
-                    ${isLocal ? `<span class="news-local-tag">\ud83d\udccd ${regions}</span>` : ''}
+                    ${isLocal ? `<span class="news-local-tag">📍 ${regions}</span>` : ''}
                 </div>
                 <div class="news-card-title">${n.title}</div>
-                ${n.description ? `<div class="news-card-desc">${n.description.substring(0, 145)}\u2026</div>` : ''}
-                <span class="news-card-link">Lire l\u2019article \u2192</span>
+                ${n.description ? `<div class="news-card-desc">${n.description.substring(0, 145)}…</div>` : ''}
+                <span class="news-card-link">Lire l’article →</span>
             </a>`;
             }).join('');
         }
@@ -1534,15 +1532,13 @@
         const priceNow = parseFloat(priceEl.value) || 0;
         const months = parseInt(monthsEl.value) || 12;
         const bocRate = typeof window.currentBocRate === 'number' ? window.currentBocRate : 2.25;
-        // Taux hypothécaire 5 ans estimé à partir du taux directeur (spread ~2.15%, plancher 3.79%)
         const rateNow = Math.max(3.79, +(bocRate + 2.15).toFixed(2));
         const rateFuture = Math.max(3.29, +(rateNow - 0.50).toFixed(2));
-        const appreciationAnnuelle = 0.05; // 5% standard APCIQ
+        const appreciationAnnuelle = 0.05;
 
         const priceFuture = priceNow * (1 + (appreciationAnnuelle * (months / 12)));
         const appreciationAmt = priceFuture - priceNow;
 
-        // Formule hypothécaire canadienne (capitalisation semestrielle, amortissement 25 ans, mise de fonds 10%)
         const getPmt = (P, R) => {
             const i = Math.pow(1 + (R / 100) / 2, 1 / 6) - 1;
             const n = 25 * 12;
@@ -1554,7 +1550,6 @@
         const pmtFuture = getPmt(priceFuture, rateFuture);
         const pmtDiff = pmtFuture - pmtNow;
 
-        // Impact net sur un terme de 5 ans (60 mois)
         const totalImpact = appreciationAmt + (pmtDiff * 60);
 
         const titleEl = document.getElementById('wb-verdict-title');
@@ -1565,17 +1560,17 @@
         const rateFutureStr = rateFuture.toFixed(2).replace('.', ',');
 
         if (totalImpact > 0) {
-            titleEl.innerHTML = `\u26a0\ufe0f Co\u00fbt Net d'attendre : +${fmt(totalImpact)}`;
+            titleEl.innerHTML = `⚠️ Coût Net d'attendre : +${fmt(totalImpact)}`;
             titleEl.style.color = '#f87171';
             boxEl.style.borderColor = 'rgba(248, 113, 113, 0.3)';
             boxEl.style.background = 'rgba(248, 113, 113, 0.05)';
-            textEl.innerHTML = `M\u00eame si les taux hypoth\u00e9caires baissaient \u00e0 <strong>${rateFutureStr} %</strong>, la propri\u00e9t\u00e9 passerait \u00e0 <strong>${fmt(priceFuture)}</strong> (+${fmt(appreciationAmt)}).<br>Attendre ${months} mois vous co\u00fbterait plus cher en mise de fonds, en paiements et en \u00e9quit\u00e9.`;
+            textEl.innerHTML = `Même si les taux hypothécaires baissaient à <strong>${rateFutureStr} %</strong>, la propriété passerait à <strong>${fmt(priceFuture)}</strong> (+${fmt(appreciationAmt)}).<br>Attendre ${months} mois vous coûterait plus cher en mise de fonds, en paiements et en équité.`;
         } else {
-            titleEl.innerHTML = `\u2705 \u00c9conomie Nette : ${fmt(Math.abs(totalImpact))}`;
+            titleEl.innerHTML = `✅ Économie Nette : ${fmt(Math.abs(totalImpact))}`;
             titleEl.style.color = '#a7ff00';
             boxEl.style.borderColor = 'rgba(167, 255, 0, 0.3)';
             boxEl.style.background = 'rgba(167, 255, 0, 0.05)';
-            textEl.innerHTML = `Dans ce sc\u00e9nario (taux \u00e0 ${rateFutureStr} %), la baisse de taux compense l'appr\u00e9ciation des prix sur ${months} mois.`;
+            textEl.innerHTML = `Dans ce scénario (taux à ${rateFutureStr} %), la baisse de taux compense l'appréciation des prix sur ${months} mois.`;
         }
     }
 
