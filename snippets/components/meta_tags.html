@@ -373,7 +373,7 @@ INSTRUCTIONS:
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
 
-    /* 8. COMPACT GLOBAL HEADER & REDUCED TOP GAP (UX ABOVE-THE-FOLD) */
+        /* 8. COMPACT GLOBAL HEADER & REDUCED TOP GAP (UX ABOVE-THE-FOLD) */
     .theme-header {
         padding-top: 6px !important;
         padding-bottom: 6px !important;
@@ -390,19 +390,24 @@ INSTRUCTIONS:
     .page-container > .zpsection:first-child {
         padding-top: 12px !important;
     }
-    /* Global override for internal page heroes so all internal pages share the sleek compact height */
+    /* Global override for internal page heroes so all internal pages share the sleek compact height AND clear space for the CTA button */
     .hero-about, .hero-amb, .hero-buyer, .hero-seller, .hero-investor,
     .hero-commercial, .hero-immob, .hero-mortgage, .hero-prequal,
-    .hero-finance, .hero-renewal, .hero-contact, .faq-hero,
-    .liens-hero, .conditions-hero, .privacy-hero {
+    .hero-finance, .hero-renewal, .hero-contact {
         min-height: 260px !important;
-        padding: 42px 24px 36px !important;
+        padding: 38px 24px 64px !important;
+        border-radius: 32px !important;
+        margin-top: 8px !important;
+    }
+    .faq-hero, .liens-hero, .conditions-hero, .privacy-hero {
+        min-height: 220px !important;
+        padding: 38px 24px 36px !important;
         border-radius: 32px !important;
         margin-top: 8px !important;
     }
     .city-hero {
-        min-height: 300px !important;
-        padding: 50px 24px 42px !important;
+        min-height: 290px !important;
+        padding: 44px 24px 68px !important;
         border-bottom-left-radius: 36px !important;
         border-bottom-right-radius: 36px !important;
     }
@@ -422,11 +427,24 @@ INSTRUCTIONS:
     .hero-renewal p, .hero-contact p, .faq-hero p,
     .liens-hero p, .conditions-hero p, .privacy-hero p, .city-hero p {
         font-size: 1.02rem !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 22px !important;
         line-height: 1.5 !important;
     }
-
-
+    .hero-about .hero-btn, .hero-amb .hero-btn, .hero-buyer .hero-btn,
+    .hero-seller .hero-btn, .hero-investor .hero-btn, .hero-commercial .hero-btn,
+    .hero-immob .hero-btn, .hero-mortgage .hero-btn, .hero-prequal .hero-btn,
+    .hero-finance .hero-btn, .hero-renewal .hero-btn, .hero-contact .hero-btn {
+        padding: 15px 38px !important;
+        font-size: 0.95rem !important;
+        margin-bottom: 6px !important;
+    }
+    /* Prevent overlapping card grids from covering the hero CTA button */
+    .hub-grid, .amb-pillars, .about-stats-strip, .market-dashboard {
+        margin-top: -24px !important;
+    }
+    .services-grid, .contact-grid, .calc-wrapper {
+        margin-top: -45px !important;
+    }
 </style>
 
 <script>
