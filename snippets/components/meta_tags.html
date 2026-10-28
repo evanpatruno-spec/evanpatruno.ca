@@ -373,7 +373,7 @@ INSTRUCTIONS:
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
 
-            /* 8. COMPACT GLOBAL HEADER & REDUCED TOP GAP (UX ABOVE-THE-FOLD) */
+                /* 8. COMPACT GLOBAL HEADER & REDUCED TOP GAP (UX ABOVE-THE-FOLD) */
     .theme-header {
         padding-top: 6px !important;
         padding-bottom: 6px !important;
@@ -388,28 +388,29 @@ INSTRUCTIONS:
         transition: transform 0.25s ease;
     }
     .page-container > .zpsection:first-child {
-        padding-top: 12px !important;
+        padding-top: 8px !important;
+    }
+    /* Neutralize Zoho Builder's negative margin-block-start (-77px / -75px / -58px) on wrapper rows/cols so the top of Hero banners is NEVER clipped under the header */
+    .page-container .zprow,
+    .page-container .zpelem-col {
+        margin-block-start: 0px !important;
+        margin-top: 0px !important;
     }
     /* Safety CSS for BoC Alert & Modal if ever included on any page */
     #boc-alert-wrap { display: none; }
     #boc-lead-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 30000; }
     #boc-lead-modal.active { display: flex; }
 
-    /* Global override for internal page heroes: sleek compact height (like /marche) with full button visibility */
+    /* Global override for internal page heroes: all 4 corners rounded (32px) + balanced top/bottom padding so H1 and CTA button breathe */
     .hero-about, .hero-amb, .hero-buyer, .hero-seller, .hero-investor,
     .hero-commercial, .hero-immob, .hero-mortgage, .hero-prequal,
     .hero-finance, .hero-renewal, .hero-contact,
-    .faq-hero, .liens-hero, .conditions-hero, .privacy-hero, .listing-hero {
+    .faq-hero, .liens-hero, .conditions-hero, .privacy-hero, .listing-hero, .city-hero {
         min-height: auto !important;
-        padding: 36px 24px 36px !important;
+        padding: 44px 24px 38px !important;
         border-radius: 32px !important;
-        margin-top: 8px !important;
-    }
-    .city-hero {
-        min-height: auto !important;
-        padding: 36px 24px 36px !important;
-        border-bottom-left-radius: 36px !important;
-        border-bottom-right-radius: 36px !important;
+        margin: 8px 20px 0 !important;
+        overflow: hidden !important;
     }
     .hero-about h1, .hero-amb h1, .hero-buyer h1, .hero-seller h1,
     .hero-investor h1, .hero-commercial h1, .hero-immob h1,
@@ -419,7 +420,8 @@ INSTRUCTIONS:
         font-size: clamp(1.85rem, 3.4vw, 2.65rem) !important;
         letter-spacing: -0.8px !important;
         line-height: 1.15 !important;
-        margin-bottom: 12px !important;
+        margin-top: 0 !important;
+        margin-bottom: 14px !important;
     }
     .hero-about p, .hero-amb p, .hero-buyer p, .hero-seller p,
     .hero-investor p, .hero-commercial p, .hero-immob p,
@@ -427,7 +429,7 @@ INSTRUCTIONS:
     .hero-renewal p, .hero-contact p, .faq-hero p,
     .liens-hero p, .conditions-hero p, .privacy-hero p, .listing-hero p, .city-hero p {
         font-size: 1.02rem !important;
-        margin: 0 auto 20px !important;
+        margin: 0 auto 22px !important;
         line-height: 1.5 !important;
     }
     .hero-about .hero-btn, .hero-amb .hero-btn, .hero-buyer .hero-btn,
