@@ -601,6 +601,88 @@ INSTRUCTIONS:
         border: 1px solid rgba(212, 175, 55, 0.4) !important;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
     }
+
+    /* 9. AMBIENT VELVET SILK BACKGROUND (LUXURY DRAPED MOTION) */
+    html, body {
+        background-color: #130410 !important;
+    }
+    /* Make solid page wrappers transparent so the ambient velvet silk shines through everywhere */
+    .about-lp, .amb-lp, .buyer-lp, .seller-lp, .investor-lp,
+    .commercial-lp, .immob-lp, .mortgage-lp, .prequal-lp,
+    .finance-lp, .renewal-lp, .contact-lp, .faq-lp, .liens-lp,
+    .conditions-lp, .privacy-lp, .tools-hub-container, .baro-wrap,
+    .value-section, .expert-section, .legal-footer,
+    .theme-content-area, .theme-main-container,
+    .zpsection, .zpdefault-section, .zpdefault-section-bg {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+    #ep-velvet-bg {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+        background:
+            radial-gradient(circle at 50% 0%, rgba(95, 22, 80, 0.25) 0%, transparent 70%),
+            #130410;
+    }
+    #ep-velvet-bg::before,
+    #ep-velvet-bg::after {
+        content: '';
+        position: absolute;
+        inset: -25%;
+        width: 150%;
+        height: 150%;
+        pointer-events: none;
+        will-change: transform;
+        filter: blur(70px);
+    }
+    /* Primary Velvet Drape: Deep Imperial Plum + Warm Champagne Gold Undertone */
+    #ep-velvet-bg::before {
+        background:
+            radial-gradient(ellipse 45% 40% at 28% 32%, rgba(168, 55, 145, 0.30) 0%, rgba(110, 25, 92, 0.14) 48%, transparent 75%),
+            radial-gradient(ellipse 40% 38% at 74% 68%, rgba(212, 175, 55, 0.085) 0%, rgba(135, 50, 118, 0.12) 45%, transparent 72%),
+            radial-gradient(ellipse 50% 35% at 50% 85%, rgba(120, 28, 100, 0.22) 0%, transparent 70%);
+        animation: epVelvetDriftA 20s ease-in-out infinite alternate;
+    }
+    /* Secondary Silk Sheen: Burgundy Velvet + Soft Rose-Plum Highlight */
+    #ep-velvet-bg::after {
+        background:
+            radial-gradient(ellipse 42% 45% at 72% 24%, rgba(145, 45, 125, 0.26) 0%, rgba(75, 15, 62, 0.12) 50%, transparent 75%),
+            radial-gradient(ellipse 48% 40% at 22% 76%, rgba(180, 62, 150, 0.20) 0%, transparent 70%),
+            linear-gradient(125deg, transparent 35%, rgba(255, 225, 245, 0.035) 50%, transparent 65%);
+        animation: epVelvetDriftB 26s ease-in-out infinite alternate;
+    }
+    @keyframes epVelvetDriftA {
+        0% {
+            transform: translate3d(-4%, -3%, 0) scale(1) rotate(0deg);
+        }
+        50% {
+            transform: translate3d(3%, 4%, 0) scale(1.06) rotate(2deg);
+        }
+        100% {
+            transform: translate3d(-2%, 5%, 0) scale(0.97) rotate(-1.5deg);
+        }
+    }
+    @keyframes epVelvetDriftB {
+        0% {
+            transform: translate3d(4%, 3%, 0) scale(1.03) rotate(0deg);
+        }
+        50% {
+            transform: translate3d(-4%, -2%, 0) scale(0.96) rotate(-2deg);
+        }
+        100% {
+            transform: translate3d(2%, -4%, 0) scale(1.05) rotate(1.5deg);
+        }
+    }
+    /* Ensure site content sits cleanly above the fixed velvet canvas */
+    .theme-header, .page-container, footer, .theme-footer-area {
+        position: relative;
+        z-index: 1;
+    }
 </style>
 
 <script>
@@ -631,6 +713,13 @@ INSTRUCTIONS:
         // Create bar element
         const bar = document.createElement('div');
         bar.id = 'ep-reading-progress';
+        /* ep-velvet-bg-init */
+        if (!document.getElementById('ep-velvet-bg')) {
+            const velvet = document.createElement('div');
+            velvet.id = 'ep-velvet-bg';
+            velvet.setAttribute('aria-hidden', 'true');
+            document.body.prepend(velvet);
+        }
         document.body.prepend(bar);
 
         window.addEventListener('scroll', () => {
