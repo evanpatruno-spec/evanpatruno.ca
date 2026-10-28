@@ -734,6 +734,27 @@
         margin-left: 5px;
     }
 
+    .trend-up {
+        color: #2ecc71;
+    }
+
+    .trend-down {
+        color: #e74c3c;
+    }
+
+    .baro-section-period {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.55);
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 4px 12px;
+        border-radius: 50px;
+        margin-left: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
     /* ── EDO SECTIONS (Rent/Buy, Calendar, Lexicon) ── */
     .baro-edu-grid {
         display: grid;
@@ -945,7 +966,7 @@
 
 
         <!-- ── STATS CENTRIS ── -->
-        <div class="baro-section-title">📉 Statistiques du Marché — Centris / APCIQ</div>
+        <div class="baro-section-title" style="display:flex; align-items:center; flex-wrap:wrap; gap:8px;"><span>📉 Statistiques du Marché — Centris / APCIQ</span><span class="baro-section-period" id="baroStatsPeriod">Septembre 2026</span></div>
 
         <div class="baro-stats-grid" id="baroStatsGrid">
             <!-- MTL -->
@@ -1096,49 +1117,47 @@
 
             <!-- ECO CALENDAR -->
             <div class="edu-card">
-                <div class="edu-title">🗓️ Calendrier Économique 2026</div>
-
-                <div class="cal-item">
-                    <div class="cal-date-box" style="background: var(--m-primary);">
-                        <span class="cal-day">29</span>
-                        <span class="cal-month">Avril</span>
+                <div class="edu-title">🗓️ Calendrier Économique</div>
+                <div id="baroEcoCalendar">
+                    <div class="cal-item">
+                        <div class="cal-date-box" style="background: var(--m-primary);">
+                            <span class="cal-day">28</span>
+                            <span class="cal-month">Oct</span>
+                        </div>
+                        <div class="cal-info">
+                            <div class="cal-event">Taux Directeur (BoC)</div>
+                            <div class="cal-desc">Décision sur les taux d'intérêt et RPM.</div>
+                        </div>
                     </div>
-                    <div class="cal-info">
-                        <div class="cal-event">Taux Directeur (BoC)</div>
-                        <div class="cal-desc">Décision sur les taux d'intérêt.</div>
+                    <div class="cal-item">
+                        <div class="cal-date-box" style="background: rgba(255,255,255,0.1);">
+                            <span class="cal-day">19</span>
+                            <span class="cal-month">Nov</span>
+                        </div>
+                        <div class="cal-info">
+                            <div class="cal-event">IPC (Inflation)</div>
+                            <div class="cal-desc">Rapport mensuel de Statistique Canada.</div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="cal-item">
-                    <div class="cal-date-box" style="background: rgba(255,255,255,0.1);">
-                        <span class="cal-day">19</span>
-                        <span class="cal-month">Mai</span>
+                    <div class="cal-item">
+                        <div class="cal-date-box" style="background: rgba(255,255,255,0.1);">
+                            <span class="cal-day">09</span>
+                            <span class="cal-month">Déc</span>
+                        </div>
+                        <div class="cal-info">
+                            <div class="cal-event">Taux Directeur (BoC)</div>
+                            <div class="cal-desc">Dernière décision de politique monétaire 2026.</div>
+                        </div>
                     </div>
-                    <div class="cal-info">
-                        <div class="cal-event">CPI (Inflation)</div>
-                        <div class="cal-desc">Rapport de Statistique Canada.</div>
-                    </div>
-                </div>
-
-                <div class="cal-item">
-                    <div class="cal-date-box" style="background: rgba(255,255,255,0.1);">
-                        <span class="cal-day">03</span>
-                        <span class="cal-month">Juin</span>
-                    </div>
-                    <div class="cal-info">
-                        <div class="cal-event">Taux Directeur (BoC)</div>
-                        <div class="cal-desc">Prochaine annonce stratégique.</div>
-                    </div>
-                </div>
-
-                <div class="cal-item">
-                    <div class="cal-date-box" style="background: rgba(255,255,255,0.1);">
-                        <span class="cal-day">17</span>
-                        <span class="cal-month">Juin</span>
-                    </div>
-                    <div class="cal-info">
-                        <div class="cal-event">Mises en chantier</div>
-                        <div class="cal-desc">Indicateur de l'offre future.</div>
+                    <div class="cal-item">
+                        <div class="cal-date-box" style="background: rgba(255,255,255,0.1);">
+                            <span class="cal-day">27</span>
+                            <span class="cal-month">Jan</span>
+                        </div>
+                        <div class="cal-info">
+                            <div class="cal-event">Taux Directeur (BoC)</div>
+                            <div class="cal-desc">Première annonce stratégique de 2027.</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1222,7 +1241,7 @@
 
         <!-- ── CTA ── -->
         <div class="baro-cta-block">
-            <img src="https://evanpatruno.ca/logo-ep.png" alt="Evan Patruno" class="baro-cta-photo"
+            <img src="https://dossier.evanpatruno.ca/evan-photo.jpg" alt="Evan Patruno" class="baro-cta-photo"
                 onerror="this.style.display='none'" />
             <div class="baro-cta-text">
                 <h3>Que signifient ces données pour vous?</h3>
@@ -1245,6 +1264,8 @@
 </div>
 
 <script>
+    window.currentBocRate = 2.25;
+
     (function () {
         // URLs absolues JSONbin (les fichiers /news.json et /boc_rates.json sont sur Vercel,
         // pas sur Zoho Sites — on lit depuis JSONbin directement)
@@ -1254,15 +1275,49 @@
 
         const BOC_SCHEDULE = [
             '2026-01-28', '2026-03-18', '2026-04-29', '2026-06-10',
-            '2026-07-15', '2026-09-02', '2026-10-28', '2026-12-09'
+            '2026-07-15', '2026-09-02', '2026-10-28', '2026-12-09',
+            '2027-01-27', '2027-03-10', '2027-04-14', '2027-06-02',
+            '2027-07-14', '2027-09-01', '2027-10-20', '2027-12-08'
+        ];
+
+        const ECO_EVENTS = [
+            { date: '2026-10-28', day: '28', month: 'Oct', title: 'Taux Directeur (BoC)', desc: "Décision sur les taux d'intérêt et RPM.", primary: true },
+            { date: '2026-11-05', day: '05', month: 'Nov', title: 'Statistiques APCIQ', desc: 'Bilan mensuel du marché du Grand Montréal.', primary: false },
+            { date: '2026-11-19', day: '19', month: 'Nov', title: 'IPC (Inflation)', desc: 'Rapport mensuel de Statistique Canada.', primary: false },
+            { date: '2026-12-09', day: '09', month: 'Déc', title: 'Taux Directeur (BoC)', desc: 'Dernière décision de politique monétaire 2026.', primary: true },
+            { date: '2026-12-17', day: '17', month: 'Déc', title: 'Mises en chantier (SCHL)', desc: "Indicateur clé de l'offre résidentielle future.", primary: false },
+            { date: '2027-01-27', day: '27', month: 'Jan', title: 'Taux Directeur (BoC)', desc: 'Première annonce stratégique de 2027.', primary: true },
+            { date: '2027-02-16', day: '16', month: 'Fév', title: 'IPC (Inflation)', desc: 'Rapport mensuel de Statistique Canada.', primary: false },
+            { date: '2027-03-10', day: '10', month: 'Mars', title: 'Taux Directeur (BoC)', desc: "Décision sur les taux d'intérêt.", primary: true }
         ];
 
         let allNews = [];
         let activeRegion = 'all';
-        let currentBocRate = 4.89; // Fallback
+
+        function renderEcoCalendar() {
+            const container = document.getElementById('baroEcoCalendar');
+            if (!container) return;
+            const todayIso = new Date().toLocaleDateString('en-CA');
+            const upcoming = ECO_EVENTS.filter(ev => ev.date >= todayIso).slice(0, 4);
+            if (!upcoming.length) return;
+            container.innerHTML = upcoming.map((ev, idx) => `
+                <div class="cal-item">
+                    <div class="cal-date-box" style="background: ${idx === 0 || ev.primary ? 'var(--m-primary)' : 'rgba(255,255,255,0.1)'};">
+                        <span class="cal-day">${ev.day}</span>
+                        <span class="cal-month">${ev.month}</span>
+                    </div>
+                    <div class="cal-info">
+                        <div class="cal-event">${ev.title}</div>
+                        <div class="cal-desc">${ev.desc}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
 
         async function loadData() {
+            renderEcoCalendar();
             await Promise.all([loadBOC(), loadNews()]);
+            calcWaitWidget();
         }
 
         async function loadNews() {
@@ -1299,22 +1354,32 @@
                 const rate = parseFloat(latest.V39079.v);
                 const prevR = parseFloat(prev.V39079.v);
                 const status = rate > prevR ? 'a augment\u00e9' : rate < prevR ? 'a diminu\u00e9' : 'a maintenu';
-                const now = new Date();
-                let nextIso = '', nextFr = '\u2014';
+                const todayIso = new Date().toLocaleDateString('en-CA');
+                const months = ['janvier', 'f\u00e9vrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'ao\u00fbt', 'septembre', 'octobre', 'novembre', 'd\u00e9cembre'];
+                let nextIso = '', nextFr = '\u2014', lastIso = '';
                 for (const d of BOC_SCHEDULE) {
-                    if (new Date(d) > now) { nextIso = d; break; }
+                    if (d >= todayIso && !nextIso) { nextIso = d; }
+                    if (d <= todayIso) { lastIso = d; }
                 }
                 if (nextIso) {
-                    const months = ['janvier', 'f\u00e9vrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'ao\u00fbt', 'septembre', 'octobre', 'novembre', 'd\u00e9cembre'];
                     const dp = new Date(nextIso + 'T12:00:00');
                     nextFr = `${dp.getDate()} ${months[dp.getMonth()]} ${dp.getFullYear()}`;
                 }
-                renderBOC({ rate, status, date: latest.d, next_announcement: nextFr, next_date_iso: nextIso });
+                let lastFr = latest.d;
+                if (lastIso) {
+                    const lp = new Date(lastIso + 'T12:00:00');
+                    lastFr = `${lp.getDate()} ${months[lp.getMonth()]} ${lp.getFullYear()}`;
+                }
+                renderBOC({ rate, status, date: lastFr, last_date_iso: lastIso, next_announcement: nextFr, next_date_iso: nextIso });
             } catch (e) { console.error('BOC Valet error:', e); }
         }
 
         function renderStats(s) {
             if (!s) return;
+            const periodEl = document.getElementById('baroStatsPeriod');
+            if (periodEl && s.last_quarter) {
+                periodEl.textContent = 'P\u00e9riode : ' + s.last_quarter;
+            }
             const regions = {
                 'montreal': 'Mtl',
                 'laval': 'Laval',
@@ -1326,7 +1391,6 @@
                 const data = s[key];
                 if (!data) continue;
 
-                // Elements
                 const elPrice = document.getElementById(`stat${pfx}Price`);
                 const elTrend = document.getElementById(`stat${pfx}Trend`);
                 const elCondo = document.getElementById(`stat${pfx}CondoPrice`);
@@ -1335,71 +1399,103 @@
                 const elDays = document.getElementById(`stat${pfx}Days`);
                 const elCond = document.getElementById(`stat${pfx}Condition`);
 
-                // Update UI
-                if (elPrice) elPrice.textContent = data.price + ' $';
+                if (elPrice) elPrice.textContent = data.price + ' ;
                 if (elTrend) {
                     elTrend.textContent = data.trend;
                     elTrend.className = 'stats-trend-small ' + (data.trend.includes('-') ? 'trend-down' : 'trend-up');
                 }
-                if (elCondo) elCondo.textContent = (data.condo_price || '—') + ' $';
+                if (elCondo) elCondo.textContent = (data.condo_price || '\u2014') + ' ;
                 if (elCondoTrend) {
                     elCondoTrend.textContent = data.condo_trend || '';
                     elCondoTrend.className = 'stats-trend-small ' + ((data.condo_trend || '').includes('-') ? 'trend-down' : 'trend-up');
                 }
-                if (elSales) elSales.textContent = data.sales || '—';
-                if (elDays) elDays.textContent = data.days || '—';
+                if (elSales) elSales.textContent = data.sales || '\u2014';
+                if (elDays) elDays.textContent = data.days || '\u2014';
 
                 if (elCond) {
-                    const cond = data.condition || '—';
-                    elCond.textContent = 'Marché ' + cond;
+                    const cond = data.condition || '\u2014';
+                    elCond.textContent = 'March\u00e9 ' + cond;
                     elCond.className = 'stats-condition-pill ' + (cond.toLowerCase().includes('vendeur') ? 'cond-sellers' : 'cond-buyers');
                 }
             }
         }
 
+        function formatIsoDateFr(iso) {
+            if (!iso) return '';
+            const months = ['janvier', 'f\u00e9vrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'ao\u00fbt', 'septembre', 'octobre', 'novembre', 'd\u00e9cembre'];
+            const dp = new Date(iso + 'T12:00:00');
+            if (isNaN(dp.getTime())) return '';
+            return `${dp.getDate()} ${months[dp.getMonth()]} ${dp.getFullYear()}`;
+        }
+
         function renderBOC(d) {
             const rate = parseFloat(d.rate) || 2.25;
-            currentBocRate = rate;
+            window.currentBocRate = rate;
             document.getElementById('bocRateVal').textContent = rate.toFixed(2).replace('.', ',');
             const status = (d.status || 'a maintenu').toLowerCase();
             const pill = document.getElementById('bocStatusPill');
             const icon = document.getElementById('bocStatusIcon');
             const txt = document.getElementById('bocStatusText');
+            const decisionDateFr = d.last_date_iso ? formatIsoDateFr(d.last_date_iso) : (d.date || '');
             pill.className = 'boc-status-pill';
             if (status.includes('baiss') || status.includes('diminu') || status.includes('cut')) {
                 pill.classList.add('boc-status-cut'); icon.textContent = '\ud83d\udcc9';
-                txt.textContent = 'Taux abaiss\u00e9 \u2014 ' + (d.date || '');
+                txt.textContent = 'Taux abaiss\u00e9 \u2014 ' + decisionDateFr;
             } else if (status.includes('hausse') || status.includes('augment') || status.includes('hike')) {
                 pill.classList.add('boc-status-hike'); icon.textContent = '\ud83d\udcc8';
-                txt.textContent = 'Taux augment\u00e9 \u2014 ' + (d.date || '');
+                txt.textContent = 'Taux augment\u00e9 \u2014 ' + decisionDateFr;
             } else {
                 pill.classList.add('boc-status-stable'); icon.textContent = '\u23f8';
-                txt.textContent = 'Taux maintenu \u2014 ' + (d.date || '');
+                txt.textContent = 'Taux maintenu \u2014 ' + decisionDateFr;
             }
-            document.getElementById('bocLastDate').textContent = d.date || '\u2014';
+            document.getElementById('bocLastDate').textContent = decisionDateFr || '\u2014';
             document.getElementById('bocNextDate').textContent = d.next_announcement || '\u2014';
             if (d.next_date_iso) {
-                const diff = Math.ceil((new Date(d.next_date_iso) - new Date()) / 86400000);
-                document.getElementById('bocCountdownDays').textContent = diff > 0 ? diff : '0';
+                const target = new Date(d.next_date_iso + 'T09:45:00');
+                const now = new Date();
+                const diff = Math.max(0, Math.ceil((target - now) / 86400000));
+                document.getElementById('bocCountdownDays').textContent = String(diff);
             }
+        }
+
+        function inferRegions(n) {
+            const tags = new Set((n.cities || []).map(c => c.toLowerCase()));
+            const text = `${n.title || ''} ${n.description || ''}`.toLowerCase();
+            if (/montr[\u00e9e]al|rmr|grand montr[\u00e9e]al|centris|apciq/.test(text)) tags.add('montreal');
+            if (/laval|chomedey|sainte-doroth[\u00e9e]e|vimont|pont-viau/.test(text)) tags.add('laval');
+            if (/rive-sud|longueuil|brossard|chambly|saint-jean|candiac|la prairie|boucherville|saint-bruno|saint-lambert|mont[\u00e9e]r[\u00e9e]gie|couronne/.test(text)) tags.add('rive-sud');
+            if (/rive-nord|terrebonne|blainville|saint-j[\u00e9e]r[\u00f4o]me|mascouche|mirabel|repentigny|lavaltrie|laurentides|lanaudi[\u00e8e]re|couronne/.test(text)) tags.add('rive-nord');
+            return Array.from(tags);
         }
 
         function renderNews(news) {
             const grid = document.getElementById('baroNewsGrid');
-            const filtered = activeRegion === 'all'
-                ? news
-                : news.filter(n => (n.cities || []).some(c => c.toLowerCase().includes(activeRegion)));
+            let filtered = news;
+            if (activeRegion !== 'all') {
+                filtered = news.filter(n => inferRegions(n).some(c => c.includes(activeRegion)));
+                if (!filtered.length) {
+                    filtered = news.filter(n => inferRegions(n).includes('montreal') || (n.source || '').toUpperCase().includes('APCIQ'));
+                }
+            }
             if (!filtered.length) {
                 grid.innerHTML = '<div class="news-empty">Aucune actualit\u00e9 trouv\u00e9e pour cette r\u00e9gion.</div>';
                 return;
             }
             function cleanSrc(src) {
                 if (!src) return 'Source';
-                return src.replace(/[^\x00-\x7F\u00e9\u00e0\u00e2\u00e7\u00e8\u00ea\u00eb\u00ee\u00ef\u00f4\u00f9\u00fb\u00fc\s\-\xb7'.]/g, '').trim() || 'Source';
+                return src.replace(/[^\x00-\x7F\u00C0-\u017F\s\-\xb7'.]/g, '').trim() || 'Source';
             }
+            const labelMap = {
+                'montreal': 'Grand Montr\u00e9al',
+                'laval': 'Laval',
+                'rive-sud': 'Rive-Sud',
+                'rive-nord': 'Rive-Nord',
+                'quebec': 'Qu\u00e9bec'
+            };
             grid.innerHTML = filtered.slice(0, 30).map(n => {
-                const isLocal = n.cities && n.cities.length > 0;
-                const regions = (n.cities || []).map(c => c.charAt(0).toUpperCase() + c.slice(1)).join(', ');
+                const regList = inferRegions(n);
+                const isLocal = regList.length > 0;
+                const regions = regList.map(c => labelMap[c] || (c.charAt(0).toUpperCase() + c.slice(1))).slice(0, 2).join(' \u00b7 ');
                 const src = cleanSrc(n.source);
                 return `<a href="${n.link}" target="_blank" rel="noopener" class="news-card">
                 <div class="news-card-top">
@@ -1418,7 +1514,6 @@
             btn.classList.add('active');
             activeRegion = region;
 
-            // Highlight card in stats grid
             document.querySelectorAll('.stats-card').forEach(c => {
                 c.classList.remove('active-region');
                 if (c.getAttribute('data-region') === region) c.classList.add('active-region');
@@ -1432,20 +1527,26 @@
 
     // WAIT VS BUY WIDGET LOGIC
     function calcWaitWidget() {
-        const priceNow = parseFloat(document.getElementById('wb-price').value) || 0;
-        const months = parseInt(document.getElementById('wb-months').value) || 12;
-        const rateNow = currentBocRate; // Use the dynamic rate from BoC
-        const rateFuture = rateNow - 1.0; // Assume 1% drop for the quick analysis
-        const appreciationAnnuelle = 0.05; // 5% standard
+        const priceEl = document.getElementById('wb-price');
+        const monthsEl = document.getElementById('wb-months');
+        if (!priceEl || !monthsEl) return;
+
+        const priceNow = parseFloat(priceEl.value) || 0;
+        const months = parseInt(monthsEl.value) || 12;
+        const bocRate = typeof window.currentBocRate === 'number' ? window.currentBocRate : 2.25;
+        // Taux hypothécaire 5 ans estimé à partir du taux directeur (spread ~2.15%, plancher 3.79%)
+        const rateNow = Math.max(3.79, +(bocRate + 2.15).toFixed(2));
+        const rateFuture = Math.max(3.29, +(rateNow - 0.50).toFixed(2));
+        const appreciationAnnuelle = 0.05; // 5% standard APCIQ
 
         const priceFuture = priceNow * (1 + (appreciationAnnuelle * (months / 12)));
         const appreciationAmt = priceFuture - priceNow;
 
-        // Simplified Canadian Mortgage PMT formula
+        // Formule hypothécaire canadienne (capitalisation semestrielle, amortissement 25 ans, mise de fonds 10%)
         const getPmt = (P, R) => {
             const i = Math.pow(1 + (R / 100) / 2, 1 / 6) - 1;
             const n = 25 * 12;
-            const loan = P * 0.95;
+            const loan = P * 0.90;
             return (loan * i) / (1 - Math.pow(1 + i, -n));
         };
 
@@ -1453,7 +1554,7 @@
         const pmtFuture = getPmt(priceFuture, rateFuture);
         const pmtDiff = pmtFuture - pmtNow;
 
-        // Impact on 5 years (Standard Term)
+        // Impact net sur un terme de 5 ans (60 mois)
         const totalImpact = appreciationAmt + (pmtDiff * 60);
 
         const titleEl = document.getElementById('wb-verdict-title');
@@ -1461,22 +1562,22 @@
         const boxEl = document.getElementById('wb-verdict-box');
 
         const fmt = (v) => new Intl.NumberFormat('fr-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 }).format(v);
+        const rateFutureStr = rateFuture.toFixed(2).replace('.', ',');
 
         if (totalImpact > 0) {
-            titleEl.innerHTML = `⚠️ Coût Net : +${fmt(totalImpact)}`;
-            titleEl.style.color = "#f87171";
-            boxEl.style.borderColor = "rgba(248, 113, 113, 0.3)";
-            boxEl.style.background = "rgba(248, 113, 113, 0.05)";
-            textEl.innerHTML = `Même si les taux baissent à 4%, la maison passera à <strong>${fmt(priceFuture)}</strong> (+${fmt(appreciationAmt)}). <br>Attendre 1 an vous coûterait plus cher par mois et en équité.`;
+            titleEl.innerHTML = `\u26a0\ufe0f Co\u00fbt Net d'attendre : +${fmt(totalImpact)}`;
+            titleEl.style.color = '#f87171';
+            boxEl.style.borderColor = 'rgba(248, 113, 113, 0.3)';
+            boxEl.style.background = 'rgba(248, 113, 113, 0.05)';
+            textEl.innerHTML = `M\u00eame si les taux hypoth\u00e9caires baissaient \u00e0 <strong>${rateFutureStr} %</strong>, la propri\u00e9t\u00e9 passerait \u00e0 <strong>${fmt(priceFuture)}</strong> (+${fmt(appreciationAmt)}).<br>Attendre ${months} mois vous co\u00fbterait plus cher en mise de fonds, en paiements et en \u00e9quit\u00e9.`;
         } else {
-            titleEl.innerHTML = `✅ Économie Net : ${fmt(Math.abs(totalImpact))}`;
-            titleEl.style.color = "#a7ff00";
-            boxEl.style.borderColor = "rgba(167, 255, 0, 0.3)";
-            boxEl.style.background = "rgba(167, 255, 0, 0.05)";
-            textEl.innerHTML = `Dans ce scénario, la baisse de taux compense l'appréciation des prix. Bonne stratégie d'attente !`;
+            titleEl.innerHTML = `\u2705 \u00c9conomie Nette : ${fmt(Math.abs(totalImpact))}`;
+            titleEl.style.color = '#a7ff00';
+            boxEl.style.borderColor = 'rgba(167, 255, 0, 0.3)';
+            boxEl.style.background = 'rgba(167, 255, 0, 0.05)';
+            textEl.innerHTML = `Dans ce sc\u00e9nario (taux \u00e0 ${rateFutureStr} %), la baisse de taux compense l'appr\u00e9ciation des prix sur ${months} mois.`;
         }
     }
 
-    // Init
-    setTimeout(calcWaitWidget, 1000);
+    setTimeout(calcWaitWidget, 300);
 </script>

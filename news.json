@@ -13,8 +13,13 @@
       "link": "https://apciq.ca/stats-t3-2026/",
       "source": "APCIQ",
       "description": "L’Île-des-Sœurs, le 14 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) vient de publier les plus récentes statistiques du marché immobilier résidentiel de la province de Québec, établies d’après la base de données…",
-      "cities": [],
-      "category": "general"
+      "cities": [
+        "montreal",
+        "laval",
+        "rive-sud",
+        "rive-nord"
+      ],
+      "category": "local"
     },
     {
       "title": "RMR de Gatineau : plus de choix pour les acheteurs et moins de pression sur les prix",
@@ -38,7 +43,10 @@
       "source": "APCIQ",
       "description": "L’Île-des-Sœurs, le 2 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de septembre 2026.",
       "cities": [
-        "montreal"
+        "montreal",
+        "laval",
+        "rive-sud",
+        "rive-nord"
       ],
       "category": "local"
     },
@@ -64,7 +72,10 @@
       "source": "APCIQ",
       "description": "L’Île-des-Sœurs, le 4 septembre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’août 2026.",
       "cities": [
-        "montreal"
+        "montreal",
+        "laval",
+        "rive-sud",
+        "rive-nord"
       ],
       "category": "local"
     },
@@ -82,7 +93,10 @@
       "source": "APCIQ",
       "description": "L’Île-des-Sœurs, le 6 août 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois de juillet 2026.",
       "cities": [
-        "montreal"
+        "montreal",
+        "laval",
+        "rive-sud",
+        "rive-nord"
       ],
       "category": "local"
     },
@@ -181,8 +195,10 @@
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxONERPT1hQOGJoNlUwLXRfdDZiOVdNVE9kb0k0RUhSTmFVUmJEU1lKT3VzY2Y1anJPcTNzN0R3cjBLTDJBSWpFdmZFOXNEbEdNRzVHRjItZ2dYZ1FDenlrYXlmYlo3VzQwN3hIVjFUcG4weUxqYUxFX1pGUENPTXBuNlNYTUdKOFBPUnUtajlrQ2RVZEwxM1pzZVJUZXpnTFNNOFRzMFFGSjI?oc=5",
       "source": "L’info du Nord Sainte-Agathe",
       "description": "Revue d'actualité immobilière publiée par L’info du Nord Sainte-Agathe portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
+      "cities": [
+        "rive-nord"
+      ],
+      "category": "local"
     },
     {
       "title": "Immobilier Québec 2026 : les prix baissent, le marché ralentit",

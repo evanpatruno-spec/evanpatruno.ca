@@ -180,10 +180,20 @@ def fetch_feed_news(source_name, url):
                 clean_desc = truncate_clean(clean_desc, 260)
 
             full_text = (clean_title + " " + clean_desc).lower()
-            matched_cities = []
+            matched_cities = set()
             for city in CITIES:
                 if city in full_text:
-                    matched_cities.append(city.replace('montréal', 'montreal').replace('st-jean', 'saint-jean'))
+                    matched_cities.add(city.replace('montréal', 'montreal').replace('st-jean', 'saint-jean'))
+
+            region_keywords = {
+                "montreal": ["montréal", "montreal", "île de montréal", "rmr de montréal", "grand montréal", "métropole"],
+                "laval": ["laval", "couronne nord", "couronnes", "rmr de montréal", "grand montréal"],
+                "rive-sud": ["rive-sud", "longueuil", "brossard", "chambly", "saint-jean", "st-jean", "napierville", "candiac", "la prairie", "boucherville", "saint-hubert", "saint-lambert", "montérégie", "couronnes", "rmr de montréal"],
+                "rive-nord": ["rive-nord", "terrebonne", "blainville", "saint-jérôme", "mascouche", "mirabel", "repentigny", "sainte-thérèse", "boisbriand", "laurentides", "lanaudière", "couronnes", "rmr de montréal"]
+            }
+            for reg_tag, kw_list in region_keywords.items():
+                if any(k in full_text for k in kw_list):
+                    matched_cities.add(reg_tag)
 
             # FILTRAGE PAR MOTS-CLÉS (Pertinence Thématique)
             is_relevant = any(kw in full_text for kw in RELEVANT_KEYWORDS)
@@ -195,7 +205,7 @@ def fetch_feed_news(source_name, url):
                 "link": link.strip(),
                 "source": clean_source,
                 "description": clean_desc,
-                "cities": list(set(matched_cities)),
+                "cities": sorted(list(matched_cities)),
                 "category": "local" if matched_cities else "general"
             })
             
