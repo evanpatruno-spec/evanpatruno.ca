@@ -50,14 +50,14 @@ INSTRUCTIONS:
         background: linear-gradient(135deg, rgba(30, 10, 25, 0.96), rgba(135, 50, 118, 0.88)), url('https://images.unsplash.com/photo-1460472178825-e5240623abe5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
         background-size: cover;
         background-position: center;
-        padding: 100px 20px !important;
+        padding: 42px 24px 36px !important;
         text-align: center;
-        border-radius: 50px !important;
+        border-radius: 32px !important;
         position: relative;
         z-index: 1;
-        margin: 20px 20px 0 !important;
+        margin: 8px 20px 0 !important;
         box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);
-        min-height: 500px !important;
+        min-height: 260px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
@@ -65,7 +65,7 @@ INSTRUCTIONS:
     }
 
     .hero-investor h1 {
-        font-size: 3.5rem;
+        font-size: clamp(1.85rem, 3.4vw, 2.65rem);
         color: white;
         margin-bottom: 20px;
         letter-spacing: -2px;
@@ -135,7 +135,7 @@ INSTRUCTIONS:
     }
 
     .service-icon {
-        font-size: 3.5rem;
+        font-size: clamp(1.85rem, 3.4vw, 2.65rem);
         margin-bottom: 25px;
         display: block;
     }
@@ -351,9 +351,9 @@ INSTRUCTIONS:
 
     @media (max-width: 768px) {
         .hero-investor { 
-            padding: 60px 20px 80px !important; 
+            padding: 42px 24px 36px !important; 
             margin-top: 15px !important;
-            min-height: 350px !important;
+            min-height: 260px !important;
         }
         .hero-investor h1 { font-size: 2.2rem; }
         .hero-investor p { font-size: 1.1rem; }
@@ -367,7 +367,7 @@ INSTRUCTIONS:
             padding: 18px 30px !important; 
             font-size: 0.95rem !important;
             width: auto !important;
-            border-radius: 50px !important;
+            border-radius: 32px !important;
         }
     }
 
@@ -395,7 +395,7 @@ INSTRUCTIONS:
             padding: 18px 30px !important; 
             width: auto !important; 
             min-width: 250px; 
-            border-radius: 50px !important;
+            border-radius: 32px !important;
             white-space: nowrap;
         }
     }

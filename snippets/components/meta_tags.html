@@ -373,6 +373,60 @@ INSTRUCTIONS:
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
 
+    /* 8. COMPACT GLOBAL HEADER & REDUCED TOP GAP (UX ABOVE-THE-FOLD) */
+    .theme-header {
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+    }
+    .theme-branding-info {
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+    }
+    .theme-logo-parent img[data-zs-logo] {
+        height: 80px !important;
+        width: auto !important;
+        transition: transform 0.25s ease;
+    }
+    .page-container > .zpsection:first-child {
+        padding-top: 12px !important;
+    }
+    /* Global override for internal page heroes so all internal pages share the sleek compact height */
+    .hero-about, .hero-amb, .hero-buyer, .hero-seller, .hero-investor,
+    .hero-commercial, .hero-immob, .hero-mortgage, .hero-prequal,
+    .hero-finance, .hero-renewal, .hero-contact, .faq-hero,
+    .liens-hero, .conditions-hero, .privacy-hero {
+        min-height: 260px !important;
+        padding: 42px 24px 36px !important;
+        border-radius: 32px !important;
+        margin-top: 8px !important;
+    }
+    .city-hero {
+        min-height: 300px !important;
+        padding: 50px 24px 42px !important;
+        border-bottom-left-radius: 36px !important;
+        border-bottom-right-radius: 36px !important;
+    }
+    .hero-about h1, .hero-amb h1, .hero-buyer h1, .hero-seller h1,
+    .hero-investor h1, .hero-commercial h1, .hero-immob h1,
+    .hero-mortgage h1, .hero-prequal h1, .hero-finance h1,
+    .hero-renewal h1, .hero-contact h1, .faq-hero h1,
+    .liens-hero h1, .conditions-hero h1, .privacy-hero h1, .city-hero h1 {
+        font-size: clamp(1.85rem, 3.4vw, 2.65rem) !important;
+        letter-spacing: -0.8px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 12px !important;
+    }
+    .hero-about p, .hero-amb p, .hero-buyer p, .hero-seller p,
+    .hero-investor p, .hero-commercial p, .hero-immob p,
+    .hero-mortgage p, .hero-prequal p, .hero-finance p,
+    .hero-renewal p, .hero-contact p, .faq-hero p,
+    .liens-hero p, .conditions-hero p, .privacy-hero p, .city-hero p {
+        font-size: 1.02rem !important;
+        margin-bottom: 20px !important;
+        line-height: 1.5 !important;
+    }
+
+
 </style>
 
 <script>

@@ -9,31 +9,74 @@ INSTRUCTIONS:
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
     :root {
-        /* BRANDING DARK MODE - UNIFORMED */
+        /* BRANDING DARK MODE - LUXURY UNIFORMED */
         --hub-primary: #873276;
-        /* Brand Purple */
+        --hub-gold: #d4af37;
         --hub-accent: #1e0a19;
-        /* Brand Dark */
         --hub-bg: transparent;
-        --hub-card-bg: rgba(15, 23, 42, 0.8);
-        --hub-border: rgba(255, 255, 255, 0.1);
+        --hub-card-bg: rgba(25, 6, 20, 0.75);
+        --hub-border: rgba(212, 175, 55, 0.22);
         --hub-text-main: #ffffff;
         --hub-text-muted: #94a3b8;
-        --hub-input-bg: rgba(0, 0, 0, 0.3);
-        --hub-success: #38a169;
-        /* Subtle Emerald */
+        --hub-input-bg: rgba(0, 0, 0, 0.45);
+        --hub-success: #34d399;
     }
 
     .tools-hub-container {
-        font-family: 'Outfit', sans-serif;
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
         color: var(--hub-text-main);
         background: #1e0a19;
         margin-top: -1px;
-        padding-top: 60px; /* Ajout d'espace en haut suite à suppression du Hero */
+        padding-top: 30px;
+        padding-bottom: 60px;
     }
 
-    /* --- NAVIGATION --- */
-    /* === NAVIGATION GRILLE COCKPIT === */
+    /* --- MINI HEADER COMPACT & RAFFINÉ --- */
+    .hub-mini-header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 35px auto;
+        padding: 0 15px;
+    }
+
+    .hub-header-badge {
+        display: inline-block;
+        background: rgba(212, 175, 55, 0.12);
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        color: #d4af37;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+    }
+
+    .hub-mini-header h1 {
+        font-family: 'Cinzel', serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0 0 8px 0;
+        letter-spacing: -0.5px;
+    }
+
+    .hub-mini-header h1 span {
+        background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa771c 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hub-mini-header p {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.75);
+        margin: 0;
+        font-weight: 300;
+    }
+
+    /* === NAVIGATION GRILLE COCKPIT LUXURY GLASSMORPHISM === */
     .hub-nav-grid-wrapper {
         margin-bottom: 35px;
     }
@@ -41,7 +84,7 @@ INSTRUCTIONS:
     .hub-nav-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 15px; /* Légèrement plus d'espace pour la nouvelle largeur */
+        gap: 16px;
         max-width: 100%;
         margin: 0 auto;
     }
@@ -51,76 +94,89 @@ INSTRUCTIONS:
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        padding: 16px 10px;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 14px;
+        padding: 18px 14px;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 18px;
         cursor: pointer;
         text-decoration: none;
-        color: rgba(255, 255, 255, 0.55);
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        text-align: center;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        color: rgba(255, 255, 255, 0.65);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
-        line-height: 1.2;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
     .hub-nav-item .nav-icon {
-        font-size: 1.6rem;
-        transition: transform 0.25s ease;
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+        transition: transform 0.3s ease;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+    }
+
+    .hub-nav-item-title {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 3px;
+        line-height: 1.2;
+    }
+
+    .hub-nav-item-sub {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.45);
+        font-weight: 400;
+        line-height: 1.1;
     }
 
     .hub-nav-item:hover {
-        background: rgba(255, 255, 255, 0.09);
-        border-color: rgba(135, 50, 118, 0.4);
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(145deg, rgba(135, 50, 118, 0.25) 0%, rgba(255, 255, 255, 0.06) 100%);
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(135, 50, 118, 0.25), 0 0 15px rgba(212, 175, 55, 0.15);
     }
 
     .hub-nav-item:hover .nav-icon {
-        transform: scale(1.2);
+        transform: scale(1.18);
     }
 
     .hub-nav-item.active {
-        background: linear-gradient(135deg, rgba(135, 50, 118, 0.6), rgba(90, 30, 80, 0.6));
-        border-color: rgba(135, 50, 118, 0.8);
-        color: white;
-        box-shadow: 0 6px 20px rgba(135, 50, 118, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
-        transform: translateY(-2px);
+        background: linear-gradient(145deg, rgba(135, 50, 118, 0.5) 0%, rgba(37, 9, 30, 0.9) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.65);
+        box-shadow: 0 12px 30px rgba(135, 50, 118, 0.4), 0 0 20px rgba(212, 175, 55, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+    }
+
+    .hub-nav-item.active .hub-nav-item-title {
+        color: #d4af37;
+    }
+
+    .hub-nav-item.active .hub-nav-item-sub {
+        color: rgba(255, 255, 255, 0.75);
     }
 
     .hub-nav-item-new {
-        background: rgba(167, 255, 0, 0.07) !important;
-        border-color: rgba(167, 255, 0, 0.25) !important;
-        color: #a7ff00 !important;
+        border-color: rgba(167, 255, 0, 0.3) !important;
     }
 
-    .hub-nav-item-new.active {
-        background: linear-gradient(135deg, rgba(167, 255, 0, 0.3), rgba(120, 200, 0, 0.2)) !important;
-        border-color: rgba(167, 255, 0, 0.7) !important;
-        box-shadow: 0 6px 20px rgba(167, 255, 0, 0.25) !important;
+    .hub-nav-item-new .evt-badge-new {
+        background: #a7ff00;
+        color: #12040f;
+        font-size: 0.62rem;
+        font-weight: 900;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-top: 4px;
+        display: inline-block;
     }
 
-    .hub-nav-item-new .nav-icon {
-        filter: drop-shadow(0 0 6px rgba(167, 255, 0, 0.6));
-    }
-
-    @media (max-width: 600px) {
-        .hub-nav-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-        }
-        .hub-nav-item {
-            padding: 12px 8px;
-            font-size: 0.72rem;
-        }
-        .hub-nav-item .nav-icon {
-            font-size: 1.3rem;
-        }
+    @media (max-width: 768px) {
+        .hub-mini-header h1 { font-size: 1.8rem; }
+        .hub-nav-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .hub-nav-item { padding: 14px 10px; }
+        .hub-nav-item .nav-icon { font-size: 1.5rem; }
+        .hub-nav-item-title { font-size: 0.82rem; }
     }
 
     /* --- CONTENT WRAPPER --- */
@@ -147,13 +203,13 @@ INSTRUCTIONS:
 
     /* --- CARDS & GRID --- */
     .calc-card {
-        background: var(--hub-card-bg);
-        padding: 40px;
-        border-radius: 24px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        border: 1px solid var(--hub-border);
+        background: linear-gradient(145deg, rgba(37, 9, 30, 0.75) 0%, rgba(18, 4, 15, 0.9) 100%);
+        padding: 45px 40px;
+        border-radius: 26px;
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 30px rgba(135, 50, 118, 0.15);
+        border: 1px solid rgba(212, 175, 55, 0.25);
         margin: 0 auto;
-        backdrop-filter: blur(16px);
+        backdrop-filter: blur(18px);
     }
 
     /* 2 Column Layout for precise inputs */
@@ -311,80 +367,67 @@ INSTRUCTIONS:
         transform: scale(1.2);
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-        .hero-tools {
-            padding: 40px 20px 50px;
-        }
 
-        .calc-grid-2 {
-            grid-template-columns: 1fr;
-            gap: 0;
-        }
 
-        .th-tab-btn {
-            width: 100%;
-            margin: 2px 0;
-        }
-
-        .res-value-main {
-            font-size: 2.2rem;
-        }
-    }
-
-    /* Tooltip CSS */
+    /* Tooltip CSS Premium */
     .evt-tooltip {
         position: relative;
         display: inline-flex;
         align-items: center;
         gap: 5px;
         cursor: help;
-        border-bottom: 1px dotted rgba(255,255,255,0.4);
+        border-bottom: 1px dotted rgba(212, 175, 55, 0.45);
     }
 
     .evt-tooltip::after {
         content: attr(data-tooltip);
         position: absolute;
-        bottom: 120%;
+        bottom: 125%;
         left: 50%;
         transform: translateX(-50%);
-        background-color: var(--hub-card-bg);
-        color: #fff;
+        background: rgba(20, 5, 17, 0.96);
+        color: #ffffff;
         padding: 10px 14px;
-        border-radius: 8px;
-        border: 1px solid var(--hub-border);
+        border-radius: 10px;
+        border: 1px solid rgba(212, 175, 55, 0.4);
         font-size: 0.8rem;
+        line-height: 1.45;
         white-space: normal;
-        min-width: 200px;
-        text-align: center;
+        min-width: 220px;
+        max-width: 280px;
+        text-align: left;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.2s ease;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        z-index: 100;
-        font-weight: 500;
-        backdrop-filter: blur(10px);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.85), 0 0 15px rgba(212, 175, 55, 0.15);
+        z-index: 99999;
+        font-weight: 400;
+        backdrop-filter: blur(12px);
         pointer-events: none;
     }
 
     .evt-tooltip:hover::after {
         opacity: 1;
         visibility: visible;
-        bottom: 130%;
+        bottom: 135%;
     }
 
     .evt-tooltip-icon {
-        background: var(--hub-primary);
-        color: white;
+        background: rgba(212, 175, 55, 0.2);
+        border: 1px solid rgba(212, 175, 55, 0.5);
+        color: #d4af37;
         border-radius: 50%;
-        width: 14px;
-        height: 14px;
+        width: 15px;
+        height: 15px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         font-size: 9px;
-        font-weight: bold;
+        font-weight: 700;
+        line-height: 1;
+        flex-shrink: 0;
     }
+
     .evt-badge-new {
         background: #a7ff00;
         color: #1e0a19;
@@ -395,40 +438,860 @@ INSTRUCTIONS:
         font-weight: 900;
         vertical-align: middle;
     }
+
+    /* BULLES D'INFO EXPLICATIVES PAR OUTIL */
+    .tool-info-bubble {
+        background: linear-gradient(135deg, rgba(135, 50, 118, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 14px;
+        padding: 14px 20px;
+        margin: 0 auto 25px auto;
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 0.9rem;
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .tool-info-bubble-icon {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+    }
+
+    .tool-info-bubble strong {
+        color: #d4af37;
+    }
+
+    /* === 1. LEAD CAPTURE & CONVERSION MODULES === */
+    .lead-action-row {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .btn-lead-pdf {
+        background: linear-gradient(135deg, #d4af37 0%, #aa771c 100%);
+        color: #1a0615 !important;
+        font-weight: 800;
+        font-size: 0.9rem;
+        padding: 12px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-lead-pdf:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(212, 175, 55, 0.45);
+        background: #ffffff;
+        color: #1a0615 !important;
+    }
+
+    .btn-lead-sms {
+        background: rgba(56, 161, 105, 0.15);
+        color: #48bb78 !important;
+        border: 1px solid rgba(56, 161, 105, 0.4);
+        font-weight: 700;
+        font-size: 0.85rem;
+        padding: 12px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .btn-lead-sms:hover {
+        background: #38a169;
+        color: #ffffff !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(56, 161, 105, 0.35);
+    }
+
+    /* === BOUTONS DE CONTACT MULTI-CANAUX (SMS, WHATSAPP, MESSENGER, INSTAGRAM) === */
+    .lead-channels-container {
+        margin-top: 20px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+    }
+
+    .lead-channels-title {
+        font-size: 0.8rem;
+        color: var(--hub-text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .lead-channels-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .channel-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        border: 1px solid transparent;
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .channel-btn:hover {
+        transform: translateY(-2px);
+        color: #ffffff !important;
+    }
+
+    .channel-sms {
+        border-color: rgba(52, 211, 153, 0.35);
+        background: rgba(52, 211, 153, 0.12);
+        color: #34d399 !important;
+    }
+    .channel-sms:hover {
+        background: #059669;
+        box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
+    }
+
+    .channel-wa {
+        border-color: rgba(37, 211, 102, 0.35);
+        background: rgba(37, 211, 102, 0.12);
+        color: #25d366 !important;
+    }
+    .channel-wa:hover {
+        background: #25d366;
+        color: #111 !important;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+
+    .channel-messenger {
+        border-color: rgba(0, 132, 255, 0.35);
+        background: rgba(0, 132, 255, 0.12);
+        color: #38bdf8 !important;
+    }
+    .channel-messenger:hover {
+        background: #0084ff;
+        box-shadow: 0 4px 15px rgba(0, 132, 255, 0.4);
+    }
+
+    .channel-ig {
+        border-color: rgba(225, 48, 108, 0.35);
+        background: rgba(225, 48, 108, 0.12);
+        color: #f472b6 !important;
+    }
+    .channel-ig:hover {
+        background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+        box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
+    }
+
+    .channel-phone {
+        border-color: rgba(212, 175, 55, 0.35);
+        background: rgba(212, 175, 55, 0.12);
+        color: #d4af37 !important;
+    }
+    .channel-phone:hover {
+        background: #d4af37;
+        color: #1a0615 !important;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    }
+
+    /* === DÉCOMPTE FISCAL TAXE DE BIENVENUE RAFFINÉ === */
+    .wt-breakdown-box {
+        max-width: 520px;
+        margin: 20px auto 0 auto;
+        background: rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        overflow: hidden;
+        text-align: left;
+    }
+
+    .wt-breakdown-header {
+        background: rgba(255, 255, 255, 0.04);
+        padding: 10px 16px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--hub-text-muted);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .wt-breakdown-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 16px;
+        font-size: 0.88rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .wt-breakdown-row:last-child {
+        border-bottom: none;
+    }
+
+    .wt-badge {
+        display: inline-block;
+        background: rgba(135, 50, 118, 0.25);
+        border: 1px solid rgba(135, 50, 118, 0.5);
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 2px 7px;
+        border-radius: 6px;
+        margin-right: 8px;
+    }
+
+    .wt-val {
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    /* === 4. CARTE PRÉ-QUALIFICATION BANCAIRE 24H === */
+    .prequal-card {
+        background: linear-gradient(145deg, rgba(135, 50, 118, 0.25) 0%, rgba(212, 175, 55, 0.12) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        border-radius: 20px;
+        padding: 25px 25px;
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .prequal-text h4 {
+        margin: 0 0 6px 0;
+        font-size: 1.15rem;
+        color: #ffffff;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .prequal-text h4 span {
+        color: #d4af37;
+    }
+
+    .prequal-text p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.4;
+    }
+
+    .btn-prequal {
+        background: linear-gradient(135deg, #d4af37 0%, #aa771c 100%);
+        color: #1a0615 !important;
+        font-weight: 800;
+        font-size: 0.9rem;
+        padding: 14px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        white-space: nowrap;
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .btn-prequal:hover {
+        transform: translateY(-3px);
+        background: #ffffff;
+        box-shadow: 0 12px 25px rgba(212, 175, 55, 0.5);
+    }
+
+    /* === 6. VIP BOOKING STRIP === */
+    .hub-booking-strip {
+        background: linear-gradient(145deg, rgba(37, 9, 30, 0.9) 0%, rgba(18, 4, 15, 0.95) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        border-radius: 24px;
+        padding: 30px 35px;
+        margin: 45px auto 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .hub-booking-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px solid #d4af37;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .hub-booking-info h3 {
+        margin: 0 0 6px 0;
+        font-size: 1.3rem;
+        color: #ffffff;
+        font-family: 'Cinzel', serif;
+    }
+
+    .hub-booking-info p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hub-live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #34d399;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+    }
+
+    .hub-live-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #34d399;
+        box-shadow: 0 0 8px #34d399;
+        animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    /* === 8. QUIZ DIAGNOSTIC ACHAT === */
+    .quiz-card {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        border-radius: 18px;
+        padding: 25px;
+        margin-top: 25px;
+    }
+
+    .quiz-card h4 {
+        color: #d4af37;
+        font-size: 1.1rem;
+        margin: 0 0 8px 0;
+        text-align: center;
+    }
+
+    .quiz-card p {
+        text-align: center;
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.75);
+        margin: 0 0 18px 0;
+    }
+
+    .quiz-options-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .quiz-opt-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: white;
+        padding: 12px 10px;
+        border-radius: 12px;
+        font-size: 0.82rem;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        text-align: center;
+    }
+
+    /* === 5. COMPARATEUR LOUER VS ACHETER RAFFINÉ === */
+    .rvb-compare-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 25px 0;
+    }
+
+    .rvb-card-rent {
+        background: rgba(244, 63, 94, 0.05);
+        border: 1px solid rgba(244, 63, 94, 0.3);
+        border-radius: 20px;
+        padding: 24px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .rvb-card-buy {
+        background: rgba(52, 211, 153, 0.05);
+        border: 1px solid rgba(52, 211, 153, 0.3);
+        border-radius: 20px;
+        padding: 24px 20px;
+        text-align: center;
+    }
+
+    .rvb-card-header {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .rvb-val-hero {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin: 6px 0;
+        line-height: 1.1;
+    }
+
+    .rvb-breakdown-box {
+        margin-top: 18px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        padding: 12px 14px;
+        text-align: left;
+    }
+
+    .rvb-breakdown-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .rvb-breakdown-row:last-child {
+        border-bottom: none;
+    }
+
+    .rvb-gold-banner {
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(135, 50, 118, 0.18) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        border-radius: 20px;
+        padding: 24px 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* ==========================================================================
+       OPTIMISATION MOBILE ULTIME (SMARTPHONES & ÉCRANS ÉTROITS < 768px)
+       ========================================================================== */
+    @media (max-width: 768px) {
+        /* Conteneur principal & Espacements */
+        .tools-hub-container {
+            padding-top: 15px !important;
+            padding-bottom: 40px !important;
+        }
+
+        .tools-hub-container > div {
+            padding: 0 10px !important;
+        }
+
+        /* Mini Header */
+        .hub-mini-header {
+            margin-bottom: 25px !important;
+            padding: 0 5px !important;
+        }
+
+        .hub-mini-header h1 {
+            font-size: 1.65rem !important;
+            line-height: 1.2 !important;
+        }
+
+        .hub-mini-header p {
+            font-size: 0.85rem !important;
+        }
+
+        /* Grille Cockpit Navigation */
+        .hub-nav-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 8px !important;
+        }
+
+        .hub-nav-item {
+            padding: 12px 6px !important;
+            border-radius: 14px !important;
+        }
+
+        .hub-nav-item .nav-icon {
+            font-size: 1.35rem !important;
+            margin-bottom: 3px !important;
+        }
+
+        .hub-nav-item-title {
+            font-size: 0.78rem !important;
+        }
+
+        .hub-nav-item-sub {
+            font-size: 0.65rem !important;
+        }
+
+        /* Cartes des Simulateurs */
+        .calc-card {
+            padding: 22px 14px !important;
+            border-radius: 18px !important;
+            margin: 0 !important;
+        }
+
+        .calc-card h2 {
+            font-size: 1.45rem !important;
+            margin-bottom: 12px !important;
+        }
+
+        .calc-grid-2 {
+            grid-template-columns: 1fr !important;
+            gap: 15px !important;
+        }
+
+        .calc-col-title {
+            font-size: 0.95rem !important;
+            margin-bottom: 14px !important;
+            margin-top: 10px !important;
+            padding-bottom: 6px !important;
+        }
+
+        /* Formulaires & Champs de saisie */
+        .form-group {
+            margin-bottom: 14px !important;
+        }
+
+        .form-group label {
+            font-size: 0.84rem !important;
+            margin-bottom: 6px !important;
+        }
+
+        .std-input, .select-input {
+            padding: 12px 14px !important;
+            font-size: 16px !important; /* Évite le zoom automatique iOS Safari */
+            border-radius: 10px !important;
+            min-height: 48px !important;
+        }
+
+        /* Panneau de Résultats Principal */
+        .result-panel {
+            padding: 20px 14px !important;
+            border-radius: 18px !important;
+            margin-top: 22px !important;
+        }
+
+        .res-label {
+            font-size: 0.78rem !important;
+            letter-spacing: 1px !important;
+        }
+
+        .res-value-main {
+            font-size: 1.95rem !important;
+            margin: 6px 0 !important;
+            line-height: 1.15 !important;
+            word-break: break-word !important;
+        }
+
+        .res-grid-small {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 8px !important;
+            padding-top: 14px !important;
+            margin-top: 14px !important;
+        }
+
+        .small-stat {
+            padding: 10px 6px !important;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .small-stat div:first-child {
+            font-size: 0.72rem !important;
+        }
+
+        .small-stat div:last-child {
+            font-size: 1.05rem !important;
+            font-weight: 700 !important;
+        }
+
+        /* Tab 2 : Layout Calculatrice Hypothécaire */
+        .mc-layout {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+        }
+
+        .mc-stats-grid {
+            grid-template-columns: 1fr !important;
+            gap: 8px !important;
+        }
+
+        .mc-stat-box {
+            padding: 10px !important;
+        }
+
+        .mc-stat-box .val {
+            font-size: 1.15rem !important;
+        }
+
+        .mc-chart-wrap {
+            max-width: 170px !important;
+            max-height: 170px !important;
+            margin: 0 auto !important;
+        }
+
+        /* Tab 4 : Décompte Taxe Bienvenue */
+        .wt-breakdown-box {
+            margin: 15px 0 0 0 !important;
+            border-radius: 14px !important;
+        }
+
+        .wt-breakdown-header {
+            padding: 8px 12px !important;
+            font-size: 0.72rem !important;
+        }
+
+        .wt-breakdown-row {
+            padding: 9px 12px !important;
+            font-size: 0.8rem !important;
+        }
+
+        .wt-badge {
+            font-size: 0.7rem !important;
+            padding: 2px 5px !important;
+            margin-right: 5px !important;
+        }
+
+        /* Tab 5 : Comparateur Louer vs Acheter */
+        .rvb-compare-grid {
+            grid-template-columns: 1fr !important;
+            gap: 15px !important;
+            margin: 15px 0 !important;
+        }
+
+        .rvb-card-rent, .rvb-card-buy {
+            padding: 18px 14px !important;
+            border-radius: 16px !important;
+        }
+
+        .rvb-val-hero {
+            font-size: 1.8rem !important;
+        }
+
+        .rvb-breakdown-box {
+            margin-top: 14px !important;
+            padding: 10px 12px !important;
+        }
+
+        .rvb-breakdown-row {
+            font-size: 0.78rem !important;
+            padding: 6px 0 !important;
+        }
+
+        .rvb-gold-banner {
+            padding: 18px 12px !important;
+            border-radius: 16px !important;
+            margin-top: 15px !important;
+        }
+
+        .rvb-gold-banner #rvb-res-net {
+            font-size: 1.95rem !important;
+        }
+
+        /* Tab 5 : Quiz Diagnostic */
+        .quiz-card {
+            padding: 18px 12px !important;
+            border-radius: 16px !important;
+            margin-top: 20px !important;
+        }
+
+        .quiz-card h4 {
+            font-size: 1rem !important;
+        }
+
+        .quiz-options-grid {
+            grid-template-columns: 1fr !important;
+            gap: 8px !important;
+        }
+
+        .quiz-opt-btn {
+            padding: 12px 14px !important;
+            font-size: 0.86rem !important;
+            text-align: center !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Barres de Contact Multi-Canaux */
+        .lead-channels-container {
+            margin-top: 16px !important;
+            padding-top: 14px !important;
+        }
+
+        .lead-channels-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 8px !important;
+        }
+
+        .channel-btn {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            padding: 10px 8px !important;
+            font-size: 0.78rem !important;
+            justify-content: center !important;
+            text-align: center !important;
+        }
+
+        .channel-phone {
+            grid-column: span 2 !important;
+        }
+
+        .btn-lead-pdf {
+            width: 100% !important;
+            justify-content: center !important;
+            padding: 14px 16px !important;
+            font-size: 0.88rem !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Bulles d'info explicatives */
+        .tool-info-bubble {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 8px !important;
+            padding: 12px 14px !important;
+            font-size: 0.82rem !important;
+            margin-bottom: 16px !important;
+        }
+
+        /* Cartes d'appel à l'action & VIP Booking */
+        .prequal-card {
+            flex-direction: column !important;
+            text-align: center !important;
+            padding: 20px 16px !important;
+            border-radius: 16px !important;
+            gap: 15px !important;
+        }
+
+        .hub-booking-strip {
+            flex-direction: column !important;
+            text-align: center !important;
+            padding: 22px 16px !important;
+            border-radius: 18px !important;
+            gap: 15px !important;
+            margin: 35px auto 15px auto !important;
+        }
+
+        .hub-booking-strip > div:first-child {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 12px !important;
+        }
+
+        .btn-prequal {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            padding: 13px 20px !important;
+            font-size: 0.88rem !important;
+        }
+
+        /* Modal Lead Capture */
+        .lead-modal-box {
+            padding: 25px 18px !important;
+            border-radius: 18px !important;
+            max-width: 95% !important;
+        }
+
+        .lead-modal-box h3 {
+            font-size: 1.2rem !important;
+        }
+
+        .lead-modal-input {
+            font-size: 16px !important;
+            padding: 12px 14px !important;
+        }
+
+        /* Infobulles pour écrans tactiles */
+        .evt-tooltip::after {
+            max-width: 250px !important;
+            font-size: 0.76rem !important;
+            padding: 8px 12px !important;
+        }
+    }
 </style>
 
 <div class="tools-hub-container">
 
-
     <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
 
+        <!-- MINI HEADER COMPACT & RAFFINÉ -->
+        <div class="hub-mini-header">
+            <div class="hub-header-badge">Centre de Calcul 2026</div>
+            <h1>Simulateurs Financiers <span>& Immobiliers</span></h1>
+            <p>Outils d'analyse stratégique et financière basés sur les barèmes de la SCHL, de l'AMF et des banques canadiennes.</p>
+        </div>
 
         <!-- NAVIGATION GRILLE COCKPIT -->
         <div class="hub-nav-grid-wrapper">
             <div class="hub-nav-grid">
-                <a href="javascript:void(0)" class="hub-nav-item active" onclick="switchTab('affordability')">
+                <a href="javascript:void(0)" class="hub-nav-item active" onclick="switchTab('affordability')" title="Calculer votre prix d'achat maximal selon vos revenus et dettes">
                     <span class="nav-icon">💰</span>
-                    Capacité d'Emprunt
+                    <span class="hub-nav-item-title">Capacité d'Emprunt</span>
+                    <span class="hub-nav-item-sub">Test B-20 & Ratios ABD/ATD</span>
                 </a>
-                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('mortgage')">
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('mortgage')" title="Simuler vos versements hypothécaires et l'amortissement du capital">
                     <span class="nav-icon">🏠</span>
-                    Calculatrice Hypothécaire
+                    <span class="hub-nav-item-title">Calculatrice Hypothèque</span>
+                    <span class="hub-nav-item-sub">Versements & Amortissement</span>
                 </a>
-                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('closing')">
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('closing')" title="Estimer les liquidités totales requises chez le notaire">
                     <span class="nav-icon">📋</span>
-                    Frais de Clôture
+                    <span class="hub-nav-item-title">Frais de Clôture</span>
+                    <span class="hub-nav-item-sub">Cash requis & Notaire</span>
                 </a>
-                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('welcome')">
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('welcome')" title="Calculer le montant exact des droits de mutation municipaux">
                     <span class="nav-icon">🏛️</span>
-                    Taxe Bienvenue
+                    <span class="hub-nav-item-title">Taxe Bienvenue</span>
+                    <span class="hub-nav-item-sub">Droits de mutation QC & MTL</span>
                 </a>
-                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('rvb')">
+                <a href="javascript:void(0)" class="hub-nav-item" onclick="switchTab('rvb')" title="Comparer la perte nette des loyers vs l'équité bâtie en devenant propriétaire">
                     <span class="nav-icon">⚖️</span>
-                    Louer vs Acheter
+                    <span class="hub-nav-item-title">Louer vs Acheter</span>
+                    <span class="hub-nav-item-sub">Équité bâtie vs Loyers perdus</span>
                 </a>
-                <a href="javascript:void(0)" class="hub-nav-item hub-nav-item-new" onclick="switchTab('wait-vs-buy')">
+                <a href="javascript:void(0)" class="hub-nav-item hub-nav-item-new" onclick="switchTab('wait-vs-buy')" title="Vérifier si attendre une baisse de taux est vraiment avantageux">
                     <span class="nav-icon">⏳</span>
-                    Attendre vs Acheter <span class="evt-badge-new" style="display:block; margin-top:2px;">NEW</span>
+                    <span class="hub-nav-item-title">Attendre vs Acheter</span>
+                    <span class="hub-nav-item-sub">Impact baisse de taux vs prix</span>
                 </a>
             </div>
         </div>
@@ -436,9 +1299,15 @@ INSTRUCTIONS:
         <!-- 1. CAPACITÉ AVANCÉE -->
         <div id="tab-affordability" class="th-content active">
             <div class="calc-card">
-                <h2 style="text-align:center; margin-bottom:30px; font-weight:300; font-size:1.8rem; color:#ffffff;">
-                    Pouvoir
-                    d'Achat <span style="font-weight:700; color:var(--hub-primary);">Précis</span></h2>
+                <h2 style="text-align:center; margin-bottom:15px; font-weight:300; font-size:1.8rem; color:#ffffff;">
+                    Pouvoir d'Achat <span style="font-weight:700; color:var(--hub-primary);">Précis</span>
+                </h2>
+
+                <!-- BULLE D'INFO EXPLICATIVE -->
+                <div class="tool-info-bubble">
+                    <span class="tool-info-bubble-icon">💡</span>
+                    <div><strong>À quoi sert cet outil ?</strong> Calculez le prix maximal de propriété auquel vous êtes admissible selon vos revenus bruts, vos dettes mensuelles et les ratios officiels du test de résistance bancaire canadien (B-20).</div>
+                </div>
 
                 <div class="calc-grid-2">
                     <!-- Col 1: Revenus & Dettes & Taux -->
@@ -455,12 +1324,12 @@ INSTRUCTIONS:
                                 oninput="runAff()">
                         </div>
                         <div class="form-group">
-                            <label>Mise de Fonds Disponible</label>
+                            <label class="evt-tooltip" data-tooltip="Montant total de vos liquidités pour l'achat (REER, RAP, CELIAPP, épargne personnelle).">Mise de Fonds Disponible <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="aff-down" value="50000" step="1000"
                                 oninput="runAff()">
                         </div>
                         <div class="form-group">
-                            <label>Taux Hypothécaire Négocié (%)</label>
+                            <label class="evt-tooltip" data-tooltip="Taux d'intérêt contractuel négocié auprès de votre prêteur ou courtier hypothécaire.">Taux Hypothécaire Négocié (%) <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="aff-rate-neg" value="4.89" step="0.01"
                                 oninput="runAff()">
                         </div>
@@ -470,25 +1339,25 @@ INSTRUCTIONS:
                     <div>
                         <div class="calc-col-title">Charges Propriété (Est.)</div>
                         <div class="form-group">
-                            <label>Taxes Municip./Scolaires (Annuelles)</label>
+                            <label class="evt-tooltip" data-tooltip="Taxes foncières annuelles de la ville et commission scolaire (~1% de la valeur de la propriété).">Taxes Municip./Scolaires (Annuelles) <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="aff-taxes" value="4000" step="100"
                                 oninput="runAff()">
                         </div>
                         <div class="form-group">
-                            <label>Frais de Condo (Mensuel)</label>
+                            <label class="evt-tooltip" data-tooltip="Au Canada, 50% de ces frais sont comptabilisés dans le ratio d'endettement officiel ABD.">Frais de Condo (Mensuel) <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="aff-condo" value="0" step="50"
                                 oninput="runAff()">
                             <small style="color:var(--hub-text-muted); font-size:0.75rem;">(Laisser à 0 si
                                 maison)</small>
                         </div>
                         <div class="form-group">
-                            <label>Chauffage (Mensuel)</label>
+                            <label class="evt-tooltip" data-tooltip="Montant forfaitaire moyen de chauffage retenu par les banques pour évaluer vos charges fixes (~100 à 150 $/mois).">Chauffage (Mensuel) <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="aff-heat" value="150" step="25"
                                 oninput="runAff()">
                         </div>
                         <div class="form-group">
                             <label style="display:flex;justify-content:space-between;">
-                                <span>Stress Test (Auto-calculé)</span>
+                                <span class="evt-tooltip" data-tooltip="Test de résistance obligatoire du BSIF : calculé au plus élevé entre (Taux négocié + 2%) et 5.25%.">Stress Test (Auto-calculé) <span class="evt-tooltip-icon">?</span></span>
                                 <span id="aff-stress-badge"
                                     style="background:rgba(135,50,118,0.3);border:1px solid #873276;border-radius:6px;padding:1px 8px;font-size:0.78rem;color:#fff;">6.89
                                     %</span>
@@ -503,25 +1372,49 @@ INSTRUCTIONS:
 
 
                 <div class="result-panel">
-                    <div class="res-label">Prix d'Achat Maximum Estimé</div>
+                    <div class="res-label evt-tooltip" data-tooltip="Prix d'achat maximal auquel vous êtes admissible selon les ratios légaux ABD (39%) et ATD (44%)." style="cursor:help;">Prix d'Achat Maximum Estimé <span class="evt-tooltip-icon">?</span></div>
                     <div class="res-value-main" id="aff-res-price">$0</div>
 
                     <div class="res-grid-small">
                         <div class="small-stat">
-                            <div>Hypothèque Max</div>
+                            <div class="evt-tooltip" data-tooltip="Montant maximal du prêt hypothécaire accordé par la banque.">Hypothèque Max <span class="evt-tooltip-icon">?</span></div>
                             <div id="aff-res-mortgage">$0</div>
                         </div>
                         <div class="small-stat">
-                            <div>Mise de Fonds Requise</div>
+                            <div class="evt-tooltip" data-tooltip="Mise de fonds minimale requise par la loi (5% jusqu'à 500k, 10% sur l'excédent jusqu'à 1.5M$).">Mise de Fonds Requise <span class="evt-tooltip-icon">?</span></div>
                             <div id="aff-res-down-req">$0</div>
                         </div>
                     </div>
+
+                    <!-- BOUTONS D'ACTION & LEAD CAPTURE (IDÉES 1 & 7) -->
+                    <div class="lead-action-row">
+                        <button type="button" class="btn-lead-pdf" onclick="openLeadModal('Capacité Emprunt')">
+                            📄 Recevoir mon Bilan PDF Complet
+                        </button>
+                    </div>
+
+                    <div class="lead-channels-container">
+                        <div class="lead-channels-title">💬 Échangez directement avec Evan :</div>
+                        <div class="lead-channels-grid">
+                            <a href="sms:+15145673249?&body=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20ma%20capacit%C3%A9%20d'emprunt" class="channel-btn channel-sms">💬 SMS</a>
+                            <a href="https://wa.me/15145673249?text=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20ma%20capacit%C3%A9%20d'emprunt" target="_blank" class="channel-btn channel-wa">🟢 WhatsApp</a>
+                            <a href="https://m.me/evanpatrunocourtier" target="_blank" class="channel-btn channel-messenger">🔵 Messenger</a>
+                            <a href="https://ig.me/m/evanpatruno.immo" target="_blank" class="channel-btn channel-ig">🟣 Instagram</a>
+                            <a href="tel:5145673249" class="channel-btn channel-phone">📞 514-567-3249</a>
+                        </div>
+                    </div>
                 </div>
-                <p
-                    style="text-align:center; margin-top:15px; font-size:0.75rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
-                    <span style="opacity:0.6;">Source : Calcul basé sur les ratios GDS (39%) / TDS (44%) et simulation
-                        du "Stress Test" fédéral selon les directives d'Osafi/SCHL.</span>
-                </p>
+
+                <!-- CARTE PRÉ-QUALIFICATION OFFICIELLE EN 24H (IDÉE 4) -->
+                <div class="prequal-card">
+                    <div class="prequal-text">
+                        <h4><span>🛡️</span> Obtenez Votre Pré-Qualification Officielle en 24h</h4>
+                        <p>Les vendeurs et courtiers exigent une lettre de pré-approbation bancaire pour accepter une promesse d'achat. Obtenez la vôtre sans frais avec Evan Patruno (Multi-Prêts).</p>
+                    </div>
+                    <a href="https://calendar.app.google/NLQVyTxENHHFfzwW6" target="_blank" class="btn-prequal">
+                        Demander Ma Lettre &rarr;
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -664,8 +1557,14 @@ INSTRUCTIONS:
             </style>
 
             <div class="calc-card">
-                <h2 style="text-align:center; margin-bottom:30px; font-weight:300; color:#ffffff;">Calculateur <span
+                <h2 style="text-align:center; margin-bottom:15px; font-weight:300; color:#ffffff;">Calculateur <span
                         style="font-weight:700; color:var(--hub-primary);">Mensualités</span></h2>
+
+                <!-- BULLE D'INFO EXPLICATIVE -->
+                <div class="tool-info-bubble">
+                    <span class="tool-info-bubble-icon">💡</span>
+                    <div><strong>À quoi sert cet outil ?</strong> Simulez vos versements hypothécaires (mensuels ou accélérés), le coût de la prime d'assurance SCHL et la répartition entre capital remboursé et intérêts payés.</div>
+                </div>
 
                 <div class="mc-layout">
                     <!-- LEFT : Sliders -->
@@ -673,7 +1572,7 @@ INSTRUCTIONS:
                         <!-- Montant du prêt -->
                         <div class="mc-slider-group">
                             <div class="mc-slider-header">
-                                <span class="mc-slider-label">Montant du Prêt</span>
+                                <span class="mc-slider-label evt-tooltip" data-tooltip="Montant net emprunté à la banque (Prix d'achat moins votre mise de fonds).">Montant du Prêt <span class="evt-tooltip-icon">?</span></span>
                                 <span class="mc-slider-val" id="mc-loan-display">450 000 $</span>
                             </div>
                             <input type="range" id="mc-loan-slider" min="50000" max="2000000" step="5000" value="450000"
@@ -683,7 +1582,7 @@ INSTRUCTIONS:
                         <!-- Taux d'intérêt -->
                         <div class="mc-slider-group">
                             <div class="mc-slider-header">
-                                <span class="mc-slider-label">Taux d'Intérêt</span>
+                                <span class="mc-slider-label evt-tooltip" data-tooltip="Taux contractuel négocié (capitalisation semi-annuelle conforme à la loi bancaire canadienne).">Taux d'Intérêt (%) <span class="evt-tooltip-icon">?</span></span>
                                 <span class="mc-slider-val" id="mc-rate-display">4.89 %</span>
                             </div>
                             <input type="range" id="mc-rate-slider" min="1" max="12" step="0.01" value="4.89"
@@ -693,7 +1592,7 @@ INSTRUCTIONS:
                         <!-- Amortissement -->
                         <div class="mc-slider-group">
                             <div class="mc-slider-header">
-                                <span class="mc-slider-label">Amortissement</span>
+                                <span class="mc-slider-label evt-tooltip" data-tooltip="Nombre total d'années pour rembourser le prêt à 100% (25 ans standard, jusqu'à 30 ans pour premier acheteur ou neuf).">Amortissement <span class="evt-tooltip-icon">?</span></span>
                                 <span class="mc-slider-val" id="mc-amort-display">25 ans</span>
                             </div>
                             <input type="range" id="mc-amort-slider" min="5" max="30" step="5" value="25"
@@ -703,7 +1602,7 @@ INSTRUCTIONS:
                         <!-- Fréquence -->
                         <div class="mc-slider-group">
                             <div class="mc-slider-header">
-                                <span class="mc-slider-label">Fréquence de Paiement</span>
+                                <span class="mc-slider-label evt-tooltip" data-tooltip="Les fréquences accélérées ajoutent un paiement complet par an directement au remboursement du capital !">Fréquence de Paiement <span class="evt-tooltip-icon">?</span></span>
                             </div>
                             <select class="select-input" id="mc-freq" onchange="runMort()">
                                 <option value="12" selected>Mensuel</option>
@@ -720,15 +1619,15 @@ INSTRUCTIONS:
                             <div class="mc-stats-grid">
                                 <div class="mc-stat-box">
                                     <div class="val" id="mc-total-paid">$0</div>
-                                    <div class="lbl">Total versé</div>
+                                    <div class="lbl evt-tooltip" data-tooltip="Somme totale remboursée sur toute la durée du prêt (Capital + Intérêts).">Total versé <span class="evt-tooltip-icon">?</span></div>
                                 </div>
                                 <div class="mc-stat-box">
                                     <div class="val" id="mc-total-interest" style="color:#f87171;">$0</div>
-                                    <div class="lbl">Total intérêts</div>
+                                    <div class="lbl evt-tooltip" data-tooltip="Coût total des intérêts perçus par l'institution financière.">Total intérêts <span class="evt-tooltip-icon">?</span></div>
                                 </div>
                                 <div class="mc-stat-box highlight">
                                     <div class="val" id="mc-saving-accel">—</div>
-                                    <div class="lbl">Économies (accéléré)</div>
+                                    <div class="lbl evt-tooltip" data-tooltip="Économie d'intérêts réalisée en choisissant un rythme accéléré par rapport au mensuel.">Économies (accéléré) <span class="evt-tooltip-icon">?</span></div>
                                 </div>
                             </div>
                         </div>
@@ -762,15 +1661,26 @@ INSTRUCTIONS:
                             style="margin-top:20px; padding:15px; background:rgba(52,211,153,0.08); border:1px solid rgba(52,211,153,0.2); border-radius:14px; font-size:0.82rem; color:rgba(255,255,255,0.7); line-height:1.5;">
                             💡 <strong style="color:#34d399;">Astuce :</strong> En choisissant le rythme accéléré aux 2
                             semaines (x26), vous économisez en moyenne <strong id="mc-accel-tip"
-                                style="color:#34d399;">—</strong> et remboursez <strong>~3 ans plus tôt</strong>.
+                                style="color:#34d399;">—</strong> et remboursez <strong id="mc-accel-years-tip" style="color:#ffffff;">~3 ans</strong> plus tôt.
+                        </div>
+                        <!-- BOUTONS D'ACTION & LEAD CAPTURE TAB 2 -->
+                        <div class="lead-action-row" style="margin-top:20px;">
+                            <button type="button" class="btn-lead-pdf" onclick="openLeadModal('Calculatrice Hypothécaire')">
+                                📄 Recevoir mon Tableau d'Amortissement PDF
+                            </button>
+                        </div>
+                        <div class="lead-channels-container">
+                            <div class="lead-channels-title">💬 Échangez directement avec Evan :</div>
+                            <div class="lead-channels-grid">
+                                <a href="sms:+15145673249?&body=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20mon%20calcul%20hypoth%C3%A9caire" class="channel-btn channel-sms">💬 SMS</a>
+                                <a href="https://wa.me/15145673249?text=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20mon%20calcul%20hypoth%C3%A9caire" target="_blank" class="channel-btn channel-wa">🟢 WhatsApp</a>
+                                <a href="https://m.me/evanpatrunocourtier" target="_blank" class="channel-btn channel-messenger">🔵 Messenger</a>
+                                <a href="https://ig.me/m/evanpatruno.immo" target="_blank" class="channel-btn channel-ig">🟣 Instagram</a>
+                                <a href="tel:5145673249" class="channel-btn channel-phone">📞 514-567-3249</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <p
-                    style="text-align:center; margin-top:20px; font-size:0.72rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; opacity:0.6;">
-                    Formule standard d'amortissement hypothécaire canadien · Capitalisation semi-annuelle (SCHL)
-                </p>
             </div>
         </div>
 
@@ -778,179 +1688,343 @@ INSTRUCTIONS:
         <!-- 3. CASH DAM (CLOSING) -->
         <div id="tab-closing" class="th-content">
             <div class="calc-card">
-                <h2 style="text-align:center; margin-bottom:30px; font-weight:300; color:#ffffff;">Frais de <span
-                        style="font-weight:700;">Clôture</span></h2>
+                <h2 style="text-align:center; margin-bottom:15px; font-weight:300; color:#ffffff;">Frais de <span
+                        style="font-weight:700; color:var(--hub-primary);">Clôture & Liquidités</span></h2>
+
+                <!-- BULLE D'INFO EXPLICATIVE -->
+                <div class="tool-info-bubble">
+                    <span class="tool-info-bubble-icon">💡</span>
+                    <div><strong>À quoi sert cet outil ?</strong> Estimez l'ensemble des liquidités réelles requises chez le notaire pour finaliser votre achat (mise de fonds, notaire, inspection, taxe de bienvenue, taxe sur prime SCHL et déménagement).</div>
+                </div>
 
                 <div class="calc-grid-2">
                     <div>
                         <div class="calc-col-title">Transaction</div>
                         <div class="form-group">
-                            <label>Prix d'Achat</label>
+                            <label class="evt-tooltip" data-tooltip="Prix d'achat convenu sur votre promesse d'achat acceptée.">Prix d'Achat <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="cc-price" value="500000" oninput="runCC()">
                         </div>
                         <div class="form-group">
-                            <label class="evt-tooltip" data-tooltip="Montant d'argent comptant que vous avez pour l'achat. Note: Le système déduira automatiquement les frais de clôture (Cash Dam) pour connaître le fond disponible réel.">Mise de Fonds <span class="evt-tooltip-icon">?</span></label>
+                            <label class="evt-tooltip" data-tooltip="Argent comptant déposé chez le notaire pour l'achat (minimum 5% jusqu'à 500k $, 10% sur l'excédent).">Mise de Fonds <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="cc-down" value="25000" oninput="runCC()">
                         </div>
                         <div class="form-group">
                             <label id="cc-ratio-label" style="color:var(--hub-success); font-weight:bold;">Ratio:
                                 5%</label>
                             <input type="range" id="cc-slider" min="5" max="100" value="5" oninput="syncDown()">
-                            <div id="cc-error-container" style="display:none; color:#f87171; font-size:0.8rem; margin-top:8px; font-weight:600;">⚠️ Au Canada, minimum de 5% (jusqu'à 500k$) et 10% sur l'excédent.</div>
+                            <div id="cc-error-container" style="display:none; color:#f87171; font-size:0.8rem; margin-top:8px; font-weight:600;">⚠️ Au Canada, minimum de 5% (jusqu'à 500 000 $) et 10% sur l'excédent (jusqu'à 1 500 000 $). 20% au-delà.</div>
                         </div>
                     </div>
                     <div>
                         <div class="calc-col-title">Frais Annexes</div>
                         <div class="form-group">
-                            <label class="evt-tooltip" data-tooltip="Paiement de l'inspecteur en bâtiment. Souvent déboursé lors de l'offre d'achat.">Inspection en bâtiment <span class="evt-tooltip-icon">?</span></label>
+                            <label class="evt-tooltip" data-tooltip="Rapport complet par un inspecteur membre de l'AIBQ pour détecter les vices apparents.">Inspection en bâtiment <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="cc-insp" value="900" oninput="runCC()">
                         </div>
                         <div class="form-group">
-                            <label class="evt-tooltip" data-tooltip="Honoraires du notaire, recherches d'actes et ajustements de taxes municipales/scolaires.">Notaire + Ajustements <span class="evt-tooltip-icon">?</span></label>
+                            <label class="evt-tooltip" data-tooltip="Honoraires notariés, examen des titres, quittance et remboursement au prorata des taxes déjà payées par le vendeur.">Notaire + Ajustements <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="cc-notary" value="2100" oninput="runCC()">
                         </div>
                         <div class="form-group">
-                            <label>Déménagement / Divers</label>
+                            <label class="evt-tooltip" data-tooltip="Dépenses accessoires : camion de déménagement, raccordements, petits travaux d'emménagement.">Déménagement / Divers <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="cc-move" value="1500" oninput="runCC()">
                         </div>
                     </div>
                 </div>
 
                 <div class="result-panel">
-                    <div class="res-label">Total Liquide Requis</div>
+                    <div class="res-label evt-tooltip" data-tooltip="Somme totale absolue dont vous devez disposer dans votre compte le jour de la signature chez le notaire." style="cursor:help;">Total Liquide Requis <span class="evt-tooltip-icon">?</span></div>
                     <div class="res-value-main" id="cc-res-total">$0</div>
 
                     <div class="res-grid-small" style="flex-wrap:wrap; gap:10px;">
                         <div class="small-stat">
-                            <div class="evt-tooltip" data-tooltip="Aussi appelée Droit de mutation immobilière. (Estimation moyenne)">Taxe Bienvenue <span class="evt-tooltip-icon">?</span></div>
+                            <div class="evt-tooltip" data-tooltip="Droits de mutation immobilière exigibles par votre municipalité quelques semaines après la signature.">Taxe Bienvenue <span class="evt-tooltip-icon">?</span></div>
                             <div id="cc-res-welcome">$0</div>
                         </div>
                         <div class="small-stat">
-                            <div class="evt-tooltip" data-tooltip="Taxe provinciale (9%) calculée sur la prime d'assurance SCHL. Payable chez le notaire.">Taxe SCHL (9%) <span class="evt-tooltip-icon">?</span></div>
+                            <div class="evt-tooltip" data-tooltip="Taxe provinciale du Québec (9% TVQ) calculée sur la prime d'assurance SCHL. Payable obligatoirement chez le notaire.">Taxe SCHL (9%) <span class="evt-tooltip-icon">?</span></div>
                             <div id="cc-res-schl">$0</div>
                         </div>
                     </div>
+
+                    <!-- ACTION ROW TAB 3 -->
+                    <div class="lead-action-row">
+                        <button type="button" class="btn-lead-pdf" onclick="openLeadModal('Frais de Clôture')">
+                            📄 Recevoir ma Fiche Liquidités Notaire
+                        </button>
+                    </div>
+                    <div class="lead-channels-container">
+                        <div class="lead-channels-title">💬 Échangez directement avec Evan :</div>
+                        <div class="lead-channels-grid">
+                            <a href="sms:+15145673249?&body=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20les%20frais%20de%20cl%C3%B4ture" class="channel-btn channel-sms">💬 SMS</a>
+                            <a href="https://wa.me/15145673249?text=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20les%20frais%20de%20cl%C3%B4ture" target="_blank" class="channel-btn channel-wa">🟢 WhatsApp</a>
+                            <a href="https://m.me/evanpatrunocourtier" target="_blank" class="channel-btn channel-messenger">🔵 Messenger</a>
+                            <a href="https://ig.me/m/evanpatruno.immo" target="_blank" class="channel-btn channel-ig">🟣 Instagram</a>
+                            <a href="tel:5145673249" class="channel-btn channel-phone">📞 514-567-3249</a>
+                        </div>
+                    </div>
                 </div>
-                <p
-                    style="text-align:center; margin-top:15px; font-size:0.75rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
-                    <span style="opacity:0.6;">Source : Primes SCHL (2025), taxe de mutation (Loi provinciale), et
-                        barèmes moyens de la Chambre des Notaires du Québec.</span>
-                </p>
             </div>
         </div>
 
         <!-- 4. TAXE BIENVENUE -->
         <div id="tab-welcome" class="th-content">
             <div class="calc-card">
-                <h2 style="text-align:center; margin-bottom:30px; color:#ffffff;">Droits de Donation (Mutation)</h2>
+                <h2 style="text-align:center; margin-bottom:15px; color:#ffffff;">Taxe de <span style="font-weight:700; color:var(--hub-primary);">Bienvenue (Droits de Mutation)</span></h2>
+
+                <!-- BULLE D'INFO EXPLICATIVE -->
+                <div class="tool-info-bubble">
+                    <span class="tool-info-bubble-icon">💡</span>
+                    <div><strong>À quoi sert cet outil ?</strong> Calculez le montant exact des droits de mutation exigés par votre municipalité selon les tranches officielles du barème provincial du Québec ou de la Ville de Montréal.</div>
+                </div>
                 <div class="form-group" style="margin:0 auto 20px auto;">
-                    <label>Municipalité</label>
+                    <label class="evt-tooltip" data-tooltip="Montréal applique des tranches progressives supérieures allant jusqu'à 3% au-delà de 1.22M $.">Municipalité <span class="evt-tooltip-icon">?</span></label>
                     <select class="select-input" id="wt-city" onchange="runWT()">
                         <option value="mtl">Montréal / Taux Supérieur (>500k @ 3%)</option>
                         <option value="qc">Standard Provincial (2025)</option>
                     </select>
                 </div>
                 <div class="form-group" style="margin:0 auto;">
-                    <label>Prix de la Propriété</label>
+                    <label class="evt-tooltip" data-tooltip="La taxe s'applique sur le montant le plus élevé entre le prix d'achat réel et l'évaluation municipale uniformisée.">Prix de la Propriété (Base d'imposition) <span class="evt-tooltip-icon">?</span></label>
                     <input type="number" class="std-input" id="wt-price" value="500000" oninput="runWT()">
                 </div>
 
                 <div class="result-panel">
-                    <div class="res-label">Montant à Payer</div>
+                    <div class="res-label evt-tooltip" data-tooltip="Montant total de la facture de droits de mutation que vous enverra la ville." style="cursor:help;">Montant Total Estimé <span class="evt-tooltip-icon">?</span></div>
                     <div class="res-value-main" id="wt-res-total">$0</div>
-                    <div style="text-align:left; margin-top:20px; font-size:0.9rem; color:var(--hub-text-muted);"
-                        id="wt-explain">
+                    <div id="wt-explain">
                         Détails ici...
                     </div>
+
+                    <!-- ACTION ROW TAB 4 -->
+                    <div class="lead-action-row" style="margin-top:25px;">
+                        <button type="button" class="btn-lead-pdf" onclick="openLeadModal('Taxe de Bienvenue')">
+                            📄 Recevoir le Décompte Détaillé
+                        </button>
+                    </div>
+                    <div class="lead-channels-container">
+                        <div class="lead-channels-title">💬 Échangez directement avec Evan :</div>
+                        <div class="lead-channels-grid">
+                            <a href="sms:+15145673249?&body=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20la%20taxe%20de%20bienvenue" class="channel-btn channel-sms">💬 SMS</a>
+                            <a href="https://wa.me/15145673249?text=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20la%20taxe%20de%20bienvenue" target="_blank" class="channel-btn channel-wa">🟢 WhatsApp</a>
+                            <a href="https://m.me/evanpatrunocourtier" target="_blank" class="channel-btn channel-messenger">🔵 Messenger</a>
+                            <a href="https://ig.me/m/evanpatruno.immo" target="_blank" class="channel-btn channel-ig">🟣 Instagram</a>
+                            <a href="tel:5145673249" class="channel-btn channel-phone">📞 514-567-3249</a>
+                        </div>
+                    </div>
                 </div>
-                <p
-                    style="text-align:center; margin-top:15px; font-size:0.75rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
-                    <span style="opacity:0.6;">Source : Ville de Montréal (Tranches 2025) et Loi sur les droits de
-                        mutation immobilière (Barème provincial du Québec).</span>
-                </p>
             </div>
         </div>
 
-        <!-- 5. LOUER VS ACHETER -->
+        <!-- 5. LOUER VS ACHETER (VERSION 2026 PRO) -->
         <div id="tab-rvb" class="th-content">
             <div class="calc-card">
-                <h2 style="text-align:center; margin-bottom:30px; font-weight:300; color:#ffffff;">Louer ou <span
-                        style="font-weight:700;">Acheter?</span></h2>
+                <h2 style="text-align:center; margin-bottom:15px; font-weight:300; color:#ffffff;">Louer ou <span
+                        style="font-weight:700; color:var(--hub-primary);">Acheter en 2026 ?</span></h2>
+
+                <!-- BULLE D'INFO EXPLICATIVE -->
+                <div class="tool-info-bubble">
+                    <span class="tool-info-bubble-icon">💡</span>
+                    <div><strong>À quoi sert cet outil ?</strong> Comparez la perte financière nette liée au paiement de vos loyers face au patrimoine et à l'équité accumulée (remboursement de capital + appréciation de la propriété) en devenant propriétaire au Québec.</div>
+                </div>
 
                 <div class="calc-grid-2">
+                    <!-- SCENARIO LOCATION -->
                     <div>
-                        <div class="calc-col-title">Actuellement</div>
+                        <div class="calc-col-title" style="color:#fb7185;">Scénario Location</div>
                         <div class="form-group">
-                            <label>Votre Loyer Actuel ($/mois)</label>
-                            <input type="number" class="std-input" id="rvb-rent" value="1500" oninput="runRvB()">
+                            <label class="evt-tooltip" data-tooltip="Montant mensuel de votre loyer actuel versé à 100% à fonds perdus.">Votre Loyer Actuel ($/mois) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="rvb-rent" value="1600" step="50" oninput="runRvB()">
                         </div>
                         <div class="form-group">
-                            <label>Augmentation Annuelle (%)</label>
-                            <input type="number" class="std-input" id="rvb-rent-inc" value="2.5" step="0.1"
-                                oninput="runRvB()">
+                            <label class="evt-tooltip" data-tooltip="Moyenne des hausses annuelles autorisées par le Tribunal administratif du logement (TAL).">Hausse Annuelle Estimée (%) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="rvb-rent-inc" value="3.0" step="0.1" oninput="runRvB()">
+                        </div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Durée sur laquelle se mesurent le remboursement du capital hypothécaire et la plus-value immobilière.">Horizon de Comparaison (Années) <span class="evt-tooltip-icon">?</span></label>
+                            <select class="select-input" id="rvb-years" onchange="runRvB()">
+                                <option value="3">3 ans</option>
+                                <option value="5" selected>5 ans (Recommandé)</option>
+                                <option value="10">10 ans (Long terme)</option>
+                            </select>
                         </div>
                     </div>
+
+                    <!-- SCENARIO ACHAT -->
                     <div>
-                        <div class="calc-col-title">Paramètres Hypothèque</div>
+                        <div class="calc-col-title" style="color:var(--hub-success);">Scénario Propriétaire</div>
                         <div class="form-group">
-                            <label>Taux d'Intérêt Estimé (%)</label>
-                            <input type="number" class="std-input" id="rvb-rate" value="4.89" step="0.01"
-                                oninput="runRvB()">
+                            <label class="evt-tooltip" data-tooltip="Prix d'achat estimé de la maison, condo ou plex visé.">Prix de la Propriété ($) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="rvb-price" value="450000" step="5000" oninput="runRvB()">
                         </div>
                         <div class="form-group">
-                            <label>Horizon de Calcul (Années)</label>
-                            <input type="number" class="std-input" id="rvb-years" value="5" oninput="runRvB()">
+                            <label class="evt-tooltip" data-tooltip="Mise de fonds initiale injectée (votre capital qui reste préservé dans votre équité).">Mise de Fonds ($) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="rvb-down" value="45000" step="1000" oninput="runRvB()">
+                        </div>
+                        <div class="form-group">
+                            <label class="evt-tooltip" data-tooltip="Taux d'intérêt hypothécaire négocié avec votre courtier.">Taux Hypothécaire Estimé (%) <span class="evt-tooltip-icon">?</span></label>
+                            <input type="number" class="std-input" id="rvb-rate" value="4.49" step="0.05" oninput="runRvB()">
                         </div>
                     </div>
                 </div>
 
-                <div class="result-panel">
-                    <div class="res-label">Perte Sèche du Loyer (sur 5 ans)</div>
-                    <div class="res-value-main" id="rvb-res-total"
-                        style="color:#f43f5e; -webkit-text-fill-color: #f43f5e;">
-                        $0</div>
+                <div class="result-panel" style="padding:30px 25px;">
+                    <div class="res-label" style="font-size:1rem; font-weight:700; color:#ffffff;">Bilan Stratégique Comparatif sur <span id="rvb-horizon-txt" style="color:var(--hub-gold);">5 ans</span></div>
+                    
+                    <div class="rvb-compare-grid">
+                        <!-- LOCATAIRE -->
+                        <div class="rvb-card-rent">
+                            <div>
+                                <div class="rvb-card-header" style="color:#fb7185;">🏢 En Restant Locataire</div>
+                                <div id="rvb-res-total" class="rvb-val-hero" style="color:#f43f5e;">$0</div>
+                                <small style="color:var(--hub-text-muted); font-size:0.78rem;">Total des loyers versés à 100% à fonds perdus</small>
+                            </div>
+                            <div class="rvb-breakdown-box">
+                                <div class="rvb-breakdown-row">
+                                    <span>Loyer mensuel après hausse :</span>
+                                    <strong id="rvb-rent-end-val" style="color:#fb7185;">-- $</strong>
+                                </div>
+                                <div class="rvb-breakdown-row">
+                                    <span>Valeur patrimoniale créée :</span>
+                                    <strong style="color:var(--hub-text-muted);">0 $ (Aucun actif)</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PROPRIÉTAIRE -->
+                        <div class="rvb-card-buy">
+                            <div class="rvb-card-header" style="color:var(--hub-success);">🏡 En Devenant Propriétaire</div>
+                            <div id="rvb-res-equity" class="rvb-val-hero" style="color:var(--hub-success);">+$0</div>
+                            <small style="color:var(--hub-text-muted); font-size:0.78rem;">Équité nette totale accumulée dans la propriété</small>
 
-                    <div class="res-grid-small">
-                        <div class="small-stat">
-                            <div>Capacité d'Achat Équivalente</div>
-                            <div id="rvb-res-power" style="color:var(--hub-success);">$0</div>
+                            <div class="rvb-breakdown-box">
+                                <div class="rvb-breakdown-row">
+                                    <span class="evt-tooltip" data-tooltip="Votre capital initialement injecté et préservé dans la propriété.">💰 Mise de fonds initiale <span class="evt-tooltip-icon">?</span> :</span>
+                                    <strong id="rvb-detail-down">-- $</strong>
+                                </div>
+                                <div class="rvb-breakdown-row">
+                                    <span class="evt-tooltip" data-tooltip="Portion de chaque mensualité qui rembourse le capital et devient votre argent propre.">📉 Capital remboursé sur prêt <span class="evt-tooltip-icon">?</span> :</span>
+                                    <strong id="rvb-detail-principal" style="color:#34d399;">+ -- $</strong>
+                                </div>
+                                <div class="rvb-breakdown-row">
+                                    <span class="evt-tooltip" data-tooltip="Croissance naturelle estimée de la valeur marchande du bien (~3%/an au Québec).">📈 Plus-value estimée (3%/an) <span class="evt-tooltip-icon">?</span> :</span>
+                                    <strong id="rvb-detail-gain" style="color:#d4af37;">+ -- $</strong>
+                                </div>
+                                <div class="rvb-breakdown-row" style="border-top:1px solid rgba(255,255,255,0.08); margin-top:4px; padding-top:6px;">
+                                    <span>Valeur future estimée de la propriété :</span>
+                                    <strong id="rvb-detail-future-val" style="color:#ffffff;">-- $</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BANNIÈRE ENRICHISSEMENT STRATÉGIQUE -->
+                    <div class="rvb-gold-banner">
+                        <div class="evt-tooltip" data-tooltip="Nouvelle valeur nette créée par l'achat (Capital remboursé + Plus-value) par rapport à 0 $ en location." style="font-size:0.92rem; color:#ffffff; font-weight:700; text-transform:uppercase; letter-spacing:1px; cursor:help;">
+                            ✨ Nouvel Enrichissement Net Créé <span class="evt-tooltip-icon">?</span> :
+                        </div>
+                        <div id="rvb-res-net" style="font-size:2.4rem; font-weight:800; color:#d4af37; margin:6px 0;">+$0</div>
+                        <div id="rvb-res-desc" style="font-size:0.88rem; color:rgba(255,255,255,0.85); line-height:1.5;">
+                            En achetant, vous bâtissez <strong>123 136 $</strong> de nouvelle valeur nette (capital remboursé + plus-value) au lieu de perdre <strong>101 935 $</strong> en loyers.
+                        </div>
+                    </div>
+
+                    <!-- ACTION ROW TAB 5 -->
+                    <div class="lead-action-row" style="margin-top:25px;">
+                        <button type="button" class="btn-lead-pdf" onclick="openLeadModal('Louer vs Acheter')">
+                            📄 Recevoir mon Analyse Comparative PDF
+                        </button>
+                    </div>
+                    <div class="lead-channels-container">
+                        <div class="lead-channels-title">💬 Échangez directement avec Evan :</div>
+                        <div class="lead-channels-grid">
+                            <a href="sms:+15145673249?&body=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20la%20comparaison%20louer%20vs%20acheter" class="channel-btn channel-sms">💬 SMS</a>
+                            <a href="https://wa.me/15145673249?text=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20la%20comparaison%20louer%20vs%20acheter" target="_blank" class="channel-btn channel-wa">🟢 WhatsApp</a>
+                            <a href="https://m.me/evanpatrunocourtier" target="_blank" class="channel-btn channel-messenger">🔵 Messenger</a>
+                            <a href="https://ig.me/m/evanpatruno.immo" target="_blank" class="channel-btn channel-ig">🟣 Instagram</a>
+                            <a href="tel:5145673249" class="channel-btn channel-phone">📞 514-567-3249</a>
                         </div>
                     </div>
                 </div>
-                <p
-                    style="text-align:center; margin-top:15px; font-size:0.75rem; color:var(--hub-text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">
-                    <span style="opacity:0.6;">Source : Simulation financière basée sur l'évolution moyenne des loyers
-                        au Québec et l'amortissement du capital d'une hypothèque standard.</span>
-                </p>
+
+                <!-- QUIZ DIAGNOSTIC ACHAT (IDÉE 8) -->
+                <div class="quiz-card" id="quiz-block">
+                    <h4>🎯 Diagnostic Gratuit : Êtes-vous Prêt à Acheter en 2026 ?</h4>
+                    <p>Répondez en 3 clics pour obtenir votre recommandation stratégique personnalisée :</p>
+                    
+                    <div id="quiz-step-1">
+                        <div style="font-weight:600; font-size:0.88rem; margin-bottom:10px; color:#fff; text-align:center;">1. Quelle est votre situation d'emploi ?</div>
+                        <div class="quiz-options-grid">
+                            <button type="button" class="quiz-opt-btn" onclick="selectQuiz(1, 'Salarié permanent')">💼 Salarié permanent</button>
+                            <button type="button" class="quiz-opt-btn" onclick="selectQuiz(1, 'Travailleur autonome')">📈 Travailleur autonome</button>
+                            <button type="button" class="quiz-opt-btn" onclick="selectQuiz(1, 'Autre / Contractuel')">🔄 Contractuel / Autre</button>
+                        </div>
+                    </div>
+
+                    <div id="quiz-step-2" style="display:none;">
+                        <div style="font-weight:600; font-size:0.88rem; margin-bottom:10px; color:#fff; text-align:center;">2. Avez-vous une mise de fonds de côté (CELIAPP / RAP / Épargne) ?</div>
+                        <div class="quiz-options-grid">
+                            <button type="button" class="quiz-opt-btn" onclick="selectQuiz(2, 'Moins de 15 000 $')">💰 Moins de 15 000 $</button>
+                            <button type="button" class="quiz-opt-btn" onclick="selectQuiz(2, '15 000 $ à 50 000 $')">💵 15 000 $ à 50 000 $</button>
+                            <button type="button" class="quiz-opt-btn" onclick="selectQuiz(2, 'Plus de 50 000 $')">💎 Plus de 50 000 $</button>
+                        </div>
+                    </div>
+
+                    <div id="quiz-step-3" style="display:none;">
+                        <div style="font-weight:600; font-size:0.88rem; margin-bottom:10px; color:#fff; text-align:center;">3. Quel est votre horizon d'achat souhaité ?</div>
+                        <div class="quiz-options-grid">
+                            <button type="button" class="quiz-opt-btn" onclick="selectQuiz(3, '1 à 3 mois (Immédiat)')">⚡ 1 à 3 mois (Immédiat)</button>
+                            <button type="button" class="quiz-opt-btn" onclick="selectQuiz(3, '3 à 6 mois')">📅 3 à 6 mois</button>
+                            <button type="button" class="quiz-opt-btn" onclick="selectQuiz(3, '6 à 12 mois +')">⏳ 6 à 12 mois +</button>
+                        </div>
+                    </div>
+
+                    <div id="quiz-result" style="display:none; text-align:center; padding:15px 10px;">
+                        <div style="color:#34d399; font-weight:800; font-size:1.1rem; margin-bottom:8px;">✅ Diagnostic Favorable Détecté !</div>
+                        <p style="font-size:0.85rem; color:rgba(255,255,255,0.85); margin-bottom:15px;">Votre profil présente un excellent potentiel d'achat ou d'optimisation financière. Recevez votre analyse de faisabilité détaillée par Evan Patruno :</p>
+                        <button type="button" class="btn-lead-pdf" onclick="openLeadModal('Diagnostic Propriétaire 2026')">
+                            Recevoir mon Diagnostic Personnalisé &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <div style="text-align:center; margin-top:25px;">
+                    <a href="https://calendar.app.google/NLQVyTxENHHFfzwW6" target="_blank" class="hero-btn" style="background:linear-gradient(135deg, #d4af37, #aa771c); color:#1e0a19; font-weight:700; text-decoration:none; padding:14px 30px; border-radius:25px; display:inline-block;">
+                        Valider Ma Capacité d'Achat avec Evan Patruno &rarr;
+                    </a>
+                </div>
             </div>
         </div>
 
         <!-- 6. ATTENDRE VS ACHETER (COÛT DE L'ATTENTE) -->
         <div id="tab-wait-vs-buy" class="th-content">
             <div class="calc-card">
-                <h2 style="text-align:center; margin-bottom:10px; font-weight:300; font-size:1.8rem; color:#ffffff;">
+                <h2 style="text-align:center; margin-bottom:15px; font-weight:300; font-size:1.8rem; color:#ffffff;">
                     Le <span style="font-weight:700; color:#a7ff00;">Vrai Coût</span> de l'Attente
                 </h2>
-                <p style="text-align:center; color:var(--hub-text-muted); margin-bottom:40px; max-width:600px; margin-inline:auto;">
-                    Calculer l'impact d'une baisse de taux vs l'augmentation du prix des maisons et la perte d'équité.
-                </p>
+
+                <!-- BULLE D'INFO EXPLICATIVE -->
+                <div class="tool-info-bubble">
+                    <span class="tool-info-bubble-icon">💡</span>
+                    <div><strong>À quoi sert cet outil ?</strong> Évaluez si attendre une éventuelle baisse des taux d'intérêt est rentable ou si l'appréciation du prix des maisons et la perte de mensualités d'équité rendent l'attente plus coûteuse.</div>
+                </div>
 
                 <div class="calc-grid-2">
                     <!-- Inputs -->
                     <div>
                         <div class="calc-col-title">Paramètres Actuels</div>
                         <div class="form-group">
-                            <label>Prix de la maison souhaitée ($)</label>
+                            <label class="evt-tooltip" data-tooltip="Prix d'achat actuel de la propriété convoitée aujourd'hui.">Prix de la maison souhaitée ($) <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="wait-price" value="500000" step="5000" oninput="runWait()">
                         </div>
                         <div class="form-group">
-                            <label>Taux disponible aujourd'hui (%)</label>
+                            <label class="evt-tooltip" data-tooltip="Meilleur taux d'intérêt fixe ou variable disponible aujourd'hui sur le marché.">Taux disponible aujourd'hui (%) <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="wait-rate-now" value="4.89" step="0.05" oninput="runWait()">
                         </div>
                         
                         <div class="calc-col-title" style="margin-top:40px;">Prospective (Attente)</div>
                         <div class="form-group">
-                            <label>Délai d'attente estimé (mois)</label>
+                            <label class="evt-tooltip" data-tooltip="Nombre de mois pendant lesquels vous envisagez de reporter votre projet d'achat.">Délai d'attente estimé (mois) <span class="evt-tooltip-icon">?</span></label>
                             <input type="range" id="wait-months-slider" min="6" max="36" value="12" step="6" style="margin-bottom:10px;" oninput="syncWaitSlider()">
                             <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:var(--hub-text-muted);">
                                 <span>6 mois</span>
@@ -963,7 +2037,7 @@ INSTRUCTIONS:
                             <input type="number" class="std-input" id="wait-appreciation" value="5" step="0.5" oninput="runWait()">
                         </div>
                         <div class="form-group">
-                            <label class="evt-tooltip" data-tooltip="Le taux que vous espérez obtenir après la baisse.">Futur taux espéré (%) <span class="evt-tooltip-icon">?</span></label>
+                            <label class="evt-tooltip" data-tooltip="Le taux hypothécaire inférieur que vous espérez obtenir après une baisse de la Banque du Canada.">Futur taux espéré (%) <span class="evt-tooltip-icon">?</span></label>
                             <input type="number" class="std-input" id="wait-rate-future" value="4.00" step="0.05" oninput="runWait()">
                         </div>
                     </div>
@@ -982,30 +2056,109 @@ INSTRUCTIONS:
 
                         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
                             <div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
-                                <div style="font-size:0.75rem; color:var(--hub-text-muted); text-transform:uppercase;">Prix Futur</div>
+                                <div class="evt-tooltip" data-tooltip="Prix que coûtera cette même maison après application de l'appréciation du marché." style="font-size:0.75rem; color:var(--hub-text-muted); text-transform:uppercase;">Prix Futur <span class="evt-tooltip-icon">?</span></div>
                                 <div id="res-wait-future-price" style="font-size:1.1rem; font-weight:700; margin-top:5px; color:white;">-- $</div>
                                 <div id="res-wait-apprec-gain" style="font-size:0.8rem; color:#f87171; margin-top:3px;">+ 0 $</div>
                             </div>
                             <div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
-                                <div style="font-size:0.75rem; color:var(--hub-text-muted); text-transform:uppercase;">Paiement Futur</div>
+                                <div class="evt-tooltip" data-tooltip="Versement hypothécaire calculé sur le prix plus élevé mais avec le taux inférieur." style="font-size:0.75rem; color:var(--hub-text-muted); text-transform:uppercase;">Paiement Futur <span class="evt-tooltip-icon">?</span></div>
                                 <div id="res-wait-future-pmt" style="font-size:1.1rem; font-weight:700; margin-top:5px; color:white;">-- $</div>
                                 <div id="res-wait-pmt-diff" style="font-size:0.8rem; color:#4ade80; margin-top:3px;">- 0 $ /ms</div>
                             </div>
                         </div>
 
                         <div class="result-panel" style="margin-top:20px; padding:25px; border-color:rgba(167, 255, 0, 0.3);">
-                            <div class="res-label">Équité Perdue en attendant</div>
+                            <div class="res-label evt-tooltip" data-tooltip="Augmentation de valeur patrimoniale que vous manquez en n'étant pas propriétaire durant cette période." style="cursor:help;">Équité Perdue en attendant <span class="evt-tooltip-icon">?</span></div>
                             <div id="res-wait-equity-lost" class="res-value-main" style="font-size:2.4rem; background:linear-gradient(135deg, #fff, #a7ff00); -webkit-text-fill-color:transparent;">0 $</div>
                             <p style="font-size:0.8rem; color:var(--hub-text-muted); margin:0;">C'est l'augmentation de valeur que vous ne capturez pas en n'étant pas propriétaire pendant cette période.</p>
+
+                            <!-- ACTION ROW TAB 6 -->
+                            <div class="lead-action-row" style="margin-top:20px;">
+                                <button type="button" class="btn-lead-pdf" onclick="openLeadModal('Attendre vs Acheter')">
+                                    📄 Recevoir ce Bilan Stratégique PDF
+                                </button>
+                            </div>
+                            <div class="lead-channels-container">
+                                <div class="lead-channels-title">💬 Échangez directement avec Evan :</div>
+                                <div class="lead-channels-grid">
+                                    <a href="sms:+15145673249?&body=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20attendre%20vs%20acheter" class="channel-btn channel-sms">💬 SMS</a>
+                                    <a href="https://wa.me/15145673249?text=Bonjour%20Evan,%20j'ai%20une%20question%20sur%20attendre%20vs%20acheter" target="_blank" class="channel-btn channel-wa">🟢 WhatsApp</a>
+                                    <a href="https://m.me/evanpatrunocourtier" target="_blank" class="channel-btn channel-messenger">🔵 Messenger</a>
+                                    <a href="https://ig.me/m/evanpatruno.immo" target="_blank" class="channel-btn channel-ig">🟣 Instagram</a>
+                                    <a href="tel:5145673249" class="channel-btn channel-phone">📞 514-567-3249</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- 6. VIP BOOKING STRIP DIRECT (IDÉE 6) -->
+        <div class="hub-booking-strip">
+            <div style="display:flex; align-items:center; gap:20px;">
+                <img src="https://www.evanpatruno.ca/Photo%20de%20profil%20courtier%20Pro%20N%20Plex.jpg" alt="Evan Patruno" class="hub-booking-avatar">
+                <div class="hub-booking-info">
+                    <div class="hub-live-badge">
+                        <span class="hub-live-dot"></span>
+                        Disponibilités Ouvertes Cette Semaine
+                    </div>
+                    <h3>Besoin d'un Avis Stratégique sur Vos Chiffres ?</h3>
+                    <p>Réservez un appel de 15 minutes sans engagement avec <strong>Evan Patruno</strong> pour valider votre financement ou votre achat.</p>
+                </div>
+            </div>
+            <a href="https://calendar.app.google/NLQVyTxENHHFfzwW6" target="_blank" class="btn-prequal" style="font-size:1rem; padding:16px 30px;">
+                📅 Réserver Mon Appel 15 Min &rarr;
+            </a>
+        </div>
 
+        <!-- MENTION LÉGALE & AVERTISSEMENT DE CONFORMITÉ -->
+        <div style="margin-top: 50px; padding: 20px 25px; border-radius: 16px; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.76rem; color: var(--hub-text-muted); line-height: 1.5; text-align: center;">
+            <strong style="color: rgba(255, 255, 255, 0.85);">⚖️ Note de conformité réglementaire & légale :</strong><br>
+            Les outils et simulateurs financiers sont mis à disposition à des fins strictement indicatives et éducatives. Les calculs intègrent les normes du BSIF (Ligne directrice B-20 & test de résistance), les grilles de primes de la SCHL / Sagen, la capitalisation semi-annuelle de la Loi sur l'intérêt au Canada, ainsi que les barèmes provinciaux et municipaux des droits de mutation (taxe de bienvenue). Ces estimations ne constituent ni une offre formelle de crédit, ni un engagement contractuel. Une qualification financière personnalisée auprès d'Evan Patruno est requise pour valider officiellement votre dossier auprès des institutions financières participantes.
+        </div>
 
     </div> <!-- Close inner wrapper -->
 </div> <!-- Close tools-hub-container -->
+
+<!-- MODAL DE CAPTURE DE LEAD CONNECTÉ À ZOHO CRM (IDÉE 1 : BILAN PDF) -->
+<iframe id="leadHiddenFrame" name="leadHiddenFrame" style="display:none;"></iframe>
+
+<div class="lead-modal-overlay" id="leadModalOverlay" onclick="closeLeadModalOnBg(event)">
+    <div class="lead-modal-box">
+        <button type="button" class="lead-modal-close" onclick="closeLeadModal()">&times;</button>
+        <div style="font-size:2.5rem; margin-bottom:10px;">📄</div>
+        <h3 style="font-family:'Cinzel', serif; font-size:1.4rem; color:#ffffff; margin:0 0 8px 0;" id="leadModalTitle">Recevoir Mon Bilan Complet</h3>
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.75); margin:0 0 20px 0;">Entrez vos coordonnées pour recevoir votre rapport chiffré, tableau d'amortissement et conseils d'Evan Patruno.</p>
+
+        <!-- ZOHO CRM WEB-TO-LEAD FORM -->
+        <form id="leadModalForm" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" target="leadHiddenFrame" onsubmit="submitLeadModal(event)" accept-charset="UTF-8">
+            <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+            <input type="hidden" name="zc_gad" id="zc_gad" value="">
+            <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+            <input type="hidden" name="actionType" value="TGVhZHM=">
+            <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca/outils">
+            <input type="hidden" name="LEADCF7" value="OUTILS_SIMULATEUR">
+            <input type="hidden" name="Description" id="leadZohoDescription">
+
+            <input type="hidden" name="First Name" id="leadFirstName">
+            <input type="hidden" name="Last Name" id="leadLastName">
+
+            <input type="text" id="leadName" class="lead-modal-input" placeholder="Votre Prénom & Nom *" required>
+            <input type="email" name="Email" id="leadEmail" class="lead-modal-input" placeholder="Votre Adresse Courriel *" required>
+            <input type="tel" name="Phone" id="leadPhone" class="lead-modal-input" placeholder="Votre Numéro de Téléphone (Optionnel)">
+            
+            <button type="submit" class="btn-lead-pdf" style="width:100%; justify-content:center; padding:15px; font-size:1rem; border-radius:12px; margin-top:5px;" id="leadSubmitBtn">
+                🚀 Envoyer Mon Bilan Immédiatement
+            </button>
+        </form>
+
+        <div id="leadSuccessMsg" style="display:none; padding:20px 0;">
+            <div style="font-size:2.5rem; color:#34d399; margin-bottom:10px;">✅</div>
+            <h4 style="color:#ffffff; margin:0 0 8px 0;">C'est envoyé !</h4>
+            <p style="font-size:0.88rem; color:rgba(255,255,255,0.85); line-height:1.5;">Votre demande a bien été transmise à Evan Patruno. Vous recevrez votre bilan détaillé dans votre boîte courriel sous peu.</p>
+        </div>
+    </div>
+</div>
 
 <script>
     // --- UTILS ---
@@ -1022,6 +2175,158 @@ INSTRUCTIONS:
         var el = document.getElementById(id);
         return el ? parseFloat(el.value) || 0 : 0;
     }
+
+    // Variables globales de simulation & quiz
+    window.quizAnswers = window.quizAnswers || {};
+
+    window.selectQuiz = function(step, val) {
+        window.quizAnswers['step' + step] = val;
+        console.log("Quiz étape " + step + " sélectionnée:", val, window.quizAnswers);
+        if (step === 1) {
+            document.getElementById('quiz-step-1').style.display = 'none';
+            document.getElementById('quiz-step-2').style.display = 'block';
+        } else if (step === 2) {
+            document.getElementById('quiz-step-2').style.display = 'none';
+            document.getElementById('quiz-step-3').style.display = 'block';
+        } else if (step === 3) {
+            document.getElementById('quiz-step-3').style.display = 'none';
+            document.getElementById('quiz-result').style.display = 'block';
+        }
+    };
+
+    // === 1. CONVERSION & LEAD CAPTURE HANDLERS (DEFINED FIRST) ===
+    window.openLeadModal = function(toolName) {
+        toolName = toolName || "Simulation Immobiliere";
+        console.log("Ouverture du Modal Bilan pour:", toolName);
+        var titleEl = document.getElementById('leadModalTitle');
+        var sourceEl = document.getElementById('leadToolSource');
+        var formEl = document.getElementById('leadModalForm');
+        var successEl = document.getElementById('leadSuccessMsg');
+        var overlayEl = document.getElementById('leadModalOverlay');
+
+        if (titleEl) titleEl.innerText = "Bilan : " + toolName;
+        if (sourceEl) sourceEl.value = toolName;
+        if (formEl) formEl.style.display = 'block';
+        if (successEl) successEl.style.display = 'none';
+        if (overlayEl) {
+            overlayEl.style.display = 'flex';
+            overlayEl.style.zIndex = '999999';
+        }
+    };
+
+    window.closeLeadModal = function() {
+        var overlayEl = document.getElementById('leadModalOverlay');
+        if (overlayEl) overlayEl.style.display = 'none';
+    };
+
+    window.closeLeadModalOnBg = function(e) {
+        if (e && e.target && e.target.id === 'leadModalOverlay') {
+            closeLeadModal();
+        }
+    };
+
+    window.submitLeadModal = function(e) {
+        var rawName = (document.getElementById('leadName').value || '').trim();
+        var nameParts = rawName.split(' ');
+        var firstName = nameParts[0] || 'Client';
+        var lastName = nameParts.slice(1).join(' ') || 'Prospect Outils';
+
+        var fnEl = document.getElementById('leadFirstName');
+        var lnEl = document.getElementById('leadLastName');
+        if (fnEl) fnEl.value = firstName;
+        if (lnEl) lnEl.value = lastName;
+
+        var email = document.getElementById('leadEmail') ? document.getElementById('leadEmail').value : '';
+        var phone = document.getElementById('leadPhone') ? document.getElementById('leadPhone').value : '';
+        var tool = document.getElementById('leadToolSource') ? document.getElementById('leadToolSource').value : 'Outils';
+
+        var simulationData = "";
+        try {
+            if (tool.indexOf('Capacit') !== -1) {
+                simulationData = "\n--- DÉTAILS CAPACITÉ D'EMPRUNT ---\n" +
+                    "• Revenu brut annuel : " + fmt(getVal('aff-income')) + "\n" +
+                    "• Dettes mensuelles : " + fmt(getVal('aff-debts')) + "\n" +
+                    "• Mise de fonds : " + fmt(getVal('aff-down')) + "\n" +
+                    "• Taux négocié : " + getVal('aff-rate-neg') + " %\n" +
+                    "• Prix max estimé : " + (document.getElementById('aff-res-price') ? document.getElementById('aff-res-price').innerText : 'N/A') + "\n" +
+                    "• Hypothèque max : " + (document.getElementById('aff-res-mortgage') ? document.getElementById('aff-res-mortgage').innerText : 'N/A');
+            } else if (tool.indexOf('Hypoth') !== -1) {
+                var loanVal = document.getElementById('mc-loan-slider') ? document.getElementById('mc-loan-slider').value : '450000';
+                var rateVal = document.getElementById('mc-rate-slider') ? document.getElementById('mc-rate-slider').value : '4.89';
+                var amortVal = document.getElementById('mc-amort-slider') ? document.getElementById('mc-amort-slider').value : '25';
+                var freqSelect = document.getElementById('mc-freq');
+                var freqVal = freqSelect ? freqSelect.options[freqSelect.selectedIndex].text : 'Mensuel';
+                simulationData = "\n--- DÉTAILS CALCULATRICE HYPOTHÉCAIRE ---\n" +
+                    "• Montant du prêt : " + fmt(parseFloat(loanVal)) + "\n" +
+                    "• Taux d'intérêt : " + rateVal + " %\n" +
+                    "• Amortissement : " + amortVal + " ans\n" +
+                    "• Fréquence : " + freqVal + "\n" +
+                    "• Versement calculé : " + (document.getElementById('mc-res-pay') ? document.getElementById('mc-res-pay').innerText : 'N/A') + " " + (document.getElementById('mc-res-label') ? document.getElementById('mc-res-label').innerText : '') + "\n" +
+                    "• Total versé : " + (document.getElementById('mc-total-paid') ? document.getElementById('mc-total-paid').innerText : 'N/A') + "\n" +
+                    "• Total intérêts : " + (document.getElementById('mc-total-interest') ? document.getElementById('mc-total-interest').innerText : 'N/A');
+            } else if (tool.indexOf('Clôture') !== -1 || tool.indexOf('Cloture') !== -1) {
+                simulationData = "\n--- DÉTAILS FRAIS DE CLÔTURE & NOTAIRE ---\n" +
+                    "• Prix d'achat : " + fmt(getVal('cc-price')) + "\n" +
+                    "• Mise de fonds : " + fmt(getVal('cc-down')) + "\n" +
+                    "• Inspection : " + fmt(getVal('cc-insp')) + "\n" +
+                    "• Notaire + ajustements : " + fmt(getVal('cc-notary')) + "\n" +
+                    "• Déménagement / divers : " + fmt(getVal('cc-move')) + "\n" +
+                    "• Taxe bienvenue estimée : " + (document.getElementById('cc-res-welcome') ? document.getElementById('cc-res-welcome').innerText : 'N/A') + "\n" +
+                    "• Taxe SCHL (9%) : " + (document.getElementById('cc-res-schl') ? document.getElementById('cc-res-schl').innerText : 'N/A') + "\n" +
+                    "• Total liquide requis : " + (document.getElementById('cc-res-total') ? document.getElementById('cc-res-total').innerText : 'N/A');
+            } else if (tool.indexOf('Bienvenue') !== -1) {
+                var citySelect = document.getElementById('wt-city');
+                var cityText = citySelect ? (citySelect.value === 'mtl' ? 'Montréal (Tranches supérieures)' : 'Standard Québec') : 'Standard';
+                simulationData = "\n--- DÉTAILS TAXE DE BIENVENUE ---\n" +
+                    "• Prix de la propriété : " + fmt(getVal('wt-price')) + "\n" +
+                    "• Municipalité : " + cityText + "\n" +
+                    "• Montant total estimé : " + (document.getElementById('wt-res-total') ? document.getElementById('wt-res-total').innerText : 'N/A');
+            } else if (tool.indexOf('Diagnostic') !== -1 || tool.indexOf('Louer') !== -1) {
+                var q1 = window.quizAnswers.step1 || "Salarié permanent";
+                var q2 = window.quizAnswers.step2 || "15 000 $ à 50 000 $";
+                var q3 = window.quizAnswers.step3 || "1 à 3 mois (Immédiat)";
+                simulationData = "\n--- RÉSULTATS DU DIAGNOSTIC ACHETEUR 2026 ---\n" +
+                    "• 1. Situation d'emploi : " + q1 + "\n" +
+                    "• 2. Mise de fonds disponible : " + q2 + "\n" +
+                    "• 3. Horizon d'achat souhaité : " + q3 + "\n" +
+                    "\n--- PARAMÈTRES SIMULÉS (LOUER VS ACHETER) ---\n" +
+                    "• Loyer actuel : " + fmt(getVal('rvb-rent')) + " / mois\n" +
+                    "• Prix propriété ciblée : " + fmt(getVal('rvb-price')) + "\n" +
+                    "• Mise de fonds simulée : " + fmt(getVal('rvb-down')) + "\n" +
+                    "• Total loyers perdus (5 ans) : " + (document.getElementById('rvb-res-total') ? document.getElementById('rvb-res-total').innerText : 'N/A') + "\n" +
+                    "• Équité bâtie en achat : " + (document.getElementById('rvb-res-equity') ? document.getElementById('rvb-res-equity').innerText : 'N/A') + "\n" +
+                    "• Nouvel enrichissement net : " + (document.getElementById('rvb-res-net') ? document.getElementById('rvb-res-net').innerText : 'N/A');
+            } else if (tool.indexOf('Attendre') !== -1) {
+                var waitMonths = document.getElementById('wait-months-slider') ? document.getElementById('wait-months-slider').value : '12';
+                simulationData = "\n--- DÉTAILS ATTENDRE VS ACHETER ---\n" +
+                    "• Prix maison aujourd'hui : " + fmt(getVal('wait-price')) + "\n" +
+                    "• Taux disponible aujourd'hui : " + getVal('wait-rate-now') + " %\n" +
+                    "• Délai d'attente : " + waitMonths + " mois\n" +
+                    "• Appréciation annuelle estimée : " + getVal('wait-appreciation') + " %\n" +
+                    "• Futur taux espéré : " + getVal('wait-rate-future') + " %\n" +
+                    "• Prix futur estimé : " + (document.getElementById('res-wait-future-price') ? document.getElementById('res-wait-future-price').innerText : 'N/A') + "\n" +
+                    "• Équité perdue en attendant : " + (document.getElementById('res-wait-equity-lost') ? document.getElementById('res-wait-equity-lost').innerText : 'N/A') + "\n" +
+                    "• Verdict financier net : " + (document.getElementById('wait-total-impact') ? document.getElementById('wait-total-impact').innerText : 'N/A');
+            }
+        } catch(err) {
+            console.error("Erreur compilation simulationData:", err);
+        }
+
+        var fullSummary = "Demande reçue depuis evanpatruno.ca/outils\n" +
+            "Outil: " + tool + "\n" +
+            "Client: " + rawName + "\n" +
+            "Courriel: " + email + "\n" +
+            "Téléphone: " + (phone || 'Non renseigné') + "\n" +
+            simulationData;
+
+        var descEl = document.getElementById('leadZohoDescription');
+        if (descEl) descEl.value = fullSummary;
+
+        var formEl = document.getElementById('leadModalForm');
+        var successEl = document.getElementById('leadSuccessMsg');
+        if (formEl) formEl.style.display = 'none';
+        if (successEl) successEl.style.display = 'block';
+    };
 
     // --- NAVIGATION (defined first, before anything else) ---
     window.switchTab = function(id) {
@@ -1170,19 +2475,35 @@ INSTRUCTIONS:
         var interestPct = Math.round((totalInterest / totalPaid) * 100);
         smartAnimate('mc-total-paid', totalPaid);
         smartAnimate('mc-total-interest', totalInterest);
-        var pAccel = (pMonthly * 12) / 26;
-        var balance = P, totalPaidAccel = 0, monthsAccel = 0;
-        while (balance > 0 && monthsAccel < n * 2) {
-            var interestCharge = balance * r;
-            var principalThisMonth = pMonthly - interestCharge;
-            balance -= (principalThisMonth * 26 / 12);
-            totalPaidAccel += pAccel * 26 / 12;
-            monthsAccel++;
+        // Calcul précis de l'amortissement accéléré aux 2 semaines (pMonthly / 2)
+        var pAccel = pMonthly / 2;
+        var r_biweekly = Math.pow(1 + (rate / 100) / 2, 2 / 26) - 1;
+        var balanceAccel = P;
+        var totalInterestAccel = 0;
+        var numPeriodsAccel = 0;
+
+        while (balanceAccel > 0 && numPeriodsAccel < 26 * 40) {
+            var interestPeriod = balanceAccel * r_biweekly;
+            if (balanceAccel + interestPeriod <= pAccel) {
+                totalInterestAccel += interestPeriod;
+                balanceAccel = 0;
+                numPeriodsAccel++;
+                break;
+            }
+            var principalPeriod = pAccel - interestPeriod;
+            balanceAccel -= principalPeriod;
+            totalInterestAccel += interestPeriod;
+            numPeriodsAccel++;
         }
-        var saving = totalPaid - totalPaidAccel;
+
+        var saving = Math.max(0, totalInterest - totalInterestAccel);
+        var yearsSaved = Math.max(0, ((n - (numPeriodsAccel * 12 / 26)) / 12)).toFixed(1);
+
         if (freq === 12 && saving > 0) {
             document.getElementById('mc-saving-accel').innerText = fmt(saving);
             document.getElementById('mc-accel-tip').innerText = fmt(saving);
+            var tipYears = document.getElementById('mc-accel-years-tip');
+            if (tipYears) tipYears.innerText = '~' + yearsSaved + ' ans';
         } else {
             document.getElementById('mc-saving-accel').innerText = freq !== 12 ? 'Actif' : '-';
             document.getElementById('mc-accel-tip').innerText = fmt(saving > 0 ? saving : 0);
@@ -1222,14 +2543,14 @@ INSTRUCTIONS:
         var minRequiredDown = 0;
         if (price > 0) {
             if (price <= 500000) { minRequiredDown = price * 0.05; }
-            else if (price < 1000000) { minRequiredDown = (500000 * 0.05) + ((price - 500000) * 0.10); }
+            else if (price <= 1500000) { minRequiredDown = (500000 * 0.05) + ((price - 500000) * 0.10); }
             else { minRequiredDown = price * 0.20; }
         }
         var ratio = (price > 0) ? (down / price) * 100 : 0;
         if (down < minRequiredDown && price > 0) {
             document.getElementById('cc-ratio-label').style.color = '#f43f5e';
             document.getElementById('cc-error-container').style.display = 'block';
-            document.getElementById('cc-error-container').innerText = 'Mise de fonds minimale requise: ' + fmt(minRequiredDown);
+            document.getElementById('cc-error-container').innerText = 'Mise de fonds minimale requise: ' + fmt(minRequiredDown) + ' (5% à 500k, 10% jusqu\'à 1.5M$)';
         } else {
             document.getElementById('cc-ratio-label').style.color = 'var(--hub-success)';
             document.getElementById('cc-error-container').style.display = 'none';
@@ -1276,41 +2597,122 @@ INSTRUCTIONS:
         var isMtl = document.getElementById('wt-city').value === 'mtl';
         var tax = calcWT(price, isMtl);
         smartAnimate('wt-res-total', tax);
-        var text = "<ul style='padding-left:20px; margin:0;'>";
+        
+        var rows = '';
         var p1 = 61500, rem = price;
-        var t1 = Math.min(rem, p1); text += '<li>0.5% sur ' + fmt(t1) + ' = ' + fmt(t1 * 0.005) + '</li>'; rem -= t1;
+        var t1 = Math.min(rem, p1);
+        rows += '<div class="wt-breakdown-row"><div><span class="wt-badge">0.5%</span> 0 $ à 61 500 $</div><div class="wt-val">' + fmt(t1 * 0.005) + '</div></div>';
+        rem -= t1;
+
         if (rem > 0) {
             if (isMtl) {
                 var mt2 = 307800, mt3 = 611500, mt4 = 1223100;
-                var t2 = Math.min(rem, mt2 - p1); text += '<li>1.0% (61k-307k) = ' + fmt(t2 * 0.01) + '</li>'; rem -= t2;
-                if (rem > 0) { var t3 = Math.min(rem, mt3 - mt2); text += '<li>1.5% (307k-611k) = ' + fmt(t3 * 0.015) + '</li>'; rem -= t3; }
-                if (rem > 0) { var t4 = Math.min(rem, mt4 - mt3); text += '<li>2.0% (611k-1.22M) = ' + fmt(t4 * 0.02) + '</li>'; rem -= t4; }
-                if (rem > 0) { text += '<li>3.0% (excedent) = ' + fmt(rem * 0.03) + '</li>'; }
+                var t2 = Math.min(rem, mt2 - p1);
+                rows += '<div class="wt-breakdown-row"><div><span class="wt-badge">1.0%</span> 61 500 $ à 307 800 $</div><div class="wt-val">' + fmt(t2 * 0.01) + '</div></div>';
+                rem -= t2;
+
+                if (rem > 0) {
+                    var t3 = Math.min(rem, mt3 - mt2);
+                    rows += '<div class="wt-breakdown-row"><div><span class="wt-badge">1.5%</span> 307 800 $ à 611 500 $</div><div class="wt-val">' + fmt(t3 * 0.015) + '</div></div>';
+                    rem -= t3;
+                }
+                if (rem > 0) {
+                    var t4 = Math.min(rem, mt4 - mt3);
+                    rows += '<div class="wt-breakdown-row"><div><span class="wt-badge">2.0%</span> 611 500 $ à 1 223 100 $</div><div class="wt-val">' + fmt(t4 * 0.02) + '</div></div>';
+                    rem -= t4;
+                }
+                if (rem > 0) {
+                    rows += '<div class="wt-breakdown-row"><div><span class="wt-badge" style="background:rgba(212,175,55,0.25); border-color:#d4af37; color:#d4af37;">3.0%</span> Excédent (+ 1.22M $)</div><div class="wt-val" style="color:#d4af37;">' + fmt(rem * 0.03) + '</div></div>';
+                }
             } else {
                 var p2 = 307800;
-                var t2b = Math.min(rem, p2 - p1); text += '<li>1.0% (61k-307k) = ' + fmt(t2b * 0.01) + '</li>'; rem -= t2b;
-                if (rem > 0) { text += '<li>1.5% (excedent 307k) = ' + fmt(rem * 0.015) + '</li>'; }
+                var t2b = Math.min(rem, p2 - p1);
+                rows += '<div class="wt-breakdown-row"><div><span class="wt-badge">1.0%</span> 61 500 $ à 307 800 $</div><div class="wt-val">' + fmt(t2b * 0.01) + '</div></div>';
+                rem -= t2b;
+
+                if (rem > 0) {
+                    rows += '<div class="wt-breakdown-row"><div><span class="wt-badge">1.5%</span> Excédent de 307 800 $</div><div class="wt-val">' + fmt(rem * 0.015) + '</div></div>';
+                }
             }
         }
-        text += '</ul>';
-        document.getElementById('wt-explain').innerHTML = text;
+
+        var html = '<div class="wt-breakdown-box">' +
+                   '<div class="wt-breakdown-header"><span>Tranche de Taxe Légale</span><span>Montant</span></div>' +
+                   rows +
+                   '</div>';
+
+        document.getElementById('wt-explain').innerHTML = html;
     }
 
-    // --- 5. RENT VS BUY ---
+    // --- 5. RENT VS BUY (VERSION 2026 PRO) ---
     function runRvB() {
-        var rent = getVal('rvb-rent');
-        var inc = getVal('rvb-rent-inc') / 100;
-        var years = getVal('rvb-years');
+        var rent = getVal('rvb-rent') || 1600;
+        var inc = (getVal('rvb-rent-inc') || 3.0) / 100;
+        var years = parseInt(document.getElementById('rvb-years').value) || 5;
+        var price = getVal('rvb-price') || 450000;
+        var down = getVal('rvb-down') || 45000;
+        var rateNominal = getVal('rvb-rate') || 4.49;
+
+        // 1. Total rent paid
         var totalRent = 0, currentRent = rent;
         for (var i = 0; i < years; i++) {
             totalRent += currentRent * 12;
             currentRent *= (1 + inc);
         }
-        var r = getRateEff(getVal('rvb-rate'));
-        var n = 25 * 12;
-        var buyingPower = rent * ((Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n)));
+        var endRent = rent * Math.pow(1 + inc, years - 1);
+
+        // 2. Ownership equity & growth
+        var loan = price - down;
+        if (down / price < 0.20) {
+            loan *= 1.04; // Prime SCHL ~4%
+        }
+        var r = getRateEff(rateNominal);
+        var totalMonths = 25 * 12;
+        var pmt = loan * (r * Math.pow(1 + r, totalMonths)) / (Math.pow(1 + r, totalMonths) - 1);
+
+        var balance = loan;
+        var totalPrincipal = 0;
+        var horizonMonths = years * 12;
+        for (var m = 1; m <= horizonMonths; m++) {
+            var interest = balance * r;
+            var principal = pmt - interest;
+            totalPrincipal += principal;
+            balance -= principal;
+        }
+
+        var appreciation = 0.03;
+        var futurePrice = price * Math.pow(1 + appreciation, years);
+        var capitalGain = futurePrice - price;
+        var totalEquity = down + totalPrincipal + capitalGain;
+        var netAdv = Math.round(totalPrincipal + capitalGain);
+
+        // Update UI
+        if(document.getElementById('rvb-horizon-txt')) {
+            document.getElementById('rvb-horizon-txt').innerText = years + ' ans';
+        }
         smartAnimate('rvb-res-total', totalRent);
-        smartAnimate('rvb-res-power', buyingPower);
+        smartAnimate('rvb-res-equity', totalEquity);
+        if(document.getElementById('rvb-res-net')) {
+            document.getElementById('rvb-res-net').innerText = '+ ' + fmt(netAdv);
+        }
+        if(document.getElementById('rvb-rent-end-val')) {
+            document.getElementById('rvb-rent-end-val').innerText = fmt(endRent) + ' / mois';
+        }
+        if(document.getElementById('rvb-detail-down')) {
+            document.getElementById('rvb-detail-down').innerText = fmt(down);
+        }
+        if(document.getElementById('rvb-detail-principal')) {
+            document.getElementById('rvb-detail-principal').innerText = '+ ' + fmt(totalPrincipal);
+        }
+        if(document.getElementById('rvb-detail-gain')) {
+            document.getElementById('rvb-detail-gain').innerText = '+ ' + fmt(capitalGain);
+        }
+        if(document.getElementById('rvb-detail-future-val')) {
+            document.getElementById('rvb-detail-future-val').innerText = fmt(futurePrice);
+        }
+        if(document.getElementById('rvb-res-desc')) {
+            document.getElementById('rvb-res-desc').innerHTML = 'En achetant, vous créez <strong>+' + fmt(netAdv) + '</strong> de nouvelle richesse nette (capital remboursé + plus-value) au lieu de perdre <strong>' + fmt(totalRent) + '</strong> en loyers.';
+        }
     }
 
     // --- 6. WAIT VS BUY ---

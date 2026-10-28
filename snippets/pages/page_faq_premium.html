@@ -15,14 +15,14 @@
         background: linear-gradient(135deg, rgba(30, 10, 25, 0.82), rgba(135, 50, 118, 0.25)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
         background-size: cover;
         background-position: center;
-        padding: 100px 20px !important;
+        padding: 42px 24px 36px !important;
         text-align: center;
-        border-radius: 50px !important;
+        border-radius: 32px !important;
         position: relative;
         z-index: 1;
-        margin: 20px 20px 0 !important;
+        margin: 8px 20px 0 !important;
         box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
-        min-height: 500px !important;
+        min-height: 260px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
@@ -30,7 +30,7 @@
     }
 
     .faq-hero h1 {
-        font-size: 3.5rem;
+        font-size: clamp(1.85rem, 3.4vw, 2.65rem);
         font-weight: 900;
         letter-spacing: -2px;
         color: #ffffff;
@@ -295,9 +295,9 @@
 
     @media (max-width: 768px) {
         .faq-hero {
-            padding: 60px 20px 80px !important;
+            padding: 42px 24px 36px !important;
             margin-top: 15px !important;
-            min-height: 350px !important;
+            min-height: 260px !important;
         }
 
         .faq-hero h1 {
@@ -622,6 +622,68 @@
             </div>
         </div>
 
+        <!-- NOUVELLES QUESTIONS STRATÉGIQUES FINANCEMENT -->
+        <div class="faq-item" data-category="financement">
+            <button class="faq-question">
+                Puis-je combiner le CELIAPP et le RAP pour l'achat de ma première propriété ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p><strong>Oui, absolument !</strong> Au Canada, vous pouvez cumuler les deux régimes. Vous pouvez retirer jusqu'à <strong>60 000 $</strong> de votre REER via le RAP et utiliser la totalité de vos cotisations et rendements de votre <strong>CELIAPP (jusqu'à 40 000 $ de droits)</strong> sans payer aucun impôt lors de l'achat d'une première habitation admissible.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="financement">
+            <button class="faq-question">
+                Quelle est la cote de crédit minimale exigée pour obtenir un prêt hypothécaire ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Les grandes banques (prêteurs A) exigent généralement un pointage Equifax ou TransUnion d'au moins <strong>680</strong> pour les meilleurs taux assurés SCHL, et <strong>600 à 620</strong> pour un prêt conventionnel (20% de mise de fonds). Pour les cotes inférieures, des solutions avec des prêteurs alternatifs (B) existent et je peux vous aider à rebâtir votre dossier.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="financement">
+            <button class="faq-question">
+                Comment fonctionne le refinancement hypothécaire pour rénover ou investir ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Le refinancement vous permet d'emprunter jusqu'à <strong>80 % de la valeur marchande actuelle</strong> de votre propriété, moins le solde de votre hypothèque existante. Cette équité libérée peut être utilisée pour financer des travaux majeurs, consolider des dettes à taux élevé ou fournir la mise de fonds pour l'achat d'un plex à revenus.</p>
+            </div>
+        </div>
+
+        <!-- NOUVELLES QUESTIONS STRATÉGIQUES ACHAT & VENTE -->
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Qu'est-ce qu'une promesse d'achat conditionnelle et comment me protège-t-elle ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Une promesse d'achat conditionnelle lie l'acheteur et le vendeur sous réserve de la réalisation de conditions obligatoires : l'obtention d'un <strong>financement hypothécaire satisfaisant</strong>, une <strong>inspection en bâtiment concluante</strong> et la vérification des documents légaux (déclaration du vendeur, copropriété). Si une condition n'est pas remplie, l'acheteur peut se retirer sans pénalité.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Combien de temps s'écoule entre l'offre acceptée et la signature chez le notaire ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Le délai moyen varie entre <strong>30 et 90 jours</strong> selon l'entente conclue entre les parties. Ce délai permet de lever les conditions (inspection et prêt sous 10 à 14 jours), de commander le certificat de localisation à jour et de laisser au notaire le temps d'effectuer l'examen des titres de propriété.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" data-category="services">
+            <button class="faq-question">
+                Comment fixer le prix de vente optimal pour ne pas "brûler" ma propriété ?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Fixer un prix trop élevé fait stagner votre propriété sur Centris et finit par susciter la méfiance des acheteurs. Je réalise une <strong>analyse comparative de marché (ACM) rigoureuse</strong> en analysant les propriétés comparables vendues récemment dans votre quartier, les inscriptions actives concurrentes et les tendances de négociation locales.</p>
+            </div>
+        </div>
+
         <!-- CTA -->
         <div class="faq-cta-block">
             <h3>Discutons de vos projets</h3>
@@ -640,7 +702,7 @@
     </div>
 
     <div class="faq-license">
-        Evan Patruno — Courtier immobilier agréé OACIQ · Permis H5929 · Courtier hypothécaire AMF · Certificat 272648
+        Evan Patruno — Courtier immobilier résidentiel (Himalaya Immobilier · OACIQ : Permis H5929) | Courtier hypothécaire (Multi-Prêts Hypothèques · AMF : Certificat 272648)
     </div>
 
 </div>
@@ -703,7 +765,7 @@
     });
 </script>
 
-<!-- SEO : FAQPage JSON-LD -->
+<!-- SEO : FAQPage JSON-LD Exhaustif (Google Rich Snippets) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -714,15 +776,23 @@
       "name": "Qu’est-ce que l’OACIQ et pourquoi est-ce important pour moi ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "L’Organisme d’autoréglementation du courtage immobilier du Québec (OACIQ) assure la protection du public en encadrant la profession et en fournissant des mécanismes de protection comme le Fonds d'indemnisation."
+        "text": "L’Organisme d’autoréglementation du courtage immobilier du Québec (OACIQ) assure la protection du public en encadrant la profession et en fournissant des mécanismes de protection comme le Fonds d'indemnisation et le Fonds d'assurance responsabilité professionnelle."
       }
     },
     {
       "@type": "Question",
-      "name": "Quels sont les frais à prévoir lors de l'achat d'une maison ?",
+      "name": "Quels sont les frais à prévoir lors de l'achat d'une maison au Québec ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Prévoyez environ 1.5% à 2% du prix d'achat pour l'inspection, le notaire, la taxe de bienvenue et les ajustements de taxes professionnelles."
+        "text": "Prévoyez environ 1.5% à 2% du prix d'achat pour les frais de clôture : inspection en bâtiment, notaire, taxe de bienvenue (droits de mutation) et ajustements de taxes municipales et scolaires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont les particularités de l'achat d'un condo (copropriété) ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'achat d'un condo implique l'étude des documents de copropriété : déclaration de copropriété, état du fonds de prévoyance, budget et procès-verbaux des assemblées passées afin de valider la santé financière de l'immeuble."
       }
     },
     {
@@ -730,24 +800,200 @@
       "name": "Combien coûte l'accompagnement d'un courtier immobilier ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pour les acheteurs, mes services sont gratuits. Pour les vendeurs, la commission est établie lors de la première rencontre selon la complexité du mandat."
+        "text": "Pour les acheteurs, mes services sont entièrement gratuits — c'est le vendeur qui paie la rétribution. Pour les vendeurs, le taux de commission est établi lors de la première rencontre selon la complexité du mandat et les services de mise en marché."
       }
     },
     {
       "@type": "Question",
-      "name": "Pouvez-vous aider pour le financement ?",
+      "name": "Pourquoi devrais-je utiliser un courtier plutôt que de vendre ou acheter seul ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, je suis courtier hypothécaire certiifié AMF. Je compare les offres de plusieurs institutions pour vous obtenir le meilleur taux, partout au Québec depuis mon bureau de Laval."
+        "text": "Un courtier vous protège légalement sous la Loi sur le courtage immobilier, négocie objectivement à votre avantage et accède à des données de marché exclusives (Centris). Mon rôle est de maximiser votre prix de vente ou d'optimiser votre prix d'achat en évitant les pièges légaux."
       }
     },
     {
-        "@type": "Question",
-        "name": "Quelle est la différence entre un projet résidentiel et un projet commercial ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Le résidentiel couvre les habitations jusqu'à 4 logements. Le commercial inclut les multilogements de 5+, bureaux et commerces. Le financement et la fiscalité diffèrent grandement."
-        }
+      "@type": "Question",
+      "name": "Comment se passe la première rencontre avec vous ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La première rencontre est 100% gratuite et sans engagement. Nous discutons de vos critères d'achat, de vos objectifs de vente ou de vos besoins de financement pour établir une stratégie sur mesure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels types de propriétés traitez-vous ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "J'accompagne mes clients pour tous types d'immeubles : unifamiliales, condos, jumelés, triplex, multilogements (5+), terrains et propriétés commerciales partout au Québec."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce que le certificat de localisation est obligatoire pour vendre ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le vendeur doit fournir un certificat de localisation récent reflétant l'état physique et juridique actuel de la propriété chez le notaire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que la garantie légale de qualité ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "C'est la protection de l'acheteur contre les vices cachés qui affectent l'immeuble. La vente peut se faire avec garantie légale ou sans garantie légale aux risques et périls de l'acheteur (ex: successions, reprises de finance)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le Home Staging est-il vraiment nécessaire ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le Home Staging et la mise en valeur professionnelle permettent de déclencher le coup de cœur, de vendre plus rapidement et souvent d'obtenir un meilleur prix en se démarquant de la compétition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce que vous proposez une évaluation gratuite de ma propriété ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, je réalise une analyse comparative de marché (ACM) approfondie et gratuite basée sur les ventes récentes dans votre quartier pour fixer le prix de vente optimal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont vos secteurs d'activité ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En immobilier, je couvre principalement Saint-Jean-sur-Richelieu, Napierville, la Rive-Sud, l'Estrie et le Grand Montréal. Pour le courtage hypothécaire, je sers mes clients partout au Québec depuis mon bureau de Laval."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dois-je faire inspecter la maison avant d'acheter ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'inspection pré-achat par un inspecteur en bâtiment certifié est fortement recommandée pour sécuriser votre investissement et sert d'outil de négociation en cas de découverte d'anomalies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la mise de fonds minimale pour acheter une propriété au Québec ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour une résidence principale, la mise de fonds minimale est de 5% pour la première tranche de 500 000 $ (et 10% sur l'excédent jusqu'à 1 500 000 $). Pour un investissement locatif non-occupant, 20% est généralement requis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps faut-il pour vendre une propriété ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le délai moyen varie entre 30 et 60 jours. Grâce à une mise en marché premium (photos pros, vidéo, ciblage web dynamique), les premières offres surviennent souvent dans les 2 premières semaines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pouvez-vous m'aider pour le financement hypothécaire ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolument. En tant que courtier hypothécaire avec Multi-Prêts Hypothèques (Certificat AMF 272648), je négocie les meilleures offres parmi plus de 32 institutions financières pour vous garantir les meilleures conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce qu'une pré-approbation hypothécaire ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "C'est une confirmation écrite délivrée par un prêteur garantissant votre taux d'intérêt pendant 90 à 120 jours et précisant votre budget maximal d'achat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Taux fixe ou taux variable : quel est le meilleur choix en 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le choix dépend de vos objectifs financiers et de votre tolérance au risque. Le taux fixe garantit des versements stables, tandis que le taux variable permet de profiter directement des baisses de taux directeur de la Banque du Canada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on refinancer ou briser une hypothèque avant la fin du terme ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, il est possible de briser une hypothèque moyennant des pénalités. Je calcule pour vous si le gain en taux ou la libération d'équité compense la pénalité pour rendre l'opération rentable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre un projet résidentiel et un projet commercial ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le résidentiel couvre les habitations de 1 à 4 logements. Le commercial comprend les multilogements de 5 logements et plus, commerces et bureaux, où le financement s'évalue principalement selon les revenus nets d'opération (RNO)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "C'est quoi un Plex 'Propriétaire-Occupant' ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "C'est l'achat d'un duplex, triplex ou quadruplex où vous habitez l'un des logements, vous permettant de profiter d'une mise de fonds réduite (5% à 10%) tout en utilisant les loyers pour payer l'hypothèque."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que le programme APH Select de la SCHL ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le programme APH Select de la SCHL récompense les immeubles multilogements de 5+ qui répondent à des critères d'abordabilité ou d'efficacité énergétique, en offrant des primes réduites et un amortissement allant jusqu'à 50 ans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je combiner le CELIAPP et le RAP pour l'achat de ma première propriété au Québec ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui ! Au Canada, vous pouvez cumuler jusqu'à 60 000 $ de votre REER (RAP) et jusqu'à 40 000 $ de droits CELIAPP sans aucun impôt pour maximiser votre mise de fonds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la cote de crédit minimale exigée pour obtenir un prêt hypothécaire ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un pointage d'au moins 680 est généralement requis par les banques pour les meilleurs taux assurés SCHL, et 600-620 pour un prêt conventionnel. Des solutions alternatives existent pour les cotes inférieures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne le refinancement hypothécaire pour financer des rénovations ou des investissements ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le refinancement permet d'emprunter jusqu'à 80% de la valeur marchande actuelle de votre propriété (moins le solde hypothécaire actuel) pour libérer des liquidités à taux avantageux."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce qu'une promesse d'achat conditionnelle et comment me protège-t-elle ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Elle lie l'acheteur et le vendeur sous réserve de conditions obligatoires (obtention du prêt hypothécaire, inspection satisfaisante). Si une condition échoue, l'acheteur peut se désister sans pénalité."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps s'écoule entre l'offre acceptée et la signature chez le notaire ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le délai moyen est de 30 à 90 jours selon l'entente, permettant la réalisation des conditions d'inspection/financement (10-14 jours) et la préparation des actes notariés."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fixer le prix de vente optimal pour ne pas brûler ma propriété sur Centris ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grâce à une analyse comparative de marché (ACM) rigoureuse basée sur les ventes récentes notariées dans votre secteur, la concurrence active et la demande actuelle."
+      }
     }
   ]
 }
