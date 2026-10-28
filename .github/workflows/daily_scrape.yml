@@ -1,46 +1,58 @@
-name: Daily Property Scrape
+name: Daily Centris & News Scraper
 
 on:
   schedule:
-    # Runs at 13:00 UTC (8:00 or 9:00 AM New York time)
+    # S'exécute tous les jours à 13h00 UTC (8h00 EST / 9h00 EDT)
     - cron: '0 13 * * *'
-  workflow_dispatch: # Allows manual run button
+  workflow_dispatch: # Permet de lancer manuellement depuis l'onglet Actions
+
+concurrency:
+  group: repo-data-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
-  scrape-and-update:
+  scrape:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-        
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-            python-version: '3.11'
-          
-      - name: Install Dependencies
+          python-version: '3.11'
+
+      - name: Install dependencies
         run: |
-          pip install -r requirements.txt
-          
-      - name: Run All Scrapers & Generators
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml jinja2
+
+      - name: Run Scrapers (Centris, News & BOC)
         env:
           JSONBIN_API_KEY: ${{ secrets.JSONBIN_API_KEY }}
-          ZOHO_WEBHOOK_URL: ${{ secrets.ZOHO_WEBHOOK_URL }}
         run: |
-          python scraper.py
+          python centris_scraper.py
           python news_scraper.py
           python boc_monitor.py
-          python newsletter_generator.py
 
-      - name: Commit and Push Changes
+      - name: Upload BOC Rates Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: boc-rates-data
+          path: boc_rates.json
+          retention-days: 5
+
+      - name: Commit and Push updated JSON files
         run: |
-          git config --local user.email "evan.patruno@gmail.com"
-          git config --local user.name "evanpatruno-spec"
-          git add .
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Automated data update [skip ci]")
-          git pull --rebase origin main
-          git push
-
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add news.json properties.json boc_rates.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated data update [skip ci]"
+            git pull --rebase --autostash origin main
+            git push origin main
+          fi

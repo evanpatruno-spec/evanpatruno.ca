@@ -5,30 +5,35 @@ const fs = require('fs');
 async function convert() {
     console.log("Démarrage de la conversion PDF...");
     const args = process.argv.slice(2);
-    let reportMonth, reportYear;
-    if (args.length === 2) {
-        reportYear = parseInt(args[0], 10);
-        reportMonth = parseInt(args[1], 10);
-    } else {
-        const now = new Date();
-        reportMonth = now.getMonth() + 1;
-        reportYear = now.getFullYear();
+    let htmlPath, pdfPath;
 
-        // Logique identique à report_generator.py : Si on est le 1-10 du mois, on traite le mois précédent
-        if (now.getDate() <= 10) {
-            reportMonth -= 1;
+    if (args.length === 2 && (args[0].endsWith('.html') || args[1].endsWith('.pdf'))) {
+        htmlPath = path.resolve(args[0]);
+        pdfPath = path.resolve(args[1]);
+    } else {
+        let reportMonth, reportYear;
+        if (args.length === 2) {
+            reportYear = parseInt(args[0], 10);
+            reportMonth = parseInt(args[1], 10);
+        } else if (args.length === 1 && args[0].includes('-')) {
+            const parts = args[0].split('-');
+            reportYear = parseInt(parts[0], 10);
+            reportMonth = parseInt(parts[1], 10);
+        } else {
+            const now = new Date();
+            reportMonth = now.getMonth(); // Mois précédent (0-indexed -> 1-indexed M-1)
+            reportYear = now.getFullYear();
             if (reportMonth === 0) {
                 reportMonth = 12;
                 reportYear -= 1;
             }
         }
+
+        const monthStr = String(reportMonth).padStart(2, '0');
+        const filename = `${reportYear}-${monthStr}`;
+        htmlPath = path.join(__dirname, 'rapports', `${filename}.html`);
+        pdfPath = path.join(__dirname, 'rapports', `${filename}.pdf`);
     }
-    
-    const monthStr = String(reportMonth).padStart(2, '0');
-    const filename = `${reportYear}-${monthStr}`;
-    
-    const htmlPath = path.join(__dirname, 'rapports', `${filename}.html`);
-    const pdfPath = path.join(__dirname, 'rapports', `${filename}.pdf`);
 
     if (!fs.existsSync(htmlPath)) {
         console.error(`Erreur: Le fichier HTML ${htmlPath} n'existe pas.`);
@@ -42,12 +47,10 @@ async function convert() {
             args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
         });
         const page = await browser.newPage();
-        
-        // Charger le fichier localement
+
         const contentHtml = fs.readFileSync(htmlPath, 'utf8');
         await page.setContent(contentHtml, { waitUntil: 'networkidle0' });
 
-        // Générer le PDF
         await page.pdf({
             path: pdfPath,
             format: 'Letter',

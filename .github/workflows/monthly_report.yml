@@ -1,83 +1,107 @@
 name: Monthly Market Report PDF
 
 on:
-  push:
-    branches: [ main ]
   schedule:
-    # Runs at 13:00 UTC (8:00 AM New York time) on the 1st of every month
-    - cron: '0 13 1 * *'
-  workflow_dispatch: # Allows manual run button
+    # S'exécute à 13h15 UTC le 1er de chaque mois (15 min après daily_scrape)
+    - cron: '15 13 1 * *'
+  workflow_dispatch:
+    inputs:
+      target_month:
+        description: 'Mois cible au format YYYY-MM (laisser vide pour le mois précédent)'
+        required: false
+        default: ''
+
+concurrency:
+  group: repo-data-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
-  generate-report:
+  generate_pdf:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get current date
+      - name: Get target report month
         id: date
-        run: echo "month=$(date +'%B %Y')" >> $GITHUB_OUTPUT
-        
+        run: |
+          if [ -n "${{ github.event.inputs.target_month }}" ]; then
+            echo "month=${{ github.event.inputs.target_month }}" >> $GITHUB_OUTPUT
+          else
+            echo "month=$(date -d "$(date +%Y-%m-01) -1 month" +'%Y-%m')" >> $GITHUB_OUTPUT
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-            python-version: '3.11'
-          
+          python-version: '3.11'
+
       - name: Install Python Dependencies
         run: |
-          pip install jinja2 requests
-          
+          python -m pip install --upgrade pip
+          pip install requests jinja2
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          
+
       - name: Install Node Dependencies
-        run: npm install
-          
-      - name: Generate Report HTML
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
+        run: |
+          npm install puppeteer
+
+      - name: Refresh BOC and News Data
         env:
           JSONBIN_API_KEY: ${{ secrets.JSONBIN_API_KEY }}
-        run: python report_generator.py
+        run: |
+          python boc_monitor.py
+          python news_scraper.py
+
+      - name: Generate Report HTML
+        run: |
+          python report_generator.py ${{ steps.date.outputs.month }}
 
       - name: Convert HTML to PDF
-        env:
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
-        run: node puppeteer_convert.js
+        run: |
+          PUPPETEER_EXECUTABLE_PATH=$(which google-chrome-stable) node puppeteer_convert.js rapports/${{ steps.date.outputs.month }}.html rapports/${{ steps.date.outputs.month }}.pdf
 
-      - name: Trigger Zoho Notification
+      - name: Prepare Newsletter Preview & Cloud Sync
         env:
           JSONBIN_API_KEY: ${{ secrets.JSONBIN_API_KEY }}
-          ZOHO_WEBHOOK_URL: ${{ secrets.ZOHO_WEBHOOK_URL }}
-        run: python newsletter_generator.py --notify
-
-      - name: Debug List Files
-        run: ls -R
-
-      - name: Send Approval Email
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "👀 APPROBATION REQUISE : Infolettre ${{ steps.date.outputs.month }}"
-          to: evanpatruno@gmail.com
-          from: "Evan Automations <${{ secrets.SMTP_USERNAME }}>"
-          html_body: file://${{ github.workspace }}/newsletter_preview.html
-          convert_markdown: true
+        run: |
+          python newsletter_generator.py --notify
 
       - name: Commit and Push Report
         run: |
-          git config --local user.email "evan.patruno@gmail.com"
-          git config --local user.name "evanpatruno-spec"
-          git add rapports/
-          git status
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Add monthly report [skip ci]")
-          # On force le pull en ignorant les fichiers temporaires non suivis
-          git pull --rebase origin main
-          git push
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add rapports/ news.json boc_rates.json newsletter_ready.json newsletter_preview.html newsletter_bin_id.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Add monthly report for ${{ steps.date.outputs.month }} [skip ci]"
+            git pull --rebase --autostash origin main
+            git push origin main
+          else
+            echo "Aucun changement à commiter."
+          fi
+
+      - name: Send Approval Email
+        if: env.EMAIL_PASSWORD != ''
+        env:
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.zoho.com
+          server_port: 465
+          secure: true
+          username: info@evanpatruno.ca
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "📊 APERÇU : Votre Infolettre de ${{ steps.date.outputs.month }} est prête pour approbation"
+          to: evanpatruno@gmail.com
+          from: Evan Patruno <info@evanpatruno.ca>
+          html_body: file://${{ github.workspace }}/newsletter_preview.html
+          convert_markdown: false

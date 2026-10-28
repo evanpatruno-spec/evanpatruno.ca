@@ -448,8 +448,8 @@
                     {% for article in news[:4] %}
                     <div class="news-card-item">
                         <span class="news-source-tag">{{ article.source }}</span>
-                        <div class="news-title">{{ article.title[:85] }}...</div>
-                        <div class="news-desc">{{ article.description[:110] }}...</div>
+                        <div class="news-title">{{ article.title if article.title|length <= 90 else article.title[:87] ~ '…' }}</div>
+                        <div class="news-desc">{{ article.description if article.description|length <= 135 else article.description[:132] ~ '…' }}</div>
                     </div>
                     {% endfor %}
                 </div>
@@ -458,7 +458,7 @@
 
         <footer>
             <div class="footer-left">
-                <p><strong>Evan Patruno</strong> | Courtier Immobilier & Hypothécaire</p>
+                <p><strong>Evan Patruno</strong> | Courtier Immobilier Résidentiel · Courtier Hypothécaire</p>
                 <p>Analyse de marché exclusive | Source : ACIQ / Centris / BoC</p>
             </div>
             <span class="page-num">Page 1 / 2</span>
@@ -496,7 +496,7 @@
                     </thead>
                     <tbody>
                         {% for region, s in market_stats.items() %}
-                        {% if region != 'last_quarter' %}
+                        {% if region not in ['last_quarter', 'last_updated'] and s is mapping %}
                         <tr>
                             <td style="font-weight: 600; text-transform: capitalize;">{{ region.replace('-', ' ') }}
                             </td>
@@ -528,7 +528,7 @@
                     </thead>
                     <tbody>
                         {% for region, s in market_stats.items() %}
-                        {% if region != 'last_quarter' %}
+                        {% if region not in ['last_quarter', 'last_updated'] and s is mapping %}
                         <tr>
                             <td style="font-weight: 600; text-transform: capitalize;">{{ region.replace('-', ' ') }}
                             </td>

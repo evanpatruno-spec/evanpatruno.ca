@@ -1,44 +1,46 @@
 {
-  "Sujet": "Infolettre - Octobre 2026",
-  "Mois": "Octobre",
+  "Sujet": "Infolettre - Septembre 2026",
+  "Mois": "Septembre",
   "Annee": "2026",
   "Taux_BOC": "2.25%",
-  "Contenu_Article": "Prêt hypothécaire : réservez votre taux… tôt, pour économiser - Protégez-Vous: Prêt hypothécaire : réservez votre taux… tôt, pour économiser  Protégez-Vous...\n\nRMR de Montréal et de Québec : la route vers un marché  plus équilibré se poursuit: L’Île-des-Sœurs, le 2 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de septembre 2026. Les plus récentes statist...\n\nRMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes: L’Île-des-Sœurs, le 4 septembre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’août 2026. Les plus récentes statistiques du marché ...",
-  "Citation": "L'investissement dans la connaissance paye le plus gros intérêt. Investissez sur vous-même ! – Benjamin Franklin",
-  "Astuce_Pro": "La construction du projet immobilier Le Phare pourrait être retardée à Rimouski - TVA Nouvelles : La construction du projet immobilier Le Phare pourrait être retardée à Rimouski  TVA Nouvelles",
-  "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-10.pdf",
-  "campaign_id": "NL-10-2026",
-  "month": "Octobre",
+  "Contenu_Article": "RMR de Montréal et de Québec : la route vers un marché plus équilibré se poursuit : L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour septembre 2026 : l'inventaire progresse de 17 % dans la RMR de Montréal (20 350 inscriptions actives) et le prix médian des unifamiliales atteint 645 500 $ (+2 %).\n\nL’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs : Le baromètre du 3e trimestre 2026 de l'APCIQ souligne que malgré l'augmentation de l'offre, les vendeurs d'unifamiliales conservent l'avantage dans l'ensemble des grands secteurs de la RMR de Montréal, tandis que le segment de la copropriété s'équilibre.\n\nPrêt hypothécaire : réservez votre taux tôt pour économiser : Analyse publiée par Protégez-Vous sur l'évolution des taux d'intérêt et l'importance de sécuriser une garantie de taux hypothécaire à l'avance pour protéger votre capacité d'emprunt.",
+  "Citation": "Quelqu'un est assis à l'ombre aujourd'hui parce que quelqu'un a planté un arbre il y a longtemps. – Warren Buffett",
+  "Astuce_Pro": "Multi-Logements : Le ratio de couverture de la dette est déterminant. Visez des revenus locatifs qui soutiennent solidement les charges d'exploitation et le financement.",
+  "Lien_Rapport": "https://dossier.evanpatruno.ca/rapports/2026-09.pdf",
+  "campaign_id": "NL-09-2026",
+  "month": "Septembre",
   "year": 2026,
   "boc_rate": "2.25%",
-  "market_temp": "Marché Actif (Acheteur)",
-  "market_status": "Marché Actif (Acheteur)",
+  "boc_rate_val": 2.25,
+  "market_temp": "Marché Actif (Vendeurs)",
+  "market_status": "Marché Actif (Vendeurs)",
+  "status": "pending_approval",
   "booking_url": "https://calendar.app.google/a37T5exmNpFfBZ6SA",
   "facebook_url": "https://www.facebook.com/evanpatrunocourtier/",
   "instagram_url": "https://www.instagram.com/evanpatruno.immo/?hl=fr",
   "linkedin_url": "https://www.linkedin.com/in/evan-patruno/",
   "top_articles": [
     {
-      "title": "Prêt hypothécaire : réservez votre taux… tôt, pour économiser - Protégez-Vous",
-      "summary": "Prêt hypothécaire : réservez votre taux… tôt, pour économiser  Protégez-Vous",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZWtrZVVnbFZnVHdjVmdXNHhPNWt1QnE5RFljYlAxVmxJeUk0b2gwVG1Nc1FLMlNZTmxsYldpVXNuLTltZnZaU0JMUXl1Q25Xam1sU0JWSHhpNVVWZWdmNXQ1Qk1tdlpONEpyUVh5ZXk4amotRndQV3NVbG9SMy12d3V3MVUxY3ZUSXRNQzFyT0J3TFZDZVFtbzRENkk4M1RGSVlDS21B?oc=5",
-      "source": "news.google.com"
-    },
-    {
-      "title": "RMR de Montréal et de Québec : la route vers un marché  plus équilibré se poursuit",
-      "summary": "L’Île-des-Sœurs, le 2 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de septembre 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal et de Québec : la route ",
+      "title": "RMR de Montréal et de Québec : la route vers un marché plus équilibré se poursuit",
+      "summary": "L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour septembre 2026 : l'inventaire progresse de 17 % dans la RMR de Montréal (20 350 inscriptions actives) et le prix médian des unifamiliales atteint 645 500 $ (+2 %).",
       "link": "https://apciq.ca/stats-septembre-2026-fr/",
       "source": "APCIQ"
     },
     {
-      "title": "RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes",
-      "summary": "L’Île-des-Sœurs, le 4 septembre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’août 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes est apparu en premier sur APCIQ - Site web",
-      "link": "https://apciq.ca/rmr-de-montreal-le-reequilibrage-du-marche-gagne-desormais-les-couronnes/",
+      "title": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs",
+      "summary": "Le baromètre du 3e trimestre 2026 de l'APCIQ souligne que malgré l'augmentation de l'offre, les vendeurs d'unifamiliales conservent l'avantage dans l'ensemble des grands secteurs de la RMR de Montréal, tandis que le segment de la copropriété s'équilibre.",
+      "link": "https://apciq.ca/stats-t3-2026/",
       "source": "APCIQ"
+    },
+    {
+      "title": "Prêt hypothécaire : réservez votre taux tôt pour économiser",
+      "summary": "Analyse publiée par Protégez-Vous sur l'évolution des taux d'intérêt et l'importance de sécuriser une garantie de taux hypothécaire à l'avance pour protéger votre capacité d'emprunt.",
+      "link": "https://www.protegez-vous.ca/argent/pret-hypothecaire",
+      "source": "Protégez-Vous"
     }
   ],
-  "report_label": "Rapport de Marché - Octobre 2026",
-  "expert_note": "Le marché s'équilibre. C'est le moment idéal pour réévaluer vos capacités de financement avant la prochaine vague immobilière.",
+  "report_label": "Rapport de Marché - Septembre 2026",
+  "expert_note": "Le marché s'équilibre graduellement. C'est le moment idéal pour réévaluer votre capacité de financement ou la valeur marchande de votre propriété.",
   "footer_msg": "Besoin d'une évaluation précise de votre propriété ?",
   "quick_links": [
     {
@@ -52,42 +54,42 @@
   ],
   "articles": [
     {
-      "title": "Prêt hypothécaire : réservez votre taux… tôt, pour économiser - Protégez-Vous",
-      "summary": "Prêt hypothécaire : réservez votre taux… tôt, pour économiser  Protégez-Vous",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZWtrZVVnbFZnVHdjVmdXNHhPNWt1QnE5RFljYlAxVmxJeUk0b2gwVG1Nc1FLMlNZTmxsYldpVXNuLTltZnZaU0JMUXl1Q25Xam1sU0JWSHhpNVVWZWdmNXQ1Qk1tdlpONEpyUVh5ZXk4amotRndQV3NVbG9SMy12d3V3MVUxY3ZUSXRNQzFyT0J3TFZDZVFtbzRENkk4M1RGSVlDS21B?oc=5",
-      "source": "news.google.com"
-    },
-    {
-      "title": "RMR de Montréal et de Québec : la route vers un marché  plus équilibré se poursuit",
-      "summary": "L’Île-des-Sœurs, le 2 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de septembre 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal et de Québec : la route ",
+      "title": "RMR de Montréal et de Québec : la route vers un marché plus équilibré se poursuit",
+      "summary": "L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour septembre 2026 : l'inventaire progresse de 17 % dans la RMR de Montréal (20 350 inscriptions actives) et le prix médian des unifamiliales atteint 645 500 $ (+2 %).",
       "link": "https://apciq.ca/stats-septembre-2026-fr/",
       "source": "APCIQ"
     },
     {
-      "title": "RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes",
-      "summary": "L’Île-des-Sœurs, le 4 septembre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’août 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes est apparu en premier sur APCIQ - Site web",
-      "link": "https://apciq.ca/rmr-de-montreal-le-reequilibrage-du-marche-gagne-desormais-les-couronnes/",
+      "title": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs",
+      "summary": "Le baromètre du 3e trimestre 2026 de l'APCIQ souligne que malgré l'augmentation de l'offre, les vendeurs d'unifamiliales conservent l'avantage dans l'ensemble des grands secteurs de la RMR de Montréal, tandis que le segment de la copropriété s'équilibre.",
+      "link": "https://apciq.ca/stats-t3-2026/",
       "source": "APCIQ"
+    },
+    {
+      "title": "Prêt hypothécaire : réservez votre taux tôt pour économiser",
+      "summary": "Analyse publiée par Protégez-Vous sur l'évolution des taux d'intérêt et l'importance de sécuriser une garantie de taux hypothécaire à l'avance pour protéger votre capacité d'emprunt.",
+      "link": "https://www.protegez-vous.ca/argent/pret-hypothecaire",
+      "source": "Protégez-Vous"
     }
   ],
   "news_list": [
     {
-      "title": "Prêt hypothécaire : réservez votre taux… tôt, pour économiser - Protégez-Vous",
-      "summary": "Prêt hypothécaire : réservez votre taux… tôt, pour économiser  Protégez-Vous",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZWtrZVVnbFZnVHdjVmdXNHhPNWt1QnE5RFljYlAxVmxJeUk0b2gwVG1Nc1FLMlNZTmxsYldpVXNuLTltZnZaU0JMUXl1Q25Xam1sU0JWSHhpNVVWZWdmNXQ1Qk1tdlpONEpyUVh5ZXk4amotRndQV3NVbG9SMy12d3V3MVUxY3ZUSXRNQzFyT0J3TFZDZVFtbzRENkk4M1RGSVlDS21B?oc=5",
-      "source": "news.google.com"
-    },
-    {
-      "title": "RMR de Montréal et de Québec : la route vers un marché  plus équilibré se poursuit",
-      "summary": "L’Île-des-Sœurs, le 2 octobre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile aujourd’hui ses données pour le mois de septembre 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal et de la région métropolitaine de recensement (RMR) de Québec sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal et de Québec : la route ",
+      "title": "RMR de Montréal et de Québec : la route vers un marché plus équilibré se poursuit",
+      "summary": "L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour septembre 2026 : l'inventaire progresse de 17 % dans la RMR de Montréal (20 350 inscriptions actives) et le prix médian des unifamiliales atteint 645 500 $ (+2 %).",
       "link": "https://apciq.ca/stats-septembre-2026-fr/",
       "source": "APCIQ"
     },
     {
-      "title": "RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes",
-      "summary": "L’Île-des-Sœurs, le 4 septembre 2026 — L’Association professionnelle des courtiers immobiliers du Québec (APCIQ) dévoile ses données pour le mois d’août 2026. Les plus récentes statistiques du marché immobilier résidentiel de la région métropolitaine de recensement (RMR) de Montréal sont établies d’après la base de données provinciale Centris des courtiers immobiliers.\nL’article RMR de Montréal : le rééquilibrage du marché  gagne désormais les couronnes est apparu en premier sur APCIQ - Site web",
-      "link": "https://apciq.ca/rmr-de-montreal-le-reequilibrage-du-marche-gagne-desormais-les-couronnes/",
+      "title": "L’immobilier résidentiel poursuit sa période de transition au Québec, mais la plupart des marchés demeurent à l’avantage des vendeurs",
+      "summary": "Le baromètre du 3e trimestre 2026 de l'APCIQ souligne que malgré l'augmentation de l'offre, les vendeurs d'unifamiliales conservent l'avantage dans l'ensemble des grands secteurs de la RMR de Montréal, tandis que le segment de la copropriété s'équilibre.",
+      "link": "https://apciq.ca/stats-t3-2026/",
       "source": "APCIQ"
+    },
+    {
+      "title": "Prêt hypothécaire : réservez votre taux tôt pour économiser",
+      "summary": "Analyse publiée par Protégez-Vous sur l'évolution des taux d'intérêt et l'importance de sécuriser une garantie de taux hypothécaire à l'avance pour protéger votre capacité d'emprunt.",
+      "link": "https://www.protegez-vous.ca/argent/pret-hypothecaire",
+      "source": "Protégez-Vous"
     }
   ]
 }

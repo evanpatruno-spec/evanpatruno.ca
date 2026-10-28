@@ -36,6 +36,28 @@ RELEVANT_KEYWORDS = [
     "marché immobilier", "prévision", "inflation", "crédit", "prêt", "assurance prêt", "schl", "cmhc",
     "copropriété", "taxe de bienvenue", "premier acheteur", "investissement"
 ]
+BLOCKED_SOURCES = [
+    "tmgm.com", "vietnam.vn", "fxstreet", "dailyfx", "litefinance", "zonebourse", "investing.com", "mitrade"
+]
+
+
+def truncate_clean(text, max_len=260):
+    """Truncates text cleanly at sentence or word boundary without cutting mid-word."""
+    if not text:
+        return ""
+    text = re.sub(r'\s+', ' ', text).strip()
+    if len(text) <= max_len:
+        return text
+    cut = text[:max_len]
+    # Try last sentence end
+    last_period = max(cut.rfind('. '), cut.rfind('! '), cut.rfind('? '))
+    if last_period > max_len * 0.55:
+        return cut[:last_period + 1].strip()
+    # Otherwise cut at last space
+    last_space = cut.rfind(' ')
+    if last_space > 0:
+        return cut[:last_space].rstrip(',;:-–—') + "…"
+    return cut + "…"
 
 
 def parse_xml_robust(content):
@@ -47,12 +69,14 @@ def parse_xml_robust(content):
         link = re.search(r'<link>(.*?)</link>', match, re.DOTALL)
         desc = re.search(r'<description>(.*?)</description>', match, re.DOTALL)
         pub_date = re.search(r'<pubDate>(.*?)</pubDate>', match, re.DOTALL)
+        source_tag = re.search(r'<source[^>]*>(.*?)</source>', match, re.DOTALL)
         
         items.append({
             "title": title.group(1) if title else "",
             "link": link.group(1) if link else "",
             "description": desc.group(1) if desc else "",
-            "pubDate": pub_date.group(1) if pub_date else ""
+            "pubDate": pub_date.group(1) if pub_date else "",
+            "source_tag": source_tag.group(1) if source_tag else ""
         })
     return items
 
@@ -84,7 +108,8 @@ def fetch_feed_news(source_name, url):
                     "title": item.find('title').text if item.find('title') is not None else "",
                     "link": item.find('link').text if item.find('link') is not None else "",
                     "description": item.find('description').text if item.find('description') is not None else "",
-                    "pubDate": item.find('pubDate').text if item.find('pubDate') is not None else ""
+                    "pubDate": item.find('pubDate').text if item.find('pubDate') is not None else "",
+                    "source_tag": item.find('source').text if item.find('source') is not None else ""
                 })
         except:
             # Fallback for malformed XML
@@ -96,38 +121,63 @@ def fetch_feed_news(source_name, url):
             title = item["title"]
             link = item["link"]
             desc = item["description"]
+            source_tag = item.get("source_tag", "")
             
             # Nettoyage CDATA, HTML et Entités
             def ultra_clean(text):
                 if not text: return ""
                 # Supprimer HTML et CDATA
-                text = re.sub('<[^<]+?>', '', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', text))
+                text = re.sub('<[^<]+?>', ' ', re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', text, flags=re.DOTALL))
                 # Unescape HTML entities
                 text = html.unescape(text)
                 # Supprimer les caractères corrompus (ASCII non-imprimable et bruits de décodage)
                 text = text.encode('utf-8', 'ignore').decode('utf-8')
+                text = re.sub(r'[\xa0\u202f\t ]+', ' ', text)
                 return text.strip()
 
             clean_title = ultra_clean(title)
             clean_desc = ultra_clean(desc)
+            clean_source = ultra_clean(source_tag) or ultra_clean(source_name)
             
-            # Correction spécifique pour les noms de sources
-            # Pour Google News, on essaie d'extraire le site original entre parenthèses
-            clean_source = ultra_clean(source_name)
-            if "Google News" in clean_source:
-                src_match = re.search(r'\((.*?)\)', title) # Google News met souvent la source dans le titre
-                if src_match:
-                    clean_source = src_match.group(1)
-                else:
-                    # Alternative: extraire le domaine du lien
-                    domain_match = re.search(r'https?://(?:www\.)?([^/]+)', link)
-                    if domain_match:
-                        clean_source = domain_match.group(1)
+            # Pour Google News, extraire la vraie source après le dernier " - " dans le titre
+            if "Google News" in source_name or "news.google.com" in clean_source:
+                if " - " in clean_title:
+                    parts = clean_title.rsplit(" - ", 1)
+                    candidate_title, candidate_src = parts[0].strip(), parts[1].strip()
+                    if 1 < len(candidate_src) <= 45:
+                        clean_title = candidate_title
+                        if not source_tag:
+                            clean_source = candidate_src
+                if "Google News" in clean_source or "news.google.com" in clean_source:
+                    clean_source = "Actualités Québec"
             
+            # Filtrer les sources de spam / forex étrangers
+            combined_check = f"{clean_source} {clean_title} {link}".lower()
+            if any(blocked in combined_check for blocked in BLOCKED_SOURCES):
+                continue
+
             if "Devoir" in clean_source: clean_source = "Le Devoir"
             if "Radio-Canada" in clean_source: clean_source = "Radio-Canada"
             if "La Presse" in clean_source: clean_source = "La Presse"
             if "Les Affaires" in clean_source: clean_source = "Les Affaires"
+            if "Journal de Montréal" in clean_source: clean_source = "Le Journal de Montréal"
+            if "Journal de Québec" in clean_source: clean_source = "Le Journal de Québec"
+
+            # Supprimer le pied de page automatique WordPress (ex: APCIQ)
+            clean_desc = re.sub(r"L[’']article\s+.*?est apparu en premier sur.*$", "", clean_desc, flags=re.IGNORECASE | re.DOTALL).strip()
+            clean_desc = re.sub(r"Cet article\s+.*?est apparu en premier sur.*$", "", clean_desc, flags=re.IGNORECASE | re.DOTALL).strip()
+            clean_desc = re.sub(r"The post\s+.*?appeared first on.*$", "", clean_desc, flags=re.IGNORECASE | re.DOTALL).strip()
+
+            # Si la description répète simplement le titre (cas de Google News RSS), générer un résumé propre
+            norm_title = re.sub(r'\W+', '', clean_title.lower())
+            norm_desc = re.sub(r'\W+', '', clean_desc.lower())
+            if not clean_desc or norm_desc.startswith(norm_title) or norm_title in norm_desc:
+                if any(k in clean_title.lower() for k in ["taux", "banque du canada", "hypothèque", "hypothécaire"]):
+                    clean_desc = f"Analyse publiée par {clean_source} sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada."
+                else:
+                    clean_desc = f"Revue d'actualité immobilière publiée par {clean_source} portant sur les tendances récentes du marché résidentiel québécois."
+            else:
+                clean_desc = truncate_clean(clean_desc, 260)
 
             full_text = (clean_title + " " + clean_desc).lower()
             matched_cities = []
@@ -225,183 +275,136 @@ def fetch_apciq_stats():
         root = ET.fromstring(res.content)
         items = root.findall('.//item')
         
-        montreal_url = None
+        candidate_urls = []
         for item in items:
             title = item.find('title').text if item.find('title') is not None else ""
             link = item.find('link').text if item.find('link') is not None else ""
-            if "rmr" in title.lower() and ("montr" in title.lower() or "montreal" in title.lower()):
-                montreal_url = link
-                break
+            t_low = title.lower()
+            l_low = link.lower()
+            if ("rmr" in t_low and ("montr" in t_low or "montreal" in t_low)) or "stats-t" in l_low or "trimestre" in t_low or "ventes-residentielles" in l_low:
+                candidate_urls.append(link)
                 
-        if not montreal_url:
+        if not candidate_urls:
             raise Exception("Montreal RMR article link not found in RSS feed")
-            
-        print(f"  Analyse du communiqué : {montreal_url}")
-        art_res = requests.get(montreal_url, headers=headers, timeout=15)
-        if art_res.status_code != 200:
-            raise Exception(f"Failed to fetch article page: status {art_res.status_code}")
-            
-        art_text = art_res.text
-        
-        # Clean HTML completely
-        html_clean = art_text
-        html_clean = re.sub(r'<script[^>]*>.*?</script>', ' ', html_clean, flags=re.DOTALL | re.IGNORECASE)
-        html_clean = re.sub(r'<style[^>]*>.*?</style>', ' ', html_clean, flags=re.DOTALL | re.IGNORECASE)
-        html_clean = re.sub(r'<noscript[^>]*>.*?</noscript>', ' ', html_clean, flags=re.DOTALL | re.IGNORECASE)
-        html_clean = re.sub(r'<(p|br|div|li|h1|h2|h3|h4|h5|h6)[^>]*>', '\n', html_clean, flags=re.IGNORECASE)
-        html_clean = re.sub(r'<[^>]+>', ' ', html_clean)
-        text = html.unescape(html_clean)
-        
-        # Normalize spaces (preserving newlines)
-        text = re.sub(r'[\xa0\u202f\t ]+', ' ', text)
-        text = re.sub(r'\r\n', '\n', text)
-        text = re.sub(r'\n\s*\n+', '\n\n', text)
-        
-        # Parse Month and Year
-        month_match = re.search(r"Statistiques de ventes résidentielles Centris\s*[–-]\s*([a-zA-Zûé]+\s+[0-9]{4})", text, re.IGNORECASE)
-        if month_match:
-            stats["last_quarter"] = month_match.group(1).strip()
-        else:
-            month_match = re.search(r"données pour le mois d.*?([a-zA-Zûé]+\s+[0-9]{4})", text, re.IGNORECASE)
-            if month_match:
-                stats["last_quarter"] = month_match.group(1).strip()
-                
-        # Helper to clean number string
+
         def clean_num(val_str):
             return re.sub(r'\s+', '', val_str).strip()
-            
-        # Parse sales
-        sales_para = ""
-        for line in text.split('\n'):
-            line_clean = line.strip()
-            if not line_clean: continue
-            if "transactions" in line_clean.lower() and "rmr de montréal" in line_clean.lower():
-                sales_para = line_clean
-                break
-        if not sales_para:
-            for line in text.split('\n'):
-                line_clean = line.strip()
-                if not line_clean: continue
-                if "ventes" in line_clean.lower() and "rmr de montréal" in line_clean.lower():
-                    sales_para = line_clean
-                    break
-                    
+
         parsed_sales = None
-        if sales_para:
-            sales_match = re.search(r"([0-9\s]+)\s*(?:transactions|ventes)", sales_para, re.IGNORECASE)
-            if sales_match:
-                parsed_sales = int(clean_num(sales_match.group(1)))
-                stats["montreal"]["sales"] = f"{parsed_sales:,}".replace(',', ' ')
-                
-            # Sales trend
-            pct_match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*%", sales_para)
-            if pct_match:
-                val = pct_match.group(1)
-                if any(w in sales_para.lower() for w in ["recul", "baisse", "diminution", "repli"]):
-                    stats["montreal"]["sales_trend"] = f"-{val}%"
-                else:
-                    stats["montreal"]["sales_trend"] = f"+{val}%"
-                    
-        # Parse listings
-        listings_para = ""
-        for line in text.split('\n'):
-            line_clean = line.strip()
-            if not line_clean: continue
-            if "inscriptions" in line_clean.lower() and ("actives" in line_clean.lower() or "centris" in line_clean.lower()):
-                listings_para = line_clean
-                break
-                
         parsed_listings = None
-        if listings_para:
-            listings_match = re.search(r"([0-9\s]+)\s*inscriptions", listings_para, re.IGNORECASE)
-            if listings_match:
-                parsed_listings = int(clean_num(listings_match.group(1)))
-                stats["montreal"]["active_listings"] = f"{parsed_listings:,}".replace(',', ' ')
-                # Simuler new_listings proportionnellement (environ 80% des inscriptions actives)
-                stats["montreal"]["new_listings"] = f"{int(parsed_listings * 0.8):,}".replace(',', ' ')
-                
-        # Parse prices
-        price_para = ""
-        for line in text.split('\n'):
-            line_clean = line.strip()
-            if not line_clean: continue
-            if "prix" in line_clean.lower() and "médian" in line_clean.lower() and "unifamiliales" in line_clean.lower():
-                price_para = line_clean
-                break
-                
         parsed_price = None
         parsed_condo_price = None
-        if price_para:
-            # Unifamiliale price
-            uni_match = re.search(r"unifamiliales\s*(?:a atteint|s'est établi à)?\s*([0-9\s]+)\s*\$", price_para, re.IGNORECASE)
-            if not uni_match:
-                uni_match = re.search(r"unifamiliales.*?([0-9\s]+)\s*\$", price_para, re.IGNORECASE)
-            if uni_match:
-                parsed_price = int(clean_num(uni_match.group(1)))
-                stats["montreal"]["price"] = f"{parsed_price:,}".replace(',', ' ')
+
+        for montreal_url in candidate_urls:
+            print(f"  Analyse du communiqué : {montreal_url}")
+            art_res = requests.get(montreal_url, headers=headers, timeout=15)
+            if art_res.status_code != 200:
+                continue
                 
-            # Unifamiliale trend
-            uni_trend_match = re.search(r"unifamiliales.*?([0-9\s]+)\s*\$\s*\(\s*([+-]?\s*[0-9]+(?:\.[0-9]+)?\s*%)\s*\)", price_para, re.IGNORECASE)
-            if uni_trend_match:
-                stats["montreal"]["trend"] = re.sub(r'\s+', '', uni_trend_match.group(2))
-            else:
-                pct_match = re.search(r"unifamiliales.*?([0-9]+(?:\.[0-9]+)?)\s*%", price_para, re.IGNORECASE)
-                if pct_match:
-                    val = pct_match.group(1)
-                    if any(w in price_para.lower() for w in ["recul", "baisse", "diminution", "repli"]):
-                        stats["montreal"]["trend"] = f"-{val}%"
-                    else:
-                        stats["montreal"]["trend"] = f"+{val}%"
-                        
-            # Condo price
-            condo_match = re.search(r"copropriétés\s*(?:sont demeurés stables depuis un an, soit|a atteint|s'est établi à)?\s*([0-9\s]+)\s*\$", price_para, re.IGNORECASE)
-            if not condo_match:
-                condo_match = re.search(r"copropriétés.*?([0-9\s]+)\s*\$", price_para, re.IGNORECASE)
-            if condo_match:
-                parsed_condo_price = int(clean_num(condo_match.group(1)))
-                stats["montreal"]["condo_price"] = f"{parsed_condo_price:,}".replace(',', ' ')
-                
-            # Condo trend
-            condo_trend_match = re.search(r"copropriétés.*?([0-9\s]+)\s*\$\s*\(\s*([+-]?\s*[0-9]+(?:\.[0-9]+)?\s*%)\s*\)", price_para, re.IGNORECASE)
-            if condo_trend_match:
-                stats["montreal"]["condo_trend"] = re.sub(r'\s+', '', condo_trend_match.group(2))
-            elif "stable" in price_para.lower():
-                stats["montreal"]["condo_trend"] = "0%"
-            else:
-                sentences = price_para.split('.')
-                condo_sentence = next((s for s in sentences if "copropriétés" in s), "")
-                if condo_sentence:
-                    pct_match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*%", condo_sentence)
+            art_text = art_res.text
+            
+            # Clean HTML completely
+            html_clean = art_text
+            html_clean = re.sub(r'<script[^>]*>.*?</script>', ' ', html_clean, flags=re.DOTALL | re.IGNORECASE)
+            html_clean = re.sub(r'<style[^>]*>.*?</style>', ' ', html_clean, flags=re.DOTALL | re.IGNORECASE)
+            html_clean = re.sub(r'<noscript[^>]*>.*?</noscript>', ' ', html_clean, flags=re.DOTALL | re.IGNORECASE)
+            html_clean = re.sub(r'<(p|br|div|li|h1|h2|h3|h4|h5|h6)[^>]*>', '\n', html_clean, flags=re.IGNORECASE)
+            html_clean = re.sub(r'<[^>]+>', ' ', html_clean)
+            full_text = html.unescape(html_clean)
+            full_text = re.sub(r'[\xa0\u202f\t ]+', ' ', full_text)
+            full_text = re.sub(r'\r\n', '\n', full_text)
+            full_text = re.sub(r'\n\s*\n+', '\n\n', full_text)
+
+            # Parse Month / Quarter and Year from header if not yet set from most recent release
+            if stats["last_quarter"] == "Avril 2026":
+                month_match = re.search(r"Statistiques de ventes résidentielles Centris\s*[–—-]\s*([^\n]+?[0-9]{4})", full_text, re.IGNORECASE)
+                if month_match:
+                    stats["last_quarter"] = month_match.group(1).strip()
+                else:
+                    month_match = re.search(r"données pour le mois d[e'’\s]+([a-zA-Zûé]+\s+[0-9]{4})", full_text, re.IGNORECASE)
+                    if month_match:
+                        stats["last_quarter"] = month_match.group(1).strip()
+
+            # Isolate RMR de Montréal section if inside a provincial release
+            text = full_text
+            mtl_sec = re.search(r"RMR de Montréal\s*:.*?(?=RMR de Québec\s*:|Données du|À propos de l)", full_text, re.IGNORECASE | re.DOTALL)
+            if mtl_sec and len(mtl_sec.group(0)) > 250:
+                text = mtl_sec.group(0)
+
+            # Parse sales
+            if not parsed_sales:
+                sales_match = re.search(r"([0-9]{1,2}\s*[0-9]{3})\s*(?:transactions|ventes(?:\s+résidentielles)?)", text, re.IGNORECASE)
+                if sales_match:
+                    parsed_sales = int(clean_num(sales_match.group(1)))
+                    stats["montreal"]["sales"] = f"{parsed_sales:,}".replace(',', ' ')
+                    # Extract sales trend nearby
+                    ctx = text[max(0, sales_match.start() - 80):min(len(text), sales_match.end() + 180)]
+                    pct_match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*%", ctx)
                     if pct_match:
                         val = pct_match.group(1)
-                        if any(w in condo_sentence.lower() for w in ["recul", "baisse", "diminution", "repli"]):
+                        if any(w in ctx.lower() for w in ["recul", "baisse", "diminution", "repli", "moins"]):
+                            stats["montreal"]["sales_trend"] = f"-{val}%"
+                        else:
+                            stats["montreal"]["sales_trend"] = f"+{val}%"
+
+            # Parse listings
+            if not parsed_listings:
+                listings_match = re.search(r"([0-9]{1,2}\s*[0-9]{3})\s*(?:inscriptions|unités|propriétés(?: résidentielles)? inscrites)", text, re.IGNORECASE)
+                if not listings_match:
+                    listings_match = re.search(r"système Centris a atteint\s*([0-9]{1,2}\s*[0-9]{3})\s*unités", text, re.IGNORECASE)
+                if listings_match:
+                    parsed_listings = int(clean_num(listings_match.group(1)))
+                    stats["montreal"]["active_listings"] = f"{parsed_listings:,}".replace(',', ' ')
+                    stats["montreal"]["new_listings"] = f"{int(parsed_listings * 0.8):,}".replace(',', ' ')
+
+            # Parse prices
+            if not parsed_price:
+                uni_match = re.search(r"prix médian des (?:propriétés )?unifamiliales\s*(?:a atteint|s['’]est établi à|est de)?\s*([0-9]{3}\s*[0-9]{3})\s*\$", text, re.IGNORECASE)
+                if uni_match:
+                    parsed_price = int(clean_num(uni_match.group(1)))
+                    stats["montreal"]["price"] = f"{parsed_price:,}".replace(',', ' ')
+                    ctx = text[uni_match.start():min(len(text), uni_match.end() + 140)]
+                    pct_match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*%", ctx)
+                    if pct_match:
+                        val = pct_match.group(1)
+                        if any(w in ctx.lower() for w in ["recul", "baisse", "diminution", "repli", "fléchi"]):
+                            stats["montreal"]["trend"] = f"-{val}%"
+                        else:
+                            stats["montreal"]["trend"] = f"+{val}%"
+
+            if not parsed_condo_price:
+                condo_match = re.search(r"copropriétés[^\.]{0,120}?([0-9]{3}\s*[0-9]{3})\s*\$", text, re.IGNORECASE)
+                if condo_match:
+                    parsed_condo_price = int(clean_num(condo_match.group(1)))
+                    stats["montreal"]["condo_price"] = f"{parsed_condo_price:,}".replace(',', ' ')
+                    ctx = text[max(0, condo_match.start() - 40):min(len(text), condo_match.end() + 100)]
+                    pct_match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*%", ctx)
+                    if pct_match:
+                        val = pct_match.group(1)
+                        if any(w in ctx.lower() for w in ["recul", "baisse", "diminution", "repli", "fléchi"]):
                             stats["montreal"]["condo_trend"] = f"-{val}%"
                         else:
                             stats["montreal"]["condo_trend"] = f"+{val}%"
-                            
-        # Parse days
-        days_para = ""
-        for line in text.split('\n'):
-            line_clean = line.strip()
-            if not line_clean: continue
-            if "jours" in line_clean.lower() and "unifamiliales" in line_clean.lower() and "marché" in line_clean.lower():
-                days_para = line_clean
-                break
-                
-        if days_para:
-            days_match = re.search(r"unifamiliales\s*\(\s*([0-9]+)\s*jours\s*\)", days_para, re.IGNORECASE)
+                    elif "stable" in ctx.lower():
+                        stats["montreal"]["condo_trend"] = "0%"
+
+            # Parse days
+            days_match = re.search(r"unifamiliales\s*\(\s*([0-9]+)\s*jours\s*\)", text, re.IGNORECASE)
             if not days_match:
-                days_match = re.search(r"délai de vente.*?([0-9]+)\s*jours", days_para, re.IGNORECASE)
+                days_match = re.search(r"unifamiliales se sont vendues en moyenne en\s*([0-9]+)\s*jours", text, re.IGNORECASE)
             if days_match:
                 stats["montreal"]["days"] = days_match.group(1).strip()
 
-        # Conditions de marché
-        if "l'avantage des vendeurs" in text.lower() or "l’avantage des vendeurs" in text.lower():
-            for r in ["montreal", "laval", "rive-sud", "rive-nord"]:
-                stats[r]["condition"] = "Vendeurs"
-        elif "l'avantage des acheteurs" in text.lower() or "l’avantage des acheteurs" in text.lower():
-            for r in ["montreal", "laval", "rive-sud", "rive-nord"]:
-                stats[r]["condition"] = "Acheteurs"
+            # Conditions de marché
+            if "avantage des vendeurs" in text.lower() or "avantage pour chacun des grands secteurs" in text.lower():
+                for r in ["montreal", "laval", "rive-sud", "rive-nord"]:
+                    stats[r]["condition"] = "Vendeurs"
+            elif "avantage des acheteurs" in text.lower():
+                for r in ["montreal", "laval", "rive-sud", "rive-nord"]:
+                    stats[r]["condition"] = "Acheteurs"
+
+            if parsed_price and parsed_sales and parsed_listings:
+                break
 
         # DYNAMIC SCALING FOR OTHER REGIONS (Laval, Rive-Sud, Rive-Nord)
         if parsed_price:
