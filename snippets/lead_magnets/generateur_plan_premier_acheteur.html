@@ -1,0 +1,586 @@
+<!-- 
+===================================================================
+GÉNÉRATEUR DE PLAN D'ACHAT PREMIÈRE PROPRIÉTÉ 2026 — EVAN PATRUNO
+INTÉGRATION STRATÉGIQUE : CELIAPP (8K/AN) + NOUVEAU RAP (60K$) + ABD/ATD
+THEME : LUXURY DARK GLASSMORPHISM (#1e0a19 / #873276 / GOLD #d4af37)
+COMPATIBLE : ZOHO SITES / LEAD MAGNET EMBED / PAGE ACHETEUR
+===================================================================
+-->
+
+<div id="plan-acheteur-container" class="plan-buyer-wrapper">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+        .plan-buyer-wrapper {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(145deg, #1e0a19 0%, #12040f 100%);
+            color: #ffffff;
+            padding: 40px 25px;
+            border-radius: 24px;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(135, 50, 118, 0.2);
+            max-width: 950px;
+            margin: 30px auto;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .plan-buyer-wrapper * {
+            box-sizing: border-box;
+        }
+
+        .plan-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .plan-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: #d4af37;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .plan-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .plan-title span {
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa771c 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .plan-subtitle {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+            font-weight: 300;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* STEP PROGRESS BAR */
+        .plan-steps-bar {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 30px auto 35px;
+            max-width: 600px;
+        }
+
+        .plan-steps-bar::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .step-indicator {
+            position: relative;
+            z-index: 2;
+            background: #1e0a19;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.6);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .step-indicator.active {
+            background: linear-gradient(135deg, #d4af37 0%, #aa771c 100%);
+            color: #12040f;
+            border-color: #f3e5ab;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .step-indicator.completed {
+            background: #4ade80;
+            color: #12040f;
+            border-color: #4ade80;
+        }
+
+        /* WIZARD PANELS */
+        .wizard-step-panel {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .wizard-step-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .wizard-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 26px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 25px;
+        }
+
+        .wizard-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .wizard-grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .wizard-group {
+            margin-bottom: 18px;
+        }
+
+        .wizard-group label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 7px;
+            font-weight: 500;
+        }
+
+        .wizard-input-wrap {
+            position: relative;
+        }
+
+        .wizard-input-wrap span.unit {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            pointer-events: none;
+        }
+
+        .wizard-input, .wizard-select {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 12px 35px 12px 14px;
+            color: #ffffff;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .wizard-input:focus, .wizard-select:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .wizard-select option {
+            background: #1e0a19;
+            color: #ffffff;
+        }
+
+        /* ROADMAP SUMMARY DASHBOARD */
+        .roadmap-hero {
+            background: linear-gradient(135deg, rgba(135, 50, 118, 0.3) 0%, rgba(212, 175, 55, 0.15) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .roadmap-hero .big-budget {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #f3e5ab;
+            margin: 8px 0;
+            text-shadow: 0 5px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .roadmap-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .strategy-pillar {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 16px;
+            text-align: left;
+        }
+
+        .strategy-pillar .pill-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .strategy-pillar .pill-val {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .strategy-pillar .pill-desc {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.4;
+        }
+
+        /* NAVIGATION BUTTONS */
+        .wizard-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .btn-wizard-next {
+            background: linear-gradient(135deg, #d4af37 0%, #aa771c 100%);
+            color: #12040f;
+            border: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 14px 30px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-wizard-next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+        }
+
+        .btn-wizard-back {
+            background: transparent;
+            color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+            padding: 12px 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-wizard-back:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* PRINT STYLING */
+        @media print {
+            body * { visibility: hidden; }
+            #plan-acheteur-container, #plan-acheteur-container * { visibility: visible; }
+            #plan-acheteur-container {
+                position: absolute; left: 0; top: 0; width: 100% !important;
+                background: #ffffff !important; color: #111827 !important;
+                box-shadow: none !important; border: none !important; padding: 15px !important;
+            }
+            .plan-title span, .plan-title { color: #111827 !important; -webkit-text-fill-color: #111827 !important; }
+            .roadmap-hero, .strategy-pillar, .wizard-card {
+                background: #f9fafb !important; border: 1px solid #e5e7eb !important; color: #111827 !important;
+            }
+            .roadmap-hero .big-budget, .strategy-pillar .pill-val { color: #111827 !important; }
+            .wizard-buttons, .plan-steps-bar, .plan-badge { display: none !important; }
+            .wizard-step-panel { display: block !important; }
+        }
+    </style>
+
+    <div class="plan-header">
+        <div class="plan-badge">🎯 Stratégie Premier Acheteur 2026</div>
+        <h2 class="plan-title">Générateur de <span>Plan d'Achat Personnalisé</span></h2>
+        <p class="plan-subtitle">Obtenez votre roadmap sur-mesure combinant l'effet de levier du CELIAPP, le nouveau RAP à 60 000 $ et l'optimisation hypothécaire 360°.</p>
+    </div>
+
+    <!-- STEPS BAR -->
+    <div class="plan-steps-bar">
+        <div class="step-indicator active" id="step-dot-1">1</div>
+        <div class="step-indicator" id="step-dot-2">2</div>
+        <div class="step-indicator" id="step-dot-3">3</div>
+    </div>
+
+    <!-- STEP 1 : SITUATION FINANCIÈRE -->
+    <div class="wizard-step-panel active" id="wizard-panel-1">
+        <div class="wizard-card">
+            <h3 style="color: #d4af37; margin-top: 0; margin-bottom: 20px;">💵 Étape 1 : Revenus & Dettes du Ménage</h3>
+            <div class="wizard-grid-2">
+                <div class="wizard-group">
+                    <label><span>Revenu annuel brut total (seul ou couple)</span></label>
+                    <div class="wizard-input-wrap">
+                        <input type="number" id="buyer-income" class="wizard-input" value="95000" step="2500">
+                        <span class="unit">$/an</span>
+                    </div>
+                </div>
+                <div class="wizard-group">
+                    <label><span>Dettes mensuelles totales (auto, prêts, cartes)</span></label>
+                    <div class="wizard-input-wrap">
+                        <input type="number" id="buyer-debts" class="wizard-input" value="450" step="50">
+                        <span class="unit">$/mois</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wizard-grid-2">
+                <div class="wizard-group">
+                    <label><span>Nombre d'acheteurs admissibles au CELIAPP/RAP</span></label>
+                    <select id="buyer-count" class="wizard-select">
+                        <option value="1">1 Acheteur (Seul)</option>
+                        <option value="2" selected>2 Acheteurs (Couple / Co-emprunteurs)</option>
+                    </select>
+                </div>
+                <div class="wizard-group">
+                    <label><span>Épargne disponible aujourd'hui</span></label>
+                    <div class="wizard-input-wrap">
+                        <input type="number" id="buyer-savings" class="wizard-input" value="25000" step="1000">
+                        <span class="unit">$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wizard-buttons" style="justify-content: flex-end;">
+            <button type="button" class="btn-wizard-next" onclick="goToStep(2)">
+                Continuer vers l'Échéancier →
+            </button>
+        </div>
+    </div>
+
+    <!-- STEP 2 : OBJECTIFS & HORIZON -->
+    <div class="wizard-step-panel" id="wizard-panel-2">
+        <div class="wizard-card">
+            <h3 style="color: #d4af37; margin-top: 0; margin-bottom: 20px;">⏱️ Étape 2 : Votre Projet & Échéancier</h3>
+            <div class="wizard-grid-2">
+                <div class="wizard-group">
+                    <label><span>Horizon d'achat visé</span></label>
+                    <select id="buyer-horizon" class="wizard-select">
+                        <option value="6">Dans 6 mois (Imminent)</option>
+                        <option value="12" selected>Dans 12 mois (1 an)</option>
+                        <option value="24">Dans 24 mois (2 ans)</option>
+                    </select>
+                </div>
+                <div class="wizard-group">
+                    <label><span>Type de propriété recherchée</span></label>
+                    <select id="buyer-prop-type" class="wizard-select">
+                        <option value="condo">Condo / Copropriété divise</option>
+                        <option value="maison" selected>Maison Unifamiliale / Jumelé</option>
+                        <option value="duplex">Duplex ou Triplex (Propriétaire occupant)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="wizard-grid-2">
+                <div class="wizard-group">
+                    <label><span>Capacité d'épargne mensuelle supplémentaire</span></label>
+                    <div class="wizard-input-wrap">
+                        <input type="number" id="buyer-monthly-save" class="wizard-input" value="800" step="50">
+                        <span class="unit">$/mois</span>
+                    </div>
+                </div>
+                <div class="wizard-group">
+                    <label><span>Région d'achat visée</span></label>
+                    <select id="buyer-region" class="wizard-select">
+                        <option value="laval" selected>Laval / Rive-Nord</option>
+                        <option value="montreal">Montréal</option>
+                        <option value="rivesud">Rive-Sud de Montréal</option>
+                        <option value="autre">Autre région du Québec</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="wizard-buttons">
+            <button type="button" class="btn-wizard-back" onclick="goToStep(1)">← Précédent</button>
+            <button type="button" class="btn-wizard-next" onclick="generateRoadmap()">
+                Générer mon Plan Stratégique 🚀
+            </button>
+        </div>
+    </div>
+
+    <!-- STEP 3 : ROADMAP STRATÉGIQUE GÉNÉRÉE -->
+    <div class="wizard-step-panel" id="wizard-panel-3">
+        <!-- HERO DIAGNOSTIC -->
+        <div class="roadmap-hero">
+            <div style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: rgba(255,255,255,0.8);">Votre Capacité d'Achat Maximale Estimée</div>
+            <div class="big-budget" id="road-max-price">465 000 $</div>
+            <div style="font-size: 0.95rem; color: rgba(255,255,255,0.85);" id="road-summary-sub">Basé sur vos ratios d'endettement & votre stratégie de mise de fonds</div>
+        </div>
+
+        <!-- 3 STRATEGY PILLARS -->
+        <div class="roadmap-grid">
+            <div class="strategy-pillar">
+                <div class="pill-title">💡 1. Stratégie CELIAPP</div>
+                <div class="pill-val" id="road-celiapp-val">16 000 $</div>
+                <div class="pill-desc" id="road-celiapp-desc">Cotisation déductible d'impôt avec retraits 100% non imposables pour l'achat.</div>
+            </div>
+
+            <div class="strategy-pillar">
+                <div class="pill-title">🏛️ 2. Nouveau RAP 2026</div>
+                <div class="pill-val" id="road-rap-val">120 000 $ max</div>
+                <div class="pill-desc" id="road-rap-desc">Plafond haussé à 60 000 $ par emprunteur admissible pour maximiser votre capital.</div>
+            </div>
+
+            <div class="strategy-pillar">
+                <div class="pill-title">🛡️ 3. Mise de Fonds & Frais</div>
+                <div class="pill-val" id="road-down-target">31 200 $</div>
+                <div class="pill-desc" id="road-down-desc">Inclut la mise de fonds minimale (5%) + réserve de 1.5% pour notaire et taxe de bienvenue.</div>
+            </div>
+        </div>
+
+        <!-- TIMELINE & SAVINGS PACE -->
+        <div class="wizard-card" style="margin-bottom: 20px;">
+            <h4 style="color: #d4af37; margin: 0 0 12px 0;">📅 Cadence d'Épargne Recommandée</h4>
+            <div id="road-timeline-text" style="font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.9);">
+                Avec votre épargne actuelle de 25 000 $ et un effort d'épargne de 800 $/mois, vous atteindrez votre capital d'achat optimal dans <strong>8 mois</strong> tout en bénéficiant d'un retour d'impôt estimé grâce au CELIAPP.
+            </div>
+        </div>
+
+        <div class="wizard-buttons">
+            <button type="button" class="btn-wizard-back" onclick="goToStep(2)">← Modifier mes données</button>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button type="button" class="btn-wizard-next" onclick="window.print()" style="background: rgba(255,255,255,0.1); color: #ffffff; border: 1px solid rgba(255,255,255,0.3);">
+                    📄 Télécharger mon Plan (PDF)
+                </button>
+                <a href="https://wa.me/15147055998?text=Bonjour%20Evan,%20j'ai%20généré%20mon%20plan%20d'achat%20sur%20votre%20site%20et%20j'aimerais%20une%20préqualification%20officielle." target="_blank" class="btn-wizard-next" style="text-decoration: none;">
+                    🚀 Préqualification avec Evan
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function goToStep(stepNumber) {
+        for (let i = 1; i <= 3; i++) {
+            const panel = document.getElementById('wizard-panel-' + i);
+            const dot = document.getElementById('step-dot-' + i);
+            if (panel && dot) {
+                if (i === stepNumber) {
+                    panel.classList.add('active');
+                    dot.classList.add('active');
+                } else {
+                    panel.classList.remove('active');
+                    dot.classList.remove('active');
+                }
+                if (i < stepNumber) {
+                    dot.classList.add('completed');
+                } else {
+                    dot.classList.remove('completed');
+                }
+            }
+        }
+    }
+
+    function generateRoadmap() {
+        const income = parseFloat(document.getElementById('buyer-income').value) || 0;
+        const debts = parseFloat(document.getElementById('buyer-debts').value) || 0;
+        const buyers = parseInt(document.getElementById('buyer-count').value) || 1;
+        const savings = parseFloat(document.getElementById('buyer-savings').value) || 0;
+        const horizon = parseInt(document.getElementById('buyer-horizon').value) || 12;
+        const monthlySave = parseFloat(document.getElementById('buyer-monthly-save').value) || 0;
+
+        // Calcul capacité théorique ABD (39%) / ATD (44%)
+        // Estimation taux de qualification canadien 6.49% (stress test) amortissement 25 ans
+        const monthlyIncome = income / 12;
+        const maxTotalMonthlyDebt = (monthlyIncome * 0.44) - debts;
+        const estimatedMortgageBudget = Math.max(0, maxTotalMonthlyDebt * 135); // Facteur approx stress test + taxes/chauffage
+        
+        // Épargne future à terme
+        const projectedSavings = savings + (monthlySave * horizon);
+
+        // Capacité max basée sur mise de fonds min (5% jusqu'à 500k, 10% au-delà)
+        const priceByIncome = Math.round(estimatedMortgageBudget * 1.15 / 5000) * 5000;
+        const finalMaxPrice = Math.max(200000, priceByIncome);
+
+        // Calcul mise de fonds min 5% sur 500k
+        let minDown = 0;
+        if (finalMaxPrice <= 500000) {
+            minDown = finalMaxPrice * 0.05;
+        } else {
+            minDown = (500000 * 0.05) + ((finalMaxPrice - 500000) * 0.10);
+        }
+        const closingReserve = finalMaxPrice * 0.015; // 1.5% frais de clôture (notaire, taxe de bienvenue)
+        const totalCapitalRequired = minDown + closingReserve;
+
+        // Plafonds CELIAPP & RAP
+        const celiappMax = buyers * 8000; // 8 000 $ par personne par année
+        const rapMax = buyers * 60000;    // 60 000 $ max par acheteur (mesure fédérale 2024-2026)
+
+        // Mois requis pour atteindre le capital
+        const deficit = Math.max(0, totalCapitalRequired - savings);
+        const monthsNeeded = monthlySave > 0 ? Math.ceil(deficit / monthlySave) : 99;
+
+        // DOM Updates
+        document.getElementById('road-max-price').textContent = finalMaxPrice.toLocaleString('fr-CA') + ' $';
+        document.getElementById('road-celiapp-val').textContent = celiappMax.toLocaleString('fr-CA') + ' $/an';
+        document.getElementById('road-celiapp-desc').textContent = 'Plafond cumulatif pour ' + buyers + ' acheteur(s) : cotisations 100% déductibles d\'impôt.';
+        
+        document.getElementById('road-rap-val').textContent = rapMax.toLocaleString('fr-CA') + ' $';
+        document.getElementById('road-rap-desc').textContent = 'Plafond RAP disponible pour ' + buyers + ' acheteur(s) (60 000 $/pers.) sans impact fiscal.';
+
+        document.getElementById('road-down-target').textContent = Math.round(totalCapitalRequired).toLocaleString('fr-CA') + ' $';
+        document.getElementById('road-down-desc').textContent = 'Mise de fonds requise (' + Math.round(minDown).toLocaleString('fr-CA') + ' $) + réserve de clôture (notaire, bienvenue : ' + Math.round(closingReserve).toLocaleString('fr-CA') + ' $).';
+
+        let timelineHTML = '';
+        if (projectedSavings >= totalCapitalRequired) {
+            timelineHTML = 'Félicitations ! Avec votre épargne actuelle de <strong>' + Math.round(savings).toLocaleString('fr-CA') + ' $</strong> et votre capacité de <strong>' + Math.round(monthlySave).toLocaleString('fr-CA') + ' $/mois</strong>, vous avez déjà atteint le capital nécessaire pour acquérir une propriété de <strong>' + finalMaxPrice.toLocaleString('fr-CA') + ' $</strong>. La prochaine étape est votre préqualification formelle.';
+        } else {
+            timelineHTML = 'Pour viser une propriété de <strong>' + finalMaxPrice.toLocaleString('fr-CA') + ' $</strong>, votre besoin en capital (mise de fonds + frais) est de <strong>' + Math.round(totalCapitalRequired).toLocaleString('fr-CA') + ' $</strong>. À un rythme d\'épargne de <strong>' + Math.round(monthlySave).toLocaleString('fr-CA') + ' $/mois</strong>, vous atteindrez cet objectif dans environ <strong>' + monthsNeeded + ' mois</strong>.';
+        }
+        document.getElementById('road-timeline-text').innerHTML = timelineHTML;
+
+        goToStep(3);
+    }
+</script>

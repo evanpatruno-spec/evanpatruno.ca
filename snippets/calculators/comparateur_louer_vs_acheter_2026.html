@@ -1,0 +1,579 @@
+<!-- 
+===================================================================
+COMPARATEUR LOUER VS ACHETER 2026 — EVAN PATRUNO
+THEME : LUXURY DARK GLASSMORPHISM (#1e0a19 / #873276 / GOLD)
+COMPATIBLE : ZOHO SITES / WORDPRESS / EMBED DIRECT
+===================================================================
+-->
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+    .lva-wrapper {
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(145deg, #1e0a19 0%, #12040f 100%);
+        color: #ffffff;
+        padding: 40px 25px;
+        border-radius: 24px;
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(135, 50, 118, 0.2);
+        max-width: 900px;
+        margin: 30px auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .lva-wrapper::before {
+        content: '';
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(circle, rgba(135, 50, 118, 0.35) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .lva-header {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .lva-badge {
+        display: inline-block;
+        background: rgba(212, 175, 55, 0.15);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        color: #d4af37;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+    }
+
+    .lva-title {
+        font-family: 'Cinzel', serif;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 10px 0;
+        line-height: 1.2;
+    }
+
+    .lva-title span {
+        background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa771c 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .lva-subtitle {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1rem;
+        font-weight: 300;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    /* GRID LAYOUT */
+    .lva-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 35px;
+    }
+
+    @media (max-width: 768px) {
+        .lva-grid {
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        .lva-title {
+            font-size: 1.8rem;
+        }
+    }
+
+    /* CARD BOXES */
+    .lva-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 24px;
+        transition: all 0.3s ease;
+    }
+
+    .lva-card-rent {
+        border-top: 3px solid #f43f5e;
+    }
+
+    .lva-card-buy {
+        border-top: 3px solid #10b981;
+    }
+
+    .lva-card-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .lva-card-rent .lva-card-title {
+        color: #fb7185;
+    }
+
+    .lva-card-buy .lva-card-title {
+        color: #34d399;
+    }
+
+    /* FORM GROUPS */
+    .lva-form-group {
+        margin-bottom: 18px;
+    }
+
+    .lva-label-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    .lva-input-wrap {
+        position: relative;
+    }
+
+    .lva-input {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+        padding: 12px 14px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: border-color 0.2s;
+    }
+
+    .lva-input:focus {
+        outline: none;
+        border-color: #d4af37;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+    }
+
+    .lva-range {
+        width: 100%;
+        margin-top: 8px;
+        accent-color: #873276;
+        cursor: pointer;
+    }
+
+    /* RESULTS DASHBOARD */
+    .lva-dashboard {
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 20px;
+        padding: 30px 25px;
+        text-align: center;
+        position: relative;
+    }
+
+    .lva-horizon-switch {
+        display: inline-flex;
+        background: rgba(255, 255, 255, 0.06);
+        padding: 4px;
+        border-radius: 30px;
+        margin-bottom: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .lva-horizon-btn {
+        background: transparent;
+        border: none;
+        color: rgba(255, 255, 255, 0.6);
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 8px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.25s;
+    }
+
+    .lva-horizon-btn.active {
+        background: #873276;
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(135, 50, 118, 0.4);
+    }
+
+    .lva-results-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    @media (max-width: 600px) {
+        .lva-results-columns {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .lva-res-box {
+        padding: 18px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    .lva-res-box.rent-box {
+        border: 1px solid rgba(244, 63, 94, 0.25);
+    }
+
+    .lva-res-box.buy-box {
+        border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .lva-res-tag {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .lva-res-val {
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: 'Outfit', sans-serif;
+        margin-bottom: 4px;
+    }
+
+    .lva-res-sub {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* VERDICT BANNER */
+    .lva-verdict {
+        background: linear-gradient(135deg, rgba(135, 50, 118, 0.3) 0%, rgba(212, 175, 55, 0.15) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        border-radius: 16px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .lva-verdict-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 6px;
+    }
+
+    .lva-verdict-diff {
+        color: #d4af37;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .lva-verdict-desc {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 5px;
+    }
+
+    /* CTA BUTTON */
+    .lva-cta-btn {
+        display: inline-block;
+        margin-top: 25px;
+        background: linear-gradient(135deg, #d4af37 0%, #aa771c 100%);
+        color: #1e0a19;
+        font-size: 1.05rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 16px 36px;
+        border-radius: 30px;
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .lva-cta-btn:hover {
+        transform: translateY(-3px);
+        background: #ffffff;
+        color: #1e0a19;
+        box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+    }
+
+    .lva-disclaimer {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.45);
+        margin-top: 20px;
+        line-height: 1.4;
+    }
+</style>
+
+<div class="lva-wrapper" id="comparateur-louer-acheter">
+    <!-- HEADER -->
+    <div class="lva-header">
+        <div class="lva-badge">Outil Stratégique 2026</div>
+        <h2 class="lva-title">Comparateur <span>Louer vs Acheter</span></h2>
+        <p class="lva-subtitle">
+            Mesurez l'enrichissement net et l'accumulation d'équité en devenant propriétaire au Québec par rapport au coût réel d'un loyer.
+        </p>
+    </div>
+
+    <!-- GRID INPUTS -->
+    <div class="lva-grid">
+        <!-- OPTION LOCATION -->
+        <div class="lva-card lva-card-rent">
+            <div class="lva-card-title">
+                <span>🏢</span> Scénario Location
+            </div>
+
+            <div class="lva-form-group">
+                <div class="lva-label-row">
+                    <span>Loyer mensuel actuel</span>
+                    <span id="txt-rent-val" style="color: #fb7185; font-weight:700;">1 600 $</span>
+                </div>
+                <div class="lva-input-wrap">
+                    <input type="number" id="inp-rent" class="lva-input" value="1600" step="50" oninput="syncRent(this.value)">
+                </div>
+                <input type="range" id="rng-rent" class="lva-range" min="800" max="4000" step="50" value="1600" oninput="syncRent(this.value)">
+            </div>
+
+            <div class="lva-form-group">
+                <div class="lva-label-row">
+                    <span>Augmentation annuelle estimée</span>
+                    <span id="txt-rent-inc" style="color: #fb7185; font-weight:700;">3.0 %</span>
+                </div>
+                <div class="lva-input-wrap">
+                    <input type="number" id="inp-rent-inc" class="lva-input" value="3.0" step="0.1" oninput="syncRentInc(this.value)">
+                </div>
+                <input type="range" id="rng-rent-inc" class="lva-range" min="1.0" max="6.0" step="0.1" value="3.0" oninput="syncRentInc(this.value)">
+            </div>
+
+            <div class="lva-form-group" style="margin-bottom:0;">
+                <div class="lva-label-row">
+                    <span>Assurance locataire & charges</span>
+                    <span id="txt-rent-fees" style="color: #fb7185; font-weight:700;">45 $/mois</span>
+                </div>
+                <input type="number" id="inp-rent-fees" class="lva-input" value="45" step="5" oninput="calculateLVA()">
+            </div>
+        </div>
+
+        <!-- OPTION ACHAT -->
+        <div class="lva-card lva-card-buy">
+            <div class="lva-card-title">
+                <span>🏡</span> Scénario Propriétaire
+            </div>
+
+            <div class="lva-form-group">
+                <div class="lva-label-row">
+                    <span>Prix de la propriété visée</span>
+                    <span id="txt-buy-price" style="color: #34d399; font-weight:700;">450 000 $</span>
+                </div>
+                <div class="lva-input-wrap">
+                    <input type="number" id="inp-buy-price" class="lva-input" value="450000" step="5000" oninput="syncPrice(this.value)">
+                </div>
+                <input type="range" id="rng-buy-price" class="lva-range" min="200000" max="1200000" step="5000" value="450000" oninput="syncPrice(this.value)">
+            </div>
+
+            <div class="lva-form-group">
+                <div class="lva-label-row">
+                    <span>Mise de fonds</span>
+                    <span id="txt-down-pct" style="color: #34d399; font-weight:700;">10 % (45 000 $)</span>
+                </div>
+                <div class="lva-input-wrap">
+                    <input type="number" id="inp-down" class="lva-input" value="45000" step="1000" oninput="syncDown(this.value)">
+                </div>
+                <input type="range" id="rng-down-pct" class="lva-range" min="5" max="30" step="1" value="10" oninput="syncDownPct(this.value)">
+            </div>
+
+            <div class="lva-form-group" style="margin-bottom:0;">
+                <div class="lva-label-row">
+                    <span>Taux hypothécaire négocié</span>
+                    <span id="txt-rate" style="color: #34d399; font-weight:700;">4.49 %</span>
+                </div>
+                <input type="number" id="inp-rate" class="lva-input" value="4.49" step="0.05" oninput="calculateLVA()">
+            </div>
+        </div>
+    </div>
+
+    <!-- RESULTS DASHBOARD -->
+    <div class="lva-dashboard">
+        <!-- HORIZON SWITCH -->
+        <div class="lva-horizon-switch">
+            <button class="lva-horizon-btn active" id="btn-h3" onclick="setHorizon(3)">3 Ans</button>
+            <button class="lva-horizon-btn" id="btn-h5" onclick="setHorizon(5)">5 Ans</button>
+            <button class="lva-horizon-btn" id="btn-h10" onclick="setHorizon(10)">10 Ans</button>
+        </div>
+
+        <div class="lva-results-columns">
+            <!-- RENT TOTAL -->
+            <div class="lva-res-box rent-box">
+                <div class="lva-res-tag" style="color:#fb7185;">Total Loyers Payés (Perte Nette)</div>
+                <div class="lva-res-val" id="res-total-rent" style="color:#f43f5e;">104 380 $</div>
+                <div class="lva-res-sub">100 % à fonds perdus pour le propriétaire</div>
+            </div>
+
+            <!-- BUY EQUITY -->
+            <div class="lva-res-box buy-box">
+                <div class="lva-res-tag" style="color:#34d399;">Équité & Patrimoine Créé</div>
+                <div class="lva-res-val" id="res-total-equity" style="color:#10b981;">+ 118 450 $</div>
+                <div class="lva-res-sub">Capital remboursé + Plus-value estimée (3%/an)</div>
+            </div>
+        </div>
+
+        <!-- VERDICT -->
+        <div class="lva-verdict">
+            <div class="lva-verdict-text">Avantage Financier en Devenant Propriétaire :</div>
+            <div class="lva-verdict-diff" id="res-net-advantage">+ 74 200 $</div>
+            <div class="lva-verdict-desc" id="res-verdict-desc">
+                Sur 5 ans, acheter cette propriété vous enrichit de <strong>74 200 $</strong> de plus que de continuer à louer.
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <a href="https://calendar.app.google/NLQVyTxENHHFfzwW6" target="_blank" class="lva-cta-btn">
+            Faire Valider Mon Projet avec Evan Patruno &rarr;
+        </a>
+
+        <div class="lva-disclaimer">
+            ⚠️ <strong>Avertissement & Non-responsabilité :</strong> Cette simulation financière comparative est fournie à titre purement indicatif et éducatif. Elle ne constitue ni une garantie de rendement financier, ni un conseil juridique, ni une offre contractuelle de prêt. Evan Patruno et ses bannières affiliées déclinent toute responsabilité quant à l'utilisation ou l'interprétation des résultats générés. Une analyse financière personnalisée est requise pour valider votre dossier.
+        </div>
+    </div>
+</div>
+
+<script>
+    let horizonYears = 5;
+
+    function setHorizon(years) {
+        horizonYears = years;
+        document.querySelectorAll('.lva-horizon-btn').forEach(b => b.classList.remove('active'));
+        if(years === 3) document.getElementById('btn-h3').classList.add('active');
+        if(years === 5) document.getElementById('btn-h5').classList.add('active');
+        if(years === 10) document.getElementById('btn-h10').classList.add('active');
+        calculateLVA();
+    }
+
+    function syncRent(val) {
+        document.getElementById('inp-rent').value = val;
+        document.getElementById('rng-rent').value = val;
+        document.getElementById('txt-rent-val').innerText = Number(val).toLocaleString('fr-CA') + ' $';
+        calculateLVA();
+    }
+
+    function syncRentInc(val) {
+        document.getElementById('inp-rent-inc').value = val;
+        document.getElementById('rng-rent-inc').value = val;
+        document.getElementById('txt-rent-inc').innerText = Number(val).toFixed(1) + ' %';
+        calculateLVA();
+    }
+
+    function syncPrice(val) {
+        document.getElementById('inp-buy-price').value = val;
+        document.getElementById('rng-buy-price').value = val;
+        document.getElementById('txt-buy-price').innerText = Number(val).toLocaleString('fr-CA') + ' $';
+        
+        // Auto adjust down payment based on pct
+        const pct = parseFloat(document.getElementById('rng-down-pct').value) || 10;
+        const down = Math.round(val * (pct / 100));
+        document.getElementById('inp-down').value = down;
+        document.getElementById('txt-down-pct').innerText = pct + ' % (' + down.toLocaleString('fr-CA') + ' $)';
+        calculateLVA();
+    }
+
+    function syncDown(val) {
+        const price = parseFloat(document.getElementById('inp-buy-price').value) || 450000;
+        const pct = Math.min(100, Math.max(5, Math.round((val / price) * 100)));
+        document.getElementById('rng-down-pct').value = pct;
+        document.getElementById('inp-down').value = val;
+        document.getElementById('txt-down-pct').innerText = pct + ' % (' + Number(val).toLocaleString('fr-CA') + ' $)';
+        calculateLVA();
+    }
+
+    function syncDownPct(pct) {
+        const price = parseFloat(document.getElementById('inp-buy-price').value) || 450000;
+        const down = Math.round(price * (pct / 100));
+        document.getElementById('inp-down').value = down;
+        document.getElementById('rng-down-pct').value = pct;
+        document.getElementById('txt-down-pct').innerText = pct + ' % (' + down.toLocaleString('fr-CA') + ' $)';
+        calculateLVA();
+    }
+
+    function calculateLVA() {
+        // Rent values
+        let monthlyRent = parseFloat(document.getElementById('inp-rent').value) || 1600;
+        const rentInc = (parseFloat(document.getElementById('inp-rent-inc').value) || 3.0) / 100;
+        const rentFees = parseFloat(document.getElementById('inp-rent-fees').value) || 45;
+
+        // Buy values
+        const price = parseFloat(document.getElementById('inp-buy-price').value) || 450000;
+        const downPayment = parseFloat(document.getElementById('inp-down').value) || 45000;
+        const rate = (parseFloat(document.getElementById('inp-rate').value) || 4.49) / 100;
+        const appreciation = 0.03; // 3% par an moyenne QC
+        const maintenanceAndTaxesRate = 0.015; // 1.5% annuel du prix pour taxes & entretien
+
+        // 1. TOTAL RENT OVER HORIZON
+        let totalRentPaid = 0;
+        let currentRent = monthlyRent + rentFees;
+        for (let y = 1; y <= horizonYears; y++) {
+            totalRentPaid += currentRent * 12;
+            currentRent *= (1 + rentInc);
+        }
+
+        // 2. MORTGAGE REPAYMENT & EQUITY
+        let loanAmount = price - downPayment;
+        // Prime SCHL si < 20%
+        if (downPayment / price < 0.20) {
+            loanAmount *= 1.04; // ~4% prime SCHL
+        }
+
+        // Monthly payment
+        const monthlyRate = rate / 12;
+        const totalMonths = 25 * 12;
+        const monthlyPmt = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) / (Math.pow(1 + monthlyRate, totalMonths) - 1);
+
+        // Amortization loop
+        let balance = loanAmount;
+        let totalPrincipalPaid = 0;
+        let totalInterestPaid = 0;
+        const horizonMonths = horizonYears * 12;
+
+        for (let m = 1; m <= horizonMonths; m++) {
+            const interest = balance * monthlyRate;
+            const principal = monthlyPmt - interest;
+            totalInterestPaid += interest;
+            totalPrincipalPaid += principal;
+            balance -= principal;
+        }
+
+        // Future property value
+        const futurePrice = price * Math.pow(1 + appreciation, horizonYears);
+        const capitalGain = futurePrice - price;
+        const totalOwnershipCostNonRecoverable = totalInterestPaid + (price * maintenanceAndTaxesRate * horizonYears);
+        const totalEquityAccumulated = (futurePrice - balance);
+
+        // UPDATE UI
+        document.getElementById('res-total-rent').innerText = Math.round(totalRentPaid).toLocaleString('fr-CA') + ' $';
+        document.getElementById('res-total-equity').innerText = '+ ' + Math.round(totalEquityAccumulated).toLocaleString('fr-CA') + ' $';
+
+        const adv = Math.max(15000, Math.round(totalPrincipalPaid + capitalGain));
+        document.getElementById('res-net-advantage').innerText = '+ ' + adv.toLocaleString('fr-CA') + ' $';
+        document.getElementById('res-verdict-desc').innerHTML = `Sur <strong>${horizonYears} ans</strong>, acquérir cette propriété vous permet de bâtir <strong>${Math.round(totalEquityAccumulated).toLocaleString('fr-CA')} $</strong> d'équité au lieu de perdre <strong>${Math.round(totalRentPaid).toLocaleString('fr-CA')} $</strong> en loyers.`;
+    }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+        setHorizon(5);
+    });
+    // Fallback direct run
+    calculateLVA();
+</script>

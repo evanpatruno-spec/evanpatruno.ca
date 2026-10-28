@@ -51,14 +51,14 @@ INSTRUCTIONS:
         background: linear-gradient(135deg, rgba(30, 10, 25, 0.82), rgba(135, 50, 118, 0.28)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
         background-size: cover;
         background-position: center;
-        padding: 38px 24px 64px !important;
+        padding: 36px 24px 36px !important;
         text-align: center;
         border-radius: 32px !important;
         position: relative;
         z-index: 1;
         margin: 8px 20px 0 !important;
         box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
-        min-height: 260px !important;
+        min-height: auto !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
@@ -109,7 +109,7 @@ INSTRUCTIONS:
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
-        margin-top: -28px;
+        margin-top: 24px;
         position: relative;
         z-index: 2;
     }
@@ -139,7 +139,7 @@ INSTRUCTIONS:
     }
 
     .service-icon {
-        font-size: clamp(1.85rem, 3.4vw, 2.65rem);
+        font-size: 3rem;
         margin-bottom: 25px;
         display: block;
     }
@@ -393,9 +393,9 @@ INSTRUCTIONS:
 
     @media (max-width: 768px) {
         .hero-seller {
-            padding: 38px 24px 64px !important;
+            padding: 36px 24px 36px !important;
             margin-top: 15px !important;
-            min-height: 260px !important;
+            min-height: auto !important;
         }
 
         .hero-seller h1 {
@@ -407,7 +407,7 @@ INSTRUCTIONS:
         }
 
         .services-grid {
-            margin-top: -28px;
+            margin-top: 24px;
             grid-template-columns: 1fr;
         }
 
