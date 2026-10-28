@@ -46,7 +46,7 @@
 
     /* CONTENT */
     .liens-content {
-        max-width: 1100px;
+        max-width: 1240px;
         margin: 0 auto;
         padding: 80px 20px 100px;
     }
@@ -85,7 +85,7 @@
     /* LINKS GRID */
     .liens-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 16px;
     }
 
@@ -93,11 +93,11 @@
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
-        padding: 22px 25px;
+        padding: 20px 18px;
         text-decoration: none;
         display: flex;
         align-items: flex-start;
-        gap: 15px;
+        gap: 13px;
         transition: all 0.25s ease;
         color: #ffffff;
     }
@@ -210,6 +210,12 @@
         line-height: 1.6;
     }
 
+    @media (max-width: 1024px) {
+        .liens-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
     @media (max-width: 768px) {
         .liens-hero {
             padding: 44px 24px 38px !important;
@@ -259,11 +265,35 @@
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
+            <a href="https://lautorite.qc.ca/grand-public" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🏛️</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">AMF</span>
+                    <span class="lien-card-desc">Autorité des marchés financiers — Courtage hypothécaire</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
             <a href="https://www.schl.ca/fr" target="_blank" class="lien-card">
                 <div class="lien-card-icon">🏠</div>
                 <div class="lien-card-text">
                     <span class="lien-card-name">SCHL</span>
                     <span class="lien-card-desc">Société Canadienne d'Hypothèques et de Logement</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.tal.gouv.qc.ca/fr" target="_blank" class="lien-card">
+                <div class="lien-card-icon">📋</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">TAL</span>
+                    <span class="lien-card-desc">Tribunal administratif du logement (Baux, loyers & droits)</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.rbq.gouv.qc.ca/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🪖</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">RBQ</span>
+                    <span class="lien-card-desc">Régie du bâtiment — Vérifier la licence d'un entrepreneur</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
@@ -283,47 +313,129 @@
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
+            <a href="https://rphl.org/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🏘️</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">RPHL</span>
+                    <span class="lien-card-desc">Regroupement des propriétaires d'habitations locatives</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
         </div>
 
-        <!-- SERVICES PUBLICS -->
+        <!-- FINANCEMENT & CRÉDIT -->
         <div class="liens-category-header">
-            <span class="liens-category-icon">⚡</span>
-            <h2 class="liens-category-title">Services Publics & Utilitaires</h2>
+            <span class="liens-category-icon">💳</span>
+            <h2 class="liens-category-title">Financement & Crédit</h2>
             <div class="liens-category-line"></div>
         </div>
 
         <div class="liens-grid">
-            <a href="https://www.hydroquebec.com/residentiel/" target="_blank" class="lien-card">
-                <div class="lien-card-icon">💡</div>
+            <a href="https://www.banqueducanada.ca/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🏦</div>
                 <div class="lien-card-text">
-                    <span class="lien-card-name">Hydro-Québec</span>
-                    <span class="lien-card-desc">Transfert de compte & branchement électrique</span>
+                    <span class="lien-card-name">Banque du Canada</span>
+                    <span class="lien-card-desc">Taux directeur officiel, inflation et annonces économiques</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
-            <a href="https://www.energir.com/residentiel" target="_blank" class="lien-card">
-                <div class="lien-card-icon">🔥</div>
+            <a href="https://www.consumer.equifax.ca/fr/personnel/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">📊</div>
                 <div class="lien-card-text">
-                    <span class="lien-card-name">Énergir</span>
-                    <span class="lien-card-desc">Activation du service de gaz naturel</span>
+                    <span class="lien-card-name">Equifax Canada</span>
+                    <span class="lien-card-desc">Consulter et surveiller votre dossier et pointage de crédit</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
-            <a href="https://www.quebec.ca/trouver-ressource/formulaires/services-quebec/changement-adresse"
+            <a href="https://www.transunion.ca/fr" target="_blank" class="lien-card">
+                <div class="lien-card-icon">📈</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">TransUnion Canada</span>
+                    <span class="lien-card-desc">Vérification du dossier de crédit pour qualification hypothécaire</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.sagen.ca/fr/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🔑</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Sagen</span>
+                    <span class="lien-card-desc">Assureur hypothécaire privé (programmes 5 % et travailleurs autonomes)</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+        </div>
+
+        <!-- OUTILS, SUBVENTIONS & FISCALITÉ -->
+        <div class="liens-category-header">
+            <span class="liens-category-icon">🛠️</span>
+            <h2 class="liens-category-title">Outils, Subventions & Fiscalité</h2>
+            <div class="liens-category-line"></div>
+        </div>
+
+        <div class="liens-grid">
+            <a href="https://www.quebec.ca/habitation/achat-vente-propriete/droits-mutation-immobiliere" target="_blank" class="lien-card">
+                <div class="lien-card-icon">💵</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Taxe de Bienvenue</span>
+                    <span class="lien-card-desc">Guide officiel sur les droits de mutation immobilière</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-lies/regime-accession-a-la-propriete.html"
                 target="_blank" class="lien-card">
-                <div class="lien-card-icon">🏛️</div>
+                <div class="lien-card-icon">💰</div>
                 <div class="lien-card-text">
-                    <span class="lien-card-name">SQCA</span>
-                    <span class="lien-card-desc">Service Québécois de Changement d'Adresse (Gouv)</span>
+                    <span class="lien-card-name">RAP (REER)</span>
+                    <span class="lien-card-desc">Régime d'accession à la propriété jusqu'à 60 000 $</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
-            <a href="https://www.canadapost-postescanada.ca/cpc/fr/particuliers/recevoir/gerer-courrier/reacheminement-du-courrier.page"
+            <a href="https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html"
                 target="_blank" class="lien-card">
-                <div class="lien-card-icon">📬</div>
+                <div class="lien-card-icon">🏦</div>
                 <div class="lien-card-text">
-                    <span class="lien-card-name">Postes Canada</span>
-                    <span class="lien-card-desc">Réacheminement du courrier officiel</span>
+                    <span class="lien-card-name">CELIAPP</span>
+                    <span class="lien-card-desc">Compte d'épargne libre d'impôt — 1re Habitation</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.revenuquebec.ca/fr/citoyens/credits-dimpot/credit-dimpot-pour-achat-dune-habitation/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🧾</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Crédit 1re Habitation</span>
+                    <span class="lien-card-desc">Crédit d'impôt provincial & fédéral pour premiers acheteurs</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://transitionenergetique.gouv.qc.ca/residentiel/programmes/renoclimat" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🌿</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Rénoclimat</span>
+                    <span class="lien-card-desc">Subventions pour isolation et efficacité énergétique</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.hydroquebec.com/residentiel/programmes-outils/logisvert/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">❄️</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">LogisVert (Hydro-Québec)</span>
+                    <span class="lien-card-desc">Remises financières pour thermopompes et travaux écoénergétiques</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.quebec.ca/habitation-territoire/chauffage-consommation-energie/chauffez-vert" target="_blank" class="lien-card">
+                <div class="lien-card-icon">♻️</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Chauffez vert</span>
+                    <span class="lien-card-desc">Subvention pour remplacer un système au mazout ou propane</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://itools-ioutils.fcac-acfc.gc.ca/MQ-HQ/MQ-Etil-fra.aspx" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🧮</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">ACFC — Test de résistance</span>
+                    <span class="lien-card-desc">Outil fédéral officiel d'admissibilité hypothécaire</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
@@ -361,11 +473,43 @@
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
+            <a href="https://oagq.qc.ca/grand-public/trouver-un-arpenteur-geometre/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">📍</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">OAGQ</span>
+                    <span class="lien-card-desc">Ordre des arpenteurs-géomètres (Certificat de localisation)</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.registrefoncier.gouv.qc.ca/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">📜</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Registre foncier du Québec</span>
+                    <span class="lien-card-desc">Consulter les titres de propriété, actes et servitudes</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
             <a href="https://www.barreau.qc.ca/fr/trouver-avocat/" target="_blank" class="lien-card">
                 <div class="lien-card-icon">⚖️</div>
                 <div class="lien-card-text">
                     <span class="lien-card-name">Barreau du Québec</span>
-                    <span class="lien-card-desc">Bottin des avocats spécialisés en immobilier</span>
+                    <span class="lien-card-desc">Bottin des avocats spécialisés en droit immobilier</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.oiq.qc.ca/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🏗️</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Ordre des Ingénieurs (OIQ)</span>
+                    <span class="lien-card-desc">Expertise en structure, fondations et bâtiment</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.acqc.ca/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🛠️</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">ACQC</span>
+                    <span class="lien-card-desc">Association des consommateurs pour la qualité dans la construction</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
@@ -382,7 +526,7 @@
             <a href="https://info-assurance.ca/habitation/sinistres/historique-sinistres/" target="_blank" class="lien-card">
                 <div class="lien-card-icon">🔍</div>
                 <div class="lien-card-text">
-                    <span class="lien-card-name">Info-Assurance</span>
+                    <span class="lien-card-name">Info-Assurance (FCSA)</span>
                     <span class="lien-card-desc">Vérifier l'historique des sinistres d'une propriété</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
@@ -395,47 +539,105 @@
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
+            <a href="https://www.garantiegcr.com/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🏡</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Garantie GCR</span>
+                    <span class="lien-card-desc">Garantie obligatoire pour les constructions résidentielles neuves</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.ibc.ca/fr" target="_blank" class="lien-card">
+                <div class="lien-card-icon">☂️</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Bureau d'assurance (BAC)</span>
+                    <span class="lien-card-desc">Conseils officiels sur l'assurance habitation au Canada</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
         </div>
 
-        <!-- OUTILS GOUVERNEMENTAUX -->
+        <!-- TERRITOIRE, ENVIRONNEMENT & MUNICIPALITÉS -->
         <div class="liens-category-header">
-            <span class="liens-category-icon">🛠️</span>
-            <h2 class="liens-category-title">Outils & Fiscalité</h2>
+            <span class="liens-category-icon">🗺️</span>
+            <h2 class="liens-category-title">Territoire, Environnement & Municipalités</h2>
             <div class="liens-category-line"></div>
         </div>
 
         <div class="liens-grid">
-            <a href="https://www.quebec.ca/habitation/achat-vente-propriete/droits-mutation-immobiliere" target="_blank" class="lien-card">
-                <div class="lien-card-icon">💵</div>
+            <a href="https://www.quebec.ca/habitation-territoire/evaluation-fonciere/consulter-role-evaluation-fonciere" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🏘️</div>
                 <div class="lien-card-text">
-                    <span class="lien-card-name">Taxe de Bienvenue</span>
-                    <span class="lien-card-desc">Guide officiel sur les droits de mutation</span>
+                    <span class="lien-card-name">Rôle d'évaluation foncière</span>
+                    <span class="lien-card-desc">Consulter l'évaluation municipale d'une propriété au Québec</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
-            <a href="https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/reer-regimes-lies/regime-accession-a-la-propriete.html"
+            <a href="https://geoinondations.gouv.qc.ca/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🌊</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Géo-Inondations (Info-Crue)</span>
+                    <span class="lien-card-desc">Cartographie officielle des zones inondables au Québec</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.canada.ca/fr/sante-canada/sujets/radon.html" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🧪</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Santé Canada — Radon</span>
+                    <span class="lien-card-desc">Guide officiel sur le dépistage du radon résidentiel</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.walkscore.com/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🚶</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Walk Score</span>
+                    <span class="lien-card-desc">Indice de marche, pistes cyclables et transport d'un quartier</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+        </div>
+
+        <!-- SERVICES PUBLICS -->
+        <div class="liens-category-header">
+            <span class="liens-category-icon">⚡</span>
+            <h2 class="liens-category-title">Services Publics & Déménagement</h2>
+            <div class="liens-category-line"></div>
+        </div>
+
+        <div class="liens-grid">
+            <a href="https://www.hydroquebec.com/residentiel/" target="_blank" class="lien-card">
+                <div class="lien-card-icon">💡</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Hydro-Québec</span>
+                    <span class="lien-card-desc">Transfert de compte & branchement électrique</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.energir.com/residentiel" target="_blank" class="lien-card">
+                <div class="lien-card-icon">🔥</div>
+                <div class="lien-card-text">
+                    <span class="lien-card-name">Énergir</span>
+                    <span class="lien-card-desc">Activation du service de gaz naturel</span>
+                </div>
+                <span class="lien-card-arrow">→</span>
+            </a>
+            <a href="https://www.quebec.ca/trouver-ressource/formulaires/services-quebec/changement-adresse"
                 target="_blank" class="lien-card">
-                <div class="lien-card-icon">💰</div>
+                <div class="lien-card-icon">🏛️</div>
                 <div class="lien-card-text">
-                    <span class="lien-card-name">RAP</span>
-                    <span class="lien-card-desc">Regime d'Accession à la Propriété (REER)</span>
+                    <span class="lien-card-name">SQCA</span>
+                    <span class="lien-card-desc">Service Québécois de Changement d'Adresse (Gouv)</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
-            <a href="https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/compte-epargne-libre-impot-achat-premiere-propriete.html"
+            <a href="https://www.canadapost-postescanada.ca/cpc/fr/particuliers/recevoir/gerer-courrier/reacheminement-du-courrier.page"
                 target="_blank" class="lien-card">
-                <div class="lien-card-icon">🏦</div>
+                <div class="lien-card-icon">📬</div>
                 <div class="lien-card-text">
-                    <span class="lien-card-name">CELIAPP</span>
-                    <span class="lien-card-desc">Compte d'épargne libre d'impôt — 1ère Habitation</span>
-                </div>
-                <span class="lien-card-arrow">→</span>
-            </a>
-            <a href="https://transitionenergetique.gouv.qc.ca/residentiel/programmes/renoclimat" target="_blank" class="lien-card">
-                <div class="lien-card-icon">🌿</div>
-                <div class="lien-card-text">
-                    <span class="lien-card-name">Rénoclimat</span>
-                    <span class="lien-card-desc">Subventions pour efficacité énergétique</span>
+                    <span class="lien-card-name">Postes Canada</span>
+                    <span class="lien-card-desc">Réacheminement du courrier officiel</span>
                 </div>
                 <span class="lien-card-arrow">→</span>
             </a>
