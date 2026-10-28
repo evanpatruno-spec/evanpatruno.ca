@@ -744,16 +744,16 @@ INSTRUCTIONS:
         .ready-cta-section .hero-btn,
         .guide-magnet .hero-btn,
         .guide-magnet .guide-btn {
-            width: 100% !important;
+            width: fit-content !important;
             max-width: 100% !important;
             min-width: 0 !important;
-            padding: 14px 16px !important;
-            font-size: 0.84rem !important;
-            letter-spacing: 0.6px !important;
-            white-space: normal !important;
-            line-height: 1.35 !important;
+            padding: 13px 22px !important;
+            font-size: 0.8rem !important;
+            letter-spacing: 0.5px !important;
+            white-space: nowrap !important;
+            line-height: 1.3 !important;
             border-radius: 999px !important;
-            margin-bottom: 0 !important;
+            margin: 0 auto !important;
             box-sizing: border-box !important;
         }
 
@@ -949,6 +949,47 @@ INSTRUCTIONS:
             filter: none !important;
             transition: none !important;
         }
+    }
+    /* 11. TYPOGRAPHY BALANCING, ANTI-ORPHAN & STEP TITLE CONTRAST */
+    h1, h2, h3, h4,
+    .evaluation-title, .alert-title,
+    .section-subtitle,
+    .ready-cta-section h2, .guide-magnet h2,
+    .infographic-section h2, .glossary-section h2 {
+        text-wrap: balance !important;
+    }
+    p, li,
+    .booking-benefit span,
+    .checklist-item span,
+    .rev-text,
+    .evaluation-desc, .alert-desc {
+        text-wrap: pretty !important;
+    }
+    .process-step h4, .process-step h3 {
+        color: #ffffff !important;
+        font-family: 'Outfit', sans-serif !important;
+        font-size: 1.25rem !important;
+        font-weight: 700 !important;
+        margin-top: 6px !important;
+        margin-bottom: 8px !important;
+    }
+    .process-step p {
+        text-wrap: balance !important;
+        max-width: 280px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        color: rgba(255, 255, 255, 0.82) !important;
+    }
+    @media (max-width: 768px) {
+        .infographic-section h2,
+        .glossary-section h2,
+        .seller-lp-section h2,
+        .buyer-lp-section h2,
+        .investor-lp-section h2 {
+            font-size: clamp(1.5rem, 5.6vw, 1.95rem) !important;
+            line-height: 1.22 !important;
+            padding: 0 6px !important;
+        }
     }</style>
 
 <script>
@@ -1000,6 +1041,30 @@ INSTRUCTIONS:
     // GLOBAL MOTION & SCROLL ANIMATION ENGINE (Scroll Reveal, Stagger, Count-Up, Sticky Header)
     (function () {
         function initMotionEngine() {
+            // 0. French Punctuation & Anti-Orphan Word Binder
+            const textTargets = document.querySelectorAll('h1, h2, h3, h4, p, li, a, button, .booking-benefit span, .section-subtitle');
+            textTargets.forEach(el => {
+                const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+                const nodes = [];
+                let n;
+                while ((n = walker.nextNode())) nodes.push(n);
+                nodes.forEach(textNode => {
+                    let v = textNode.nodeValue;
+                    if (!v || !v.trim()) return;
+                    // Bind spaces before French punctuation (?, !, :, ;, », %, $) and trailing icons/arrows (→, ⚡, 🏠, 🔔, 📈, 🚀, 📥)
+                    v = v.replace(/\s+([?!:;»%$→⚡🏠🔔📈🚀📥])/g, '\u00A0$1');
+                    textNode.nodeValue = v;
+                });
+                // Glue last two words in headings, short paragraphs, and bullet items so a single short word never wraps alone
+                if (el.matches('h1, h2, h3, h4, .booking-benefit span, .process-step p, .ready-cta-section p, .guide-magnet p') && nodes.length > 0) {
+                    const lastNode = nodes[nodes.length - 1];
+                    const lv = lastNode.nodeValue;
+                    if (lv && lv.trim().length > 0) {
+                        lastNode.nodeValue = lv.replace(/\s+(\S{1,11}\s*)$/, '\u00A0$1');
+                    }
+                }
+            });
+
             // 1. Sticky Glass Header on Scroll
             const header = document.querySelector('.theme-header');
             if (header) {

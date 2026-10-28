@@ -412,19 +412,44 @@
     }
 
     @media (max-width: 768px) {
+        .booking-section {
+            padding: 35px 8px !important;
+        }
         .booking-card {
             flex-direction: column;
-            padding: 40px 25px;
+            padding: 28px 18px !important;
             text-align: center;
+            gap: 24px !important;
+            border-radius: 26px !important;
         }
-
         .booking-content h2 {
-            font-size: 2rem;
+            font-size: 1.65rem !important;
+            text-wrap: balance;
         }
-
+        .booking-content p {
+            font-size: 0.98rem !important;
+            margin-bottom: 20px !important;
+            text-wrap: pretty;
+        }
         .booking-benefit {
-            justify-content: center;
-            text-align: left;
+            justify-content: flex-start !important;
+            text-align: left !important;
+            gap: 10px !important;
+            margin-bottom: 12px !important;
+            font-size: 0.9rem !important;
+            line-height: 1.4 !important;
+        }
+        .booking-cta-btn {
+            padding: 14px 24px !important;
+            font-size: 0.85rem !important;
+            white-space: nowrap !important;
+            width: fit-content !important;
+            max-width: 100% !important;
+            margin: 18px auto 0 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 6px !important;
         }
     }
 
@@ -798,19 +823,21 @@ document.addEventListener("DOMContentLoaded", async function() {
     .rev-info span { color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; }
     .google-icon { position: absolute; top: 30px; right: 30px; opacity: 0.2; width: 25px; }
     @media (max-width: 768px) {
-        .rev-container { padding: 0 20px; }
+        .rev-section { padding: 45px 6px !important; }
+        .rev-container { padding: 0 8px !important; }
         .rev-track-container { 
-            gap: 15px; 
-            padding: 10px 20px 30px; 
-            scroll-padding: 20px;
+            gap: 14px; 
+            padding: 10px 12px 26px; 
+            scroll-padding: 12px;
         }
         .rev-card { 
-            flex: 0 0 calc(100vw - 80px); /* Slightly narrower to prevent edge clipping */
-            padding: 25px; 
+            flex: 0 0 calc(100vw - 52px);
+            padding: 24px 20px; 
             margin: 0;
             box-sizing: border-box;
         }
-        .rev-header h2 { font-size: 2rem; }
+        .rev-info h4 { font-size: 1rem; white-space: nowrap; }
+        .rev-header h2 { font-size: 1.75rem; text-wrap: balance; }
         .rev-nav { display: none; }
     }
 </style>
@@ -918,10 +945,10 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         <div style="text-align: center; margin-top: 30px;">
             <a href="https://g.page/r/CdypKbg57LonEAE" target="_blank"
-                style="display: inline-block; padding: 12px 30px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; color: white; text-decoration: none; font-weight: 600; transition: 0.3s;"
+                style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap; width: fit-content; max-width: 100%; padding: 12px 24px; font-size: 0.9rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; color: white; text-decoration: none; font-weight: 600; transition: 0.3s; box-sizing: border-box;"
                 onmouseover="this.style.background='white'; this.style.color='#1e0a19';"
                 onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='white';">
-                Voir tous mes avis sur Google →
+                Voir tous mes avis sur Google&nbsp;→
             </a>
         </div>
     </div>
@@ -942,7 +969,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     <div class="glow-aura" style="top: 50%; left: 50%; opacity: 0.2;"></div>
     <div class="booking-card">
         <div class="booking-content">
-            <h2>Prêt à lancer votre projet avec succès ?</h2>
+            <h2>Prêt à lancer votre projet avec succès&nbsp;?</h2>
             <p style="color: rgba(255,255,255,0.7); font-size: 1.2rem; margin-bottom: 30px;">
                 Évitez les chassés-croisés téléphoniques. Réservez votre consultation stratégique gratuite de 15 minutes
                 dès maintenant.
@@ -957,7 +984,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 <i>✦</i> <span>Expertise Immobilière & Hypothécaire combinée</span>
             </div>
             <a href="https://calendar.app.google/An5sXWPe3kvKiZjo8" target="_blank"
-                class="booking-cta-btn btn-shimmer">Réserver mon créneau →</a>
+                class="booking-cta-btn btn-shimmer">Réserver mon créneau&nbsp;→</a>
         </div>
         <div style="flex: 0 0 200px; text-align: center; display: flex; flex-direction: column; align-items: center;">
             <div
