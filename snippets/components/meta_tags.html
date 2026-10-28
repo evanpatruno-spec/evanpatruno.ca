@@ -214,8 +214,8 @@ INSTRUCTIONS:
         }
     }
 
-    p,
-    img,
+    .zpblog-post-content p,
+    .zpblog-post-content img,
     .theme-blog-author-cont,
     .zpcomment-form-container {
         animation: epReveal 1s cubic-bezier(0.4, 0, 0.2, 1) both;
@@ -796,6 +796,159 @@ INSTRUCTIONS:
             box-sizing: border-box !important;
             padding: 10px 14px !important;
         }
+    }
+    /* 10. GLOBAL SCROLL REVEAL, STAGGER, COUNTERS, HERO CHOREOGRAPHY & SHIMMER ENGINE */
+    #ep-reading-progress {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: 3px !important;
+        width: 0%;
+        background: linear-gradient(90deg, #873276 0%, #d4af37 60%, #f3e5ab 100%) !important;
+        z-index: 99999 !important;
+        box-shadow: 0 0 12px rgba(212, 175, 55, 0.65) !important;
+        transition: width 0.1s ease-out !important;
+        pointer-events: none !important;
+    }
+
+    /* Sticky Glass Cockpit Header on Scroll */
+    .theme-header {
+        transition: background-color 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease, border-color 0.35s ease !important;
+    }
+    .theme-header.ep-header-scrolled {
+        background-color: rgba(20, 5, 17, 0.9) !important;
+        backdrop-filter: blur(18px) !important;
+        -webkit-backdrop-filter: blur(18px) !important;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55) !important;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
+    }
+    .theme-header.ep-header-scrolled .theme-logo-parent img[data-zs-logo] {
+        height: 64px !important;
+    }
+
+    /* Hero 4-Stage Entrance Choreography */
+    @keyframes epHeroDrop {
+        from { opacity: 0; transform: translate3d(0, -18px, 0) scale(0.95); }
+        to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+    }
+    @keyframes epHeroRise {
+        from { opacity: 0; transform: translate3d(0, 28px, 0); filter: blur(6px); }
+        to { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
+    }
+    @keyframes epHeroPop {
+        from { opacity: 0; transform: translate3d(0, 20px, 0) scale(0.94); }
+        to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+    }
+
+    .ep-hero-eyebrow {
+        animation: epHeroDrop 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both !important;
+    }
+    .hero-about h1, .hero-amb h1, .hero-buyer h1, .hero-seller h1,
+    .hero-investor h1, .hero-commercial h1, .hero-immob h1,
+    .hero-mortgage h1, .hero-prequal h1, .hero-finance h1,
+    .hero-renewal h1, .hero-contact h1, .faq-hero h1,
+    .liens-hero h1, .conditions-hero h1, .privacy-hero h1, .listing-hero h1, .city-hero h1,
+    .home-hero h1 {
+        animation: epHeroRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.16s both !important;
+    }
+    .hero-about p, .hero-amb p, .hero-buyer p, .hero-seller p,
+    .hero-investor p, .hero-commercial p, .hero-immob p,
+    .hero-mortgage p, .hero-prequal p, .hero-finance p,
+    .hero-renewal p, .hero-contact p, .faq-hero p,
+    .liens-hero p, .conditions-hero p, .privacy-hero p, .listing-hero p, .city-hero p,
+    .home-hero p {
+        animation: epHeroRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both !important;
+    }
+    .hero-about .hero-btn, .hero-amb .hero-btn, .hero-buyer .hero-btn,
+    .hero-seller .hero-btn, .hero-investor .hero-btn, .hero-commercial .hero-btn,
+    .hero-immob .hero-btn, .hero-mortgage .hero-btn, .hero-prequal .hero-btn,
+    .hero-finance .hero-btn, .hero-renewal .hero-btn, .hero-contact .hero-btn,
+    .home-hero .hero-cta-group, .direct-call-hero {
+        animation: epHeroPop 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.40s both !important;
+    }
+
+    /* Scroll-Triggered Directional Reveal System */
+    .ep-anim {
+        opacity: 0;
+        will-change: transform, opacity, filter;
+        transition:
+            opacity 0.78s cubic-bezier(0.22, 1, 0.36, 1) var(--ep-delay, 0ms),
+            transform 0.78s cubic-bezier(0.22, 1, 0.36, 1) var(--ep-delay, 0ms),
+            filter 0.78s cubic-bezier(0.22, 1, 0.36, 1) var(--ep-delay, 0ms);
+    }
+    .ep-anim-up {
+        transform: translate3d(0, 36px, 0);
+        filter: blur(4px);
+    }
+    .ep-anim-left {
+        transform: translate3d(-42px, 0, 0);
+        filter: blur(4px);
+    }
+    .ep-anim-right {
+        transform: translate3d(42px, 0, 0);
+        filter: blur(4px);
+    }
+    .ep-anim-scale {
+        transform: translate3d(0, 24px, 0) scale(0.95);
+        filter: blur(4px);
+    }
+    .ep-anim.ep-in-view {
+        opacity: 1 !important;
+        transform: translate3d(0, 0, 0) scale(1) !important;
+        filter: blur(0) !important;
+    }
+
+    /* Progressive 4-Step Timeline Line Drawing */
+    .process-step::after {
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+    }
+    .process-step.ep-in-view::after {
+        transform: scaleX(1);
+    }
+
+    /* Continuous Subtle Levitation for Medallions & Icons */
+    @keyframes epFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+    .service-icon, .hub-icon, .step-icon-circle, .value-icon, .part-icon, .amb-pillar-icon {
+        animation: epFloat 3.6s ease-in-out infinite;
+    }
+
+    /* Periodic Gold Shimmer Sweep on Primary CTA Buttons */
+    @keyframes epShimmerSweep {
+        0%, 65% { left: -130%; }
+        100% { left: 140%; }
+    }
+    .hero-btn, .eval-btn, .alert-btn, .prequal-btn, .finance-btn,
+    .renewal-btn, .commercial-btn, .about-gold-btn, .booking-cta-btn {
+        position: relative;
+        overflow: hidden;
+    }
+    .hero-btn::after, .eval-btn::after, .alert-btn::after, .prequal-btn::after,
+    .finance-btn::after, .renewal-btn::after, .commercial-btn::after,
+    .about-gold-btn::after, .booking-cta-btn::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -130%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.32) 50%, transparent 80%);
+        transform: skewX(-20deg);
+        animation: epShimmerSweep 5s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .ep-anim {
+            opacity: 1 !important;
+            transform: none !important;
+            filter: none !important;
+            transition: none !important;
+        }
     }</style>
 
 <script>
@@ -843,6 +996,185 @@ INSTRUCTIONS:
     })();
 </script>
 
+<script>
+    // GLOBAL MOTION & SCROLL ANIMATION ENGINE (Scroll Reveal, Stagger, Count-Up, Sticky Header)
+    (function () {
+        function initMotionEngine() {
+            // 1. Sticky Glass Header on Scroll
+            const header = document.querySelector('.theme-header');
+            if (header) {
+                const onScrollHeader = () => {
+                    if (window.scrollY > 60) header.classList.add('ep-header-scrolled');
+                    else header.classList.remove('ep-header-scrolled');
+                };
+                window.addEventListener('scroll', onScrollHeader, { passive: true });
+                onScrollHeader();
+            }
+
+            // 2. Categorized selectors for directional scroll reveal
+            const upSelectors = [
+                'section h2',
+                'section .section-subtitle',
+                '.cat-header',
+                '.rev-header',
+                '.market-dashboard',
+                '.baro-header',
+                '.glossary-section > div > h2',
+                '.infographic-section h2'
+            ];
+            const leftSelectors = [
+                '.about-photo-card',
+                '.evaluation-info',
+                '.alert-info',
+                '.finance-info',
+                '.prequal-info',
+                '.renewal-info',
+                '.commercial-info',
+                '.investor-info',
+                '.hero-photo-container'
+            ];
+            const rightSelectors = [
+                '.about-card',
+                '.evaluation-form-card',
+                '.alert-form-card',
+                '.finance-form-card',
+                '.prequal-form-card',
+                '.renewal-form-card',
+                '.commercial-form-card',
+                '.investor-form-card',
+                '.contact-form-card',
+                '.hero-text-side'
+            ];
+            const scaleSelectors = [
+                '.ready-cta-section',
+                '.guide-magnet',
+                '.about-vip-cta',
+                '.booking-card',
+                '.amb-form-card',
+                '.compliance-trust-section'
+            ];
+            const staggerContainers = [
+                { parent: '.services-grid', child: '.service-card' },
+                { parent: '.hub-grid', child: '.hub-card' },
+                { parent: '.process-grid', child: '.process-step' },
+                { parent: '.values-grid', child: '.value-card' },
+                { parent: '.expertise-grid', child: '.expertise-item' },
+                { parent: '.network-grid', child: '.partner-type-card' },
+                { parent: '.about-stats-strip', child: '.about-stat-box' },
+                { parent: '.geo-grid', child: '.geo-card' },
+                { parent: '.glossary-grid', child: '.glossary-card' },
+                { parent: '.checklist-grid', child: '.checklist-box' },
+                { parent: '.resources-grid', child: '.resource-card' },
+                { parent: '.amb-pillars', child: '.pillar-card' },
+                { parent: '.contact-grid', child: '.info-card' },
+                { parent: '.rev-track-container', child: '.rev-card' },
+                { parent: '.faq-container, .faq-list', child: '.faq-item' }
+            ];
+
+            const observedElements = new Set();
+
+            function registerAnim(el, variantClass, delayMs) {
+                if (!el || observedElements.has(el)) return;
+                // Do not hide elements inside modals
+                if (el.closest('.modal-overlay')) return;
+                el.classList.add('ep-anim', variantClass);
+                if (delayMs) el.style.setProperty('--ep-delay', delayMs + 'ms');
+                observedElements.add(el);
+            }
+
+            // Register staggered grids first so their children get cascade delays
+            staggerContainers.forEach(({ parent, child }) => {
+                document.querySelectorAll(parent).forEach(grid => {
+                    const items = grid.querySelectorAll(child);
+                    items.forEach((item, idx) => {
+                        const colDelay = (idx % 4) * 95;
+                        registerAnim(item, 'ep-anim-up', colDelay);
+                    });
+                });
+            });
+
+            // Register Left / Right split columns
+            document.querySelectorAll(leftSelectors.join(',')).forEach(el => registerAnim(el, 'ep-anim-left', 0));
+            document.querySelectorAll(rightSelectors.join(',')).forEach(el => registerAnim(el, 'ep-anim-right', 90));
+
+            // Register Scale CTA blocks
+            document.querySelectorAll(scaleSelectors.join(',')).forEach(el => registerAnim(el, 'ep-anim-scale', 0));
+
+            // Register Headings & Section titles
+            document.querySelectorAll(upSelectors.join(',')).forEach(el => registerAnim(el, 'ep-anim-up', 0));
+
+            // Create IntersectionObserver for Scroll Reveal
+            if ('IntersectionObserver' in window) {
+                const revealObs = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('ep-in-view');
+                            revealObs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -35px 0px' });
+
+                observedElements.forEach(el => revealObs.observe(el));
+            } else {
+                observedElements.forEach(el => el.classList.add('ep-in-view'));
+            }
+
+            // Safety fallback: if an element is already above the fold, reveal it immediately
+            setTimeout(() => {
+                observedElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight * 0.92) {
+                        el.classList.add('ep-in-view');
+                    }
+                });
+            }, 120);
+
+            // 3. Animated Number Counters (Count-Up on Scroll)
+            const counterEls = document.querySelectorAll('.about-stat-num, .stat-number, [data-count-up]');
+            if (counterEls.length && 'IntersectionObserver' in window) {
+                const countObs = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        const el = entry.target;
+                        countObs.unobserve(el);
+                        const raw = (el.getAttribute('data-target') || el.textContent || '').trim();
+                        const match = raw.match(/^([^0-9]*)([0-9]+(?:[.,][0-9]+)?)(.*)$/);
+                        if (!match) return;
+                        const prefix = match[1] || '';
+                        const targetNum = parseFloat(match[2].replace(',', '.'));
+                        const suffix = match[3] || (el.classList.contains('stat-number') ? (targetNum > 90 && targetNum < 100 ? '%' : '+') : '');
+                        const isFloat = match[2].includes('.') || match[2].includes(',');
+                        const duration = 1650;
+                        const startTime = performance.now();
+
+                        function tick(now) {
+                            const progress = Math.min((now - startTime) / duration, 1);
+                            // easeOutQuart
+                            const eased = 1 - Math.pow(1 - progress, 4);
+                            const current = targetNum * eased;
+                            const formatted = isFloat ? current.toFixed(1) : Math.round(current).toString();
+                            el.textContent = prefix + formatted + suffix;
+                            if (progress < 1) {
+                                requestAnimationFrame(tick);
+                            } else {
+                                el.textContent = prefix + match[2] + suffix;
+                            }
+                        }
+                        requestAnimationFrame(tick);
+                    });
+                }, { threshold: 0.35 });
+
+                counterEls.forEach(el => countObs.observe(el));
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMotionEngine);
+        } else {
+            initMotionEngine();
+        }
+    })();
+</script>
 
 <!-- PWA & MOBILE OPTIMIZATION -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
