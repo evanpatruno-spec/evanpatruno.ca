@@ -383,16 +383,29 @@
 
     @media (max-width: 768px) {
         .hero-about { 
-            padding: 44px 24px 38px !important; 
-            margin: 15px 10px 0 !important;
-            min-height: 300px !important;
-            border-radius: 30px !important;
+            padding: 32px 16px 28px !important; 
+            margin: 8px 4px 0 !important;
+            min-height: auto !important;
+            border-radius: 24px !important;
         }
-        .hero-about h1 { font-size: 2.2rem; }
-        .about-stats-strip { grid-template-columns: 1fr 1fr; }
+        .hero-about h1 { font-size: 1.85rem; }
+        .about-container { padding: 0 6px !important; }
+        .about-section, .values-section, .network-section { padding: 45px 6px !important; }
+        .about-stats-strip { grid-template-columns: 1fr 1fr; gap: 12px; }
+        .about-stat-box { padding: 20px 12px; }
+        .about-stat-num { font-size: 2rem; }
         .values-grid { grid-template-columns: 1fr; }
-        .expertise-grid { grid-template-columns: 1fr; }
-        .about-card { padding: 35px 20px; }
+        .expertise-grid { grid-template-columns: 1fr; gap: 16px; }
+        .about-card { padding: 24px 16px !important; border-radius: 22px; }
+        .about-card h2 { font-size: 1.65rem; }
+        .about-card p { font-size: 0.98rem; line-height: 1.65; }
+        .about-cred-row { flex-direction: column; align-items: stretch; gap: 10px; }
+        .about-cred-badge { width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; font-size: 0.85rem; }
+        .expertise-item { padding: 20px 16px !important; border-radius: 18px; }
+        .value-card, .partner-type-card { padding: 26px 18px; border-radius: 20px; }
+        .about-vip-cta { padding: 32px 18px; border-radius: 24px; margin: 24px 0; }
+        .about-vip-cta h3 { font-size: 1.5rem; }
+        .about-gold-btn { width: 100%; box-sizing: border-box; padding: 14px 20px; font-size: 0.95rem; text-align: center; }
     }
 </style>
 
