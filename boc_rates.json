@@ -1,9 +1,9 @@
 {
-    "rate": 2.25,
-    "date": "2 septembre 2026",
-    "status": "a maintenu",
-    "last_check": "2026-10-27 18:33",
-    "next_announcement": "28 octobre 2026",
-    "next_date_iso": "2026-10-28",
-    "last_date_iso": "2026-09-02"
+    "rate": 2.5,
+    "date": "28 octobre 2026",
+    "status": "a augmenté",
+    "last_check": "2026-11-06 11:44",
+    "next_announcement": "9 décembre 2026",
+    "next_date_iso": "2026-12-09",
+    "last_date_iso": "2026-10-28"
 }

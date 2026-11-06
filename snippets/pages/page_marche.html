@@ -1268,12 +1268,12 @@
 </div>
 
 <script>
-    window.currentBocRate = 2.25;
+    window.currentBocRate = 2.50;
 
     (function () {
         const NEWS_BIN = 'https://api.jsonbin.io/v3/b/69e6d40c856a6821895644dc/latest';
         const BOC_BIN = 'https://api.jsonbin.io/v3/b/69e6d40f856a6821895644ed/latest';
-        const BOC_VALET = 'https://www.bankofcanada.ca/valet/observations/V39079/json?recent=5';
+        const BOC_VALET = 'https://www.bankofcanada.ca/valet/observations/V39079/json?recent=30';
 
         const BOC_SCHEDULE = [
             '2026-01-28', '2026-03-18', '2026-04-29', '2026-06-10',
@@ -1349,20 +1349,25 @@
             try {
                 const res = await fetch(BOC_VALET);
                 const json = await res.json();
-                const obs = json.observations || [];
+                const obs = (json.observations || []).slice().sort((a, b) => (a.d || '').localeCompare(b.d || ''));
                 if (!obs.length) return;
                 const latest = obs[obs.length - 1];
-                const prev = obs.length > 1 ? obs[obs.length - 2] : latest;
-                const rate = parseFloat(latest.V39079.v);
-                const prevR = parseFloat(prev.V39079.v);
-                const status = rate > prevR ? 'a augmenté' : rate < prevR ? 'a diminué' : 'a maintenu';
                 const todayIso = new Date().toLocaleDateString('en-CA');
                 const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
                 let nextIso = '', nextFr = '—', lastIso = '';
                 for (const d of BOC_SCHEDULE) {
-                    if (d >= todayIso && !nextIso) { nextIso = d; }
+                    if (d > todayIso && !nextIso) { nextIso = d; }
                     if (d <= todayIso) { lastIso = d; }
                 }
+                const rate = parseFloat(latest.V39079.v);
+                let prevR = rate;
+                for (let i = obs.length - 1; i >= 0; i--) {
+                    if (obs[i].d < (lastIso || latest.d)) {
+                        prevR = parseFloat(obs[i].V39079.v);
+                        break;
+                    }
+                }
+                const status = rate > prevR ? 'a augmenté' : rate < prevR ? 'a diminué' : 'a maintenu';
                 if (nextIso) {
                     const dp = new Date(nextIso + 'T12:00:00');
                     nextFr = `${dp.getDate()} ${months[dp.getMonth()]} ${dp.getFullYear()}`;
@@ -1431,7 +1436,7 @@
         }
 
         function renderBOC(d) {
-            const rate = parseFloat(d.rate) || 2.25;
+            const rate = parseFloat(d.rate) || 2.50;
             window.currentBocRate = rate;
             document.getElementById('bocRateVal').textContent = rate.toFixed(2).replace('.', ',');
             const status = (d.status || 'a maintenu').toLowerCase();
@@ -1535,7 +1540,7 @@
 
         const priceNow = parseFloat(priceEl.value) || 0;
         const months = parseInt(monthsEl.value) || 12;
-        const bocRate = typeof window.currentBocRate === 'number' ? window.currentBocRate : 2.25;
+        const bocRate = typeof window.currentBocRate === 'number' ? window.currentBocRate : 2.50;
         const rateNow = Math.max(3.79, +(bocRate + 2.15).toFixed(2));
         const rateFuture = Math.max(3.29, +(rateNow - 0.50).toFixed(2));
         const appreciationAnnuelle = 0.05;

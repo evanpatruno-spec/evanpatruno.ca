@@ -463,10 +463,11 @@ def get_boc_rate():
         url = "https://www.bankofcanada.ca/valet/observations/V39079/json?recent=1"
         res = requests.get(url, timeout=10)
         data = res.json()
-        rate = data.get('observations', [{}])[-1].get('V39079', {}).get('v', '2.25')
+        obs = sorted(data.get('observations', []), key=lambda x: x.get('d', ''))
+        rate = obs[-1].get('V39079', {}).get('v', '2.50') if obs else '2.50'
         return f"{rate}%"
     except:
-        return "2.25%"
+        return "2.50%"
 
 def main():
     all_news = []

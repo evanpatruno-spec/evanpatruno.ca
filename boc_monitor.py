@@ -38,6 +38,10 @@ def get_boc_rates():
         if not observations:
             return None
 
+        # L'API Valet avec ?recent=N retourne les observations de la plus récente à la plus ancienne :
+        # on trie par date croissante pour que observations[-1] soit toujours la plus récente.
+        observations.sort(key=lambda x: x.get('d', ''))
+
         latest = observations[-1]
         rate = float(latest['V39079']['v'])
 
