@@ -429,7 +429,7 @@ AVEC ISOLATION DES STYLES POUR ÉVITER LES BUGS SUR LE BLOG
                     <div
                         style="display: inline-block; padding: 8px 16px; background: rgba(135, 50, 118, 0.3); border: 1px solid var(--primary); border-radius: 50px; font-size: 0.75rem; font-weight: 800; color: var(--primary-light); margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">
                         Expertise Immobilière & Hypothécaire</div>
-                    <h1 id="hero-title">Chargement...</h1>
+                    <h1 id="hero-title">Courtier Immobilier &amp; Hypothécaire — Rive-Sud, Laval &amp; Grand Montréal</h1>
                     <p id="hero-desc"
                         style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 700px; margin: 0 auto 40px; line-height: 1.5;">
                     </p>
@@ -720,7 +720,8 @@ AVEC ISOLATION DES STYLES POUR ÉVITER LES BUGS SUR LE BLOG
         try {
             const resProp = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`);
             const jsonProp = await resProp.json();
-            const filtered = jsonProp.record.filter(p => {
+            const propArray = Array.isArray(jsonProp.record) ? jsonProp.record : (jsonProp.record?.properties || []);
+            const filtered = propArray.filter(p => {
                 const pCity = (p.city || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                 const tCity = TARGET_CITY.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                 return pCity.includes(tCity);
@@ -729,9 +730,10 @@ AVEC ISOLATION DES STYLES POUR ÉVITER LES BUGS SUR LE BLOG
 
             const resNews = await fetch(`https://api.jsonbin.io/v3/b/${NEWS_BIN_ID}/latest`);
             const jsonNews = await resNews.json();
+            const newsArray = Array.isArray(jsonNews.record) ? jsonNews.record : (jsonNews.record?.news || []);
 
             // FILTRE INTELLIGENT NEWS
-            let newsToDisplay = jsonNews.record.filter(n => {
+            let newsToDisplay = newsArray.filter(n => {
                 if (!n.cities) return false;
                 const normalizedTarget = TARGET_CITY.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                 return n.cities.some(c => c.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(normalizedTarget));
@@ -739,7 +741,7 @@ AVEC ISOLATION DES STYLES POUR ÉVITER LES BUGS SUR LE BLOG
 
             let isLocal = true;
             if (newsToDisplay.length === 0) {
-                newsToDisplay = jsonNews.record.slice(0, 3);
+                newsToDisplay = newsArray.slice(0, 3);
                 isLocal = false;
             }
 
