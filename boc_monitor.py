@@ -6,7 +6,7 @@ from datetime import datetime
 # Configuration JSONBin
 BIN_ID = "694462e7d0ea881f4032d140"
 BOC_BIN_ID = "69e6d40f856a6821895644ed"
-MASTER_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
+MASTER_KEY = os.getenv("JSONBIN_API_KEY", "").strip()
 
 MONTHS_FR = {
     "01": "janvier", "02": "février", "03": "mars", "04": "avril",
@@ -94,6 +94,9 @@ def get_boc_rates():
 
 def save_to_cloud(data):
     """Updates the BOC Bin with the latest rate data."""
+    if not MASTER_KEY:
+        print("[Attention] JSONBIN_API_KEY non défini — upload BOC ignoré.")
+        return
     url = f"https://api.jsonbin.io/v3/b/{BOC_BIN_ID}"
     headers = {
         "Content-Type": "application/json",

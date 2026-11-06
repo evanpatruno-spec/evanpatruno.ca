@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ep-portal-cache-v11';
+const CACHE_NAME = 'ep-portal-cache-v12';
 const ASSETS_TO_CACHE = [
   '/',
   '/mon-dossier.html',
@@ -84,7 +84,7 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   // Ignorer les requêtes Firebase Messaging (pour ne pas casser le push)
-  if (event.request.url.includes('fcm') || event.request.url.includes('googleapis')) {
+  if (event.request.method !== 'GET' || event.request.url.includes('/api/') || event.request.url.includes('fcm') || event.request.url.includes('googleapis')) {
     return;
   }
   event.respondWith(

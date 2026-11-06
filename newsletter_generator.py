@@ -8,7 +8,7 @@ from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 
 # CONFIGURATION
-API_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
+API_KEY = os.getenv("JSONBIN_API_KEY", "").strip()
 NEWS_BIN_ID = "69e6d40c856a6821895644dc"
 BOC_BIN_ID = "69e6d40f856a6821895644ed"
 BIN_ID_FILE = "newsletter_bin_id.txt"
@@ -186,7 +186,7 @@ def select_top_news(news_list, count=3):
 
 def fetch_unified_data():
     """Récupère les nouvelles et le taux BOC depuis le fichier local ou JSONBin."""
-    headers = {'X-Master-Key': API_KEY}
+    headers = {'X-Master-Key': API_KEY} if API_KEY else {}
     try:
         if os.path.exists('news.json'):
             with open('news.json', 'r', encoding='utf-8') as f:
@@ -287,10 +287,10 @@ def generate_newsletter_json(force_zoho=False, notify=False):
         market_temp = "Marché Prudent (Acheteurs)"
 
     # Liens personnalisés
-    booking_url = "https://calendar.app.google/a37T5exmNpFfBZ6SA"
+    booking_url = "https://calendar.app.google/NLQVyTxENHHFfzwW6"
     facebook_url = "https://www.facebook.com/evanpatrunocourtier/"
     instagram_url = "https://www.instagram.com/evanpatruno.immo/?hl=fr"
-    linkedin_url = "https://www.linkedin.com/in/evan-patruno/"
+    linkedin_url = "https://www.linkedin.com/in/evanpatruno"
 
     months_fr = {
         "1": "Janvier", "2": "Février", "3": "Mars", "4": "Avril",
@@ -410,6 +410,9 @@ def trigger_zoho_webhook(data):
 
 
 def update_jsonbin(data):
+    if not API_KEY:
+        print("[Attention] JSONBIN_API_KEY non défini — upload JSONBin ignoré.")
+        return HARDCODED_NEWSLETTER_BIN_ID
     headers = {
         'Content-Type': 'application/json',
         'X-Master-Key': API_KEY,

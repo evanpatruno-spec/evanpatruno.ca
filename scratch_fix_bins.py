@@ -1,7 +1,7 @@
 import requests
 import os
 
-API_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C"
+API_KEY = os.getenv("JSONBIN_API_KEY", "").strip()
 HEADERS = {
     "X-Master-Key": API_KEY,
     "Content-Type": "application/json"

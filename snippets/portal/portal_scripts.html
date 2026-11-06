@@ -2,7 +2,7 @@
     /**
      * PORTAL SCRIPTS v14.13 - FIX TIME DISPLAY & SYNC
      */
-    const API_URL = 'https://evanpatruno-ca.vercel.app/api/portal';
+    const API_URL = 'https://dossier.evanpatruno.ca/api/portal';
 
     function initPortal() {
         const code = localStorage.getItem('portal_code');
@@ -215,7 +215,7 @@
             const visitTime = v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite.replace(' ', 'T')).getTime() : 0;
             const isUnlocked = now > (visitTime + 1800000);
             const isCompleted = ["Terminée", "Effectuée"].includes(v.statut);
-            const safeLoc = (v.location || 'Lieu').split("'").join("\\'");
+            const safeLoc = String(v.location || 'Lieu').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, "\\'");
 
             const sCol = statusColors[v.statut] || 'rgba(255,255,255,0.1)';
             const sTxt = statusTextColors[v.statut] || '#fff';
@@ -477,7 +477,7 @@
 
             const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id');
             try {
-                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'rescheduleVisit', codePortal: c, phoneLast4: localStorage.getItem('portal_phone') || '', dealId: d, visitId: id, location: loc, newDateTime: getZohoDateTime(newDT) }) });
+                const res = await fetch('https://dossier.evanpatruno.ca/api/portal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'rescheduleVisit', codePortal: c, phoneLast4: localStorage.getItem('portal_phone') || '', dealId: d, visitId: id, location: loc, newDateTime: getZohoDateTime(newDT) }) });
                 const result = await res.json();
                 if (result.s) {
                     alert("✅ Visite reportée ! Evan a été notifié.");
@@ -768,7 +768,7 @@
                 }
             } else {
                 // Si on est sur Zoho, on redirige vers le domaine d'installation
-                const installUrl = `https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install&code=${code}`;
+                const installUrl = `https://dossier.evanpatruno.ca/mon-dossier.html?action=install&code=${code}`;
                 window.location.href = installUrl;
             }
         });
@@ -902,7 +902,7 @@
                 const phone = localStorage.getItem('portal_phone') || "";
 
                 console.log("6. Syncing with Zoho...");
-                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', {
+                const res = await fetch('https://dossier.evanpatruno.ca/api/portal', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ action: 'update_push_token', token, codePortal: code, phone })

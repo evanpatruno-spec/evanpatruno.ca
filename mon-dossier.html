@@ -557,7 +557,7 @@
     <!-- SPLASH SCREEN -->
     <div id="loadingSplash"
         style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#0a0508; z-index:999999; display:flex; align-items:center; justify-content:center; flex-direction:column; transition: opacity 0.5s ease;">
-        <img src="https://evanpatruno-ca.vercel.app/pwa-icon-192.png" alt="Evan Patruno Logo"
+        <img src="https://dossier.evanpatruno.ca/pwa-icon-192.png" alt="Evan Patruno Logo"
             style="width:120px; height:120px; border-radius:30px; animation: pulseLogo 2s infinite ease-in-out;">
         <div
             style="margin-top:25px; color:var(--dash-primary); font-family:'Outfit'; font-size:1rem; font-weight:800; letter-spacing: 2px;">
@@ -567,7 +567,7 @@
     <!-- CONNEXION -->
     <div class="portal-overlay" id="portalOverlay">
         <div class="login-card">
-            <img src="https://evanpatruno-ca.vercel.app/pwa-icon-192.png" alt="Evan Patruno Logo"
+            <img src="https://dossier.evanpatruno.ca/pwa-icon-192.png" alt="Evan Patruno Logo"
                 style="width:80px; height:80px; border-radius:20px; box-shadow: 0 0 25px rgba(135,50,118,0.8); display:block; margin: 0 auto 20px auto;">
             <div class="login-title">Mon Dossier Privé</div>
             <p class="login-subtitle">Accédez à votre espace client sécurisé.<br>Entrez votre Code Portail unique.</p>
@@ -579,7 +579,7 @@
                     <span>Ouvrir mon dossier →</span>
                 </button>
 
-                <a href="https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install" id="btnInstallPWA"
+                <a href="https://dossier.evanpatruno.ca/mon-dossier.html?action=install" id="btnInstallPWA"
                     style="text-decoration:none; display:block; text-align:center;">📲 Installer l'App sur mon écran</a>
             </div>
             <div class="login-security">🔒 Connexion chiffrée & sécurisée</div>
@@ -855,7 +855,7 @@
     <div class="portal-quick-menu">
         <div class="quick-menu-item active" data-section="secCockpit" onclick="toggleSection('secCockpit')">🏠</div>
         <div class="quick-menu-item" data-section="secPrequal" onclick="toggleSection('secPrequal')">📋</div>
-        <div class="quick-menu-item" data-section="secTimeline" data-section="secTimeline"
+        <div class="quick-menu-item" data-section="secTimeline"
             onclick="toggleSection('secTimeline')">⏳</div>
         <div class="quick-menu-item" data-section="secConciergeMLS" onclick="toggleSection('secConciergeMLS')">📄</div>
         <div class="quick-menu-item" data-section="secVisites" onclick="toggleSection('secVisites')">📅</div>
@@ -869,7 +869,7 @@
     /**
      * PORTAL SCRIPTS v14.13 - FIX TIME DISPLAY & SYNC
      */
-    const API_URL = 'https://evanpatruno-ca.vercel.app/api/portal';
+    const API_URL = 'https://dossier.evanpatruno.ca/api/portal';
 
     function initPortal() {
         const code = localStorage.getItem('portal_code');
@@ -1082,7 +1082,7 @@
             const visitTime = v.Date_heure_de_visite ? new Date(v.Date_heure_de_visite.replace(' ', 'T')).getTime() : 0;
             const isUnlocked = now > (visitTime + 1800000);
             const isCompleted = ["Terminée", "Effectuée"].includes(v.statut);
-            const safeLoc = (v.location || 'Lieu').split("'").join("\\'");
+            const safeLoc = String(v.location || 'Lieu').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, "\\'");
 
             const sCol = statusColors[v.statut] || 'rgba(255,255,255,0.1)';
             const sTxt = statusTextColors[v.statut] || '#fff';
@@ -1344,7 +1344,7 @@
 
             const c = localStorage.getItem('portal_code'), d = localStorage.getItem('portal_deal_id');
             try {
-                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'rescheduleVisit', codePortal: c, phoneLast4: localStorage.getItem('portal_phone') || '', dealId: d, visitId: id, location: loc, newDateTime: getZohoDateTime(newDT) }) });
+                const res = await fetch('https://dossier.evanpatruno.ca/api/portal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'rescheduleVisit', codePortal: c, phoneLast4: localStorage.getItem('portal_phone') || '', dealId: d, visitId: id, location: loc, newDateTime: getZohoDateTime(newDT) }) });
                 const result = await res.json();
                 if (result.s) {
                     alert("✅ Visite reportée ! Evan a été notifié.");
@@ -1635,7 +1635,7 @@
                 }
             } else {
                 // Si on est sur Zoho, on redirige vers le domaine d'installation
-                const installUrl = `https://evanpatruno-ca.vercel.app/mon-dossier.html?action=install&code=${code}`;
+                const installUrl = `https://dossier.evanpatruno.ca/mon-dossier.html?action=install&code=${code}`;
                 window.location.href = installUrl;
             }
         });
@@ -1769,7 +1769,7 @@
                 const phone = localStorage.getItem('portal_phone') || "";
 
                 console.log("6. Syncing with Zoho...");
-                const res = await fetch('https://evanpatruno-ca.vercel.app/api/portal', {
+                const res = await fetch('https://dossier.evanpatruno.ca/api/portal', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ action: 'update_push_token', token, codePortal: code, phone })
@@ -1806,16 +1806,5 @@
         });
     }
 </script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js').then(reg => {
-                    console.log('Service Worker registered', reg);
-                }).catch(err => {
-                    console.error('Service Worker registration failed', err);
-                });
-            });
-        }
-    </script>
 </body>
 </html>

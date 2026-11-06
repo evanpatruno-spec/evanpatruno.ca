@@ -1,7 +1,8 @@
 import requests
 import json
 
-MASTER_KEY = "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C"
+import os
+MASTER_KEY = os.getenv("JSONBIN_API_KEY", "").strip()
 
 def create_boc_bin():
     print("Création du Bin pour le Hub d'Information...")

@@ -8,7 +8,7 @@ import html
 from datetime import datetime
 
 # CONFIGURATION
-API_KEY = os.getenv("JSONBIN_API_KEY", "$2a$10$qH2mqKg0/uXrs6l8qpQZRO/9kH1FUMjgmAiElTwDvlE..n3DhG08C")
+API_KEY = os.getenv("JSONBIN_API_KEY", "").strip()
 # NOUS ALLONS CRÉER UN NOUVEAU BIN POUR LES NEWS OU UTILISER LE MÊME? 
 # POUR LE MOMENT, NOUS UTILISONS UN BIN DÉDIÉ AUX NEWS (PLUS PROPRE).
 BIN_ID_FILE = "news_bin_id.txt"
@@ -215,6 +215,9 @@ def fetch_feed_news(source_name, url):
         return []
 
 def update_jsonbin(data):
+    if not API_KEY:
+        print("[Attention] JSONBIN_API_KEY non défini — upload JSONBin ignoré.")
+        return HARDCODED_NEWS_BIN_ID
     headers = {
         'Content-Type': 'application/json',
         'X-Master-Key': API_KEY,
