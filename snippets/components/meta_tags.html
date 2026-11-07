@@ -67,7 +67,7 @@ INSTRUCTIONS:
     .theme-blog-author-img {
         width: 80px !important;
         height: 80px !important;
-        background-image: url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=320,fit=crop,q=95/m6LDVxxBaLi757nM/evan_patruno-AwvD1J3wXni11116.jpg') !important;
+        background-image: url('https://www.evanpatruno.ca/Photo%20de%20profil%20courtier%20Pro%20N%20Plex.jpg') !important;
         background-size: cover !important;
         background-position: center !important;
         border: 2px solid #873276 !important;
@@ -234,6 +234,7 @@ INSTRUCTIONS:
 
     /* Bannière de témoins (Conformité Loi 25) — Habillage Dark Prune & Or */
     /* Masquer l'ancienne Barre de messages Zoho en doublon avec la bannière Loi 25 */
+    #zsmsg-policy,
     #zs-message-bar,
     .zs-message-bar,
     .zp-message-bar,
@@ -1492,7 +1493,7 @@ INSTRUCTIONS:
       "name": "Evan Patruno | Courtier Immobilier & Courtier Hypothécaire",
       "url": "https://www.evanpatruno.ca/",
       "logo": "https://www.evanpatruno.ca/favicon.png",
-      "image": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=320,fit=crop,q=95/m6LDVxxBaLi757nM/evan_patruno-AwvD1J3wXni11116.jpg",
+      "image": "https://www.evanpatruno.ca/Photo%20de%20profil%20courtier%20Pro%20N%20Plex.jpg",
       "description": "Services professionnels de courtier immobilier résidentiel et courtier hypothécaire au Québec. Spécialiste Rive-Sud, Saint-Jean-sur-Richelieu, Estrie et Laval.",
       "telephone": "+15145673249",
       "email": "info@evanpatruno.ca",
@@ -1798,7 +1799,7 @@ INSTRUCTIONS:
 
         // 4. Unification & Traduction 100% FR de la bannière de témoins Loi 25 (_zcBan) + Suppression du doublon MessageBar
         function fixCookieBannersLoi25() {
-            const msgBar = document.getElementById('zs-message-bar') || document.querySelector('.zs-message-bar, [data-zs-messagebar]');
+            const msgBar = document.getElementById('zsmsg-policy') || document.getElementById('zs-message-bar') || document.querySelector('.zs-message-bar, [data-zs-messagebar]');
             if (msgBar) msgBar.remove();
 
             const translateMap = {
