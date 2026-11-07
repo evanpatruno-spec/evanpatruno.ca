@@ -907,6 +907,254 @@ document.addEventListener("DOMContentLoaded", async function() {
 </section>
 
 <style>
+    /* #3 — SECTION LA DOUBLE EXPERTISE (1 SEUL INTERLOCUTEUR) */
+    .ep-dual-section {
+        padding: 36px 20px 50px;
+        position: relative;
+        font-family: 'Outfit', sans-serif;
+    }
+    .ep-dual-container {
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+    .ep-dual-header {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto 38px;
+    }
+    .ep-dual-kicker {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        color: #f3e092;
+        padding: 6px 16px;
+        border-radius: 999px;
+        background: rgba(212, 175, 55, 0.08);
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        margin-bottom: 14px;
+    }
+    .ep-dual-header h2 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(2rem, 3.6vw, 2.85rem);
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 12px;
+        line-height: 1.2;
+    }
+    .ep-dual-header p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.76);
+        margin: 0;
+        line-height: 1.6;
+        font-weight: 300;
+    }
+    .ep-dual-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 26px;
+        align-items: stretch;
+    }
+    .ep-dual-card {
+        border-radius: 28px;
+        padding: 36px 32px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.35s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .ep-dual-card.traditional {
+        background: rgba(30, 10, 25, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .ep-dual-card.integrated {
+        background: linear-gradient(145deg, rgba(43, 11, 36, 0.88), rgba(30, 10, 25, 0.96));
+        border: 1px solid rgba(212, 175, 55, 0.42);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 35px rgba(212, 175, 55, 0.1);
+    }
+    .ep-dual-tag {
+        display: inline-block;
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        margin-bottom: 12px;
+        color: rgba(255, 255, 255, 0.45);
+    }
+    .ep-dual-card.integrated .ep-dual-tag {
+        color: #d4af37;
+    }
+    .ep-dual-card h3 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 22px;
+        line-height: 1.25;
+    }
+    .ep-dual-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .ep-dual-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        font-size: 0.94rem;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.72);
+        font-weight: 300;
+    }
+    .ep-dual-card.integrated .ep-dual-list li {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .ep-dual-bullet {
+        flex: 0 0 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.72rem;
+        font-weight: 700;
+        margin-top: 2px;
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(255, 255, 255, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ep-dual-card.integrated .ep-dual-bullet {
+        background: rgba(212, 175, 55, 0.14);
+        color: #f3e092;
+        border-color: rgba(212, 175, 55, 0.45);
+    }
+    .ep-dual-list li strong {
+        color: #ffffff;
+        font-weight: 600;
+    }
+    .ep-dual-footer {
+        margin-top: 26px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(212, 175, 55, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .ep-dual-stat {
+        font-size: 0.82rem;
+        color: #f3e092;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+    }
+    .ep-dual-link {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.86rem;
+        font-weight: 600;
+        padding: 9px 20px;
+        border-radius: 999px;
+        background: rgba(212, 175, 55, 0.14);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        transition: all 0.25s ease;
+    }
+    .ep-dual-link:hover {
+        background: #d4af37;
+        color: #1e0a19;
+    }
+
+    @media (max-width: 768px) {
+        .ep-dual-section {
+            padding: 24px 12px 32px !important;
+        }
+        .ep-dual-header {
+            margin-bottom: 24px;
+        }
+        .ep-dual-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        .ep-dual-card {
+            padding: 26px 20px;
+            border-radius: 24px;
+        }
+        .ep-dual-card h3 {
+            font-size: 1.48rem;
+            margin-bottom: 16px;
+        }
+        .ep-dual-list li {
+            font-size: 0.89rem;
+        }
+    }
+</style>
+
+<section class="ep-dual-section reveal" id="double-expertise">
+    <div class="ep-dual-container">
+        <div class="ep-dual-header">
+            <span class="ep-dual-kicker">Synergie Immobilier &amp; Hypothèque</span>
+            <h2>L'avantage d'un seul interlocuteur.</h2>
+            <p>Pourquoi réunir courtage immobilier (OACIQ) et courtage hypothécaire (AMF) sous une même direction transforme la sécurité et la rapidité de votre transaction.</p>
+        </div>
+
+        <div class="ep-dual-grid">
+            <div class="ep-dual-card traditional">
+                <div>
+                    <span class="ep-dual-tag">Approche fragmentée · 2 courtiers distincts</span>
+                    <h3>Information dispersée &amp; délais sous tension</h3>
+                    <ul class="ep-dual-list">
+                        <li>
+                            <span class="ep-dual-bullet">–</span>
+                            <span><strong>Allers-retours constants</strong> : vous devez relayer vous-même les documents entre votre courtier immobilier et votre représentant hypothécaire.</span>
+                        </li>
+                        <li>
+                            <span class="ep-dual-bullet">–</span>
+                            <span><strong>Promesse d'achat à l'aveugle</strong> : l'offre est parfois rédigée sans connaître les exigences spécifiques des prêteurs pour le type d'immeuble visé.</span>
+                        </li>
+                        <li>
+                            <span class="ep-dual-bullet">–</span>
+                            <span><strong>Pression sur les conditions</strong> : risque accru de demander des prolongations de délais en pleine négociation.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ep-dual-card integrated">
+                <div>
+                    <span class="ep-dual-tag">Approche intégrée · Evan Patruno (OACIQ &amp; AMF)</span>
+                    <h3>Stratégie unifiée de la visite jusqu'au notaire</h3>
+                    <ul class="ep-dual-list">
+                        <li>
+                            <span class="ep-dual-bullet">01</span>
+                            <span><strong>Qualification chirurgicale en amont</strong> : chaque propriété ciblée est validée selon vos ratios réels auprès de 30+ prêteurs avant même de déposer l'offre.</span>
+                        </li>
+                        <li>
+                            <span class="ep-dual-bullet">02</span>
+                            <span><strong>Pouvoir de négociation supérieur</strong> : votre promesse d'achat rassure immédiatement le vendeur grâce à un montage financier déjà verrouillé.</span>
+                        </li>
+                        <li>
+                            <span class="ep-dual-bullet">03</span>
+                            <span><strong>Un seul dossier, zéro perte de temps</strong> : synchronisation automatique de l'inspection, de l'évaluation et de l'approbation finale.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ep-dual-footer">
+                    <span class="ep-dual-stat">Double Permis Certifié · OACIQ &amp; AMF</span>
+                    <a href="https://calendar.app.google/An5sXWPe3kvKiZjo8" target="_blank" rel="noopener" class="ep-dual-link">Planifier un appel stratégique →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
     /* 4. AVIS GOOGLE V3 — ÉPURÉ (SEULEMENT LES AVIS) */
     .rev-section {
         padding: 45px 20px;
@@ -1235,11 +1483,12 @@ document.addEventListener("DOMContentLoaded", async function() {
         </div>
         <div style="flex: 0 0 200px; text-align: center; display: flex; flex-direction: column; align-items: center;">
             <div
-                style="width: 150px; height: 150px; background: rgba(255,255,255,0.05); border: 1px solid #d4af37; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #d4af37; margin-bottom: 15px;">
-                🗓️
+                style="width: 132px; height: 132px; background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.45); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #f3e092; margin-bottom: 15px; box-shadow: 0 0 30px rgba(212,175,55,0.12);">
+                <span style="font-family: var(--font-serif); font-size: 2.4rem; font-weight: 600; line-height: 1;">15</span>
+                <span style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 4px; color: rgba(255,255,255,0.75);">Minutes</span>
             </div>
             <p
-                style="color: #d4af37; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">
+                style="color: #d4af37; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.76rem; margin: 0;">
                 Disponibilité Directe</p>
         </div>
     </div>
@@ -1249,41 +1498,42 @@ document.addEventListener("DOMContentLoaded", async function() {
     <div class="glow-aura" style="bottom: -200px; right: 0; opacity: 0.1;"></div>
     <div class="geo-container">
         <div style="text-align: center; max-width: 800px;">
-            <h2 style="font-size: 3rem; margin-bottom: 20px; color: #ffffff;">Une présence stratégique.</h2>
-            <p style="font-size: 1.15rem; line-height: 1.6;">Une expertise immobilière ancrée en Montérégie (bureau à
+            <span class="ep-dual-kicker">Ancrage Régional &amp; Provincial</span>
+            <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 3.6vw, 3rem); margin-bottom: 16px; color: #ffffff; font-weight: 600;">Une présence stratégique.</h2>
+            <p style="font-size: 1.05rem; line-height: 1.6; color: rgba(255,255,255,0.76); font-weight: 300;">Une expertise immobilière ancrée en Montérégie (bureau à
                 Napierville) et une force hypothécaire rayonnant à Laval et partout au Québec.</p>
         </div>
 
         <div class="geo-grid">
             <a href="/laval" class="geo-card" style="text-decoration:none; color:inherit;">
-                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🏙️</i>
+                <span class="service-kicker" style="margin-bottom: 14px;">01 · Rive-Nord</span>
                 <h4>Laval</h4>
                 <p>Bureau Rive-Nord. Expertise urbaine et hypothécaire.</p>
             </a>
             <a href="/napierville" class="geo-card" style="text-decoration:none; color:inherit;">
-                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">📍</i>
+                <span class="service-kicker" style="margin-bottom: 14px;">02 · Siège Rive-Sud</span>
                 <h4>Napierville</h4>
                 <p>Mon bureau principal. Votre expert de proximité sur la Rive-Sud.</p>
             </a>
             <a href="/montreal" class="geo-card" style="text-decoration:none; color:inherit;">
-                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🚗</i>
+                <span class="service-kicker" style="margin-bottom: 14px;">03 · Métropole</span>
                 <h4>Montréal</h4>
                 <p>Accompagnement stratégique sur l'île et les environs.</p>
             </a>
             <a href="/chambly" class="geo-card" style="text-decoration:none; color:inherit;">
-                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🏰</i>
+                <span class="service-kicker" style="margin-bottom: 14px;">04 · Bassin de Chambly</span>
                 <h4>Chambly</h4>
                 <p>Le charme de la Rive-Sud. Votre projet au juste prix.</p>
             </a>
             <a href="/saint-jean-sur-richelieu" class="geo-card" style="text-decoration:none; color:inherit;">
-                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">🎈</i>
+                <span class="service-kicker" style="margin-bottom: 14px;">05 · Haut-Richelieu</span>
                 <h4>Saint-Jean</h4>
                 <p>Marché dynamique et bord de l'eau dans le Haut-Richelieu.</p>
             </a>
             <div class="geo-card">
-                <i style="color: var(--primary); font-style: normal; font-size: 2.5rem; display: block; margin-bottom: 15px;">⚜️</i>
+                <span class="service-kicker" style="margin-bottom: 14px;">06 · Provincial</span>
                 <h4>Tout le Québec</h4>
-                <p>Services hypothécaires mobiles, peu importe votre région.</p>
+                <p>Services hypothécaires à distance ou en personne, peu importe votre région.</p>
             </div>
         </div>
 

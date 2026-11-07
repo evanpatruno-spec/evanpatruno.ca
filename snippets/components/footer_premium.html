@@ -1177,4 +1177,191 @@
             }, 500); 
         });
     </script>
+
+<!-- #7 & #8 — HARMONISATION LUXE SOMBRE & OR + MICRO-INTERACTIONS HALO DORÉ -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+    /* #8 — Micro-interaction Halo Doré (Curseur Web & Scroll Mobile) */
+    .service-card,
+    .p-card,
+    .geo-card,
+    .rev-card,
+    .ep-dual-card,
+    .booking-card,
+    .affordability-widget {
+        position: relative;
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+    }
+
+    .service-card::after,
+    .p-card::after,
+    .geo-card::after,
+    .rev-card::after,
+    .ep-dual-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        background: radial-gradient(380px circle at var(--ep-mx, 50%) var(--ep-my, 0%), rgba(212, 175, 55, 0.13), transparent 65%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 0;
+    }
+
+    .service-card:hover::after,
+    .p-card:hover::after,
+    .geo-card:hover::after,
+    .rev-card:hover::after,
+    .ep-dual-card:hover::after,
+    .ep-gold-focus::after {
+        opacity: 1;
+    }
+
+    .service-card > *,
+    .p-card > *,
+    .geo-card > *,
+    .rev-card > *,
+    .ep-dual-card > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+        .ep-gold-focus {
+            border-color: rgba(212, 175, 55, 0.52) !important;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 26px rgba(212, 175, 55, 0.16) !important;
+        }
+    }
+
+    /* #7 — Harmonisation Luxe Sombre & Or des pages clés (/acheter, /vendre, /préqualification, etc.) */
+    .hero-buyer,
+    .hero-seller,
+    .hero-prequal {
+        background-color: #1e0a19 !important;
+        border: 1px solid rgba(212, 175, 55, 0.24) !important;
+        border-radius: 32px !important;
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.72), 0 0 35px rgba(212, 175, 55, 0.08) !important;
+    }
+
+    .hero-buyer h1,
+    .hero-seller h1,
+    .hero-prequal h1 {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.5px !important;
+        line-height: 1.2 !important;
+        font-size: clamp(2rem, 3.8vw, 3rem) !important;
+    }
+
+    .hero-buyer .hero-btn,
+    .hero-seller .hero-btn,
+    .hero-prequal .hero-btn {
+        background: linear-gradient(135deg, #f3e092 0%, #d4af37 50%, #aa841e 100%) !important;
+        color: #1e0a19 !important;
+        font-family: 'Outfit', sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.6px !important;
+        border: none !important;
+        box-shadow: 0 12px 32px rgba(212, 175, 55, 0.32) !important;
+    }
+
+    .buyer-lp .service-card,
+    .seller-lp .service-card,
+    .prequal-lp .p-card {
+        background: linear-gradient(145deg, rgba(43, 11, 36, 0.78), rgba(30, 10, 25, 0.92)) !important;
+        border: 1px solid rgba(212, 175, 55, 0.22) !important;
+        border-radius: 26px !important;
+    }
+
+    .buyer-lp .service-card h3,
+    .seller-lp .service-card h3,
+    .prequal-lp .p-card h3 {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 1.65rem !important;
+        font-weight: 600 !important;
+        color: #f3e092 !important;
+    }
+
+    @media (max-width: 768px) {
+        .hero-buyer,
+        .hero-seller,
+        .hero-prequal {
+            padding: 28px 18px 28px !important;
+            margin: 4px 10px 0 !important;
+            border-radius: 26px !important;
+        }
+        .hero-buyer h1,
+        .hero-seller h1,
+        .hero-prequal h1 {
+            font-size: clamp(1.65rem, 6.2vw, 2.05rem) !important;
+            margin-bottom: 12px !important;
+            text-wrap: balance;
+        }
+        .hero-buyer p,
+        .hero-seller p,
+        .hero-prequal p {
+            font-size: 0.94rem !important;
+            line-height: 1.55 !important;
+            margin-bottom: 20px !important;
+            color: rgba(255, 255, 255, 0.84) !important;
+        }
+        .hero-buyer .hero-btn,
+        .hero-seller .hero-btn,
+        .hero-prequal .hero-btn {
+            width: 92% !important;
+            max-width: 320px !important;
+            padding: 14px 22px !important;
+            font-size: 0.9rem !important;
+            margin-bottom: 6px !important;
+        }
+        .buyer-lp .service-card,
+        .seller-lp .service-card,
+        .prequal-lp .p-card {
+            padding: 28px 22px !important;
+            text-align: left !important;
+        }
+    }
+</style>
+<script>
+(function() {
+    function initGoldenHalo() {
+        var cards = document.querySelectorAll('.service-card, .p-card, .geo-card, .rev-card, .ep-dual-card');
+        if (!cards.length) return;
+
+        // Desktop cursor spotlight
+        cards.forEach(function(card) {
+            if (card.dataset.epHaloBound) return;
+            card.dataset.epHaloBound = '1';
+            card.addEventListener('mousemove', function(e) {
+                var rect = card.getBoundingClientRect();
+                card.style.setProperty('--ep-mx', (e.clientX - rect.left) + 'px');
+                card.style.setProperty('--ep-my', (e.clientY - rect.top) + 'px');
+            }, { passive: true });
+        });
+
+        // Mobile viewport center focus halo
+        if ('IntersectionObserver' in window && window.innerWidth <= 768) {
+            var focusObs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('ep-gold-focus');
+                    } else {
+                        entry.target.classList.remove('ep-gold-focus');
+                    }
+                });
+            }, { rootMargin: '-28% 0px -28% 0px', threshold: 0.25 });
+            cards.forEach(function(card) { focusObs.observe(card); });
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initGoldenHalo);
+    } else {
+        initGoldenHalo();
+    }
+    setTimeout(initGoldenHalo, 1500);
+})();
+</script>
 </footer>
