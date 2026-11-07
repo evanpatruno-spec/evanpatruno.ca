@@ -1598,6 +1598,10 @@ INSTRUCTIONS:
                         page_path: window.location.pathname,
                         page_title: document.title
                     });
+                    window.gtag('event', 'ads_conversion_Nous_contacter_1', {
+                        lead_source: leadSource,
+                        page_path: window.location.pathname
+                    });
                 }
             }
         }
@@ -1643,6 +1647,10 @@ INSTRUCTIONS:
                     lead_source: 'Appel Telephonique Direct',
                     page_path: window.location.pathname
                 });
+                window.gtag('event', 'ads_conversion_Nous_contacter_1', {
+                    lead_source: 'Appel Telephonique Direct',
+                    page_path: window.location.pathname
+                });
             } else if (href.includes('calendar.app.google')) {
                 window.gtag('event', 'schedule_appointment', {
                     page_path: window.location.pathname
@@ -1650,6 +1658,10 @@ INSTRUCTIONS:
                 window.gtag('event', 'generate_lead', {
                     currency: 'CAD',
                     value: 200,
+                    lead_source: 'RDV Google Calendar',
+                    page_path: window.location.pathname
+                });
+                window.gtag('event', 'ads_conversion_Nous_contacter_1', {
                     lead_source: 'RDV Google Calendar',
                     page_path: window.location.pathname
                 });
