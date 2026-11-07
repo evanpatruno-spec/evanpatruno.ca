@@ -233,6 +233,17 @@ INSTRUCTIONS:
     }
 
     /* Bannière de témoins (Conformité Loi 25) — Habillage Dark Prune & Or */
+    /* Masquer l'ancienne Barre de messages Zoho en doublon avec la bannière Loi 25 */
+    #zs-message-bar,
+    .zs-message-bar,
+    .zp-message-bar,
+    [data-zs-messagebar] {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        pointer-events: none !important;
+    }
+
     .zc-cookie-container,
     .zc-popup-container {
         background-color: rgba(30, 10, 25, 0.96) !important;
@@ -1755,6 +1766,37 @@ INSTRUCTIONS:
                 });
             }
         }, true);
+
+        // 4. Unification & Traduction 100% FR de la bannière de témoins Loi 25 (_zcBan) + Suppression du doublon MessageBar
+        function fixCookieBannersLoi25() {
+            const msgBar = document.getElementById('zs-message-bar') || document.querySelector('.zs-message-bar, [data-zs-messagebar]');
+            if (msgBar) msgBar.remove();
+
+            const translateMap = {
+                'Accept all': 'Tout accepter',
+                'Manage': 'Personnaliser',
+                'Save': 'Enregistrer mes choix',
+                'Close': 'Fermer',
+                'Essential': 'Essentiels (Requis)',
+                'Analytical': 'Analytiques (GA4)',
+                'Functional': 'Fonctionnels'
+            };
+            document.querySelectorAll('.zc-cookie-container button, .zc-cookie-container a, .zc-popup-container button, .zc-popup-container a, .zc-popup-container span, .zc-popup-container div').forEach(el => {
+                if (el.children.length === 0 && el.textContent) {
+                    const txt = el.textContent.trim();
+                    if (translateMap[txt]) el.textContent = translateMap[txt];
+                }
+                if (el.tagName === 'A' && (el.textContent || '').includes('Politique de cookies')) {
+                    el.setAttribute('href', '/politique-confidentialite');
+                }
+            });
+        }
+        fixCookieBannersLoi25();
+        document.addEventListener('DOMContentLoaded', () => {
+            fixCookieBannersLoi25();
+            setTimeout(fixCookieBannersLoi25, 600);
+            setTimeout(fixCookieBannersLoi25, 1800);
+        });
     })();
 </script>
 
