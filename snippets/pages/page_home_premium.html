@@ -736,27 +736,47 @@ document.addEventListener("DOMContentLoaded", async function() {
 </section>
 
 <style>
+    /* 4. AVIS GOOGLE VÉRIFIÉS V3 — LUXURY DARK PRUNE & OR */
     .rev-section {
-        padding: 80px 20px;
+        padding: 75px 20px;
         background: transparent;
         font-family: 'Outfit', sans-serif;
-        overflow: visible; /* Changed from hidden to allow shadows to show */
+        overflow: visible;
     }
-    .rev-section * { box-sizing: border-box; } /* Force border-box for all internal elements */
+    .rev-section * { box-sizing: border-box; }
+    .rev-container { max-width: 1200px; margin: 0 auto; position: relative; padding: 0 54px; }
+    .rev-header { text-align: center; margin-bottom: 44px; }
+    .rev-header h2 { font-size: clamp(2rem, 3.5vw, 2.7rem); color: #ffffff; margin: 14px 0 8px; font-weight: 700; letter-spacing: -0.02em; }
+    .rev-subtitle { color: rgba(255, 255, 255, 0.62); font-size: 0.98rem; margin: 0; font-family: 'Inter', sans-serif; }
 
-    .rev-container { max-width: 1200px; margin: 0 auto; position: relative; padding: 0 50px; }
-    .rev-header { text-align: center; margin-bottom: 50px; }
-    .rev-header h2 { font-size: 2.8rem; color: white; margin-bottom: 15px; font-weight: 700; }
-    
-    /* NAVIGATION ARROWS */
+    .rev-header .google-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 22px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(212, 175, 55, 0.32);
+        border-radius: 999px;
+        color: #f3e5ab;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        font-size: 0.84rem;
+        text-decoration: none;
+        transition: all 0.25s ease;
+    }
+    .rev-header .google-badge:hover {
+        background: rgba(212, 175, 55, 0.12);
+        border-color: #d4af37;
+    }
+
     .rev-nav {
         position: absolute;
-        top: 60%;
+        top: 56%;
         transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        background: rgba(135, 50, 118, 0.2);
-        border: 1px solid rgba(212, 175, 55, 0.3);
+        width: 46px;
+        height: 46px;
+        background: rgba(43, 11, 36, 0.85);
+        border: 1px solid rgba(212, 175, 55, 0.35);
         border-radius: 50%;
         color: #d4af37;
         display: flex;
@@ -764,204 +784,329 @@ document.addEventListener("DOMContentLoaded", async function() {
         justify-content: center;
         cursor: pointer;
         z-index: 10;
-        transition: 0.3s;
+        transition: all 0.25s ease;
         backdrop-filter: blur(10px);
+        font-size: 1.35rem;
+        user-select: none;
     }
-    .rev-nav:hover { background: #873276; color: white; border-color: white; transform: translateY(-50%) scale(1.1); }
+    .rev-nav:hover { background: #873276; color: #ffffff; border-color: #ffffff; transform: translateY(-50%) scale(1.08); }
     .rev-prev { left: 0; }
     .rev-next { right: 0; }
 
-    .rev-header .google-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 8px 20px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 50px;
-        color: #d4af37;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 0.85rem;
-    }
     .rev-track-container {
         display: flex;
-        gap: 30px;
+        gap: 24px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        padding: 20px 40px 40px; /* Security padding to avoid cut-off shadows/edges */
+        padding: 16px 24px 34px;
         scrollbar-width: none;
-        scroll-padding: 40px;
+        scroll-padding: 24px;
+        align-items: stretch;
     }
     .rev-track-container::-webkit-scrollbar { display: none; }
+
     .rev-card {
-        flex: 0 0 350px; /* Reduced to 350px for better desktop fit */
+        flex: 0 0 355px;
         scroll-snap-align: center;
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 30px;
-        padding: 40px;
+        background: rgba(43, 11, 36, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 26px;
+        padding: 32px 28px;
         position: relative;
-        transition: 0.4s;
+        transition: all 0.3s ease;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        min-height: 280px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
     }
-    .rev-card:hover { border-color: #873276; background: rgba(255, 255, 255, 0.05); transform: translateY(-10px); }
-    .rev-stars { color: #d4af37; font-size: 1.2rem; margin-bottom: 20px; }
-    .rev-text { color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px; font-style: italic; }
-    .rev-footer { display: flex; align-items: center; gap: 15px; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 25px; }
+    .rev-card:hover {
+        border-color: rgba(212, 175, 55, 0.4);
+        background: rgba(43, 11, 36, 0.88);
+        transform: translateY(-6px);
+    }
+
+    .rev-card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    .rev-stars {
+        color: #d4af37;
+        font-size: 1.05rem;
+        letter-spacing: 2px;
+    }
+    .rev-g-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.55);
+        font-family: 'Inter', sans-serif;
+        background: rgba(255, 255, 255, 0.04);
+        padding: 4px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .rev-text-wrap {
+        flex: 1;
+        margin-bottom: 22px;
+    }
+    .rev-text {
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 0.96rem;
+        line-height: 1.65;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .rev-card.expanded .rev-text {
+        display: block;
+        -webkit-line-clamp: unset;
+    }
+    .rev-readmore {
+        background: none;
+        border: none;
+        color: #d4af37;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 6px 0 0;
+        cursor: pointer;
+        font-family: 'Inter', sans-serif;
+        display: inline-block;
+    }
+
+    .rev-footer {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        padding-top: 18px;
+    }
     .rev-avatar {
-        width: 50px; height: 50px; border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
         background: linear-gradient(135deg, #d4af37, #873276);
-        display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1rem;
+        color: #ffffff;
+        flex-shrink: 0;
+        overflow: hidden;
+        border: 1px solid rgba(212, 175, 55, 0.35);
     }
-    .rev-info h4 { color: white; margin: 0; font-size: 1.1rem; }
-    .rev-info span { color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; }
-    .google-icon { position: absolute; top: 30px; right: 30px; opacity: 0.2; width: 25px; }
+    .rev-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .rev-info h4 {
+        color: #ffffff;
+        margin: 0 0 3px;
+        font-size: 0.98rem;
+        font-weight: 600;
+    }
+    .rev-info span {
+        color: rgba(255, 255, 255, 0.48);
+        font-size: 0.78rem;
+        font-family: 'Inter', sans-serif;
+        display: block;
+    }
+
     @media (max-width: 768px) {
-        .rev-section { padding: 45px 6px !important; }
-        .rev-container { padding: 0 8px !important; }
-        .rev-track-container { 
-            gap: 14px; 
-            padding: 10px 12px 26px; 
-            scroll-padding: 12px;
-        }
-        .rev-card { 
-            flex: 0 0 calc(100vw - 52px);
-            padding: 24px 20px; 
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .rev-info h4 { font-size: 1rem; white-space: nowrap; }
-        .rev-header h2 { font-size: 1.75rem; text-wrap: balance; }
+        .rev-section { padding: 48px 8px !important; }
+        .rev-container { padding: 0 6px !important; }
+        .rev-track-container { gap: 14px; padding: 10px 12px 26px; scroll-padding: 12px; }
+        .rev-card { flex: 0 0 calc(100vw - 54px); padding: 24px 20px; min-height: 255px; }
         .rev-nav { display: none; }
     }
 </style>
 
-<section class="rev-section reveal">
+<section class="rev-section reveal" id="reviews">
     <div class="rev-container">
         <div class="rev-header">
-            <div class="google-badge">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="#d4af37"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                Excellent 5.0/5 sur Google
-            </div>
+            <a href="https://g.page/r/CdypKbg57LonEAE" target="_blank" rel="noopener" class="google-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+                    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/>
+                    <path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.13-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/>
+                    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+                </svg>
+                <span id="epGoogleBadgeText">5.0 ★★★★★ · 34 avis vérifiés sur Google</span>
+            </a>
             <h2>La confiance de mes clients</h2>
+            <p class="rev-subtitle">Témoignages authentiques publiés sur ma fiche Google Business Profile</p>
         </div>
 
-        <div class="rev-nav rev-prev" onclick="scrollReviews(-1)">‹</div>
-        <div class="rev-nav rev-next" onclick="scrollReviews(1)">›</div>
+        <div class="rev-nav rev-prev" onclick="scrollReviews(-1)" aria-label="Avis précédent">‹</div>
+        <div class="rev-nav rev-next" onclick="scrollReviews(1)" aria-label="Avis suivant">›</div>
 
-        <div class="rev-track-container" id="revTrack">
-            <!-- PIERRE-ANTOINE JACQUES -->
-            <div class="rev-card">
-                <div class="rev-stars">★★★★★</div>
-                <p class="rev-text">"Nous avons transigé avec Evan pour l'achat de notre première maison. Il s'est montré d'une grande gentillesse, d'une efficacité et d'une rapidité exemplaire."</p>
-                <div class="rev-footer">
-                    <div class="rev-avatar">P</div>
-                    <div class="rev-info"><h4>Pierre-Antoine Jacques</h4><span>Acheteur</span></div>
-                </div>
-            </div>
+        <div class="rev-track-container" id="revTrack"></div>
 
-            <!-- VINCENT PIETTE -->
-            <div class="rev-card">
-                <div class="rev-stars">★★★★★</div>
-                <p class="rev-text">"Excellente expérience avec Evan ! Disponible, réactif et très à l'écoute, il a su rendre la vente de ma maison simple et sereine. Son professionnalisme m'a aidé."</p>
-                <div class="rev-footer">
-                    <div class="rev-avatar">V</div>
-                    <div class="rev-info"><h4>Vincent Piette</h4><span>Vendeur</span></div>
-                </div>
-            </div>
-
-            <!-- MICHAEL P -->
-            <div class="rev-card">
-                <div class="rev-stars">★★★★★</div>
-                <p class="rev-text">"Nous avons eu la chance d'être accompagnés par Evan, un courtier exceptionnel, pendant plus de deux ans dans notre recherche de la maison idéale."</p>
-                <div class="rev-footer">
-                    <div class="rev-avatar">M</div>
-                    <div class="rev-info"><h4>Michaël P.</h4><span>Acheteur</span></div>
-                </div>
-            </div>
-
-            <!-- MARIE-EVE DUPONT -->
-            <div class="rev-card">
-                <div class="rev-stars">★★★★★</div>
-                <p class="rev-text">"La vente de ma maison fût une étape très importante et émotive. Merci Evan pour ton professionnalisme, ton écoute et tes réponses. Travail impeccable ❤️"</p>
-                <div class="rev-footer">
-                    <div class="rev-avatar">M</div>
-                    <div class="rev-info"><h4>Marie-Ève Dupont</h4><span>Vendeuse</span></div>
-                </div>
-            </div>
-
-            <!-- JORDAN HEBERT -->
-            <div class="rev-card">
-                <div class="rev-stars">★★★★★</div>
-                <p class="rev-text">"Tu veux vendre ou acheter un building commercial ou un multi-logement tu dois considérer faire affaire avec Evan pour son professionnalisme."</p>
-                <div class="rev-footer">
-                    <div class="rev-avatar">J</div>
-                    <div class="rev-info"><h4>Jordan Hebert</h4><span>Commercial</span></div>
-                </div>
-            </div>
-
-            <!-- TANIA MADORE -->
-            <div class="rev-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Avis Google" class="google-icon">
-                <div class="rev-stars">★★★★★</div>
-                <p class="rev-text">"Evan est toujours là pour répondre rapidement à nos questions. Toujours disponible pour venir visiter et faire des démarches."</p>
-                <div class="rev-footer">
-                    <div class="rev-avatar">T</div>
-                    <div class="rev-info"><h4>Tania Madore</h4><span>Acheteur</span></div>
-                </div>
-            </div>
-
-            <!-- SAMUEL BEAUSOLEIL -->
-            <div class="rev-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Avis Google" class="google-icon">
-                <div class="rev-stars">★★★★★</div>
-                <p class="rev-text">"Evan prend le temps de nous informer des nouveautés sur le marché. Il s'occupe de toute la logistique et répond rapidement."</p>
-                <div class="rev-footer">
-                    <div class="rev-avatar">S</div>
-                    <div class="rev-info"><h4>Samuel Beausoleil</h4><span>Acheteur</span></div>
-                </div>
-            </div>
-
-            <!-- MELANIE LAGANIERE -->
-            <div class="rev-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Avis Google" class="google-icon">
-                <div class="rev-stars">★★★★★</div>
-                <p class="rev-text">"Je vous recommande Evan pour vous aider avec votre transaction immobilière ! Il saura vous mettre à l'aise, il est professionnel."</p>
-                <div class="rev-footer">
-                    <div class="rev-avatar">M</div>
-                    <div class="rev-info"><h4>Mélanie Laganière</h4><span>Vendeuse</span></div>
-                </div>
-            </div>
-            
-            <!-- SPACER TO PREVENT CLIPPING ON MOBILE -->
-            <div style="flex: 0 0 20px; width: 20px; height: 1px; visibility: hidden;"></div>
-        </div>
-
-        <div style="text-align: center; margin-top: 30px;">
-            <a href="https://g.page/r/CdypKbg57LonEAE" target="_blank"
-                style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap; width: fit-content; max-width: 100%; padding: 12px 24px; font-size: 0.9rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; color: white; text-decoration: none; font-weight: 600; transition: 0.3s; box-sizing: border-box;"
-                onmouseover="this.style.background='white'; this.style.color='#1e0a19';"
-                onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='white';">
-                Voir tous mes avis sur Google&nbsp;→
+        <div style="text-align: center; margin-top: 22px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+            <a href="https://g.page/r/CdypKbg57LonEAE" target="_blank" rel="noopener"
+                style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; font-size: 0.88rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.16); border-radius: 999px; color: #ffffff; text-decoration: none; font-weight: 600; transition: all 0.25s ease;"
+                onmouseover="this.style.borderColor='#d4af37'; this.style.color='#f3e5ab';"
+                onmouseout="this.style.borderColor='rgba(255,255,255,0.16)'; this.style.color='#ffffff';">
+                Consulter les 34 avis sur Google Maps →
             </a>
         </div>
     </div>
 </section>
 
 <script>
+    (function() {
+        const INITIAL_GOOGLE_REVIEWS = [
+            {
+                name: "Mélissa Hyacinthe",
+                role: "Avis Google vérifié · il y a un mois",
+                avatar: "https://lh3.googleusercontent.com/a/ACg8ocJjTAettXsLKs1YfE0riyeB8mwA9R1P0XhkLpEG6arPe_s90xM=w72-h72-p-rp-mo-br100",
+                text: "J’ai eu le plaisir de collaborer avec Evan pour des clients que je lui avais référés et l’expérience a été excellente ! Il a su les accompagner avec beaucoup d’attention, de disponibilité et de professionnalisme tout au long du processus. Une très belle collaboration et surtout un excellent travail."
+            },
+            {
+                name: "Véronique Mongeau",
+                role: "Avis Google vérifié · il y a un mois",
+                avatar: "https://lh3.googleusercontent.com/a/ACg8ocLa31RClPtEBup3uK6z9EJkx8toWioKRZWdUKRTExFLuTsM=w72-h72-p-rp-mo-ba12-br100",
+                text: "Excellent courtier ! Evan a été disponible, honnête et efficace du début à la fin. Il a su trouver exactement ce qu'il fallait pour nous. Je recommande à 100 %."
+            },
+            {
+                name: "Cynthia Garcia",
+                role: "Avis Google vérifié · Rive-Sud",
+                avatar: "https://lh3.googleusercontent.com/a-/ALV-UjV-EV0mZHiQJaVE7XkQZTCnjsAtugU0UY9mPJw6tsXgD0SWGcsp=w72-h72-p-rp-mo-br100",
+                text: "Je tiens à partager mon excellente expérience avec le service offert par Evan. Dès le premier contact, j’ai été impressionnée par sa connaissance du marché, son professionnalisme, son écoute et sa disponibilité. Il a su bien comprendre mes besoins et m’accompagner à chaque étape avec des conseils clairs et judicieux."
+            },
+            {
+                name: "Elisa Desoer",
+                role: "Avis Google vérifié · Achat & Vente Condo",
+                avatar: "https://lh3.googleusercontent.com/a-/ALV-UjVSoTJN-ZAItAKyKiHrIwgPHvty2WrO9cBR3u1j7xBFJnErbwo=w72-h72-p-rp-mo-br100",
+                text: "Evan m’a bien accompagnée deux fois pour des achats immobiliers et aussi pour ma vente de condo. Il est très réactif, rigoureux, à l’écoute et ne met pas de pression lorsqu’il sent des hésitations de notre côté. On sent qu’il défend nos intérêts et c’est une qualité précieuse pour un courtier !"
+            },
+            {
+                name: "V N",
+                role: "Avis Google vérifié",
+                avatar: "https://lh3.googleusercontent.com/a/ACg8ocJBeevuk9sWIOXNxB3pVC01L6uKkJuf0j3e3pvsYc93DoaOA7U=w72-h72-p-rp-mo-ba12-br100",
+                text: "Le meilleur ! Evan est un courtier super professionnel, toujours disponible et vraiment à l’écoute. Il rend le processus simple et sans stress, tout en donnant de bons conseils honnêtes. Tu sens qu’il veut vraiment le meilleur pour toi, pas juste conclure une vente. Je le recommande sans hésiter !"
+            },
+            {
+                name: "Pierre-Antoine Jacques",
+                role: "Avis Google vérifié · Premier achat",
+                avatar: "",
+                text: "Nous avons transigé avec Evan pour l'achat de notre première maison. Il s'est montré d'une grande gentillesse, d'une efficacité et d'une rapidité exemplaire pour répondre à nos questions."
+            },
+            {
+                name: "Vincent Piette",
+                role: "Avis Google vérifié · Vente résidentielle",
+                avatar: "",
+                text: "Excellente expérience avec Evan ! Disponible, réactif et très à l'écoute, il a su rendre la vente de ma maison simple et sereine. Son professionnalisme et ses précieux conseils m'ont beaucoup aidé."
+            },
+            {
+                name: "Michaël P.",
+                role: "Avis Google vérifié · Acheteur",
+                avatar: "",
+                text: "Nous avons eu la chance d'être accompagnés par Evan, un courtier exceptionnel, pendant plus de deux ans dans notre recherche de la maison idéale. Ce professionnel a travaillé sans relâche."
+            },
+            {
+                name: "Marie-Ève Dupont",
+                role: "Avis Google vérifié · Vendeuse",
+                avatar: "",
+                text: "La vente de ma maison fût une étape très importante et émotive. Merci Evan pour ton professionnalisme, ton écoute et tes réponses à mes mille et une questions. Travail impeccable."
+            },
+            {
+                name: "Jordan Hebert",
+                role: "Avis Google vérifié · Multi-logement",
+                avatar: "",
+                text: "Tu veux vendre ou acheter un building commercial ou un multi-logement, tu dois considérer faire affaire avec Evan pour son professionnalisme et l'amour qu'il met dans son travail."
+            },
+            {
+                name: "Tania Madore",
+                role: "Avis Google vérifié · Acheteuse",
+                avatar: "",
+                text: "Evan est toujours là pour répondre rapidement à nos questions. Toujours disponible pour venir visiter et faire des démarches même si le temps presse. Je recommande absolument."
+            },
+            {
+                name: "Samuel Beausoleil",
+                role: "Avis Google vérifié · Acheteur",
+                avatar: "",
+                text: "Evan prend le temps de nous informer des nouveautés sur le marché qui pourraient répondre à nos besoins. Il s'occupe de toute la logistique et répond rapidement aux interrogations."
+            },
+            {
+                name: "Mélanie Laganière",
+                role: "Avis Google vérifié · Propriétaire",
+                avatar: "",
+                text: "Je vous recommande Evan pour vous aider avec votre future transaction immobilière ! Il saura vous mettre à l'aise, il est professionnel, disponible et très ponctuel."
+            }
+        ];
+
+        const gMiniSvg = '<svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.13-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/></svg>';
+
+        function renderGoogleReviews(list, totalCount, rating) {
+            const track = document.getElementById('revTrack');
+            if (!track) return;
+            const badgeText = document.getElementById('epGoogleBadgeText');
+            if (badgeText && totalCount) {
+                badgeText.textContent = (rating || '5.0') + ' ★★★★★ · ' + totalCount + ' avis vérifiés sur Google';
+            }
+            track.innerHTML = '';
+            list.forEach((rev) => {
+                const initial = (rev.name || 'C').trim().charAt(0).toUpperCase();
+                const isLong = (rev.text || '').length > 185;
+                const card = document.createElement('div');
+                card.className = 'rev-card';
+                const avatarHtml = rev.avatar
+                    ? '<img src="' + rev.avatar + '" alt="' + rev.name.replace(/"/g, '') + '" loading="lazy" onerror="this.parentNode.textContent=\'' + initial + '\'">'
+                    : initial;
+                card.innerHTML =
+                    '<div>' +
+                        '<div class="rev-card-top">' +
+                            '<div class="rev-stars">★★★★★</div>' +
+                            '<div class="rev-g-pill">' + gMiniSvg + '<span>Vérifié</span></div>' +
+                        '</div>' +
+                        '<div class="rev-text-wrap">' +
+                            '<p class="rev-text">« ' + rev.text + ' »</p>' +
+                            (isLong ? '<button type="button" class="rev-readmore" onclick="const c=this.closest(\'.rev-card\');c.classList.toggle(\'expanded\');this.textContent=c.classList.contains(\'expanded\')?\'Réduire\':\'Lire la suite\';">Lire la suite</button>' : '') +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="rev-footer">' +
+                        '<div class="rev-avatar">' + avatarHtml + '</div>' +
+                        '<div class="rev-info"><h4>' + rev.name + '</h4><span>' + (rev.role || 'Avis Google vérifié') + '</span></div>' +
+                    '</div>';
+                track.appendChild(card);
+            });
+            const spacer = document.createElement('div');
+            spacer.style.cssText = 'flex: 0 0 16px; width: 16px; height: 1px; visibility: hidden;';
+            track.appendChild(spacer);
+        }
+
+        renderGoogleReviews(INITIAL_GOOGLE_REVIEWS, 34, '5.0');
+
+        // Synchronisation dynamique avec l'API Vercel (/api/google-reviews)
+        fetch('https://dossier.evanpatruno.ca/api/google-reviews')
+            .then(r => r.ok ? r.json() : null)
+            .then(data => {
+                if (data && Array.isArray(data.reviews) && data.reviews.length > 0) {
+                    renderGoogleReviews(data.reviews, data.totalCount || 34, data.rating || '5.0');
+                }
+            })
+            .catch(() => {});
+    })();
+
     function scrollReviews(direction) {
         const track = document.getElementById('revTrack');
-        const scrollAmount = track.offsetWidth > 768 ? 410 : track.offsetWidth; 
-        track.scrollBy({
-            left: direction * scrollAmount,
-            behavior: 'smooth'
-        });
+        if (!track) return;
+        const scrollAmount = track.offsetWidth > 768 ? 380 : track.offsetWidth;
+        track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
 </script>
 
