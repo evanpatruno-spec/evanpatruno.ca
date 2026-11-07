@@ -1403,6 +1403,10 @@ INSTRUCTIONS:
                 t: "Politique de Confidentialité & Protection des Données (Loi 25) | Evan Patruno",
                 d: "Politique de confidentialité et de gouvernance des renseignements personnels conforme à la Loi 25 du Québec pour les services d'Evan Patruno."
             },
+            "/rachat-de-part": {
+                t: "Rachat de Part (Séparation), Travailleur Autonome & Plex | Evan Patruno",
+                d: "Simulateur de rachat de part conjoint (séparation/soulte jusqu'à 95%), hypothèque travailleur autonome et financement de plex au Québec. OACIQ & AMF."
+            },
             "/conditions": {
                 t: "Conditions d'Utilisation | Evan Patruno — Courtier Immobilier & Hypothécaire",
                 d: "Conditions générales d'utilisation du site web, des calculateurs financiers et du portail client d'Evan Patruno (OACIQ & AMF)."
@@ -1567,16 +1571,85 @@ INSTRUCTIONS:
     gtag('config', 'G-X76BD8B440');
 
     // ============================================================================
-    // 🎯 SUIVI AUTOMATIQUE DES CONVERSIONS GA4 & GOOGLE ADS (Zoho CRM + Clics)
+    // 🎯 SUIVI AUTOMATIQUE DES CONVERSIONS GA4, GOOGLE ADS & ATTRIBUTION UTM (#43)
     // ============================================================================
     (function() {
         const trackedForms = new WeakSet();
+
+        // Capture et persistance des paramètres UTM / GCLID / FBCLID (#43)
+        function captureAndGetAttribution() {
+            const storageKey = 'ep_utm_attribution_v1';
+            let stored = {};
+            try { stored = JSON.parse(localStorage.getItem(storageKey) || '{}'); } catch (e) {}
+
+            const params = new URLSearchParams(window.location.search);
+            const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'ttclid'];
+            let hasNew = false;
+            keys.forEach(k => {
+                const v = params.get(k);
+                if (v) { stored[k] = v; hasNew = true; }
+            });
+
+            if (!stored.first_landing_page) {
+                stored.first_landing_page = window.location.pathname;
+                hasNew = true;
+            }
+            if (!stored.initial_referrer && document.referrer && !document.referrer.includes(window.location.hostname)) {
+                stored.initial_referrer = document.referrer;
+                hasNew = true;
+            }
+            if (hasNew) {
+                stored.captured_at = new Date().toISOString();
+                try { localStorage.setItem(storageKey, JSON.stringify(stored)); } catch (e) {}
+            }
+            return stored;
+        }
+
+        const currentAttribution = captureAndGetAttribution();
+
+        function injectAttributionIntoZohoForm(form) {
+            try {
+                const attr = captureAndGetAttribution();
+                let channel = attr.utm_source || '';
+                if (!channel) {
+                    if (attr.gclid) channel = 'Google Ads (gclid)';
+                    else if (attr.fbclid) channel = 'Meta / Facebook Ads (fbclid)';
+                    else if (attr.ttclid) channel = 'TikTok Ads';
+                    else if (attr.initial_referrer) channel = 'Référent (' + attr.initial_referrer.replace(/^https?:\/\//, '').split('/')[0] + ')';
+                    else channel = 'Accès Direct / Organique';
+                }
+
+                const summaryParts = [
+                    '📊 ATTRIBUTION MARKETING :',
+                    '• Canal : ' + channel + (attr.utm_medium ? ' / ' + attr.utm_medium : ''),
+                    attr.utm_campaign ? ('• Campagne : ' + attr.utm_campaign) : null,
+                    attr.utm_term ? ('• Mot-clé : ' + attr.utm_term) : null,
+                    attr.gclid ? ('• GCLID : ' + attr.gclid) : null,
+                    '• Page d\'entrée : ' + (attr.first_landing_page || window.location.pathname),
+                    '• Page de conversion : ' + window.location.pathname
+                ].filter(Boolean).join(' | ');
+
+                let descField = form.querySelector('input[name="Description"], textarea[name="Description"]');
+                if (!descField) {
+                    descField = document.createElement('input');
+                    descField.type = 'hidden';
+                    descField.name = 'Description';
+                    form.appendChild(descField);
+                }
+                if (!descField.value.includes('ATTRIBUTION MARKETING')) {
+                    descField.value = (descField.value ? descField.value + '\n\n' : '') + summaryParts;
+                }
+            } catch (err) {}
+        }
 
         function trackZohoFormSubmission(form) {
             if (!form || trackedForms.has(form)) return;
             const action = (form.getAttribute('action') || '').toLowerCase();
             if (!action.includes('webtoleadform') && !action.includes('submit-lead') && !action.includes('newsletter')) return;
             trackedForms.add(form);
+
+            // Injecter les UTM/GCLID dans Description Zoho CRM avant l'envoi (#43)
+            injectAttributionIntoZohoForm(form);
 
             const sourceInput = form.querySelector('input[name="LEADCF7"], input[name="Lead Source"]');
             const leadSource = (sourceInput && sourceInput.value) ? sourceInput.value : (form.id || window.location.pathname || 'Formulaire Web');

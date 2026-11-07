@@ -1,0 +1,633 @@
+<!-- 
+SNIPPET PAGE NICHE : RACHAT DE PART (SÉPARATION), TRAVAILLEUR AUTONOME & PLEX (#32)
+URL cible : https://www.evanpatruno.ca/rachat-de-part
+-->
+<style>
+    .ep-niche-wrapper {
+        font-family: 'Inter', sans-serif;
+        color: #1e0a19;
+        background: #faf8fa;
+        overflow-x: hidden;
+    }
+
+    .ep-niche-hero {
+        background: radial-gradient(circle at 20% 20%, #3d1435 0%, #1e0a19 65%, #12050f 100%);
+        color: #ffffff;
+        padding: 110px 24px 90px;
+        text-align: center;
+        position: relative;
+    }
+
+    .ep-niche-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(135, 50, 118, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: #f3d1ec;
+        padding: 8px 18px;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
+
+    .ep-niche-hero h1 {
+        font-family: 'Outfit', sans-serif;
+        font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+        font-weight: 900;
+        line-height: 1.12;
+        max-width: 920px;
+        margin: 0 auto 22px;
+        color: #ffffff !important;
+        letter-spacing: -0.03em;
+    }
+
+    .ep-niche-hero p {
+        font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+        color: rgba(255, 255, 255, 0.82);
+        max-width: 760px;
+        margin: 0 auto 34px;
+        line-height: 1.65;
+    }
+
+    .ep-niche-tabs-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        max-width: 880px;
+        margin: 0 auto;
+    }
+
+    .ep-niche-pill {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        color: #ffffff;
+        padding: 12px 22px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.92rem;
+        text-decoration: none;
+        transition: all 0.25s ease;
+    }
+
+    .ep-niche-pill:hover {
+        background: #873276;
+        border-color: #a84694;
+        transform: translateY(-2px);
+        color: #ffffff;
+    }
+
+    .ep-niche-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 70px 24px;
+    }
+
+    .ep-niche-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 28px;
+        margin-bottom: 70px;
+    }
+
+    .ep-niche-card {
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 36px 30px;
+        border: 1px solid rgba(135, 50, 118, 0.12);
+        box-shadow: 0 18px 45px rgba(30, 10, 25, 0.06);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ep-niche-card-tag {
+        display: inline-block;
+        background: rgba(135, 50, 118, 0.1);
+        color: #873276;
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 6px 12px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        width: fit-content;
+    }
+
+    .ep-niche-card h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #1e0a19;
+        margin: 0 0 14px;
+        line-height: 1.25;
+    }
+
+    .ep-niche-card p {
+        color: #4b3d48;
+        font-size: 0.96rem;
+        line-height: 1.65;
+        margin-bottom: 18px;
+    }
+
+    .ep-niche-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 24px;
+    }
+
+    .ep-niche-list li {
+        position: relative;
+        padding-left: 26px;
+        margin-bottom: 10px;
+        font-size: 0.92rem;
+        color: #2d1b29;
+        line-height: 1.5;
+    }
+
+    .ep-niche-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #873276;
+        font-weight: 900;
+    }
+
+    /* MAIN SPLIT: CALCULATOR + FORM */
+    .ep-rachat-workbench {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 36px;
+        align-items: start;
+    }
+
+    @media (max-width: 960px) {
+        .ep-rachat-workbench {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .ep-calc-panel, .ep-form-panel {
+        background: #ffffff;
+        border-radius: 28px;
+        padding: 40px 34px;
+        border: 1px solid rgba(135, 50, 118, 0.15);
+        box-shadow: 0 22px 55px rgba(30, 10, 25, 0.08);
+    }
+
+    .ep-calc-panel h3, .ep-form-panel h3 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.65rem;
+        font-weight: 800;
+        color: #1e0a19;
+        margin: 0 0 10px;
+    }
+
+    .ep-field-group {
+        margin-bottom: 22px;
+    }
+
+    .ep-field-label {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 0.92rem;
+        color: #1e0a19;
+        margin-bottom: 8px;
+    }
+
+    .ep-field-val {
+        color: #873276;
+        font-weight: 800;
+    }
+
+    .ep-range {
+        width: 100%;
+        accent-color: #873276;
+        cursor: pointer;
+    }
+
+    .ep-select, .ep-input {
+        width: 100%;
+        padding: 13px 16px;
+        border-radius: 12px;
+        border: 1.5px solid #e3dce1;
+        font-size: 0.96rem;
+        font-family: 'Inter', sans-serif;
+        color: #1e0a19;
+        background: #fdfcfd;
+        box-sizing: border-box;
+    }
+
+    .ep-select:focus, .ep-input:focus {
+        outline: none;
+        border-color: #873276;
+    }
+
+    .ep-results-box {
+        background: linear-gradient(135deg, #250c20 0%, #3d1435 100%);
+        color: #ffffff;
+        border-radius: 20px;
+        padding: 28px;
+        margin-top: 26px;
+    }
+
+    .ep-results-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-bottom: 18px;
+    }
+
+    .ep-res-item {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 16px;
+    }
+
+    .ep-res-label {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 6px;
+    }
+
+    .ep-res-number {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.55rem;
+        font-weight: 800;
+        color: #ffffff;
+    }
+
+    .ep-res-status {
+        background: rgba(74, 222, 128, 0.14);
+        border: 1px solid rgba(74, 222, 128, 0.35);
+        color: #d1fae5;
+        padding: 12px 16px;
+        border-radius: 12px;
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .ep-submit-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #873276 0%, #5e1f52 100%);
+        color: #ffffff;
+        border: none;
+        padding: 16px 24px;
+        border-radius: 14px;
+        font-size: 1rem;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        box-shadow: 0 12px 28px rgba(135, 50, 118, 0.3);
+    }
+
+    .ep-submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 34px rgba(135, 50, 118, 0.42);
+    }
+</style>
+
+<div class="ep-niche-wrapper">
+    <!-- HERO -->
+    <section class="ep-niche-hero">
+        <div class="ep-niche-badge">⚖️ Double Permis OACIQ &amp; AMF · Solutions Spécialisées</div>
+        <h1>Rachat de Part (Séparation), Travailleur Autonome &amp; Achat de Plex</h1>
+        <p>
+            Certains dossiers exigent à la fois une évaluation immobilière rigoureuse (Centris / OACIQ) et une structure hypothécaire sur mesure auprès de 20+ prêteurs (Multi-Prêts / AMF). Gérez les deux sous un même toit, en toute confidentialité.
+        </p>
+        <div class="ep-niche-tabs-nav">
+            <a href="#simulateur-rachat" class="ep-niche-pill">💔 Simulateur Rachat de Part (Séparation)</a>
+            <a href="#piliers-niches" class="ep-niche-pill">💼 Travailleur Autonome &amp; Inc.</a>
+            <a href="#piliers-niches" class="ep-niche-pill">🏢 Achat de Plex (2 à 4 logements)</a>
+        </div>
+    </section>
+
+    <div class="ep-niche-container">
+        <!-- 3 NICHE PILLARS -->
+        <div class="ep-niche-grid-3" id="piliers-niches">
+            <!-- PILLAR 1: RACHAT DE PART -->
+            <div class="ep-niche-card">
+                <div>
+                    <span class="ep-niche-card-tag">Séparation &amp; Indivision</span>
+                    <h2>Rachat de Part Conjoint (Jusqu'à 95 % de la valeur)</h2>
+                    <p>
+                        Lors d'une séparation, vous souhaitez conserver la maison familiale ou racheter la part de votre copropriétaire ? Mon double permis simplifie tout le processus :
+                    </p>
+                    <ul class="ep-niche-list">
+                        <li><strong>Évaluation de la valeur marchande (OACIQ)</strong> neutre avec comparables Centris vendus pour fixer une soulte juste.</li>
+                        <li><strong>Programme Rachat de Part Assuré (jusqu'à 95 %)</strong> : financez la soulte et le remboursement des dettes conjointes au-delà de la limite habituelle de 80 %.</li>
+                        <li><strong>Libération officielle du co-emprunteur</strong> et coordination directe avec le médiateur et le notaire.</li>
+                    </ul>
+                </div>
+                <a href="#simulateur-rachat" class="ep-submit-btn" style="text-align:center; text-decoration:none; display:block;">Simuler mon rachat de part ↓</a>
+            </div>
+
+            <!-- PILLAR 2: TRAVAILLEUR AUTONOME -->
+            <div class="ep-niche-card">
+                <div>
+                    <span class="ep-niche-card-tag">Entrepreneurs &amp; Incorporés</span>
+                    <h2>Hypothèque Travailleur Autonome (T1 / Inc.)</h2>
+                    <p>
+                        Votre comptable optimise vos impôts, mais votre banque refuse votre dossier à cause d'un revenu net déclaré trop bas ?
+                    </p>
+                    <ul class="ep-niche-list">
+                        <li><strong>Majoration des revenus (Gross-up 15 % à 20 %)</strong> et réintégration des dépenses d'amortissement ou d'états financiers d'entreprise.</li>
+                        <li><strong>Programmes Revenus Déclarés (6 à 12 mois de relevés bancaires)</strong> auprès de prêteurs spécialisés A et B.</li>
+                        <li><strong>Stratégie d'achat ou refinancement</strong> adaptée aux professionnels incorporés, consultants et gens de métier.</li>
+                    </ul>
+                </div>
+                <a href="#formulaire-niche" onclick="document.getElementById('nicheProfileSelect').value='Travailleur Autonome / Incorporé';" class="ep-submit-btn" style="text-align:center; text-decoration:none; display:block;">Faire analyser mes revenus →</a>
+            </div>
+
+            <!-- PILLAR 3: PLEX & INVESTISSEMENT -->
+            <div class="ep-niche-card">
+                <div>
+                    <span class="ep-niche-card-tag">Duplex · Triplex · Quadruplex</span>
+                    <h2>Achat &amp; Financement de Plex au Québec</h2>
+                    <p>
+                        Devenez propriétaire occupant ou bâtissez votre parc immobilier sur la Rive-Sud, à Laval ou à Montréal en maximisant l'effet de levier locatif :
+                    </p>
+                    <ul class="ep-niche-list">
+                        <li><strong>Mise de fonds dès 5 % (Duplex) ou 10 % (Triplex/Quadruplex)</strong> en tant que propriétaire occupant.</li>
+                        <li><strong>Prise en compte maximale des revenus de baux</strong> (50 % à 80 % ajoutés à vos revenus ou méthode de compensation des charges).</li>
+                        <li><strong>Analyse de rentabilité OACIQ + AMF</strong> : vérification des baux, potentiel d'optimisation et préqualification avant de déposer une promesse d'achat.</li>
+                    </ul>
+                </div>
+                <a href="#formulaire-niche" onclick="document.getElementById('nicheProfileSelect').value='Achat de Plex (Duplex / Triplex / Quadruplex)';" class="ep-submit-btn" style="text-align:center; text-decoration:none; display:block;">Calculer ma capacité Plex →</a>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE BUYOUT CALCULATOR + ZOHO CRM FORM -->
+        <div class="ep-rachat-workbench" id="simulateur-rachat">
+            <div class="ep-calc-panel">
+                <span class="ep-niche-card-tag">Outil Interactif Exclusif</span>
+                <h3>Simulateur de Rachat de Part &amp; Soulte</h3>
+                <p style="color:#5c4b58; font-size:0.94rem; margin-bottom:24px;">
+                    Estimez instantanément le montant de la soulte à verser à votre ex-conjoint(e) ainsi que votre nouveau paiement hypothécaire.
+                </p>
+
+                <div class="ep-field-group">
+                    <div class="ep-field-label">
+                        <span>Valeur marchande estimée de la propriété</span>
+                        <span class="ep-field-val" id="rpValDisplay">550 000 $</span>
+                    </div>
+                    <input type="range" id="rpPropVal" class="ep-range" min="200000" max="1500000" step="10000" value="550000" oninput="updateRachatCalc()">
+                </div>
+
+                <div class="ep-field-group">
+                    <div class="ep-field-label">
+                        <span>Solde hypothécaire actuel à rembourser</span>
+                        <span class="ep-field-val" id="rpBalDisplay">320 000 $</span>
+                    </div>
+                    <input type="range" id="rpMortBal" class="ep-range" min="0" max="1200000" step="5000" value="320000" oninput="updateRachatCalc()">
+                </div>
+
+                <div class="ep-field-group">
+                    <div class="ep-field-label">
+                        <span>Dettes conjointes à consolider dans le rachat (optionnel)</span>
+                        <span class="ep-field-val" id="rpDebtDisplay">0 $</span>
+                    </div>
+                    <input type="range" id="rpJointDebt" class="ep-range" min="0" max="150000" step="2500" value="0" oninput="updateRachatCalc()">
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                    <div class="ep-field-group">
+                        <label class="ep-field-label">Part de l'ex-conjoint à racheter</label>
+                        <select id="rpSharePct" class="ep-select" onchange="updateRachatCalc()">
+                            <option value="0.50" selected>50 % (Copropriété 50/50)</option>
+                            <option value="0.40">40 %</option>
+                            <option value="0.60">60 %</option>
+                            <option value="0.30">30 %</option>
+                            <option value="0.70">70 %</option>
+                        </select>
+                    </div>
+                    <div class="ep-field-group">
+                        <label class="ep-field-label">Taux d'intérêt estimé (5 ans)</label>
+                        <select id="rpRate" class="ep-select" onchange="updateRachatCalc()">
+                            <option value="3.89">3,89 %</option>
+                            <option value="4.09" selected>4,09 %</option>
+                            <option value="4.39">4,39 %</option>
+                            <option value="4.69">4,69 %</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ep-results-box">
+                    <div class="ep-results-grid">
+                        <div class="ep-res-item">
+                            <div class="ep-res-label">Équité nette totale</div>
+                            <div class="ep-res-number" id="rpOutEquity">230 000 $</div>
+                        </div>
+                        <div class="ep-res-item">
+                            <div class="ep-res-label">Soulte à verser (ex-conjoint)</div>
+                            <div class="ep-res-number" id="rpOutSoulte" style="color:#f5b4e8;">115 000 $</div>
+                        </div>
+                        <div class="ep-res-item">
+                            <div class="ep-res-label">Nouveau prêt requis</div>
+                            <div class="ep-res-number" id="rpOutNewLoan">435 000 $</div>
+                        </div>
+                        <div class="ep-res-item">
+                            <div class="ep-res-label">Nouvelle mensualité (25 ans)</div>
+                            <div class="ep-res-number" id="rpOutMonthly">2 311 $ / mois</div>
+                        </div>
+                    </div>
+                    <div class="ep-res-status" id="rpOutProgramStatus">
+                        ✅ Ratio prêt-valeur de <strong>79,1 %</strong> : Admissible au refinancement conventionnel (≤ 80 %) sans prime d'assurance SCHL.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ZOHO CRM LEAD FORM -->
+            <div class="ep-form-panel" id="formulaire-niche">
+                <span class="ep-niche-card-tag">100 % Confidentiel &amp; Sans Frais</span>
+                <h3>Obtenir mon analyse personnalisée</h3>
+                <p style="color:#5c4b58; font-size:0.92rem; margin-bottom:22px;">
+                    Recevez votre étude de capacité hypothécaire ET votre opinion de la valeur marchande (si rachat de part) sous 24 heures.
+                </p>
+
+                <iframe id="nicheHiddenFrame" name="nicheHiddenFrame" style="display:none;"></iframe>
+                <form id="nicheLeadForm" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" target="nicheHiddenFrame" onsubmit="submitNicheForm(event)">
+                    <input type="hidden" name="xnQsjsdp" value="4777215572ad23070d770f4a8eab8f32cfa750d87889092408a861ae5cd7f2e4">
+                    <input type="hidden" name="xmIwtLD" value="b358cb3c1395a9c2f2e330477d73ea406f76bb861c39272321a50fb5a80133e615505cf5ae433a536247951d34b8df40">
+                    <input type="hidden" name="actionType" value="TGVhZHM=">
+                    <input type="hidden" name="returnURL" value="https://www.evanpatruno.ca/rachat-de-part">
+                    <input type="hidden" name="LEADCF7" value="RACHAT_PART_AUTONOME">
+                    <input type="hidden" name="Description" id="zohoNicheDesc" value="">
+
+                    <div class="ep-field-group">
+                        <label class="ep-field-label">Votre situation principale</label>
+                        <select id="nicheProfileSelect" class="ep-select" required>
+                            <option value="Rachat de Part / Séparation (Évaluation + Hypothèque)" selected>💔 Rachat de Part / Séparation (Évaluation + Hypothèque)</option>
+                            <option value="Travailleur Autonome / Incorporé">💼 Hypothèque Travailleur Autonome / Incorporé</option>
+                            <option value="Achat de Plex (Duplex / Triplex / Quadruplex)">🏢 Achat ou Refinancement de Plex (2 à 4 logements)</option>
+                        </select>
+                    </div>
+
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;" class="ep-field-group">
+                        <div>
+                            <label class="ep-field-label">Prénom *</label>
+                            <input type="text" name="First Name" class="ep-input" placeholder="Prénom" required>
+                        </div>
+                        <div>
+                            <label class="ep-field-label">Nom *</label>
+                            <input type="text" name="Last Name" class="ep-input" placeholder="Nom" required>
+                        </div>
+                    </div>
+
+                    <div class="ep-field-group">
+                        <label class="ep-field-label">Téléphone *</label>
+                        <input type="tel" name="Phone" class="ep-input" placeholder="514-000-0000" required>
+                    </div>
+
+                    <div class="ep-field-group">
+                        <label class="ep-field-label">Courriel *</label>
+                        <input type="email" name="Email" class="ep-input" placeholder="votre@courriel.com" required>
+                    </div>
+
+                    <div class="ep-field-group">
+                        <label class="ep-field-label">Ville de la propriété</label>
+                        <input type="text" id="nicheCityInput" class="ep-input" placeholder="Ex: Saint-Jean-sur-Richelieu, Brossard, Laval...">
+                    </div>
+
+                    <div style="margin-bottom: 18px;">
+                        <label style="display:flex; align-items:flex-start; gap:10px; font-size:0.84rem; color:#4b3d48; cursor:pointer;">
+                            <input type="checkbox" name="LEADCF109" checked style="margin-top:3px; accent-color:#873276;">
+                            <span>M'abonner également à l'infolettre mensuelle (analyses du marché et des taux).</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" id="nicheSubmitBtn" class="ep-submit-btn">Recevoir mon étude confidentielle 🔒</button>
+                </form>
+
+                <div id="nicheFormSuccess" style="display:none; text-align:center; padding:30px 10px;">
+                    <div style="font-size:3rem; margin-bottom:12px;">✅</div>
+                    <h4 style="font-family:'Outfit',sans-serif; font-size:1.4rem; color:#1e0a19; margin-bottom:10px;">Demande transmise en toute confidentialité !</h4>
+                    <p style="color:#4b3d48; font-size:0.95rem; line-height:1.6;">
+                        Merci ! Evan Patruno a bien reçu les paramètres de votre dossier et vous contactera rapidement pour analyser vos options.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function formatCAD(n) {
+        return Math.round(n).toLocaleString('fr-CA') + ' $';
+    }
+
+    function calcCanadianMonthlyMortgage(principal, annualRatePct, years) {
+        if (principal <= 0) return 0;
+        const semiAnnualRate = (annualRatePct / 100) / 2;
+        const monthlyRate = Math.pow(1 + semiAnnualRate, 2 / 12) - 1;
+        const totalPayments = years * 12;
+        return principal * (monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) / (Math.pow(1 + monthlyRate, totalPayments) - 1);
+    }
+
+    function updateRachatCalc() {
+        const propVal = parseFloat(document.getElementById('rpPropVal').value) || 0;
+        const mortBal = parseFloat(document.getElementById('rpMortBal').value) || 0;
+        const jointDebt = parseFloat(document.getElementById('rpJointDebt').value) || 0;
+        const sharePct = parseFloat(document.getElementById('rpSharePct').value) || 0.5;
+        const rate = parseFloat(document.getElementById('rpRate').value) || 4.09;
+
+        document.getElementById('rpValDisplay').textContent = formatCAD(propVal);
+        document.getElementById('rpBalDisplay').textContent = formatCAD(mortBal);
+        document.getElementById('rpDebtDisplay').textContent = formatCAD(jointDebt);
+
+        const netEquity = Math.max(0, propVal - mortBal - jointDebt);
+        const soulte = netEquity * sharePct;
+        const newLoan = mortBal + jointDebt + soulte;
+        const ltv = propVal > 0 ? (newLoan / propVal) * 100 : 0;
+        const monthly = calcCanadianMonthlyMortgage(newLoan, rate, 25);
+
+        document.getElementById('rpOutEquity').textContent = formatCAD(netEquity);
+        document.getElementById('rpOutSoulte').textContent = formatCAD(soulte);
+        document.getElementById('rpOutNewLoan').textContent = formatCAD(newLoan);
+        document.getElementById('rpOutMonthly').textContent = formatCAD(monthly) + ' / mois';
+
+        const statusEl = document.getElementById('rpOutProgramStatus');
+        if (ltv <= 80) {
+            statusEl.style.background = 'rgba(74, 222, 128, 0.14)';
+            statusEl.style.borderColor = 'rgba(74, 222, 128, 0.35)';
+            statusEl.innerHTML = '✅ Ratio prêt-valeur de <strong>' + ltv.toFixed(1) + ' %</strong> : Admissible au refinancement conventionnel (≤ 80 %) sans prime SCHL.';
+        } else if (ltv <= 95) {
+            statusEl.style.background = 'rgba(250, 204, 21, 0.16)';
+            statusEl.style.borderColor = 'rgba(250, 204, 21, 0.45)';
+            statusEl.innerHTML = '💡 Ratio prêt-valeur de <strong>' + ltv.toFixed(1) + ' %</strong> : Admissible au <strong>Programme Rachat de Part Assuré (jusqu\'à 95 %)</strong> avec entente de séparation.';
+        } else {
+            statusEl.style.background = 'rgba(248, 113, 113, 0.18)';
+            statusEl.style.borderColor = 'rgba(248, 113, 113, 0.45)';
+            statusEl.innerHTML = '⚠️ Ratio prêt-valeur de <strong>' + ltv.toFixed(1) + ' %</strong> (> 95 %) : Un apport liquidités ou un ajustement de la valeur marchande sera requis.';
+        }
+    }
+
+    function submitNicheForm(e) {
+        const profile = document.getElementById('nicheProfileSelect').value;
+        const city = document.getElementById('nicheCityInput').value || 'Non précisée';
+        const propVal = document.getElementById('rpValDisplay').textContent;
+        const mortBal = document.getElementById('rpBalDisplay').textContent;
+        const soulte = document.getElementById('rpOutSoulte').textContent;
+        const newLoan = document.getElementById('rpOutNewLoan').textContent;
+
+        const desc = [
+            "⚖️ DOSSIER SPÉCIALISÉ (Page /rachat-de-part) :",
+            "- Profil : " + profile,
+            "- Ville : " + city,
+            "- Simulation : Valeur " + propVal + " | Solde " + mortBal + " | Soulte estimée " + soulte + " | Nouveau prêt " + newLoan,
+            "- Date : " + new Date().toLocaleDateString('fr-CA')
+        ].join('\n');
+
+        const descInput = document.getElementById('zohoNicheDesc');
+        if (descInput) descInput.value = desc;
+
+        const btn = document.getElementById('nicheSubmitBtn');
+        const form = document.getElementById('nicheLeadForm');
+        const success = document.getElementById('nicheFormSuccess');
+        if (btn) {
+            btn.textContent = 'Transmission sécurisée...';
+            btn.disabled = true;
+            setTimeout(() => {
+                if (form) form.style.display = 'none';
+                if (success) success.style.display = 'block';
+            }, 1200);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', updateRachatCalc);
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne le rachat de part d'une maison lors d'une séparation au Québec ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lors d'une séparation ou d'un divorce, l'un des conjoints peut racheter la part de l'autre (la soulte) grâce à une évaluation de la valeur marchande et un refinancement hypothécaire pouvant aller jusqu'à 80 % en prêt conventionnel ou jusqu'à 95 % via le programme de rachat de part assuré SCHL/Sagen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment obtenir une hypothèque en tant que travailleur autonome ou incorporé ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un courtier hypothécaire Multi-Prêts a accès à plus de 20 institutions financières permettant de majorer le revenu net déclaré de 15 % à 20 % ou d'utiliser les états financiers et relevés bancaires d'entreprise pour qualifier votre prêt."
+      }
+    }
+  ]
+}
+</script>
