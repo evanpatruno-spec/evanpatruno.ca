@@ -1695,6 +1695,13 @@ INSTRUCTIONS:
                     });
                 }
             }
+            if (typeof window.fbq === 'function') {
+                if (isNewsletter) {
+                    window.fbq('track', 'CompleteRegistration', { content_name: leadSource });
+                } else {
+                    window.fbq('track', 'Lead', { content_name: leadSource, currency: 'CAD', value: 150 });
+                }
+            }
         }
 
         // 1. Intercepter les soumissions classiques de formulaires Zoho CRM
@@ -1742,6 +1749,9 @@ INSTRUCTIONS:
                     lead_source: 'Appel Telephonique Direct',
                     page_path: window.location.pathname
                 });
+                if (typeof window.fbq === 'function') {
+                    window.fbq('track', 'Contact', { content_name: 'Appel Telephonique Direct' });
+                }
             } else if (href.includes('calendar.app.google')) {
                 window.gtag('event', 'schedule_appointment', {
                     page_path: window.location.pathname
@@ -1756,21 +1766,33 @@ INSTRUCTIONS:
                     lead_source: 'RDV Google Calendar',
                     page_path: window.location.pathname
                 });
+                if (typeof window.fbq === 'function') {
+                    window.fbq('track', 'Schedule', { content_name: 'RDV Google Calendar', currency: 'CAD', value: 200 });
+                }
             } else if (href.includes('wa.me')) {
                 window.gtag('event', 'contact_messaging', {
                     method: 'WhatsApp',
                     page_path: window.location.pathname
                 });
+                if (typeof window.fbq === 'function') {
+                    window.fbq('track', 'Contact', { content_name: 'WhatsApp' });
+                }
             } else if (href.includes('m.me')) {
                 window.gtag('event', 'contact_messaging', {
                     method: 'Messenger',
                     page_path: window.location.pathname
                 });
+                if (typeof window.fbq === 'function') {
+                    window.fbq('track', 'Contact', { content_name: 'Messenger' });
+                }
             } else if (href.includes('ig.me')) {
                 window.gtag('event', 'contact_messaging', {
                     method: 'Instagram',
                     page_path: window.location.pathname
                 });
+                if (typeof window.fbq === 'function') {
+                    window.fbq('track', 'Contact', { content_name: 'Instagram' });
+                }
             }
         }, true);
 
@@ -1807,7 +1829,7 @@ INSTRUCTIONS:
     })();
 </script>
 
-<!-- Meta Pixel Code (EN ATTENTE DE ID)
+<!-- Meta Pixel Code — Evan Patruno Courtier Immobilier (1805288300254947) -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -1817,10 +1839,10 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'VOTRE_PIXEL_ID');
+fbq('init', '1805288300254947');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=VOTRE_PIXEL_ID&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1805288300254947&ev=PageView&noscript=1"
 /></noscript>
-End Meta Pixel Code -->
+<!-- End Meta Pixel Code -->
