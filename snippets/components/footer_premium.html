@@ -1029,6 +1029,17 @@
                 const i = document.createElement('input'); i.type='hidden'; i.name=k; i.value=v; f.appendChild(i);
             }
             document.body.appendChild(f); f.submit(); f.remove();
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', 'generate_lead', {
+                    currency: 'CAD',
+                    value: 150,
+                    lead_source: 'CHATBOT_QUALIFICATEUR',
+                    projet: botAnswers.projet || '',
+                    secteur: botAnswers.secteur || '',
+                    delai: botAnswers.delai || '',
+                    page_path: window.location.pathname
+                });
+            }
 
             const name = botAnswers.prenom ? ', ' + botAnswers.prenom : '';
             setTimeout(() => botAddMsg('✅ Merci' + name + ' ! Evan va vous recontacter très bientôt. Bonne journée ! 🏠'), 300);

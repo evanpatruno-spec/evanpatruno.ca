@@ -1558,15 +1558,119 @@ INSTRUCTIONS:
 <!-- ⚙️ TRACKING & ANALYTICS (GA4 & META PIXEL) ⚙️ -->
 <!-- ============================================== -->
 
-<!-- Google tag (gtag.js) GA4 -->
-<!-- REMPLACEZ "G-XXXXXXXXXX" PAR VOTRE ID GOOGLE ANALYTICS -->
+<!-- Google tag (gtag.js) GA4 + MOTEUR DE CONVERSIONS V1.0 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X76BD8B440"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-X76BD8B440');
+
+    // ============================================================================
+    // 🎯 SUIVI AUTOMATIQUE DES CONVERSIONS GA4 & GOOGLE ADS (Zoho CRM + Clics)
+    // ============================================================================
+    (function() {
+        const trackedForms = new WeakSet();
+
+        function trackZohoFormSubmission(form) {
+            if (!form || trackedForms.has(form)) return;
+            const action = (form.getAttribute('action') || '').toLowerCase();
+            if (!action.includes('webtoleadform') && !action.includes('submit-lead') && !action.includes('newsletter')) return;
+            trackedForms.add(form);
+
+            const sourceInput = form.querySelector('input[name="LEADCF7"], input[name="Lead Source"]');
+            const leadSource = (sourceInput && sourceInput.value) ? sourceInput.value : (form.id || window.location.pathname || 'Formulaire Web');
+            const isNewsletter = /infolettre|newsletter/i.test(leadSource) || form.id === 'footerNewsletterForm';
+
+            if (typeof window.gtag === 'function') {
+                if (isNewsletter) {
+                    window.gtag('event', 'sign_up', {
+                        method: leadSource,
+                        page_path: window.location.pathname,
+                        page_title: document.title
+                    });
+                } else {
+                    window.gtag('event', 'generate_lead', {
+                        currency: 'CAD',
+                        value: 150,
+                        lead_source: leadSource,
+                        form_id: form.id || 'zoho_webtolead',
+                        page_path: window.location.pathname,
+                        page_title: document.title
+                    });
+                }
+            }
+        }
+
+        // 1. Intercepter les soumissions classiques de formulaires Zoho CRM
+        document.addEventListener('submit', function(e) {
+            if (e.target && e.target.tagName === 'FORM') {
+                trackZohoFormSubmission(e.target);
+            }
+        }, true);
+
+        // 2. Intercepter les soumissions programmatiques (ex: Chatbot silencieux via iframe)
+        const nativeSubmit = HTMLFormElement.prototype.submit;
+        HTMLFormElement.prototype.submit = function() {
+            try { trackZohoFormSubmission(this); } catch (err) {}
+            return nativeSubmit.apply(this, arguments);
+        };
+
+        // 3. Suivre les clics à haute intention (Appels, RDV Google Calendar, WhatsApp, Messenger, Chatbot)
+        document.addEventListener('click', function(e) {
+            if (typeof window.gtag !== 'function') return;
+
+            const chatbotBtn = e.target.closest('#chatbot-open-btn');
+            if (chatbotBtn) {
+                window.gtag('event', 'chatbot_open', {
+                    page_path: window.location.pathname
+                });
+                return;
+            }
+
+            const link = e.target.closest('a[href]');
+            if (!link) return;
+            const href = (link.getAttribute('href') || '').trim();
+
+            if (href.startsWith('tel:')) {
+                window.gtag('event', 'click_phone', {
+                    phone_number: href.replace('tel:', ''),
+                    page_path: window.location.pathname
+                });
+                window.gtag('event', 'generate_lead', {
+                    currency: 'CAD',
+                    value: 100,
+                    lead_source: 'Appel Telephonique Direct',
+                    page_path: window.location.pathname
+                });
+            } else if (href.includes('calendar.app.google')) {
+                window.gtag('event', 'schedule_appointment', {
+                    page_path: window.location.pathname
+                });
+                window.gtag('event', 'generate_lead', {
+                    currency: 'CAD',
+                    value: 200,
+                    lead_source: 'RDV Google Calendar',
+                    page_path: window.location.pathname
+                });
+            } else if (href.includes('wa.me')) {
+                window.gtag('event', 'contact_messaging', {
+                    method: 'WhatsApp',
+                    page_path: window.location.pathname
+                });
+            } else if (href.includes('m.me')) {
+                window.gtag('event', 'contact_messaging', {
+                    method: 'Messenger',
+                    page_path: window.location.pathname
+                });
+            } else if (href.includes('ig.me')) {
+                window.gtag('event', 'contact_messaging', {
+                    method: 'Instagram',
+                    page_path: window.location.pathname
+                });
+            }
+        }, true);
+    })();
 </script>
 
 <!-- Meta Pixel Code (EN ATTENTE DE ID)
