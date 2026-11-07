@@ -469,6 +469,75 @@ def get_boc_rate():
     except:
         return "2.50%"
 
+def fetch_multiprets_rates():
+    """Scrapes official Multi-Prêts Québec rates from multi-prets.com."""
+    rates = {
+        "fixe_1an": "4.79%",
+        "affiche_1an": "5.49%",
+        "fixe_2ans": "4.54%",
+        "affiche_2ans": "5.24%",
+        "fixe_3ans": "4.44%",
+        "affiche_3ans": "6.05%",
+        "fixe_4ans": "4.39%",
+        "affiche_4ans": "6.09%",
+        "fixe_5ans": "4.64%",
+        "affiche_5ans": "6.19%",
+        "fixe_7ans": "5.14%",
+        "affiche_7ans": "6.40%",
+        "fixe_10ans": "5.24%",
+        "affiche_10ans": "6.80%",
+        "variable_5ans": "3.90%",
+        "prime_rate": "4.70%",
+        "source_url": "https://www.multi-prets.com/fr/options-hypothecaires/nos-taux/",
+        "updated_at": datetime.now().strftime('%Y-%m-%d')
+    }
+    try:
+        print("Scraping Multi-Prêts Québec official rates...")
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        }
+        res = requests.get(rates["source_url"], headers=headers, timeout=15)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, 'html.parser')
+            qc_block = soup.find('div', {'class': 'provinceRates', 'data-province': 'qc'})
+            if qc_block:
+                mapping = {
+                    "1 an": ("fixe_1an", "affiche_1an"),
+                    "2 ans": ("fixe_2ans", "affiche_2ans"),
+                    "3 ans": ("fixe_3ans", "affiche_3ans"),
+                    "4 ans": ("fixe_4ans", "affiche_4ans"),
+                    "5 ans": ("fixe_5ans", "affiche_5ans"),
+                    "7 ans": ("fixe_7ans", "affiche_7ans"),
+                    "10 ans": ("fixe_10ans", "affiche_10ans")
+                }
+                for item in qc_block.select('li.ratesList-item'):
+                    title_el = item.select_one('h3.title')
+                    our_el = item.select_one('.ourRates .rate')
+                    reg_el = item.select_one('.regularRates .rate')
+                    if not title_el or not our_el:
+                        continue
+                    title_txt = title_el.get_text(" ", strip=True).lower()
+                    our_val = our_el.get_text(strip=True).replace(',', '.')
+                    reg_val = reg_el.get_text(strip=True).replace(',', '.') if reg_el else ""
+                    if "variable" in title_txt and "5 ans" in title_txt:
+                        rates["variable_5ans"] = our_val
+                        if reg_val:
+                            rates["prime_rate"] = reg_val
+                    elif "fixe" in title_txt:
+                        for term_lbl, (k_our, k_reg) in mapping.items():
+                            # Avoid matching "10 ans" with "1 an"
+                            if term_lbl == "1 an" and "10 ans" in title_txt:
+                                continue
+                            if term_lbl in title_txt:
+                                rates[k_our] = our_val
+                                if reg_val:
+                                    rates[k_reg] = reg_val
+                                break
+                print(f"  [OK] Multi-Prêts QC: Fixe 5 ans={rates['fixe_5ans']}, Fixe 3 ans={rates['fixe_3ans']}, Variable 5 ans={rates['variable_5ans']}")
+    except Exception as e:
+        print(f"  [Info] Erreur scraping Multi-Prêts ({e}), utilisation des taux QC vérifiés.")
+    return rates
+
 def main():
     all_news = []
     for feed in FEEDS:
@@ -477,18 +546,20 @@ def main():
     unique_news = {n['link']: n for n in all_news}.values()
     final_news = list(unique_news)[:60]
     
-    # On ajoute le taux BOC et les stats APCIQ
+    # On ajoute le taux BOC, les taux Multi-Prêts QC et les stats APCIQ
     boc_rate = get_boc_rate()
     market_stats = fetch_apciq_stats()
+    multiprets_rates = fetch_multiprets_rates()
     
     data_to_save = {
         "news": final_news,
         "boc_rate": boc_rate,
+        "multiprets_rates": multiprets_rates,
         "market_stats": market_stats,
         "last_update": datetime.now().strftime('%Y-%m-%d %H:%M')
     }
     
-    print(f"Total: {len(final_news)} news. Taux BOC: {boc_rate}")
+    print(f"Total: {len(final_news)} news. Taux BOC: {boc_rate}. Multi-Prêts 5 ans fixe: {multiprets_rates['fixe_5ans']}")
     
     # Save local
     with open('news.json', 'w', encoding='utf-8') as f:

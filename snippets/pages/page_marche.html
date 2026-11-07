@@ -1,20 +1,27 @@
 <!-- 
-    SNIPPET : BAROMÈTRE DU MARCHÉ IMMOBILIER
+    SNIPPET : BAROMÈTRE DU MARCHÉ IMMOBILIER & HYPOTHÉCAIRE (ÉDITION LUXURY PRUNE & OR)
     PAGE   : /marche
-    DATA   : boc_rates.json + news.json (générés par news_scraper.py)
-    COLLER : Dans un élément "Embed Code" de Zoho Sites
+    DATA   : boc_rates.json + news.json (générés quotidiennement par news_scraper.py & boc_monitor.py)
+    COLLER : Dans l'extrait de code Zoho Sites de la page Marché
 -->
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
     :root {
+        --m-bg-deep: #1e0a19;
+        --m-bg-card: #2b0b24;
         --m-primary: #873276;
-        --m-primary-glow: rgba(135, 50, 118, 0.4);
+        --m-primary-glow: rgba(135, 50, 118, 0.35);
         --m-accent: #d4af37;
-        --m-bg: #120010;
-        --m-card: rgba(255, 255, 255, 0.03);
-        --m-border: rgba(135, 50, 118, 0.35);
-        --m-success: #2ecc71;
-        --m-danger: #e74c3c;
+        --m-accent-soft: #f3e5ab;
+        --m-accent-border: rgba(212, 175, 55, 0.24);
+        --m-card: rgba(43, 11, 36, 0.58);
+        --m-border: rgba(212, 175, 55, 0.16);
+        --m-text: #fdfbf7;
+        --m-text-muted: rgba(253, 251, 247, 0.68);
+        --m-success: #4ade80;
+        --m-danger: #f87171;
     }
 
     #header-banner-section,
@@ -24,590 +31,614 @@
     }
 
     .baro-wrap {
-        font-family: 'Inter', sans-serif;
-        color: #fff;
-        background: var(--m-bg);
-        border-radius: 32px;
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--m-text);
+        background: linear-gradient(165deg, #1e0a19 0%, #260b20 50%, #1a0716 100%);
+        border-radius: 28px;
         overflow: hidden;
-        margin: 8px 0 25px;
-        border: 1px solid rgba(135, 50, 118, 0.3);
+        margin: 8px 0 28px;
+        border: 1px solid rgba(212, 175, 55, 0.22);
         box-shadow:
-            0 30px 80px rgba(0, 0, 0, 0.55),
-            0 0 60px rgba(135, 50, 118, 0.12);
+            0 30px 80px rgba(0, 0, 0, 0.65),
+            0 0 60px rgba(135, 50, 118, 0.14);
+        position: relative;
     }
 
-    /* ── HERO (COMPACT & ÉLÉGANT) ── */
+    /* ── HERO ÉDITORIAL LUXURY ── */
     .baro-hero {
         background:
-            linear-gradient(160deg, rgba(18, 0, 16, 0.95) 0%, rgba(80, 20, 70, 0.84) 100%),
+            linear-gradient(165deg, rgba(30, 10, 25, 0.94) 0%, rgba(43, 11, 36, 0.88) 55%, rgba(30, 10, 25, 0.97) 100%),
             url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') center/cover;
-        padding: 38px 24px 32px;
+        padding: 46px 28px 34px;
         text-align: center;
         position: relative;
         overflow: hidden;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.18);
     }
 
     .baro-hero::before {
         content: '';
         position: absolute;
         inset: 0;
-        background: radial-gradient(ellipse at 50% 120%, rgba(135, 50, 118, 0.32) 0%, transparent 65%);
+        background: radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 65%);
         pointer-events: none;
     }
 
     .baro-eyebrow {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        padding: 4px 14px;
-        background: rgba(135, 50, 118, 0.15);
-        border: 1px solid rgba(135, 50, 118, 0.4);
+        gap: 9px;
+        padding: 6px 16px;
+        background: rgba(212, 175, 55, 0.08);
+        border: 1px solid rgba(212, 175, 55, 0.35);
         border-radius: 50px;
-        font-size: 0.66rem;
-        font-weight: 800;
+        font-size: 0.68rem;
+        font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #ffb8e6;
-        margin-bottom: 12px;
+        letter-spacing: 0.2em;
+        color: var(--m-accent);
+        margin-bottom: 14px;
     }
 
     .baro-eyebrow-dot {
         width: 6px;
         height: 6px;
-        background: var(--m-primary);
+        background: var(--m-accent);
         border-radius: 50%;
-        box-shadow: 0 0 10px var(--m-primary);
-        animation: baroPulse 2s ease-in-out infinite;
+        box-shadow: 0 0 10px var(--m-accent);
+        animation: baroPulse 2.2s ease-in-out infinite;
     }
 
     @keyframes baroPulse {
-        0%, 100% {
-            opacity: 1;
-            transform: scale(1);
-        }
-        50% {
-            opacity: 0.6;
-            transform: scale(1.4);
-        }
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.45; transform: scale(1.35); }
     }
 
     .baro-hero h1 {
-        font-family: 'Outfit', sans-serif;
-        font-size: clamp(1.85rem, 3.4vw, 2.65rem);
-        font-weight: 900;
-        margin: 0 0 8px;
-        line-height: 1.15;
-        letter-spacing: -0.8px;
-        color: #ffffff !important;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(2.1rem, 4.2vw, 3.25rem);
+        font-weight: 600;
+        margin: 0 0 10px;
+        line-height: 1.12;
+        letter-spacing: -0.01em;
+        color: var(--m-text) !important;
     }
 
-    .baro-hero h1 span {
-        background: linear-gradient(135deg, #ffffff 30%, #ffb8e6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+    .baro-hero h1 em {
+        font-style: italic;
+        color: var(--m-accent);
+        font-weight: 600;
     }
 
     .baro-hero-sub {
-        font-size: 0.94rem;
-        color: rgba(255, 255, 255, 0.6);
-        margin: 0 0 16px;
+        font-size: 0.92rem;
+        color: var(--m-text-muted);
+        margin: 0 auto 18px;
+        max-width: 660px;
+        font-weight: 300;
+        letter-spacing: 0.03em;
+    }
+
+    .baro-meta-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .baro-update-badge {
         display: inline-flex;
         align-items: center;
-        gap: 6px;
-        padding: 5px 15px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        gap: 7px;
+        padding: 6px 16px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(212, 175, 55, 0.22);
         border-radius: 50px;
         font-size: 0.74rem;
-        color: rgba(255, 255, 255, 0.55);
+        color: rgba(253, 251, 247, 0.72);
+    }
+
+    .baro-update-badge strong {
+        color: var(--m-accent-soft);
+        font-weight: 600;
+    }
+
+    /* ── IDÉE #3 : QUICK-JUMP STICKY NAVIGATION BAR ── */
+    .baro-quicknav-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(30, 10, 25, 0.92);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.16);
+        padding: 11px 24px;
+    }
+
+    .baro-quicknav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        max-width: 1100px;
+        margin: 0 auto;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .baro-quicknav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .baro-qlink {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 14px;
+        border-radius: 50px;
+        font-size: 0.74rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: rgba(253, 251, 247, 0.75);
+        text-decoration: none;
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        background: rgba(43, 11, 36, 0.55);
+        white-space: nowrap;
+        transition: all 0.25s ease;
+        flex-shrink: 0;
+    }
+
+    .baro-qlink span.q-num {
+        color: var(--m-accent);
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 0.85rem;
+    }
+
+    .baro-qlink:hover {
+        border-color: var(--m-accent);
+        color: var(--m-text);
+        background: rgba(212, 175, 55, 0.12);
+        transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+        .baro-quicknav {
+            justify-content: flex-start;
+        }
+        .baro-quicknav-wrap {
+            padding: 10px 14px;
+        }
     }
 
     /* ── MAIN CONTENT ── */
     .baro-content {
-        padding: 0 30px 45px;
-        max-width: 1100px;
+        padding: 10px 30px 48px;
+        max-width: 1120px;
         margin: 0 auto;
     }
 
     @media (max-width: 768px) {
         .baro-wrap {
-            border-radius: 22px;
+            border-radius: 20px;
             margin: 6px 4px 20px;
         }
-
         .baro-hero {
-            padding: 30px 18px 26px;
+            padding: 32px 16px 26px;
         }
-
         .baro-content {
-            padding: 0 16px 35px;
+            padding: 6px 16px 36px;
         }
     }
 
-    /* ── SECTION TITLE ── */
-    .baro-section-title {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.22rem;
-        font-weight: 800;
-        color: #fff;
-        margin: 30px 0 16px;
-        display: flex;
+    /* ── SECTION HEADERS (LUXURY EDITORIAL) ── */
+    .baro-sec-head {
+        margin: 42px 0 20px;
+        scroll-margin-top: 72px;
+    }
+
+    .baro-sec-kicker {
+        display: inline-flex;
         align-items: center;
         gap: 10px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: var(--m-accent);
+        margin-bottom: 6px;
     }
 
-    .baro-section-title::after {
+    .baro-sec-kicker::after {
         content: '';
-        flex: 1;
+        width: 36px;
         height: 1px;
-        background: linear-gradient(to right, rgba(135, 50, 118, 0.4), transparent);
+        background: linear-gradient(90deg, var(--m-accent), transparent);
+    }
+
+    .baro-section-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(1.55rem, 2.8vw, 2.05rem);
+        font-weight: 600;
+        color: var(--m-text);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        line-height: 1.2;
+    }
+
+    .baro-section-title em {
+        font-style: italic;
+        color: var(--m-accent);
+    }
+
+    .baro-section-period {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--m-accent-soft);
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        padding: 4px 12px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
     }
 
     /* ── BOC CARD ── */
     .boc-mega-card {
-        background: linear-gradient(135deg, rgba(135, 50, 118, 0.12), rgba(0, 0, 0, 0.3));
-        border: 1px solid rgba(135, 50, 118, 0.5);
-        border-radius: 26px;
-        padding: 28px 34px;
+        background: linear-gradient(145deg, rgba(43, 11, 36, 0.85) 0%, rgba(26, 7, 22, 0.92) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        border-radius: 22px;
+        padding: 28px 32px;
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 24px;
         align-items: center;
-        box-shadow: 0 0 35px rgba(135, 50, 118, 0.18), 0 16px 32px rgba(0, 0, 0, 0.28);
-        margin-bottom: 8px;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+        margin-bottom: 18px;
     }
 
     @media (max-width: 768px) {
         .boc-mega-card {
             grid-template-columns: 1fr;
             padding: 22px 18px;
-            border-radius: 20px;
+            border-radius: 18px;
             gap: 18px;
         }
+    }
+
+    .boc-label-top {
+        font-size: 0.68rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--m-accent);
+        margin-bottom: 6px;
     }
 
     .boc-rate-display {
         display: flex;
         align-items: baseline;
         gap: 6px;
-        margin: 6px 0;
+        margin: 4px 0 8px;
     }
 
     .boc-rate-big {
-        font-family: 'Outfit', sans-serif;
-        font-size: clamp(2.4rem, 5vw, 3.6rem);
-        font-weight: 900;
-        color: #fff;
-        line-height: 1;
-        text-shadow: 0 0 25px rgba(135, 50, 118, 0.6);
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(2.8rem, 5.2vw, 4rem);
+        font-weight: 700;
+        color: var(--m-text);
+        line-height: 0.95;
     }
 
     .boc-rate-unit {
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 0.5);
-    }
-
-    .boc-label-top {
-        font-size: 0.7rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--m-primary);
-        margin-bottom: 4px;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.65rem;
+        font-weight: 600;
+        color: var(--m-accent);
     }
 
     .boc-status-pill {
         display: inline-flex;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
         padding: 5px 14px;
         border-radius: 50px;
-        font-size: 0.76rem;
-        font-weight: 800;
-        margin-top: 6px;
+        font-size: 0.74rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        margin-top: 4px;
     }
 
     .boc-status-stable {
         background: rgba(212, 175, 55, 0.12);
-        border: 1px solid rgba(212, 175, 55, 0.4);
-        color: #d4af37;
+        border: 1px solid rgba(212, 175, 55, 0.38);
+        color: var(--m-accent-soft);
     }
 
     .boc-status-cut {
-        background: rgba(46, 204, 113, 0.12);
-        border: 1px solid rgba(46, 204, 113, 0.4);
-        color: #2ecc71;
+        background: rgba(74, 222, 128, 0.12);
+        border: 1px solid rgba(74, 222, 128, 0.38);
+        color: #4ade80;
     }
 
     .boc-status-hike {
-        background: rgba(231, 76, 60, 0.12);
-        border: 1px solid rgba(231, 76, 60, 0.4);
-        color: #e74c3c;
+        background: rgba(248, 113, 113, 0.12);
+        border: 1px solid rgba(248, 113, 113, 0.38);
+        color: #f87171;
     }
 
-    /* Countdown */
     .boc-countdown-block {
         text-align: center;
-        background: rgba(0, 0, 0, 0.25);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        padding: 20px 30px;
-        min-width: 180px;
-    }
-
-    @media (max-width: 768px) {
-        .boc-countdown-block {
-            padding: 18px;
-            min-width: unset;
-        }
+        background: rgba(30, 10, 25, 0.72);
+        border: 1px solid rgba(212, 175, 55, 0.22);
+        border-radius: 18px;
+        padding: 20px 28px;
+        min-width: 195px;
     }
 
     .boc-countdown-num {
-        font-family: 'Outfit', sans-serif;
-        font-size: 2.6rem;
-        font-weight: 900;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 2.8rem;
+        font-weight: 700;
         line-height: 1;
-        color: #fff;
+        color: var(--m-accent);
     }
 
     .boc-countdown-lbl {
         font-size: 0.65rem;
-        font-weight: 800;
+        font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        color: rgba(255, 255, 255, 0.45);
-        margin-top: 5px;
+        letter-spacing: 0.18em;
+        color: var(--m-text-muted);
+        margin-top: 6px;
     }
 
     .boc-countdown-date {
         margin-top: 8px;
         font-size: 0.8rem;
-        font-weight: 700;
-        color: var(--m-accent);
+        font-weight: 600;
+        color: var(--m-text);
     }
 
-    /* ── FILTER BAR ── */
-
-    /* ── FILTER BAR ── */
-    .baro-filter-bar {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-bottom: 22px;
-    }
-
-    .baro-filter-btn {
-        padding: 8px 20px;
-        border-radius: 50px;
-        border: 1px solid rgba(135, 50, 118, 0.35);
-        background: transparent;
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 0.82rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.25s ease;
-        font-family: 'Inter', sans-serif;
-    }
-
-    .baro-filter-btn:hover,
-    .baro-filter-btn.active {
-        background: var(--m-primary);
-        border-color: var(--m-primary);
-        color: #fff;
-        box-shadow: 0 0 15px rgba(135, 50, 118, 0.5);
-    }
-
-    /* ── NEWS GRID ── */
-    .baro-news-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 16px;
-    }
-
-    @media (max-width: 600px) {
-        .baro-news-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .news-card {
-        background: var(--m-card);
-        border: 1px solid rgba(255, 255, 255, 0.07);
+    /* ── IDÉE #5 : TABLEAU OFFICIEL DES TAUX MULTI-PRÊTS QUÉBEC ── */
+    .mp-rates-panel {
+        background: linear-gradient(155deg, rgba(43, 11, 36, 0.75) 0%, rgba(30, 10, 25, 0.9) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.28);
         border-radius: 22px;
-        padding: 24px;
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
+        padding: 26px 28px;
+        margin-top: 16px;
+        position: relative;
+        overflow: hidden;
     }
 
-    .news-card:hover {
-        background: rgba(135, 50, 118, 0.08);
-        border-color: rgba(135, 50, 118, 0.4);
-        transform: translateY(-4px);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 20px rgba(135, 50, 118, 0.15);
-    }
-
-    .news-card-top {
+    .mp-rates-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 8px;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.14);
     }
 
-    .news-source-badge {
-        font-size: 0.65rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        padding: 3px 10px;
-        border-radius: 50px;
-        background: rgba(135, 50, 118, 0.15);
-        border: 1px solid rgba(135, 50, 118, 0.3);
-        color: var(--m-primary);
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 150px;
+    .mp-rates-title-group h3 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--m-text);
+        margin: 0 0 3px;
     }
 
-    .news-local-tag {
-        font-size: 0.62rem;
-        font-weight: 800;
-        padding: 3px 8px;
-        border-radius: 50px;
-        background: rgba(212, 175, 55, 0.12);
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        color: var(--m-accent);
-        white-space: nowrap;
-        flex-shrink: 0;
+    .mp-rates-title-group p {
+        font-size: 0.78rem;
+        color: var(--m-text-muted);
+        margin: 0;
     }
 
-    .news-card-title {
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: #fff;
-        line-height: 1.4;
-    }
-
-    .news-card-desc {
-        font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.45);
-        line-height: 1.55;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .news-card-link {
+    .mp-source-pill {
         display: inline-flex;
         align-items: center;
-        gap: 5px;
-        font-size: 0.78rem;
-        font-weight: 700;
-        color: var(--m-primary);
-        margin-top: auto;
-        transition: gap 0.2s;
+        gap: 7px;
+        padding: 6px 14px;
+        border-radius: 50px;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.32);
+        color: var(--m-accent);
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
     }
 
-    .news-card:hover .news-card-link {
-        gap: 8px;
+    .mp-rates-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
     }
 
-    .news-empty {
-        grid-column: 1 / -1;
+    @media (max-width: 980px) {
+        .mp-rates-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .mp-rates-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .mp-rates-panel {
+            padding: 20px 16px;
+        }
+    }
+
+    .mp-rate-box {
+        background: rgba(30, 10, 25, 0.72);
+        border: 1px solid rgba(212, 175, 55, 0.16);
+        border-radius: 16px;
+        padding: 16px 14px;
         text-align: center;
-        padding: 40px 20px;
-        color: rgba(255, 255, 255, 0.3);
-        font-size: 0.9rem;
+        transition: all 0.28s ease;
+        position: relative;
     }
 
-    /* ── CTA SECTION ── */
-    .baro-cta-block {
-        margin-top: 50px;
-        background: linear-gradient(135deg, rgba(135, 50, 118, 0.15), rgba(0, 0, 0, 0.3));
-        border: 1px solid rgba(135, 50, 118, 0.4);
-        border-radius: 35px;
-        padding: 50px 40px;
+    .mp-rate-box.mp-featured {
+        background: linear-gradient(160deg, rgba(212, 175, 55, 0.15) 0%, rgba(43, 11, 36, 0.88) 100%);
+        border-color: rgba(212, 175, 55, 0.52);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+    }
+
+    .mp-rate-badge {
+        display: inline-block;
+        font-size: 0.58rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: #1e0a19;
+        background: linear-gradient(135deg, #d4af37, #f3e5ab);
+        padding: 2px 9px;
+        border-radius: 50px;
+        margin-bottom: 6px;
+    }
+
+    .mp-rate-term {
+        font-size: 0.74rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: rgba(253, 251, 247, 0.78);
+        margin-bottom: 6px;
+    }
+
+    .mp-rate-val {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--m-accent-soft);
+        line-height: 1;
+        margin-bottom: 6px;
+    }
+
+    .mp-rate-posted {
+        font-size: 0.68rem;
+        color: rgba(253, 251, 247, 0.46);
+    }
+
+    .mp-rate-posted s {
+        color: rgba(253, 251, 247, 0.58);
+    }
+
+    .mp-rates-footer {
         display: flex;
         align-items: center;
-        gap: 40px;
-        box-shadow: 0 0 40px rgba(135, 50, 118, 0.15);
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(212, 175, 55, 0.12);
     }
 
-    @media (max-width: 768px) {
-        .baro-cta-block {
-            flex-direction: column;
-            text-align: center;
-            padding: 35px 22px;
-            border-radius: 24px;
-            gap: 24px;
-        }
+    .mp-rates-note {
+        font-size: 0.72rem;
+        color: rgba(253, 251, 247, 0.5);
+        max-width: 680px;
+        line-height: 1.45;
     }
 
-    .baro-cta-photo {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--m-primary);
-        box-shadow: 0 0 20px rgba(135, 50, 118, 0.5);
-        flex-shrink: 0;
-    }
-
-    .baro-cta-text {
-        flex: 1;
-    }
-
-    .baro-cta-text h3 {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.6rem;
-        font-weight: 900;
-        margin: 0 0 8px;
-        color: #fff;
-    }
-
-    .baro-cta-text p {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.55);
-        margin: 0 0 22px;
-        line-height: 1.6;
-    }
-
-    .baro-cta-btn {
+    .mp-lock-btn {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
-        padding: 15px 30px;
-        background: linear-gradient(135deg, var(--m-primary), #b0549c);
-        color: #fff;
-        font-weight: 900;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
+        gap: 8px;
+        padding: 10px 20px;
         border-radius: 50px;
+        background: linear-gradient(135deg, #d4af37 0%, #c59b27 100%);
+        color: #1e0a19 !important;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
         text-decoration: none;
-        transition: all 0.35s ease;
-        box-shadow: 0 10px 30px rgba(135, 50, 118, 0.45);
-        border: none;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
+        transition: all 0.25s ease;
     }
 
-    .baro-cta-btn:hover {
+    .mp-lock-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(135, 50, 118, 0.4);
-        background: #9d3f8a;
+        box-shadow: 0 8px 22px rgba(212, 175, 55, 0.32);
     }
 
-    /* WAIT VS BUY WIDGET - BARO VERSION */
-    .baro-wait-widget {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px dashed rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 30px;
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    .wb-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .wb-input-group {
-        text-align: left;
-    }
-
-    .wb-input-group label {
-        display: block;
-        font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.6);
-        margin-bottom: 8px;
-    }
-
-    .wb-input {
-        width: 100%;
-        background: rgba(0, 0, 0, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 12px;
-        border-radius: 8px;
-        color: white;
-        font-family: inherit;
-    }
-
-    .wb-verdict-box {
-        background: rgba(167, 255, 0, 0.05);
-        border: 1px solid rgba(167, 255, 0, 0.2);
-        border-radius: 12px;
-        padding: 20px;
-        margin-top: 25px;
-    }
-
-    .wb-verdict-title {
-        color: #a7ff00;
-        font-weight: 800;
-        font-size: 1.1rem;
-        margin-bottom: 5px;
-    }
-
-    .wb-verdict-text {
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.8);
-        line-height: 1.4;
-    }
-
-    @media (max-width: 768px) {
-        .wb-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    /* ── SKELETON LOADER ── */
-    .skeleton {
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.05) 75%);
-        background-size: 200% 100%;
-        animation: skeletonShimmer 1.5s infinite;
-        border-radius: 8px;
-    }
-
-    @keyframes skeletonShimmer {
-        0% {
-            background-position: 200% 0;
-        }
-
-        100% {
-            background-position: -200% 0;
-        }
-    }
-
-    .skeleton-card {
-        background: rgba(255, 255, 255, 0.025);
-        border: 1px solid rgba(255, 255, 255, 0.06);
+    /* ── IDÉE #6 : GRAPHIQUE 24 MOIS DU TAUX DIRECTEUR (SVG) ── */
+    .boc-chart-card {
+        background: var(--m-card);
+        border: 1px solid var(--m-border);
         border-radius: 22px;
-        padding: 24px;
-        height: 160px;
+        padding: 24px 28px;
+        margin-top: 16px;
     }
 
-    /* ── STATS CARDS ── */
+    .boc-chart-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .boc-chart-kpis {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .boc-kpi-pill {
+        background: rgba(30, 10, 25, 0.65);
+        border: 1px solid rgba(212, 175, 55, 0.18);
+        border-radius: 12px;
+        padding: 8px 14px;
+    }
+
+    .boc-kpi-lbl {
+        font-size: 0.62rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--m-text-muted);
+        display: block;
+    }
+
+    .boc-kpi-val {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--m-accent-soft);
+    }
+
+    .boc-svg-wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .boc-svg-wrap svg {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* ── IDÉE #4 : STATS CARDS AVEC INVENTAIRE COMPLET ── */
     .baro-stats-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
-        margin-bottom: 25px;
+        gap: 16px;
+        margin-bottom: 24px;
     }
 
     @media (max-width: 1024px) {
@@ -623,148 +654,310 @@
     }
 
     .stats-card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 28px;
-        padding: 24px;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background: var(--m-card);
+        border: 1px solid var(--m-border);
+        border-radius: 22px;
+        padding: 22px 20px;
+        transition: all 0.35s ease;
         position: relative;
         overflow: hidden;
         display: flex;
         flex-direction: column;
     }
 
-    .stats-card:hover {
-        background: rgba(135, 50, 118, 0.08);
-        border-color: rgba(135, 50, 118, 0.4);
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    }
-
+    .stats-card:hover,
     .stats-card.active-region {
-        border-color: var(--m-primary);
-        background: rgba(135, 50, 118, 0.12);
-        box-shadow: 0 0 25px rgba(135, 50, 118, 0.3);
+        background: rgba(43, 11, 36, 0.85);
+        border-color: rgba(212, 175, 55, 0.48);
+        transform: translateY(-4px);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42);
     }
 
     .stats-city-label {
-        font-size: 0.75rem;
-        font-weight: 800;
+        font-size: 0.74rem;
+        font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: #ffb8e6 !important;
-        margin-bottom: 15px;
+        letter-spacing: 0.18em;
+        color: var(--m-accent) !important;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .stats-price-row {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
 
     .stats-price-label {
-        font-size: 0.65rem;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.64rem;
+        color: var(--m-text-muted);
         text-transform: uppercase;
-        margin-bottom: 2px;
+        letter-spacing: 0.1em;
+        margin-bottom: 3px;
     }
 
     .stats-price {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.6rem;
-        font-weight: 900;
-        color: #fff;
-        line-height: 1;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--m-text);
+        line-height: 1.05;
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
     }
 
     .stats-price-condo {
-        font-size: 1.2rem;
-        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.35rem;
+        color: rgba(253, 251, 247, 0.88);
     }
 
     .stats-sub-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        gap: 10px;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(212, 175, 55, 0.12);
     }
 
     .stats-mini-item {
         display: flex;
         flex-direction: column;
+        background: rgba(30, 10, 25, 0.48);
+        padding: 8px 10px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
     }
 
     .stats-mini-label {
-        font-size: 0.6rem;
-        color: rgba(255, 255, 255, 0.3);
+        font-size: 0.58rem;
+        color: rgba(253, 251, 247, 0.5);
         text-transform: uppercase;
+        letter-spacing: 0.08em;
         margin-bottom: 3px;
     }
 
     .stats-mini-val {
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #fff;
+        font-size: 0.84rem;
+        font-weight: 600;
+        color: var(--m-text);
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
     .stats-condition-pill {
-        margin-top: 15px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 14px;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        color: var(--m-accent-soft);
         border-radius: 50px;
-        padding: 5px 12px;
-        font-size: 0.65rem;
-        font-weight: 800;
+        padding: 6px 12px;
+        font-size: 0.64rem;
+        font-weight: 600;
         text-transform: uppercase;
         text-align: center;
-        letter-spacing: 1px;
-    }
-
-    .cond-sellers {
-        background: rgba(135, 50, 118, 0.15);
-        color: var(--m-primary);
-        border-color: rgba(135, 50, 118, 0.3);
-    }
-
-    .cond-buyers {
-        background: rgba(46, 204, 113, 0.15);
-        color: #2ecc71;
-        border-color: rgba(46, 204, 113, 0.3);
+        letter-spacing: 0.14em;
     }
 
     .stats-trend-small {
-        font-size: 0.65rem;
-        font-weight: 800;
-        margin-left: 5px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 1px 6px;
+        border-radius: 50px;
     }
 
     .trend-up {
-        color: #2ecc71;
+        color: #4ade80;
+        background: rgba(74, 222, 128, 0.1);
     }
 
     .trend-down {
-        color: #e74c3c;
+        color: #f87171;
+        background: rgba(248, 113, 113, 0.1);
     }
 
-    .baro-section-period {
-        font-size: 0.72rem;
+    /* ── IDÉE #8 : FOCUS RIVE-SUD & HAUT-RICHELIEU ── */
+    .rs-spotlight-card {
+        background: linear-gradient(145deg, rgba(43, 11, 36, 0.82) 0%, rgba(30, 10, 25, 0.94) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.32);
+        border-radius: 24px;
+        padding: 28px 30px;
+        margin-top: 8px;
+    }
+
+    .rs-cities-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin: 20px 0;
+    }
+
+    @media (max-width: 960px) {
+        .rs-cities-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 560px) {
+        .rs-cities-grid {
+            grid-template-columns: 1fr;
+        }
+        .rs-spotlight-card {
+            padding: 22px 18px;
+        }
+    }
+
+    .rs-city-box {
+        background: rgba(30, 10, 25, 0.68);
+        border: 1px solid rgba(212, 175, 55, 0.18);
+        border-radius: 16px;
+        padding: 18px 16px;
+        transition: all 0.25s ease;
+    }
+
+    .rs-city-box:hover {
+        border-color: var(--m-accent);
+        transform: translateY(-2px);
+    }
+
+    .rs-city-name {
+        font-size: 0.76rem;
         font-weight: 700;
-        color: rgba(255, 255, 255, 0.55);
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        padding: 4px 12px;
-        border-radius: 50px;
-        margin-left: 10px;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0.12em;
+        color: var(--m-accent);
+        margin-bottom: 6px;
     }
 
-    /* ── EDO SECTIONS (Rent/Buy, Calendar, Lexicon) ── */
+    .rs-city-price {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.65rem;
+        font-weight: 700;
+        color: var(--m-text);
+        line-height: 1.1;
+        margin-bottom: 6px;
+    }
+
+    .rs-city-meta {
+        font-size: 0.74rem;
+        color: var(--m-text-muted);
+        line-height: 1.45;
+    }
+
+    /* ── IDÉE #7 : BAROMÈTRE DU POUVOIR D'ACHAT EN TEMPS RÉEL ── */
+    .power-card {
+        background: linear-gradient(150deg, rgba(43, 11, 36, 0.78) 0%, rgba(26, 7, 22, 0.92) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        border-radius: 24px;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        gap: 28px;
+        align-items: center;
+    }
+
+    @media (max-width: 900px) {
+        .power-card {
+            grid-template-columns: 1fr;
+            padding: 22px 18px;
+        }
+    }
+
+    .power-slider-group {
+        margin-bottom: 20px;
+    }
+
+    .power-slider-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 8px;
+    }
+
+    .power-slider-lbl {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--m-text-muted);
+        font-weight: 500;
+    }
+
+    .power-slider-val {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--m-accent-soft);
+    }
+
+    .power-range {
+        width: 100%;
+        accent-color: #d4af37;
+        height: 6px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.12);
+        cursor: pointer;
+    }
+
+    .power-result-box {
+        background: rgba(30, 10, 25, 0.82);
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        border-radius: 20px;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .power-max-lbl {
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--m-accent);
+        margin-bottom: 6px;
+    }
+
+    .power-max-val {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(2.2rem, 4vw, 3rem);
+        font-weight: 700;
+        color: var(--m-text);
+        line-height: 1.05;
+        margin-bottom: 12px;
+    }
+
+    .power-sub-metrics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(212, 175, 55, 0.15);
+        margin-bottom: 14px;
+    }
+
+    .power-compat-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .power-tag {
+        font-size: 0.66rem;
+        padding: 4px 10px;
+        border-radius: 50px;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        color: var(--m-accent-soft);
+    }
+
+    /* ── EDO SECTIONS (Rent/Buy, Calendar) ── */
     .baro-edu-grid {
         display: grid;
-        grid-template-columns: 1.5fr 1fr;
+        grid-template-columns: 1.35fr 1fr;
         gap: 20px;
-        margin-top: 40px;
+        margin-top: 18px;
     }
 
     @media (max-width: 1024px) {
@@ -774,38 +967,40 @@
     }
 
     .edu-card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 24px;
-        padding: 30px;
-        height: 100%;
+        background: var(--m-card);
+        border: 1px solid var(--m-border);
+        border-radius: 22px;
+        padding: 26px;
     }
 
     .edu-title {
-        font-size: 1.1rem;
-        font-weight: 800;
-        margin-bottom: 25px;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 18px;
+        color: var(--m-text);
         display: flex;
         align-items: center;
-        gap: 12px;
-        color: #fff;
+        justify-content: space-between;
+        gap: 10px;
     }
 
     /* Rent vs Buy */
     .rent-buy-item {
         display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        grid-template-columns: 1fr auto 1.15fr;
         align-items: center;
-        gap: 15px;
-        background: rgba(255, 255, 255, 0.02);
-        padding: 15px 20px;
-        border-radius: 16px;
-        margin-bottom: 12px;
-        transition: 0.3s;
+        gap: 12px;
+        background: rgba(30, 10, 25, 0.55);
+        border: 1px solid rgba(212, 175, 55, 0.12);
+        padding: 14px 18px;
+        border-radius: 14px;
+        margin-bottom: 10px;
+        transition: 0.25s;
     }
 
     .rent-buy-item:hover {
-        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(212, 175, 55, 0.35);
     }
 
     .rb-side {
@@ -814,36 +1009,48 @@
     }
 
     .rb-label {
-        font-size: 0.65rem;
-        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.64rem;
+        color: var(--m-text-muted);
         text-transform: uppercase;
-        margin-bottom: 4px;
+        letter-spacing: 0.08em;
+        margin-bottom: 3px;
     }
 
     .rb-val {
-        font-size: 1.05rem;
-        font-weight: 800;
-        color: #fff;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--m-text);
+    }
+
+    .rb-equity {
+        font-size: 0.66rem;
+        color: var(--m-accent);
+        margin-top: 2px;
     }
 
     .rb-vs {
-        font-size: 0.8rem;
-        color: var(--m-primary);
-        font-weight: 900;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-style: italic;
+        font-size: 0.9rem;
+        color: var(--m-accent);
+        font-weight: 700;
+        padding: 0 6px;
     }
 
     /* Eco Calendar */
     .cal-item {
         display: flex;
-        gap: 15px;
-        margin-bottom: 20px;
+        gap: 14px;
+        margin-bottom: 16px;
         position: relative;
     }
 
     .cal-date-box {
-        min-width: 55px;
-        height: 55px;
-        background: var(--m-primary);
+        min-width: 54px;
+        height: 54px;
+        background: rgba(30, 10, 25, 0.8);
+        border: 1px solid rgba(212, 175, 55, 0.32);
         border-radius: 12px;
         display: flex;
         flex-direction: column;
@@ -853,16 +1060,18 @@
     }
 
     .cal-day {
-        font-size: 1.2rem;
-        font-weight: 900;
-        color: #fff;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--m-accent-soft);
     }
 
     .cal-month {
-        font-size: 0.6rem;
-        font-weight: 800;
+        font-size: 0.58rem;
+        font-weight: 600;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.8);
+        letter-spacing: 0.12em;
+        color: var(--m-text-muted);
     }
 
     .cal-info {
@@ -872,396 +1081,995 @@
     }
 
     .cal-event {
-        font-size: 0.9rem;
-        font-weight: 700;
-        color: #fff;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--m-text);
         margin-bottom: 2px;
     }
 
     .cal-desc {
-        font-size: 0.75rem;
-        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.74rem;
+        color: var(--m-text-muted);
     }
 
-    /* Lexicon */
+    /* WAIT VS BUY WIDGET - LUXURY VERSION */
+    .baro-wait-widget {
+        background: var(--m-card);
+        border: 1px solid rgba(212, 175, 55, 0.24);
+        border-radius: 22px;
+        padding: 28px;
+        margin: 22px 0 0;
+    }
+
+    .wb-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 16px;
+    }
+
+    .wb-input-group {
+        text-align: left;
+    }
+
+    .wb-input-group label {
+        display: block;
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--m-text-muted);
+        margin-bottom: 8px;
+    }
+
+    .wb-input {
+        width: 100%;
+        background: rgba(30, 10, 25, 0.75);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        padding: 12px 14px;
+        border-radius: 10px;
+        color: var(--m-text);
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+    }
+
+    .wb-verdict-box {
+        background: rgba(212, 175, 55, 0.07);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 16px;
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .wb-verdict-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        color: var(--m-accent-soft);
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 6px;
+    }
+
+    .wb-verdict-text {
+        font-size: 0.86rem;
+        color: rgba(253, 251, 247, 0.82);
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .wb-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* ── FILTER BAR & NEWS GRID (IDÉE #2) ── */
+    .baro-filter-bar {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .baro-filter-btn {
+        padding: 8px 18px;
+        border-radius: 50px;
+        border: 1px solid rgba(212, 175, 55, 0.22);
+        background: rgba(43, 11, 36, 0.5);
+        color: var(--m-text-muted);
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .baro-filter-btn:hover,
+    .baro-filter-btn.active {
+        background: linear-gradient(135deg, #d4af37 0%, #c59b27 100%);
+        border-color: #d4af37;
+        color: #1e0a19;
+        font-weight: 700;
+        box-shadow: 0 6px 18px rgba(212, 175, 55, 0.25);
+    }
+
+    .baro-news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+        .baro-news-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .news-card {
+        background: var(--m-card);
+        border: 1px solid rgba(212, 175, 55, 0.14);
+        border-radius: 20px;
+        padding: 22px;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .news-card:hover {
+        background: rgba(43, 11, 36, 0.85);
+        border-color: rgba(212, 175, 55, 0.45);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    .news-card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .news-source-badge {
+        font-size: 0.62rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        padding: 4px 10px;
+        border-radius: 50px;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        color: var(--m-accent-soft);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 165px;
+    }
+
+    .news-local-tag {
+        font-size: 0.62rem;
+        font-weight: 600;
+        padding: 3px 9px;
+        border-radius: 50px;
+        background: rgba(135, 50, 118, 0.25);
+        border: 1px solid rgba(135, 50, 118, 0.5);
+        color: var(--m-text);
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .news-card-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.18rem;
+        font-weight: 600;
+        color: var(--m-text);
+        line-height: 1.32;
+    }
+
+    .news-card-desc {
+        font-size: 0.8rem;
+        color: var(--m-text-muted);
+        line-height: 1.55;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .news-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.74rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--m-accent);
+        margin-top: auto;
+        transition: gap 0.2s;
+    }
+
+    .news-card:hover .news-card-link {
+        gap: 8px;
+    }
+
+    .baro-loadmore-wrap {
+        text-align: center;
+        margin-top: 22px;
+    }
+
+    .baro-loadmore-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 26px;
+        border-radius: 50px;
+        background: rgba(43, 11, 36, 0.75);
+        border: 1px solid rgba(212, 175, 55, 0.38);
+        color: var(--m-accent-soft);
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .baro-loadmore-btn:hover {
+        background: rgba(212, 175, 55, 0.15);
+        border-color: var(--m-accent);
+        transform: translateY(-2px);
+    }
+
+    .news-empty {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 40px 20px;
+        color: var(--m-text-muted);
+        font-size: 0.9rem;
+    }
+
+    /* ── IDÉE #10 : RAPPORTS MENSUELS PDF & LEXIQUE ── */
+    .pdf-report-banner {
+        background: linear-gradient(145deg, rgba(43, 11, 36, 0.85) 0%, rgba(30, 10, 25, 0.95) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        border-radius: 22px;
+        padding: 26px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 24px;
+    }
+
+    .pdf-report-info h3 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--m-text);
+        margin: 0 0 6px;
+    }
+
+    .pdf-report-info p {
+        font-size: 0.84rem;
+        color: var(--m-text-muted);
+        margin: 0;
+        max-width: 600px;
+    }
+
+    .pdf-report-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
     .lex-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 15px;
-        margin-top: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+        gap: 14px;
     }
 
     .lex-card {
-        background: rgba(135, 50, 118, 0.05);
-        border: 1px solid rgba(135, 50, 118, 0.15);
-        border-radius: 20px;
+        background: var(--m-card);
+        border: 1px solid var(--m-border);
+        border-radius: 18px;
         padding: 20px;
         transition: 0.3s;
     }
 
     .lex-card:hover {
-        border-color: var(--m-primary);
-        background: rgba(135, 50, 118, 0.1);
+        border-color: var(--m-accent);
     }
 
     .lex-term {
-        font-size: 0.9rem;
-        font-weight: 800;
-        color: var(--m-primary);
-        margin-bottom: 8px;
-        text-transform: uppercase;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--m-accent);
+        margin-bottom: 6px;
     }
 
     .lex-defn {
         font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.6);
-        line-height: 1.5;
+        color: var(--m-text-muted);
+        line-height: 1.55;
+    }
+
+    /* ── CTA SECTION ── */
+    .baro-cta-block {
+        margin-top: 44px;
+        background: linear-gradient(145deg, rgba(43, 11, 36, 0.85), rgba(26, 7, 22, 0.95));
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        border-radius: 26px;
+        padding: 40px 36px;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .baro-cta-block {
+            flex-direction: column;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 20px;
+            gap: 20px;
+        }
+    }
+
+    .baro-cta-photo {
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--m-accent);
+        box-shadow: 0 0 24px rgba(212, 175, 55, 0.25);
+        flex-shrink: 0;
+    }
+
+    .baro-cta-text {
+        flex: 1;
+    }
+
+    .baro-cta-text h3 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin: 0 0 8px;
+        color: var(--m-text);
+    }
+
+    .baro-cta-text p {
+        font-size: 0.88rem;
+        color: var(--m-text-muted);
+        margin: 0 0 20px;
+        line-height: 1.6;
+    }
+
+    .baro-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 28px;
+        background: linear-gradient(135deg, #d4af37 0%, #c59b27 100%);
+        color: #1e0a19 !important;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .baro-cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+    }
+
+    /* ── SKELETON LOADER ── */
+    .skeleton {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(212, 175, 55, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
+        background-size: 200% 100%;
+        animation: skeletonShimmer 1.5s infinite;
+        border-radius: 16px;
+    }
+
+    @keyframes skeletonShimmer {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+    }
+
+    .skeleton-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(212, 175, 55, 0.08);
+        border-radius: 20px;
+        padding: 24px;
+        height: 160px;
     }
 </style>
 
 <div class="baro-wrap" id="baroWrap">
 
-    <!-- HERO -->
+    <!-- HERO ÉDITORIAL LUXURY -->
     <div class="baro-hero">
         <div class="baro-eyebrow">
             <span class="baro-eyebrow-dot"></span>
-            Données en temps réel
+            Observatoire Immobilier &amp; Hypothécaire · Québec
         </div>
-        <h1><span>Baromètre du Marché</span> Immobilier</h1>
-        <p class="baro-hero-sub">Laval · Montréal · Rive-Sud · Rive-Nord · Chambly</p>
-        <div class="baro-update-badge">
-            🕐 Mis à jour le <strong id="baroLastUpdate" style="color:#fff; margin-left:4px;">—</strong>
+        <h1>Baromètre du <em>Marché</em> &amp; des <em>Taux</em></h1>
+        <p class="baro-hero-sub">Données officielles Banque du Canada, Multi-Prêts Hypothèques et statistiques Centris / APCIQ — Grand Montréal, Laval, Rive-Sud, Haut-Richelieu &amp; Rive-Nord.</p>
+        <div class="baro-meta-row">
+            <div class="baro-update-badge">
+                Synchronisation quotidienne : <strong id="baroLastUpdate">En direct</strong>
+            </div>
+            <div class="baro-update-badge">
+                Double Certification : <strong>OACIQ &amp; AMF</strong>
+            </div>
         </div>
+    </div>
+
+    <!-- IDÉE #3 : QUICK-JUMP STICKY BAR -->
+    <div class="baro-quicknav-wrap">
+        <nav class="baro-quicknav" aria-label="Navigation rapide du baromètre">
+            <a href="#sec-taux" class="baro-qlink"><span class="q-num">01</span> Taux &amp; Multi-Prêts</a>
+            <a href="#sec-historique" class="baro-qlink"><span class="q-num">02</span> Trajectoire 24 mois</a>
+            <a href="#sec-stats" class="baro-qlink"><span class="q-num">03</span> Stats Centris</a>
+            <a href="#sec-rivesud" class="baro-qlink"><span class="q-num">04</span> Focus Rive-Sud</a>
+            <a href="#sec-pouvoir" class="baro-qlink"><span class="q-num">05</span> Pouvoir d'Achat</a>
+            <a href="#sec-strategie" class="baro-qlink"><span class="q-num">06</span> Louer / Attendre</a>
+            <a href="#sec-news" class="baro-qlink"><span class="q-num">07</span> Actualités</a>
+            <a href="#sec-rapports" class="baro-qlink"><span class="q-num">08</span> Rapports PDF</a>
+        </nav>
     </div>
 
     <!-- MAIN CONTENT -->
     <div class="baro-content">
 
-        <!-- ── TAUX BOC ── -->
-        <div class="baro-section-title">📊 Taux Directeur — Banque du Canada</div>
+        <!-- ── 01 · TAUX DIRECTEUR & TAUX MULTI-PRÊTS QUÉBEC ── -->
+        <div class="baro-sec-head" id="sec-taux">
+            <div class="baro-sec-kicker">01 · Politique Monétaire &amp; Financement</div>
+            <h2 class="baro-section-title">Taux Directeur &amp; <em>Taux Hypothécaires Multi-Prêts</em></h2>
+        </div>
 
         <div class="boc-mega-card" id="bocCard">
-            <!-- LEFT : Rate -->
             <div>
-                <div class="boc-label-top">Taux directeur actuel</div>
+                <div class="boc-label-top">Banque du Canada · Taux cible du financement à un jour</div>
                 <div class="boc-rate-display">
-                    <span class="boc-rate-big" id="bocRateVal">—</span>
+                    <span class="boc-rate-big" id="bocRateVal">2,50</span>
                     <span class="boc-rate-unit">%</span>
                 </div>
                 <div class="boc-status-pill boc-status-stable" id="bocStatusPill">
-                    <span id="bocStatusIcon">⏸</span>
-                    <span id="bocStatusText">Chargement…</span>
+                    <span id="bocStatusIcon">●</span>
+                    <span id="bocStatusText">Synchronisation Banque du Canada…</span>
                 </div>
-                <p style="margin:14px 0 0; font-size:0.82rem; color:rgba(255,255,255,0.4);">
-                    Dernière décision : <strong style="color:rgba(255,255,255,0.7);" id="bocLastDate">—</strong>
+                <p style="margin:12px 0 0; font-size:0.8rem; color:var(--m-text-muted);">
+                    Dernière décision officielle : <strong style="color:var(--m-text);" id="bocLastDate">—</strong>
                 </p>
             </div>
 
-            <!-- RIGHT : Countdown -->
             <div class="boc-countdown-block">
-                <div
-                    style="font-size:0.65rem; font-weight:800; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.35); margin-bottom:10px;">
-                    Prochaine annonce</div>
+                <div style="font-size:0.64rem; font-weight:600; text-transform:uppercase; letter-spacing:0.16em; color:var(--m-text-muted); margin-bottom:8px;">
+                    Prochaine annonce BoC
+                </div>
                 <div class="boc-countdown-num" id="bocCountdownDays">—</div>
                 <div class="boc-countdown-lbl">jours restants</div>
                 <div class="boc-countdown-date" id="bocNextDate">—</div>
             </div>
         </div>
 
+        <!-- IDÉE #5 : TABLEAU OFFICIEL MULTI-PRÊTS QUÉBEC -->
+        <div class="mp-rates-panel">
+            <div class="mp-rates-header">
+                <div class="mp-rates-title-group">
+                    <h3>Grille Officielle des Taux — Multi-Prêts Hypothèques (Québec)</h3>
+                    <p>Taux négociés en vigueur au Québec par rapport aux taux affichés des institutions financières</p>
+                </div>
+                <a href="https://www.multi-prets.com/fr/options-hypothecaires/nos-taux/" target="_blank" rel="noopener" class="mp-source-pill">
+                    Source officielle Multi-Prêts QC ↗
+                </a>
+            </div>
 
-        <!-- ── STATS CENTRIS ── -->
-        <div class="baro-section-title" style="display:flex; align-items:center; flex-wrap:wrap; gap:8px;"><span>📉 Statistiques du Marché — Centris / APCIQ</span><span class="baro-section-period" id="baroStatsPeriod">Septembre 2026</span></div>
+            <div class="mp-rates-grid">
+                <div class="mp-rate-box mp-featured">
+                    <span class="mp-rate-badge">Taux Variable</span>
+                    <div class="mp-rate-term">Variable 5 ans</div>
+                    <div class="mp-rate-val" id="mpRateVar5">3,90 %</div>
+                    <div class="mp-rate-posted">Taux préférentiel : <strong id="mpRatePrime" style="color:var(--m-accent-soft);">4,70 %</strong></div>
+                </div>
+
+                <div class="mp-rate-box">
+                    <div class="mp-rate-term">Fixe 1 an &amp; 2 ans</div>
+                    <div class="mp-rate-val" id="mpRateFix2">4,54 %</div>
+                    <div class="mp-rate-posted">1 an : <span id="mpRateFix1">4,79 %</span> · Affiché <s>5,24 %</s></div>
+                </div>
+
+                <div class="mp-rate-box">
+                    <div class="mp-rate-term">Fixe 3 ans</div>
+                    <div class="mp-rate-val" id="mpRateFix3">4,44 %</div>
+                    <div class="mp-rate-posted">Taux affiché : <s id="mpPostFix3">6,05 %</s></div>
+                </div>
+
+                <div class="mp-rate-box mp-featured">
+                    <span class="mp-rate-badge">Plus Bas Fixe</span>
+                    <div class="mp-rate-term">Fixe 4 ans</div>
+                    <div class="mp-rate-val" id="mpRateFix4">4,39 %</div>
+                    <div class="mp-rate-posted">Taux affiché : <s id="mpPostFix4">6,09 %</s></div>
+                </div>
+
+                <div class="mp-rate-box">
+                    <div class="mp-rate-term">Fixe 5 ans</div>
+                    <div class="mp-rate-val" id="mpRateFix5">4,64 %</div>
+                    <div class="mp-rate-posted">Taux affiché : <s id="mpPostFix5">6,19 %</s></div>
+                </div>
+            </div>
+
+            <div class="mp-rates-footer">
+                <div class="mp-rates-note">
+                    * Taux affichés sur <strong>multi-prets.com/fr/options-hypothecaires/nos-taux/</strong> pour la province de Québec. Certaines conditions s'appliquent (prêt assuré ou conventionnel, dossier de crédit, amortissement). Sujets à changement sans préavis.
+                </div>
+                <a href="/prequalification" class="mp-lock-btn">
+                    Verrouiller mon taux (Jusqu'à 120 jours) →
+                </a>
+            </div>
+        </div>
+
+        <!-- ── 02 · IDÉE #6 : TRAJECTOIRE DES TAUX SUR 24 MOIS ── -->
+        <div class="baro-sec-head" id="sec-historique">
+            <div class="baro-sec-kicker">02 · Cycle Monétaire Canadien</div>
+            <h2 class="baro-section-title">Trajectoire du Taux Directeur <em>(24 derniers mois)</em></h2>
+        </div>
+
+        <div class="boc-chart-card">
+            <div class="boc-chart-top">
+                <p style="margin:0; font-size:0.84rem; color:var(--m-text-muted); max-width:540px;">
+                    Évolution officielle de la Banque du Canada (série V39079) illustrant le cycle de détente monétaire depuis le sommet de 5,00 %.
+                </p>
+                <div class="boc-chart-kpis">
+                    <div class="boc-kpi-pill">
+                        <span class="boc-kpi-lbl">Sommet du cycle</span>
+                        <span class="boc-kpi-val" id="bocChartHigh">5,00 %</span>
+                    </div>
+                    <div class="boc-kpi-pill">
+                        <span class="boc-kpi-lbl">Taux actuel</span>
+                        <span class="boc-kpi-val" id="bocChartCurrent">2,50 %</span>
+                    </div>
+                    <div class="boc-kpi-pill">
+                        <span class="boc-kpi-lbl">Détente cumulée</span>
+                        <span class="boc-kpi-val" id="bocChartDrop" style="color:#4ade80;">-2,50 %</span>
+                    </div>
+                </div>
+            </div>
+            <div class="boc-svg-wrap" id="bocHistoryChartWrap">
+                <!-- Rendu dynamique SVG par JS -->
+            </div>
+        </div>
+
+        <!-- ── 03 · IDÉE #4 : STATS CENTRIS & INVENTAIRE COMPLET ── -->
+        <div class="baro-sec-head" id="sec-stats">
+            <div class="baro-sec-kicker">03 · Données Officielles Centris / APCIQ</div>
+            <h2 class="baro-section-title">
+                <span>Statistiques Régionales &amp; <em>Inventaire Actif</em></span>
+                <span class="baro-section-period" id="baroStatsPeriod">Octobre 2026</span>
+            </h2>
+        </div>
 
         <div class="baro-stats-grid" id="baroStatsGrid">
-            <!-- MTL -->
+            <!-- GRAND MONTRÉAL -->
             <div class="stats-card" data-region="montreal">
-                <div class="stats-city-label">Grand Montréal</div>
+                <div class="stats-city-label"><span>Grand Montréal (RMR)</span><span>01</span></div>
                 <div class="stats-price-row">
-                    <div class="stats-price-label">Unifamiliale</div>
-                    <div class="stats-price"><span id="statMtlPrice">—</span> <span class="stats-trend-small trend-up"
-                            id="statMtlTrend">—</span></div>
+                    <div class="stats-price-label">Unifamiliale (Médian)</div>
+                    <div class="stats-price"><span id="statMtlPrice">645 500 $</span> <span class="stats-trend-small trend-up" id="statMtlTrend">+2%</span></div>
                 </div>
                 <div class="stats-price-row">
-                    <div class="stats-price-label">Condo</div>
-                    <div class="stats-price stats-price-condo"><span id="statMtlCondoPrice">—</span> <span
-                            class="stats-trend-small trend-up" id="statMtlCondoTrend">—</span></div>
+                    <div class="stats-price-label">Copropriété (Médian)</div>
+                    <div class="stats-price stats-price-condo"><span id="statMtlCondoPrice">435 000 $</span> <span class="stats-trend-small trend-up" id="statMtlCondoTrend">+2%</span></div>
                 </div>
                 <div class="stats-sub-grid">
                     <div class="stats-mini-item">
-                        <span class="stats-mini-label">Ventes</span>
-                        <span class="stats-mini-val" id="statMtlSales">—</span>
+                        <span class="stats-mini-label">Ventes (Var.)</span>
+                        <span class="stats-mini-val"><span id="statMtlSales">3 252</span> <span class="stats-trend-small trend-down" id="statMtlSalesTrend">-18%</span></span>
                     </div>
                     <div class="stats-mini-item">
-                        <span class="stats-mini-label">Délais</span>
-                        <span class="stats-mini-val"><span id="statMtlDays">—</span> j.</span>
+                        <span class="stats-mini-label">Délai de vente</span>
+                        <span class="stats-mini-val"><span id="statMtlDays">40</span> jours</span>
+                    </div>
+                    <div class="stats-mini-item">
+                        <span class="stats-mini-label">Inscriptions actives</span>
+                        <span class="stats-mini-val" id="statMtlActive">21 817</span>
+                    </div>
+                    <div class="stats-mini-item">
+                        <span class="stats-mini-label">Nouvelles inscr.</span>
+                        <span class="stats-mini-val" id="statMtlNew">17 453</span>
                     </div>
                 </div>
-                <div class="stats-condition-pill" id="statMtlCondition">Marché —</div>
+                <div class="stats-condition-pill" id="statMtlCondition">Marché Vendeurs</div>
             </div>
+
             <!-- LAVAL -->
             <div class="stats-card" data-region="laval">
-                <div class="stats-city-label">Laval</div>
+                <div class="stats-city-label"><span>Laval</span><span>02</span></div>
                 <div class="stats-price-row">
-                    <div class="stats-price-label">Unifamiliale</div>
-                    <div class="stats-price"><span id="statLavalPrice">—</span> <span class="stats-trend-small trend-up"
-                            id="statLavalTrend">—</span></div>
+                    <div class="stats-price-label">Unifamiliale (Médian)</div>
+                    <div class="stats-price"><span id="statLavalPrice">638 325 $</span> <span class="stats-trend-small trend-up" id="statLavalTrend">+4%</span></div>
                 </div>
                 <div class="stats-price-row">
-                    <div class="stats-price-label">Condo</div>
-                    <div class="stats-price stats-price-condo"><span id="statLavalCondoPrice">—</span> <span
-                            class="stats-trend-small trend-up" id="statLavalCondoTrend">—</span></div>
+                    <div class="stats-price-label">Copropriété (Médian)</div>
+                    <div class="stats-price stats-price-condo"><span id="statLavalCondoPrice">419 647 $</span> <span class="stats-trend-small trend-up" id="statLavalCondoTrend">+3%</span></div>
                 </div>
                 <div class="stats-sub-grid">
                     <div class="stats-mini-item">
-                        <span class="stats-mini-label">Ventes</span>
-                        <span class="stats-mini-val" id="statLavalSales">—</span>
+                        <span class="stats-mini-label">Ventes (Var.)</span>
+                        <span class="stats-mini-val"><span id="statLavalSales">616</span> <span class="stats-trend-small trend-up" id="statLavalSalesTrend">+5%</span></span>
                     </div>
                     <div class="stats-mini-item">
-                        <span class="stats-mini-label">Délais</span>
-                        <span class="stats-mini-val"><span id="statLavalDays">—</span> j.</span>
+                        <span class="stats-mini-label">Délai de vente</span>
+                        <span class="stats-mini-val"><span id="statLavalDays">49</span> jours</span>
+                    </div>
+                    <div class="stats-mini-item">
+                        <span class="stats-mini-label">Inscriptions actives</span>
+                        <span class="stats-mini-val" id="statLavalActive">3 816</span>
+                    </div>
+                    <div class="stats-mini-item">
+                        <span class="stats-mini-label">Nouvelles inscr.</span>
+                        <span class="stats-mini-val" id="statLavalNew">3 518</span>
                     </div>
                 </div>
-                <div class="stats-condition-pill" id="statLavalCondition">Marché —</div>
+                <div class="stats-condition-pill" id="statLavalCondition">Marché Vendeurs</div>
             </div>
+
             <!-- RIVE-SUD -->
             <div class="stats-card" data-region="rive-sud">
-                <div class="stats-city-label">Rive-Sud</div>
+                <div class="stats-city-label"><span>Rive-Sud</span><span>03</span></div>
                 <div class="stats-price-row">
-                    <div class="stats-price-label">Unifamiliale</div>
-                    <div class="stats-price"><span id="statRsPrice">—</span> <span class="stats-trend-small trend-up"
-                            id="statRsTrend">—</span></div>
+                    <div class="stats-price-label">Unifamiliale (Médian)</div>
+                    <div class="stats-price"><span id="statRsPrice">578 945 $</span> <span class="stats-trend-small trend-up" id="statRsTrend">+8%</span></div>
                 </div>
                 <div class="stats-price-row">
-                    <div class="stats-price-label">Condo</div>
-                    <div class="stats-price stats-price-condo"><span id="statRsCondoPrice">—</span> <span
-                            class="stats-trend-small trend-up" id="statRsCondoTrend">—</span></div>
+                    <div class="stats-price-label">Copropriété (Médian)</div>
+                    <div class="stats-price stats-price-condo"><span id="statRsCondoPrice">404 294 $</span> <span class="stats-trend-small trend-up" id="statRsCondoTrend">+5%</span></div>
                 </div>
                 <div class="stats-sub-grid">
                     <div class="stats-mini-item">
-                        <span class="stats-mini-label">Ventes</span>
-                        <span class="stats-mini-val" id="statRsSales">—</span>
+                        <span class="stats-mini-label">Ventes (Var.)</span>
+                        <span class="stats-mini-val"><span id="statRsSales">1 420</span> <span class="stats-trend-small trend-up" id="statRsSalesTrend">+6%</span></span>
                     </div>
                     <div class="stats-mini-item">
-                        <span class="stats-mini-label">Délais</span>
-                        <span class="stats-mini-val"><span id="statRsDays">—</span> j.</span>
+                        <span class="stats-mini-label">Délai de vente</span>
+                        <span class="stats-mini-val"><span id="statRsDays">45</span> jours</span>
+                    </div>
+                    <div class="stats-mini-item">
+                        <span class="stats-mini-label">Inscriptions actives</span>
+                        <span class="stats-mini-val" id="statRsActive">8 109</span>
+                    </div>
+                    <div class="stats-mini-item">
+                        <span class="stats-mini-label">Nouvelles inscr.</span>
+                        <span class="stats-mini-val" id="statRsNew">7 632</span>
                     </div>
                 </div>
-                <div class="stats-condition-pill" id="statRsCondition">Marché —</div>
+                <div class="stats-condition-pill" id="statRsCondition">Marché Vendeurs</div>
             </div>
+
             <!-- RIVE-NORD -->
             <div class="stats-card" data-region="rive-nord">
-                <div class="stats-city-label">Rive-Nord</div>
+                <div class="stats-city-label"><span>Rive-Nord</span><span>04</span></div>
                 <div class="stats-price-row">
-                    <div class="stats-price-label">Unifamiliale</div>
-                    <div class="stats-price"><span id="statRnPrice">—</span> <span class="stats-trend-small trend-up"
-                            id="statRnTrend">—</span></div>
+                    <div class="stats-price-label">Unifamiliale (Médian)</div>
+                    <div class="stats-price"><span id="statRnPrice">509 670 $</span> <span class="stats-trend-small trend-up" id="statRnTrend">+6%</span></div>
                 </div>
                 <div class="stats-price-row">
-                    <div class="stats-price-label">Condo</div>
-                    <div class="stats-price stats-price-condo"><span id="statRnCondoPrice">—</span> <span
-                            class="stats-trend-small trend-up" id="statRnCondoTrend">—</span></div>
+                    <div class="stats-price-label">Copropriété (Médian)</div>
+                    <div class="stats-price stats-price-condo"><span id="statRnCondoPrice">373 588 $</span> <span class="stats-trend-small trend-up" id="statRnCondoTrend">+4%</span></div>
                 </div>
                 <div class="stats-sub-grid">
                     <div class="stats-mini-item">
-                        <span class="stats-mini-label">Ventes</span>
-                        <span class="stats-mini-val" id="statRnSales">—</span>
+                        <span class="stats-mini-label">Ventes (Var.)</span>
+                        <span class="stats-mini-val"><span id="statRnSales">1 176</span> <span class="stats-trend-small trend-up" id="statRnSalesTrend">+4%</span></span>
                     </div>
                     <div class="stats-mini-item">
-                        <span class="stats-mini-label">Délais</span>
-                        <span class="stats-mini-val"><span id="statRnDays">—</span> j.</span>
+                        <span class="stats-mini-label">Délai de vente</span>
+                        <span class="stats-mini-val"><span id="statRnDays">42</span> jours</span>
+                    </div>
+                    <div class="stats-mini-item">
+                        <span class="stats-mini-label">Inscriptions actives</span>
+                        <span class="stats-mini-val" id="statRnActive">7 274</span>
+                    </div>
+                    <div class="stats-mini-item">
+                        <span class="stats-mini-label">Nouvelles inscr.</span>
+                        <span class="stats-mini-val" id="statRnNew">6 678</span>
                     </div>
                 </div>
-                <div class="stats-condition-pill" id="statRnCondition">Marché —</div>
+                <div class="stats-condition-pill" id="statRnCondition">Marché Vendeurs</div>
             </div>
         </div>
 
-        <!-- ── STRATÉGIE & ÉDUCATION ── -->
-        <div class="baro-edu-grid">
+        <!-- ── 04 · IDÉE #8 : FOCUS RIVE-SUD & HAUT-RICHELIEU ── -->
+        <div class="baro-sec-head" id="sec-rivesud">
+            <div class="baro-sec-kicker">04 · Territoire de Courtage Immobilier</div>
+            <h2 class="baro-section-title">Focus Micro-Marché : <em>Rive-Sud &amp; Haut-Richelieu</em></h2>
+        </div>
 
-            <!-- RENT VS BUY -->
-            <div class="edu-card">
-                <div class="edu-title">⚖️ Louer vs Acheter (5 ½)</div>
-                <div class="rent-buy-item">
-                    <div class="rb-side">
-                        <span class="rb-label">Loyer (RMR Mtl)</span>
-                        <span class="rb-val">2 870 $</span>
-                    </div>
-                    <div class="rb-vs">VS</div>
-                    <div class="rb-side" style="text-align: right;">
-                        <span class="rb-label">Hypothèque Est.</span>
-                        <span class="rb-val">3 150 $</span>
-                    </div>
+        <div class="rs-spotlight-card">
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:14px;">
+                <div>
+                    <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.16em; color:var(--m-accent); margin-bottom:4px;">Analyse de terrain par Evan Patruno</div>
+                    <p style="margin:0; font-size:0.88rem; color:var(--m-text-muted); max-width:680px;">
+                        La Rive-Sud et le Haut-Richelieu affichent la plus forte résilience du Grand Montréal (+8 % sur l'unifamiliale), portés par le REM, le télétravail hybride et un différentiel de prix de 65 000 $ à 140 000 $ par rapport à l'île de Montréal.
+                    </p>
                 </div>
-                <div class="rent-buy-item">
-                    <div class="rb-side">
-                        <span class="rb-label">Loyer (Laval)</span>
-                        <span class="rb-val">2 550 $</span>
-                    </div>
-                    <div class="rb-vs">VS</div>
-                    <div class="rb-side" style="text-align: right;">
-                        <span class="rb-label">Hypothèque Est.</span>
-                        <span class="rb-val">2 820 $</span>
-                    </div>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <a href="/alerte-immobiliere" class="mp-source-pill">Recevoir les alertes Rive-Sud →</a>
+                    <a href="/estimation-propriete" class="mp-source-pill">Évaluer ma propriété →</a>
                 </div>
-                <div class="rent-buy-item">
-                    <div class="rb-side">
-                        <span class="rb-label">Loyer (Rives)</span>
-                        <span class="rb-val">2 250 $</span>
-                    </div>
-                    <div class="rb-vs">VS</div>
-                    <div class="rb-side" style="text-align: right;">
-                        <span class="rb-label">Hypothèque Est.</span>
-                        <span class="rb-val">2 480 $</span>
-                    </div>
+            </div>
+
+            <div class="rs-cities-grid">
+                <div class="rs-city-box">
+                    <div class="rs-city-name">Saint-Jean-sur-Richelieu</div>
+                    <div class="rs-city-price">515 000 $</div>
+                    <div class="rs-city-meta">Unifamiliale médiane · Forte demande jeunes familles &amp; investisseurs · Délai moyen 38 j.</div>
                 </div>
-                <p style="font-size:0.7rem; color:rgba(255,255,255,0.3); margin-top:15px; font-style:italic;">
-                    * Est. basée sur une mise de fonds de 20%, taux 5 ans fixe à 4.6%. Taxes et assurances en sus.
+                <div class="rs-city-box">
+                    <div class="rs-city-name">Chambly &amp; Carignan</div>
+                    <div class="rs-city-price">610 000 $</div>
+                    <div class="rs-city-meta">Unifamiliale médiane · Bassin de Chambly très prisé · Surenchère fréquente sous 600 000 $.</div>
+                </div>
+                <div class="rs-city-box">
+                    <div class="rs-city-name">Brossard &amp; Candiac</div>
+                    <div class="rs-city-price">665 000 $</div>
+                    <div class="rs-city-meta">Unifamiliale médiane · Effet REM direct vers centre-ville · Copropriétés autour de 425 000 $.</div>
+                </div>
+                <div class="rs-city-box">
+                    <div class="rs-city-name">Napierville &amp; Jardins</div>
+                    <div class="rs-city-price">465 000 $</div>
+                    <div class="rs-city-meta">Meilleur ratio terrain / prix de la Couronne Sud · Idéal premiers acheteurs &amp; bi-génération.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 05 · IDÉE #7 : BAROMÈTRE DU POUVOIR D'ACHAT EN TEMPS RÉEL ── -->
+        <div class="baro-sec-head" id="sec-pouvoir">
+            <div class="baro-sec-kicker">05 · Simulateur de Capacité Hypothécaire</div>
+            <h2 class="baro-section-title">Baromètre du <em>Pouvoir d'Achat</em> en Temps Réel</h2>
+        </div>
+
+        <div class="power-card">
+            <div>
+                <p style="margin:0 0 20px; font-size:0.86rem; color:var(--m-text-muted); line-height:1.55;">
+                    Calculez instantanément votre capacité d'acquisition selon les règles canadiennes de qualification (Stress Test BSIF +2 %) et le taux fixe 5 ans officiel Multi-Prêts Québec (<strong id="powerLiveRateLbl" style="color:var(--m-accent);">4,64 %</strong>).
                 </p>
-            </div>
 
-            <!-- ECO CALENDAR -->
-            <div class="edu-card">
-                <div class="edu-title">🗓️ Calendrier Économique</div>
-                <div id="baroEcoCalendar">
-                    <div class="cal-item">
-                        <div class="cal-date-box" style="background: var(--m-primary);">
-                            <span class="cal-day">28</span>
-                            <span class="cal-month">Oct</span>
-                        </div>
-                        <div class="cal-info">
-                            <div class="cal-event">Taux Directeur (BoC)</div>
-                            <div class="cal-desc">Décision sur les taux d'intérêt et RPM.</div>
-                        </div>
+                <div class="power-slider-group">
+                    <div class="power-slider-top">
+                        <span class="power-slider-lbl">Revenu familial brut annuel</span>
+                        <span class="power-slider-val" id="powerIncomeDisplay">130 000 $</span>
                     </div>
-                    <div class="cal-item">
-                        <div class="cal-date-box" style="background: rgba(255,255,255,0.1);">
-                            <span class="cal-day">19</span>
-                            <span class="cal-month">Nov</span>
-                        </div>
-                        <div class="cal-info">
-                            <div class="cal-event">IPC (Inflation)</div>
-                            <div class="cal-desc">Rapport mensuel de Statistique Canada.</div>
-                        </div>
+                    <input type="range" id="powerIncomeInput" class="power-range" min="60000" max="350000" step="5000" value="130000" oninput="calcBuyingPower()">
+                </div>
+
+                <div class="power-slider-group" style="margin-bottom:10px;">
+                    <div class="power-slider-top">
+                        <span class="power-slider-lbl">Mise de fonds disponible</span>
+                        <span class="power-slider-val" id="powerDownDisplay">60 000 $</span>
                     </div>
-                    <div class="cal-item">
-                        <div class="cal-date-box" style="background: rgba(255,255,255,0.1);">
-                            <span class="cal-day">09</span>
-                            <span class="cal-month">Déc</span>
-                        </div>
-                        <div class="cal-info">
-                            <div class="cal-event">Taux Directeur (BoC)</div>
-                            <div class="cal-desc">Dernière décision de politique monétaire 2026.</div>
-                        </div>
-                    </div>
-                    <div class="cal-item">
-                        <div class="cal-date-box" style="background: rgba(255,255,255,0.1);">
-                            <span class="cal-day">27</span>
-                            <span class="cal-month">Jan</span>
-                        </div>
-                        <div class="cal-info">
-                            <div class="cal-event">Taux Directeur (BoC)</div>
-                            <div class="cal-desc">Première annonce stratégique de 2027.</div>
-                        </div>
-                    </div>
+                    <input type="range" id="powerDownInput" class="power-range" min="15000" max="250000" step="5000" value="60000" oninput="calcBuyingPower()">
                 </div>
             </div>
 
-        </div>
+            <div class="power-result-box">
+                <div class="power-max-lbl">Prix d'achat maximal estimé</div>
+                <div class="power-max-val" id="powerMaxPrice">565 000 $</div>
 
-        <!-- ── ACTUALITÉS ── -->
-        <div class="baro-section-title">📰 Actualités du Marché</div>
-
-        <div class="baro-filter-bar" id="baroFilters">
-            <button class="baro-filter-btn active" data-region="all" onclick="baroFilter(this,'all')">Toutes les
-                nouvelles</button>
-            <button class="baro-filter-btn" data-region="montreal"
-                onclick="baroFilter(this,'montreal')">Montréal</button>
-            <button class="baro-filter-btn" data-region="laval" onclick="baroFilter(this,'laval')">Laval</button>
-            <button class="baro-filter-btn" data-region="rive-sud"
-                onclick="baroFilter(this,'rive-sud')">Rive-Sud</button>
-            <button class="baro-filter-btn" data-region="rive-nord"
-                onclick="baroFilter(this,'rive-nord')">Rive-Nord</button>
-        </div>
-
-        <div class="baro-news-grid" id="baroNewsGrid">
-            <!-- Skeleton loaders -->
-            <div class="skeleton-card skeleton"></div>
-            <div class="skeleton-card skeleton"></div>
-            <div class="skeleton-card skeleton"></div>
-            <div class="skeleton-card skeleton"></div>
-            <div class="skeleton-card skeleton"></div>
-            <div class="skeleton-card skeleton"></div>
-        </div>
-
-        <!-- WAIT VS BUY WIDGET -->
-        <div class="baro-wait-widget">
-            <div class="baro-section-title" style="margin-top:0; border:none; text-align:center;">🤔 Attendre ou Acheter ?</div>
-            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top:-10px; margin-bottom:20px;">Est-ce qu'une baisse de taux compense la hausse du prix des maisons ?</p>
-            <div class="wb-grid">
-                <div class="wb-input-group">
-                    <label>Prix actuel ($)</label>
-                    <input type="number" id="wb-price" class="wb-input" value="500000" oninput="calcWaitWidget()">
+                <div class="power-sub-metrics">
+                    <div>
+                        <span style="display:block; font-size:0.62rem; text-transform:uppercase; color:var(--m-text-muted);">Versement mensuel réel</span>
+                        <strong id="powerMonthlyPmt" style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:var(--m-accent-soft);">2 840 $ / mois</strong>
+                    </div>
+                    <div>
+                        <span style="display:block; font-size:0.62rem; text-transform:uppercase; color:var(--m-text-muted);">Taux Stress Test (BSIF)</span>
+                        <strong id="powerStressRate" style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:var(--m-text);">6,64 %</strong>
+                    </div>
                 </div>
-                <div class="wb-input-group">
-                    <label>Mois d'attente</label>
-                    <input type="number" id="wb-months" class="wb-input" value="12" oninput="calcWaitWidget()">
+
+                <div class="power-compat-tags" id="powerCompatTags">
+                    <!-- Tags générés dynamiquement -->
                 </div>
-            </div>
-            <div class="wb-verdict-box" id="wb-verdict-box">
-                <div class="wb-verdict-title" id="wb-verdict-title">Calcul en cours...</div>
-                <div class="wb-verdict-text" id="wb-verdict-text">Entrez vos paramètres pour voir l'impact financier.</div>
-                <div style="margin-top: 15px;">
-                    <a href="/outils" class="baro-cta-btn" style="padding: 10px 20px; font-size: 0.8rem; background: rgba(167, 255, 0, 0.1); color: #a7ff00; border: 1px solid #a7ff00;">
-                        Analyse complète dans la Boîte à Outils ➔
+
+                <div style="margin-top:16px;">
+                    <a href="/prequalification" class="mp-lock-btn" style="width:100%; justify-content:center; box-sizing:border-box;">
+                        Obtenir mon certificat de préqualification →
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- LEXICON -->
-        <div class="baro-section-title">📖 Décodeur du Marché — Lexique Expert</div>
+        <!-- ── 06 · IDÉE #9 : LOUER VS ACHETER DYNAMIQUE & ATTENDRE OU ACHETER ── -->
+        <div class="baro-sec-head" id="sec-strategie">
+            <div class="baro-sec-kicker">06 · Analyse Comparative &amp; Décisionnelle</div>
+            <h2 class="baro-section-title">Stratégie : <em>Louer, Attendre ou Acheter ?</em></h2>
+        </div>
+
+        <div class="baro-edu-grid">
+            <!-- RENT VS BUY DYNAMIQUE -->
+            <div class="edu-card">
+                <div class="edu-title">
+                    <span>Louer (5 ½ neuf) vs Acheter (Condo médian)</span>
+                    <span class="baro-section-period" id="rbRateBadge">Taux 4,64 %</span>
+                </div>
+                <div class="rent-buy-item">
+                    <div class="rb-side">
+                        <span class="rb-label">Loyer Moyen (Grand Mtl)</span>
+                        <span class="rb-val">2 870 $ / mois</span>
+                        <span class="rb-equity" style="color:rgba(253,251,247,0.4);">Capital accumulé : 0 $</span>
+                    </div>
+                    <div class="rb-vs">vs</div>
+                    <div class="rb-side" style="text-align: right;">
+                        <span class="rb-label">Hypothèque Condo (Mtl)</span>
+                        <span class="rb-val" id="rbMtlMortgage">1 955 $ / mois</span>
+                        <span class="rb-equity" id="rbMtlEquity">Dont ~625 $/mois en capital</span>
+                    </div>
+                </div>
+                <div class="rent-buy-item">
+                    <div class="rb-side">
+                        <span class="rb-label">Loyer Moyen (Laval)</span>
+                        <span class="rb-val">2 550 $ / mois</span>
+                        <span class="rb-equity" style="color:rgba(253,251,247,0.4);">Capital accumulé : 0 $</span>
+                    </div>
+                    <div class="rb-vs">vs</div>
+                    <div class="rb-side" style="text-align: right;">
+                        <span class="rb-label">Hypothèque Condo (Laval)</span>
+                        <span class="rb-val" id="rbLavalMortgage">1 885 $ / mois</span>
+                        <span class="rb-equity" id="rbLavalEquity">Dont ~600 $/mois en capital</span>
+                    </div>
+                </div>
+                <div class="rent-buy-item">
+                    <div class="rb-side">
+                        <span class="rb-label">Loyer Moyen (Rive-Sud)</span>
+                        <span class="rb-val">2 290 $ / mois</span>
+                        <span class="rb-equity" style="color:rgba(253,251,247,0.4);">Capital accumulé : 0 $</span>
+                    </div>
+                    <div class="rb-vs">vs</div>
+                    <div class="rb-side" style="text-align: right;">
+                        <span class="rb-label">Hypothèque Condo (Rive-Sud)</span>
+                        <span class="rb-val" id="rbRsMortgage">1 815 $ / mois</span>
+                        <span class="rb-equity" id="rbRsEquity">Dont ~580 $/mois en capital</span>
+                    </div>
+                </div>
+                <p style="font-size:0.72rem; color:var(--m-text-muted); margin:12px 0 0; line-height:1.45;">
+                    * Calculé dynamiquement sur le prix médian actuel des copropriétés Centris de chaque région (mise de fonds 20 %, amortissement 25 ans au taux fixe 5 ans Multi-Prêts Québec).
+                </p>
+            </div>
+
+            <!-- ECO CALENDAR -->
+            <div class="edu-card">
+                <div class="edu-title">Calendrier Économique &amp; Annonces</div>
+                <div id="baroEcoCalendar"></div>
+            </div>
+        </div>
+
+        <!-- WAIT VS BUY WIDGET -->
+        <div class="baro-wait-widget">
+            <div style="text-align:center; max-width:650px; margin:0 auto;">
+                <div class="baro-sec-kicker" style="justify-content:center;">Arbitrage Taux vs Prix</div>
+                <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; margin:4px 0 6px; color:var(--m-text);">Attendre une baisse de taux ou acheter maintenant ?</h3>
+                <p style="color: var(--m-text-muted); font-size: 0.86rem; margin:0 0 18px;">
+                    Simulez si une baisse future de 0,50 % des taux hypothécaires compense l'appréciation prévue des propriétés dans votre secteur.
+                </p>
+            </div>
+            <div class="wb-grid">
+                <div class="wb-input-group">
+                    <label>Prix de la propriété visée ($)</label>
+                    <input type="number" id="wb-price" class="wb-input" value="575000" step="10000" oninput="calcWaitWidget()">
+                </div>
+                <div class="wb-input-group">
+                    <label>Horizon d'attente (Mois)</label>
+                    <input type="number" id="wb-months" class="wb-input" value="12" min="3" max="36" oninput="calcWaitWidget()">
+                </div>
+            </div>
+            <div class="wb-verdict-box" id="wb-verdict-box">
+                <div class="wb-verdict-title" id="wb-verdict-title">Calcul en cours…</div>
+                <div class="wb-verdict-text" id="wb-verdict-text">Analyse de l'impact financier sur 5 ans.</div>
+                <div style="margin-top: 16px;">
+                    <a href="/outils" class="mp-source-pill">
+                        Explorer tous les calculateurs dans la Boîte à Outils →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 07 · IDÉE #2 : ACTUALITÉS DU MARCHÉ (PAGINATION 6 PAR 6 + FILTRE TAUX) ── -->
+        <div class="baro-sec-head" id="sec-news">
+            <div class="baro-sec-kicker">07 · Veille Économique Quotidienne</div>
+            <h2 class="baro-section-title">Actualités du <em>Marché Immobilier &amp; Hypothécaire</em></h2>
+        </div>
+
+        <div class="baro-filter-bar" id="baroFilters">
+            <button class="baro-filter-btn active" data-region="all" onclick="baroFilter(this,'all')">Toutes les nouvelles</button>
+            <button class="baro-filter-btn" data-region="taux" onclick="baroFilter(this,'taux')">Taux &amp; Hypothèque</button>
+            <button class="baro-filter-btn" data-region="montreal" onclick="baroFilter(this,'montreal')">Montréal</button>
+            <button class="baro-filter-btn" data-region="laval" onclick="baroFilter(this,'laval')">Laval</button>
+            <button class="baro-filter-btn" data-region="rive-sud" onclick="baroFilter(this,'rive-sud')">Rive-Sud</button>
+            <button class="baro-filter-btn" data-region="rive-nord" onclick="baroFilter(this,'rive-nord')">Rive-Nord</button>
+        </div>
+
+        <div class="baro-news-grid" id="baroNewsGrid">
+            <div class="skeleton-card skeleton"></div>
+            <div class="skeleton-card skeleton"></div>
+            <div class="skeleton-card skeleton"></div>
+            <div class="skeleton-card skeleton"></div>
+            <div class="skeleton-card skeleton"></div>
+            <div class="skeleton-card skeleton"></div>
+        </div>
+
+        <div class="baro-loadmore-wrap" id="baroLoadMoreWrap" style="display:none;">
+            <button type="button" class="baro-loadmore-btn" id="baroLoadMoreBtn" onclick="baroLoadMoreNews()">
+                Afficher plus d'actualités (+6)
+            </button>
+        </div>
+
+        <!-- ── 08 · IDÉE #10 : RAPPORTS MENSUELS PDF & LEXIQUE EXPERT ── -->
+        <div class="baro-sec-head" id="sec-rapports">
+            <div class="baro-sec-kicker">08 · Publications &amp; Pédagogie</div>
+            <h2 class="baro-section-title">Rapports Mensuels PDF &amp; <em>Lexique Expert</em></h2>
+        </div>
+
+        <div class="pdf-report-banner">
+            <div class="pdf-report-info">
+                <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.18em; color:var(--m-accent); margin-bottom:4px;">Édition Mensuelle Téléchargeable</div>
+                <h3>Rapport Complet du Marché Immobilier &amp; Hypothécaire</h3>
+                <p>Consultez nos synthèses mensuelles détaillées en format PDF (statistiques Centris par secteur, analyse des taux Multi-Prêts et perspectives pour acheteurs et vendeurs).</p>
+            </div>
+            <div class="pdf-report-actions">
+                <a href="/rapports" class="mp-lock-btn">Consulter les rapports mensuels →</a>
+            </div>
+        </div>
+
         <div class="lex-grid">
             <div class="lex-card">
-                <div class="lex-term">Prix Médian</div>
-                <div class="lex-defn">Le prix "central" : 50% des ventes sont plus chères, 50% sont moins chères. Plus
-                    stable que le prix moyen car il n'est pas faussé par les maisons d'exception.</div>
+                <div class="lex-term">Prix Médian Centris</div>
+                <div class="lex-defn">Le prix central qui divise exactement les transactions en deux groupes égaux (50 % au-dessus, 50 % en dessous). Plus fidèle que la moyenne car il neutralise l'effet des propriétés d'exception.</div>
             </div>
             <div class="lex-card">
-                <div class="lex-term">Nouveaux Vendeurs / Inscriptions</div>
-                <div class="lex-defn">Le nombre de nouvelles propriétés arrivées sur le marché. Un chiffre en hausse
-                    offre plus de choix et réduit la pression sur les prix.</div>
+                <div class="lex-term">Taux de Qualification (BSIF)</div>
+                <div class="lex-defn">Plancher réglementaire canadien (« Stress Test ») exigeant que votre capacité d'emprunt soit calculée au taux le plus élevé entre 5,25 % ou votre taux contractuel Multi-Prêts majoré de 2,00 %.</div>
             </div>
             <div class="lex-card">
                 <div class="lex-term">Marché de Vendeurs</div>
-                <div class="lex-defn">Situation où la demande (acheteurs) excède l'offre. Se produit quand il y a moins
-                    de 5 mois d'inventaire. Entraîne souvent des surenchères.</div>
+                <div class="lex-defn">Situation où le nombre de mois d'inventaire est inférieur à 5 mois. Le rapport de force avantage les propriétaires-vendeurs et nécessite une préqualification solide pour les acheteurs.</div>
             </div>
             <div class="lex-card">
-                <div class="lex-term">RMR (Région Métropolitaine)</div>
-                <div class="lex-defn">Ensemble géographique incluant le centre-ville et ses couronnes (Laval, Rives).
-                    Les statistiques RMR donnent la tendance globale du "Grand Montréal".</div>
+                <div class="lex-term">Taux Affiché vs Négocié</div>
+                <div class="lex-defn">Le taux affiché est le taux catalogue des grandes banques (souvent utilisé pour calculer les pénalités), tandis que le taux Multi-Prêts est le taux escompté négocié auprès de plus de 30 prêteurs.</div>
             </div>
         </div>
 
         <!-- ── CTA ── -->
         <div class="baro-cta-block">
-            <img src="https://dossier.evanpatruno.ca/evan-photo.jpg" alt="Evan Patruno" class="baro-cta-photo"
-                onerror="this.style.display='none'" />
+            <img src="https://dossier.evanpatruno.ca/evan-photo.jpg" alt="Evan Patruno" class="baro-cta-photo" onerror="this.style.display='none'" />
             <div class="baro-cta-text">
-                <h3>Que signifient ces données pour vous?</h3>
-                <p>Le marché bouge — votre stratégie devrait aussi. Obtenez une analyse personnalisée gratuite avec Evan
-                    pour tirer profit des conditions actuelles, que vous achetiez, vendiez ou refinanciez.</p>
+                <h3>Transformez ces données en avantage stratégique</h3>
+                <p>En tant que courtier immobilier (Rive-Sud &amp; Haut-Richelieu) et courtier hypothécaire Multi-Prêts (tout le Québec), je structure à la fois votre financement et votre négociation sous un même toit.</p>
                 <a href="/contact" class="baro-cta-btn">
-                    📅 Planifier une consultation gratuite
+                    Planifier une consultation stratégique →
                 </a>
             </div>
         </div>
 
         <!-- ── SOURCES & DISCLAIMER ── -->
-        <div style="margin-top: 30px; padding: 20px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 20px; font-size: 0.75rem; line-height: 1.5; color: rgba(255, 255, 255, 0.4); text-align: justify;">
-            <strong>Sources des données :</strong> Les informations et statistiques affichées sur ce baromètre proviennent de sources publiques et officielles réputées fiables, notamment la <strong>Banque du Canada</strong> (taux directeur), <strong>Centris</strong> et l'<strong>Association professionnelle des courtiers immobiliers du Québec (APCIQ)</strong> (prix médians, ventes et délais de vente).
+        <div style="margin-top: 28px; padding: 20px 24px; background: rgba(30, 10, 25, 0.55); border: 1px solid rgba(212, 175, 55, 0.12); border-radius: 18px; font-size: 0.74rem; line-height: 1.55; color: rgba(253, 251, 247, 0.45); text-align: justify;">
+            <strong>Sources officielles des données :</strong> Les indicateurs présentés sur ce baromètre sont synchronisés quotidiennement à partir des publications de la <strong>Banque du Canada</strong> (taux cible du financement à un jour, série V39079), de <strong>Multi-Prêts Hypothèques</strong> (grille officielle des taux hypothécaires pour le Québec sur <em>multi-prets.com</em>), ainsi que de <strong>Centris</strong> et de l'<strong>Association professionnelle des courtiers immobiliers du Québec (APCIQ)</strong>.
             <br><br>
-            <strong>Avertissement légal :</strong> Ces données sont présentées à titre purement indicatif et informatif pour vous aider à comprendre les tendances générales du marché. Elles ne constituent en aucun cas un avis professionnel, juridique, financier ou d'investissement, et ne devraient pas servir de base exclusive pour réaliser une transaction immobilière. Chaque situation est unique et les conditions du marché fluctuent rapidement ; il est fortement recommandé de consulter un courtier immobilier agréé pour obtenir une analyse personnalisée et adaptée à votre projet.
+            <strong>Avis réglementaire (OACIQ &amp; AMF) :</strong> Ces données et simulateurs sont fournis à titre informatif et ne constituent pas une offre de prêt ni un avis financier personnalisé. Les taux hypothécaires sont sujets à changement sans préavis selon les critères de souscription du prêteur.
         </div>
 
     </div>
@@ -1269,11 +2077,18 @@
 
 <script>
     window.currentBocRate = 2.50;
+    window.currentMp5YrRate = 4.64;
+    window.currentCondoPrices = {
+        montreal: 435000,
+        laval: 419647,
+        'rive-sud': 404294,
+        'rive-nord': 373588
+    };
 
     (function () {
         const NEWS_BIN = 'https://api.jsonbin.io/v3/b/69e6d40c856a6821895644dc/latest';
         const BOC_BIN = 'https://api.jsonbin.io/v3/b/69e6d40f856a6821895644ed/latest';
-        const BOC_VALET = 'https://www.bankofcanada.ca/valet/observations/V39079/json?recent=30';
+        const BOC_VALET = 'https://www.bankofcanada.ca/valet/observations/V39079/json?recent=550';
 
         const BOC_SCHEDULE = [
             '2026-01-28', '2026-03-18', '2026-04-29', '2026-06-10',
@@ -1283,18 +2098,35 @@
         ];
 
         const ECO_EVENTS = [
-            { date: '2026-10-28', day: '28', month: 'Oct', title: 'Taux Directeur (BoC)', desc: "Décision sur les taux d'intérêt et RPM.", primary: true },
-            { date: '2026-11-05', day: '05', month: 'Nov', title: 'Statistiques APCIQ', desc: 'Bilan mensuel du marché du Grand Montréal.', primary: false },
-            { date: '2026-11-19', day: '19', month: 'Nov', title: 'IPC (Inflation)', desc: 'Rapport mensuel de Statistique Canada.', primary: false },
-            { date: '2026-12-09', day: '09', month: 'Déc', title: 'Taux Directeur (BoC)', desc: 'Dernière décision de politique monétaire 2026.', primary: true },
-            { date: '2026-12-17', day: '17', month: 'Déc', title: 'Mises en chantier (SCHL)', desc: "Indicateur clé de l'offre résidentielle future.", primary: false },
-            { date: '2027-01-27', day: '27', month: 'Jan', title: 'Taux Directeur (BoC)', desc: 'Première annonce stratégique de 2027.', primary: true },
-            { date: '2027-02-16', day: '16', month: 'Fév', title: 'IPC (Inflation)', desc: 'Rapport mensuel de Statistique Canada.', primary: false },
-            { date: '2027-03-10', day: '10', month: 'Mars', title: 'Taux Directeur (BoC)', desc: "Décision sur les taux d'intérêt.", primary: true }
+            { date: '2026-10-28', day: '28', month: 'Oct', title: 'Taux Directeur (BoC)', desc: "Décision sur les taux d'intérêt et Rapport sur la politique monétaire.", primary: true },
+            { date: '2026-11-05', day: '05', month: 'Nov', title: 'Statistiques Centris / APCIQ', desc: 'Bilan mensuel officiel du marché résidentiel du Grand Montréal.', primary: false },
+            { date: '2026-11-19', day: '19', month: 'Nov', title: 'Indice des prix (IPC)', desc: "Publication mensuelle de l'inflation par Statistique Canada.", primary: false },
+            { date: '2026-12-09', day: '09', month: 'Déc', title: 'Taux Directeur (BoC)', desc: 'Dernière annonce de politique monétaire de la Banque du Canada en 2026.', primary: true },
+            { date: '2026-12-17', day: '17', month: 'Déc', title: 'Mises en chantier (SCHL)', desc: "Indicateur clé de l'offre résidentielle neuve au Québec.", primary: false },
+            { date: '2027-01-27', day: '27', month: 'Jan', title: 'Taux Directeur (BoC)', desc: 'Première décision stratégique de taux de 2027 et RPM.', primary: true },
+            { date: '2027-02-16', day: '16', month: 'Fév', title: 'Indice des prix (IPC)', desc: 'Rapport mensuel de Statistique Canada.', primary: false },
+            { date: '2027-03-10', day: '10', month: 'Mars', title: 'Taux Directeur (BoC)', desc: "Annonce officielle sur le taux cible du financement à un jour.", primary: true }
+        ];
+
+        // Série historique 24 mois de secours (Banque du Canada)
+        const FALLBACK_BOC_HISTORY = [
+            { label: 'Mai 24', rate: 5.00 },
+            { label: 'Juin 24', rate: 4.75 },
+            { label: 'Juil 24', rate: 4.50 },
+            { label: 'Sept 24', rate: 4.25 },
+            { label: 'Oct 24', rate: 3.75 },
+            { label: 'Déc 24', rate: 3.25 },
+            { label: 'Jan 25', rate: 3.00 },
+            { label: 'Mars 25', rate: 2.75 },
+            { label: 'Juin 25', rate: 2.75 },
+            { label: 'Sept 25', rate: 2.50 },
+            { label: 'Jan 26', rate: 2.50 },
+            { label: 'Avr 26', rate: 2.50 }
         ];
 
         let allNews = [];
         let activeRegion = 'all';
+        let visibleNewsCount = 6;
 
         function renderEcoCalendar() {
             const container = document.getElementById('baroEcoCalendar');
@@ -1304,7 +2136,7 @@
             if (!upcoming.length) return;
             container.innerHTML = upcoming.map((ev, idx) => `
                 <div class="cal-item">
-                    <div class="cal-date-box" style="background: ${idx === 0 || ev.primary ? 'var(--m-primary)' : 'rgba(255,255,255,0.1)'};">
+                    <div class="cal-date-box" style="background: ${idx === 0 || ev.primary ? 'rgba(212, 175, 55, 0.14)' : 'rgba(30, 10, 25, 0.7)'}; border-color: ${idx === 0 || ev.primary ? 'rgba(212, 175, 55, 0.5)' : 'rgba(212, 175, 55, 0.18)'};">
                         <span class="cal-day">${ev.day}</span>
                         <span class="cal-month">${ev.month}</span>
                     </div>
@@ -1316,10 +2148,135 @@
             `).join('');
         }
 
+        function renderBocHistorySvg(points) {
+            const wrap = document.getElementById('bocHistoryChartWrap');
+            if (!wrap || !points || !points.length) return;
+
+            const w = 960, h = 230, padL = 46, padR = 26, padT = 24, padB = 38;
+            const minR = 1.5, maxR = 5.5;
+            const plotW = w - padL - padR;
+            const plotH = h - padT - padB;
+
+            const getX = (i) => padL + (i / Math.max(1, points.length - 1)) * plotW;
+            const getY = (r) => padT + (1 - (r - minR) / (maxR - minR)) * plotH;
+
+            const coords = points.map((p, i) => ({ x: getX(i), y: getY(p.rate), rate: p.rate, label: p.label }));
+            const linePath = coords.map((c, i) => (i === 0 ? `M ${c.x.toFixed(1)} ${c.y.toFixed(1)}` : `L ${c.x.toFixed(1)} ${c.y.toFixed(1)}`)).join(' ');
+            const areaPath = `${linePath} L ${coords[coords.length - 1].x.toFixed(1)} ${(padT + plotH).toFixed(1)} L ${coords[0].x.toFixed(1)} ${(padT + plotH).toFixed(1)} Z`;
+
+            const gridLevels = [2.0, 3.0, 4.0, 5.0];
+            const gridLines = gridLevels.map(lvl => {
+                const y = getY(lvl).toFixed(1);
+                return `
+                    <line x1="${padL}" y1="${y}" x2="${w - padR}" y2="${y}" stroke="rgba(212,175,55,0.12)" stroke-dasharray="4 4" />
+                    <text x="${padL - 10}" y="${Number(y) + 4}" text-anchor="end" fill="rgba(253,251,247,0.45)" font-size="11" font-family="Outfit, sans-serif">${lvl.toFixed(1).replace('.', ',')} %</text>
+                `;
+            }).join('');
+
+            const dotsAndLabels = coords.map((c, idx) => {
+                const showRate = idx === 0 || idx === coords.length - 1 || coords[idx - 1].rate !== c.rate;
+                return `
+                    <circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="${idx === coords.length - 1 ? 5.5 : 3.8}" fill="${idx === coords.length - 1 ? '#d4af37' : '#2b0b24'}" stroke="#d4af37" stroke-width="2" />
+                    ${showRate ? `<text x="${c.x.toFixed(1)}" y="${(c.y - 10).toFixed(1)}" text-anchor="middle" fill="#f3e5ab" font-size="11" font-weight="600" font-family="Outfit, sans-serif">${c.rate.toFixed(2).replace('.', ',')}%</text>` : ''}
+                    <text x="${c.x.toFixed(1)}" y="${h - 10}" text-anchor="middle" fill="rgba(253,251,247,0.55)" font-size="11" font-family="Outfit, sans-serif">${c.label}</text>
+                `;
+            }).join('');
+
+            wrap.innerHTML = `
+                <svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Graphique de l'évolution du taux directeur de la Banque du Canada sur 24 mois">
+                    <defs>
+                        <linearGradient id="bocGoldArea" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#d4af37" stop-opacity="0.32" />
+                            <stop offset="100%" stop-color="#d4af37" stop-opacity="0.0" />
+                        </linearGradient>
+                    </defs>
+                    ${gridLines}
+                    <path d="${areaPath}" fill="url(#bocGoldArea)" />
+                    <path d="${linePath}" fill="none" stroke="#d4af37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                    ${dotsAndLabels}
+                </svg>
+            `;
+        }
+
+        function fmtPctFr(val) {
+            if (!val) return '';
+            const num = parseFloat(String(val).replace(',', '.').replace('%', ''));
+            if (isNaN(num)) return val;
+            return num.toFixed(2).replace('.', ',') + ' %';
+        }
+
+        function renderMultipretsRates(mp) {
+            if (!mp) return;
+            const setEl = (id, v) => {
+                const el = document.getElementById(id);
+                if (el && v) el.textContent = fmtPctFr(v);
+            };
+            setEl('mpRateVar5', mp.variable_5ans);
+            setEl('mpRatePrime', mp.prime_rate);
+            setEl('mpRateFix1', mp.fixe_1an);
+            setEl('mpRateFix2', mp.fixe_2ans);
+            setEl('mpRateFix3', mp.fixe_3ans);
+            setEl('mpPostFix3', mp.affiche_3ans);
+            setEl('mpRateFix4', mp.fixe_4ans);
+            setEl('mpPostFix4', mp.affiche_4ans);
+            setEl('mpRateFix5', mp.fixe_5ans);
+            setEl('mpPostFix5', mp.affiche_5ans);
+
+            const r5 = parseFloat(String(mp.fixe_5ans || '4.64').replace(',', '.').replace('%', ''));
+            if (!isNaN(r5) && r5 > 0) {
+                window.currentMp5YrRate = r5;
+                const powerLbl = document.getElementById('powerLiveRateLbl');
+                if (powerLbl) powerLbl.textContent = fmtPctFr(r5);
+                const rbBadge = document.getElementById('rbRateBadge');
+                if (rbBadge) rbBadge.textContent = 'Taux ' + fmtPctFr(r5);
+            }
+            updateRentVsBuy();
+            calcBuyingPower();
+            calcWaitWidget();
+        }
+
+        function updateRentVsBuy() {
+            const rate = window.currentMp5YrRate || 4.64;
+            const i = Math.pow(1 + (rate / 100) / 2, 1 / 6) - 1;
+            const n = 25 * 12;
+            const fmtCurr = (v) => new Intl.NumberFormat('fr-CA', { maximumFractionDigits: 0 }).format(Math.round(v)) + ' $ / mois';
+            const fmtEq = (v) => `Dont ~${new Intl.NumberFormat('fr-CA', { maximumFractionDigits: 0 }).format(Math.round(v))} $/mois en capital`;
+
+            const calcCondoPmt = (price) => {
+                const loan = price * 0.80; // 20% mise de fonds
+                const pmt = (loan * i) / (1 - Math.pow(1 + i, -n));
+                const firstMonthInterest = loan * i;
+                const firstMonthPrincipal = Math.max(0, pmt - firstMonthInterest);
+                return { pmt, principal: firstMonthPrincipal };
+            };
+
+            const mtl = calcCondoPmt(window.currentCondoPrices.montreal || 435000);
+            const laval = calcCondoPmt(window.currentCondoPrices.laval || 419647);
+            const rs = calcCondoPmt(window.currentCondoPrices['rive-sud'] || 404294);
+
+            const elMtl = document.getElementById('rbMtlMortgage');
+            const elMtlEq = document.getElementById('rbMtlEquity');
+            if (elMtl) elMtl.textContent = fmtCurr(mtl.pmt);
+            if (elMtlEq) elMtlEq.textContent = fmtEq(mtl.principal);
+
+            const elLaval = document.getElementById('rbLavalMortgage');
+            const elLavalEq = document.getElementById('rbLavalEquity');
+            if (elLaval) elLaval.textContent = fmtCurr(laval.pmt);
+            if (elLavalEq) elLavalEq.textContent = fmtEq(laval.principal);
+
+            const elRs = document.getElementById('rbRsMortgage');
+            const elRsEq = document.getElementById('rbRsEquity');
+            if (elRs) elRs.textContent = fmtCurr(rs.pmt);
+            if (elRsEq) elRsEq.textContent = fmtEq(rs.principal);
+        }
+
         async function loadData() {
             renderEcoCalendar();
-            await Promise.all([loadBOC(), loadNews()]);
+            renderBocHistorySvg(FALLBACK_BOC_HISTORY);
+            calcBuyingPower();
+            updateRentVsBuy();
             calcWaitWidget();
+            await Promise.all([loadBOC(), loadNews()]);
         }
 
         async function loadNews() {
@@ -1330,54 +2287,89 @@
                 allNews = data.news || [];
                 renderNews(allNews);
                 if (data.market_stats) renderStats(data.market_stats);
+                if (data.multiprets_rates) renderMultipretsRates(data.multiprets_rates);
                 const lu = data.last_update || '';
                 if (lu) document.getElementById('baroLastUpdate').textContent = lu;
             } catch (e) {
                 console.error('News fetch error:', e);
                 document.getElementById('baroNewsGrid').innerHTML =
-                    '<div class="news-empty">⚠️ Actualités temporairement indisponibles.</div>';
+                    '<div class="news-empty">Actualités en cours de synchronisation.</div>';
             }
         }
 
         async function loadBOC() {
+            let renderedCard = false;
             try {
                 const res = await fetch(`${BOC_BIN}?nocache=${new Date().getTime()}`);
                 const json = await res.json();
                 const d = json.record || json;
-                if (d && d.rate) { renderBOC(d); return; }
+                if (d && d.rate) {
+                    renderBOC(d);
+                    renderedCard = true;
+                }
             } catch (_) { }
+
             try {
                 const res = await fetch(BOC_VALET);
                 const json = await res.json();
                 const obs = (json.observations || []).slice().sort((a, b) => (a.d || '').localeCompare(b.d || ''));
                 if (!obs.length) return;
-                const latest = obs[obs.length - 1];
-                const todayIso = new Date().toLocaleDateString('en-CA');
-                const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-                let nextIso = '', nextFr = '—', lastIso = '';
-                for (const d of BOC_SCHEDULE) {
-                    if (d > todayIso && !nextIso) { nextIso = d; }
-                    if (d <= todayIso) { lastIso = d; }
+
+                // Construire la série mensuelle sur 24 mois pour le graphique SVG
+                const monthsShort = ['Jan', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc'];
+                const byMonth = new Map();
+                for (const item of obs) {
+                    if (!item.d || !item.V39079 || !item.V39079.v) continue;
+                    const ym = item.d.slice(0, 7);
+                    byMonth.set(ym, parseFloat(item.V39079.v));
                 }
-                const rate = parseFloat(latest.V39079.v);
-                let prevR = rate;
-                for (let i = obs.length - 1; i >= 0; i--) {
-                    if (obs[i].d < (lastIso || latest.d)) {
-                        prevR = parseFloat(obs[i].V39079.v);
-                        break;
+                const allMonths = Array.from(byMonth.entries());
+                if (allMonths.length >= 6) {
+                    const step = Math.max(1, Math.floor(allMonths.length / 11));
+                    const sampled = [];
+                    for (let i = 0; i < allMonths.length; i += step) {
+                        const [ym, r] = allMonths[i];
+                        const [yr, mo] = ym.split('-');
+                        sampled.push({ label: `${monthsShort[parseInt(mo, 10) - 1]} ${yr.slice(2)}`, rate: r });
                     }
+                    const [lastYm, lastR] = allMonths[allMonths.length - 1];
+                    const [lYr, lMo] = lastYm.split('-');
+                    const lastLbl = `${monthsShort[parseInt(lMo, 10) - 1]} ${lYr.slice(2)}`;
+                    if (sampled[sampled.length - 1].label !== lastLbl) {
+                        sampled.push({ label: lastLbl, rate: lastR });
+                    }
+                    renderBocHistorySvg(sampled.slice(-12));
                 }
-                const status = rate > prevR ? 'a augmenté' : rate < prevR ? 'a diminué' : 'a maintenu';
-                if (nextIso) {
-                    const dp = new Date(nextIso + 'T12:00:00');
-                    nextFr = `${dp.getDate()} ${months[dp.getMonth()]} ${dp.getFullYear()}`;
+
+                if (!renderedCard) {
+                    const latest = obs[obs.length - 1];
+                    const todayIso = new Date().toLocaleDateString('en-CA');
+                    const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+                    let nextIso = '', nextFr = '—', lastIso = '';
+                    for (const d of BOC_SCHEDULE) {
+                        if (d > todayIso && !nextIso) { nextIso = d; }
+                        if (d <= todayIso) { lastIso = d; }
+                    }
+                    const rate = parseFloat(latest.V39079.v);
+                    let prevR = rate;
+                    for (let i = obs.length - 1; i >= 0; i--) {
+                        if (obs[i].d < (lastIso || latest.d)) {
+                            prevR = parseFloat(obs[i].V39079.v);
+                            break;
+                        }
+                    }
+                    const status = rate > prevR ? 'a augmenté' : rate < prevR ? 'a diminué' : 'a maintenu';
+                    if (nextIso) {
+                        const dp = new Date(nextIso + 'T12:00:00');
+                        nextFr = `${dp.getDate()} ${months[dp.getMonth()]} ${dp.getFullYear()}`;
+                    }
+                    let lastFr = latest.d;
+                    if (lastIso) {
+                        const lp = new Date(lastIso + 'T12:00:00');
+                        lastFr = `${lp.getDate()} ${months[lp.getMonth()]} ${lp.getFullYear()}`;
+                    }
+                    renderBOC({ rate, status, date: lastFr, last_date_iso: lastIso, next_announcement: nextFr, next_date_iso: nextIso });
                 }
-                let lastFr = latest.d;
-                if (lastIso) {
-                    const lp = new Date(lastIso + 'T12:00:00');
-                    lastFr = `${lp.getDate()} ${months[lp.getMonth()]} ${lp.getFullYear()}`;
-                }
-                renderBOC({ rate, status, date: lastFr, last_date_iso: lastIso, next_announcement: nextFr, next_date_iso: nextIso });
             } catch (e) { console.error('BOC Valet error:', e); }
         }
 
@@ -1403,28 +2395,42 @@
                 const elCondo = document.getElementById(`stat${pfx}CondoPrice`);
                 const elCondoTrend = document.getElementById(`stat${pfx}CondoTrend`);
                 const elSales = document.getElementById(`stat${pfx}Sales`);
+                const elSalesTrend = document.getElementById(`stat${pfx}SalesTrend`);
                 const elDays = document.getElementById(`stat${pfx}Days`);
+                const elActive = document.getElementById(`stat${pfx}Active`);
+                const elNew = document.getElementById(`stat${pfx}New`);
                 const elCond = document.getElementById(`stat${pfx}Condition`);
 
-                if (elPrice) elPrice.textContent = data.price + ' $';
-                if (elTrend) {
+                if (elPrice && data.price) elPrice.textContent = data.price + ' $';
+                if (elTrend && data.trend) {
                     elTrend.textContent = data.trend;
                     elTrend.className = 'stats-trend-small ' + (data.trend.includes('-') ? 'trend-down' : 'trend-up');
                 }
-                if (elCondo) elCondo.textContent = (data.condo_price || '—') + ' $';
-                if (elCondoTrend) {
-                    elCondoTrend.textContent = data.condo_trend || '';
-                    elCondoTrend.className = 'stats-trend-small ' + ((data.condo_trend || '').includes('-') ? 'trend-down' : 'trend-up');
+                if (elCondo && data.condo_price) {
+                    elCondo.textContent = data.condo_price + ' $';
+                    const numCondo = parseInt(String(data.condo_price).replace(/\s/g, ''), 10);
+                    if (!isNaN(numCondo) && numCondo > 100000) {
+                        window.currentCondoPrices[key] = numCondo;
+                    }
                 }
-                if (elSales) elSales.textContent = data.sales || '—';
-                if (elDays) elDays.textContent = data.days || '—';
+                if (elCondoTrend && data.condo_trend) {
+                    elCondoTrend.textContent = data.condo_trend;
+                    elCondoTrend.className = 'stats-trend-small ' + (data.condo_trend.includes('-') ? 'trend-down' : 'trend-up');
+                }
+                if (elSales && data.sales) elSales.textContent = data.sales;
+                if (elSalesTrend && data.sales_trend) {
+                    elSalesTrend.textContent = data.sales_trend;
+                    elSalesTrend.className = 'stats-trend-small ' + (data.sales_trend.includes('-') ? 'trend-down' : 'trend-up');
+                }
+                if (elDays && data.days) elDays.textContent = data.days;
+                if (elActive && data.active_listings) elActive.textContent = data.active_listings;
+                if (elNew && data.new_listings) elNew.textContent = data.new_listings;
 
-                if (elCond) {
-                    const cond = data.condition || '—';
-                    elCond.textContent = 'Marché ' + cond;
-                    elCond.className = 'stats-condition-pill ' + (cond.toLowerCase().includes('vendeur') ? 'cond-sellers' : 'cond-buyers');
+                if (elCond && data.condition) {
+                    elCond.textContent = 'Marché ' + data.condition;
                 }
             }
+            updateRentVsBuy();
         }
 
         function formatIsoDateFr(iso) {
@@ -1439,6 +2445,14 @@
             const rate = parseFloat(d.rate) || 2.50;
             window.currentBocRate = rate;
             document.getElementById('bocRateVal').textContent = rate.toFixed(2).replace('.', ',');
+            const curEl = document.getElementById('bocChartCurrent');
+            if (curEl) curEl.textContent = rate.toFixed(2).replace('.', ',') + ' %';
+            const dropEl = document.getElementById('bocChartDrop');
+            if (dropEl) {
+                const diff = (rate - 5.0).toFixed(2).replace('.', ',');
+                dropEl.textContent = diff + ' %';
+            }
+
             const status = (d.status || 'a maintenu').toLowerCase();
             const pill = document.getElementById('bocStatusPill');
             const icon = document.getElementById('bocStatusIcon');
@@ -1446,13 +2460,13 @@
             const decisionDateFr = d.last_date_iso ? formatIsoDateFr(d.last_date_iso) : (d.date || '');
             pill.className = 'boc-status-pill';
             if (status.includes('baiss') || status.includes('diminu') || status.includes('cut')) {
-                pill.classList.add('boc-status-cut'); icon.textContent = '📉';
+                pill.classList.add('boc-status-cut'); icon.textContent = '▼';
                 txt.textContent = 'Taux abaissé — ' + decisionDateFr;
             } else if (status.includes('hausse') || status.includes('augment') || status.includes('hike')) {
-                pill.classList.add('boc-status-hike'); icon.textContent = '📈';
-                txt.textContent = 'Taux augmenté — ' + decisionDateFr;
+                pill.classList.add('boc-status-hike'); icon.textContent = '▲';
+                txt.textContent = 'Taux relevé — ' + decisionDateFr;
             } else {
-                pill.classList.add('boc-status-stable'); icon.textContent = '⏸';
+                pill.classList.add('boc-status-stable'); icon.textContent = '●';
                 txt.textContent = 'Taux maintenu — ' + decisionDateFr;
             }
             document.getElementById('bocLastDate').textContent = decisionDateFr || '—';
@@ -1467,25 +2481,33 @@
 
         function inferRegions(n) {
             const tags = new Set((n.cities || []).map(c => c.toLowerCase()));
-            const text = `${n.title || ''} ${n.description || ''}`.toLowerCase();
+            const text = `${n.title || ''} ${n.description || ''} ${n.source || ''}`.toLowerCase();
+            if (/taux|hypoth[èe]que|banque du canada|boc|financement|pr[êe]t|inflation|directeur|multi-pr[êe]ts/.test(text)) tags.add('taux');
             if (/montr[ée]al|rmr|grand montr[ée]al|centris|apciq/.test(text)) tags.add('montreal');
             if (/laval|chomedey|sainte-doroth[ée]e|vimont|pont-viau/.test(text)) tags.add('laval');
-            if (/rive-sud|longueuil|brossard|chambly|saint-jean|candiac|la prairie|boucherville|saint-bruno|saint-lambert|mont[ée]r[ée]gie|couronne/.test(text)) tags.add('rive-sud');
+            if (/rive-sud|longueuil|brossard|chambly|saint-jean|candiac|la prairie|boucherville|saint-bruno|saint-lambert|mont[ée]r[ée]gie|couronne|napierville/.test(text)) tags.add('rive-sud');
             if (/rive-nord|terrebonne|blainville|saint-j[ée]r[ôo]me|mascouche|mirabel|repentigny|lavaltrie|laurentides|lanaudi[èe]re|couronne/.test(text)) tags.add('rive-nord');
             return Array.from(tags);
         }
 
+        function getFilteredNews(news) {
+            if (activeRegion === 'all') return news;
+            let filtered = news.filter(n => inferRegions(n).some(c => c.includes(activeRegion)));
+            if (!filtered.length) {
+                filtered = news.filter(n => inferRegions(n).includes('montreal') || (n.source || '').toUpperCase().includes('APCIQ'));
+            }
+            return filtered;
+        }
+
         function renderNews(news) {
             const grid = document.getElementById('baroNewsGrid');
-            let filtered = news;
-            if (activeRegion !== 'all') {
-                filtered = news.filter(n => inferRegions(n).some(c => c.includes(activeRegion)));
-                if (!filtered.length) {
-                    filtered = news.filter(n => inferRegions(n).includes('montreal') || (n.source || '').toUpperCase().includes('APCIQ'));
-                }
-            }
+            const loadMoreWrap = document.getElementById('baroLoadMoreWrap');
+            const loadMoreBtn = document.getElementById('baroLoadMoreBtn');
+            const filtered = getFilteredNews(news);
+
             if (!filtered.length) {
-                grid.innerHTML = '<div class="news-empty">Aucune actualité trouvée pour cette région.</div>';
+                grid.innerHTML = '<div class="news-empty">Aucune actualité trouvée pour ce filtre.</div>';
+                if (loadMoreWrap) loadMoreWrap.style.display = 'none';
                 return;
             }
             function cleanSrc(src) {
@@ -1493,33 +2515,53 @@
                 return src.replace(/[^\x00-\x7F\u00C0-\u017F\s\-\xb7'.]/g, '').trim() || 'Source';
             }
             const labelMap = {
+                'taux': 'Taux & Hypothèque',
                 'montreal': 'Grand Montréal',
                 'laval': 'Laval',
                 'rive-sud': 'Rive-Sud',
                 'rive-nord': 'Rive-Nord',
                 'quebec': 'Québec'
             };
-            grid.innerHTML = filtered.slice(0, 30).map(n => {
+
+            const total = Math.min(filtered.length, 36);
+            const slice = filtered.slice(0, visibleNewsCount);
+
+            grid.innerHTML = slice.map(n => {
                 const regList = inferRegions(n);
                 const isLocal = regList.length > 0;
                 const regions = regList.map(c => labelMap[c] || (c.charAt(0).toUpperCase() + c.slice(1))).slice(0, 2).join(' · ');
                 const src = cleanSrc(n.source);
                 return `<a href="${n.link}" target="_blank" rel="noopener" class="news-card">
-                <div class="news-card-top">
-                    <span class="news-source-badge" title="${src}">${src}</span>
-                    ${isLocal ? `<span class="news-local-tag">📍 ${regions}</span>` : ''}
-                </div>
-                <div class="news-card-title">${n.title}</div>
-                ${n.description ? `<div class="news-card-desc">${n.description.substring(0, 145)}…</div>` : ''}
-                <span class="news-card-link">Lire l’article →</span>
-            </a>`;
+                    <div class="news-card-top">
+                        <span class="news-source-badge" title="${src}">${src}</span>
+                        ${isLocal ? `<span class="news-local-tag">${regions}</span>` : ''}
+                    </div>
+                    <div class="news-card-title">${n.title}</div>
+                    ${n.description ? `<div class="news-card-desc">${n.description.substring(0, 150)}…</div>` : ''}
+                    <span class="news-card-link">Lire l'article →</span>
+                </a>`;
             }).join('');
+
+            if (loadMoreWrap && loadMoreBtn) {
+                if (visibleNewsCount < total) {
+                    loadMoreWrap.style.display = 'block';
+                    loadMoreBtn.textContent = `Afficher plus d'actualités (${slice.length} / ${total})`;
+                } else {
+                    loadMoreWrap.style.display = 'none';
+                }
+            }
         }
+
+        window.baroLoadMoreNews = function () {
+            visibleNewsCount += 6;
+            renderNews(allNews);
+        };
 
         window.baroFilter = function (btn, region) {
             document.querySelectorAll('.baro-filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             activeRegion = region;
+            visibleNewsCount = 6;
 
             document.querySelectorAll('.stats-card').forEach(c => {
                 c.classList.remove('active-region');
@@ -1532,7 +2574,53 @@
         loadData();
     })();
 
-    // WAIT VS BUY WIDGET LOGIC
+    // IDÉE #7 : CALCULATEUR DE POUVOIR D'ACHAT EN TEMPS RÉEL (AVEC STRESS TEST BSIF)
+    function calcBuyingPower() {
+        const incEl = document.getElementById('powerIncomeInput');
+        const downEl = document.getElementById('powerDownInput');
+        if (!incEl || !downEl) return;
+
+        const income = parseFloat(incEl.value) || 130000;
+        const down = parseFloat(downEl.value) || 60000;
+        const contractRate = typeof window.currentMp5YrRate === 'number' ? window.currentMp5YrRate : 4.64;
+        const stressRate = Math.max(5.25, +(contractRate + 2.0).toFixed(2));
+
+        const fmtCurrency = (v) => new Intl.NumberFormat('fr-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 }).format(Math.round(v));
+
+        document.getElementById('powerIncomeDisplay').textContent = fmtCurrency(income);
+        document.getElementById('powerDownDisplay').textContent = fmtCurrency(down);
+        document.getElementById('powerStressRate').textContent = stressRate.toFixed(2).replace('.', ',') + ' %';
+
+        // Ratio ABD max 39% moins ~420$/mois (taxes municipales + chauffage estimés)
+        const maxHousingMonthly = (income / 12) * 0.39;
+        const maxPmtStress = Math.max(500, maxHousingMonthly - 420);
+
+        const n = 25 * 12;
+        const iStress = Math.pow(1 + (stressRate / 100) / 2, 1 / 6) - 1;
+        const maxLoan = maxPmtStress * ((1 - Math.pow(1 + iStress, -n)) / iStress);
+        const maxPrice = Math.round((maxLoan + down) / 1000) * 1000;
+
+        // Paiement réel au taux contractuel Multi-Prêts 5 ans
+        const iReal = Math.pow(1 + (contractRate / 100) / 2, 1 / 6) - 1;
+        const realPmt = (maxLoan * iReal) / (1 - Math.pow(1 + iReal, -n));
+
+        document.getElementById('powerMaxPrice').textContent = fmtCurrency(maxPrice);
+        document.getElementById('powerMonthlyPmt').textContent = fmtCurrency(realPmt) + ' / mois';
+
+        const tagsContainer = document.getElementById('powerCompatTags');
+        if (tagsContainer) {
+            const tags = [];
+            if (maxPrice >= 380000) tags.push('Condo Rive-Sud & Rive-Nord');
+            if (maxPrice >= 435000) tags.push('Condo Montréal & Laval');
+            if (maxPrice >= 515000) tags.push('Unifamiliale St-Jean / Rive-Nord');
+            if (maxPrice >= 580000) tags.push('Unifamiliale Rive-Sud');
+            if (maxPrice >= 645000) tags.push('Unifamiliale Grand Montréal & Laval');
+            if (!tags.length) tags.push('Idéal projet Condo ou Copropriété en région');
+            tagsContainer.innerHTML = tags.slice(0, 3).map(t => `<span class="power-tag">✓ ${t}</span>`).join('');
+        }
+    }
+
+    // WAIT VS BUY WIDGET LOGIC (UTILISE LE TAUX MULTI-PRÊTS 5 ANS EN VIGUEUR)
     function calcWaitWidget() {
         const priceEl = document.getElementById('wb-price');
         const monthsEl = document.getElementById('wb-months');
@@ -1540,8 +2628,7 @@
 
         const priceNow = parseFloat(priceEl.value) || 0;
         const months = parseInt(monthsEl.value) || 12;
-        const bocRate = typeof window.currentBocRate === 'number' ? window.currentBocRate : 2.50;
-        const rateNow = Math.max(3.79, +(bocRate + 2.15).toFixed(2));
+        const rateNow = typeof window.currentMp5YrRate === 'number' ? window.currentMp5YrRate : 4.64;
         const rateFuture = Math.max(3.29, +(rateNow - 0.50).toFixed(2));
         const appreciationAnnuelle = 0.05;
 
@@ -1566,22 +2653,26 @@
         const boxEl = document.getElementById('wb-verdict-box');
 
         const fmt = (v) => new Intl.NumberFormat('fr-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 }).format(v);
+        const rateNowStr = rateNow.toFixed(2).replace('.', ',');
         const rateFutureStr = rateFuture.toFixed(2).replace('.', ',');
 
         if (totalImpact > 0) {
-            titleEl.innerHTML = `⚠️ Coût Net d'attendre : +${fmt(totalImpact)}`;
-            titleEl.style.color = '#f87171';
-            boxEl.style.borderColor = 'rgba(248, 113, 113, 0.3)';
-            boxEl.style.background = 'rgba(248, 113, 113, 0.05)';
-            textEl.innerHTML = `Même si les taux hypothécaires baissaient à <strong>${rateFutureStr} %</strong>, la propriété passerait à <strong>${fmt(priceFuture)}</strong> (+${fmt(appreciationAmt)}).<br>Attendre ${months} mois vous coûterait plus cher en mise de fonds, en paiements et en équité.`;
+            titleEl.innerHTML = `Coût net d'attendre ${months} mois : +${fmt(totalImpact)}`;
+            titleEl.style.color = '#f3e5ab';
+            boxEl.style.borderColor = 'rgba(212, 175, 55, 0.42)';
+            boxEl.style.background = 'rgba(212, 175, 55, 0.08)';
+            textEl.innerHTML = `Même si le taux fixe 5 ans passait de <strong>${rateNowStr} %</strong> à <strong>${rateFutureStr} %</strong>, une propriété de ${fmt(priceNow)} passerait à <strong>${fmt(priceFuture)}</strong> (+${fmt(appreciationAmt)} à 5 %/an).<br>Acheter maintenant et refinancer si les taux baissent protège votre prix d'acquisition.`;
         } else {
-            titleEl.innerHTML = `✅ Économie Nette : ${fmt(Math.abs(totalImpact))}`;
-            titleEl.style.color = '#a7ff00';
-            boxEl.style.borderColor = 'rgba(167, 255, 0, 0.3)';
-            boxEl.style.background = 'rgba(167, 255, 0, 0.05)';
-            textEl.innerHTML = `Dans ce scénario (taux à ${rateFutureStr} %), la baisse de taux compense l'appréciation des prix sur ${months} mois.`;
+            titleEl.innerHTML = `Économie estimée : ${fmt(Math.abs(totalImpact))}`;
+            titleEl.style.color = '#4ade80';
+            boxEl.style.borderColor = 'rgba(74, 222, 128, 0.35)';
+            boxEl.style.background = 'rgba(74, 222, 128, 0.06)';
+            textEl.innerHTML = `Sur cet horizon de ${months} mois (taux simulé à ${rateFutureStr} %), la baisse de taux compenserait la hausse estimée des prix.`;
         }
     }
 
-    setTimeout(calcWaitWidget, 300);
+    setTimeout(() => {
+        calcBuyingPower();
+        calcWaitWidget();
+    }, 250);
 </script>

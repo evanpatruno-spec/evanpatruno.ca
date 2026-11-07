@@ -502,6 +502,26 @@
     }
   ],
   "boc_rate": "2.50%",
+  "multiprets_rates": {
+    "fixe_1an": "4.79%",
+    "affiche_1an": "5.49%",
+    "fixe_2ans": "4.54%",
+    "affiche_2ans": "5.24%",
+    "fixe_3ans": "4.44%",
+    "affiche_3ans": "6.05%",
+    "fixe_4ans": "4.39%",
+    "affiche_4ans": "6.09%",
+    "fixe_5ans": "4.64%",
+    "affiche_5ans": "6.19%",
+    "fixe_7ans": "5.14%",
+    "affiche_7ans": "6.40%",
+    "fixe_10ans": "5.24%",
+    "affiche_10ans": "6.80%",
+    "variable_5ans": "3.90%",
+    "prime_rate": "4.70%",
+    "source_url": "https://www.multi-prets.com/fr/options-hypothecaires/nos-taux/",
+    "updated_at": "2026-11-07"
+  },
   "market_stats": {
     "montreal": {
       "price": "645 500",
