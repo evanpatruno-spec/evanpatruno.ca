@@ -96,22 +96,28 @@
       "category": "local"
     },
     {
-      "title": "Philanthropie | La Maison Marguerite : une campagne pour prévenir l’itinérance des femmes",
-      "link": "https://www.lapresse.ca/affaires/portfolio/2026-11-14/philanthropie/la-maison-marguerite-une-campagne-pour-prevenir-l-itinerance-des-femmes.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Philanthropie | Les Jeunes Philanthropes du Québec prêts pour une prochaine vague",
+      "link": "https://www.lapresse.ca/affaires/portfolio/2026-11-15/philanthropie/les-jeunes-philanthropes-du-quebec-prets-pour-une-prochaine-vague.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Au printemps 2024, un incendie détruisait les installations d’hébergement pour femmes en difficulté de La Maison Marguerite. Deux ans plus tard, à la veille de son 50e anniversaire, l’organisme renaît de ses cendres et lance une campagne majeure de…",
+      "description": "Après six ans à la présidence des Jeunes Philanthropes du Québec (JPQ), William Plamondon s’apprête à passer le flambeau lors de la prochaine assemblée générale de l’organisme. Quel est son bilan ?",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Fonds à revenu fixe | Investir dans la réconciliation",
-      "link": "https://www.lapresse.ca/affaires/marches/2026-11-14/fonds-a-revenu-fixe/investir-dans-la-reconciliation.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Philanthropie | Comment donner avec les actions accréditives",
+      "link": "https://www.lapresse.ca/affaires/portfolio/2026-11-15/philanthropie/comment-donner-avec-les-actions-accreditives.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La société de gestion de placements montréalaise AlphaFixe a lancé cette semaine le Fonds Réconciliation. Premier en son genre, le fonds à revenu fixe combinera des financements profitant aux peuples autochtones et des investissements dans des entités qui ont…",
-      "cities": [
-        "montreal"
-      ],
-      "category": "local"
+      "description": "Alors que la philanthropie fait aujourd’hui partie intégrante du paysage économique et social québécois, plusieurs initiatives sont en place pour favoriser son expansion, dont le marché des émissions d’actions accréditives qui servent à financer les dépenses…",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Dépenses bien pensées | Louer ou acheter ses skis ?",
+      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-11-15/depenses-bien-pensees/louer-ou-acheter-ses-skis.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "source": "La Presse",
+      "description": "Skis, bottes, fixations, bâtons : à l’approche des premières bordées de neige, s’équiper pour dévaler les pistes peut coûter cher. Alors qu’un équipement neuf représente un investissement d’au moins 700 $, la location saisonnière est-elle une option…",
+      "cities": [],
+      "category": "general"
     },
     {
       "title": "Is Buffy Sainte-Marie's Power in the Blood the defining record of our time?",
@@ -146,17 +152,6 @@
       "category": "general"
     },
     {
-      "title": "Marché immobilier de la Rive-Sud de Montréal — Octobre 2026",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaUZaYzZIcDF6REtBWkZ2QklWZE9YWjBYWTIyY0dUVFFwbjl0M2dTYUgyLXJZYjc0emlGWTdpQWt1ZWlra3ZYMGJxc2RYU3pfWEJVaEFhVmZTaENCYW5GMVBtRWpMbDRjMUh2QlhQbi01aWpSME5DSGhPVTRNQW5QZjdKdHhyN0RtbnJJXzJDbzJzNzlJbE5SVXhOckk2R29pX0d0T2xlaFlNeVFpY2s0RGdHNklmVHB2UmVvWGV6RQ?oc=5",
-      "source": "Journal Métro",
-      "description": "Revue d'actualité immobilière publiée par Journal Métro portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [
-        "montreal",
-        "rive-sud"
-      ],
-      "category": "local"
-    },
-    {
       "title": "Devimco revient dans la région de Québec avec deux mandats à Lévis",
       "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPaWcwejhjVWZnVU82MVF0MUN4b2M3ZWRKNmhiaXNwUkZQRDU4eE1ybDE3Q1pVb0ZNS3NmUVVVVjV0c2U4UWZkaGZwaWNfdGZMU295TVoweVZpWTFzMTkySFJBVHFNSXM4alUxRDM3OVZsYXRDbFU4R1BSaEpmaVNqMWVfVXNlNzZaYjVRUllRZDd2SThERFNWMGRFLThZOGJjOUVuZW9wQmRiOVR0Y3pYaWM0TkdoaE92UzZuQko5Z0FmV1kxWEdabWJGRlNVYWRzVTdFVl9B?oc=5",
       "source": "Le Soleil",
@@ -169,14 +164,6 @@
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9USHZHZ0R2VEx6ZE51LW5DQmtCWWJUVGNVUkNZOXhWODNqREpkdFVnM2FkMGRLMWtFd2xfbFg3R0wzUk1VYUlMa1ZYaDY1TE5pNk5KanpzckVwMnQ4bmJnd0pSZjkycUdtU1NhclduQWhkdw?oc=5",
       "source": "Journal Le Carrefour de Québec",
       "description": "Revue d'actualité immobilière publiée par Journal Le Carrefour de Québec portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Marché immobilier de la Province de Québec — Octobre 2026",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNlo4VVlZUUVsOUFZdTZfMTBVNHo0Tktxb0cxWDZXWVNremJVWV9sclhadVlSZUUzVGJYcFhkX19fSmN3d194MU5YbDQ0aFEtZE5qOHo2cV9YYUFPMWJRTFlQYVVfekFNa1ZRbGN0ZEZNSzhZT2JVM2ZrSzFhYmtLVXkzUDJ3X0NIekl4SmR4UF9zTms2TjlnWm50WkxCcEtuVm5Ub0hqdzhpdGlEWnV3OGJuQ3F6QkY5Z3hPYQ?oc=5",
-      "source": "Journal Métro",
-      "description": "Revue d'actualité immobilière publiée par Journal Métro portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -218,14 +205,6 @@
       "category": "local"
     },
     {
-      "title": "La construction résidentielle poursuit son élan près du Mont-Sainte-Anne",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3d1REU5X3FrZmVNbnhwbXBNWTI2c2ZVdUduUHg4aFhJeGFhenJYX2hKc2FwOUh4M1ZfS1pJa1VTbHJaR19FWDN5UmNjNjllUXdpb29pTUtsUVdUekFmcmVuZTZiLVNUdWptb2lUcHZlTWdDdXJPYTZjX2ROZlpuWlNESUVnODJabnVURG9zTzZ5R25hQlVZcmFrd0lRTUg3NlotdjBXSTV4a0l0aEFYWF9zbjQ?oc=5",
-      "source": "Le Journal de Québec",
-      "description": "Revue d'actualité immobilière publiée par Le Journal de Québec portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Hydro-Québec poursuit ses efforts pour réduire les délais",
       "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9zUzhVOE5kWTI4cU5RR3p4VTdsaGJvc29sUFpFakRUTHNPN2NIaU1WWmVTUGpRRXlvQ00ySWZOU0pPNW5jRmdicnR3T2g4M0laanY2ZGRyX18zRG9r?oc=5",
       "source": "journallecitoyen.com",
@@ -238,6 +217,14 @@
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQdjR2RWVKOWltVUdyZnE0dEpQU2VHYy0yeXNWbHpuMWo2eU1iS0Y4SjFQekVraUVuSThVWU1pRl9tZ1kzMFJlN25najlXOEpWOU1sYzB6RkhiZ1AtMTBhWVJrNGNLSE1iMG5uS0wwTkwxblA2SmRRVEZqUVY2bngzcF9DOU9fMUpyWXE5RFA3aFVoUDdPMUh5bld3WFItUUZJcUIzTEhoT3NVMFBMYVhJTGxDUzVUOGpaQ3ZCLXNfSnZxX1B4cnc?oc=5",
       "source": "Le Devoir",
       "description": "Revue d'actualité immobilière publiée par Le Devoir portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La construction résidentielle poursuit son élan près du Mont-Sainte-Anne",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3d1REU5X3FrZmVNbnhwbXBNWTI2c2ZVdUduUHg4aFhJeGFhenJYX2hKc2FwOUh4M1ZfS1pJa1VTbHJaR19FWDN5UmNjNjllUXdpb29pTUtsUVdUekFmcmVuZTZiLVNUdWptb2lUcHZlTWdDdXJPYTZjX2ROZlpuWlNESUVnODJabnVURG9zTzZ5R25hQlVZcmFrd0lRTUg3NlotdjBXSTV4a0l0aEFYWF9zbjQ?oc=5",
+      "source": "Le Journal de Québec",
+      "description": "Revue d'actualité immobilière publiée par Le Journal de Québec portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -260,34 +247,18 @@
       "category": "general"
     },
     {
-      "title": "Plaidoyer du patron de BMO pour un Québec plus prospère",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQbHEtOEdVM1ZzT0dzYU9vTTVoTTkxUGdEdGlDdHc5MTlPQ2RtYnkyaEhEY2dJenlEd0xQY0U2b0FZZzUzdVN2RXMyd3JuUVJRRDhVMzZJa0p2TXpWWV9qY00xQ05DMk1qTXVYRUdfVTg2ZmROZHdQcl85ZnMxWjM3TWgyTFFpQUpMd0VncURVUUVWMFRlSUVCVlZEcXpLeDQ1OVNNaUh3?oc=5",
-      "source": "La Presse",
-      "description": "Revue d'actualité immobilière publiée par La Presse portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le chiffre du jour: 2,2%",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5kNEFkc2laRFRmb3VpLUwwSEFYdVBFeEd3VG5CWGNSbVM1YWY4MFFlN3BUcDlESjNIT3ExUzVUVm1GdEtqS0dKQ0RhaWdmcC11d0UxRGlDYVlRdnpQUEdMb0p4ZUg5MlR1LXpSN2I3UmFoQjJZ?oc=5",
-      "source": "Journal Le Carrefour de Québec",
-      "description": "Revue d'actualité immobilière publiée par Journal Le Carrefour de Québec portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le savoir-faire québécois a la cote à l’étranger",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOMEtFQm05emNyWUZoaVhGNThxZ2pXZF9nTnRQUkFWTlJKWnllcDZxMlFpeDFmLVhQb0RmVkctR1ZRS25hRXcxdk13bF9DZU9qX3V1ZWNfU2VpTnRITFVSUUQzTTNlejc5U2hEQnc0RnRscFBkcG1ZVF9KUDNZSW5Tckt2eXhtWFRTRXk4NlMxT1hJVTFO?oc=5",
-      "source": "Journal Le Carrefour de Québec",
-      "description": "Revue d'actualité immobilière publiée par Journal Le Carrefour de Québec portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "LCF : Québec est la principale candidate pour une 10e équipe",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeDdlWkRHa0tDeU5vd3FoWlRuTUNrR3ZMTHdVLWQyZnZMNWF3T1RWbFdSMDVCZ1MxMmllMjM4eldiQlowQ25ZUUFDUUZoMXdTc3RrekVIZ0s3cld1VHNHcGV4MGlUXzR0c1I0VEZrMEtIUUtmZU1kSlJJNklqWEdsQlRnYUU3Q1E4X3RJTnNOdzFvbTBOMVZDY3ZVYjktQQ?oc=5",
       "source": "Caucus Football",
       "description": "Revue d'actualité immobilière publiée par Caucus Football portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Proportions d’unités familiales détenant des avoirs et des dettes",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNLWR2Z0Zyd2dJVkpfVDJaa2c4X2JqZWhDWFM1US1xbVlRQWl6eFBMeW9OaGg1US0tQkg4d1JSMm9oMWQxWHI5N28xSUM3TlB4bGVNemVkajFDRldOZER3bFMyS2d4YU0tRTdfUldWUUpKdEdqRlhOdE5CMXByZkRlTjBUZjZwNkVhdVI1bVlfcnBGWmxOZ1BSZFBUTGZGQ044eWFxYmIxWWNGT3AxcldKRUJZWV9Ld2tWaEJpdG42d05tZ3VaT0UyWFZRc0dwZDBKZUVtSkp3?oc=5",
+      "source": "Institut de la statistique du Québec",
+      "description": "Revue d'actualité immobilière publiée par Institut de la statistique du Québec portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -332,18 +303,18 @@
       "category": "general"
     },
     {
-      "title": "Le chômage augmente en octobre et l’emploi recule pour un troisième mois consécutif",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQM2hpWVR0Q3FZakZRdTlGSVlGblpWSUZhRjNBOXVLbFlJRUNoR0JXeTRsd3BLTjBSNWdpRHBCZXB5VVFrS0luNzVLV3FFU2RQd2RLTlB1WjM1bnlUWmlFQnpidjRIYjNQaVZBYUZWU25jbHU0OXNSS1lCVnZsRHFpaHQ5V3FJd3ZZRGwtLTdJTHRRMVlBUVlWek41OWRXSktPeWRrc1FXUzJXdmVua2ZKQVctVERobC1JbktyYjFWbnhwZnJfQWc?oc=5",
-      "source": "Les Affaires",
-      "description": "Revue d'actualité immobilière publiée par Les Affaires portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Le système de paiement en temps réel est lancé. Comment notre façon de payer va-t-elle changer?",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPdkFxSzBPX0tiMERmRGt6LVhaWU5kTnZoQWVBbGh5V043NEFIN3JIUXFyamluaDVkZFkzS3dTUTF2NzNIZXRrT0Y2djVFbFd6MHo1SDhTZ3N2XzhtUFZyclFpejRSSnpsSE9HbGN1UGNaZGVtZEJGa21taXk4QmVoVmc3MUY4aDQzMDZ6bEdLYUNuMzF0M19VbENFekZxRlV2aGN2U0I1Ul9HSDVRQThhTzI2aXlYLUNhV3dnSEpjcE03OE9sMWtJVHVldzJtelk?oc=5",
       "source": "Le Devoir",
       "description": "Revue d'actualité immobilière publiée par Le Devoir portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Le Canada prend-il un risque en n’ayant plus d’or dans ses réserves officielles?",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMWZYMlhwMEFmQWo3Q3FlTjh4c0RNWFoyeG5sbXRvUVhDc2w1WU4yM1p0M1BaWTlQTWd3UmxKY0JlT2tUWTljS3diQnRIMExXV053M05GeGdaNl9ZbDBCUEp3NWx5VzJubUQ2ekZEVTF3VzhYSWlBdnNSemNIMjMyNlRYTkJzT2RrVkpnVUN5RzFfUm1oVmtrbGpER0NfMHJYMDBtVHFrVzJOU0dhUGpGOXFLNHZrRDVKSFVMdzBQYw?oc=5",
+      "source": "Les Affaires",
+      "description": "Revue d'actualité immobilière publiée par Les Affaires portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -382,14 +353,6 @@
       "category": "general"
     },
     {
-      "title": "À surveiller dans le monde des affaires la semaine du 9 novembre",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZURQYW9STGFhLWVFUjkwR3Rva01lRU9qWW1xdHI2R1hqV3ZOSTZNSzRKRmtGbGhMVFFvNVFSSWk4TG5SOTdUMXBfaHhtRUNLcUFKcHdyNXlRc1ZBU3JhZ2RZeHBVcHBtM1ducWl4OGI4UTJvWUtxR1l6Y3llYk40X19oMVlleDU4MVIwN0xOTDQwTmJ2TVJlV3lJT25VWFdETldmS0toTm1jZGk1UFZVV3ZEVHFWZmJucnBoczUyLUtTdw?oc=5",
-      "source": "Les Affaires",
-      "description": "Revue d'actualité immobilière publiée par Les Affaires portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "La Banque du Canada n'exclut pas une nouvelle hausse des taux d'intérêt malgré l'incertitude économique",
       "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOd2doa2xUd0Z1R216cW52ZV80QjgycnhaMXpFd2c5R0RkYTVLX2pkQzZPdlV2ZElUVWVGTWxuRzVqZFJWWUFhajJkRTJBOG0ySV9rNG5JWFlVV3dHQXoyemhtMW9TbTdWc3QybmFRUTZRXzhuUDF4S3JxdHJ6bEpRdFdGaE92Y1FXRjVXWEMtXzVRVWZaTnlzam9oZ0NvcTRyVl9ZeElhdXkzTlNYS1ZiaEx2ZnNIVUY3OTdXdXJqcjR0blpoNDFKcV9VQ2dfamw0Z1Nv?oc=5",
       "source": "arabcanadanews.ca",
@@ -406,14 +369,6 @@
       "category": "general"
     },
     {
-      "title": "Fonds pour un Canada fort : Mark Carney nomme une première PDG",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbGtTTFllTWpMU0JDYnFwX1prNHZhUWY4RVUzYTFMOGJhRHpqSGdnMlJLOVBrM25HZi1aOHVjdW84N0tKdFRfZ1JlZ1FEUEptVGFIbWZHbUJjSm1BYWgtWXY1Q29UOXVQMm1nV1pHV2ttWGh4TlJ1WUlIZi1ZUDlrajYtY000Nm12alVYSHlkRmp4ZDFCdFR0NXl0N3lILWRBWlpXY2JZUEU3a1FIZkVWWA?oc=5",
-      "source": "Finance et Investissement",
-      "description": "Revue d'actualité immobilière publiée par Finance et Investissement portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "Ces actions ont dominé le marché au 3T",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMUFwLWprZU5pNklfc0FMazl0TWZNVFBpWlpwRHoybjVDNWVaSHl4LVVBcVlDMjBJc1pLS1BCV25GZkpNb1ZfMXpEVldVSUY3ZURMb0l2M2w3N01EeVU2cC0wYlNMVlpNSDBpVWhva2pIeGU1YzBDUS00b3ZSYW94Y2hEOGQ5T1NSd2hCNEFaaUtVZWtsNm5lNDItMXAzT1BpNk15RVltWkFPcmI3Uk1McEZkZ29Edw?oc=5",
       "source": "Les Affaires",
@@ -422,10 +377,42 @@
       "category": "general"
     },
     {
+      "title": "Fonds pour un Canada fort : Mark Carney nomme une première PDG",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbGtTTFllTWpMU0JDYnFwX1prNHZhUWY4RVUzYTFMOGJhRHpqSGdnMlJLOVBrM25HZi1aOHVjdW84N0tKdFRfZ1JlZ1FEUEptVGFIbWZHbUJjSm1BYWgtWXY1Q29UOXVQMm1nV1pHV2ttWGh4TlJ1WUlIZi1ZUDlrajYtY000Nm12alVYSHlkRmp4ZDFCdFR0NXl0N3lILWRBWlpXY2JZUEU3a1FIZkVWWA?oc=5",
+      "source": "Finance et Investissement",
+      "description": "Revue d'actualité immobilière publiée par Finance et Investissement portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "WealthOne veut lever 150 M$ pour devenir la « banque des fintechs »",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPclh1Ui1aWUhPbFI1ZWJMMUZzb3JNSHAwQ3I5LWx1X0ozRVMwS1dIeHNBeXE3bXI5TU9LaUhDd2hveVJyRERHTVVqVWlNb1pnRWRaM05rZ2JNbmkzYTlENEJtZkkyNGo2MTh1ZHdJZjI3Z3ZZelQ0UkszT2NRMUI2cHNEWmRLc3R6SUtZak9DME5wUWE0bVFOM1F4STJqYnlBMGhiR0JsNl9uUm9ZT3U5aWVfcw?oc=5",
+      "source": "Canadian Mortgage Trends",
+      "description": "Revue d'actualité immobilière publiée par Canadian Mortgage Trends portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "L'économie canadienne ralentit à 1,3 % en dessous...",
       "link": "https://news.google.com/rss/articles/CBMiogJBVV95cUxOWnJmTThSVFNxUTV2U21kQzhCSnVIZ0ZLUENVbE9aYVpLcm1ocFFZeG5rY1pVYzU1dXpzNm5YZXVVYktPUzctb0RSWHZrMmRacFJTZjVMOWhZeklxazBBeEZ4dGNvYzVXX19CZ1RGelp5eGRRZWdGUXpNaXFVSTVtSjZlYkFOM1Z0Y3dwMkJPWmhSaHBmejRMTFZVeERwRGVtU1hnbC1KWDlaNDE1Y3dza245TnN4MHZSNG1ibkFKb0pTbm5ZVUY5QXJsWUJEUk5LeUdnakZLcGk5WmlZS3hfQi0wWGZ1WDhCa2tqRjRabERocmhwT1NVbXlpMEI5QUdnSUVCdlpmazc5WlNGZGNha3dPQTQwb2o4UDBidDBnR2p6QQ?oc=5",
       "source": "arabcanadanews.ca",
       "description": "Revue d'actualité immobilière publiée par arabcanadanews.ca portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Vie permanente jusqu’à 85 ans",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSkdyZzFhV3FtOUdVQkpqTThYVlVISjR1a0REaEFobFB4bEUyWXdNY0tPZjU2bl9YaDZDRjdLOW5MaGpKbElIUEk3VklrVERxTm1VTWxRbERrSHBlbXNfaFJ3SUtYV1FmOWdJeTI1YkFoYndKZzI0cVp1MEFQQ0pCaVFfNE1aSUk?oc=5",
+      "source": "Finance et Investissement",
+      "description": "Revue d'actualité immobilière publiée par Finance et Investissement portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque Royale du Canada annonce une entente visant l'acquisition de Yarra Capital Management",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9tVnlmcGhiSTNPbDNSaUM5Z2RVREhnMHJfbk1JbWt6YXYwS1hVX2VXeGNLcDFWcVRvV0QxZmpfa040ZjJ3ZzAxZmItbGlkbWlLcmZYUTB5M1JqYWZoQm1Wc0hUQ3BXbzIyR08w?oc=5",
+      "source": "TradingView",
+      "description": "Revue d'actualité immobilière publiée par TradingView portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     }
@@ -449,7 +436,7 @@
     "variable_5ans": "3.90%",
     "prime_rate": "4.70%",
     "source_url": "https://www.multi-prets.com/fr/options-hypothecaires/nos-taux/",
-    "updated_at": "2026-11-14"
+    "updated_at": "2026-11-15"
   },
   "market_stats": {
     "montreal": {
@@ -502,5 +489,5 @@
     },
     "last_quarter": "Octobre 2026"
   },
-  "last_update": "2026-11-14 18:38"
+  "last_update": "2026-11-15 19:13"
 }
