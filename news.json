@@ -96,44 +96,52 @@
       "category": "local"
     },
     {
-      "title": "Le Québec, champion de l’autonomie résidentielle des jeunes adultes",
-      "link": "https://www.lapresse.ca/affaires/marche-immobilier/2026-11-24/le-quebec-champion-de-l-autonomie-residentielle-des-jeunes-adultes.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Couche-Tard juge qu’elle a les moyens de faire d’autres acquisitions",
+      "link": "https://www.lapresse.ca/affaires/entreprises/2026-11-25/couche-tard-juge-qu-elle-a-les-moyens-de-faire-d-autres-acquisitions.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Le pourcentage de jeunes adultes qui ont leur propre chez-soi se réduit à vue d’œil, au Canada : partout, sauf… au Québec. Selon une nouvelle étude, la Belle Province défie la tendance avec une stabilité frappante, depuis quarante ans.",
+      "description": "Même si elle s’apprête à débourser 12 milliards de dollars canadiens pour réaliser la plus grosse transaction de son histoire, Alimentation Couche-Tard continue de scruter le marché à la recherche de nouvelles cibles d’acquisitions.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Rapport d’Equifax | Les arriérés hypothécaires sont en hausse au Canada",
-      "link": "https://www.lapresse.ca/affaires/finances-personnelles/2026-11-24/rapport-d-equifax/les-arrieres-hypothecaires-sont-en-hausse-au-canada.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "Les immigrants plus susceptibles d’être surqualifiés pour leur emploi, selon un rapport",
+      "link": "https://www.lapresse.ca/affaires/2026-11-25/les-immigrants-plus-susceptibles-d-etre-surqualifies-pour-leur-emploi-selon-un-rapport.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "Un nouveau rapport indique que le stress financier gagne du terrain chez les propriétaires, alors qu’ils sont de plus en plus nombreux à avoir du mal à honorer leurs mensualités hypothécaires dans un contexte où les taux d’intérêt sont repartis à la hausse.",
+      "description": "Un nouveau rapport révèle que trop de nouveaux arrivants au Canada se retrouvent coincés dans des emplois pour lesquels ils sont surqualifiés, ce qui discrédite les efforts déployés par le gouvernement fédéral pour recruter à l’étranger des travailleurs…",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Gouverneur de la Banque du Canada | L’inflation fondamentale est un indicateur, pas un objectif, selon Tiff Macklem",
-      "link": "https://www.lapresse.ca/affaires/economie/2026-11-24/gouverneur-de-la-banque-du-canada/l-inflation-fondamentale-est-un-indicateur-pas-un-objectif-selon-tiff-macklem.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
+      "title": "L’économie américaine est en surchauffe",
+      "link": "https://www.lapresse.ca/affaires/economie/2026-11-25/l-economie-americaine-est-en-surchauffe.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
       "source": "La Presse",
-      "description": "La Banque du Canada reste fidèle à son objectif d’inflation de 2 %, mais elle adapte les indicateurs qu’elle suit pour y parvenir.",
+      "description": "Croissance revue en forte hausse, inflation qui continue de flamber, les données économiques publiées mercredi par le département du Commerce ont montré tous les signes d’une économie américaine en surchauffe, qui ne semble pas prête à ralentir dans…",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Centre Bell | La boutique du Canadien grugera la superficie de La Cage",
-      "link": "https://www.lapresse.ca/affaires/2026-11-24/centre-bell/la-boutique-du-canadien-grugera-la-superficie-de-la-cage.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "Ce n’est pas seulement sur la glace que le Canadien de Montréal investit en prévision des séries, l’administration du club de hockey veut améliorer la visibilité de sa boutique-souvenirs en la déménageant sur l’avenue des Canadiens-de-Montréal à temps pour le…",
+      "title": "Croissance et inflation flambent en même temps aux États-Unis",
+      "link": "https://www.ledevoir.com/economie/1027646/croissance-inflation-flambent-meme-temps-etats-unis",
+      "source": "Le Devoir",
+      "description": "C’est le signe d’une économie en surchauffe, tirée par l’informatique et les dépenses des ménages en hausse.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Davantage de cônes orange et des effectifs en hausse dans la métropole",
+      "link": "https://www.ledevoir.com/economie/1027391/plus-cones-orange-effectifs-hausse",
+      "source": "Le Devoir",
+      "description": "Les investissements dans la réfection routière passeront de 429 millions en 2026 à 646 millions en 2031.",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Meubles modulaires | Cozey obtient 50 millions de La Caisse et de la Banque Nationale",
-      "link": "https://www.lapresse.ca/affaires/entreprises/2026-11-24/meubles-modulaires/cozey-obtient-50-millions-de-la-caisse-et-de-la-banque-nationale.php?utm_source=rss&utm_medium=fil&utm_campaign=affaires",
-      "source": "La Presse",
-      "description": "En forte expansion à l’international, l’entreprise québécoise de meubles modulaires Cozey obtient un investissement en capital de 30 millions de la Caisse de dépôt et placement du Québec (La Caisse), qui s’ajoute à un premier investissement de 10 millions…",
+      "title": "Macklem prévoit désormais une inflation inférieure aux prévisions d’octobre",
+      "link": "https://www.ledevoir.com/economie/1027427/gouverneur-banque-canada-admet-messages-inflation-ont-prete-confusion",
+      "source": "Le Devoir",
+      "description": "La banque centrale pourrait tout de même relever ses taux le 9 décembre, selon un économiste.",
       "cities": [],
       "category": "general"
     },
@@ -154,18 +162,18 @@
       "category": "general"
     },
     {
-      "title": "Québec se trouve au cœur des ambitions immobilières de PROREIT",
-      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQRV9kbDNoQjlSTU0wQTFfVVQ0ZWdqbjI1TGdMaXIwRThqVHpQSjhXaVU2WmRYek1QWkFCenN5LWc2WnBYQllqeGJ1RTZHajZSdjhuUVRxZU43OFQyTGJjdGRDQ0FVSkZaZGRmZ2ZoRDl4WkZpTEdVSHZvZTJreUlHdGVJSEIwMjd5U05fY0V4Vmg2NDV2NFNXSlJHc3NidzFaQ3l4NzRTNFJQU2lKNnQ0UlVZRG5tTGpCNFZqUC1nVlF5aDVVWFRFV1lfQkVNTktPQlNzZUNZaEZwMkE1U05FZ2tESmN1SmhSM1p5MFVHdlZDY2ZmVi1INFRRYXctTW5FaG1aOEttN1Z5R2VvRmlj?oc=5",
-      "source": "Les Affaires",
-      "description": "Revue d'actualité immobilière publiée par Les Affaires portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
       "title": "En photos | Le plus haut bâtiment en bois massif au Québec sera livré en avance",
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOdVJKVlgyQko4b0dvZUk2VTNoOVlPMGpHVW9CWlhnNm9yaE5QRGpfUWd6UF9EWUotUW1kWFVySGhSZ1pSV3JjZzlpa25FNVFnMTF0S1hmMFVtaFJjSUdSdHJvS0Q2Xy1RUFdpNzVmcG5XUE5xcjdJbFdBYncwMTdqTlUtejUyTF8wTjFXdm5VUkhyVFdrNWxIRlVPeF80X3FGZUdnT0QyRnZiU0doaVIydUs0Q3k1MXNOM1ZXcW1kZWdUd2s?oc=5",
       "source": "La Presse",
       "description": "Revue d'actualité immobilière publiée par La Presse portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Quatre règles à connaître en immobilier",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQWFJrb2Q1S2JUM0J5R0JYSkRtU2c3OFRpMFVOMFhLeHkxb1dKTl9aYlRiX1BLT2Z1V09ZUVJGVXRkM1VXaFF1eHdJek9TNFBuNENqR1lkZDJva05US0FQaUcwaG8taFc1NFUtaTZlS0xTRUpjcVRnQmZ6cGtySndlZHRMOVJ4U04yTnFSc05QZ1I4UTBDMktrbXBEMjBiellyRllvMW5TdWVkUXRBTzdKdDFxQXo0NmhkaS1haVlfelpTel84ZEVULWlkMnRaUQ?oc=5",
+      "source": "Les Affaires",
+      "description": "Revue d'actualité immobilière publiée par Les Affaires portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -176,6 +184,17 @@
       "description": "Revue d'actualité immobilière publiée par Le Journal de Québec portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
+    },
+    {
+      "title": "Les prochains pôles immobiliers du Grand Montréal 2035 : des projets complexes et des partenariats essentiels",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQldVMUxVREd0OFh2NVJaSC1acm1oLVh1ZURyTzhFZTNta0VlWU45c1JrRnVBOHRpZDNCTnB4ZWxkVzZnZGNRMzMtT3E1SmMxQlg4NFd4WlduM3NwYWRnNmpwTzlOVFk1SE5TTHJ0QjhSY1E5UVFWQW5odGV6QVhmOU50bWhKMUVWcFBZSEhvTm5vRmZCZ2RxTk1Zc2d1OEVpcFRidGVCY0tnWHdKd2VEOHRHNGRocDdTdEFWdEVHUQ?oc=5",
+      "source": "Portail Constructo",
+      "description": "Revue d'actualité immobilière publiée par Portail Constructo portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [
+        "laval",
+        "montreal"
+      ],
+      "category": "local"
     },
     {
       "title": "Le grand retour du home staging",
@@ -196,7 +215,7 @@
       "category": "general"
     },
     {
-      "title": "Un projet de 510 logements sur René-Lévesque Ouest présenté en consultation publique |",
+      "title": "Un projet de 510 logements sur René-Lévesque Ouest présenté en consultation publique",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPYlhraU96VHpWNnkwLVVxWldEakxBY3RPYzBHOXdXY05WcTFtNDFUdHBkN2pTakNUb0J2VkRfNGlPUWZKYW1XVGUzeFc3dE1JY0tEOEpPMGZmV3NvT05vLWNyTG5mZXlIYTU4YTZwb3dBd0xtZXNRS0xGREVqTWt4N3NvemZMR2tvTUhCN3dfM3o5cnVLb1dtMW8yTlJjSTBMTnRzcHZDdTRDa3VWZHNWcFFyOV8?oc=5",
       "source": "Monmontcalm",
       "description": "Revue d'actualité immobilière publiée par Monmontcalm portant sur les tendances récentes du marché résidentiel québécois.",
@@ -204,50 +223,26 @@
       "category": "general"
     },
     {
-      "title": "Le Québec, champion de l’autonomie résidentielle des jeunes adultes",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNFVTSkhNVFVsQWNxVl9fU0swRlI4dGRWQUNnaEVoSnBjM1dOY29TdGhadVF0VXZhTC1ueHRrdGFiREg4ejBzRkJtRjlDTmIzbUVQdjJPZ3ZYX3d5WnozVEk3blVQRTlUdng3WFFuODdCT2dwTk1CUHFQRUdmMVZkZWZZS0xRTElOY2IweUhzYTJDR2NyX3hRU1o0OXc4cldKM1Z1ODZLSVNZcWtYTGdwLXpnSTFnS0psNkZjQ24wUU02dGFraEdudHJreTg?oc=5",
+      "title": "Steven Blaney veut poursuivre la collaboration avec les promoteurs",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9UYXVtdEpEMS0yZkE0akgzdGM0d1JvaGxSWFJiZXZESTVqNVpyYVY5UE1aN1lZN28zRXJ1Z05IOGY0WWdWdlk4WlJpWUdCMmJ3M04zWUozNUZHc0M4UVdFUkN4Y3gwUU5QVGMyQU1Iaw?oc=5",
+      "source": "Journal De Levis",
+      "description": "Revue d'actualité immobilière publiée par Journal De Levis portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "De moins en moins de jeunes Canadiens ont leur propre chez-soi... sauf au Québec",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNc0xQdlNMcEd5TnIxWkxxNHJvTmFvQ291X2xTUnE0dHVQSHE1T1JkMGRTa3VYcWg5MnVFR1ZMUHBiVmlleTQ0d3psbVlfTkZwejZLemhzZ2V5Q2NMZXVRNTlLaTduX3RqRjhqV25MQTJ3X2V6MW9XaDFRQlhPQlh0cEJzWWQ0TVBMRHh3aG1lQnhRUE12bmJGNUpBelJOaTNSa2RzeVZvSEtQZ0ZnNm9OTnlvc3ZfMDRZcWNxbjVLRThPTWFwUUNaUnFMOG42dkRjRy1LSHJIdUhadms?oc=5",
       "source": "La Presse",
       "description": "Revue d'actualité immobilière publiée par La Presse portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Quatre règles à connaître en immobilier",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQWFJrb2Q1S2JUM0J5R0JYSkRtU2c3OFRpMFVOMFhLeHkxb1dKTl9aYlRiX1BLT2Z1V09ZUVJGVXRkM1VXaFF1eHdJek9TNFBuNENqR1lkZDJva05US0FQaUcwaG8taFc1NFUtaTZlS0xTRUpjcVRnQmZ6cGtySndlZHRMOVJ4U04yTnFSc05QZ1I4UTBDMktrbXBEMjBiellyRllvMW5TdWVkUXRBTzdKdDFxQXo0NmhkaS1haVlfelpTel84ZEVULWlkMnRaUQ?oc=5",
-      "source": "Les Affaires",
-      "description": "Revue d'actualité immobilière publiée par Les Affaires portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Transaction de la semaine: un patron discret du secteur de la mode a vendu sa luxueuse maison pour 1M$ de moins",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPNjZVdTQtNHdZS3BITGZvZUNHemhXT2FJNDdxMEZUZXVEQ3ZRZG5tVXc4VGVzSlBJaVFNQ0J6M0hZSnVDY1V6MnY4SkN5TDFrdE9pdkNuM0JLQ0xRWVBJWG9NdzBlUmZCMXFwZENzT01fNFZGeHp2NUlGMEt1N2ZLT2ZYT0R2anROVUhBbTBSck51eVB2MlFDNmJpdHhnWlVVTkN6bjFkWnhOSEYtRDIwR0ZoYm51Q09zdzhOdHJFWmxkWWIxNnpHR3FYOXFtaW1INGxPMnpEbWphenJTcG1yUnh3?oc=5",
-      "source": "TVA Nouvelles",
-      "description": "Revue d'actualité immobilière publiée par TVA Nouvelles portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
-      "source": "nesto.ca",
-      "description": "Analyse publiée par nesto.ca sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Ligue pour adultes | Une ligue de hockey très populaire déclare faillite",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOb25ZdlZGcks5N3dzT19LaFlpYkpKMzJFejF5N3RSWENQYWdJUGYtRDVQY1JRV2ZCTklnM2RsLXlnZGM3cnpmVnMtb0JUMk5qTU04a2NMdGJDTTFtQnpmeVpPQnNkVWZVNUxybm1odHRTQnBVZlZfUXhSNVRhTHVDenU3bzNORzBuNF84Nkp3?oc=5",
-      "source": "FM93",
-      "description": "Revue d'actualité immobilière publiée par FM93 portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Les 100 meilleurs employeurs du Canada : 14 organisations québécoises au palmarès 2027",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9sT1JlSmVZLTVNa2ZVTGtvbDdvRzB6WWlSbjlEU0RUWFhPUTcxRVlYZDZ2VHNneDBJeVQyVEplWGJqQUFZUU5wLWR2UTBoMHVIVGN6UnVIR3A0cE92VVRySkVWV0F3SjhlMzJ4MlNoWm1kX3hiR21pWThodTRMbU0?oc=5",
-      "source": "Immigrer.com",
-      "description": "Revue d'actualité immobilière publiée par Immigrer.com portant sur les tendances récentes du marché résidentiel québécois.",
+      "title": "Un autre commerce fermera ses portes dans le quartier Saint-Roch à Québec",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBkZkhiUGNnaVJ1WXRZd2JpS3RLS2VXRWxuamFNRGRlTkxQbDNha3FGV1AzcmVkNnJueWlJTkptckpINFJIZ3ZFeFYwaUJOQ2VfUjltVm9MSE14UlkxeFZkalFTMnBCU0E5NjdyeDRYMnVzYmYxSWNyZ1l3?oc=5",
+      "source": "24 heures",
+      "description": "Revue d'actualité immobilière publiée par 24 heures portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -260,34 +255,10 @@
       "category": "general"
     },
     {
-      "title": "Hôtels du Québec : des postes vacants et des travailleurs immigrants qu’on peine à retenir",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNTFzNGRTNUphYW5vRjExc0tjbDJFLUh6dFNWd0s4aFBqdzBrRDFiM0t0dWRfNkFWOGI4eFZ6dHJGY2h5TGFlMkxmRy15WlJ3ZVNVOG92R25RQlRycldIZnhReEswWUxGWWFjQmxlaVZfNDA5aGtrMHl5V01uclpZNVlXRU84LWlPdnRybmlNTmYwS0ZUNFZUZjFNbkRUdGJCRGlJNmNCQ05vTnVqRVdvZFdzbw?oc=5",
-      "source": "Immigrer.com",
-      "description": "Revue d'actualité immobilière publiée par Immigrer.com portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Le Groupe Sierra fait don de près de 470 000 pieds carrés de milieu humide",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOLTFCWHlCQ25wYS00T0NaeFV1VXRLZVBDWHRGQm9LcHBDRW92Vk1YelJjWHc1eHdzdGt0c0k5aTlCSFdfMndHSHdvNGRWaTV5VV9fRDFuc3V6WVN6VGVwUkhTWEJYNHpCakpSZ2FSamxYRmYyRUw1WWVQUGxTOW9iTW1ZNENldmR0RTgwZUNSb0tQdmpLU052ZG9pcjNrRF9ueHlCOHRZckppWm5mSnJEREhuVUlMY00?oc=5",
-      "source": "Les Affaires",
-      "description": "Revue d'actualité immobilière publiée par Les Affaires portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "La Presse | Marie-Eve Fournier",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Ha2RtREZsc0hsNy0zS2QwTF9EVGY1NU9oSlJINUdxYTQ0WDBQRVdtbldtaGlmX3pkbDNiY2ZocFA3YmY5ejJockFmS0lPUGFsUl83SnFGcFhKMGhmWmU4?oc=5",
+      "title": "Congrès organisé par le gouvernement | Le nucléaire fait jaser à Québec",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQREhfNmRmMl93NVVzSUd3TjZCNXVJYTgyN3otNzd2Y3BkYVl1c0hCMjVESzZZbl9SRWhpOXQtTjJhQjFnZm8zYjhQYXlPT2Q2U3FFVEpxdkNEbEZ2cHZnempUZktEUkFsMldkOHRFb1dicXFSNFE1WlFDTW9vUEdnMmZiT21nX2tFejZOS01iUGVLYmJfZ3ZPM25GQU9FTkxCb01VbW54cEdUYnh2SkFyc2F1NnRzbkQ5?oc=5",
       "source": "La Presse",
       "description": "Revue d'actualité immobilière publiée par La Presse portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "C'est arrivé un 21 novembre",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1OSU4yMk9yVUVXZXk3Z1VPVk42UVhWT1NuNWJXUFk1eWxXZTZ4ZjM5UG1MMWlrbnZadHhEX09WVjBicEFHY1JPZy1OdzZzb2xRODdaYzNMVWVvNDlwZThaaXU4Qy1PZld0Smp3NjY2YzFwNDJsSGpvWA?oc=5",
-      "source": "Le Journal de Québec",
-      "description": "Revue d'actualité immobilière publiée par Le Journal de Québec portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -300,10 +271,52 @@
       "category": "general"
     },
     {
-      "title": "Arrima Québec : compte, inscription et invitations 2026",
-      "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5wOEREdHNtLUVOODNtdVQ2M3c2NWpYSXZQTUxWblNLRGpnODN0amREeWtKS28wdm1ralJGMml1RzVOSzZzeVhz?oc=5",
-      "source": "Immigrer.com",
-      "description": "Revue d'actualité immobilière publiée par Immigrer.com portant sur les tendances récentes du marché résidentiel québécois.",
+      "title": "Ce qu’on suit ce mardi | Budget de Montréal, itinérance, Victoire",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNT1FCRGhwQjFfb2NSU3ZNNXViMDQ0WWcxT2xGWFdKaFJoQ2FjRFFGY2JPTENDdGJFVkp5Q09IN1h4UnZuNHl5Uml1NVpnMU5Ib0JqZVpFc2E3dEl2TC1iMjZpSGZrM0Z5ZlFCT1B4R3hBdmdQUWQzOHFoYWZPRXRUNDZIRWJ2TGNMbzBUSUlJMnNQajNMQmVNUzNEbWt5ckxkRzNKT3l1Ykw5bFByME9UVw?oc=5",
+      "source": "La Presse",
+      "description": "Revue d'actualité immobilière publiée par La Presse portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [
+        "montreal"
+      ],
+      "category": "local"
+    },
+    {
+      "title": "C'est arrivé un 21 novembre",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1OSU4yMk9yVUVXZXk3Z1VPVk42UVhWT1NuNWJXUFk1eWxXZTZ4ZjM5UG1MMWlrbnZadHhEX09WVjBicEFHY1JPZy1OdzZzb2xRODdaYzNMVWVvNDlwZThaaXU4Qy1PZld0Smp3NjY2YzFwNDJsSGpvWA?oc=5",
+      "source": "Le Journal de Québec",
+      "description": "Revue d'actualité immobilière publiée par Le Journal de Québec portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "«Les gens ont peur de venir»: un autre commerce ferme ses portes dans Saint-Roch",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVHB2NUJ6ai10Qm5PLTdCOGJhUmRQanNxZUlGTGQzUTRmZzB3eFdTMlJkOHNMVXN2OGtvMWV2d3FuSi1RM2JDLWZnbGlUOWluTlVRRjJDTE5XSjZ0RWpNS2V1eTYtVVpZTkFVYlgxOTQ0VDdsdFRLZVU0M1ZqNE9ES05tYzlQSVljVEFfRVFUeXZLdmtj?oc=5",
+      "source": "Le Journal de Québec",
+      "description": "Revue d'actualité immobilière publiée par Le Journal de Québec portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Presse | Marie-Eve Fournier",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Ha2RtREZsc0hsNy0zS2QwTF9EVGY1NU9oSlJINUdxYTQ0WDBQRVdtbldtaGlmX3pkbDNiY2ZocFA3YmY5ejJockFmS0lPUGFsUl83SnFGcFhKMGhmWmU4?oc=5",
+      "source": "La Presse",
+      "description": "Revue d'actualité immobilière publiée par La Presse portant sur les tendances récentes du marché résidentiel québécois.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Pire taux d’inoccupation commerciale: Saint-Roch victime «d’une tempête parfaite»",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPMFFmUGFNLTJUUUNVc2RIaW40TnM0N1dueEd1dUhCSWxHY3FSMTJ4NVg2VXZwSVgwS0NIY0k1OUpuMDhaWFVUS3FNdWpuVHFPajRieU5LVHJrdmwwcFJOczFRTjB1bzNSeEhYODkzdVRoN09HLTZRaTdXZ19QTV8xT2ktQVdzZFYtRUh4a2F6NHRfWWZMRDV1NFJlREhmZ2NZbmV1MV9VazlOYWxCcjhfdUVGZGh2dFZ4TjRF?oc=5",
+      "source": "Le Journal de Québec",
+      "description": "Analyse publiée par Le Journal de Québec sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Quiz | Avez-vous suivi l’actualité cette semaine ?",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOb2JMTzZta29nSDdGTkRGdlIyMnd1RUxrU2ptOWtpbkQzR2ZGOVdPU0tSR2lObmN1YUplMUw2b19xVUptVnpZMXRDaWRxSWMxdC1vS3R4LVdjODR1TzVVSFZ1Z205ZDBHOVNWUkU4bzk3R2hIQVhtYUtHMUhYanlwdG54dUhpRDA1bGxzWGdxRU9uS0RSaEdyWDdB?oc=5",
+      "source": "La Presse",
+      "description": "Revue d'actualité immobilière publiée par La Presse portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -316,20 +329,36 @@
       "category": "general"
     },
     {
-      "title": "Elle dirige l’Institut de cardiologie de Montréal : l’Algérienne Nesrine Ragguem primée",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeXlja2Q0Q1ZKWUhldnZCMHgzd3lCbkNaT3V4aWFRTTBWQmlvSk9YSlU0NUE0UjV3aXA3X2FXZ3FRaENjSUN6TUpKSHJWeW95WnRZSGRObTdETS1YUGliQXRIbnpaeGxKOW9VX0dKZTI2M3dzVVNWZVlKdHZ2RDgxWTBHcVg5S25NNGpYc2ctb3YtRGUxc0s2NjdfVnJHWHZGZmgyTWhVWmhSSGpnZXBoTl9pd2ZQcGdaZGJLVg?oc=5",
-      "source": "Diasporas",
-      "description": "Revue d'actualité immobilière publiée par Diasporas portant sur les tendances récentes du marché résidentiel québécois.",
+      "title": "Un taux d’arriérés hypothécaire proche de la crise de 2008",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUzhzTzRiQkJxYU95VkE4TnI0dk9RZGhoZHhvUkgxclZWMjZUcHN1Y2loeWVUZGUzdWd1Z0ltVFg2enNtMzFNckllV0NvVE81bllrX3dZeWlRaHdVNWZmRnhicnhONEx4NDdYLVNWeTB3MXNYMU5XT29oVHI4ZFhRVDlqSDFmTVJ3TGdaYUpJdGlfZ24wc0tfMA?oc=5",
+      "source": "Radio-Canada",
+      "description": "Analyse publiée par Radio-Canada sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "L’ex-Canadien Oleg Petrov perd son recours contre le fisc",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZDNQVnN6TVBTNUpNMFhTZ0gyNnBRTUgyQmNPNkR5QnhiQ3RWR2NQNTRGVEo1Z0xia0M3c3lmSHFuTUpudnRuZ0ZGczFLQ1RSby1PU2JDSlFsaVVlcjBocElDV3VqQTdNOGRFWkZwWVppdE5LUFJEeHlBSERJb0d4YVF3Mm1iMktsSVRHdGJISUs3aGtCRkFqdXhwRGxuYWVmZldv?oc=5",
+      "source": "Le Journal de Montréal",
+      "description": "Revue d'actualité immobilière publiée par Le Journal de Montréal portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [
         "montreal"
       ],
       "category": "local"
     },
     {
-      "title": "Audrey De Montigny brise le silence après la finale de Chanteurs masqués",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObGVtdDZIWEZOdXJGenBIU284bkt2TGdnYjJzT3JYV2JFaWhwa1F1VzRTcnh5cUpwNXZqVnY2UThBXzlWZFFFRVBRSi1xTkxVWkNYWGMzWGtmUmxCZWF6RURRWUYwdUJxNzVHMWJkNjlhdndxa2F2akZlb2s1RXJuZEgxNktaM3pzdVBqZk4tTTljb2dJVldEdEVKTTVKUE5nelpZ?oc=5",
-      "source": "Vedette Québec",
-      "description": "Revue d'actualité immobilière publiée par Vedette Québec portant sur les tendances récentes du marché résidentiel québécois.",
+      "title": "Prévisions relatives aux taux hypothécaires au Canada 2026-2030",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSDA4TEJtQ3kwb3BNdTZCOVBRRXpoc1dIQ1NIUl9uekJTT1Y1TlVjN3g4UGxqUjZzWDk4UC05NjliM19JWFV1X3lXc1BLNFVFUUxleV9ldE1FcWRWS3NtSHl3UXAyM3E0cG1PS2E1ZGNrTmtXeEl2Y2VhRmJfUWNzTV95WVRRN25RdDd2NTdsQndzMWZDbmtv?oc=5",
+      "source": "nesto.ca",
+      "description": "Analyse publiée par nesto.ca sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "SCPI Comète au Québec : le Club Med Tremblant passe de la signature au chantier",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQcF9PY0FSNWU3aUhqb19ZRWJua2VFM0hOcjBIVFpYSlVQREJuSUZ3aXRRdml4LWxGOXAxcW5GbG91R09kTkpNeTZYNkZzVzVKalVmbzh0VEE0T3kzdFBCd1lUeFBmX1phN1g3cUJVaEgwdUpxT2N6NFVsMktyeEFQd3RzektkMVNva0Z0ZmQxb0wwc0RPUHg2T21rX0MtZldRbkd3VTFkTHRlclBhT1Z1M2szb01vVS1YTDl1SE9aZ0JzbUYxMk00bVItTmc5aS1LTElUb2p6RUMwcjJtbzdrR0VYTmI3eThNWVJQYnJ1VjA?oc=5",
+      "source": "Boursorama",
+      "description": "Revue d'actualité immobilière publiée par Boursorama portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -358,26 +387,18 @@
       "category": "general"
     },
     {
-      "title": "Taux directeurs | La Banque du Canada rejette la nécessité d’indiquer plus clairement ses intentions",
-      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOWGJ0ZGpHMEE1ZF80WHFFdkNvZlBwQW1ERDc5dHVlZzlKaVVXOENLemJTZTJKc2FubXJvWWpDUDBGVTh5TU14eV9EMFU0RTcxeHNxalg3bExpZUtBN2FYQlBrY2Z5b1VtVF9jMmczUkg1UXcwODYxeFUwb3hLRHVGQWJ0OTZjdDhOejZRNDQtN3FabEhNQ1N4U1lnZzd3SHJpNjlNNHo1dTdaNDRGdUdsYlV6eFU5TldMN3djaGtsZWVoNUdUd01lTEZPM2x2UzhvY2tFM09PcWw5TXluQ202LXU3RXNPU25NQWZr?oc=5",
-      "source": "La Presse",
-      "description": "Analyse publiée par La Presse sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Parler de l’avenir malgré l’incertitude",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNLWRmTHU0ZmJkbUtlVDZpTDAxNVcxdERNN0wxOW0tWkc5OXVRM1Y3N2NYUDUwMllrMG9RN3J5NEpDUnAwZUxCTHoybUxmNmpoRmtNaGNycnB1Xzg1OTB6em90di1vSU5lVnpVbC1NZENVcHJSdXRrc2ZxUDBmSnhaNGl3?oc=5",
+      "title": "Maintenir l’inflation à un niveau bas et stable dans un monde incertain",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbDFFeDlFbDVCYmRVTllKZEdTeU1UNEZtUHVrNlBtU2F0dWNEYXE4THpBdk1CeTJKR0tmUTFZNmYtb096cUNyRUJxbEVYQmhCejRuYjJ6eE1CUXN6YS0xSmJLaEN3UzFRVWZHWFBtRXlrSlduTndqMDlYTVpUdF9NOURBOHdRYjIyTThHVmIxQzRtZmlqTjRmeXdvTnlEUHB4WTB6d0M5STNZMlF6Umc?oc=5",
       "source": "Banque du Canada",
       "description": "Revue d'actualité immobilière publiée par Banque du Canada portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "La Banque du Canada pourrait envisager un taux directeur de moins de 0%",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPXzdNSmV6RWVJajQ2c3ZsRFNxVUZLTUFZV052OUc4Q09VMldlOWg4dWZ0X0V2OHFkcHFmd19mZWZHSXNzNm1kdTdSby01Njg4YnVQZTVtZlhmejA5RmU5OWJaN3JzVnF2bEptdUFTVC1ySmFRT2dUQ1VUalZ0MWlPSkJSanc0VFVjZVMyTXJ0THY5M082S3BRUzE3Q1JSYzllMkNsb0Y5UHdmR2RpT1Z0WnNlZFlnSkVzYS1GZ1lmT1JGNDlKNmlXeWt5YWJ0NXRJM1R1UWxLUDZfbmc?oc=5",
-      "source": "Finance et Investissement",
-      "description": "Analyse publiée par Finance et Investissement sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "title": "Macklem prévoit désormais une inflation inférieure aux prévisions d’octobre",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVHc2VWprNXVkY1RJZGZHSnZXY1NLR19xdnZUS0I0SGlmUmpleG1SVWhPQml6TTRxY2s5Q01hbHhqOE9BLVdrMWFVTk5iTl9lRW9JSHFYeFlnUFBBNlpIYlpyT0hPYmhZWE1oTFBFZDlCMFpxRHNPUmM0YjJEam93cmZoYlV6d1VQZW8zSHJSc19YWGh0U09TNkxfWGY2aDJsdmJZU2xHbmlUOWEydWVnNg?oc=5",
+      "source": "Le Devoir",
+      "description": "Revue d'actualité immobilière publiée par Le Devoir portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
@@ -390,10 +411,26 @@
       "category": "general"
     },
     {
-      "title": "Est-il temps d’avoir un premier francophone à la tête de la Banque du Canada?",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE10eTQ4N1lQUXN6Vm91azlxcDk1dlRoLW1ma1d0RV9pY1ZmUmdFMHZRaGZDXzEzclBseUxKWEJjb25CTVN5alhLMzBuM3J5WGJhU1N2eTByVld2RHdKWi1hdm5qWUdjUTY1THllR01Hb2RHUHBaSHc?oc=5",
-      "source": "ONFR",
-      "description": "Analyse publiée par ONFR sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "title": "Banque du Canada : nouvelle hausse de taux",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNWV9DcDhNc2J2a3FXRU92a2RlTE1LdHhpbGoydjZpREJGRFNHV1hwdnhZYk1SNVhTeHR4bENOSG5vaDZGQS1heEpBQlFsNWVmaUZxMUxvOHFzYVdabVZqM01MNllVOTdfOFcyZzFqNjM2NVg4X1lYNnlnRklBbVNNRW5SdHJNTUViOTIwdi1xbmdXMUxGYlE?oc=5",
+      "source": "Finance et Investissement",
+      "description": "Analyse publiée par Finance et Investissement sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "La Banque du Canada rejette la nécessité de renforcer ses indications prospectives",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQMjNZTVN0bW1fYkJVdnQzT296aGJwbGFKYU9nUko4SklxVDc5MFphVThaVWswUTd3MHZiSmVYN0REWEJMNVdGMFhTSjJaVWJkMzNfQTk2c21HWWYySldPMHFqdTF0VUdvUW1TQTFqRXRORjdGczRCNUx3bjhIaU5yWDZLY2ZGSXlDeEVWRFhmV281MC1DeXpKMWNsQkdlNlljaG1FN2JBQm5RTXpEUFpjeFpsMDBfS3FkRk5CaEVNcXJ5dUhrVW9aWTFoODlaUQ?oc=5",
+      "source": "Noovo Info",
+      "description": "Analyse publiée par Noovo Info sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "cities": [],
+      "category": "general"
+    },
+    {
+      "title": "Gouverneur de la Banque du Canada | L’inflation fondamentale est un indicateur, pas un objectif, selon Tiff Macklem",
+      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxORnU2UEFoanpuS3g1ZDY1cVJfeDF5alB3TzZrdUUyUXRrTmVYUm1mSk0xOVJFUmx4QVlhN3FPQWh1dVJoNEZOeDR0dU1hdjByVDNwNm9PQzc4QkpaYVdwbk83ZTliSUxiN1FxNV9GaS1YZTY0VUlPd2k3ZmI5V1h5V0VWWlBrdFd3S3RTZ3QzZzJnSkU0c3VURDVBTkFNS1hFM3V3UmRRZnQxdGVfR3Z4QTMtaFpZRlFDV1hlWENqOWhvZUpjMTlMVnZMa1VHRzVhSjJQTE4tSzhVanRJRmVKTmJyY2N6NjZydXJabVdZbVhrZks3YV9jQ1l0eWE?oc=5",
+      "source": "La Presse",
+      "description": "Analyse publiée par La Presse sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
       "cities": [],
       "category": "general"
     },
@@ -406,42 +443,18 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada affirme avoir signalé dès avril une possible hausse des taux",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOeEs4Vy03aS1reUhzVTRVelcyUjBfNnJuS09kb3kzVFRRRnBNVUM5cHBReGNKbkNXYi1EZHptNDNUSm9kN1pwMnJWcjJlQ0Y2ZElFYnZMczBUdnJUcHdXVWxoU0k1cGNBYnlGVlJ6OVU2UTVKY05IMkY3Y1dyci1pci16bl90VkVUTkFlVDd6RjZ4bnZsRDlOQzdQbnNDN1dUajBQLUg1NmxzYTBSSy1NMlo0aUdCSHA0VWZaNnJXVGZRNXNHam5WX2VyRQ?oc=5",
+      "title": "La Banque du Canada revoit ses mesures d’inflation et réaffirme sa cible de 2 %",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQODlxQTNPaWZOYVFoR1NMYVN2OGtrNXdJWkpfa3JlOHBGZUxKUkJSbV9faFZkWV84X3VmcE83VWdVa2lYQWd4R1R4T2tXTWduRDh2M3E3cU01X3k3eFU0eE9BeC1va1lvSXBleWVvaWcxVVlzQl82NzZFMXF5LUhleWpyYzNzOVU2ZW5wMXlHQzU2SThQZWJ1Wm5BZXV3T2tVTDk5cExuTnVnVmtQS0pWaEVQRmxPOHl4dGpGeHQtanotb0dTVlE?oc=5",
       "source": "Canadian Mortgage Trends",
       "description": "Analyse publiée par Canadian Mortgage Trends sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "Macklem reconnaît que ses messages sur l’inflation fondamentale prêtent à confusion",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPVnJtS1VEVHZVaXIzcDNGTzRZR19MLXhSZnJ0blktMzc2YW9oTDFzU0tyWTFsNlFtemRxTWpXRG5GdGtrUmV1TExiS0UzTXV4ZjhVREhpcVJiMjA2aE5fNzBIdzdUaXVYaENSdHZBVVNkbzhYcEQ5NDVrMDd2Wk9fdklNZWhZekFoSXA1aUpDaFNrbElRLUZmMC1tME5wYVlRRG5QVzhqNTQ4TW9MRDhhOGRMSEdCZzJvTDdvMVZ5Z0NvYm1ENXFGRVRYTXlvQQ?oc=5",
-      "source": "Noovo Info",
-      "description": "Revue d'actualité immobilière publiée par Noovo Info portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Maintenir l’inflation à un niveau bas et stable dans un monde incertain",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbDFFeDlFbDVCYmRVTllKZEdTeU1UNEZtUHVrNlBtU2F0dWNEYXE4THpBdk1CeTJKR0tmUTFZNmYtb096cUNyRUJxbEVYQmhCejRuYjJ6eE1CUXN6YS0xSmJLaEN3UzFRVWZHWFBtRXlrSlduTndqMDlYTVpUdF9NOURBOHdRYjIyTThHVmIxQzRtZmlqTjRmeXdvTnlEUHB4WTB6d0M5STNZMlF6Umc?oc=5",
+      "title": "Discours : Economic Club of Canada",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZ1ptN190dl9pVWt4S05NMGFjSFRHRWFQaEo5elljN1JxRlMwaHRhaU53Z0xGZlJ3MHFUOUhGbEpHa0gtbmhmRjJERVc2OElzaDd4eEI4bmpaLWFsNUFaNEhtc3M3WFlYcnZyVFM3aU56clM3eGpKV21uLVBkZjRBN0ZfMHdMdW9FUV9EVUp3?oc=5",
       "source": "Banque du Canada",
       "description": "Revue d'actualité immobilière publiée par Banque du Canada portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "À surveiller dans le monde des affaires au Canada au cours de la semaine du 23 novembre",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5uUUQ0TFFNODdWaHBzVUlrRGo3b0x6NUt1cGtuUjVNQkNlcTJZeTBzOXlfWWdFX0dtaHBEckNPS2c1U3otYkVlWW9iWDFueWQ0Ny1sRG91enhmVlFxdWlPaWJIUUlPbTdRdzJlQndocHJwUzFoM1E?oc=5",
-      "source": "Le Devoir",
-      "description": "Revue d'actualité immobilière publiée par Le Devoir portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Banque du Canada : nouvelle hausse de taux",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNWV9DcDhNc2J2a3FXRU92a2RlTE1LdHhpbGoydjZpREJGRFNHV1hwdnhZYk1SNVhTeHR4bENOSG5vaDZGQS1heEpBQlFsNWVmaUZxMUxvOHFzYVdabVZqM01MNllVOTdfOFcyZzFqNjM2NVg4X1lYNnlnRklBbVNNRW5SdHJNTUViOTIwdi1xbmdXMUxGYlE?oc=5",
-      "source": "Finance et Investissement",
-      "description": "Analyse publiée par Finance et Investissement sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
       "cities": [],
       "category": "general"
     },
@@ -462,6 +475,14 @@
       "category": "general"
     },
     {
+      "title": "Le paradoxe des taux d’intérêt: une économie plus faible pourrait apporter un peu de répit",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNWnB1aG0xLUx2ek1jN0N0LWd4LVRxcUZjS19fYmlPNDFqRXg1WF9SbkdXUkp6MHNRYzRTYUxMMDdzTW9tUnd5TzJGQjFKWmlfalpEQ3ZZcUxDQ3hEQ0Q1Q3N1emczcnlMVHJSc19QaXdIZWMwalBYeHhodlFSeXdsT0xleksyaTZEdDdkMmphWWNrQk0wc1hoRFNwQ0Nia0RqemVEMWhUNmZ3ZUFDZEJFZFFaM01VREU5cmo2ekdDanpmTXROb0d1dDRjd05pQQ?oc=5",
+      "source": "Les Affaires",
+      "description": "Analyse publiée par Les Affaires sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "cities": [],
+      "category": "general"
+    },
+    {
       "title": "L’écart entre les taux d’intérêt canadiens et américains pèse sur le huard",
       "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPN0NOcDVSN3JwS2pEb3l0RkU0LTV2UDlld010QS1KY2pTVHZBaUpCVjNkSUd5UnFsMUszZGhHZnM4eFBkdUh4SWpiaVRVdk5yRU1xcTJGMWJ2aGlPQnRrYTlxSDVhMHR6RWdqOUE0Mnd1ZUQxa1JxZFQzT24wMWpKOWgyM24wLVNlcy1Icng3d2F2SXdDZU56cTFSOTc3VV91Wk5mSHJWNlluUExqVmhhZnFYS3k1Z0M4ZldFRllfYWN0bFZSdVltSWJjQQ?oc=5",
       "source": "La Presse",
@@ -470,34 +491,18 @@
       "category": "general"
     },
     {
-      "title": "La Banque du Canada demeure vigilante face aux tensions bancaires",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMW51UGhrMU9HOVdJTGx3dWRmbWhJRlBaUEtlcmlMQzY3M1V5RUpHVVc2WUM4Wlh1bHRGSDV5eXE0Z0lKaGpMVHAtR2hzZm15Nk42ZzhTZ3U1LUlMODQtUzdKTl9mQ0lzaFZKa1NsbVY5eXpuNW5YaGxfSk81SVRqY2JBVEx5TFYzZ3hUN3hPT3Vva2pna0d5dlp0aHlYbnBISDUyaS0xR1pEZWlUSUcxRjkwa2RZb0VzdzZXYXFKYUU2em94anhIUWEzSTdTSWtBR0JOQw?oc=5",
-      "source": "Finance et Investissement",
-      "description": "Analyse publiée par Finance et Investissement sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "title": "À surveiller dans le monde des affaires au Canada au cours de la semaine du 23 novembre",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5uUUQ0TFFNODdWaHBzVUlrRGo3b0x6NUt1cGtuUjVNQkNlcTJZeTBzOXlfWWdFX0dtaHBEckNPS2c1U3otYkVlWW9iWDFueWQ0Ny1sRG91enhmVlFxdWlPaWJIUUlPbTdRdzJlQndocHJwUzFoM1E?oc=5",
+      "source": "Le Devoir",
+      "description": "Revue d'actualité immobilière publiée par Le Devoir portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     },
     {
-      "title": "L'économie canadienne ralentit à 1,3 % en dessous...",
-      "link": "https://news.google.com/rss/articles/CBMiogJBVV95cUxOWnJmTThSVFNxUTV2U21kQzhCSnVIZ0ZLUENVbE9aYVpLcm1ocFFZeG5rY1pVYzU1dXpzNm5YZXVVYktPUzctb0RSWHZrMmRacFJTZjVMOWhZeklxazBBeEZ4dGNvYzVXX19CZ1RGelp5eGRRZWdGUXpNaXFVSTVtSjZlYkFOM1Z0Y3dwMkJPWmhSaHBmejRMTFZVeERwRGVtU1hnbC1KWDlaNDE1Y3dza245TnN4MHZSNG1ibkFKb0pTbm5ZVUY5QXJsWUJEUk5LeUdnakZLcGk5WmlZS3hfQi0wWGZ1WDhCa2tqRjRabERocmhwT1NVbXlpMEI5QUdnSUVCdlpmazc5WlNGZGNha3dPQTQwb2o4UDBidDBnR2p6QQ?oc=5",
-      "source": "arabcanadanews.ca",
-      "description": "Revue d'actualité immobilière publiée par arabcanadanews.ca portant sur les tendances récentes du marché résidentiel québécois.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Hausse de 100 points de base du taux directeur",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaF93Ml9ZaU5KZkpDZEVWMmduUWNUcEJKZ0JneEZSTFhOVHZVbUx5R3g4eDdDVGc2dHFSMk1kRk1abnZNN2tIaFI2S1FnQm9ZTDhiMlp1c3BPbzJ4YzB0RXJZemFlLVg4UlBGU05KRHRfUlR3Y25lS21ZOVVTNkxWdXZ6SjE0dlBsUFBsa1l6SGFTdDd4NTFEeTc2N2lKUQ?oc=5",
-      "source": "Finance et Investissement",
-      "description": "Analyse publiée par Finance et Investissement sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
-      "cities": [],
-      "category": "general"
-    },
-    {
-      "title": "Coronavirus : la solvabilité à risque, dit la Banque du Canada",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOajV5QVpSR0diUVJ5MWxxdHRHY0xpclVnbTVYNFNmVTl4ZkZPNDRCcUlDenpLTTlxaHBrOW93YUhhZWhGakhjRFo4WU5MMmZIT240am5uUUc5blBucnYxLUJJQ1RHNEVNOG44Tkg5OEpWNjN6R0pCQmlWVGdkNmJOMmlJblpKcDBINUZSc2lGUzVBWjh5TjdSbm1OMWtNYzFtZ3djLVhEalRXOEM4ZEVpTXlaSFBEVDEwY0dkQjFISUd1ajg4TEVGeVRMajg?oc=5",
-      "source": "Finance et Investissement",
-      "description": "Analyse publiée par Finance et Investissement sur l'évolution des taux d'intérêt et des conditions de financement hypothécaire au Canada.",
+      "title": "Le Groupe consultatif sur l’infrastructure liée aux garanties et les pratiques du marché publie deux recueils de pratiques exemplaires pour promouvoir le bon fonctionnement des marchés de garanties et du financement par titres au Canada",
+      "link": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPQ0hkUHNYM1VhcjVSTndZOGdyZjBiRlJSRzEwbXZkbi1yS1dqRVhMb3YxdWhKYmxKdy0xWWhkcHBRRXB6T1U3ZTNSamIyMHRFWGEtb2JWUDFwT1VQUHhyRDBBM01DeFVvY1NVeFJhQ0RtaGJBWjRvaEpKTWcyTWwwM0UwM21zaU54ejkxa1NlSktPNjFpUXRxdlRtd2VOaHkwaHhsbjVLUlVNZGRDZGN1a2ttbEdvekt6Qk15WUJic3g0U1M2dHBRODJDLWdXMzVEN2U2Z1d5WkV5QW8yNC1XVUJxQVM2MnFNbE1kSGhCQ3BkSDRrcmtyLW1Ld2JSYUlVT0ZLMUFLZnJCU0pjUmdqMWZBd01PNHZTdGdDSnNiVFNVZmlDdW53dW5lMDNaM2hyMU5JbkQ5QjhpRHR1WHN4bzNzNHJHYk1ubVlSSUc4VQ?oc=5",
+      "source": "Banque du Canada",
+      "description": "Revue d'actualité immobilière publiée par Banque du Canada portant sur les tendances récentes du marché résidentiel québécois.",
       "cities": [],
       "category": "general"
     }
@@ -521,7 +526,7 @@
     "variable_5ans": "3.90%",
     "prime_rate": "4.70%",
     "source_url": "https://www.multi-prets.com/fr/options-hypothecaires/nos-taux/",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-25"
   },
   "market_stats": {
     "montreal": {
@@ -574,5 +579,5 @@
     },
     "last_quarter": "Octobre 2026"
   },
-  "last_update": "2026-11-24 22:53"
+  "last_update": "2026-11-25 22:07"
 }
